@@ -5,7 +5,10 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { MemWal } from "@mysten-incubation/memwal";
-import { SuiJsonRpcClient, JsonRpcHTTPTransport } from "@mysten/sui/jsonRpc";
+import { SuiGrpcClient } from "@mysten/sui/grpc";
+import { GrpcTransport } from "@protobuf-ts/grpc-transport";
+import { ChannelCredentials } from "@grpc/grpc-js";
+import { UnaryCall, type RpcTransport } from "@protobuf-ts/runtime-rpc";
 import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
 
 const env = (name: string) => {
@@ -54,14 +57,52 @@ export async function fetchCompletedSeries(): Promise<Series[]> {
 
 // ---------- Sui via Tatum gateway ----------
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Tatum's free plan allows 3 requests/second, and building one transaction makes several calls.
+ * Space unary calls ~400ms apart and retry on 429 with backoff.
+ */
+function throttled(inner: GrpcTransport, minGapMs = 400): RpcTransport {
+  let next = 0;
+  return {
+    mergeOptions: (o) => inner.mergeOptions(o),
+    unary(method, input, options) {
+      const call = async () => {
+        for (let attempt = 0; ; attempt++) {
+          const wait = Math.max(0, next - Date.now());
+          next = Math.max(next, Date.now()) + minGapMs;
+          await sleep(wait);
+          try {
+            const c = inner.unary(method, input, options);
+            const [headers, response, status, trailers] = await Promise.all([c.headers, c.response, c.status, c.trailers]);
+            return { headers, response, status, trailers };
+          } catch (e: any) {
+            if (attempt < 6 && /429/.test(String(e?.message))) {
+              await sleep(1000 * (attempt + 1));
+              continue;
+            }
+            throw e;
+          }
+        }
+      };
+      const p = call();
+      return new UnaryCall(method, options.meta ?? {}, input, p.then((r) => r.headers), p.then((r) => r.response), p.then((r) => r.status), p.then((r) => r.trailers));
+    },
+    serverStreaming: (m, i, o) => inner.serverStreaming(m, i, o),
+    clientStreaming: (m, o) => inner.clientStreaming(m, o),
+    duplex: (m, o) => inner.duplex(m, o),
+  };
+}
+
+/** Tatum's testnet gateway only speaks native gRPC (its JSON-RPC host is mainnet-only). */
 export function tatumClient() {
-  return new SuiJsonRpcClient({
-    network: "testnet",
-    transport: new JsonRpcHTTPTransport({
-      url: env("TATUM_SUI_RPC"),
-      rpc: { headers: { "x-api-key": env("TATUM_API_KEY") } },
-    }),
+  const transport = new GrpcTransport({
+    host: env("TATUM_SUI_GRPC"),
+    channelCredentials: ChannelCredentials.createSsl(),
+    meta: { "x-api-key": env("TATUM_API_KEY") },
   });
+  return new SuiGrpcClient({ network: "testnet", transport: throttled(transport) });
 }
 
 /** The Referee signer: the Sui CLI's active address (it holds the ResolverCap). */

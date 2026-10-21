@@ -20,9 +20,11 @@ const cap = process.env.KDACE_RESOLVER_CAP!;
 async function callLedger(fn: "commit_batch" | "post_result", args: (tx: Transaction) => any[]) {
   const tx = new Transaction();
   tx.moveCall({ target: `${pkg}::ledger::${fn}`, arguments: args(tx) });
-  const res = await sui.signAndExecuteTransaction({ signer, transaction: tx, options: { showEffects: true } });
-  await sui.waitForTransaction({ digest: res.digest });
-  return res.digest;
+  const res = await sui.signAndExecuteTransaction({ signer, transaction: tx, include: { effects: true } });
+  if (res.$kind !== "Transaction") throw new Error(`${fn} failed: ${JSON.stringify(res.FailedTransaction?.effects?.status)}`);
+  const digest = res.Transaction.digest;
+  await sui.waitForTransaction({ digest });
+  return digest;
 }
 
 const series = await fetchCompletedSeries();
