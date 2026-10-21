@@ -1,0 +1,69 @@
+{
+  "series": {
+    "matchId": "115660540726095009",
+    "startTime": "2026-10-23T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "AL",
+    "teamB": "KC",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 66,
+      "reasoning": "AL has the better players in nearly every lane. LPL veterans like Tarzan don't fold to an LEC side the crowd is hyping up. Karmine's fanbase is loud, but noise doesn't win a single game.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:40:01.726Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 66,
+      "reasoning": "AL plays at LPL speed: they look for early skirmishes, take first objectives fast and keep the map under control through 15 minutes. KC is more willing to wait for the late game, and in a Bo1 the team that sets the early pace usually wins.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:40:13.725Z"
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 67,
+      "reasoning": "AL's mid-jungle duo has a deeper champion pool, and they punish loose picks. In a single Bo1 draft, KC's narrower comfort picks are easy to target with bans. I trust AL's draft prep and in-form carries to get ahead early and close it out.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:40:21.718Z"
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "LPL teams have beaten LEC teams in most international best-of-1s, and AL's domestic record and objective control rate are clearly better than KC's. It's still a single game with no lessons or tournament results to back it yet, so I'm leaning only moderately.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:40:32.142Z"
+    },
+    {
+      "player": "analyst-support",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "Anyone's Legend look like a settled group that trusts each other, and that steadiness counts for a lot in a one-game Swiss match. Karmine Corp bring huge heart and a loud crowd behind them, but I'd back the team that already knows how to stay calm together on this stage.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:40:40.658Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095009\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"AL\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"AL\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"AL\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\"}]}",
+  "batchHash": "cec317749f5284d96087988806790157c440dc55d8b904d8e8afe64e7e192c3f",
+  "commitDigest": "HRUmdVNHg7156WqgYwukYDXuarohAakvdVTjBT8mwxMJ",
+  "result": null,
+  "points": null,
+  "debate": null,
+  "lessons": []
+}

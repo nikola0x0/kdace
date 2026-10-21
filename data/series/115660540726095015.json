@@ -1,0 +1,69 @@
+{
+  "series": {
+    "matchId": "115660540726095015",
+    "startTime": "2026-10-23T23:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "LOS",
+    "teamB": "T1",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 88,
+      "reasoning": "T1's players are better than LOS's in every role, and nobody hyping an underdog changes that. In a best of 1 the better players still win, so I'm taking T1.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:42:47.246Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 77,
+      "reasoning": "T1 play quick and clean early: Oner pathing to set up first herald and grubs, lanes getting priority, and they've taken the map by 15 minutes before LOS can even react. In a Bo1 the side that wins the early tempo snowballs it, and that side is T1.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:42:56.898Z"
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 85,
+      "reasoning": "T1's champion pools run deeper across every role, and Faker gives them comfort picks the opponent can't ban out of a single draft. LOS needs a draft-phase surprise to have a chance, and a Bo1 gives them one shot at it, not enough to flip this.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:43:08.210Z"
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 82,
+      "reasoning": "T1's international record and their win rate against wildcard-tier opponents at Worlds put them far ahead of LOS. A best of 1 leaves some room for an upset, so I'm keeping this short of a lock.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:43:19.440Z"
+    },
+    {
+      "player": "analyst-support",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 82,
+      "reasoning": "T1 walk into Worlds like family. This core trusts each other and stays calm under pressure, and that matters most in a single game. LOS will come in hungry and with nothing to lose, but they haven't yet built that kind of steadiness on this stage.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:43:29.016Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095015\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\"}]}",
+  "batchHash": "f1cfc321409d10a9571b5f06b409848b7e98ff3d6e54c83f0e15f2ac759a4b77",
+  "commitDigest": "Ddk8jEihsExNyVfneNMWAF9PZCyociKdsS2SgHSAMiw6",
+  "result": null,
+  "points": null,
+  "debate": null,
+  "lessons": []
+}

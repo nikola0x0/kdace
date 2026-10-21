@@ -1,0 +1,69 @@
+{
+  "series": {
+    "matchId": "115660540726095007",
+    "startTime": "2026-10-23T22:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "TLAW",
+    "teamB": "CFO",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "CFO",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "CFO's carries just have better hands than TLAW's lineup, and in a best of 1 better players beat a decent team setup. I don't care what the LTA crowd is hyping, TLAW loses the lane matchups and loses the game.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:41:53.530Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "CFO",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "CFO play at a breakneck pace: they hit early skirmishes, take first drakes and invade, and in a best of one that early snowball usually beats TLAW's slower, scaling style. If TLAW can't match CFO's jungle tempo before 15 minutes, the map is gone.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:42:05.731Z"
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "CFO",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "CFO's mid-jungle duo has the deeper, more aggressive champion pool, and in a Bo1 the team with more comfort picks to draft around gets the edge. TLAW will have to draft well to cover their weaker solo lanes, and I don't see them pulling that off this time.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:42:16.620Z"
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "CFO",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "CFO's recent international record and series results are better than TLAW's, but in a best of 1 the gap isn't big enough to lean hard. I'm taking a modest edge, not a confident call.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:42:28.255Z"
+    },
+    {
+      "player": "analyst-support",
+      "winner": "CFO",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "CFO play like a group that trusts each other: they're loose, they fight together, and they show up hungry on the big stage. In a single game, that confidence can beat a TLAW side that still seems to be working out its rhythm.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:42:36.965Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095007\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"CFO\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"CFO\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"CFO\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"CFO\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"CFO\"}]}",
+  "batchHash": "35b5d066fc460ded3608fa6c3c5525bad876ddcbe0688ae0654b640bc5cc06d1",
+  "commitDigest": "6gSRnQyZ17p7q8K6xJgGDzLxwxdTzsPxYSzmCtfGa6NJ",
+  "result": null,
+  "points": null,
+  "debate": null,
+  "lessons": []
+}

@@ -1,0 +1,69 @@
+{
+  "series": {
+    "matchId": "115660540726095019",
+    "startTime": "2026-10-23T19:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "BLG",
+    "teamB": "MKOI",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 78,
+      "reasoning": "BLG has much better players in nearly every role, and Bin alone outclasses anything MKOI can put in the top lane. In a Bo1, raw talent decides it, so I'm not buying any upset talk.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:39:12.111Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "BLG pushes a far faster early game. Their jungle-led skirmishes take first drakes and herald before MKOI can settle into their slower, scaling setups, and in a best of one that early map control just snowballs.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:39:20.048Z"
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "BLG's champion pools run deeper across the map, and Knight can play any mid matchup, so MKOI can't ban him out of the draft. A best of 1 leaves room for an upset, but BLG's power picks and mid-jungle priority should carry this one.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:39:28.796Z"
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "BLG's domestic record and past international results are well above MKOI's, and LPL teams have historically beaten LEC sides more often than not. A best of 1 leaves room for an upset, so I lean BLG clearly but not all the way.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:39:40.294Z"
+    },
+    {
+      "player": "analyst-support",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "BLG's core has been through deep international runs together and plays with a calm, shared confidence. MKOI has heart and a hungry locker room, but in a single game I trust the team that already knows how to breathe together under pressure.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:39:49.179Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095019\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"BLG\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"BLG\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\"}]}",
+  "batchHash": "0db1a102bacb54273f40f79349876a1c77d09e0bef88ddc8b539239940260a03",
+  "commitDigest": "G9metqHNB9eenqFcz16r4n4BBz3j8dFvVZkxdA4p8khJ",
+  "result": null,
+  "points": null,
+  "debate": null,
+  "lessons": []
+}

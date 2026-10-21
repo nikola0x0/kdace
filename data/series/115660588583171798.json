@@ -1,0 +1,23 @@
+{
+  "series": {
+    "matchId": "115660588583171798",
+    "startTime": "2026-10-17T18:00:00Z",
+    "block": "Play-Ins",
+    "bestOf": 5,
+    "state": "completed",
+    "teamA": "MVK",
+    "teamB": "FUR",
+    "winsA": 3,
+    "winsB": 1,
+    "winner": "MVK"
+  },
+  "status": "missed",
+  "picks": [],
+  "batch": null,
+  "batchHash": null,
+  "commitDigest": null,
+  "result": null,
+  "points": null,
+  "debate": null,
+  "lessons": []
+}

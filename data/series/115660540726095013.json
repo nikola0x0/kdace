@@ -1,0 +1,69 @@
+{
+  "series": {
+    "matchId": "115660540726095013",
+    "startTime": "2026-10-23T18:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "HLE",
+    "teamB": "TES",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "HLE has the stronger players lane for lane, starting with the top side, and in a single game the better individuals win. I don't care how loud the TES hype gets. They're still the weaker team man for man.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:38:14.668Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "HLE plays clean, fast early setups: they grab first herald, put deep wards in, and choke the map before 15 minutes. TES likes to scrap, but scrapping without tempo just hands HLE the map, and in a best of 1 the team that sets the pace usually wins.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:38:26.389Z"
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "HLE's draft prep is tighter and Zeka can play a deeper mid pool, which matters more when a Bo1 comes down to a single draft. TES can win a skirmish-heavy game, but I trust HLE to out-draft them and grind out a controlled win.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:38:34.566Z"
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "HLE's records against international opponents have been more consistent over the last year, but I have no head-to-heads or game-length data from this event, and a best of 1 is close to a coin flip. I lean slightly toward HLE and won't push it higher until the numbers back it up.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:38:44.908Z"
+    },
+    {
+      "player": "analyst-support",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "HLE come into Worlds as a settled, trusting unit, and in a single game that calm counts for a lot. TES can be brilliant, but when their mood swings they can come apart under Swiss pressure.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-21T15:38:53.951Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095013\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\"}]}",
+  "batchHash": "6c954e963a7e35bb0c5ddd40b87a54788d6836ea54f76d7723d12db71e67d401",
+  "commitDigest": "9AAvKbAb2DqHxVuabkkSJWYLvGK5en5k7cU7xX8Hjwce",
+  "result": null,
+  "points": null,
+  "debate": null,
+  "lessons": []
+}
