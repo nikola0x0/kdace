@@ -1,0 +1,6 @@
+[package]
+name = "kdace"
+edition = "2024"
+
+[addresses]
+kdace = "0x0"
