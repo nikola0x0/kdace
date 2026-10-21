@@ -2,10 +2,9 @@
 // Every step is saved before the next, so a crash resumes without posting or remembering twice.
 import { pathToFileURL } from "node:url";
 import { ANALYSTS, buildReflectPrompt, type Role } from "../core/analysts.ts";
-import type { BatchEntry } from "../core/batch.ts";
-import { computeBoard, marketPoints, type SettledSeries } from "../core/points.ts";
+import { computeBoard, marketPoints } from "../core/points.ts";
 import { seriesToSettle } from "../core/select.ts";
-import { Store, type SeriesRecord } from "../core/store.ts";
+import { Store, toSettled, type SeriesRecord } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
 
 export type SettleDeps = {
@@ -16,13 +15,6 @@ export type SettleDeps = {
   remember(role: Role, text: string): Promise<string>;
   log(msg: string): void;
 };
-
-const toSettled = (r: SeriesRecord): SettledSeries => ({
-  matchId: r.series.matchId,
-  bestOf: r.series.bestOf,
-  entries: (JSON.parse(r.batch!) as { entries: BatchEntry[] }).entries,
-  result: { winner: r.result!.winner, score: r.result!.score },
-});
 
 function debatePrompt(r: SeriesRecord, result: { winner: string; score: string }): string {
   const lines = r.picks.map((p) => {

@@ -2,7 +2,8 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { AnalystPick } from "./analysts.ts";
-import type { BoardRow } from "./points.ts";
+import type { BatchEntry } from "./batch.ts";
+import type { BoardRow, SettledSeries } from "./points.ts";
 import type { Series } from "./worlds.ts";
 
 export type SeriesRecord = {
@@ -17,6 +18,14 @@ export type SeriesRecord = {
   debate: string | null;
   lessons: { player: string; text: string; blobId: string }[];
 };
+
+/** A settled record in the shape the points module scores. */
+export const toSettled = (r: SeriesRecord): SettledSeries => ({
+  matchId: r.series.matchId,
+  bestOf: r.series.bestOf,
+  entries: (JSON.parse(r.batch!) as { entries: BatchEntry[] }).entries,
+  result: { winner: r.result!.winner, score: r.result!.score },
+});
 
 const readJson = <T>(path: string): T => JSON.parse(readFileSync(path, "utf8"));
 const writeJson = (path: string, value: unknown) => writeFileSync(path, JSON.stringify(value, null, 2) + "\n");
