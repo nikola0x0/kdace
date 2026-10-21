@@ -60,6 +60,30 @@ describe("runPick", () => {
     expect(commits).toEqual([]);
     expect(deps.store.get("x")!.status).toBe("missed");
   });
+  it("records the batch before committing and resumes an interrupted commit with the same hash", async () => {
+    const hashes: string[] = [];
+    let fail = true;
+    const { deps } = fakes({ commit: async (_m, hash) => { hashes.push(hash); if (fail) { fail = false; throw new Error("network blip"); } return "digest-2"; } });
+    await runPick(deps);
+    expect(deps.store.get("x")!.status).toBe("committing");
+    const asked: string[] = [];
+    await runPick({ ...deps, ask: async (p) => (asked.push(p), good) });
+    expect(asked).toEqual([]);
+    expect(hashes).toHaveLength(2);
+    expect(hashes[1]).toBe(hashes[0]);
+    expect(deps.store.get("x")).toMatchObject({ status: "committed", commitDigest: "digest-2" });
+  });
+  it("keeps going when one series fails to commit", async () => {
+    const second = { ...series, matchId: "y" };
+    const { deps } = fakes({ fetchSeries: async () => [series, second], commit: async (m) => { if (m === "x") throw new Error("boom"); return "digest-y"; } });
+    await runPick(deps);
+    expect(deps.store.get("y")!.status).toBe("committed");
+  });
+  it("picks without lessons when recall fails", async () => {
+    const { deps, commits } = fakes({ recall: async () => { throw new Error("relayer down"); } });
+    await runPick(deps);
+    expect(commits).toEqual(["x"]);
+  });
   it("is idempotent", async () => {
     const { deps, commits } = fakes();
     await runPick(deps);

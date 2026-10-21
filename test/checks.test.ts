@@ -15,31 +15,47 @@ const record: SeriesRecord = {
   result: { winner: "GEN", score: "1-0", resultDigest: "r" },
   picks: [{ player: "analyst-adc", winner: "GEN", score: null, winProbability: 60, reasoning: "r", pickedAt: "2026-10-23T12:00:00Z", usedLessons: [{ blobId: "b", text: "t", createdAt: "2026-10-22T00:00:00Z" }] }],
 };
-const commit = { json: { batch_hash: [...Buffer.from(hash, "hex")], committed_at_ms: String(Date.parse("2026-10-23T12:01:00Z")) } };
-const result = { json: { winner: "GEN", score: "1-0" } };
+const commit = { type: "BatchCommitted" as const, json: { market_id: "x", batch_hash: [...Buffer.from(hash, "hex")], committed_at_ms: String(Date.parse("2026-10-23T12:01:00Z")) } };
+const result = { type: "ResultPosted" as const, json: { market_id: "x", winner: "GEN", score: "1-0" } };
+const official = record.series;
 
 describe("checkRecord", () => {
   it("passes a clean record", () => {
-    expect(checkRecord(record, commit, result)).toEqual({ hashMatches: true, committedBeforeStart: true, resultMatchesOfficial: true, lessonsPredatePicks: true });
+    expect(checkRecord(record, commit, result, official)).toEqual({ hashMatches: true, picksMatchBatch: true, committedBeforeStart: true, resultMatchesOfficial: true, lessonsPredatePicks: true });
   });
   it("accepts a base64 batch_hash", () => {
-    expect(checkRecord(record, { json: { ...commit.json, batch_hash: Buffer.from(hash, "hex").toString("base64") } }, result).hashMatches).toBe(true);
+    expect(checkRecord(record, { ...commit, json: { ...commit.json, batch_hash: Buffer.from(hash, "hex").toString("base64") } }, result, official).hashMatches).toBe(true);
   });
   it("flags a wrong hash", () => {
-    expect(checkRecord({ ...record, batch: canonicalBatch("x", []) }, commit, result).hashMatches).toBe(false);
+    expect(checkRecord({ ...record, batch: canonicalBatch("x", []) }, commit, result, official).hashMatches).toBe(false);
   });
   it("flags a commit after the start", () => {
-    expect(checkRecord(record, { json: { ...commit.json, committed_at_ms: String(Date.parse("2026-10-23T17:05:00Z")) } }, result).committedBeforeStart).toBe(false);
+    expect(checkRecord(record, { ...commit, json: { ...commit.json, committed_at_ms: String(Date.parse("2026-10-23T17:05:00Z")) } }, result, official).committedBeforeStart).toBe(false);
   });
   it("flags a wrong winner", () => {
-    expect(checkRecord(record, commit, { json: { winner: "IG", score: "1-0" } }).resultMatchesOfficial).toBe(false);
+    expect(checkRecord(record, commit, { ...result, json: { ...result.json, winner: "IG" } }, official).resultMatchesOfficial).toBe(false);
   });
   it("flags a lesson created after the pick", () => {
     const late = { ...record, picks: [{ ...record.picks[0], usedLessons: [{ blobId: "b", text: "t", createdAt: "2026-10-23T13:00:00Z" }] }] };
-    expect(checkRecord(late, commit, result).lessonsPredatePicks).toBe(false);
+    expect(checkRecord(late, commit, result, official).lessonsPredatePicks).toBe(false);
+  });
+  it("judges the result against the official feed, not the record's own copy", () => {
+    expect(checkRecord(record, commit, result, { ...official, winner: "IG", winsA: 0, winsB: 1 }).resultMatchesOfficial).toBe(false);
+    expect(checkRecord(record, commit, result, undefined).resultMatchesOfficial).toBe(false);
+  });
+  it("rejects a commit or result that belongs to another match", () => {
+    expect(checkRecord(record, { ...commit, json: { ...commit.json, market_id: "other" } }, result, official).hashMatches).toBe(false);
+    expect(checkRecord(record, commit, { ...result, json: { ...result.json, market_id: "other" } }, official).resultMatchesOfficial).toBe(false);
+  });
+  it("rejects an event of the wrong type", () => {
+    expect(checkRecord(record, { ...result, json: commit.json } as any, result, official).hashMatches).toBe(false);
+  });
+  it("flags displayed picks that differ from the hashed batch", () => {
+    const edited = { ...record, picks: [{ ...record.picks[0], winner: "IG" }] };
+    expect(checkRecord(edited, commit, result, official).picksMatchBatch).toBe(false);
   });
   it("fails everything on-chain when the commit is missing", () => {
-    expect(checkRecord(record, null, result)).toMatchObject({ hashMatches: false, committedBeforeStart: false });
+    expect(checkRecord(record, null, result, official)).toMatchObject({ hashMatches: false, committedBeforeStart: false });
   });
 });
 

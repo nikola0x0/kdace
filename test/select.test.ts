@@ -2,7 +2,7 @@ import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { seriesToPick, seriesToSettle } from "../src/core/select.ts";
+import { seriesToPick, seriesToResume, seriesToSettle } from "../src/core/select.ts";
 import { Store } from "../src/core/store.ts";
 import type { Series } from "../src/core/worlds.ts";
 
@@ -28,6 +28,9 @@ describe("selection", () => {
   it("marks a started series without a record as missed", () => {
     expect(seriesToPick([base], store(), after)).toEqual({ pick: [], missed: [base] });
   });
+  it("treats a series inside the 5-minute lock margin as missed", () => {
+    expect(seriesToPick([base], store(), new Date("2026-10-23T16:57:00Z"))).toEqual({ pick: [], missed: [base] });
+  });
   it("settles only completed series that were committed", () => {
     const st = store();
     const done = { ...base, state: "completed" as const, winner: "GEN", winsA: 1, winsB: 0 };
@@ -35,5 +38,11 @@ describe("selection", () => {
     expect(seriesToSettle([done], st).map((s) => s.matchId)).toEqual(["x"]);
     st.put({ ...st.get("x")!, status: "settled" });
     expect(seriesToSettle([done], st)).toEqual([]);
+  });
+  it("resumes committing records only while still outside the lock margin", () => {
+    const st = store();
+    st.put({ ...committed, status: "committing", commitDigest: null });
+    expect(seriesToResume(st, before).map((r) => r.series.matchId)).toEqual(["x"]);
+    expect(seriesToResume(st, new Date("2026-10-23T16:57:00Z"))).toEqual([]);
   });
 });

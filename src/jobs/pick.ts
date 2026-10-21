@@ -1,8 +1,9 @@
 // Pick job: every analyst picks each open series blind, and the batch fingerprint is committed before the game.
 import { pathToFileURL } from "node:url";
+import { withLock } from "../core/lock.ts";
 import { ANALYSTS, buildPickPrompt, parsePick, type AnalystPick, type Lesson, type Role } from "../core/analysts.ts";
 import { batchHash, canonicalBatch, type BatchEntry } from "../core/batch.ts";
-import { seriesToPick } from "../core/select.ts";
+import { isLocked, seriesToPick, seriesToResume } from "../core/select.ts";
 import { Store, type SeriesRecord } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
 
@@ -27,7 +28,10 @@ async function analystPicks(deps: PickDeps, s: Series): Promise<AnalystPick[]> {
   const picks: AnalystPick[] = [];
   const history = deps.history();
   for (const a of ANALYSTS) {
-    const lessons = await deps.recall(a.role, `Predicting ${s.teamA} vs ${s.teamB}, a Bo${s.bestOf} at Worlds`);
+    const lessons = await deps.recall(a.role, `Predicting ${s.teamA} vs ${s.teamB}, a Bo${s.bestOf} at Worlds`).catch((e) => {
+      deps.log(`${s.matchId} ${a.player} recall failed, picking without lessons: ${(e as Error).message}`);
+      return [] as Lesson[];
+    });
     const prompt = buildPickPrompt(a, s, lessons, history);
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
@@ -41,34 +45,59 @@ async function analystPicks(deps: PickDeps, s: Series): Promise<AnalystPick[]> {
   return picks;
 }
 
+/** Commits a recorded batch; the record already holds the hash, so a retry re-submits the identical fingerprint. */
+async function commitRecord(deps: PickDeps, r: SeriesRecord, out: { committed: string[] }) {
+  const count = (JSON.parse(r.batch!) as { entries: unknown[] }).entries.length;
+  const commitDigest = await deps.commit(r.series.matchId, r.batchHash!, count);
+  deps.store.put({ ...r, status: "committed", commitDigest });
+  deps.log(`${r.series.matchId} ${r.series.teamA} vs ${r.series.teamB}: committed ${count} picks (${commitDigest})`);
+  out.committed.push(r.series.matchId);
+}
+
 export async function runPick(deps: PickDeps): Promise<{ committed: string[]; missed: string[] }> {
-  const { pick, missed } = seriesToPick(await deps.fetchSeries(), deps.store, deps.now());
   const out = { committed: [] as string[], missed: [] as string[] };
+
+  // Interrupted commits: re-submit the same hash, or give up honestly once the lock has passed.
+  for (const r of deps.store.all().filter((x) => x.status === "committing" && isLocked(x.series.startTime, deps.now()))) {
+    deps.store.put({ ...r, status: "missed" });
+    out.missed.push(r.series.matchId);
+  }
+  for (const r of seriesToResume(deps.store, deps.now())) {
+    try {
+      await commitRecord(deps, r, out);
+    } catch (e) {
+      deps.log(`${r.series.matchId} resume failed, will retry: ${(e as Error).message}`);
+    }
+  }
+
+  const { pick, missed } = seriesToPick(await deps.fetchSeries(), deps.store, deps.now());
   for (const s of missed) {
     deps.store.put(emptyRecord(s, "missed"));
     out.missed.push(s.matchId);
   }
   for (const s of pick) {
-    const picks = await analystPicks(deps, s);
-    if (picks.length < MIN_ANALYSTS) {
-      deps.log(`${s.matchId} only ${picks.length} valid picks; not committing, will retry next run`);
-      continue;
+    try {
+      const picks = await analystPicks(deps, s);
+      if (picks.length < MIN_ANALYSTS) {
+        deps.log(`${s.matchId} only ${picks.length} valid picks; not committing, will retry next run`);
+        continue;
+      }
+      if (isLocked(s.startTime, deps.now())) {
+        deps.store.put(emptyRecord(s, "missed"));
+        out.missed.push(s.matchId);
+        continue;
+      }
+      const entries: BatchEntry[] = picks.flatMap((p) => [
+        { player: p.player, market: "winner" as const, choice: p.winner },
+        ...(s.bestOf > 1 && p.score ? [{ player: p.player, market: "score" as const, choice: p.score }] : []),
+      ]);
+      const batch = canonicalBatch(s.matchId, entries);
+      const record: SeriesRecord = { ...emptyRecord(s, "committing"), picks, batch, batchHash: batchHash(batch) };
+      deps.store.put(record); // recorded before the chain call, so a crash resumes with the same hash instead of re-picking
+      await commitRecord(deps, record, out);
+    } catch (e) {
+      deps.log(`${s.matchId} failed: ${(e as Error).message}`);
     }
-    if (deps.now().getTime() >= Date.parse(s.startTime)) {
-      deps.store.put(emptyRecord(s, "missed"));
-      out.missed.push(s.matchId);
-      continue;
-    }
-    const entries: BatchEntry[] = picks.flatMap((p) => [
-      { player: p.player, market: "winner" as const, choice: p.winner },
-      ...(s.bestOf > 1 && p.score ? [{ player: p.player, market: "score" as const, choice: p.score }] : []),
-    ]);
-    const batch = canonicalBatch(s.matchId, entries);
-    const hash = batchHash(batch);
-    const commitDigest = await deps.commit(s.matchId, hash, entries.length);
-    deps.store.put({ ...emptyRecord(s, "committed"), picks, batch, batchHash: hash, commitDigest });
-    deps.log(`${s.matchId} ${s.teamA} vs ${s.teamB}: committed ${entries.length} picks (${commitDigest})`);
-    out.committed.push(s.matchId);
   }
   return out;
 }
@@ -104,7 +133,7 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
-  const result = await runPick(await realPickDeps());
+  const result = await withLock("data", async () => runPick(await realPickDeps()));
   console.log(`[pick] committed ${result.committed.length}, missed ${result.missed.length}`);
   process.exit(0);
 }

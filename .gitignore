@@ -4,3 +4,4 @@ build
 .superpowers/
 .env.testnet
 logs/
+data/.lock

@@ -8,7 +8,7 @@ import type { Series } from "./worlds.ts";
 
 export type SeriesRecord = {
   series: Series;
-  status: "committed" | "settled" | "missed";
+  status: "committing" | "committed" | "settled" | "missed";
   picks: AnalystPick[];
   batch: string | null;
   batchHash: string | null;
@@ -16,7 +16,7 @@ export type SeriesRecord = {
   result: { winner: string; score: string; resultDigest: string } | null;
   points: Record<string, number> | null;
   debate: string | null;
-  lessons: { player: string; text: string; blobId: string }[];
+  lessons: { player: string; text: string; blobId: string; jobId?: string }[];
 };
 
 /** A settled record in the shape the points module scores. */

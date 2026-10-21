@@ -1,16 +1,25 @@
-// Which series to pick now, which ones were missed, and which ones are ready to settle.
-import type { Store } from "./store.ts";
+// Which series to pick now, which ones were missed, which interrupted commits to resume, and which ones to settle.
+import type { SeriesRecord, Store } from "./store.ts";
 import type { Series } from "./worlds.ts";
+
+/** Picks lock 5 minutes before the scheduled start, so a commit never lands after the game begins. */
+export const LOCK_MARGIN_MS = 5 * 60 * 1000;
+
+export const isLocked = (startTime: string, now: Date) => now.getTime() >= Date.parse(startTime) - LOCK_MARGIN_MS;
 
 const teamsKnown = (s: Series) => s.teamA !== "TBD" && s.teamB !== "TBD";
 
 export function seriesToPick(all: Series[], store: Store, now: Date): { pick: Series[]; missed: Series[] } {
   const open = all.filter((s) => teamsKnown(s) && !store.get(s.matchId));
-  const started = (s: Series) => now.getTime() >= Date.parse(s.startTime);
   return {
-    pick: open.filter((s) => s.state === "unstarted" && !started(s)),
-    missed: open.filter(started),
+    pick: open.filter((s) => s.state === "unstarted" && !isLocked(s.startTime, now)),
+    missed: open.filter((s) => isLocked(s.startTime, now)),
   };
+}
+
+/** Records whose commit was interrupted: re-submit the same hash while there is still time. */
+export function seriesToResume(store: Store, now: Date): SeriesRecord[] {
+  return store.all().filter((r) => r.status === "committing" && !isLocked(r.series.startTime, now));
 }
 
 export function seriesToSettle(all: Series[], store: Store): Series[] {

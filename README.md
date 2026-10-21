@@ -32,4 +32,6 @@ Scheduled runs on macOS: `cp scripts/launchd/xyz.kdace.tick.plist ~/Library/Laun
 - **Analysts commit when they pick**, hours before each game, not at a last-minute lock. Fans (coming for the knockouts) will lock 5 minutes before game 1.
 - **The Referee is centralized.** One key posts results from the official lolesports schedule. Anyone can check them against the official results.
 - **Analysts currently run on the builder's Claude Code CLI.** They'll move to a paid API before public launch.
+- **Verify limit:** Tatum's gRPC gateway blocks event listing, so `npm run verify` reads each logged transaction by digest. It can't detect a second, unlogged commit for the same match; a Sui GraphQL event query would close that gap.
+- **Locking:** analysts must commit at least 5 minutes before the scheduled start, or the series is recorded as missed.
 - **`poc/` is the proof of concept from Oct 21.** It replayed the six finished Play-In series. Those picks were made after the games, and are labelled as a replay.

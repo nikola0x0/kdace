@@ -2,16 +2,19 @@
 import { boardMatches, checkRecord } from "../core/checks.ts";
 import { readLedgerEvent } from "../core/ledger.ts";
 import { Store } from "../core/store.ts";
+import { fetchSeries } from "../core/worlds.ts";
 
 const network = process.env.SUI_NETWORK ?? "mainnet";
 const store = new Store();
 let failures = 0;
+const officialById = new Map((await fetchSeries()).map((s) => [s.matchId, s]));
 
 for (const r of store.all().filter((x) => x.status !== "missed").sort((a, b) => a.series.startTime.localeCompare(b.series.startTime))) {
   const commit = r.commitDigest ? await readLedgerEvent(r.commitDigest) : null;
   const result = r.result ? await readLedgerEvent(r.result.resultDigest) : null;
-  const checks = checkRecord(r, commit, result);
-  const relevant = r.status === "settled" ? checks : { hashMatches: checks.hashMatches, committedBeforeStart: checks.committedBeforeStart, lessonsPredatePicks: checks.lessonsPredatePicks };
+  const checks = checkRecord(r, commit, result, officialById.get(r.series.matchId));
+  const { resultMatchesOfficial, ...beforeResult } = checks;
+  const relevant = r.status === "settled" ? checks : beforeResult;
   const pass = Object.values(relevant).every(Boolean);
   if (!pass) failures++;
   console.log(`${pass ? "PASS" : "FAIL"} ${r.series.block} ${r.series.teamA} vs ${r.series.teamB} [${r.status}]`, relevant);
@@ -23,5 +26,6 @@ for (const r of store.all().filter((x) => x.status !== "missed").sort((a, b) => 
 const board = boardMatches(store);
 if (!board) failures++;
 console.log(`${board ? "PASS" : "FAIL"} board recomputes from settled records`);
+console.log("Note: a second commit for the same match cannot be detected here (Tatum gRPC blocks event listing).");
 console.log(failures ? `\n${failures} check group(s) failed.` : "\nAll checks passed.");
 process.exit(failures ? 1 : 0);

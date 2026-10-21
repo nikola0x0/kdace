@@ -11,7 +11,8 @@ async function callLedger(fn: "commit_batch" | "post_result", args: (tx: Transac
   tx.moveCall({ target: `${env("KDACE_PACKAGE_ID")}::ledger::${fn}`, arguments: args(tx) });
   const res = await sui.signAndExecuteTransaction({ signer: refereeKeypair(), transaction: tx, include: { effects: true } });
   if (res.$kind !== "Transaction") throw new Error(`${fn} failed: ${JSON.stringify(res.FailedTransaction?.effects?.status)}`);
-  await sui.waitForTransaction({ digest: res.Transaction.digest });
+  // Execution already succeeded; a failed wait must not lose the digest (a retry would post a duplicate).
+  await sui.waitForTransaction({ digest: res.Transaction.digest }).catch(() => {});
   return res.Transaction.digest;
 }
 
