@@ -14,6 +14,8 @@ export type Me = {
   address: string;
   displayName: string;
   avatarUrl?: string | null;
+  /** The role the fan cheers for (top, jungle, mid, adc, support). */
+  favRole?: string | null;
   picks: { matchId: string; market: string; choice: string; stake?: number; updatedAt: string }[];
   axp?: { start: number; settled: number; open: number; available: number };
 };
@@ -32,6 +34,8 @@ type FanState = {
   placeBet(matchId: string, market: Market, choice: string, stake: number): Promise<boolean>;
   signIn(): void;
   signOut(): Promise<void>;
+  /** Sets your favourite role and/or photo (a data URL, or null to remove it). */
+  updateProfile(patch: { favRole?: string | null; image?: string | null }): Promise<boolean>;
 };
 
 export const AXP_START = 10_000;
@@ -90,10 +94,23 @@ export default function FanProvider({ children }: { children: React.ReactNode })
     await refresh();
   }, [refresh]);
 
+  const updateProfile = useCallback(
+    async (patch: { favRole?: string | null; image?: string | null }) => {
+      const r = await api<{ favRole?: string | null; avatarUrl?: string | null }>("/api/me", { method: "POST", body: JSON.stringify(patch) });
+      if (!r.ok) {
+        say(r.body.error ?? "That didn't save. Please try again.", "error");
+        return false;
+      }
+      setMe((m) => (m ? { ...m, ...r.body } : m));
+      return true;
+    },
+    [say],
+  );
+
   const available = me?.axp?.available ?? AXP_START;
 
   return (
-    <Ctx.Provider value={{ me, open, ready, available, slip, openSlip, closeSlip: () => setSlip(null), placeBet, signIn: () => setDialog(true), signOut }}>
+    <Ctx.Provider value={{ me, open, ready, available, slip, openSlip, closeSlip: () => setSlip(null), placeBet, signIn: () => setDialog(true), signOut, updateProfile }}>
       {children}
       {dialog && (
         <SignInDialog

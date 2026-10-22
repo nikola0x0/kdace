@@ -6,8 +6,8 @@ import { Avatar, Axp, RoleIcon } from "../ui/bits";
 import Pnl from "../ui/Pnl";
 import { useFans } from "../ui/FanProvider";
 
-export type LbRow = { player: string; name: string; role?: string; color?: string; art?: string | null; balance: number; net: number; inPlay: number; w: number; l: number };
-type FanApiRow = { address: string; displayName: string; avatarUrl?: string | null; balance: number; net: number; inPlay: number };
+export type LbRow = { player: string; name: string; role?: string; /** A fan's favourite role. */ fav?: string | null; color?: string; art?: string | null; balance: number; net: number; inPlay: number; w: number; l: number };
+type FanApiRow = { address: string; displayName: string; avatarUrl?: string | null; favRole?: string | null; balance: number; net: number; inPlay: number };
 const fmt = (n: number) => n.toLocaleString("en-US");
 
 export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[]; fanRecords: Record<string, { w: number; l: number }> }) {
@@ -15,7 +15,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
   const [fans, setFans] = useState<LbRow[]>([]);
   useEffect(() => {
     fetch("/api/leaderboard").then((r) => (r.ok ? r.json() : { fans: [] })).then((b: { fans: FanApiRow[] }) =>
-      setFans(b.fans.map((f) => ({ player: `fan:${f.address}`, name: f.displayName, art: f.avatarUrl ?? null, balance: f.balance, net: f.net, inPlay: f.inPlay, w: fanRecords[f.address]?.w ?? 0, l: fanRecords[f.address]?.l ?? 0 }))),
+      setFans(b.fans.map((f) => ({ player: `fan:${f.address}`, name: f.displayName, art: f.avatarUrl ?? null, fav: f.favRole ?? null, balance: f.balance, net: f.net, inPlay: f.inPlay, w: fanRecords[f.address]?.w ?? 0, l: fanRecords[f.address]?.l ?? 0 }))),
     ).catch(() => {});
   }, [fanRecords]);
 
@@ -54,7 +54,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
             {r.role ? (
               <Link href={`/analysts/${r.role}`} className="who">{who(r, 30)}{r.name} <RoleIcon role={r.role} /><span className="tag">AI</span></Link>
             ) : (
-              <span className="who">{who(r, 30)}{r.name}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
+              <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
             )}
             <b className="num bal"><Axp size={15} /> {fmt(r.balance)}</b>
             <span className="num">{fmt(r.balance - r.inPlay)}</span>

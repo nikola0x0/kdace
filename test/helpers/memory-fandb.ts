@@ -1,5 +1,5 @@
 // In-memory FanDb for tests: same semantics as the Supabase tables (unique keys, conditional updates, the referee lock).
-import type { FanAuth, FanCommitRow, FanDb, FanRow } from "../../src/core/fandb.ts";
+import { isCustomAvatar, type FanAuth, type FanCommitRow, type FanDb, type FanRow } from "../../src/core/fandb.ts";
 import type { FanPickRow } from "../../src/core/fans.ts";
 
 export class MemoryFanDb implements FanDb {
@@ -16,7 +16,7 @@ export class MemoryFanDb implements FanDb {
     if (!this.fans.has(address)) this.fans.set(address, { address, suinsName: null, suinsCheckedAt: null, createdAt: new Date().toISOString(), authMethod: null, zkloginSalt: null });
     if (auth) {
       const f = this.fans.get(address)!;
-      this.fans.set(address, { ...f, authMethod: auth.method, zkloginSalt: auth.zkloginSalt ?? f.zkloginSalt, avatarUrl: auth.avatarUrl ?? f.avatarUrl ?? null });
+      this.fans.set(address, { ...f, authMethod: auth.method, zkloginSalt: auth.zkloginSalt ?? f.zkloginSalt, avatarUrl: isCustomAvatar(f.avatarUrl) ? f.avatarUrl : auth.avatarUrl ?? f.avatarUrl ?? null });
     }
   }
   async setSuins(address: string, name: string | null, checkedAt: string) {
@@ -27,7 +27,17 @@ export class MemoryFanDb implements FanDb {
     return Object.fromEntries(addresses.flatMap((a) => (this.fans.has(a) ? [[a, this.fans.get(a)!.suinsName]] : [])));
   }
   async listFans() {
-    return [...this.fans.values()].map((f) => ({ address: f.address, suinsName: f.suinsName ?? null, axpSettled: f.axpSettled ?? 0, avatarUrl: f.avatarUrl ?? null }));
+    return [...this.fans.values()].map((f) => ({ address: f.address, suinsName: f.suinsName ?? null, axpSettled: f.axpSettled ?? 0, avatarUrl: f.avatarUrl ?? null, favRole: f.favRole ?? null }));
+  }
+  async setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null) {
+    const f = this.fans.get(address);
+    const url = image ? `https://storage.test/storage/v1/object/public/avatars/${address}?v=${image.bytes.length}` : null;
+    if (f) this.fans.set(address, { ...f, avatarUrl: url });
+    return url;
+  }
+  async setFavRole(address: string, role: string | null) {
+    const f = this.fans.get(address);
+    if (f) this.fans.set(address, { ...f, favRole: role });
   }
   async upsertPick(row: FanPickRow) {
     this.picks.set(`${row.matchId}|${row.address}|${row.market}|${row.choice}`, { ...row });

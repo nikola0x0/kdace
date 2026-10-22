@@ -174,7 +174,7 @@ export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   for (const p of await deps.db.picksFor(openIds)) if (isOpenPick(p, commits, series)) inPlay[p.address] = (inPlay[p.address] ?? 0) + p.stake;
   return {
     status: 200,
-    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, balance: AXP_START + f.axpSettled, net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
+    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, balance: AXP_START + f.axpSettled, net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
   };
 }
 
@@ -185,7 +185,7 @@ export async function activity(deps: FanApiDeps, opts: { matchId?: string; limit
   return {
     status: 200,
     body: {
-      buys: buys.map((b) => ({ id: b.id, matchId: b.matchId, market: b.market, choice: b.choice, amount: b.amount, at: b.at, address: b.address, name: displayName(b.address, fans.get(b.address)?.suinsName), avatarUrl: fans.get(b.address)?.avatarUrl ?? null })),
+      buys: buys.map((b) => ({ id: b.id, matchId: b.matchId, market: b.market, choice: b.choice, amount: b.amount, at: b.at, address: b.address, name: displayName(b.address, fans.get(b.address)?.suinsName), avatarUrl: fans.get(b.address)?.avatarUrl ?? null, favRole: fans.get(b.address)?.favRole ?? null })),
     },
   };
 }
@@ -196,6 +196,37 @@ export async function getMe(deps: FanApiDeps, address: string | null): Promise<A
   const rows = (await deps.db.picksOf(address)).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const axp = await fanAxp(deps, address, { picks: rows, commits: await deps.db.listCommits(), series: await deps.fetchSeries() });
   const picks = rows.map(({ matchId, market, choice, stake, updatedAt }) => ({ matchId, market, choice, stake, updatedAt }));
-  const avatarUrl = (await deps.db.getFan(address))?.avatarUrl ?? null;
-  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), avatarUrl, picks, axp } };
+  const fan = await deps.db.getFan(address);
+  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), avatarUrl: fan?.avatarUrl ?? null, favRole: fan?.favRole ?? null, picks, axp } };
+}
+
+const AVATAR_MAX_BYTES = 200 * 1024;
+const AVATAR_TYPES: Record<string, (b: Uint8Array) => boolean> = {
+  "image/webp": (b) => String.fromCharCode(...b.subarray(0, 4)) === "RIFF" && String.fromCharCode(...b.subarray(8, 12)) === "WEBP",
+  "image/png": (b) => b[0] === 0x89 && String.fromCharCode(...b.subarray(1, 4)) === "PNG",
+  "image/jpeg": (b) => b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff,
+};
+
+/** Sets the fan's profile photo from a data URL (WebP, PNG or JPEG, checked by its bytes, up to 200 KB), or clears it with null. */
+export async function setAvatar(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
+  if (!address) return fail(401, "Not signed in.");
+  const image = (body as { image?: unknown } | null)?.image;
+  if (image === null) return { status: 200, body: { avatarUrl: await deps.db.setCustomAvatar(address, null) } };
+  const m = typeof image === "string" ? /^data:(image\/[a-z]+);base64,([A-Za-z0-9+/=]+)$/.exec(image) : null;
+  if (!m || !AVATAR_TYPES[m[1]]) return fail(400, "Use a JPG, PNG or WebP image.");
+  const bytes = new Uint8Array(Buffer.from(m[2], "base64"));
+  if (bytes.length > AVATAR_MAX_BYTES) return fail(400, "That image is too big (200 KB max).");
+  if (!AVATAR_TYPES[m[1]](bytes)) return fail(400, "Use a JPG, PNG or WebP image.");
+  return { status: 200, body: { avatarUrl: await deps.db.setCustomAvatar(address, { bytes, type: m[1] }) } };
+}
+
+export const FAV_ROLES = ["top", "jungle", "mid", "adc", "support"] as const;
+
+/** Sets the role a fan cheers for (one of the five analyst roles), or clears it with null. */
+export async function setFavRole(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
+  if (!address) return fail(401, "Not signed in.");
+  const role = (body as { favRole?: unknown } | null)?.favRole;
+  if (role !== null && !FAV_ROLES.includes(role as (typeof FAV_ROLES)[number])) return fail(400, "Pick one of: top, jungle, mid, adc, support.");
+  await deps.db.setFavRole(address, role as string | null);
+  return { status: 200, body: { favRole: role } };
 }

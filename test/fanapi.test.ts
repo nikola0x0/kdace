@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
 import { jwtToAddress } from "@mysten/sui/zklogin";
-import { activity, getMe, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { activity, getMe, setAvatar, setFavRole, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
 import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
@@ -259,11 +259,55 @@ describe("getMe", () => {
     await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 400 });
     const r = await getMe(deps, A);
     expect(r.body).toEqual({
-      address: A, suinsName: "nikola.sui", displayName: "nikola.sui", avatarUrl: null,
+      address: A, suinsName: "nikola.sui", displayName: "nikola.sui", avatarUrl: null, favRole: null,
       picks: [{ matchId: "x", market: "winner", choice: "GEN", stake: 400, updatedAt: "2026-10-23T12:00:00.000Z" }],
       axp: { start: 10000, settled: 750, open: 400, available: 10350 },
     });
     expect((await getMe(deps, null)).status).toBe(401);
+  });
+});
+
+describe("setFavRole", () => {
+  it("saves the role a fan cheers for, shows it on their profile, and clears it with null", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    expect((await setFavRole(deps, A, { favRole: "adc" })).body).toEqual({ favRole: "adc" });
+    expect((await getMe(deps, A)).body).toMatchObject({ favRole: "adc" });
+    expect((await leaderboardFans(deps)).body).toMatchObject({ fans: [{ address: A, favRole: "adc" }] });
+    expect((await setFavRole(deps, A, { favRole: null })).body).toEqual({ favRole: null });
+    expect((await getMe(deps, A)).body).toMatchObject({ favRole: null });
+  });
+  it("rejects anything that isn't one of the five roles, and signed-out callers", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    expect((await setFavRole(deps, A, { favRole: "coach" })).status).toBe(400);
+    expect((await setFavRole(deps, A, {})).status).toBe(400);
+    expect((await setFavRole(deps, null, { favRole: "mid" })).status).toBe(401);
+  });
+});
+
+describe("setAvatar", () => {
+  const webp = (size = 64) => `data:image/webp;base64,${Buffer.concat([Buffer.from("RIFF0000WEBPVP8 "), Buffer.alloc(size)]).toString("base64")}`;
+  it("stores an uploaded photo, keeps it over the Google photo on the next sign-in, and clears with null", async () => {
+    const { deps, db } = fakes();
+    await signedIn(deps);
+    const r = await setAvatar(deps, A, { image: webp() });
+    expect(r.status).toBe(200);
+    const url = (r.body as { avatarUrl: string }).avatarUrl;
+    expect(url).toContain("/avatars/");
+    expect((await getMe(deps, A)).body).toMatchObject({ avatarUrl: url });
+    await db.ensureFan(A, { method: "google", avatarUrl: "https://lh3.googleusercontent.com/new" });
+    expect((await db.getFan(A))?.avatarUrl).toBe(url);
+    expect((await setAvatar(deps, A, { image: null })).body).toEqual({ avatarUrl: null });
+  });
+  it("rejects files that aren't images, are too big, or callers who aren't signed in", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    expect((await setAvatar(deps, A, { image: "data:image/webp;base64," + Buffer.from("<svg onload=x>").toString("base64") })).status).toBe(400);
+    expect((await setAvatar(deps, A, { image: "data:image/svg+xml;base64,PHN2Zz4=" })).status).toBe(400);
+    expect((await setAvatar(deps, A, { image: webp(300_000) })).status).toBe(400);
+    expect((await setAvatar(deps, A, {})).status).toBe(400);
+    expect((await setAvatar(deps, null, { image: webp() })).status).toBe(401);
   });
 });
 
@@ -277,7 +321,7 @@ describe("leaderboardFans", () => {
     const r = await leaderboardFans(deps);
     expect(r.status).toBe(200);
     expect((r.body as { fans: unknown[] }).fans).toEqual(expect.arrayContaining([
-      { address: A, displayName: "nikola.sui", avatarUrl: null, balance: 10000, net: 0, inPlay: 300 },
+      { address: A, displayName: "nikola.sui", avatarUrl: null, favRole: null, balance: 10000, net: 0, inPlay: 300 },
       expect.objectContaining({ address: B, balance: 10420, net: 420, inPlay: 0 }),
     ]));
   });

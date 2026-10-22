@@ -9,6 +9,9 @@ export type FanAuthMethod = "google" | "wallet";
 /** How a fan last signed in. Google fans also carry their zkLogin salt (the only way back to their address without ZKLOGIN_SALT_SECRET). */
 export type FanAuth = { method: FanAuthMethod; zkloginSalt?: string; avatarUrl?: string };
 
+/** A photo the fan uploaded (kept over their Google photo on later sign-ins). */
+export const isCustomAvatar = (url: string | null | undefined) => !!url && url.includes("/storage/v1/object/public/avatars/");
+
 export type FanRow = {
   address: string;
   suinsName: string | null;
@@ -20,6 +23,8 @@ export type FanRow = {
   axpSettled?: number;
   /** Google profile photo (Google sign-in only). */
   avatarUrl?: string | null;
+  /** The role the fan cheers for (top, jungle, mid, adc, support), or null. */
+  favRole?: string | null;
 };
 
 /** One fan batch per series. Written before the chain call (`committing`) and after it (`committed`), like src/jobs/pick.ts. */
@@ -41,7 +46,11 @@ export type FanCommitRow = {
 export interface FanDb {
   getFan(address: string): Promise<FanRow | null>;
   /** Every fan with their cached SuiNS name and settled AXP, for the leaderboard. */
-  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number; avatarUrl: string | null }[]>;
+  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number; avatarUrl: string | null; favRole: string | null }[]>;
+  /** Stores a profile photo the fan uploaded and points their avatar at it (null clears the avatar). Returns the URL. */
+  setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null): Promise<string | null>;
+  /** Sets (or with null clears) the fan's favourite role. */
+  setFavRole(address: string, role: string | null): Promise<void>;
   /** Creates the fan row if it doesn't exist yet. With `auth`, also records how they signed in (a salt, once set, is kept). */
   ensureFan(address: string, auth?: FanAuth): Promise<void>;
   setSuins(address: string, name: string | null, checkedAt: string): Promise<void>;
@@ -99,8 +108,26 @@ export class SupabaseFanDb implements FanDb {
     return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
   }
   async listFans() {
-    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url");
-    return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null }));
+    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url,fav_role");
+    return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null; fav_role: string | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null, favRole: r.fav_role ?? null }));
+  }
+  async setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null) {
+    let url: string | null = null;
+    if (image) {
+      const base = this.url.replace(/\/$/, "");
+      const path = `avatars/${address}`;
+      const headers: Record<string, string> = { apikey: this.key, "Content-Type": image.type, "x-upsert": "true", "Cache-Control": "max-age=60" };
+      if (this.key.startsWith("eyJ")) headers.Authorization = `Bearer ${this.key}`;
+      const res = await this.fetchImpl(`${base}/storage/v1/object/${path}`, { method: "POST", headers, body: image.bytes as BodyInit });
+      if (!res.ok) throw new Error(`Supabase storage upload HTTP ${res.status}: ${await res.text()}`);
+      // Same path on every upload; the version query makes browsers fetch the new photo.
+      url = `${base}/storage/v1/object/public/${path}?v=${Date.now()}`;
+    }
+    await this.req("PATCH", `fans?address=${eq(address)}`, { avatar_url: url }, "return=minimal");
+    return url;
+  }
+  async setFavRole(address: string, role: string | null) {
+    await this.req("PATCH", `fans?address=${eq(address)}`, { fav_role: role }, "return=minimal");
   }
   async getFan(address: string) {
     const { json } = await this.req("GET", `fans?select=*&address=${eq(address)}`);
@@ -110,7 +137,7 @@ export class SupabaseFanDb implements FanDb {
     if (!auth) return void (await this.req("POST", "fans?on_conflict=address", { address }, "resolution=ignore-duplicates,return=minimal"));
     const row: Record<string, string> = { address, auth_method: auth.method };
     if (auth.zkloginSalt !== undefined) row.zklogin_salt = auth.zkloginSalt;
-    if (auth.avatarUrl !== undefined) row.avatar_url = auth.avatarUrl;
+    if (auth.avatarUrl !== undefined && !isCustomAvatar((await this.getFan(address))?.avatarUrl)) row.avatar_url = auth.avatarUrl;
     await this.req("POST", "fans?on_conflict=address", row, "resolution=merge-duplicates,return=minimal");
   }
   async setSuins(address: string, name: string | null, checkedAt: string) {
