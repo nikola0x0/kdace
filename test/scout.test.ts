@@ -19,9 +19,11 @@ import {
   parseEvent,
   parseLeagueSeries,
   parseWindow,
+  reconcileWinners,
   sampleGames,
   sampleTimes,
   summarizeGame,
+  usableEnd,
 } from "../src/core/scout.ts";
 
 const fx = (name: string) => JSON.parse(readFileSync(`test/fixtures/scout/${name}`, "utf8"));
@@ -294,6 +296,37 @@ const series: SeriesResult[] = [
   sr("2026-07-01", "MSI 2026", "Finals", "TES", "GEN", 3, 1),
   sr("2026-10-23", "Worlds 2026", "Swiss", "BLG", "TES", 1, 0),
 ];
+
+describe("winner reconciliation", () => {
+  const g = (number: number, blue: string, red: string, winner: string | null, towers: [number, number], inhib: [number, number], gold: number): GameSummary =>
+    ({ ...summary(), gameId: `g${number}`, number, winner, goldDiff: [0, gold], blue: { ...summary().blue, code: blue, towers: towers[0], inhibitors: inhib[0] }, red: { ...summary().red, code: red, towers: towers[1], inhibitors: inhib[1] } }) as GameSummary;
+  const s = (teamA: string, winsA: number, winsB: number, teamB: string) => sr("2026-08-01", "LPL 2026", "Week 1", teamA, teamB, winsA, winsB);
+  it("gives the last game to the series winner", () => {
+    expect(reconcileWinners([g(1, "T1", "HLE", "HLE", [1, 8], [0, 1], -8000), g(2, "HLE", "T1", null, [9, 1], [1, 0], 10000)], s("T1", 0, 2, "HLE"))).toEqual({ g2: "HLE" });
+  });
+  it("flips the least clear-cut games until the score matches", () => {
+    const games = [
+      g(1, "FUR", "LOS", "FUR", [10, 6], [3, 1], 900),
+      g(2, "LOS", "FUR", "LOS", [8, 0], [1, 0], 9000),
+      g(3, "LOS", "FUR", "FUR", [2, 10], [0, 2], -11700),
+      g(4, "FUR", "LOS", "LOS", [1, 9], [0, 1], -11900),
+    ];
+    expect(reconcileWinners(games, s("FUR", 1, 3, "LOS"))).toEqual({ g1: "LOS" });
+  });
+  it("changes nothing when the frames already agree, or games are missing mid-series", () => {
+    expect(reconcileWinners([g(1, "A", "B", "A", [9, 1], [1, 0], 5000)], s("A", 1, 0, "B"))).toEqual({});
+    expect(reconcileWinners([g(1, "A", "B", "B", [9, 1], [1, 0], 5000)], s("A", 2, 1, "B"))).toEqual({});
+  });
+});
+
+describe("usableEnd", () => {
+  it("accepts a finished frame, or a feed that stopped late with an inhibitor down", () => {
+    expect(usableEnd([f(0, tf(0), tf(0)), f(600, tf(0), tf(0), "finished")])).toBe(true);
+    expect(usableEnd([f(0, tf(0), tf(0)), f(2000, tf(0, 0, 8, [], 1, 1), tf(0))])).toBe(true);
+    expect(usableEnd([f(0, tf(0), tf(0)), f(950, tf(0), tf(0))])).toBe(false);
+    expect(usableEnd([f(0, tf(0), tf(0)), f(88, tf(0), tf(0))])).toBe(false);
+  });
+});
 
 describe("series records", () => {
   it("parses a league schedule into labelled series and applies team aliases", () => {

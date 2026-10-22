@@ -20,9 +20,11 @@ import {
   parseEvent,
   parseLeagueSeries,
   parseWindow,
+  reconcileWinners,
   sampleTimes,
   summarizeGame,
   TEAM_ALIASES,
+  usableEnd,
 } from "../core/scout.ts";
 import { SCOUT_DIR } from "../core/scoutstore.ts";
 
@@ -124,10 +126,10 @@ async function gameFrames(gameId: string, stepSec: number): Promise<{ meta: Retu
   const t0 = first.frames[0].ts;
   const endAt = floor10(Math.min(Date.parse(t0) + 3 * 3600_000, Date.now() - 60_000));
   const endPath = join(dir, `window-end.json.gz`);
-  const endJson = await cached(endPath, `${FEED}/window/${gameId}?startingTime=${endAt}`, false, (j) => j?.frames?.at(-1)?.gameState === "finished");
-  const end = parseWindow(endJson);
+  // Only completed games get here, so the last frames never change: cache them even without a "finished" frame.
+  const end = parseWindow(await cached(endPath, `${FEED}/window/${gameId}?startingTime=${endAt}`, false, (j) => (j?.frames?.length ?? 0) > 0));
   const last = end.frames.at(-1);
-  if (!last || last.state !== "finished") return null;
+  if (!last || !usableEnd(mergeFrames(first.frames, end.frames))) return null;
   let frames = mergeFrames(first.frames, end.frames);
   for (const t of sampleTimes(t0, last.ts, stepSec)) frames = mergeFrames(frames, parseWindow(await win(t)).frames);
   // Fill gaps where a player's kills jumped by 3+ so likely multi-kills can be told apart (capped per game).
@@ -197,6 +199,7 @@ const rebuild = process.argv.includes("--rebuild");
 const games = new Map<string, GameSummary>(rebuild ? [] : readJson<GameSummary[]>(gamesPath, []).map((g) => [g.gameId, g]));
 const missing: string[] = [];
 const mismatches: string[] = [];
+const reconciled: string[] = [];
 const save = () => writeJson(gamesPath, [...games.values()].sort((a, b) => a.date.localeCompare(b.date) || a.gameId.localeCompare(b.gameId)));
 const todo = relevant.filter((s) => selected.has(s.matchId));
 console.log(`livestats: ${todo.length} series selected, ${games.size} games already summarised`);
@@ -216,7 +219,15 @@ for (const s of todo) {
     games.set(g.id, summarizeGame({ meta: raw.meta, frames: raw.frames, details: parseDetails(raw.details), teams: codes, league: s.league, number: g.number, winnerHint: null }));
     fetched++;
   }
-  // The per-game winner comes from the final frame; check it adds up to the official series score.
+  // Per-game winners come from the final frame; make them add up to the official series score (re-summarised from the cache).
+  const fixes = reconcileWinners([...games.values()].filter((g) => g.matchId === s.matchId), s);
+  for (const [gameId, winner] of Object.entries(fixes)) {
+    const g = games.get(gameId)!;
+    const raw = await gameFrames(gameId, s.league.startsWith("Worlds ") ? STEP_WORLDS : STEP_OTHER);
+    if (!raw?.meta) continue;
+    games.set(gameId, summarizeGame({ meta: raw.meta, frames: raw.frames, details: parseDetails(raw.details), teams: codes, league: s.league, number: g.number, winnerHint: winner }));
+    reconciled.push(`${s.league} ${s.teamA} ${s.winsA}-${s.winsB} ${s.teamB} game ${g.number}: ${g.winner ?? "unknown"} -> ${winner}`);
+  }
   const mine = [...games.values()].filter((g) => g.matchId === s.matchId);
   const wa = mine.filter((g) => g.winner === s.teamA).length;
   const wb = mine.filter((g) => g.winner === s.teamB).length;
@@ -235,9 +246,10 @@ const teams = buildTeams(worldsTeams, relevant, allGames, RECENT_GAMES);
 writeJson(join(SCOUT_DIR, "teams.json"), teams);
 const perLeague: Record<string, { series: number; seriesAll: number; games: number }> = {};
 for (const [label, n] of Object.entries(allPerLeague)) perLeague[label] = { series: relevant.filter((s) => s.league === label).length, seriesAll: n, games: allGames.filter((g) => g.league === label).length };
-writeJson(join(SCOUT_DIR, "meta.json"), { generatedAt: new Date().toISOString(), source: "lolesports official feeds (esports-api getSchedule/getEventDetails, feed livestats window/details)", worldsTeams, perLeague, missing, winnerMismatches: mismatches });
+writeJson(join(SCOUT_DIR, "meta.json"), { generatedAt: new Date().toISOString(), source: "lolesports official feeds (esports-api getSchedule/getEventDetails, feed livestats window/details)", worldsTeams, perLeague, missing, winnersReconciled: reconciled, winnerMismatches: mismatches });
 console.log(JSON.stringify(perLeague, null, 1));
 if (missing.length) console.log(`no livestats for ${missing.length} games:\n  ${missing.join("\n  ")}`);
+if (reconciled.length) console.log(`winners corrected to match series scores:\n  ${reconciled.join("\n  ")}`);
 if (mismatches.length) console.log(`winner mismatches:\n  ${mismatches.join("\n  ")}`);
 console.log(`${requests} requests. Sample digest:\n`);
 const [a, b] = args.length === 2 ? args : ["GEN", "IG"];

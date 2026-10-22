@@ -52,6 +52,8 @@ export type GameSummary = {
   date: string;
   patch: string;
   durationMin: number;
+  /** False when the feed stopped without a "finished" frame (totals are the last ones seen, duration is approximate). */
+  complete: boolean;
   winner: string | null;
   blue: SideSummary;
   red: SideSummary;
@@ -228,8 +230,49 @@ function frameNear(frames: Frame[], targetMs: number, toleranceMs = 45_000): Fra
   return bestGap <= toleranceMs ? best : null;
 }
 
+/** True when the frames reach the end of a game: a finished frame, or a feed that stopped 20+ minutes in with an inhibitor down. */
+export function usableEnd(frames: Frame[]): boolean {
+  const last = frames.at(-1);
+  if (!last || frames.length < 2) return false;
+  if (last.state === "finished") return true;
+  return minutesBetween(frames[0].ts, last.ts) >= 20 && last.blue.inhibitors + last.red.inhibitors > 0;
+}
+
+/**
+ * Per-game winners that must change so the games add up to the official series score. The series winner always
+ * takes the last game; beyond that, the least clear-cut frame calls (towers, inhibitors, final gold) are flipped.
+ * Returns gameId -> corrected winner, only for games whose winner changes.
+ */
+export function reconcileWinners(games: GameSummary[], s: SeriesResult): Record<string, string> {
+  const total = (s.winsA ?? 0) + (s.winsB ?? 0);
+  const sorted = [...games].sort((a, b) => a.number - b.number);
+  const winners = new Map(sorted.map((g) => [g.gameId, g.winner]));
+  const last = sorted.find((g) => g.number === total);
+  if (last && s.winner) winners.set(last.gameId, s.winner);
+  if (sorted.length === total && s.winner) {
+    const margin = (g: GameSummary) => {
+      const gold = [...g.goldDiff].reverse().find((d) => d !== null) ?? 0;
+      return Math.abs(g.blue.towers - g.red.towers) * 3 + Math.abs(g.blue.inhibitors - g.red.inhibitors) * 2 + Math.abs(gold) / 1000;
+    };
+    const need: Record<string, number> = { [s.teamA]: s.winsA ?? 0, [s.teamB]: s.winsB ?? 0 };
+    const flippable = sorted.filter((g) => g !== last).sort((a, b) => (winners.get(a.gameId) ? margin(a) : -1) - (winners.get(b.gameId) ? margin(b) : -1));
+    const count = (t: string) => [...winners.values()].filter((w) => w === t).length;
+    for (const g of flippable) {
+      const w = winners.get(g.gameId) ?? null;
+      const other = w === s.teamA ? s.teamB : w === s.teamB ? s.teamA : null;
+      if (w && other && count(w) > need[w] && count(other) < need[other]) winners.set(g.gameId, other);
+      else if (!w) winners.set(g.gameId, count(s.teamA) < need[s.teamA] ? s.teamA : s.teamB);
+    }
+  }
+  const out: Record<string, string> = {};
+  for (const g of sorted) {
+    const w = winners.get(g.gameId);
+    if (w && w !== g.winner) out[g.gameId] = w;
+  }
+  return out;
+}
+
 function pickWinner(last: Frame): Side | null {
-  if (last.state !== "finished") return null;
   const b = last.blue;
   const r = last.red;
   if (b.towers !== r.towers) return b.towers > r.towers ? "blue" : "red";
@@ -364,6 +407,7 @@ export function summarizeGame(input: GameInput): GameSummary {
     date: t0,
     patch: meta.patch,
     durationMin: round1(duration),
+    complete: last.state === "finished",
     winner,
     blue: sideSummary("blue"),
     red: sideSummary("red"),
@@ -382,7 +426,7 @@ export function summarizeGame(input: GameInput): GameSummary {
 // ---------- fun facts ----------
 
 const MULTI_KILL_SEC = 30;
-const ROUGH_PATCH_SEC = 125;
+const ROUGH_PATCH_SEC = 245; // ~4 minutes: death timers make 3 deaths in 2 minutes almost impossible after the early game
 const MULTI = ["", "", "", "triple", "quadra", "penta"];
 
 /** Window start times (10 s apart) that fill any gap over 30 s where one player's kills rose by 3+, so multi-kills can be checked. */
