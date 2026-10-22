@@ -51,9 +51,9 @@ export default function MyPicks({ matches, board }: { matches: Record<string, My
       <div className="me-head">
         <div className="me-name"><span className="ap-label">Signed in as</span><b>{me.displayName}</b></div>
         <div className="me-kpis">
-          <div className="ap-kpi big"><b className="num bal"><Axp size={28} /> {fmt(axp.start + axp.settled)} <Pnl net={axp.settled} className="text-sm" /></b><span>AXP balance</span></div>
-          <div className="ap-kpi"><b className="num">{fmt(axp.available)}</b><span>Available</span></div>
-          <div className="ap-kpi"><b className="num">{fmt(axp.open)}</b><span>In open positions</span></div>
+          <div className="ap-kpi big"><b className="num bal"><Axp size={28} /> {fmt(axp.available)} <Pnl net={axp.settled} className="text-sm" /></b><span>Balance · AXP you can bet</span></div>
+          <div className="ap-kpi"><b className="num">{fmt(axp.open)}</b><span>In play</span></div>
+          <div className="ap-kpi"><b className="num">{fmt(axp.start + axp.settled)}</b><span>Total value</span></div>
           <div className="ap-kpi"><b className={`num ${axp.settled > 0 ? "right" : axp.settled < 0 ? "wrong" : ""}`}>{axp.settled > 0 ? "+" : ""}{fmt(axp.settled)}</b><span>Profit</span></div>
           <div className="ap-kpi"><b className="num">{row ? `#${row.rank}` : "-"}</b><span>Rank{history.length ? ` · won ${won}/${history.length}` : ""}</span></div>
         </div>
