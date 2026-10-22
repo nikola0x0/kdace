@@ -2,6 +2,7 @@
 // otherwise the builder's Claude Code CLI (local development only).
 import { execFileSync } from "node:child_process";
 import Anthropic from "@anthropic-ai/sdk";
+import "./env.ts"; // loads .env so ANTHROPIC_API_KEY is visible however this module is reached
 
 export const ANALYST_MODEL = "claude-haiku-5-5";
 
