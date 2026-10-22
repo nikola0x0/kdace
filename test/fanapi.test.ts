@@ -144,64 +144,112 @@ describe("Google sign-in", () => {
 });
 
 describe("postPick", () => {
-  it("needs a session", async () => expect((await postPick(fakes().deps, null, { matchId: "x", market: "winner", choice: "GEN" })).status).toBe(401));
+  it("needs a session", async () => expect((await postPick(fakes().deps, null, { matchId: "x", market: "winner", choice: "GEN", stake: 100 })).status).toBe(401));
 
-  it("stores the pick with server time, last pick wins, and returns a receipt", async () => {
+  it("stores the pick and its stake with server time, last pick wins, and returns a receipt", async () => {
     const { deps, db, setClock } = fakes();
     await signedIn(deps);
-    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN" });
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 100 });
     setClock("2026-10-23T13:00:00Z");
-    const r = await postPick(deps, A, { matchId: "x", market: "winner", choice: "IG" });
+    const r = await postPick(deps, A, { matchId: "x", market: "winner", choice: "IG", stake: 250 });
     expect(r.status).toBe(200);
-    expect(r.body).toMatchObject({ receipt: { entry: { player: `fan:${A}`, market: "winner", choice: "IG" }, marketId: "x:fans", pickedAt: "2026-10-23T13:00:00.000Z" } });
-    expect(await db.picksOf(A)).toEqual([{ matchId: "x", address: A, market: "winner", choice: "IG", updatedAt: "2026-10-23T13:00:00.000Z" }]);
+    expect(r.body).toMatchObject({ receipt: { entry: { player: `fan:${A}`, market: "winner", choice: "IG", stake: 250 }, marketId: "x:fans", pickedAt: "2026-10-23T13:00:00.000Z" } });
+    expect(await db.picksOf(A)).toEqual([{ matchId: "x", address: A, market: "winner", choice: "IG", stake: 250, updatedAt: "2026-10-23T13:00:00.000Z" }]);
   });
 
   it("rejects picks at lock, after the start and once the fan batch exists", async () => {
     const { deps, db, setClock } = fakes();
     setClock("2026-10-23T16:55:00Z");
-    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN" })).status).toBe(409);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 100 })).status).toBe(409);
     setClock("2026-10-23T12:00:00Z");
     await db.insertCommit({ matchId: "x", status: "committing", batch: null, batchHash: null, pickCount: 0, commitDigest: null, network: "testnet", packageId: "0x1", committedAt: null, attemptedAt: "t" });
-    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN" })).status).toBe(409);
-    expect((await postPick(deps, A, { matchId: "z", market: "winner", choice: "GEN" })).status).toBe(409);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 100 })).status).toBe(409);
+    expect((await postPick(deps, A, { matchId: "z", market: "winner", choice: "GEN", stake: 100 })).status).toBe(409);
     expect(await db.picksOf(A)).toEqual([]);
   });
 
   it.each([
-    ["a team outside the match", { matchId: "x", market: "winner", choice: "T1" }, 400],
-    ["a score on Bo1", { matchId: "y", market: "score", choice: "1-0" }, 400],
-    ["an unknown series", { matchId: "nope", market: "winner", choice: "GEN" }, 404],
+    ["a team outside the match", { matchId: "x", market: "winner", choice: "T1", stake: 100 }, 400],
+    ["a score on Bo1", { matchId: "y", market: "score", choice: "1-0", stake: 100 }, 400],
+    ["an unknown series", { matchId: "nope", market: "winner", choice: "GEN", stake: 100 }, 404],
     ["a malformed body", { matchId: 5 }, 400],
+    ["a missing stake", { matchId: "x", market: "winner", choice: "GEN" }, 400],
+    ["a stake under 10", { matchId: "x", market: "winner", choice: "GEN", stake: 9 }, 400],
+    ["a fractional stake", { matchId: "x", market: "winner", choice: "GEN", stake: 12.5 }, 400],
   ])("rejects %s", async (_n, body, status) => {
     expect((await postPick(fakes().deps, A, body)).status).toBe(status);
+  });
+
+  it("rejects a stake above the fan's available AXP, in plain words", async () => {
+    const { deps, db } = fakes();
+    await signedIn(deps);
+    await db.setAxpSettled({ [A]: -1660 }); // balance 8,340
+    await postPick(deps, A, { matchId: "y", market: "winner", choice: "T1", stake: 6000 }); // open elsewhere
+    const r = await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 2341 });
+    expect(r).toMatchObject({ status: 400, body: { error: "You only have 2,340 AXP available." } });
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 2340 })).status).toBe(200);
+  });
+
+  it("doesn't count the stake being replaced against itself", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 10000 })).status).toBe(200);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "IG", stake: 9000 })).status).toBe(200);
+    expect((await postPick(deps, A, { matchId: "x", market: "score", choice: "2-0", stake: 1001 })).status).toBe(400);
+    expect((await postPick(deps, A, { matchId: "x", market: "score", choice: "2-0", stake: 1000 })).status).toBe(200);
+  });
+
+  it("frees stakes in settled or missed fan batches and in series that ended without one", async () => {
+    const { deps, db } = fakes({ fetchSeries: async () => [later, bo3, done, { ...done, matchId: "w" }, { ...done, matchId: "v" }] });
+    await signedIn(deps);
+    const old = (matchId: string, stake: number) => db.upsertPick({ matchId, address: A, market: "winner", choice: "GEN", stake, updatedAt: "2026-10-22T12:00:00.000Z" });
+    const commit = (matchId: string, status: "committed" | "missed", settledAt: string | null) =>
+      db.insertCommit({ matchId, status, batch: "{}", batchHash: "h", pickCount: 1, commitDigest: "d", network: "testnet", packageId: "0x1", committedAt: "t", attemptedAt: "t", settledAt });
+    await old("z", 4000);
+    await commit("z", "committed", "2026-10-23T00:00:00.000Z"); // settled: counted in axp_settled instead
+    await old("w", 3000);
+    await commit("w", "missed", null); // never on chain: refunded
+    await old("v", 2000); // completed, no fan batch: refunded
+    await old("u", 500); // committed, waiting for its result: still open
+    await commit("u", "committed", null);
+    const r = await getMe(deps, A);
+    expect((r.body as { axp: unknown }).axp).toEqual({ start: 10000, settled: 0, open: 500, available: 9500 });
   });
 });
 
 describe("listPicks", () => {
-  it("lists open series with the crowd split and the fan's own picks", async () => {
+  it("lists open series with the crowd split, AXP pools and the fan's own picks with stakes", async () => {
     const { deps } = fakes();
     await signedIn(deps, A);
     await signedIn(deps, B);
-    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN" });
-    await postPick(deps, A, { matchId: "x", market: "score", choice: "2-0" });
-    await postPick(deps, B, { matchId: "x", market: "winner", choice: "IG" });
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 300 });
+    await postPick(deps, A, { matchId: "x", market: "score", choice: "2-0", stake: 50 });
+    await postPick(deps, B, { matchId: "x", market: "winner", choice: "IG", stake: 120 });
     const r = await listPicks(deps, A);
     const body = r.body as { serverTime: string; series: { series: Series; lockAt: string; crowd: unknown; mine: unknown }[] };
     expect(body.serverTime).toBe("2026-10-23T12:00:00.000Z");
     expect(body.series.map((s) => s.series.matchId)).toEqual(["x", "y"]);
-    expect(body.series[0]).toMatchObject({ lockAt: "2026-10-23T16:55:00.000Z", crowd: { fans: 2, winner: { GEN: 1, IG: 1 }, score: { "2-0": 1 } }, mine: { winner: "GEN", score: "2-0" } });
+    expect(body.series[0]).toMatchObject({
+      lockAt: "2026-10-23T16:55:00.000Z",
+      crowd: { fans: 2, winner: { GEN: 1, IG: 1 }, score: { "2-0": 1 }, winnerPool: { GEN: 300, IG: 120 }, scorePool: { "2-0": 50 } },
+      mine: { winner: { choice: "GEN", stake: 300 }, score: { choice: "2-0", stake: 50 } },
+    });
     expect((await listPicks(deps, null)).body).toMatchObject({ series: [{ mine: {} }, { mine: {} }] });
   });
 });
 
 describe("getMe", () => {
-  it("returns the fan's name and picks", async () => {
-    const { deps } = fakes();
+  it("returns the fan's name, picks with stakes, and AXP", async () => {
+    const { deps, db } = fakes();
     await signedIn(deps);
-    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN" });
+    await db.setAxpSettled({ [A]: 750 });
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 400 });
     const r = await getMe(deps, A);
-    expect(r.body).toMatchObject({ address: A, displayName: "nikola.sui", picks: [{ matchId: "x", choice: "GEN" }] });
+    expect(r.body).toEqual({
+      address: A, suinsName: "nikola.sui", displayName: "nikola.sui",
+      picks: [{ matchId: "x", market: "winner", choice: "GEN", stake: 400, updatedAt: "2026-10-23T12:00:00.000Z" }],
+      axp: { start: 10000, settled: 750, open: 400, available: 10350 },
+    });
     expect((await getMe(deps, null)).status).toBe(401);
   });
 });
