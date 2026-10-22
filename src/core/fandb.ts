@@ -119,11 +119,27 @@ const realSleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
  * Runs one Referee transaction while holding the shared mutex. The tick and the lock route sign with the same key and
  * the same ResolverCap; two concurrent transactions on one owned object can lock it until the epoch ends.
  */
-export async function withRefereeLock<T>(db: FanDb | null, holder: string, fn: () => Promise<T>, opts: { waitMs?: number; ttlSeconds?: number; sleep?: (ms: number) => Promise<void> } = {}): Promise<T> {
+export async function withRefereeLock<T>(
+  db: FanDb | null,
+  holder: string,
+  fn: () => Promise<T>,
+  opts: { waitMs?: number; ttlSeconds?: number; sleep?: (ms: number) => Promise<void>; proceedIfDbDown?: boolean } = {},
+): Promise<T> {
   if (!db) return fn();
-  const { waitMs = 60_000, ttlSeconds = 120, sleep = realSleep } = opts;
+  const { waitMs = 60_000, ttlSeconds = 120, sleep = realSleep, proceedIfDbDown = false } = opts;
+  const acquire = async () => {
+    try {
+      return await db.acquireRefereeLock(holder, ttlSeconds);
+    } catch (e) {
+      // The lock route needs the database too, so with it down nobody else can be signing.
+      if (proceedIfDbDown) return null;
+      throw e;
+    }
+  };
   const started = Date.now();
-  while (!(await db.acquireRefereeLock(holder, ttlSeconds))) {
+  let got: boolean | null;
+  while (!(got = await acquire())) {
+    if (got === null) return fn();
     if (Date.now() - started >= waitMs) throw new Error(`Referee busy: could not take the referee lock within ${waitMs / 1000}s`);
     await sleep(2000);
   }

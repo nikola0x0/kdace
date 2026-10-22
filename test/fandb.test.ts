@@ -99,6 +99,12 @@ describe("withRefereeLock", () => {
     await expect(withRefereeLock(db, "fan-lock", async () => { ran = true; }, { waitMs: 0, sleep: async () => {} })).rejects.toThrow(/busy/);
     expect(ran).toBe(false);
   });
+  it("runs anyway when asked to and the database is unreachable (the lock route can't commit then either)", async () => {
+    const db = new MemoryFanDb();
+    db.acquireRefereeLock = async () => { throw new Error("fetch failed"); };
+    expect(await withRefereeLock(db, "tick", async () => "ran", { proceedIfDbDown: true })).toBe("ran");
+    await expect(withRefereeLock(db, "fan-lock", async () => "ran")).rejects.toThrow("fetch failed");
+  });
   it("releases even when the job throws, and runs directly without a database", async () => {
     const db = new MemoryFanDb();
     await expect(withRefereeLock(db, "x", async () => { throw new Error("chain down"); })).rejects.toThrow("chain down");

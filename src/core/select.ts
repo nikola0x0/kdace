@@ -22,6 +22,10 @@ export function seriesToResume(store: Store, now: Date): SeriesRecord[] {
   return store.all().filter((r) => r.status === "committing" && !isLocked(r.series.startTime, now));
 }
 
+/** Committed series, plus series the analysts missed but the fans committed. */
 export function seriesToSettle(all: Series[], store: Store): Series[] {
-  return all.filter((s) => s.state === "completed" && store.get(s.matchId)?.status === "committed");
+  return all.filter((s) => {
+    const r = s.state === "completed" ? store.get(s.matchId) : null;
+    return r?.status === "committed" || (r?.status === "missed" && r.fans?.status === "committed");
+  });
 }

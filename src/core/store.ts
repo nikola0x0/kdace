@@ -22,13 +22,28 @@ export type SeriesRecord = {
   chain?: Chain;
   /** The first commit of this same batch on testnet, kept when the batch was re-committed on mainnet before its game. */
   testnetCommitDigest?: string;
+  /** The fans' batch for this series, mirrored from Supabase by the tick (committed under `<matchId>:fans`). */
+  fans?: FanSection;
 };
 
-/** A settled record in the shape the points module scores. */
+/** A fan batch as committed at lock: the canonical batch, its hash, and where it went on chain. */
+export type FanSection = {
+  status: "committed" | "missed";
+  batch: string | null;
+  batchHash: string | null;
+  pickCount: number;
+  commitDigest: string | null;
+  committedAt: string | null;
+  chain: Chain;
+};
+
+const batchEntries = (batch: string | null): BatchEntry[] => (batch ? (JSON.parse(batch) as { entries: BatchEntry[] }).entries : []);
+
+/** A settled record in the shape the points module scores: analysts and fans share each market's pot. */
 export const toSettled = (r: SeriesRecord): SettledSeries => ({
   matchId: r.series.matchId,
   bestOf: r.series.bestOf,
-  entries: (JSON.parse(r.batch!) as { entries: BatchEntry[] }).entries,
+  entries: [...batchEntries(r.batch), ...(r.fans?.status === "committed" ? batchEntries(r.fans.batch) : [])],
   result: { winner: r.result!.winner, score: r.result!.score },
 });
 

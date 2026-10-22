@@ -4,6 +4,7 @@ import { pathToFileURL } from "node:url";
 import { withLock } from "../core/lock.ts";
 import { ANALYSTS, buildReflectPrompt, type Role } from "../core/analysts.ts";
 import { chainOf, sameChain, type Chain } from "../core/chain.ts";
+import { fanDbFromEnv, withRefereeLock } from "../core/fandb.ts";
 import { computeBoard, marketPoints } from "../core/points.ts";
 import { seriesToSettle } from "../core/select.ts";
 import { Store, toSettled, type SeriesRecord } from "../core/store.ts";
@@ -50,7 +51,7 @@ async function settleOne(deps: SettleDeps, s: Series, result: { winner: string; 
   // r.series keeps the snapshot from commit time; the official feed is only used for the result.
   if (!r.result) save({ ...r, result: { ...result, resultDigest: await deps.postResult(s.matchId, result.winner, result.score) } });
   if (!r.points) save({ ...r, points: marketPoints(toSettled(r)) });
-  if (!r.debate) save({ ...r, debate: (await deps.ask(debatePrompt(r, result))).trim() });
+  if (!r.debate && r.picks.length) save({ ...r, debate: (await deps.ask(debatePrompt(r, result))).trim() });
   for (const pick of r.picks) {
     const a = ANALYSTS.find((x) => x.player === pick.player)!;
     let lesson = r.lessons.find((l) => l.player === pick.player);
@@ -100,7 +101,8 @@ export async function realSettleDeps(store = new Store()): Promise<SettleDeps> {
   return {
     fetchSeries,
     store,
-    postResult,
+    // Shares the Referee with the fan lock route; the Supabase mutex keeps their transactions apart.
+    postResult: (matchId, winner, score) => withRefereeLock(fanDbFromEnv(), "tick", () => postResult(matchId, winner, score), { waitMs: 5 * 60_000, proceedIfDbDown: true }),
     ask: async (prompt) => askAnalyst(prompt),
     startRemember: async (role, text) => {
       const ns = `kdace-analyst-${role}`;

@@ -41,6 +41,9 @@ jobs:
           TATUM_SUI_GRPC: ${{ vars.TATUM_SUI_GRPC }}
           KDACE_PACKAGE_ID: ${{ vars.KDACE_PACKAGE_ID }}
           KDACE_RESOLVER_CAP: ${{ vars.KDACE_RESOLVER_CAP }}
+          # Fan commits are mirrored from Supabase (and the ping keeps the free project awake). Empty = fan stage skipped.
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
       - name: Verify (reads every commit back through Tatum)
         run: npm run verify
         env:
