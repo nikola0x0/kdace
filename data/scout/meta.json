@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T20:53:12.569Z",
+ "generatedAt": "2026-10-22T21:22:39.515Z",
  "source": "lolesports official feeds (esports-api getSchedule/getEventDetails, feed livestats window/details)",
  "worldsTeams": [
   "AL",
@@ -83,12 +83,6 @@
   "LPL 2026 TES-LGD game 1 (117155436343202137)",
   "LEC 2026 VIT-MKOI game 1 (115548681803406316)"
  ],
- "winnersReconciled": [
-  "LEC 2026 KC 2-0 SK game 2: SK -> KC",
-  "LCK 2026 KT 3-0 DK game 2: DK -> KT",
-  "LPL 2026 WE 1-3 IG game 3: WE -> IG",
-  "CBLOL 2026 FUR 1-3 LOS game 1: FUR -> LOS",
-  "LCS 2026 SR 0-3 C9 game 3: SR -> C9"
- ],
+ "winnersReconciled": [],
  "winnerMismatches": []
 }

@@ -1,0 +1,79 @@
+{
+  "series": {
+    "matchId": "115660540726095005",
+    "startTime": "2026-10-23T17:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "GEN",
+    "teamB": "IG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "GEN's individual talent, especially Chovy in mid, outclasses IG, and the 2026 LCK form backs that up over the LPL side's 18-25 series record. IG's hype around IGRookie and their comeback history doesn't change that a single game still favors the stronger players.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:22:45.091Z",
+      "stake": 1800
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "Tempo is all about first towers and dragons, and GEN takes towers 65% of the time to IG's 40% with a +0.6k lead at 15, so they own the early map. IG has the clutch comeback threat, but I'm not betting on a late reset when GEN's first objectives keep the pace on their side.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:22:48.005Z",
+      "stake": 1800
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "Drafting this one, GEN's mid pool (Ryze 5, Syndra 3, Akali 2) and Chovy's form give them the stronger Fearless read, and they convert leads at a high rate while IG's 18-25 LPL record shows a shakier pick-and-execute baseline. IG's comeback tendency keeps this from being a lock, so I'm not pushing past the high 60s.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:22:53.032Z",
+      "stake": 1800
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "GEN's 37-10 series record against IG's 18-25 and their 5-1 mark against other regions point to GEN, but the last-10 form is close (8-2 vs 7-3) and IG's 1-game sample gap is modest, so I'm not leaning hard. The 20-game GD@15 and objective numbers are nearly even, which keeps this a moderate pick.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:22:56.305Z",
+      "stake": 1400
+    },
+    {
+      "player": "analyst-support",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "Both sides carry a lot of the same numbers, but I read the mood differently: GEN has shown they stay together when they fall behind, with comebacks from -6.7k and -4.8k and zero throws, while IG threw a 5.3k lead at TES and their calm depends on leads holding. I'm backing GEN's steadier group chemistry, though IG's ability to flip games makes this closer than the record suggests.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:00.159Z",
+      "stake": 1400
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095005\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1400},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1400},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800}]}",
+  "batchHash": "f20ec64331780c7c7646b2b128ad2e8674dfff7d5e85e3d99081839a249f45eb",
+  "commitDigest": "AFgmkTwnXTfAbkdAnP1vzK3H82Di1yZArbsVJQdNYnEa",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: GEN vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 37-10, games 88-32 | last 10 (newest first) WWWLWWWWWL\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · vs other regions 5-1\n  Last 20 games (15-5): GD@15 +0.6k, FB 30%, FT 65%, FD 55%, dragons 60%, 34.2 min avg, 1st baron 27:30\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 17\n  Picks: TOP Olaf 3, Ambessa 2, Gwen 2 | JG Lee Sin 4, Jarvan IV 3, Cho'Gath 2 | MID Ryze 5, Syndra 3, Akali 2 | BOT Ezreal 3, Kalista 3, Ashe 2 | SUP Seraphine 4, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.6 over 20 games, 25% dmg share\nIG [LPL]: 2026 series 18-25, games 57-67 | last 10 (newest first) WLLWWWWLWW\n  LPL 2026 18-25\n  Last 20 games (12-8): GD@15 +0.0k, FB 30%, FT 40%, FD 45%, dragons 48%, 32.6 min avg, 1st baron 26:36\n  Leads @15 converted 6/6, comeback wins 3, throws 1, objectives taken while 1k+ behind 14\n  Picks: TOP Gnar 3, Rumble 3, Gwen 2 | JG Naafiri 4, Maokai 3, Jarvan IV 2 | MID Syndra 4, Aurora 3, Orianna 2 | BOT Aphelios 3, Yunara 3, Ashe 2 | SUP Lulu 4, Seraphine 3, Thresh 3\n  Standout: IGRookie (mid) KDA 5.2 over 20 games, 25% dmg share\nHead-to-head 2026: none\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN came back from -4.8k at 36:00 vs T1 (LCK 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely quadra kill: IGJiaQi (Ezreal) at 29:33 (vs JDG, LPL 2026)\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

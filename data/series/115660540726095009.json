@@ -1,0 +1,79 @@
+{
+  "series": {
+    "matchId": "115660540726095009",
+    "startTime": "2026-10-23T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "AL",
+    "teamB": "KC",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "KC's Caliste has the better individual résumé and their lead conversion is far cleaner than AL's, and they already beat AL 2-0 this July. I don't care that the crowd likes them; I'm picking them because they've earned it on the Rift.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:47.635Z",
+      "stake": 820
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "Tempo says KC: +1.4k GD@15 at Worlds and a 2-0 win over AL already this year, even though their Worlds first-dragon rate is only 27%. AL's early game sits at -0.1k over their last 20, so they have to find first tower and first blood to keep up with KC's pace.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:53.641Z",
+      "stake": 750
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "Under Fearless, KC's deeper pool (Ryze, Viktor, Syndra mid; Caitlyn and Ezreal bot) gives them more ways to lock a draft advantage than AL's Annie/Yone with Maokai/Qiyana. They also beat AL 2-0 at EWC and sit at 8-2 in their last ten, so I'm backing KC to win the draft and close the game.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:57.068Z",
+      "stake": 850
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "KC has the stronger numbers across the board: a 40-15 series record against AL's 34-19, +1.3k GD@15 against AL's -0.1k, and a 2-0 win over AL at EWC 2026 in the most recent meeting. AL's 65% first blood rate and 8/8 lead conversion keep this from being lopsided, but the edge in early-game gold and form favors KC.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:59.918Z",
+      "stake": 890
+    },
+    {
+      "player": "analyst-support",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "KC has the calmer, more settled group right now: they beat AL 2-0 in July and are riding a 9-2 Worlds run with a steady mood that doesn't rattle under pressure. AL plays with real heart, and ALKael's steadiness is a reason to respect them, but their 10-10 form over the last 20 games tells me the belief in their own comebacks hasn't fully settled.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:24:02.868Z",
+      "stake": 890
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095009\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":890},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":750},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":850},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":890},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":820}]}",
+  "batchHash": "a9527f66488e93ad2436326a925a017b2b9e330e595a95af1f6b76325d03e690",
+  "commitDigest": "squ5KkoMyJrjWZ7w7BFkepDZJNDiUBZt1CHGbg5Rc8Q",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: AL vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nAL [LPL]: 2026 series 34-19, games 83-59 | last 10 (newest first) WWLWLLLWWW\n  LPL 2026 32-18 (1 title) · EWC 2026 2-1 · vs other regions 2-1\n  Last 20 games (10-10): GD@15 -0.1k, FB 65%, FT 55%, FD 45%, dragons 54%, 33 min avg, 1st baron 27:36\n  Leads @15 converted 8/8, comeback wins 2, throws 1, objectives taken while 1k+ behind 14\n  Picks: TOP Gnar 3, K'Sante 3, Rumble 3 | JG Maokai 4, Qiyana 3, Cho'Gath 2 | MID Annie 3, Yone 3, Akali 2 | BOT Lucian 3, Ashe 2, Caitlyn 2 | SUP Seraphine 4, Milio 3, Neeko 3\n  Standout: ALKael (support) KDA 4.8 over 20 games, 9% dmg share\nKC [LEC]: 2026 series 40-15, games 89-49 | last 10 (newest first) WWWLLWWWWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 3-0 · vs other regions 8-4\n  Last 31 games (21-10): GD@15 +1.3k, FB 65%, FT 65%, FD 52%, dragons 53%, 33.5 min avg, 1st baron 26:00\n  Leads @15 converted 15/17, comeback wins 1, throws 4, objectives taken while 1k+ behind 5\n  Worlds 2026 11 games (9-2): GD@15 +1.4k, FB 36%, FT 73%, FD 27%, dragons 54%, 33.6 min avg, 1st baron 26:12\n  Picks: TOP Rumble 6, Ambessa 5, Jayce 5 | JG Vi 6, Lee Sin 5, Jarvan IV 4 | MID Ryze 5, Viktor 5, Syndra 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.5 over 31 games, 28% dmg share\nHead-to-head 2026: AL 0-1 KC\n  2026-07-17 EWC 2026 Quarterfinals: KC 2-0 AL\nKey moments:\n  - AL took Baron at 33:54 while down 10.5k vs BLG (LPL 2026), lost\n  - AL threw a +4.5k lead (18:00) vs TES (LPL 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.4k lead (22:00) vs SHFT (LEC 2026)\nFun facts:\n  * Likely penta kill: ALHope (Miss Fortune) at 30:31 (vs BLG, LPL 2026)\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

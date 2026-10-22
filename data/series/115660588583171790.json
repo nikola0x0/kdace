@@ -1,0 +1,23 @@
+{
+  "series": {
+    "matchId": "115660588583171790",
+    "startTime": "2026-10-16T18:00:00Z",
+    "block": "Play-Ins",
+    "bestOf": 5,
+    "state": "completed",
+    "teamA": "KC",
+    "teamB": "MVK",
+    "winsA": 3,
+    "winsB": 0,
+    "winner": "KC"
+  },
+  "status": "missed",
+  "picks": [],
+  "batch": null,
+  "batchHash": null,
+  "commitDigest": null,
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": []
+}

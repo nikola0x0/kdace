@@ -1,0 +1,79 @@
+{
+  "series": {
+    "matchId": "115660540726095013",
+    "startTime": "2026-10-23T18:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "HLE",
+    "teamB": "TES",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "HLE has the stronger individuals, and Zeka's 5.7 KDA with 26% damage share is the kind of carry that decides a single game. TES's numbers are a 9-11 record with a 35% first-tower rate, and their comebacks don't outweigh that.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:06.248Z",
+      "stake": 980
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "Tempo says HLE: they're +0.6k at 15 with 60% first towers and 45% first dragons, while TES sits at -0.4k with just 35% first towers and 30% first dragons, so HLE should own the map early. TES's comeback habit is real, but I'd rather bet on the team that starts the game ahead on objectives.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:10.430Z",
+      "stake": 1070
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 60,
+      "reasoning": "Drafts favor HLE: their Fearless-proof pools (Orianna, Syndra, Ahri, Ashe, Caitlyn) give them more depth than TES's Olaf and Renekton lean, and their 30-14 series record and MSI/EWC results back that up. TES's 1-in-3 Baron and 35% tower-taking edge is the risk, so I'm not going above 60.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:13.527Z",
+      "stake": 820
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "HLE has the stronger record: 74-49 in games and 30-14 in series, against TES's 76-64 and 27-24, and they have won more of their recent big-stage matches. The edge is moderate, though, since neither side has a head-to-head sample and HLE's last 10 games are only 6-4.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:16.663Z",
+      "stake": 1030
+    },
+    {
+      "player": "analyst-support",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 60,
+      "reasoning": "HLE's record and the way they've carried themselves through the big stages suggest a settled group, even with the shaky recent form. TES has been losing more than it wins lately, and I worry about the mood in that room, though their two comeback wins show they can hold a team together when it counts.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:23:19.527Z",
+      "stake": 860
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095013\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1030},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1070},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":820},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":860},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":980}]}",
+  "batchHash": "73004299701e4bcd5802d3e6ad65ecb8a57133231edc9f39a35cd99dbfedc689",
+  "commitDigest": "4PynQqfCgWuyhwvK1Vw6uVjFbnA36tLFZJio3ZUvgu6z",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: HLE vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nHLE [LCK]: 2026 series 30-14, games 74-49 | last 10 (newest first) LWLWWWWLWL\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · vs other regions 6-1\n  Last 20 games (11-9): GD@15 +0.6k, FB 70%, FT 60%, FD 45%, dragons 55%, 32.1 min avg, 1st baron 25:24\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Picks: TOP Jayce 3, Ambessa 2, Camille 2 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Ashe 4, Caitlyn 4, Jhin 3 | SUP Seraphine 4, Karma 3, Lulu 3\n  Standout: HLE Zeka (mid) KDA 5.7 over 20 games, 26% dmg share\nTES [LPL]: 2026 series 27-24, games 76-64 | last 10 (newest first) WLLLLWWLLW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · vs other regions 0-2\n  Last 20 games (9-11): GD@15 -0.4k, FB 75%, FT 35%, FD 30%, dragons 50%, 34.6 min avg, 1st baron 26:18\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Picks: TOP Olaf 4, Renekton 4, Ambessa 2 | JG Pantheon 3, Qiyana 3, Trundle 3 | MID Ryze 4, Orianna 3, Azir 2 | BOT Ezreal 4, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nHead-to-head 2026: none\nKey moments:\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: HLE Kanavi (Pantheon) at 22:32 (vs T1, LCK 2026)\n  * Likely triple kill: TESTian (Pantheon) at 34:58 (vs IG, LPL 2026)",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

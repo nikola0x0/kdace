@@ -1,0 +1,79 @@
+{
+  "series": {
+    "matchId": "115660540726095017",
+    "startTime": "2026-10-24T00:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "TSW",
+    "teamB": "LYON",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "TSW's 25-2 LCP record is padded by a region that's soft on the world stage, where they're 1-6 against other regions, and LYON just beat them 3-0 at MSI. Berserker's 27% damage share is the kind of individual carry that wins a single game, and I'm not paying for TSW's hype.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:25:20.610Z",
+      "stake": 260
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "TSW",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "TSW owns the early map: +1.6k at 15, 85% first towers, and 55% first dragons against LYON's +0.8k, 70%, and 47%. LYON's 3-0 sweep at MSI is a warning, but TSW's first-15-minute control should decide this one.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:25:23.994Z",
+      "stake": 440
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "TSW's LCP numbers are elite, but their international record is 1-6 against other regions and they lost to LYON 3-0 at MSI, so I read their draft pool as strong only when the early game goes their way. LYON's MSI 3-2 and their comeback habit (11 objectives taken while 1k+ behind) give them more ways to win a Fearless draft that stops TSW's early snowball.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:25:28.213Z",
+      "stake": 260
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "TSW's LCP numbers are stronger on paper (+1.6k GD@15, 26-8 series), but their international record is 1-6 against other regions and they dropped the last three games. LYON has the better cross-region record (4-6), a better recent run (7 wins in their last 10), and beat TSW 3-0 at MSI, so I lean LYON with only a slim edge.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:25:32.215Z",
+      "stake": 240
+    },
+    {
+      "player": "analyst-support",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "TSW's 2026 numbers look sharp, but their last three games ended in losses and their record against other regions is 1-6, which makes me wonder how steady the mood is in that room. LYON just beat them 3-0 at MSI, and their recent form is climbing, so I read their confidence as the stronger signal.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-22T21:25:35.547Z",
+      "stake": 250
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095017\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":240},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":440},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":260},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":250},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":260}]}",
+  "batchHash": "84441223588fb8caf004548fb2e2156740c9c387377369965359c006afb977a9",
+  "commitDigest": "3jN1dm64ccRLUH1D6GYQj8vfvkd5LdF2KmPFCfDQ61HK",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: TSW vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTSW [LCP]: 2026 series 26-8, games 67-32 | last 10 (newest first) WWWLWWWLLL\n  LCP 2026 25-2 (3 titles) · First Stand 2026 0-2 · MSI 2026 1-2 · EWC 2026 0-2 · vs other regions 1-6\n  Last 20 games (16-4): GD@15 +1.6k, FB 60%, FT 85%, FD 55%, dragons 59%, 31.5 min avg, 1st baron 27:36\n  Leads @15 converted 12/13, comeback wins 2, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Galio 3, Gnar 3, Urgot 3 | JG Lee Sin 4, Qiyana 4, Jarvan IV 3 | MID Ahri 2, Aurora 2, Locke 2 | BOT Yunara 4, Caitlyn 3, Ezreal 3 | SUP Nautilus 4, Alistar 2, Bard 2\n  Standout: TSW Bie (support) KDA 6.5 over 20 games, 7% dmg share\nLYON [LCS]: 2026 series 25-13, games 72-42 | last 10 (newest first) LWWLWWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · vs other regions 4-6\n  Last 20 games (12-8): GD@15 +0.8k, FB 60%, FT 70%, FD 47%, dragons 48%, 33.6 min avg, 1st baron 24:48\n  Leads @15 converted 7/8, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Picks: TOP Gwen 4, Gnar 2, K'Sante 2 | JG Wukong 3, Skarner 3, Xin Zhao 3 | MID Syndra 4, Ryze 3, Annie 2 | BOT Lucian 3, Yunara 3, Jhin 2 | SUP Alistar 5, Lulu 3, Milio 3\n  Standout: LYON Berserker (bottom) KDA 5.1 over 20 games, 27% dmg share\nHead-to-head 2026: TSW 0-1 LYON\n  2026-07-08 MSI 2026 Knockouts: LYON 3-0 TSW\nKey moments:\n  - TSW came back from -6.5k at 30:00 vs CFO (LCP 2026)\n  - TSW threw a +4.8k lead (20:00) vs GAM (LCP 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - LYON took Baron at 23:54 while down 3.0k vs C9 (LCS 2026), won\nFun facts:\n  * Likely quadra kill: LYON Saint (Sylas) at 17:15 (vs DSG, LCS 2026)\n  * Likely quadra kill: TSW Eddie (Yunara) at 19:46 (vs GAM, LCP 2026)",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}
