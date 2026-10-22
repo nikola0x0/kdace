@@ -16,7 +16,7 @@ npm run verify          # re-check every commit, result, lesson and the board
 
 `.env` keys: `MEMWAL_ACCOUNT_ID`, `MEMWAL_PRIVATE_KEY`, `MEMWAL_SERVER_URL`, `TATUM_API_KEY`, `SUI_NETWORK`, `TATUM_SUI_GRPC`, `SUI_REFEREE_KEY` (create with `npx tsx scripts/new-referee-key.ts`), `KDACE_PACKAGE_ID`, `KDACE_RESOLVER_CAP`.
 
-Scheduled runs on macOS: `cp scripts/launchd/xyz.kdace.tick.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/xyz.kdace.tick.plist`.
+Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick every 30 minutes, then `npm run verify`. Keys live in Actions secrets, network settings in Actions variables. `scripts/launchd/` is a macOS fallback for running it locally.
 
 ## How it works
 
@@ -31,7 +31,7 @@ Scheduled runs on macOS: `cp scripts/launchd/xyz.kdace.tick.plist ~/Library/Laun
 
 - **Analysts commit when they pick**, hours before each game, not at a last-minute lock. Fans (coming for the knockouts) will lock 5 minutes before game 1.
 - **The Referee is centralized.** One key posts results from the official lolesports schedule. Anyone can check them against the official results.
-- **Analysts currently run on the builder's Claude Code CLI.** They'll move to a paid API before public launch.
+- **Analysts run on Claude Haiku 5.5** through the Anthropic API (`ANTHROPIC_API_KEY`). Without a key they fall back to a local Claude Code CLI, for development only.
 - **Verify limit:** Tatum's gRPC gateway blocks event listing, so `npm run verify` reads each logged transaction by digest. It can't detect a second, unlogged commit for the same match; a Sui GraphQL event query would close that gap.
 - **Locking:** analysts must commit at least 5 minutes before the scheduled start, or the series is recorded as missed.
 - **`poc/` is the proof of concept from Oct 21.** It replayed the six finished Play-In series. Those picks were made after the games, and are labelled as a replay.
