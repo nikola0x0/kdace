@@ -194,6 +194,23 @@ describe("fun facts", () => {
   });
 });
 
+describe("fun facts: objectives while behind", () => {
+  it("only counts a dragon from 4k+ down and a Baron from 3k+ down", () => {
+    const fs = [
+      pf(0, tf(2500), tf(2500)),
+      pf(600, tf(15000), tf(17500)),
+      pf(660, tf(15500, 0, 0, ["infernal"]), tf(18000)), // 2.5k down: not a fact
+      pf(1200, tf(30000, 0, 0, ["infernal"]), tf(34500)),
+      pf(1260, tf(31000, 0, 0, ["infernal", "ocean"]), tf(35000)), // 4.5k down
+      pf(1500, tf(40000, 0, 0, ["infernal", "ocean"]), tf(43000)),
+      pf(1560, tf(41000, 0, 0, ["infernal", "ocean"], 1), tf(43000), {}), // 3k down
+      pf(1800, tf(50000, 0, 1), tf(48000, 0, 5), {}, "finished"),
+    ];
+    const t = summarizeGame({ meta: first.meta!, frames: fs, details: [], teams: kcC9, league: "LCK 2026", number: 1, winnerHint: null }).funFacts.map((x) => x.text);
+    expect(t.filter((x) => x.includes("took"))).toEqual(["KC took an ocean dragon at 21:00 while 4.5k down", "KC took Baron at 26:00 while 3.0k down"]);
+  });
+});
+
 describe("densifyTimes", () => {
   it("fills the gap where a player's kills jumped by 3+ with 10-second windows", () => {
     const fs = [pf(0, tf(0), tf(0)), pf(60, tf(0), tf(0)), pf(120, tf(0, 3), tf(0), { 2: { k: 3 } })];

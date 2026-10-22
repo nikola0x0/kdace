@@ -471,8 +471,10 @@ function findFunFacts(x: {
   for (const e of x.events) {
     if (!e.behind) continue;
     if (e.type === "elder" && e.team === x.winner) facts.push({ kind: "elderFlip", team: e.team, text: `${e.team} took Elder at ${clock(e.min)} while ${(e.behind / 1000).toFixed(1)}k down and won` });
-    else if ((e.type === "baron" || e.type === "dragon") && e.behind >= 2000 && steals++ < 2)
-      facts.push({ kind: "steal", team: e.team, text: `${e.team} took ${e.type === "baron" ? "Baron" : `a ${e.detail ?? ""} dragon`.replace("  ", " ")} at ${clock(e.min)} while ${(e.behind / 1000).toFixed(1)}k down` });
+    else if (((e.type === "baron" && e.behind >= 3000) || (e.type === "dragon" && e.behind >= 4000)) && steals++ < 2) {
+      const what = e.type === "baron" ? "Baron" : e.detail ? `${/^[aeiou]/.test(e.detail) ? "an" : "a"} ${e.detail} dragon` : "a dragon";
+      facts.push({ kind: "steal", team: e.team, text: `${e.team} took ${what} at ${clock(e.min)} while ${(e.behind / 1000).toFixed(1)}k down` });
+    }
   }
 
   // Odd stats from the details feed.
