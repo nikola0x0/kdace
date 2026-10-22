@@ -1,4 +1,5 @@
-// Server-side wiring for the fan API routes: Supabase, Tatum (signature checks and SuiNS) and the session cookie.
+// Server-side wiring for the fan API routes: Supabase, Tatum (signature checks and SuiNS), Google sign-in and the
+// session cookie.
 // The logic itself lives in src/core/fanapi.ts and is unit-tested there.
 import { timingSafeEqual } from "node:crypto";
 import { NextResponse, type NextRequest } from "next/server";
@@ -6,6 +7,7 @@ import { verifyPersonalMessageSignature } from "@mysten/sui/verify";
 import type { Network } from "../../../src/core/chain.ts";
 import { type ApiResult, type FanApiDeps, sessionAddress, SESSION_TTL_MS, NONCE_TTL_MS } from "../../../src/core/fanapi.ts";
 import { fanDbFromEnv } from "../../../src/core/fandb.ts";
+import { verifyGoogleIdToken } from "../../../src/core/google.ts";
 import { tatumClient } from "../../../src/core/sui.ts";
 import { fetchSeries, type Series } from "../../../src/core/worlds.ts";
 
@@ -41,7 +43,15 @@ export function fanDeps(): FanApiDeps | null {
     },
     // SuiNS lives on mainnet whatever network the ledger is on.
     lookupName: async (address) => (await tatumClient("mainnet").defaultNameServiceName({ address })).data.name,
+    // Google sign-in is on when both are set; Google's signing keys are fetched once and cached.
+    ...googleSignInDeps(),
   };
+}
+
+function googleSignInDeps(): Pick<FanApiDeps, "verifyGoogleToken" | "zkLoginSaltSecret"> {
+  const clientId = process.env.GOOGLE_CLIENT_ID, zkLoginSaltSecret = process.env.ZKLOGIN_SALT_SECRET;
+  if (!clientId || !zkLoginSaltSecret) return {};
+  return { verifyGoogleToken: (idToken) => verifyGoogleIdToken(idToken, { clientId }), zkLoginSaltSecret };
 }
 
 export const notConfigured = () => NextResponse.json({ error: "Fan picks are not configured on this deployment yet." }, { status: 503 });

@@ -1,10 +1,11 @@
 "use client";
-// Minimal, deliberately unstyled fan pick flow: connect (Google via Enoki, or any Sui wallet), sign in by signing a
-// message, pick each open series, see your picks. The real UI is designed separately; this only proves the flow.
+// Minimal, deliberately unstyled fan pick flow: sign in with Google (verified ID token → zkLogin address) or connect
+// any Sui wallet and sign a message, pick each open series, see your picks. The real UI is designed separately; this only proves the flow.
 import { useCallback, useEffect, useState } from "react";
 import { DAppKitProvider, useCurrentAccount, useDAppKit } from "@mysten/dapp-kit-react";
 import { ConnectButton } from "@mysten/dapp-kit-react/ui";
 import { dAppKit } from "./dapp-kit";
+import GoogleSignIn, { googleSignOut } from "./GoogleSignIn";
 
 type Series = { matchId: string; startTime: string; block: string; bestOf: 1 | 3 | 5; teamA: string; teamB: string };
 type OpenSeries = { series: Series; lockAt: string; crowd: { fans: number; winner: Record<string, number>; score: Record<string, number> }; mine: Partial<Record<"winner" | "score", string>> };
@@ -53,6 +54,7 @@ function Fans() {
 
   async function signOut() {
     await api("/api/auth/logout", { method: "POST" });
+    googleSignOut();
     setMe(null);
     await refresh();
   }
@@ -70,6 +72,7 @@ function Fans() {
   return (
     <section>
       <h2>Your picks</h2>
+      {!me && <GoogleSignIn onSignedIn={() => { setMessage(""); refresh(); }} onError={setMessage} />}
       <ConnectButton />
       {account && !signedIn && <button onClick={signIn}>Sign in as {account.address.slice(0, 6)}…{account.address.slice(-4)}</button>}
       {me && <p>Signed in as {me.displayName} <button onClick={signOut}>Sign out</button></p>}
