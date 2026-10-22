@@ -1,0 +1,129 @@
+{
+ "esportsGameId": "115660588583171787",
+ "esportsMatchId": "115660588583171786",
+ "gameMetadata": {
+  "patchVersion": "16.20.826.3891",
+  "blueTeamMetadata": {
+   "esportsTeamId": "111692118851466302",
+   "participantMetadata": [
+    {
+     "participantId": 1,
+     "esportsPlayerId": "103495716771322725",
+     "summonerName": "KC Canna",
+     "championId": "Rumble",
+     "role": "top"
+    },
+    {
+     "participantId": 2,
+     "esportsPlayerId": "105537190986692036",
+     "summonerName": "KC Yike",
+     "championId": "LeeSin",
+     "role": "jungle"
+    },
+    {
+     "participantId": 3,
+     "esportsPlayerId": "108205130709313212",
+     "summonerName": "KC kyeahoo",
+     "championId": "Syndra",
+     "role": "mid"
+    },
+    {
+     "participantId": 4,
+     "esportsPlayerId": "109461265532592848",
+     "summonerName": "KC Caliste",
+     "championId": "MissFortune",
+     "role": "bottom"
+    },
+    {
+     "participantId": 5,
+     "esportsPlayerId": "106625308523122120",
+     "summonerName": "KC Busio",
+     "championId": "Nautilus",
+     "role": "support"
+    }
+   ]
+  },
+  "redTeamMetadata": {
+   "esportsTeamId": "98767991877340524",
+   "participantMetadata": [
+    {
+     "participantId": 6,
+     "esportsPlayerId": "105501816646382923",
+     "summonerName": "C9 Thanatos",
+     "championId": "Gnar",
+     "role": "top"
+    },
+    {
+     "participantId": 7,
+     "esportsPlayerId": "99101098218071815",
+     "summonerName": "C9 Blaber",
+     "championId": "XinZhao",
+     "role": "jungle"
+    },
+    {
+     "participantId": 8,
+     "esportsPlayerId": "108567314915334762",
+     "summonerName": "C9 Loki ",
+     "championId": "Locke",
+     "role": "mid"
+    },
+    {
+     "participantId": 9,
+     "esportsPlayerId": "101383793877071109",
+     "summonerName": "C9 Tactical",
+     "championId": "Ezreal",
+     "role": "bottom"
+    },
+    {
+     "participantId": 10,
+     "esportsPlayerId": "99101098208825497",
+     "summonerName": "C9 Vulcan",
+     "championId": "Karma",
+     "role": "support"
+    }
+   ]
+  }
+ },
+ "frames": [
+  {
+   "rfc460Timestamp": "2026-10-15T18:16:34.661Z",
+   "gameState": "in_game",
+   "blueTeam": {
+    "totalGold": 0,
+    "inhibitors": 0,
+    "towers": 0,
+    "barons": 0,
+    "totalKills": 0,
+    "dragons": []
+   },
+   "redTeam": {
+    "totalGold": 0,
+    "inhibitors": 0,
+    "towers": 0,
+    "barons": 0,
+    "totalKills": 0,
+    "dragons": []
+   }
+  },
+  {
+   "rfc460Timestamp": "2026-10-15T18:16:34.662Z",
+   "gameState": "in_game",
+   "blueTeam": {
+    "totalGold": 0,
+    "inhibitors": 0,
+    "towers": 0,
+    "barons": 0,
+    "totalKills": 0,
+    "dragons": []
+   },
+   "redTeam": {
+    "totalGold": 0,
+    "inhibitors": 0,
+    "towers": 0,
+    "barons": 0,
+    "totalKills": 0,
+    "dragons": []
+   }
+  }
+ ]
+}

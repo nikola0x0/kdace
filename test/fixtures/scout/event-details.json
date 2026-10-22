@@ -1,0 +1,119 @@
+{
+ "data": {
+  "event": {
+   "id": "115660588583171786",
+   "type": "match",
+   "tournament": {
+    "id": "115660540725177488"
+   },
+   "league": {
+    "id": "98767975604431411",
+    "slug": "worlds",
+    "image": "http://static.lolesports.com/leagues/1592594612171_WorldsDarkBG.png",
+    "name": "Worlds"
+   },
+   "match": {
+    "strategy": {
+     "count": 5
+    },
+    "teams": [
+     {
+      "id": "111692118851466302",
+      "name": "Karmine Corp",
+      "code": "KC",
+      "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+      "result": {
+       "gameWins": 3
+      }
+     },
+     {
+      "id": "98767991877340524",
+      "name": "Cloud9 Kia",
+      "code": "C9",
+      "image": "http://static.lolesports.com/teams/1736924120254_C9Kia_IconBlue_Transparent_2000x2000.png",
+      "result": {
+       "gameWins": 2
+      }
+     }
+    ],
+    "games": [
+     {
+      "number": 1,
+      "id": "115660588583171787",
+      "state": "completed",
+      "teams": [
+       {
+        "id": "111692118851466302",
+        "side": "blue"
+       },
+       {
+        "id": "98767991877340524",
+        "side": "red"
+       }
+      ]
+     },
+     {
+      "number": 2,
+      "id": "115660588583171788",
+      "state": "completed",
+      "teams": [
+       {
+        "id": "98767991877340524",
+        "side": "blue"
+       },
+       {
+        "id": "111692118851466302",
+        "side": "red"
+       }
+      ]
+     },
+     {
+      "number": 3,
+      "id": "115660588583171789",
+      "state": "completed",
+      "teams": [
+       {
+        "id": "111692118851466302",
+        "side": "blue"
+       },
+       {
+        "id": "98767991877340524",
+        "side": "red"
+       }
+      ]
+     },
+     {
+      "number": 4,
+      "id": "116299649500204436",
+      "state": "completed",
+      "teams": [
+       {
+        "id": "98767991877340524",
+        "side": "blue"
+       },
+       {
+        "id": "111692118851466302",
+        "side": "red"
+       }
+      ]
+     },
+     {
+      "number": 5,
+      "id": "116299649500204437",
+      "state": "completed",
+      "teams": [
+       {
+        "id": "111692118851466302",
+        "side": "blue"
+       },
+       {
+        "id": "98767991877340524",
+        "side": "red"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

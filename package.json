@@ -9,7 +9,8 @@
     "pick": "tsx src/jobs/pick.ts",
     "settle": "tsx src/jobs/settle.ts",
     "verify": "tsx src/jobs/verify.ts",
-    "tick": "tsx src/jobs/tick.ts"
+    "tick": "tsx src/jobs/tick.ts",
+    "scout": "tsx src/jobs/scout.ts"
   },
   "keywords": [],
   "author": "",
