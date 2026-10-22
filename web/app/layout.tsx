@@ -7,8 +7,9 @@ import FanProvider from "./ui/FanProvider";
 import SeasonBar from "./ui/SeasonBar";
 import TabBar from "./ui/TabBar";
 import UserButton from "./ui/UserButton";
+import { cn } from "@/lib/utils";
 
-const inter = Inter_Tight({ subsets: ["latin"], variable: "--font-inter-tight", display: "swap" });
+const inter = Inter_Tight({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["800", "900"], variable: "--font-display", display: "swap" });
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable}`}>
+    <html lang="en" className={cn("dark", inter.variable, display.variable)}>
       <body>
         <FanProvider>
           <header className="top">

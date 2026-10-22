@@ -27,9 +27,9 @@ function TugBar({ label, pctA, empty }: { label: string; pctA: number | null; em
   return (
     <div className="tug">
       <div className="tug-row">
-        <b className="num" style={{ color: pa >= pb ? "var(--fg)" : "var(--muted)" }}>{pa}%</b>
+        <b className="num" style={{ color: pa >= pb ? "var(--fg)" : "var(--kd-muted)" }}>{pa}%</b>
         <span className="tug-label">{label}</span>
-        <b className="num" style={{ color: pb > pa ? "var(--fg)" : "var(--muted)" }}>{pb}%</b>
+        <b className="num" style={{ color: pb > pa ? "var(--fg)" : "var(--kd-muted)" }}>{pb}%</b>
       </div>
       <div className="tug-bar">
         <i style={{ flex: pa, background: `var(--ta)` }} />
