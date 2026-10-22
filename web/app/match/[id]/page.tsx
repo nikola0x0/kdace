@@ -9,6 +9,7 @@ import DitherArt from "../../ui/DitherArt";
 import HeroVeil from "../../ui/HeroVeil";
 import CountUp from "../../ui/rb/CountUp";
 import LocalTime from "../../ui/LocalTime";
+import MatchActivity from "../../ui/MatchActivity";
 import MatchCard from "../../ui/MatchCard";
 
 export async function generateStaticParams() {
@@ -75,6 +76,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
 
           <div style={{ display: "grid", gap: 20 }}>
             <MatchCard c={card} />
+            <MatchActivity matchId={s.matchId} />
             {r && (
               <div className="panel">
                 <h3 style={{ marginTop: 0 }}>Proof</h3>

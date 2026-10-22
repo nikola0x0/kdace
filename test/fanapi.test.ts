@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
 import { jwtToAddress } from "@mysten/sui/zklogin";
-import { getMe, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { activity, getMe, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
 import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
@@ -280,6 +280,22 @@ describe("leaderboardFans", () => {
       { address: A, displayName: "nikola.sui", avatarUrl: null, balance: 10000, net: 0, inPlay: 300 },
       expect.objectContaining({ address: B, balance: 10420, net: 420, inPlay: 0 }),
     ]));
+  });
+});
+
+describe("activity", () => {
+  it("lists recent buys newest first with display names, optionally for one match", async () => {
+    const { deps, setClock } = fakes();
+    await signedIn(deps, A);
+    await signedIn(deps, B);
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 100 });
+    setClock("2026-10-23T12:05:00Z");
+    await postPick(deps, B, { matchId: "y", market: "winner", choice: "T1", stake: 250 });
+    const all = (await activity(deps, {})).body as { buys: { name: string; matchId: string; choice: string; amount: number; at: string }[] };
+    expect(all.buys.map((b) => [b.matchId, b.choice, b.amount])).toEqual([["y", "T1", 250], ["x", "GEN", 100]]);
+    expect(all.buys[1].name).toBe("nikola.sui");
+    const one = (await activity(deps, { matchId: "x" })).body as { buys: unknown[] };
+    expect(one.buys).toHaveLength(1);
   });
 });
 

@@ -178,6 +178,18 @@ export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   };
 }
 
+/** The live feed: recent buys with each buyer's display name and avatar (all public: picks are published anyway). */
+export async function activity(deps: FanApiDeps, opts: { matchId?: string; limit?: number }): Promise<ApiResult> {
+  const buys = await deps.db.recentBuys(Math.min(opts.limit ?? 20, 50), opts.matchId);
+  const fans = new Map((await deps.db.listFans()).map((f) => [f.address, f]));
+  return {
+    status: 200,
+    body: {
+      buys: buys.map((b) => ({ id: b.id, matchId: b.matchId, market: b.market, choice: b.choice, amount: b.amount, at: b.at, address: b.address, name: displayName(b.address, fans.get(b.address)?.suinsName), avatarUrl: fans.get(b.address)?.avatarUrl ?? null })),
+    },
+  };
+}
+
 export async function getMe(deps: FanApiDeps, address: string | null): Promise<ApiResult> {
   if (!address) return fail(401, "Not signed in.");
   const suinsName = await refreshSuins(deps.db, address, deps.lookupName, deps.now());

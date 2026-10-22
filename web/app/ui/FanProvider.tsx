@@ -9,7 +9,7 @@ export type Market = "winner" | "score";
 export type Crowd = { fans: number; winner: Record<string, number>; score: Record<string, number>; winnerPool?: Record<string, number>; scorePool?: Record<string, number> };
 /** A fan's positions on a series: market -> outcome -> total AXP bought (buys add up, like shares on Outcomes). */
 export type Positions = Partial<Record<Market, Record<string, number>>>;
-export type OpenSeries = { series: { matchId: string }; lockAt: string; crowd: Crowd; mine: Positions };
+export type OpenSeries = { series: { matchId: string; teamA?: string; teamB?: string }; lockAt: string; crowd: Crowd; mine: Positions };
 export type Me = {
   address: string;
   displayName: string;

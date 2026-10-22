@@ -5,6 +5,7 @@ import "./globals.css";
 import { Logo } from "./ui/bits";
 import FanProvider from "./ui/FanProvider";
 import SeasonBar from "./ui/SeasonBar";
+import ActivityToasts from "./ui/ActivityToasts";
 import TabBar from "./ui/TabBar";
 import UserButton from "./ui/UserButton";
 import { cn } from "@/lib/utils";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </footer>
           <TabBar />
+          <ActivityToasts />
         </FanProvider>
         <Toaster position="bottom-center" />
         </TooltipProvider>

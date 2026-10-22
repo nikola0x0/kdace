@@ -2,6 +2,9 @@
 // Server-side only: it uses the service role key, the only key allowed to write. Dependency-free (uses fetch).
 import type { FanPickRow } from "./fans.ts";
 
+/** One buy as it happened (positions in picks keep only the total). */
+export type BuyRow = { id: number; matchId: string; address: string; market: string; choice: string; amount: number; at: string };
+
 export type FanAuthMethod = "google" | "wallet";
 /** How a fan last signed in. Google fans also carry their zkLogin salt (the only way back to their address without ZKLOGIN_SALT_SECRET). */
 export type FanAuth = { method: FanAuthMethod; zkloginSalt?: string; avatarUrl?: string };
@@ -47,6 +50,8 @@ export interface FanDb {
   upsertPick(row: FanPickRow): Promise<void>;
   /** Adds `row.stake` to the fan's position on that outcome (creating it at that stake); returns the position. */
   buyPick(row: FanPickRow): Promise<FanPickRow>;
+  /** Most recent buys from the append-only log (newest first), optionally for one match. */
+  recentBuys(limit: number, matchId?: string): Promise<BuyRow[]>;
   picksFor(matchIds: string[]): Promise<FanPickRow[]>;
   picksOf(address: string): Promise<FanPickRow[]>;
   listCommits(): Promise<FanCommitRow[]>;
@@ -89,6 +94,10 @@ export class SupabaseFanDb implements FanDb {
     return { status: res.status, json };
   }
 
+  async recentBuys(limit: number, matchId?: string) {
+    const { json } = await this.req("GET", `buys?select=*&order=at.desc,id.desc&limit=${limit}${matchId ? `&match_id=${eq(matchId)}` : ""}`);
+    return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
+  }
   async listFans() {
     const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url");
     return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null }));

@@ -32,7 +32,12 @@ export class MemoryFanDb implements FanDb {
   async upsertPick(row: FanPickRow) {
     this.picks.set(`${row.matchId}|${row.address}|${row.market}|${row.choice}`, { ...row });
   }
+  buys: { id: number; matchId: string; address: string; market: string; choice: string; amount: number; at: string }[] = [];
+  async recentBuys(limit: number, matchId?: string) {
+    return this.buys.filter((b) => !matchId || b.matchId === matchId).sort((a, b) => b.at.localeCompare(a.at) || b.id - a.id).slice(0, limit);
+  }
   async buyPick(row: FanPickRow) {
+    this.buys.push({ id: this.buys.length + 1, matchId: row.matchId, address: row.address, market: row.market, choice: row.choice, amount: row.stake, at: row.updatedAt });
     const key = `${row.matchId}|${row.address}|${row.market}|${row.choice}`;
     const next = { ...row, stake: (this.picks.get(key)?.stake ?? 0) + row.stake };
     this.picks.set(key, next);
