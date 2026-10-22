@@ -34,6 +34,11 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MEMWAL_ACCOUNT_ID: ${{ secrets.MEMWAL_ACCOUNT_ID }}
           MEMWAL_PRIVATE_KEY: ${{ secrets.MEMWAL_PRIVATE_KEY }}
+          MEMWAL_KEY_TOP: ${{ secrets.MEMWAL_KEY_TOP }}
+          MEMWAL_KEY_JUNGLE: ${{ secrets.MEMWAL_KEY_JUNGLE }}
+          MEMWAL_KEY_MID: ${{ secrets.MEMWAL_KEY_MID }}
+          MEMWAL_KEY_ADC: ${{ secrets.MEMWAL_KEY_ADC }}
+          MEMWAL_KEY_SUPPORT: ${{ secrets.MEMWAL_KEY_SUPPORT }}
           MEMWAL_SERVER_URL: https://relayer.memory.walrus.xyz
           TATUM_API_KEY: ${{ secrets.TATUM_API_KEY }}
           SUI_REFEREE_KEY: ${{ secrets.SUI_REFEREE_KEY }}
