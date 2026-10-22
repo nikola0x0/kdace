@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/" className="brand"><Logo size={28} /><span>KDAce</span></Link>
               <nav className="nav">
                 <Link href="/matches">Matches</Link>
-                <Link href="/board">Board</Link>
+                <Link href="/board">Leaderboard</Link>
                 <Link href="/analysts">Analysts</Link>
                 <Link href="/proof">Proof</Link>
               </nav>

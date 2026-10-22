@@ -49,13 +49,16 @@ function Pips({ bestOf, wins }: { bestOf: number; wins: number }) {
 }
 
 export default function MatchCard({ c }: { c: CardData }) {
-  const { open, pick, me } = useFans();
+  const { open, openSlip, me } = useFans();
   const s = c.series, live = open[s.matchId];
   const lockAt = live?.lockAt ?? new Date(Date.parse(s.startTime) - LOCK_MS).toISOString();
   const closed = !!c.result || Date.parse(lockAt) <= Date.now();
   const fans = live?.crowd.fans ?? 0;
   const fanPctA = fans ? ((live!.crowd.winner[s.teamA] ?? 0) / fans) * 100 : null;
   const mine = live?.mine ?? {};
+  const aiPool: Record<string, number> = {};
+  for (const a of c.calls) aiPool[a.winner] = (aiPool[a.winner] ?? 0) + a.stake;
+  const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
   const winsOf = (t: string) => (c.result ? (c.result.winner === t ? +c.result.score.split("-")[0] : +c.result.score.split("-")[1]) : 0);
   const side = (t: string) => c.calls.filter((a) => a.winner === t);
   const vars = { "--ta": teamColor(s.teamA), "--tb": teamColor(s.teamB) } as CSSProperties;
@@ -106,15 +109,15 @@ export default function MatchCard({ c }: { c: CardData }) {
           <>
             <div className="picks">
               {[s.teamA, s.teamB].map((t, k) => (
-                <button key={t} className={`pick ${k ? "b" : "a"} ${mine.winner?.choice === t ? "on" : ""}`} disabled={closed} onClick={() => pick(s.matchId, "winner", t)}>
-                  {mine.winner?.choice === t ? "✓ " : ""}{t}
+                <button key={t} className={`pick ${k ? "b" : "a"} ${mine.winner?.choice === t ? "on" : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
+                  {mine.winner?.choice === t ? `✓ ${t} · ${mine.winner.stake.toLocaleString("en-US")}` : t}
                 </button>
               ))}
             </div>
             {s.bestOf > 1 && (
               <div className="chips">
                 {SCORES[s.bestOf].map((sc) => (
-                  <button key={sc} className={`chip num ${mine.score?.choice === sc ? "on" : ""}`} disabled={closed} onClick={() => pick(s.matchId, "score", sc)}>{sc}</button>
+                  <button key={sc} className={`chip num ${mine.score?.choice === sc ? "on" : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "score", choice: sc })}>{sc}</button>
                 ))}
                 <span className="chip-note">exact score</span>
               </div>
@@ -123,7 +126,7 @@ export default function MatchCard({ c }: { c: CardData }) {
         )}
 
         <div className="card-foot-row">
-          <span className="hint">{!me && !closed ? "Free to play · sign in to pick" : "Picks locked on Sui before the game"}</span>
+          <span className="hint">{!me && !closed ? "Free to play · 10,000 AXP to start" : "Bets locked on Sui before the game"}</span>
           <Link className="card-foot" href={`/match/${s.matchId}`}>Details →</Link>
         </div>
       </div>

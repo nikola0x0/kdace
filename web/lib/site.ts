@@ -10,7 +10,7 @@ import { fetchSeries, fetchTeamLogos, type Series } from "../../src/core/worlds.
 import { store } from "./data";
 import { PERSONAS, persona } from "./personas";
 
-export type AnalystCall = { player: string; name: string; title: string; color: string; art: string | null; winner: string; score: string | null; prob: number; reasoning: string; recalled: { blobId: string; text: string; createdAt: string }[] };
+export type AnalystCall = { player: string; name: string; title: string; color: string; art: string | null; winner: string; score: string | null; prob: number; stake: number; reasoning: string; recalled: { blobId: string; text: string; createdAt: string }[] };
 
 export type CardData = {
   series: Series;
@@ -56,7 +56,7 @@ export function callsOf(r: SeriesRecord | undefined): AnalystCall[] {
   return PERSONAS.flatMap((p) => {
     const pick = r.picks.find((x) => x.player === p.player);
     if (!pick) return [];
-    return [{ player: p.player, name: p.name, title: p.title, color: p.color, art: art(`analyst-${p.role}`), winner: pick.winner, score: pick.score, prob: pick.winProbability, reasoning: pick.reasoning, recalled: pick.usedLessons ?? [] }];
+    return [{ player: p.player, name: p.name, title: p.title, color: p.color, art: art(`analyst-${p.role}`), winner: pick.winner, score: pick.score, prob: pick.winProbability, stake: (pick as { stake?: number }).stake ?? 0, reasoning: pick.reasoning, recalled: pick.usedLessons ?? [] }];
   });
 }
 

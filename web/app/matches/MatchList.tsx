@@ -12,7 +12,7 @@ import LocalTime from "../ui/LocalTime";
 const LOCK_MS = 5 * 60_000;
 
 function Row({ c }: { c: CardData }) {
-  const { open, pick } = useFans();
+  const { open, openSlip } = useFans();
   const s = c.series, live = open[s.matchId];
   const lockAt = live?.lockAt ?? new Date(Date.parse(s.startTime) - LOCK_MS).toISOString();
   const closed = !!c.result || Date.parse(lockAt) <= Date.now();
@@ -20,12 +20,15 @@ function Row({ c }: { c: CardData }) {
   const fanA = fans ? Math.round(((live!.crowd.winner[s.teamA] ?? 0) / fans) * 100) : null;
   const aiA = c.consensusA === null ? null : Math.round(c.consensusA);
   const mine = live?.mine.winner?.choice;
+  const aiPool: Record<string, number> = {};
+  for (const a of c.calls) aiPool[a.winner] = (aiPool[a.winner] ?? 0) + a.stake;
+  const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
   const vars = { "--ta": teamColor(s.teamA), "--tb": teamColor(s.teamB) } as CSSProperties;
   const outcome = (t: string, k: 0 | 1) => {
     const ai = aiA === null ? null : k ? 100 - aiA : aiA;
     const won = c.result?.winner === t;
     return (
-      <button key={t} className={`oc ${k ? "b" : "a"} ${mine === t ? "on" : ""} ${c.result ? (won ? "won" : "lost") : ""}`} disabled={closed} onClick={() => pick(s.matchId, "winner", t)}>
+      <button key={t} className={`oc ${k ? "b" : "a"} ${mine === t ? "on" : ""} ${c.result ? (won ? "won" : "lost") : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
         <span className="oc-team">{mine === t ? "✓ " : ""}{t}</span>
         <span className="oc-pct num">{c.result ? (won ? "Won" : "-") : ai === null ? "-" : `${ai}%`}</span>
       </button>
