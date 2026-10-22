@@ -3,6 +3,7 @@
 // Signing in happens in a dialog; wallets are browser-only, so that dialog loads on demand.
 import dynamic from "next/dynamic";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { toast } from "sonner";
 
 export type Market = "winner" | "score";
 export type Crowd = { fans: number; winner: Record<string, number>; score: Record<string, number>; winnerPool?: Record<string, number>; scorePool?: Record<string, number> };
@@ -51,19 +52,14 @@ export default function FanProvider({ children }: { children: React.ReactNode })
   const [ready, setReady] = useState(false);
   const [dialog, setDialog] = useState(false);
   const [slip, setSlip] = useState<Slip | null>(null);
-  const [toast, setToast] = useState("");
-
-  const say = useCallback((msg: string) => {
-    setToast(msg);
-    setTimeout(() => setToast((t) => (t === msg ? "" : t)), 3600);
-  }, []);
+  const say = useCallback((msg: string, kind: "ok" | "error" = "ok") => (kind === "error" ? toast.error(msg) : toast.success(msg)), []);
 
   const refresh = useCallback(async () => {
     const [m, p] = await Promise.all([api<Me>("/api/me"), api<{ series: OpenSeries[] }>("/api/picks")]);
-    setMe(m.ok ? m.body : null);
+    setMe(m.ok && m.body && (m.body as Me).address ? m.body : null);
     if (p.ok) setOpen(Object.fromEntries(p.body.series.map((s) => [s.series.matchId, s])));
     setReady(true);
-    return m.ok ? m.body : null;
+    return m.ok && m.body && (m.body as Me).address ? m.body : null;
   }, []);
 
   useEffect(() => {
@@ -76,7 +72,7 @@ export default function FanProvider({ children }: { children: React.ReactNode })
     async (matchId: string, market: Market, choice: string, stake: number) => {
       const r = await api("/api/picks", { method: "POST", body: JSON.stringify({ matchId, market, choice, stake }) });
       if (!r.ok) {
-        say(r.body.error ?? "That bet couldn't be placed. Please try again.");
+        say(r.body.error ?? "That bet couldn't be placed. Please try again.", "error");
         return false;
       }
       say(`Bought ${stake.toLocaleString("en-US")} AXP of ${choice}`);
@@ -111,7 +107,6 @@ export default function FanProvider({ children }: { children: React.ReactNode })
         />
       )}
       {slip && <BetSlip />}
-      {toast && <div className="toast" role="status">{toast}</div>}
     </Ctx.Provider>
   );
 }

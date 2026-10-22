@@ -439,7 +439,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 
 /* Bet slip: side panel on desktop, bottom sheet on phones */
 .slip-overlay { position: fixed; inset: 0; z-index: 55; background: rgba(0,0,0,.55); backdrop-filter: blur(3px); }
-.slip { position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 100%); background: #0b0b0b; border-left: 1px solid var(--line-2); padding: 20px; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; animation: slip-in .22s ease-out; }
+.slip { display: flex; flex-direction: column; }
 @keyframes slip-in { from { transform: translateX(24px); opacity: 0; } }
 .slip-head { display: flex; align-items: center; gap: 10px; font-size: 13px; } .slip-head .lock { margin-left: auto; }
 .slip-x { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line-2); background: transparent; font-size: 20px; line-height: 1; cursor: pointer; }
@@ -542,28 +542,3 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .stat-strip b { font-size: 17px; } .stat-strip span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--kd-muted); }
 .banner-quote { max-height: none; opacity: 1; margin: 0; }
 @media (max-width: 900px) { .banner-more { max-height: none; opacity: 1; } }
-
-/* Season timeline */
-.season { border-bottom: 1px solid var(--line); background: #000; }
-.season-row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; height: 64px; }
-.season-title { display: grid; line-height: 1.15; }
-.season-title b { font-size: 20px; letter-spacing: .01em; }
-.season-title span { font-size: 12px; color: var(--kd-muted); }
-.track { position: relative; height: 34px; }
-.tl-seg { position: absolute; top: 6px; height: 100%; padding: 0 2px; }
-.tl-seg i { position: relative; display: block; height: 6px; border-radius: 1px; background: #1e1e1e; overflow: hidden; }
-.tl-seg i::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--fill); background: #d9d9d9; }
-.tl-seg.current i::after { background: #fff;
-  /* ragged pixel edge where the tournament is today: ordered-dither mask on the last 14px of the fill */
-  -webkit-mask: linear-gradient(90deg, #000 calc(100% - 14px), transparent calc(100% - 14px)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='6' shape-rendering='crispEdges'%3E%3Cg fill='%23000'%3E%3Crect x='0' y='0' width='8' height='6'/%3E%3Crect x='8' y='0' width='2' height='2'/%3E%3Crect x='10' y='2' width='2' height='2'/%3E%3Crect x='8' y='4' width='2' height='2'/%3E%3Crect x='12' y='0' width='2' height='2'/%3E%3C/g%3E%3C/svg%3E") right / 14px 6px no-repeat;
-  mask: linear-gradient(90deg, #000 calc(100% - 14px), transparent calc(100% - 14px)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='6' shape-rendering='crispEdges'%3E%3Cg fill='%23000'%3E%3Crect x='0' y='0' width='8' height='6'/%3E%3Crect x='8' y='0' width='2' height='2'/%3E%3Crect x='10' y='2' width='2' height='2'/%3E%3Crect x='8' y='4' width='2' height='2'/%3E%3Crect x='12' y='0' width='2' height='2'/%3E%3C/g%3E%3C/svg%3E") right / 14px 6px no-repeat; }
-.tl-seg span { display: block; margin-top: 6px; font-size: 11px; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.tl-seg.done span { color: var(--kd-muted); }
-.tl-seg.current span { color: #fff; font-weight: 600; }
-.season-next { font-size: 12px; color: var(--dim); }
-@media (max-width: 860px) {
-  .season-row { grid-template-columns: 1fr; gap: 6px; height: auto; padding-top: 10px; padding-bottom: 6px; }
-  .season-title { display: flex; align-items: baseline; gap: 10px; }
-  .season-next { display: none; }
-  .tl-seg span { font-size: 10px; }
-}

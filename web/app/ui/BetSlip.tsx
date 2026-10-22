@@ -2,6 +2,7 @@
 // The bet slip: pick a side, set an AXP amount, see what it would return from the current pool, confirm.
 // Side panel on desktop, bottom sheet on phones.
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { teamColor } from "../../lib/teams";
 import { Axp, TeamLogo } from "./bits";
 import Countdown from "./Countdown";
@@ -19,11 +20,15 @@ export default function BetSlip() {
   const [busy, setBusy] = useState(false);
   const m = slip!.match;
 
+  // A side panel on desktop, a bottom sheet on phones.
+  const [phone, setPhone] = useState(false);
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && closeSlip();
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [closeSlip]);
+    const mq = window.matchMedia("(max-width: 640px)");
+    setPhone(mq.matches);
+    const on = () => setPhone(mq.matches);
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
 
   const max = available;
   // What you already hold on each outcome of this market; a buy adds to it.
@@ -58,12 +63,12 @@ export default function BetSlip() {
   }
 
   return (
-    <div className="slip-overlay" onClick={closeSlip}>
-      <aside className="slip" style={vars} role="dialog" aria-modal="true" aria-label="Bet slip" onClick={(e) => e.stopPropagation()}>
-        <div className="slip-head">
-          <span className="ap-label">{m.block} · Bo{m.bestOf}</span>
+    <Sheet open onOpenChange={(o) => !o && closeSlip()}>
+      <SheetContent side={phone ? "bottom" : "right"} style={vars} className="slip gap-3.5 overflow-y-auto border-border bg-[#0b0b0b] p-5 data-[side=right]:w-full data-[side=right]:sm:max-w-[420px] data-[side=bottom]:max-h-[92vh] data-[side=bottom]:rounded-t-2xl">
+        <div className="slip-head pr-10">
+          <SheetTitle className="text-base font-bold">Buy</SheetTitle>
+          <SheetDescription className="text-xs text-muted-foreground">{m.block} · Bo{m.bestOf}</SheetDescription>
           {lockAt && <Countdown lockAt={lockAt} />}
-          <button className="slip-x" onClick={closeSlip} aria-label="Close">×</button>
         </div>
         <div className="slip-match">
           <span><TeamLogo code={m.teamA} logo={m.logoA} /><b className="display">{m.teamA}</b></span>
@@ -122,7 +127,7 @@ export default function BetSlip() {
           {stake > max ? `You only have ${fmt(max)} AXP available.` : stake < 10 ? "Minimum bet is 10 AXP." : "Each buy adds to your position. Winners split the pool by stake. Buying closes 5 minutes before the game; positions are proven on Sui."}
         </p>
         <p className="slip-note dim">AXP is play money with no cash value.</p>
-      </aside>
-    </div>
+      </SheetContent>
+    </Sheet>
   );
 }

@@ -10,5 +10,8 @@ export const dynamic = "force-dynamic";
 export const GET = guarded(async (req: NextRequest) => {
   const deps = fanDeps();
   if (!deps) return notConfigured();
-  return respond(await getMe(deps, currentFan(deps, req)));
+  const fan = currentFan(deps, req);
+  // Signed out is a normal state, not an error: answer 200 with null so browsers don't log a failed request.
+  if (!fan) return respond({ status: 200, body: null });
+  return respond(await getMe(deps, fan));
 });

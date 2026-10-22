@@ -8,6 +8,8 @@ import SeasonBar from "./ui/SeasonBar";
 import TabBar from "./ui/TabBar";
 import UserButton from "./ui/UserButton";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter_Tight({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["800", "900"], variable: "--font-display", display: "swap" });
@@ -22,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={cn("dark", inter.variable, display.variable)}>
       <body>
+        <TooltipProvider delayDuration={150}>
         <FanProvider>
           <header className="top">
             <div className="wrap">
@@ -50,6 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </footer>
           <TabBar />
         </FanProvider>
+        <Toaster position="bottom-center" />
+        </TooltipProvider>
       </body>
     </html>
   );
