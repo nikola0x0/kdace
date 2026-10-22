@@ -32,7 +32,7 @@ export default function UserButton() {
       <Link href="/me" className="axp-pill" title="Your balance: AXP you can still bet">
         <Axp size={18} /><b className="num">{available.toLocaleString("en-US")}</b><Pnl net={settled} hideZero className="text-[11px]" />
       </Link>
-      <DropdownMenu>
+      <DropdownMenu modal={false}>
         <DropdownMenuTrigger className="flex h-9 items-center gap-2 rounded-full border border-input bg-secondary py-1 pl-1 pr-2.5 text-sm font-semibold transition-colors hover:border-neutral-500 hover:bg-accent data-[state=open]:border-neutral-500">
           {avatar("size-7")}
           <span className="max-w-[120px] truncate max-md:hidden">{me.displayName}</span>
