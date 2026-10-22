@@ -20,6 +20,8 @@ export type SeriesRecord = {
   lessons: { player: string; text: string; blobId: string; jobId?: string }[];
   /** Set at commit; missing on records from before the switch to mainnet (see chainOf). */
   chain?: Chain;
+  /** The first commit of this same batch on testnet, kept when the batch was re-committed on mainnet before its game. */
+  testnetCommitDigest?: string;
 };
 
 /** A settled record in the shape the points module scores. */

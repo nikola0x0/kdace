@@ -1,12 +1,15 @@
 // One-shot switch to mainnet: publishes the ledger with the mainnet Referee key, checks a commit would work,
-// then points .env and GitHub Actions at the new package. Records already committed on testnet stay verifiable there.
-// Usage: npx tsx scripts/go-mainnet.ts [--dry-run]
+// points .env and GitHub Actions at the new package, then re-commits every not-yet-started testnet batch on mainnet
+// (same picks, same fingerprint, still before the game). Settled testnet records stay verifiable on testnet.
+// Usage: npx tsx scripts/go-mainnet.ts [--dry-run]   (rerun after a failure: it only finishes moving pending batches)
 import { execFileSync } from "node:child_process";
 import { appendFileSync, copyFileSync, readFileSync, writeFileSync } from "node:fs";
 import { decodeSuiPrivateKey } from "@mysten/sui/cryptography";
 import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
 import { Transaction } from "@mysten/sui/transactions";
 import { chainOf, tatumGrpcHost } from "../src/core/chain.ts";
+import { withLock } from "../src/core/lock.ts";
+import { isLocked } from "../src/core/select.ts";
 import { env } from "../src/core/env.ts";
 import { Store } from "../src/core/store.ts";
 import { tatumClient } from "../src/core/sui.ts";
@@ -15,7 +18,10 @@ const dryRun = process.argv.includes("--dry-run");
 const MIN_BALANCE = 200_000_000n; // 0.2 SUI: publish costs ~0.02, each commit or result ~0.003
 const die = (msg: string) => (console.error(msg), process.exit(1));
 
-if (process.env.SUI_NETWORK === "mainnet") die("Already on mainnet (SUI_NETWORK=mainnet in .env).");
+if (process.env.SUI_NETWORK === "mainnet") {
+  await movePending();
+  process.exit(0);
+}
 
 const mainnetKey = env("SUI_REFEREE_KEY_MAINNET");
 const { scheme, secretKey } = decodeSuiPrivateKey(mainnetKey);
@@ -24,11 +30,11 @@ const referee = Ed25519Keypair.fromSecretKey(secretKey);
 const address = referee.toSuiAddress();
 const sui = tatumClient("mainnet");
 
-// 1. A series committed on testnet must also get its result on testnet, so switch only between series.
-const pending = new Store().all().filter((r) => (r.status === "committing" || r.status === "committed") && chainOf(r).network !== "mainnet");
-if (pending.length && !dryRun) die(`Wait until these testnet series settle:\n${pending.map((r) => `  ${r.series.teamA} vs ${r.series.teamB} (${r.series.startTime})`).join("\n")}`);
-
-if (pending.length) console.log(`Note: ${pending.length} testnet series still pending; the real run will wait for them.`);
+// 1. A series already under way must get its result on testnet, where it was committed, so wait for it to settle.
+const testnetCommitted = new Store().all().filter((r) => r.status === "committed" && chainOf(r).network !== "mainnet");
+const underWay = testnetCommitted.filter((r) => isLocked(r.series.startTime, new Date()));
+if (underWay.length) die(`Wait until these testnet series settle:\n${underWay.map((r) => `  ${r.series.teamA} vs ${r.series.teamB} (${r.series.startTime})`).join("\n")}`);
+console.log(`${testnetCommitted.length} testnet batch(es) will be re-committed on mainnet before their games.`);
 
 // 2. Gas.
 const { balance } = await sui.getBalance({ owner: address });
@@ -100,6 +106,39 @@ gh(["variable", "set", "KDACE_PACKAGE_ID", "--body", packageId!]);
 gh(["variable", "set", "KDACE_RESOLVER_CAP", "--body", cap!]);
 gh(["secret", "set", "SUI_REFEREE_KEY"], mainnetKey);
 console.log("GitHub Actions variables and SUI_REFEREE_KEY secret updated.");
+console.log(`Ledger on mainnet: https://suiscan.xyz/mainnet/tx/${published.digest}`);
 
-console.log(`\nDone. Commit move/Published.toml and push. https://suiscan.xyz/mainnet/tx/${published.digest}`);
+// 9. The ledger module reads the live network from process.env, which now has to match the new .env.
+Object.assign(process.env, { SUI_NETWORK: "mainnet", TATUM_SUI_GRPC: tatumGrpcHost("mainnet"), KDACE_PACKAGE_ID: packageId, KDACE_RESOLVER_CAP: cap, SUI_REFEREE_KEY: mainnetKey });
+await movePending();
 process.exit(0);
+
+/** Re-commits each testnet batch whose game hasn't locked yet on mainnet, then pushes data/ so the cloud tick sees it. */
+async function movePending() {
+  const { commitBatch, currentChain } = await import("../src/core/ledger.ts");
+  const chain = currentChain();
+  const moved = await withLock("data", async () => {
+    const store = new Store();
+    const out: string[] = [];
+    for (const r of store.all().filter((x) => x.status === "committed" && chainOf(x).network !== "mainnet")) {
+      if (isLocked(r.series.startTime, new Date())) {
+        console.log(`  ${r.series.teamA} vs ${r.series.teamB} has started; it settles on testnet.`);
+        continue;
+      }
+      const count = (JSON.parse(r.batch!) as { entries: unknown[] }).entries.length;
+      const digest = await commitBatch(r.series.matchId, r.batchHash!, count);
+      store.put({ ...r, chain, commitDigest: digest, testnetCommitDigest: r.commitDigest! });
+      console.log(`  ${r.series.teamA} vs ${r.series.teamB}: re-committed on mainnet (${digest})`);
+      out.push(r.series.matchId);
+    }
+    return out;
+  });
+  const git = (...args: string[]) => execFileSync("git", args, { stdio: "inherit" });
+  git("add", "data", "move/Published.toml", "move/Move.lock");
+  if (execFileSync("git", ["diff", "--cached", "--name-only"]).toString().trim()) {
+    git("commit", "-q", "-m", `Switch the ledger to mainnet; re-commit ${moved.length} pending batch(es)`);
+    git("pull", "-q", "--rebase", "--autostash");
+    git("push", "-q");
+  }
+  console.log(`\nDone: ${moved.length} batch(es) moved to mainnet and pushed.`);
+}

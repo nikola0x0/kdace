@@ -16,7 +16,7 @@ npm run verify          # re-check every commit, result, lesson and the board
 
 `.env` keys: `MEMWAL_ACCOUNT_ID`, `MEMWAL_PRIVATE_KEY`, `MEMWAL_SERVER_URL`, `TATUM_API_KEY`, `SUI_NETWORK`, `TATUM_SUI_GRPC`, `SUI_REFEREE_KEY` (create with `npx tsx scripts/new-referee-key.ts`), `KDACE_PACKAGE_ID`, `KDACE_RESOLVER_CAP`.
 
-Going to mainnet: send ~0.5 SUI to the mainnet Referee, then `npx tsx scripts/go-mainnet.ts` (add `--dry-run` to check first). It publishes the ledger, simulates a commit, and points `.env` and GitHub Actions at mainnet. Each record keeps the network it was committed on, so testnet records stay verifiable after the switch.
+Going to mainnet: send ~0.5 SUI to the mainnet Referee, then `npx tsx scripts/go-mainnet.ts` (add `--dry-run` to check first). It publishes the ledger, simulates a commit, and points `.env` and GitHub Actions at mainnet. It also re-commits any batch whose game hasn't started yet on mainnet (same picks, same fingerprint, still before the game; the testnet commit is kept as `testnetCommitDigest`). Each record keeps the network it was committed on, so settled testnet records stay verifiable after the switch.
 
 Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick every 30 minutes, then `npm run verify`. Keys live in Actions secrets, network settings in Actions variables. `scripts/launchd/` is a macOS fallback for running it locally.
 
