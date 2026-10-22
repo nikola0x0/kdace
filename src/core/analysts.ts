@@ -28,7 +28,7 @@ export const ANALYSTS: Analyst[] = [
   analyst("support", "Support", "The team decides it: chemistry, morale, roster changes, coaching and the mood around a team.", "Warm, reads people."),
 ];
 
-const VALID_SCORES: Record<1 | 3 | 5, string[]> = { 1: [], 3: ["2-0", "2-1"], 5: ["3-0", "3-1", "3-2"] };
+export const VALID_SCORES: Record<1 | 3 | 5, string[]> = { 1: [], 3: ["2-0", "2-1"], 5: ["3-0", "3-1", "3-2"] };
 
 const fixedBeliefs = (a: Analyst) =>
   `You are the ${a.name} analyst on KDAce, a LoL Worlds 2026 prediction board. Your voice: ${a.voice}
