@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { aiConsensus } from "../src/core/consensus.ts";
 
-const pick = (winner: string, winProbability: number) => ({ player: "p", winner, score: null, winProbability, reasoning: "", usedLessons: [], pickedAt: "" });
+const pick = (winner: string, winProbability: number) => ({ player: "p", winner, score: null, winProbability, reasoning: "", usedLessons: [], pickedAt: "", stake: 100 });
 
 describe("aiConsensus", () => {
   it("averages each analyst's probability for team A", () => {

@@ -10,7 +10,7 @@ const base: Series = { matchId: "x", startTime: "2026-10-23T17:00:00Z", block: "
 const store = () => new Store(mkdtempSync(join(tmpdir(), "kdace-")));
 const before = new Date("2026-10-23T12:00:00Z");
 const after = new Date("2026-10-23T17:30:00Z");
-const committed = { series: base, status: "committed" as const, picks: [], batch: "b", batchHash: "h", commitDigest: "d", result: null, points: null, debate: null, lessons: [] };
+const committed = { series: base, status: "committed" as const, picks: [], batch: "b", batchHash: "h", commitDigest: "d", result: null, axp: null, debate: null, lessons: [] };
 
 describe("selection", () => {
   it("picks unstarted series with known teams before start", () => {
