@@ -301,7 +301,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .lr-k { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--kd-muted); }
 .mini-tug { display: flex; gap: 2px; height: 5px; } .mini-tug i { display: block; border-radius: 1px; }
 .lr-out { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.oc { display: flex; justify-content: space-between; align-items: center; height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-2); background: var(--panel-2); cursor: pointer; transition: border-color .15s, background .15s; }
+.oc { display: flex; justify-content: space-between; align-items: center; gap: 8px; white-space: nowrap; height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-2); background: var(--panel-2); cursor: pointer; transition: border-color .15s, background .15s; }
 .oc-team { font-weight: 800; } .oc-pct { color: var(--fg-2); font-weight: 700; }
 .oc.a:hover:not(:disabled) { border-color: var(--ta); } .oc.b:hover:not(:disabled) { border-color: var(--tb); }
 .oc.a.on { background: color-mix(in srgb, var(--ta) 22%, var(--panel-2)); border-color: var(--ta); }
@@ -543,6 +543,8 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .banner-quote { max-height: none; opacity: 1; margin: 0; }
 @media (max-width: 900px) { .banner-more { max-height: none; opacity: 1; } }
 
-.pick { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; height: 52px; }
-.pick-mult { font-family: var(--font); font-size: 11px; font-weight: 600; letter-spacing: 0; color: var(--kd-muted); }
+.pick { display: flex; align-items: center; justify-content: center; gap: 10px; height: 46px; white-space: nowrap; }
+.pick-mult { font-family: var(--font); font-size: 13px; font-weight: 700; letter-spacing: 0; color: var(--kd-muted); }
+.held-line { margin-top: -4px; font-size: 12px; color: var(--win); text-align: center; }
 .pick.on .pick-mult { color: rgba(0,0,0,.65); }
+.lr-held { grid-column: 1 / -1; font-size: 11px; color: var(--win); text-align: center; margin-top: -2px; }

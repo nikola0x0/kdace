@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState, type CSSProperties } from "react";
 import type { CardData } from "../../lib/site";
-import { multText, winnerOdds } from "../../lib/odds";
+import { winnerOdds } from "../../lib/odds";
 import { teamColor } from "../../lib/teams";
 import { TeamLogo } from "../ui/bits";
 import Countdown from "../ui/Countdown";
@@ -30,8 +30,8 @@ function Row({ c }: { c: CardData }) {
     const won = c.result?.winner === t;
     return (
       <button key={t} className={`oc ${k ? "b" : "a"} ${mine[t] ? "on" : ""} ${c.result ? (won ? "won" : "lost") : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
-        <span className="oc-team">{t}{mine[t] ? <small className="num"> · {mine[t].toLocaleString("en-US")}</small> : null}</span>
-        <span className="oc-pct num">{c.result ? (won ? "Won" : "-") : multText(k ? odds.multB : odds.multA)}</span>
+        <span className="oc-team">{t}</span>
+        <span className="oc-pct num">{c.result ? (won ? "Won" : "") : (k ? odds.multB : odds.multA) === null ? "" : `${(k ? odds.multB : odds.multA)!.toFixed(2)}×`}</span>
       </button>
     );
   };
@@ -51,7 +51,7 @@ function Row({ c }: { c: CardData }) {
         <span className="lr-k">Fans</span>
         <div className="mini-tug"><i style={{ flex: fanA ?? 50, background: fanA === null ? "#222" : "var(--ta)" }} /><i style={{ flex: fanA === null ? 50 : 100 - fanA, background: fanA === null ? "#222" : "var(--tb)" }} /></div>
       </div>
-      <div className="lr-out">{outcome(s.teamA, 0)}{outcome(s.teamB, 1)}</div>
+      <div className="lr-out">{outcome(s.teamA, 0)}{outcome(s.teamB, 1)}{Object.keys(mine).length > 0 && <span className="lr-held num">You hold {Object.entries(mine).map(([t, v]) => `${v.toLocaleString("en-US")} on ${t}`).join(" · ")}</span>}</div>
       <div className="lr-lock">{c.result ? <span className="muted">Final</span> : <Countdown lockAt={lockAt} />}</div>
     </div>
   );

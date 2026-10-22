@@ -4,7 +4,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { CardData } from "../../lib/site";
-import { axpShort, multText, winnerOdds } from "../../lib/odds";
+import { axpShort, winnerOdds } from "../../lib/odds";
 import { teamColor } from "../../lib/teams";
 import { Avatar, RoleIcon, TeamLogo } from "./bits";
 import Countdown from "./Countdown";
@@ -60,6 +60,7 @@ export default function MatchCard({ c }: { c: CardData }) {
   const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
   // Belief is weighted by AXP staked, not by heads; each side's payout comes from the combined pool.
   const odds = winnerOdds(s.teamA, s.teamB, aiPool, live?.crowd.winnerPool);
+  const held = Object.entries(mine.winner ?? {});
   const winsOf = (t: string) => (c.result ? (c.result.winner === t ? +c.result.score.split("-")[0] : +c.result.score.split("-")[1]) : 0);
   const side = (t: string) => c.calls.filter((a) => a.winner === t);
   const vars = { "--ta": teamColor(s.teamA), "--tb": teamColor(s.teamB) } as CSSProperties;
@@ -108,13 +109,17 @@ export default function MatchCard({ c }: { c: CardData }) {
         {!c.result && (
           <>
             <div className="picks">
-              {[s.teamA, s.teamB].map((t, k) => (
-                <button key={t} className={`pick ${k ? "b" : "a"} ${mine.winner?.[t] ? "on" : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
-                  <span>{t}</span>
-                  <span className="pick-mult num">{mine.winner?.[t] ? `${mine.winner[t].toLocaleString("en-US")} held · ` : ""}{multText(k ? odds.multB : odds.multA)}</span>
-                </button>
-              ))}
+              {[s.teamA, s.teamB].map((t, k) => {
+                const mult = k ? odds.multB : odds.multA;
+                return (
+                  <button key={t} className={`pick ${k ? "b" : "a"} ${mine.winner?.[t] ? "on" : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
+                    <span>{t}</span>
+                    {mult !== null && <span className="pick-mult num">{mult.toFixed(2)}×</span>}
+                  </button>
+                );
+              })}
             </div>
+            {held.length > 0 && <div className="held-line num">You hold {held.map(([t, v]) => `${v.toLocaleString("en-US")} AXP on ${t}`).join(" and ")}</div>}
             {s.bestOf > 1 && (
               <div className="chips">
                 {SCORES[s.bestOf].map((sc) => (

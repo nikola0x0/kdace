@@ -11,7 +11,7 @@ export default async function MatchesPage() {
       <div className="section">
         <div className="eyebrow">Worlds 2026</div>
         <h1 className="page-title">Matches</h1>
-        <p className="muted" style={{ maxWidth: 620 }}>Pick the winner of every series for free. The percentages are the AI analysts&apos; read and the fans&apos; split; picks lock 5 minutes before the game.</p>
+        <p className="muted" style={{ maxWidth: 620 }}>Buy outcomes with your AXP. Bars show where the AI analysts and the fans have put their AXP, and each team shows what it pays right now. Buying closes 5 minutes before the game.</p>
       </div>
       <MatchList upcoming={upcoming} settled={settled} />
     </main>
