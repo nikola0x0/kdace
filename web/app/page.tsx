@@ -21,7 +21,7 @@ export default async function Home() {
   return (
     <main>
       <section className="hero">
-        <DitherArt src={art("banner")} className="hero-art" band={0.3} />
+        <DitherArt src={art("banner")} className="hero-art" band={0.3} focusX={0} focusY={0.08} zoom={1.4} />
         <div className="hero-copy">
           <div className="wrap">
             <div className="eyebrow">Worlds 2026 · Free to play</div>

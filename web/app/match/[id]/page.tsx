@@ -25,7 +25,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   return (
     <main>
       <section className="hero">
-        <DitherArt src={art("banner")} className="match-art" band={0.5} />
+        <DitherArt src={art("banner")} className="match-art" band={0.5} focusY={0.05} />
       </section>
       <div className="wrap">
         <div className="match-head">
