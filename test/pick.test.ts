@@ -31,6 +31,15 @@ function fakes(overrides: Partial<PickDeps> = {}) {
 }
 
 describe("runPick", () => {
+  it("gives every analyst the Scout digest for the matchup and keeps it on the record", async () => {
+    const prompts: string[] = [];
+    const { deps } = fakes({ scout: (a, b) => `Scout: ${a} vs ${b} digest`, ask: async (p) => (prompts.push(p), good) });
+    await runPick(deps);
+    expect(prompts).toHaveLength(5);
+    expect(prompts.every((p) => p.includes("Scout: GEN vs IG digest"))).toBe(true);
+    expect(deps.store.get("x")!.scout).toBe("Scout: GEN vs IG digest");
+  });
+
   it("commits one batch for a series with 5 valid picks", async () => {
     const { deps, commits } = fakes();
     await runPick(deps);

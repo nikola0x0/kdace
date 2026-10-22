@@ -18,6 +18,8 @@ export type PickDeps = {
   /** Where commit() writes; stamped on each committed record. */
   chain: Chain;
   history(): string[];
+  /** Scout's 2026 stats digest for a matchup (data/scout), or null when there's none. */
+  scout?(teamA: string, teamB: string): string | null;
   now(): Date;
   log(msg: string): void;
 };
@@ -28,7 +30,7 @@ export const emptyRecord = (series: Series, status: SeriesRecord["status"]): Ser
   series, status, picks: [], batch: null, batchHash: null, commitDigest: null, result: null, axp: null, debate: null, lessons: [],
 });
 
-async function analystPicks(deps: PickDeps, s: Series): Promise<AnalystPick[]> {
+async function analystPicks(deps: PickDeps, s: Series, scout: string | null): Promise<AnalystPick[]> {
   const picks: AnalystPick[] = [];
   const history = deps.history();
   const records = deps.store.all();
@@ -39,7 +41,7 @@ async function analystPicks(deps: PickDeps, s: Series): Promise<AnalystPick[]> {
       deps.log(`${s.matchId} ${a.player} recall failed, picking without lessons: ${(e as Error).message}`);
       return [] as Lesson[];
     });
-    const prompt = buildPickPrompt(a, s, lessons, history);
+    const prompt = buildPickPrompt(a, s, lessons, history, scout);
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
         const pick = parsePick(await deps.ask(prompt), a, s, lessons, deps.now());
@@ -85,7 +87,8 @@ export async function runPick(deps: PickDeps): Promise<{ committed: string[]; mi
   }
   for (const s of pick) {
     try {
-      const picks = await analystPicks(deps, s);
+      const scout = deps.scout?.(s.teamA, s.teamB) ?? null;
+      const picks = await analystPicks(deps, s, scout);
       if (picks.length < MIN_ANALYSTS) {
         deps.log(`${s.matchId} only ${picks.length} valid picks; not committing, will retry next run`);
         continue;
@@ -96,7 +99,7 @@ export async function runPick(deps: PickDeps): Promise<{ committed: string[]; mi
         continue;
       }
       const batch = canonicalBatch(s.matchId, analystEntries(s.bestOf, picks));
-      const record: SeriesRecord = { ...emptyRecord(s, "committing"), picks, batch, batchHash: batchHash(batch) };
+      const record: SeriesRecord = { ...emptyRecord(s, "committing"), picks, batch, batchHash: batchHash(batch), ...(scout ? { scout } : {}) };
       deps.store.put(record); // recorded before the chain call, so a crash resumes with the same hash instead of re-picking
       await commitRecord(deps, record, out);
     } catch (e) {
@@ -118,6 +121,8 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
   const { fetchSeries } = await import("../core/worlds.ts");
   const { memory } = await import("../core/memory.ts");
   const { askAnalyst } = await import("../core/llm.ts");
+  const { loadScout, scoutDigest } = await import("../core/scoutstore.ts");
+  const scoutData = loadScout();
   const { commitBatch, currentChain } = await import("../core/ledger.ts");
   return {
     fetchSeries,
@@ -133,6 +138,7 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
     commit: (matchId, hash, count) => withRefereeLock(fanDbFromEnv(), "tick", () => commitBatch(matchId, hash, count), { waitMs: 5 * 60_000, proceedIfDbDown: true }),
     chain: currentChain(),
     history: () => historyLines(store),
+    scout: (a, b) => scoutDigest(a, b, scoutData),
     now: () => new Date(),
     log: (msg) => console.log(`[pick] ${msg}`),
   };

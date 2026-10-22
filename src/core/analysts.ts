@@ -67,7 +67,7 @@ const fixedBeliefs = (a: Analyst) =>
 Core belief: ${a.belief}
 Your beliefs are fixed; lessons refine how you apply them, never replace them.`;
 
-export function buildPickPrompt(a: Analyst, s: Series, lessons: Lesson[], history: string[]): string {
+export function buildPickPrompt(a: Analyst, s: Series, lessons: Lesson[], history: string[], scout: string | null = null): string {
   const scoreRule = s.bestOf === 1 ? '"score" must be null (best of 1)' : `"score" is winner-first, one of ${VALID_SCORES[s.bestOf].join(", ")}`;
   return `${fixedBeliefs(a)}
 
@@ -76,7 +76,7 @@ ${lessons.map((l) => `- [${l.blobId}] ${l.text}`).join("\n") || "(no lessons yet
 
 Results so far this tournament:
 ${history.join("\n") || "(none yet)"}
-
+${scout ? `\nScouting report (official 2026 match data; use it, but read it through your own beliefs):\n${scout}\n` : ""}
 Predict ${s.teamA} vs ${s.teamB}, best of ${s.bestOf} (${s.block}). Pick blind: you do not know what anyone else picked.
 Reply with only JSON:
 {"winner":"<${s.teamA} or ${s.teamB}>","score":<see rule>,"winProbability":<50-100, your chance the winner wins>,"reasoning":"<one or two sentences in your voice>","usedLessonIds":["<ids of lessons you relied on>"]}
