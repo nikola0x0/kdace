@@ -1,7 +1,7 @@
 "use client";
 // "Sign in with Google" through Google Identity Services, ID-token flow: Google hands the page a signed ID token
 // (the credential), the page posts it to /api/auth/google, and the server verifies it and derives the fan's zkLogin
-// address. Renders nothing when NEXT_PUBLIC_GOOGLE_CLIENT_ID isn't set. Unstyled on purpose.
+// address. Renders nothing when NEXT_PUBLIC_GOOGLE_CLIENT_ID isn't set.
 import { useEffect, useRef } from "react";
 
 const GSI_SRC = "https://accounts.google.com/gsi/client";
@@ -9,7 +9,7 @@ const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 
 type GsiId = {
   initialize(opts: { client_id: string; callback: (r: { credential: string }) => void; ux_mode?: "popup"; auto_select?: boolean }): void;
-  renderButton(el: HTMLElement, opts: { type?: "standard"; theme?: "outline"; size?: "medium"; text?: "signin_with" }): void;
+  renderButton(el: HTMLElement, opts: { type?: "standard"; theme?: "outline" | "filled_black"; size?: "medium" | "large"; text?: "signin_with" | "continue_with"; shape?: "pill" | "rectangular"; width?: number }): void;
   disableAutoSelect(): void;
 };
 declare global {
@@ -65,7 +65,7 @@ export default function GoogleSignIn({ onSignedIn, onError }: { onSignedIn: () =
             }
           },
         });
-        gsi.renderButton(button.current, { type: "standard", theme: "outline", size: "medium", text: "signin_with" });
+        gsi.renderButton(button.current, { type: "standard", theme: "filled_black", size: "large", text: "continue_with", shape: "rectangular", width: 352 });
       })
       .catch((e: Error) => callbacks.current.onError(e.message));
     return () => {

@@ -45,3 +45,18 @@ export async function fetchSeries(): Promise<Series[]> {
   if (!res.ok) throw new Error(`lolesports schedule HTTP ${res.status}`);
   return parseSchedule(await res.json());
 }
+
+/** Team code → logo URL (https) from the same schedule feed. TBD placeholders are left out. */
+export function parseTeamLogos(json: any): Record<string, string> {
+  const logos: Record<string, string> = {};
+  for (const e of json?.data?.schedule?.events ?? [])
+    for (const t of e.match?.teams ?? [])
+      if (t?.code && t.code !== "TBD" && typeof t.image === "string") logos[t.code] = t.image.replace(/^http:/, "https:");
+  return logos;
+}
+
+export async function fetchTeamLogos(): Promise<Record<string, string>> {
+  const res = await fetch(SCHEDULE_URL, { headers: { "x-api-key": API_KEY } });
+  if (!res.ok) throw new Error(`lolesports schedule HTTP ${res.status}`);
+  return parseTeamLogos(await res.json());
+}
