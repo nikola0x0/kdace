@@ -30,7 +30,7 @@ const verify = (t: string, now = NOW) => verifyGoogleIdToken(t, { clientId: CLIE
 
 describe("verifyGoogleIdToken", () => {
   it("accepts a valid token (email_verified not required) and returns iss and sub", async () => {
-    expect(await verify(await token())).toEqual({ iss: "https://accounts.google.com", sub: "110169484474386276334", aud: CLIENT });
+    expect(await verify(await token())).toEqual({ iss: "https://accounts.google.com", sub: "110169484474386276334" });
   });
   it("accepts the bare accounts.google.com issuer", async () => {
     expect((await verify(await token({ iss: "accounts.google.com" }))).iss).toBe("accounts.google.com");
@@ -55,6 +55,13 @@ describe("verifyGoogleIdToken", () => {
     const [h, p] = (await token()).split(".");
     const forged = Buffer.from(JSON.stringify({ ...JSON.parse(Buffer.from(p, "base64url").toString()), sub: "someone-else" })).toString("base64url");
     await expect(verify(`${h}.${forged}.${(await token()).split(".")[2]}`)).rejects.toThrow();
+  });
+  it("keeps the claims out of its errors", async () => {
+    const err = await verify(await token({ aud: "someone-else.apps.googleusercontent.com" })).catch((e) => e);
+    expect(err).toBeInstanceOf(Error);
+    expect(Object.keys(err)).toEqual([]); // no payload/claim properties attached
+    expect(String(err.message)).not.toContain("110169484474386276334");
+    expect(String(err.message)).not.toContain("fan@example.com");
   });
   it("rejects garbage and unsigned tokens", async () => {
     await expect(verify("not-a-jwt")).rejects.toThrow();

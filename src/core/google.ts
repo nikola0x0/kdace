@@ -9,7 +9,8 @@ export const GOOGLE_ISSUERS = ["https://accounts.google.com", "accounts.google.c
 export const GOOGLE_JWKS_URL = "https://www.googleapis.com/oauth2/v3/certs";
 const SKEW_SECONDS = 60;
 
-export type GoogleIdentity = { iss: string; sub: string; aud: string };
+/** Only what the salt needs. The token itself and its other claims are never stored or logged: verify, derive, discard. */
+export type GoogleIdentity = { iss: string; sub: string };
 
 /** Google's signing keys, fetched on first use and cached (jose refetches on an unknown kid, at most every 30 s). */
 let googleKeys: JWTVerifyGetKey | null = null;
@@ -21,17 +22,23 @@ export const googleJwks = (): JWTVerifyGetKey => (googleKeys ??= createRemoteJWK
  */
 export async function verifyGoogleIdToken(idToken: string, opts: { clientId: string; jwks?: JWTVerifyGetKey; now?: Date }): Promise<GoogleIdentity> {
   if (!opts.clientId) throw new Error("GOOGLE_CLIENT_ID is not set");
-  const { payload } = await jwtVerify(idToken, opts.jwks ?? googleJwks(), {
-    algorithms: ["RS256"],
-    issuer: GOOGLE_ISSUERS,
-    audience: opts.clientId,
-    clockTolerance: SKEW_SECONDS,
-    maxTokenAge: "1h",
-    requiredClaims: ["sub", "iat", "exp"],
-    currentDate: opts.now,
-  });
-  if (typeof payload.sub !== "string" || !payload.sub) throw new Error("token has no subject");
-  return { iss: payload.iss!, sub: payload.sub, aud: opts.clientId };
+  let payload;
+  try {
+    ({ payload } = await jwtVerify(idToken, opts.jwks ?? googleJwks(), {
+      algorithms: ["RS256"],
+      issuer: GOOGLE_ISSUERS,
+      audience: opts.clientId,
+      clockTolerance: SKEW_SECONDS,
+      maxTokenAge: "1h",
+      requiredClaims: ["sub", "iat", "exp"],
+      currentDate: opts.now,
+    }));
+  } catch (e) {
+    // jose's claim errors carry the decoded payload; rethrow the message only, so no claims reach a log.
+    throw new Error(`Google ID token rejected: ${(e as Error).message}`);
+  }
+  if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Google ID token rejected: no subject");
+  return { iss: payload.iss!, sub: payload.sub };
 }
 
 /** zkLogin normalizes the bare Google issuer to its https form; the salt does too, so both spellings are one account. */
