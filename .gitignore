@@ -7,3 +7,8 @@ logs/
 data/.lock
 .vercel
 .env*
+
+# Agent skills installed by marketplace integrations, and agent worktrees
+.agents/
+.claude/
+skills-lock.json

@@ -3,7 +3,7 @@
 // (same picks, same fingerprint, still before the game). Settled testnet records stay verifiable on testnet.
 // Usage: npx tsx scripts/go-mainnet.ts [--dry-run]   (rerun after a failure: it only finishes moving pending batches)
 import { execFileSync } from "node:child_process";
-import { appendFileSync, copyFileSync, readFileSync, writeFileSync } from "node:fs";
+import { appendFileSync, copyFileSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import { decodeSuiPrivateKey } from "@mysten/sui/cryptography";
 import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
 import { Transaction } from "@mysten/sui/transactions";
@@ -106,6 +106,19 @@ gh(["variable", "set", "KDACE_PACKAGE_ID", "--body", packageId!]);
 gh(["variable", "set", "KDACE_RESOLVER_CAP", "--body", cap!]);
 gh(["secret", "set", "SUI_REFEREE_KEY"], mainnetKey);
 console.log("GitHub Actions variables and SUI_REFEREE_KEY secret updated.");
+
+// 8b. Vercel and web/.env.local: the fan lock route commits from Vercel, so it must move to mainnet too.
+const live = { SUI_NETWORK: "mainnet", NEXT_PUBLIC_SUI_NETWORK: "mainnet", TATUM_SUI_GRPC: tatumGrpcHost("mainnet"), KDACE_PACKAGE_ID: packageId!, KDACE_RESOLVER_CAP: cap!, SUI_REFEREE_KEY: mainnetKey };
+for (const [name, value] of Object.entries(live)) for (const target of ["production", "development"]) {
+  try { execFileSync("vercel", ["env", "rm", name, target, "--yes"], { stdio: "ignore" }); } catch {}
+  execFileSync("vercel", ["env", "add", name, target, ...(name === "SUI_REFEREE_KEY" && target === "production" ? ["--sensitive"] : [])], { input: value, stdio: ["pipe", "ignore", "inherit"] });
+}
+if (existsSync("web/.env.local")) {
+  let local = readFileSync("web/.env.local", "utf8");
+  for (const [name, value] of Object.entries(live)) local = new RegExp(`^${name}=.*$`, "m").test(local) ? local.replace(new RegExp(`^${name}=.*$`, "m"), `${name}=${value}`) : `${local.trimEnd()}\n${name}=${value}\n`;
+  writeFileSync("web/.env.local", local);
+}
+console.log("Vercel env and web/.env.local updated (the push below redeploys the site).");
 console.log(`Ledger on mainnet: https://suiscan.xyz/mainnet/tx/${published.digest}`);
 
 // 9. The ledger module reads the live network from process.env, which now has to match the new .env.
