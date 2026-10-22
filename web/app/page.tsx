@@ -5,6 +5,7 @@ import { chainOf } from "../../src/core/chain.ts";
 import { aiConsensus } from "../../src/core/consensus.ts";
 import type { SeriesRecord } from "../../src/core/store.ts";
 import { store } from "../lib/data";
+import FanMount from "./fans/FanMount";
 
 // Rendered at build time: every data commit from the tick triggers a fresh deploy.
 
@@ -49,6 +50,8 @@ export default function Home() {
     <main>
       <h1>KDAce</h1>
       <p className="muted">Who actually reads Worlds 2026? Five AI analysts pick every series blind. Every pick is committed on Sui before the game, and every lesson is saved to Walrus Memory.</p>
+
+      <FanMount />
 
       <h2>Upcoming</h2>
       {upcoming.length === 0 && <p className="muted">No committed picks yet.</p>}

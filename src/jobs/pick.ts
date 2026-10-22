@@ -4,6 +4,7 @@ import { withLock } from "../core/lock.ts";
 import { ANALYSTS, buildPickPrompt, parsePick, type AnalystPick, type Lesson, type Role } from "../core/analysts.ts";
 import { batchHash, canonicalBatch, type BatchEntry } from "../core/batch.ts";
 import type { Chain } from "../core/chain.ts";
+import { fanDbFromEnv, withRefereeLock } from "../core/fandb.ts";
 import { isLocked, seriesToPick, seriesToResume } from "../core/select.ts";
 import { Store, type SeriesRecord } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
@@ -23,7 +24,7 @@ export type PickDeps = {
 
 const MIN_ANALYSTS = 3;
 
-const emptyRecord = (series: Series, status: SeriesRecord["status"]): SeriesRecord => ({
+export const emptyRecord = (series: Series, status: SeriesRecord["status"]): SeriesRecord => ({
   series, status, picks: [], batch: null, batchHash: null, commitDigest: null, result: null, points: null, debate: null, lessons: [],
 });
 
@@ -128,7 +129,8 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
       return res.results.flatMap((r) => (r.created_at ? [{ blobId: r.blob_id, text: r.text, createdAt: r.created_at }] : []));
     },
     ask: async (prompt) => askAnalyst(prompt),
-    commit: commitBatch,
+    // Shares the Referee with the fan lock route; the Supabase mutex keeps their transactions apart.
+    commit: (matchId, hash, count) => withRefereeLock(fanDbFromEnv(), "tick", () => commitBatch(matchId, hash, count), { waitMs: 5 * 60_000, proceedIfDbDown: true }),
     chain: currentChain(),
     history: () => historyLines(store),
     now: () => new Date(),
