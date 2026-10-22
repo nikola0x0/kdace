@@ -6,8 +6,9 @@ import { createContext, useCallback, useContext, useEffect, useState } from "rea
 
 export type Market = "winner" | "score";
 export type Crowd = { fans: number; winner: Record<string, number>; score: Record<string, number>; winnerPool?: Record<string, number>; scorePool?: Record<string, number> };
-export type Bet = { choice: string; stake: number };
-export type OpenSeries = { series: { matchId: string }; lockAt: string; crowd: Crowd; mine: Partial<Record<Market, Bet>> };
+/** A fan's positions on a series: market -> outcome -> total AXP bought (buys add up, like shares on Outcomes). */
+export type Positions = Partial<Record<Market, Record<string, number>>>;
+export type OpenSeries = { series: { matchId: string }; lockAt: string; crowd: Crowd; mine: Positions };
 export type Me = {
   address: string;
   displayName: string;
@@ -77,7 +78,7 @@ export default function FanProvider({ children }: { children: React.ReactNode })
         say(r.body.error ?? "That bet couldn't be placed. Please try again.");
         return false;
       }
-      say(`Bet placed: ${stake.toLocaleString("en-US")} AXP on ${choice}`);
+      say(`Bought ${stake.toLocaleString("en-US")} AXP of ${choice}`);
       await refresh();
       return true;
     },

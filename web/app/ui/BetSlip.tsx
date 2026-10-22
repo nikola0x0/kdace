@@ -15,8 +15,7 @@ export default function BetSlip() {
   const [market, setMarket] = useState<Market>(slip!.market);
   const [choice, setChoice] = useState(slip!.choice);
   const live = open[slip!.match.matchId];
-  const existing = live?.mine[market];
-  const [stake, setStake] = useState<number>(existing?.stake ?? 100);
+  const [stake, setStake] = useState<number>(100);
   const [busy, setBusy] = useState(false);
   const m = slip!.match;
 
@@ -26,8 +25,10 @@ export default function BetSlip() {
     return () => window.removeEventListener("keydown", onKey);
   }, [closeSlip]);
 
-  // Your existing bet on this market is replaced, so it doesn't count against what you can stake now.
-  const max = available + (existing?.stake ?? 0);
+  const max = available;
+  // What you already hold on each outcome of this market; a buy adds to it.
+  const held = live?.mine[market] ?? {};
+  const position = held[choice] ?? 0;
   const options = market === "winner" ? [m.teamA, m.teamB] : SCORES[m.bestOf];
 
   // Parimutuel estimate if the market closed now: your share of the whole pool, by stake on your side.
@@ -36,12 +37,13 @@ export default function BetSlip() {
     const ai = market === "winner" ? m.aiPool : {};
     const pool: Record<string, number> = {};
     for (const o of options) pool[o] = (fanPool[o] ?? 0) + (ai[o] ?? 0);
-    if (existing) pool[existing.choice] = Math.max(0, (pool[existing.choice] ?? 0) - existing.stake);
+    // The pool already includes your current position; after the buy your whole position is paid from the bigger pool.
     const total = Object.values(pool).reduce((a, b) => a + b, 0) + stake;
     const side = (pool[choice] ?? 0) + stake;
-    const ret = stake > 0 ? Math.floor((stake / side) * total) : 0;
-    return { ret, mult: stake > 0 ? ret / stake : 0, pool };
-  }, [live, market, m.aiPool, options, existing, stake, choice]);
+    const after = position + stake;
+    const ret = after > 0 ? Math.floor((after / side) * total) : 0;
+    return { ret, after, mult: after > 0 ? ret / after : 0, pool };
+  }, [live, market, m.aiPool, options, stake, choice, position]);
 
   const valid = Number.isInteger(stake) && stake >= 10 && stake <= max;
   const vars = { "--ta": teamColor(m.teamA), "--tb": teamColor(m.teamB) } as CSSProperties;
@@ -72,7 +74,7 @@ export default function BetSlip() {
         {m.bestOf > 1 && (
           <div className="seg">
             {(["winner", "score"] as const).map((k) => (
-              <button key={k} className={market === k ? "on" : ""} onClick={() => { setMarket(k); setChoice(k === "winner" ? m.teamA : SCORES[m.bestOf][0]); setStake(live?.mine[k]?.stake ?? 100); }}>
+              <button key={k} className={market === k ? "on" : ""} onClick={() => { setMarket(k); setChoice(k === "winner" ? m.teamA : SCORES[m.bestOf][0]); }}>
                 {k === "winner" ? "Winner" : "Exact score"}
               </button>
             ))}
@@ -88,6 +90,7 @@ export default function BetSlip() {
               <button key={o} className={`slip-opt ${tone} ${choice === o ? "on" : ""}`} onClick={() => setChoice(o)}>
                 <b>{o}</b>
                 <span className="num">{share === null ? "no bets yet" : `${share}% of pool`}</span>
+                {held[o] ? <span className="held num">You hold {fmt(held[o])}</span> : null}
               </button>
             );
           })}
@@ -107,15 +110,16 @@ export default function BetSlip() {
 
         <div className="slip-sum">
           <div><span>Available</span><b className="num">{fmt(max)} AXP</b></div>
-          <div><span>To win (if it closed now)</span><b className="num win">{valid ? `${fmt(est.ret)} AXP` : "-"}</b></div>
+          {position > 0 && <div><span>Your position on {choice}</span><b className="num">{fmt(position)} → {valid ? fmt(est.after) : fmt(position)} AXP</b></div>}
+          <div><span>Payout if {choice} wins (if it closed now)</span><b className="num win">{valid ? `${fmt(est.ret)} AXP` : "-"}</b></div>
           <div><span>Multiplier</span><b className="num">{valid ? `${est.mult.toFixed(2)}×` : "-"}</b></div>
         </div>
 
         <button className="btn slip-go" disabled={!valid || busy} onClick={confirm}>
-          {busy ? "Placing…" : existing ? `Update bet · ${fmt(stake)} AXP on ${choice}` : `Bet ${fmt(stake)} AXP on ${choice}`}
+          {busy ? "Buying…" : `Buy ${fmt(stake)} AXP of ${choice}`}
         </button>
         <p className="slip-note">
-          {stake > max ? `You only have ${fmt(max)} AXP available.` : stake < 10 ? "Minimum bet is 10 AXP." : "Winners split the pool by stake. Bets lock 5 minutes before the game and are proven on Sui."}
+          {stake > max ? `You only have ${fmt(max)} AXP available.` : stake < 10 ? "Minimum bet is 10 AXP." : "Each buy adds to your position. Winners split the pool by stake. Buying closes 5 minutes before the game; positions are proven on Sui."}
         </p>
         <p className="slip-note dim">AXP is play money with no cash value.</p>
       </aside>

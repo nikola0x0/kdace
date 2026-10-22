@@ -22,4 +22,10 @@ describe("canonicalBatch", () => {
     expect(canonicalBatch("m1", [a])).toBe('{"matchId":"m1","entries":[{"player":"analyst-mid","market":"winner","choice":"T1","stake":500}]}');
     expect(batchHash(canonicalBatch("m1", [{ ...a, stake: 501 }]))).not.toBe(batchHash(canonicalBatch("m1", [a])));
   });
+
+  it("orders a player's positions on both sides of a market the same way every time", () => {
+    const a = { player: "fan:0x1", market: "winner" as const, choice: "IG", stake: 50 };
+    const b = { player: "fan:0x1", market: "winner" as const, choice: "GEN", stake: 100 };
+    expect(canonicalBatch("m", [a, b])).toBe(canonicalBatch("m", [b, a]));
+  });
 });

@@ -27,7 +27,13 @@ export class MemoryFanDb implements FanDb {
     return Object.fromEntries(addresses.flatMap((a) => (this.fans.has(a) ? [[a, this.fans.get(a)!.suinsName]] : [])));
   }
   async upsertPick(row: FanPickRow) {
-    this.picks.set(`${row.matchId}|${row.address}|${row.market}`, { ...row });
+    this.picks.set(`${row.matchId}|${row.address}|${row.market}|${row.choice}`, { ...row });
+  }
+  async buyPick(row: FanPickRow) {
+    const key = `${row.matchId}|${row.address}|${row.market}|${row.choice}`;
+    const next = { ...row, stake: (this.picks.get(key)?.stake ?? 0) + row.stake };
+    this.picks.set(key, next);
+    return { ...next };
   }
   async picksFor(matchIds: string[]) {
     return [...this.picks.values()].filter((p) => matchIds.includes(p.matchId));

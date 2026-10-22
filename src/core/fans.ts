@@ -71,7 +71,7 @@ export function pickReceipt(s: Series, r: FanPickRow) {
     marketId,
     lockAt: lockAt(s.startTime),
     pickedAt: r.updatedAt,
-    howToCheck: `At lock, every final fan pick is bundled as canonicalBatch("${marketId}", entries) (src/core/batch.ts: JSON {matchId, entries} sorted by player then market, each entry with its stake) and its SHA-256 is committed on Sui under market id "${marketId}". Your entry must appear in the batch published in data/series/${s.matchId}.json (fans.batch) if it is still your last pick at lock.`,
+    howToCheck: `At lock, every final fan pick is bundled as canonicalBatch("${marketId}", entries) (src/core/batch.ts: JSON {matchId, entries} sorted by player, market and choice, each entry with its total stake) and its SHA-256 is committed on Sui under market id "${marketId}". Your position (the total you bought on this outcome) must appear in the batch published in data/series/${s.matchId}.json (fans.batch).`,
   };
 }
 

@@ -41,6 +41,8 @@ export interface FanDb {
   /** Cached SuiNS names (address → name or null) for the given fans. */
   fanNames(addresses: string[]): Promise<Record<string, string | null>>;
   upsertPick(row: FanPickRow): Promise<void>;
+  /** Adds `row.stake` to the fan's position on that outcome (creating it at that stake); returns the position. */
+  buyPick(row: FanPickRow): Promise<FanPickRow>;
   picksFor(matchIds: string[]): Promise<FanPickRow[]>;
   picksOf(address: string): Promise<FanPickRow[]>;
   listCommits(): Promise<FanCommitRow[]>;
@@ -102,7 +104,12 @@ export class SupabaseFanDb implements FanDb {
     return Object.fromEntries((json as { address: string; suins_name: string | null }[]).map((r) => [r.address, r.suins_name]));
   }
   async upsertPick(row: FanPickRow) {
-    await this.req("POST", "picks?on_conflict=match_id,address,market", toRow(row), "resolution=merge-duplicates,return=minimal");
+    await this.req("POST", "picks?on_conflict=match_id,address,market,choice", toRow(row), "resolution=merge-duplicates,return=minimal");
+  }
+  async buyPick(row: FanPickRow) {
+    // One atomic statement in Postgres (insert, or add to the existing stake), so concurrent buys never lose AXP.
+    const { json } = await this.req("POST", "rpc/buy_pick", { p_match_id: row.matchId, p_address: row.address, p_market: row.market, p_choice: row.choice, p_amount: row.stake, p_at: row.updatedAt });
+    return { ...row, stake: Number(json) };
   }
   async picksFor(matchIds: string[]) {
     if (!matchIds.length) return [];

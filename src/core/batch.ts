@@ -6,7 +6,7 @@ export type BatchEntry = { player: string; market: "winner" | "score"; choice: s
 
 export function canonicalBatch(matchId: string, entries: BatchEntry[]): string {
   const sorted = [...entries]
-    .sort((x, y) => x.player.localeCompare(y.player) || x.market.localeCompare(y.market))
+    .sort((x, y) => x.player.localeCompare(y.player) || x.market.localeCompare(y.market) || x.choice.localeCompare(y.choice))
     .map(({ player, market, choice, stake }) => ({ player, market, choice, stake }));
   return JSON.stringify({ matchId, entries: sorted });
 }

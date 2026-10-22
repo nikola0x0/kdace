@@ -19,13 +19,21 @@ const URL_ = "https://proj.supabase.co";
 const A = "0x" + "a".repeat(64);
 
 describe("SupabaseFanDb", () => {
-  it("upserts a pick on (match_id, address, market) so the last pick wins", async () => {
+  it("upserts a position on (match_id, address, market, choice)", async () => {
     const { calls, fetchImpl } = fakeFetch(() => ({ status: 201 }));
     await new SupabaseFanDb(URL_, "sb_secret_x", fetchImpl).upsertPick({ matchId: "m", address: A, market: "winner", choice: "GEN", stake: 250, updatedAt: "2026-10-23T12:00:00.000Z" });
     expect(calls[0].method).toBe("POST");
-    expect(calls[0].url).toBe(`${URL_}/rest/v1/picks?on_conflict=match_id,address,market`);
+    expect(calls[0].url).toBe(`${URL_}/rest/v1/picks?on_conflict=match_id,address,market,choice`);
     expect(calls[0].headers.Prefer).toContain("resolution=merge-duplicates");
     expect(calls[0].body).toEqual({ match_id: "m", address: A, market: "winner", choice: "GEN", stake: 250, updated_at: "2026-10-23T12:00:00.000Z" });
+  });
+
+  it("buys through the atomic buy_pick function and returns the new position", async () => {
+    const { calls, fetchImpl } = fakeFetch(() => ({ status: 200, json: 350 }));
+    const r = await new SupabaseFanDb(URL_, "sb_secret_x", fetchImpl).buyPick({ matchId: "m", address: A, market: "winner", choice: "GEN", stake: 100, updatedAt: "2026-10-23T12:00:00.000Z" });
+    expect(calls[0].url).toBe(`${URL_}/rest/v1/rpc/buy_pick`);
+    expect(calls[0].body).toEqual({ p_match_id: "m", p_address: A, p_market: "winner", p_choice: "GEN", p_amount: 100, p_at: "2026-10-23T12:00:00.000Z" });
+    expect(r.stake).toBe(350);
   });
 
   it("writes every fan's settled AXP in one upsert that only touches axp_settled", async () => {

@@ -273,7 +273,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .pick.a:hover:not(:disabled):not(.on) { border-color: var(--ta); }
 .pick.b:hover:not(:disabled):not(.on) { border-color: var(--tb); }
 .pick { font-family: var(--font-display), var(--font); font-weight: 900; font-size: 18px; letter-spacing: .03em; clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); border-radius: 4px; }
-.card-foot-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--line); padding-top: 10px; }
+.card-foot-row { display: flex; justify-content: flex-end; align-items: center; gap: 10px; border-top: 1px solid var(--line); padding-top: 10px; }
 
 /* Section headings: slanted accent bar, broadcast style */
 .section-head h2::before { content: ""; display: inline-block; width: 6px; height: 20px; margin-right: 12px; vertical-align: -3px; background: #fff; transform: skewX(-18deg); }
@@ -419,7 +419,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .me-name { display: flex; align-items: baseline; gap: 10px; } .me-name b { font-size: 18px; }
 .me-kpis { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 10px; }
 .me-kpis .ap-kpi.big { --c: var(--win); }
-.mrow { display: grid; grid-template-columns: 120px minmax(150px, 1fr) 140px 160px 96px; gap: 18px; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--line); transition: background .15s; }
+.mrow { display: grid; grid-template-columns: 120px minmax(150px, 1fr) minmax(170px, 1.2fr) 150px 110px; gap: 18px; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--line); transition: background .15s; }
 .mrow:last-child { border-bottom: 0; } .mrow:hover { background: #101010; }
 .mrow-pick, .mrow-res { display: grid; gap: 3px; } .mrow-pick b, .mrow-res b { font-size: 15px; }
 @media (max-width: 900px) {
@@ -491,3 +491,5 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 /* Profile portrait has no text on it, so no dark shade over the art. */
 .ap-banner .banner-shade { background: linear-gradient(180deg, rgba(0,0,0,.3) 0%, transparent 18%); }
 .ap-banner .banner-art { background-position: 50% 30%; }
+
+.slip-opt .held { color: var(--win); font-weight: 700; }

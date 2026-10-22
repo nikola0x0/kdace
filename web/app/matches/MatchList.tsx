@@ -19,7 +19,7 @@ function Row({ c }: { c: CardData }) {
   const fans = live?.crowd.fans ?? 0;
   const fanA = fans ? Math.round(((live!.crowd.winner[s.teamA] ?? 0) / fans) * 100) : null;
   const aiA = c.consensusA === null ? null : Math.round(c.consensusA);
-  const mine = live?.mine.winner?.choice;
+  const mine = live?.mine.winner ?? {};
   const aiPool: Record<string, number> = {};
   for (const a of c.calls) aiPool[a.winner] = (aiPool[a.winner] ?? 0) + a.stake;
   const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
@@ -28,8 +28,8 @@ function Row({ c }: { c: CardData }) {
     const ai = aiA === null ? null : k ? 100 - aiA : aiA;
     const won = c.result?.winner === t;
     return (
-      <button key={t} className={`oc ${k ? "b" : "a"} ${mine === t ? "on" : ""} ${c.result ? (won ? "won" : "lost") : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
-        <span className="oc-team">{mine === t ? "✓ " : ""}{t}</span>
+      <button key={t} className={`oc ${k ? "b" : "a"} ${mine[t] ? "on" : ""} ${c.result ? (won ? "won" : "lost") : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
+        <span className="oc-team">{t}{mine[t] ? <small className="num"> · {mine[t].toLocaleString("en-US")}</small> : null}</span>
         <span className="oc-pct num">{c.result ? (won ? "Won" : "-") : ai === null ? "-" : `${ai}%`}</span>
       </button>
     );

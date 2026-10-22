@@ -110,12 +110,12 @@ function isOpenPick(p: FanPickRow, commits: Map<string, FanCommitRow>, series: M
 }
 
 /** `except` leaves one market out of the open stakes: the pick being replaced doesn't count against itself. */
-async function fanAxp(deps: FanApiDeps, address: string, ctx: { picks: FanPickRow[]; commits: FanCommitRow[]; series: Series[] }, except?: { matchId: string; market: string }): Promise<FanAxp> {
+async function fanAxp(deps: FanApiDeps, address: string, ctx: { picks: FanPickRow[]; commits: FanCommitRow[]; series: Series[] }): Promise<FanAxp> {
   const settled = (await deps.db.getFan(address))?.axpSettled ?? 0;
   const commits = new Map(ctx.commits.map((c) => [c.matchId, c]));
   const series = new Map(ctx.series.map((s) => [s.matchId, s]));
   const open = ctx.picks
-    .filter((p) => !(except && p.matchId === except.matchId && p.market === except.market) && isOpenPick(p, commits, series))
+    .filter((p) => isOpenPick(p, commits, series))
     .reduce((sum, p) => sum + p.stake, 0);
   return { start: AXP_START, settled, open, available: AXP_START + settled - open };
 }
@@ -136,11 +136,11 @@ export async function postPick(deps: FanApiDeps, address: string | null, body: u
   const commits = await deps.db.listCommits();
   if (commits.some((c) => c.matchId === matchId)) return fail(409, "Picks for this match are closed.");
   await deps.db.ensureFan(address);
-  const { available } = await fanAxp(deps, address, { picks: await deps.db.picksOf(address), commits, series: all }, { matchId, market });
+  const { available } = await fanAxp(deps, address, { picks: await deps.db.picksOf(address), commits, series: all });
   if ((stake as number) > available) return fail(400, `You only have ${axpText(available)} AXP available.`);
-  const row: FanPickRow = { matchId, address, market: market as FanPickRow["market"], choice, stake: stake as number, updatedAt: now.toISOString() };
-  await deps.db.upsertPick(row);
-  return { status: 200, body: { receipt: pickReceipt(s, row) } };
+  // A buy adds to the fan's position on this outcome, like buying more shares on Outcomes.
+  const position = await deps.db.buyPick({ matchId, address, market: market as FanPickRow["market"], choice, stake: stake as number, updatedAt: now.toISOString() });
+  return { status: 200, body: { receipt: pickReceipt(s, position) } };
 }
 
 export async function listPicks(deps: FanApiDeps, address: string | null): Promise<ApiResult> {
@@ -157,7 +157,8 @@ export async function listPicks(deps: FanApiDeps, address: string | null): Promi
         series: s,
         lockAt: lockAt(s.startTime),
         crowd: crowdSplit(s, rows),
-        mine: Object.fromEntries(rows.filter((r) => r.matchId === s.matchId && r.address === address).map((r) => [r.market, { choice: r.choice, stake: r.stake }])),
+        // The fan's positions: market -> outcome -> total AXP bought.
+        mine: rows.filter((r) => r.matchId === s.matchId && r.address === address).reduce<Record<string, Record<string, number>>>((m, r) => ((m[r.market] ??= {})[r.choice] = r.stake, m), {}),
       })),
     },
   };
