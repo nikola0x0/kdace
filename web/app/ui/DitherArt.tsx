@@ -67,18 +67,20 @@ function placeholder(w: number, h: number, palette: string) {
   return c;
 }
 
-function cover(img: CanvasImageSource & { width: number; height: number }, w: number, h: number, focusX: number, focusY: number, zoom: number) {
+function cover(img: CanvasImageSource & { width: number; height: number }, w: number, h: number, focusX: number, focusY: number, zoom: number, shift: number, content: number) {
   const c = document.createElement("canvas");
   c.width = w;
   c.height = h;
   const scale = Math.max(w / img.width, h / img.height) * zoom;
   const dw = img.width * scale, dh = img.height * scale;
-  c.getContext("2d")!.drawImage(img, (w - dw) * focusX, (h - dh) * focusY, dw, dh);
+  // `shift` moves the image's centre right by a share of the content column, so art lines up with the page layout at any width.
+  const x = shift ? (w - dw) / 2 + shift * Math.min(w, content) : (w - dw) * focusX;
+  c.getContext("2d")!.drawImage(img, x, (h - dh) * focusY, dw, dh);
   return c;
 }
 
 /** focusX/focusY pick which part of an oversized image stays in view (0 = left/top, 1 = right/bottom); zoom > 1 crops in. */
-export default function DitherArt({ src, palette = "hero", className = "", dim = true, band = 0.42, focusX = 0.5, focusY = 0.35, zoom = 1 }: { src?: string | null; palette?: string; className?: string; dim?: boolean; band?: number; focusX?: number; focusY?: number; zoom?: number }) {
+export default function DitherArt({ src, palette = "hero", className = "", dim = true, band = 0.42, focusX = 0.5, focusY = 0.35, zoom = 1, shift = 0 }: { src?: string | null; palette?: string; className?: string; dim?: boolean; band?: number; focusX?: number; focusY?: number; zoom?: number; shift?: number }) {
   const box = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
 
@@ -92,7 +94,7 @@ export default function DitherArt({ src, palette = "hero", className = "", dim =
       const w = Math.max(1, Math.round(el.clientWidth * dpr)), h = Math.max(1, Math.round(el.clientHeight * dpr));
       cv.width = w;
       cv.height = h;
-      const source = img?.complete && img.naturalWidth ? cover(img, w, h, focusX, focusY, zoom) : placeholder(w, h, palette);
+      const source = img?.complete && img.naturalWidth ? cover(img, w, h, focusX, focusY, zoom, shift, 1180 * dpr) : placeholder(w, h, palette);
       const ctx = cv.getContext("2d")!;
       ctx.drawImage(source, 0, 0);
       const data = source.getContext("2d")!.getImageData(0, 0, w, h).data;
@@ -129,7 +131,7 @@ export default function DitherArt({ src, palette = "hero", className = "", dim =
       ro.disconnect();
       cancelAnimationFrame(raf);
     };
-  }, [src, palette, band, focusX, focusY, zoom]);
+  }, [src, palette, band, focusX, focusY, zoom, shift]);
 
   return (
     <div ref={box} className={`art ${className}`}>
