@@ -27,7 +27,7 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
     <main className="wrap" style={{ "--c": p.color } as CSSProperties}>
       <section className="ap-hero">
         <div className="banner ap-banner">
-          <div className="banner-art" style={img ? { backgroundImage: `url(${img})` } : undefined}>{!img && <span>{p.name.slice(0, 1)}</span>}</div>
+          <div className="banner-art" style={img ? { backgroundImage: `url(${img})` } : undefined}>{!img && <span>{p.name.split(" ").pop()!.slice(0, 1)}</span>}</div>
           <div className="banner-shade" />
           <div className="banner-top"><RoleIcon role={p.role} size={18} /><span>{p.role.toUpperCase()}</span></div>
         </div>

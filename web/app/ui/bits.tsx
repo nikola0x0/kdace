@@ -12,7 +12,7 @@ export function Axp({ size = 16 }: { size?: number }) {
 export function Avatar({ name, color, art, size = 32, result }: { name: string; color: string; art?: string | null; size?: number; result?: "right" | "wrong" }) {
   return (
     <span className="avatar" title={name} style={{ width: size, height: size, background: `radial-gradient(circle at 30% 25%, #ffffff66 0, ${color} 60%)`, fontSize: size * 0.42 }}>
-      {art ? <img src={art} alt={name} /> : name.slice(0, 1)}
+      {art ? <img src={art} alt={name} /> : name.split(" ").pop()!.slice(0, 1)}
       {result && <span className="tick" style={{ background: result === "right" ? "var(--win)" : "var(--loss)" }} />}
     </span>
   );
