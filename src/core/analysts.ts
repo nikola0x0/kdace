@@ -1,5 +1,5 @@
 // The five role analysts: fixed beliefs, pick prompts, pick validation and reflection prompts.
-import { extractJson } from "./llm.ts";
+import { extractJson } from "./json.ts";
 import type { Series } from "./worlds.ts";
 
 export type Role = "top" | "jungle" | "mid" | "adc" | "support";

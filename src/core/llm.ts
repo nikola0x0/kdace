@@ -39,8 +39,4 @@ export async function askAnalyst(prompt: string): Promise<string> {
   return replyText(message);
 }
 
-export function extractJson<T>(text: string): T {
-  const match = text.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error("No JSON in reply");
-  return JSON.parse(match[0]) as T;
-}
+export { extractJson } from "./json.ts";

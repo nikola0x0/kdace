@@ -1,0 +1,43 @@
+# Runs the KDAce tick in the cloud: pick open series, settle finished ones, commit data/ back to main.
+name: tick
+
+on:
+  schedule:
+    - cron: "7,37 * * * *" # every 30 minutes, off the top of the hour
+  workflow_dispatch:
+
+concurrency:
+  group: tick
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Configure git for data commits
+        run: |
+          git config user.name "kdace-tick"
+          git config user.email "kdace-tick@users.noreply.github.com"
+      - name: Tick
+        run: npm run tick
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MEMWAL_ACCOUNT_ID: ${{ secrets.MEMWAL_ACCOUNT_ID }}
+          MEMWAL_PRIVATE_KEY: ${{ secrets.MEMWAL_PRIVATE_KEY }}
+          MEMWAL_SERVER_URL: https://relayer.memory.walrus.xyz
+          TATUM_API_KEY: ${{ secrets.TATUM_API_KEY }}
+          SUI_REFEREE_KEY: ${{ secrets.SUI_REFEREE_KEY }}
+          SUI_NETWORK: ${{ vars.SUI_NETWORK }}
+          TATUM_SUI_GRPC: ${{ vars.TATUM_SUI_GRPC }}
+          KDACE_PACKAGE_ID: ${{ vars.KDACE_PACKAGE_ID }}
+          KDACE_RESOLVER_CAP: ${{ vars.KDACE_RESOLVER_CAP }}

@@ -5,7 +5,7 @@ import { aiConsensus } from "../../src/core/consensus.ts";
 import type { SeriesRecord } from "../../src/core/store.ts";
 import { store } from "../lib/data";
 
-export const dynamic = "force-dynamic";
+// Rendered at build time: every data commit from the tick triggers a fresh deploy.
 
 const network = process.env.SUI_NETWORK ?? "mainnet";
 const name = (player: string) => ANALYSTS.find((a) => a.player === player)?.name ?? player;
