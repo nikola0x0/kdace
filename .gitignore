@@ -5,3 +5,5 @@ build
 .env.testnet
 logs/
 data/.lock
+.vercel
+.env*
