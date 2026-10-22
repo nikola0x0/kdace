@@ -26,15 +26,15 @@ function fakes(overrides: Partial<FanLockDeps> = {}) {
 }
 
 async function seed(db: MemoryFanDb) {
-  await db.upsertPick({ matchId: "x", address: A, market: "winner", choice: "GEN", updatedAt: "2026-10-23T12:00:00.000Z" });
-  await db.upsertPick({ matchId: "x", address: A, market: "score", choice: "2-1", updatedAt: "2026-10-23T12:00:00.000Z" });
-  await db.upsertPick({ matchId: "x", address: B, market: "winner", choice: "IG", updatedAt: "2026-10-23T16:54:59.000Z" });
+  await db.upsertPick({ matchId: "x", address: A, market: "winner", choice: "GEN", stake: 100, updatedAt: "2026-10-23T12:00:00.000Z" });
+  await db.upsertPick({ matchId: "x", address: A, market: "score", choice: "2-1", stake: 100, updatedAt: "2026-10-23T12:00:00.000Z" });
+  await db.upsertPick({ matchId: "x", address: B, market: "winner", choice: "IG", stake: 100, updatedAt: "2026-10-23T16:54:59.000Z" });
 }
 
 const expectedBatch = canonicalBatch("x:fans", [
-  { player: `fan:${A}`, market: "winner", choice: "GEN" },
-  { player: `fan:${A}`, market: "score", choice: "2-1" },
-  { player: `fan:${B}`, market: "winner", choice: "IG" },
+  { player: `fan:${A}`, market: "winner", choice: "GEN", stake: 100 },
+  { player: `fan:${A}`, market: "score", choice: "2-1", stake: 100 },
+  { player: `fan:${B}`, market: "winner", choice: "IG", stake: 100 },
 ]);
 
 describe("runFanLock", () => {
@@ -56,7 +56,7 @@ describe("runFanLock", () => {
 
   it("leaves out a pick stamped at lock", async () => {
     const { db, deps, commits } = fakes();
-    await db.upsertPick({ matchId: "x", address: A, market: "winner", choice: "GEN", updatedAt: "2026-10-23T16:55:00.000Z" });
+    await db.upsertPick({ matchId: "x", address: A, market: "winner", choice: "GEN", stake: 100, updatedAt: "2026-10-23T16:55:00.000Z" });
     await runFanLock(deps);
     expect(commits).toEqual([]);
     expect(db.commits.size).toBe(0);
@@ -87,7 +87,7 @@ describe("runFanLock", () => {
     await runFanLock({ ...deps, now: () => at("2026-10-23T16:56:00Z") }); // 30 s later: not stale yet
     expect(commits).toHaveLength(1);
     await seed(db); // a pick changing in the db after lock must not change the resumed batch
-    await db.upsertPick({ matchId: "x", address: B, market: "winner", choice: "GEN", updatedAt: "2026-10-23T16:58:00.000Z" });
+    await db.upsertPick({ matchId: "x", address: B, market: "winner", choice: "GEN", stake: 100, updatedAt: "2026-10-23T16:58:00.000Z" });
     expect(await runFanLock({ ...deps, now: () => at("2026-10-23T16:57:30Z") })).toEqual({ committed: ["x"], missed: [] });
     expect(commits[1].hash).toBe(commits[0].hash);
     expect(db.commits.get("x")).toMatchObject({ status: "committed", commitDigest: "digest-2" });
@@ -113,7 +113,7 @@ describe("runFanLock", () => {
     const { db, deps, commits } = fakes({
       fetchSeries: async () => [series, { ...series, matchId: "tbd", teamA: "TBD" }, { ...series, matchId: "old", startTime: "2026-10-20T17:00:00Z", state: "completed" }],
     });
-    await db.upsertPick({ matchId: "old", address: A, market: "winner", choice: "GEN", updatedAt: "2026-10-20T12:00:00.000Z" });
+    await db.upsertPick({ matchId: "old", address: A, market: "winner", choice: "GEN", stake: 100, updatedAt: "2026-10-20T12:00:00.000Z" });
     expect(await runFanLock(deps)).toEqual({ committed: [], missed: [] });
     expect(commits).toEqual([]);
     expect(db.commits.size).toBe(0);
