@@ -12,3 +12,4 @@ data/.lock
 .agents/
 .claude/
 skills-lock.json
+data/scout/raw/

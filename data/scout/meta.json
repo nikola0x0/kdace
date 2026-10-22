@@ -1,0 +1,94 @@
+{
+ "generatedAt": "2026-10-22T20:53:12.569Z",
+ "source": "lolesports official feeds (esports-api getSchedule/getEventDetails, feed livestats window/details)",
+ "worldsTeams": [
+  "AL",
+  "BLG",
+  "C9",
+  "CFO",
+  "DK",
+  "FUR",
+  "G2",
+  "GEN",
+  "HLE",
+  "IG",
+  "KC",
+  "LOS",
+  "LYON",
+  "MKOI",
+  "MVK",
+  "T1",
+  "TES",
+  "TLAW",
+  "TSW"
+ ],
+ "perLeague": {
+  "Worlds 2026": {
+   "series": 6,
+   "seriesAll": 6,
+   "games": 22
+  },
+  "MSI 2026": {
+   "series": 20,
+   "seriesAll": 20,
+   "games": 0
+  },
+  "First Stand 2026": {
+   "series": 12,
+   "seriesAll": 13,
+   "games": 0
+  },
+  "EWC 2026": {
+   "series": 28,
+   "seriesAll": 28,
+   "games": 0
+  },
+  "Americas Cup 2026": {
+   "series": 5,
+   "seriesAll": 6,
+   "games": 0
+  },
+  "LCK 2026": {
+   "series": 120,
+   "seriesAll": 188,
+   "games": 55
+  },
+  "LPL 2026": {
+   "series": 155,
+   "seriesAll": 249,
+   "games": 62
+  },
+  "LEC 2026": {
+   "series": 102,
+   "seriesAll": 186,
+   "games": 51
+  },
+  "LCS 2026": {
+   "series": 65,
+   "seriesAll": 95,
+   "games": 42
+  },
+  "CBLOL 2026": {
+   "series": 59,
+   "seriesAll": 117,
+   "games": 32
+  },
+  "LCP 2026": {
+   "series": 62,
+   "seriesAll": 97,
+   "games": 42
+  }
+ },
+ "missing": [
+  "LPL 2026 TES-LGD game 1 (117155436343202137)",
+  "LEC 2026 VIT-MKOI game 1 (115548681803406316)"
+ ],
+ "winnersReconciled": [
+  "LEC 2026 KC 2-0 SK game 2: SK -> KC",
+  "LCK 2026 KT 3-0 DK game 2: DK -> KT",
+  "LPL 2026 WE 1-3 IG game 3: WE -> IG",
+  "CBLOL 2026 FUR 1-3 LOS game 1: FUR -> LOS",
+  "LCS 2026 SR 0-3 C9 game 3: SR -> C9"
+ ],
+ "winnerMismatches": []
+}
