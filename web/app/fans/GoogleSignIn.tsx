@@ -25,10 +25,10 @@ function loadGsi(): Promise<GsiId> {
     const s = document.createElement("script");
     s.src = GSI_SRC;
     s.async = true;
-    s.onload = () => (window.google?.accounts?.id ? resolve(window.google.accounts.id) : reject(new Error("Google sign-in did not load")));
+    s.onload = () => (window.google?.accounts?.id ? resolve(window.google.accounts.id) : reject(new Error("Sign in with Google couldn't load. Use a crypto wallet instead.")));
     s.onerror = () => {
       loading = null;
-      reject(new Error("Google sign-in could not be loaded"));
+      reject(new Error("Sign in with Google couldn't load. Use a crypto wallet instead."));
     };
     document.head.appendChild(s);
   }));
@@ -59,9 +59,9 @@ export default function GoogleSignIn({ onSignedIn, onError }: { onSignedIn: () =
               const res = await fetch("/api/auth/google", { method: "POST", headers: { "Content-Type": "application/json" }, credentials: "same-origin", body: JSON.stringify({ idToken: credential }) });
               if (res.ok) return callbacks.current.onSignedIn();
               const body = await res.json().catch(() => ({}));
-              callbacks.current.onError(body.error ?? `Google sign-in failed (${res.status})`);
+              callbacks.current.onError(body.error ?? "Google sign-in didn't work. Please try again.");
             } catch (e) {
-              callbacks.current.onError(`Google sign-in failed: ${(e as Error).message}`);
+              callbacks.current.onError("Google sign-in didn't work. Please try again.");
             }
           },
         });

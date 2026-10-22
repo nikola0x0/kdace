@@ -54,7 +54,7 @@ function googleSignInDeps(): Pick<FanApiDeps, "verifyGoogleToken" | "zkLoginSalt
   return { verifyGoogleToken: (idToken) => verifyGoogleIdToken(idToken, { clientId }), zkLoginSaltSecret };
 }
 
-export const notConfigured = () => NextResponse.json({ error: "Fan picks are not configured on this deployment yet." }, { status: 503 });
+export const notConfigured = () => NextResponse.json({ error: "Fan picks aren't open yet." }, { status: 503 });
 
 export const currentFan = (deps: FanApiDeps, req: NextRequest) => sessionAddress(deps, req.cookies.get(SESSION_COOKIE)?.value);
 
@@ -86,7 +86,7 @@ export function guarded<A extends unknown[]>(handler: (...args: A) => Promise<Ne
       return await handler(...args);
     } catch (e) {
       console.error("[fans api]", e);
-      return NextResponse.json({ error: "Upstream service unavailable, try again shortly." }, { status: 502 });
+      return NextResponse.json({ error: "Something went wrong on our side. Please try again shortly." }, { status: 502 });
     }
   };
 }
