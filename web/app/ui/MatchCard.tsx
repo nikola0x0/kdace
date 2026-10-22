@@ -4,6 +4,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { CardData } from "../../lib/site";
+import { axpShort, multText, winnerOdds } from "../../lib/odds";
 import { teamColor } from "../../lib/teams";
 import { Avatar, RoleIcon, TeamLogo } from "./bits";
 import Countdown from "./Countdown";
@@ -53,12 +54,12 @@ export default function MatchCard({ c }: { c: CardData }) {
   const s = c.series, live = open[s.matchId];
   const lockAt = live?.lockAt ?? new Date(Date.parse(s.startTime) - LOCK_MS).toISOString();
   const closed = !!c.result || Date.parse(lockAt) <= Date.now();
-  const fans = live?.crowd.fans ?? 0;
-  const fanPctA = fans ? ((live!.crowd.winner[s.teamA] ?? 0) / fans) * 100 : null;
   const mine = live?.mine ?? {};
   const aiPool: Record<string, number> = {};
   for (const a of c.calls) aiPool[a.winner] = (aiPool[a.winner] ?? 0) + a.stake;
   const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
+  // Belief is weighted by AXP staked, not by heads; each side's payout comes from the combined pool.
+  const odds = winnerOdds(s.teamA, s.teamB, aiPool, live?.crowd.winnerPool);
   const winsOf = (t: string) => (c.result ? (c.result.winner === t ? +c.result.score.split("-")[0] : +c.result.score.split("-")[1]) : 0);
   const side = (t: string) => c.calls.filter((a) => a.winner === t);
   const vars = { "--ta": teamColor(s.teamA), "--tb": teamColor(s.teamB) } as CSSProperties;
@@ -88,8 +89,8 @@ export default function MatchCard({ c }: { c: CardData }) {
           </div>
         </div>
 
-        <TugBar label="AI analysts" pctA={c.consensusA} empty="picks coming" />
-        <TugBar label={fans ? `Fans · ${fans}` : "Fans"} pctA={fanPctA} empty="no picks yet" />
+        <TugBar label={odds.aiTotal ? `AI analysts · ${axpShort(odds.aiTotal)} AXP` : "AI analysts"} pctA={odds.aiPctA} empty="picks coming" />
+        <TugBar label={odds.fanTotal ? `Fans · ${axpShort(odds.fanTotal)} AXP` : "Fans"} pctA={odds.fanPctA} empty="no bets yet" />
 
         {c.calls.length > 0 && <div className="draft" aria-label="Which side each analyst picked">
           {[s.teamA, s.teamB].map((t, k) => (
@@ -109,7 +110,8 @@ export default function MatchCard({ c }: { c: CardData }) {
             <div className="picks">
               {[s.teamA, s.teamB].map((t, k) => (
                 <button key={t} className={`pick ${k ? "b" : "a"} ${mine.winner?.[t] ? "on" : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
-                  {mine.winner?.[t] ? `${t} · ${mine.winner[t].toLocaleString("en-US")}` : t}
+                  <span>{t}</span>
+                  <span className="pick-mult num">{mine.winner?.[t] ? `${mine.winner[t].toLocaleString("en-US")} held · ` : ""}{multText(k ? odds.multB : odds.multA)}</span>
                 </button>
               ))}
             </div>

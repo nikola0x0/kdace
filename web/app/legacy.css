@@ -542,3 +542,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .stat-strip b { font-size: 17px; } .stat-strip span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--kd-muted); }
 .banner-quote { max-height: none; opacity: 1; margin: 0; }
 @media (max-width: 900px) { .banner-more { max-height: none; opacity: 1; } }
+
+.pick { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; height: 52px; }
+.pick-mult { font-family: var(--font); font-size: 11px; font-weight: 600; letter-spacing: 0; color: var(--kd-muted); }
+.pick.on .pick-mult { color: rgba(0,0,0,.65); }

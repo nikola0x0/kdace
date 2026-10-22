@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState, type CSSProperties } from "react";
 import type { CardData } from "../../lib/site";
+import { multText, winnerOdds } from "../../lib/odds";
 import { teamColor } from "../../lib/teams";
 import { TeamLogo } from "../ui/bits";
 import Countdown from "../ui/Countdown";
@@ -16,21 +17,21 @@ function Row({ c }: { c: CardData }) {
   const s = c.series, live = open[s.matchId];
   const lockAt = live?.lockAt ?? new Date(Date.parse(s.startTime) - LOCK_MS).toISOString();
   const closed = !!c.result || Date.parse(lockAt) <= Date.now();
-  const fans = live?.crowd.fans ?? 0;
-  const fanA = fans ? Math.round(((live!.crowd.winner[s.teamA] ?? 0) / fans) * 100) : null;
-  const aiA = c.consensusA === null ? null : Math.round(c.consensusA);
+
   const mine = live?.mine.winner ?? {};
   const aiPool: Record<string, number> = {};
   for (const a of c.calls) aiPool[a.winner] = (aiPool[a.winner] ?? 0) + a.stake;
   const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
+  const odds = winnerOdds(s.teamA, s.teamB, aiPool, live?.crowd.winnerPool);
+  const aiA = odds.aiPctA === null ? null : Math.round(odds.aiPctA);
+  const fanA = odds.fanPctA === null ? null : Math.round(odds.fanPctA);
   const vars = { "--ta": teamColor(s.teamA), "--tb": teamColor(s.teamB) } as CSSProperties;
   const outcome = (t: string, k: 0 | 1) => {
-    const ai = aiA === null ? null : k ? 100 - aiA : aiA;
     const won = c.result?.winner === t;
     return (
       <button key={t} className={`oc ${k ? "b" : "a"} ${mine[t] ? "on" : ""} ${c.result ? (won ? "won" : "lost") : ""}`} disabled={closed} onClick={() => openSlip({ match: slipMatch, market: "winner", choice: t })}>
         <span className="oc-team">{t}{mine[t] ? <small className="num"> · {mine[t].toLocaleString("en-US")}</small> : null}</span>
-        <span className="oc-pct num">{c.result ? (won ? "Won" : "-") : ai === null ? "-" : `${ai}%`}</span>
+        <span className="oc-pct num">{c.result ? (won ? "Won" : "-") : multText(k ? odds.multB : odds.multA)}</span>
       </button>
     );
   };
