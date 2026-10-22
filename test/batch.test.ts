@@ -28,4 +28,12 @@ describe("canonicalBatch", () => {
     const b = { player: "fan:0x1", market: "winner" as const, choice: "GEN", stake: 100 };
     expect(canonicalBatch("m", [a, b])).toBe(canonicalBatch("m", [b, a]));
   });
+
+  it("includes recalled lessons in an entry only when there are some", () => {
+    const withLessons = canonicalBatch("m", [{ player: "analyst-mid", market: "winner", choice: "T1", stake: 700, lessons: ["blobA"] }]);
+    const without = canonicalBatch("m", [{ player: "fan:0x1", market: "winner", choice: "T1", stake: 70 }]);
+    expect(JSON.parse(withLessons).entries[0].lessons).toEqual(["blobA"]);
+    expect(JSON.parse(without).entries[0]).not.toHaveProperty("lessons");
+  });
 });
+

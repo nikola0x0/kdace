@@ -71,4 +71,13 @@ describe("analyst stakes", () => {
       { player: "analyst-top", market: "winner", choice: "T1", stake: 500 },
     ]);
   });
+
+  it("locks the lessons an analyst recalled into its winner entry, so the fingerprint proves which memories it used", () => {
+    const base = { score: null, winProbability: 70, reasoning: "r", pickedAt: "2026-10-23T12:00:00Z" };
+    const used = [{ blobId: "blobB", text: "b", createdAt: "2026-10-22T00:00:00Z" }, { blobId: "blobA", text: "a", createdAt: "2026-10-21T00:00:00Z" }];
+    expect(analystEntries(1, [{ ...base, player: "analyst-mid", winner: "T1", stake: 700, usedLessons: used }])).toEqual([
+      { player: "analyst-mid", market: "winner", choice: "T1", stake: 700, lessons: ["blobA", "blobB"] },
+    ]);
+  });
 });
+

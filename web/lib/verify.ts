@@ -11,6 +11,8 @@ export type VerifyInput = {
   fansBatch: string | null;
   fansDigest: string | null;
   result: { winner: string; score: string; resultDigest: string } | null;
+  /** Lessons each analyst recalled, as published: checked against the fingerprinted batch and the pick time. */
+  memories?: { player: string; blobId: string; savedAt: string; pickedAt: string }[];
   me?: string | null; // fan address
 };
 export type Check = { label: string; ok: boolean | null; detail: string };
@@ -55,6 +57,15 @@ export async function verifySeries(input: VerifyInput): Promise<Check[]> {
   const checks: Check[] = [];
   if (input.batch && input.commitDigest) checks.push(...(await commitChecks("Analysts' picks", input, input.batch, input.commitDigest)));
   if (input.fansBatch && input.fansDigest) checks.push(...(await commitChecks("Fans' picks", input, input.fansBatch, input.fansDigest)));
+  if (input.batch && input.memories?.length) {
+    // Which memories each analyst used is inside the fingerprint, so it was fixed before the game.
+    const locked = new Set((JSON.parse(input.batch).entries as { player: string; lessons?: string[] }[]).flatMap((e) => (e.lessons ?? []).map((id) => `${e.player}|${id}`)));
+    const inBatch = input.memories.every((m) => locked.has(`${m.player}|${m.blobId}`));
+    const before = input.memories.every((m) => Date.parse(m.savedAt) < Date.parse(m.pickedAt));
+    const n = input.memories.length;
+    checks.push({ label: "Memories used are locked in", ok: inBatch, detail: inBatch ? `${n} recalled lesson${n > 1 ? "s" : ""} covered by the fingerprint` : "a recalled lesson isn't in the committed batch" });
+    checks.push({ label: "Each memory existed before the pick", ok: before, detail: before ? "every lesson was saved to Walrus Memory before it was used" : "a lesson was saved after the pick" });
+  }
   if (input.me) {
     const entries = input.fansBatch ? (JSON.parse(input.fansBatch).entries as { player: string; choice: string; stake: number }[]) : [];
     const mine = entries.filter((e) => e.player === `fan:${input.me}`);

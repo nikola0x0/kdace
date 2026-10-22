@@ -44,7 +44,9 @@ export function analystStakes(p: number, available: number, bestOf: 1 | 3 | 5): 
 /** The batch entries for a series' analyst picks: one per market bet, each with its stake. */
 export const analystEntries = (bestOf: 1 | 3 | 5, picks: AnalystPick[]): BatchEntry[] =>
   picks.flatMap((p) => [
-    ...(p.stake > 0 ? [{ player: p.player, market: "winner" as const, choice: p.winner, stake: p.stake }] : []),
+    ...(p.stake > 0
+      ? [{ player: p.player, market: "winner" as const, choice: p.winner, stake: p.stake, ...(p.usedLessons?.length ? { lessons: p.usedLessons.map((l) => l.blobId).sort() } : {}) }]
+      : []),
     ...(bestOf > 1 && p.score && p.scoreStake ? [{ player: p.player, market: "score" as const, choice: p.score, stake: p.scoreStake }] : []),
   ]);
 

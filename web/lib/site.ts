@@ -145,6 +145,7 @@ export function verifyInput(r: SeriesRecord) {
     fansBatch: r.fans?.commitDigest ? r.fans.batch : null,
     fansDigest: r.fans?.commitDigest ?? null,
     result: r.result,
+    memories: r.picks.flatMap((p) => (p.usedLessons ?? []).map((l) => ({ player: p.player, blobId: l.blobId, savedAt: l.createdAt, pickedAt: p.pickedAt }))),
   };
 }
 

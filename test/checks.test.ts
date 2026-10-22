@@ -7,7 +7,7 @@ import { axpMatches, boardMatches, checkRecord } from "../src/core/checks.ts";
 import { computeBoard } from "../src/core/points.ts";
 import { Store, type SeriesRecord } from "../src/core/store.ts";
 
-const batch = canonicalBatch("x", [{ player: "analyst-adc", market: "winner", choice: "GEN", stake: 1000 }]);
+const batch = canonicalBatch("x", [{ player: "analyst-adc", market: "winner", choice: "GEN", stake: 1000, lessons: ["b"] }]);
 const hash = batchHash(batch);
 const record: SeriesRecord = {
   series: { matchId: "x", startTime: "2026-10-23T17:00:00Z", block: "Swiss", bestOf: 1, state: "completed", teamA: "GEN", teamB: "IG", winsA: 1, winsB: 0, winner: "GEN" },
