@@ -4,6 +4,11 @@ export function Logo({ size = 28 }: { size?: number }) {
   return <img src="/brand/logo.svg" width={size} height={size} alt="" aria-hidden />;
 }
 
+/** The AXP coin. */
+export function Axp({ size = 16 }: { size?: number }) {
+  return <img className="axp-icon" src="/brand/axp.svg" width={size} height={size} alt="AXP" />;
+}
+
 export function Avatar({ name, color, art, size = 32, result }: { name: string; color: string; art?: string | null; size?: number; result?: "right" | "wrong" }) {
   return (
     <span className="avatar" title={name} style={{ width: size, height: size, background: `radial-gradient(circle at 30% 25%, #ffffff66 0, ${color} 60%)`, fontSize: size * 0.42 }}>

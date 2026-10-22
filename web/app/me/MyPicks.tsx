@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, type CSSProperties } from "react";
 import { teamColor } from "../../lib/teams";
-import { TeamLogo } from "../ui/bits";
+import { Axp, TeamLogo } from "../ui/bits";
 import { useFans } from "../ui/FanProvider";
 import LocalTime from "../ui/LocalTime";
 
@@ -50,7 +50,7 @@ export default function MyPicks({ matches, board }: { matches: Record<string, My
       <div className="me-head">
         <div className="me-name"><span className="ap-label">Signed in as</span><b>{me.displayName}</b></div>
         <div className="me-kpis">
-          <div className="ap-kpi big"><b className="num">{fmt(axp.start + axp.settled)}</b><span>AXP balance</span></div>
+          <div className="ap-kpi big"><b className="num bal"><Axp size={28} /> {fmt(axp.start + axp.settled)}</b><span>AXP balance</span></div>
           <div className="ap-kpi"><b className="num">{fmt(axp.available)}</b><span>Available</span></div>
           <div className="ap-kpi"><b className="num">{fmt(axp.open)}</b><span>In open positions</span></div>
           <div className="ap-kpi"><b className={`num ${axp.settled > 0 ? "right" : axp.settled < 0 ? "wrong" : ""}`}>{axp.settled > 0 ? "+" : ""}{fmt(axp.settled)}</b><span>Profit</span></div>

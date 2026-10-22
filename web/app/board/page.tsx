@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { persona } from "../../lib/personas";
 import { art, board, fanNames, nameOf } from "../../lib/site";
-import { Avatar, RoleIcon } from "../ui/bits";
+import { Avatar, Axp, RoleIcon } from "../ui/bits";
 import MeRow from "./MeRow";
 
 export const metadata = { title: "Leaderboard · KDAce" };
@@ -44,7 +44,7 @@ export default function BoardPage() {
                   <span className="pod-rank display">{i + 1}</span>
                   {w.p ? <Avatar name={w.name} color={w.p.color} art={w.img} size={i === 0 ? 76 : 60} /> : <span className="pod-fan">{w.name.slice(0, 2)}</span>}
                   <b className="pod-name">{w.name}</b>
-                  <span className="pod-bal num">{fmt(r.balance)} <small>AXP</small></span>
+                  <span className="pod-bal num"><Axp size={20} /> {fmt(r.balance)}</span>
                   <span className={`num ${r.net >= 0 ? "right" : "wrong"}`}>{r.net >= 0 ? "+" : ""}{fmt(r.net)}</span>
                 </div>
               );
@@ -64,7 +64,7 @@ export default function BoardPage() {
                   ) : (
                     <span className="who">{w.name}<span className="tag">Fan</span></span>
                   )}
-                  <b className="num">{fmt(r.balance)}</b>
+                  <b className="num bal"><Axp size={15} /> {fmt(r.balance)}</b>
                   <span className={`num ${r.net >= 0 ? "right" : "wrong"}`}>{r.net >= 0 ? "+" : ""}{fmt(r.net)}</span>
                   <span className="num muted">{wr === null ? "-" : `${wr}%`}</span>
                   <span className="num muted">{r.k}/{r.d}/{r.a}</span>

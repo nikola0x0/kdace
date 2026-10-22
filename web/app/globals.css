@@ -432,7 +432,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
   -webkit-mask-image: linear-gradient(#000 55%, transparent 100%); mask-image: linear-gradient(#000 55%, transparent 100%); }
 
 /* AXP pill */
-.axp-pill { display: inline-flex; align-items: baseline; gap: 5px; height: 32px; padding: 0 12px; border-radius: 8px; background: color-mix(in srgb, var(--win) 14%, #000); border: 1px solid color-mix(in srgb, var(--win) 40%, transparent); color: var(--win); font-size: 12px; font-weight: 700; line-height: 30px; }
+.axp-pill { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 8px; background: color-mix(in srgb, var(--win) 14%, #000); border: 1px solid color-mix(in srgb, var(--win) 40%, transparent); color: var(--win); font-size: 12px; font-weight: 700; line-height: 30px; }
 .axp-pill b { font-size: 14px; color: #fff; }
 
 /* Bet slip: side panel on desktop, bottom sheet on phones */
@@ -493,3 +493,8 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .ap-banner .banner-art { background-position: 50% 30%; }
 
 .slip-opt .held { color: var(--win); font-weight: 700; }
+
+.axp-icon { display: inline-block; vertical-align: middle; flex: none; }
+.bal { display: inline-flex; align-items: center; gap: 6px; }
+.pod-bal { display: inline-flex; align-items: center; gap: 6px; }
+.amount-box { gap: 10px; }

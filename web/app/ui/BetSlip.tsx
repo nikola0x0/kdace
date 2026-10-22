@@ -3,7 +3,7 @@
 // Side panel on desktop, bottom sheet on phones.
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { teamColor } from "../../lib/teams";
-import { TeamLogo } from "./bits";
+import { Axp, TeamLogo } from "./bits";
 import Countdown from "./Countdown";
 import { useFans, type Market } from "./FanProvider";
 
@@ -100,7 +100,7 @@ export default function BetSlip() {
           <span className="ap-label">Amount</span>
           <div className="amount-box">
             <input type="number" inputMode="numeric" min={10} max={max} step={10} value={stake || ""} onChange={(e) => setStake(Math.floor(Number(e.target.value) || 0))} />
-            <span>AXP</span>
+            <Axp size={26} />
           </div>
         </label>
         <div className="quick">
