@@ -3,6 +3,7 @@
 import { pathToFileURL } from "node:url";
 import { withLock } from "../core/lock.ts";
 import { ANALYSTS, buildReflectPrompt, type Role } from "../core/analysts.ts";
+import { chainOf, sameChain, type Chain } from "../core/chain.ts";
 import { computeBoard, marketPoints } from "../core/points.ts";
 import { seriesToSettle } from "../core/select.ts";
 import { Store, toSettled, type SeriesRecord } from "../core/store.ts";
@@ -17,6 +18,8 @@ export type SettleDeps = {
   startRemember(role: Role, text: string): Promise<string>;
   /** Wait for a queued write; returns the blob id. */
   awaitRemember(role: Role, jobId: string): Promise<string>;
+  /** Where postResult() writes; a result must land on the same network as its commit. */
+  chain: Chain;
   log(msg: string): void;
 };
 
@@ -73,6 +76,11 @@ export async function runSettle(deps: SettleDeps): Promise<{ settled: string[] }
       deps.log(`${s.matchId} marked completed but the result is not final yet; will retry`);
       continue;
     }
+    const r = deps.store.get(s.matchId)!;
+    if (!r.result && !sameChain(chainOf(r), deps.chain)) {
+      deps.log(`${s.matchId} was committed on ${chainOf(r).network}; its result must be posted there, skipping`);
+      continue;
+    }
     try {
       await settleOne(deps, s, result);
       settled.push(s.matchId);
@@ -88,7 +96,7 @@ export async function realSettleDeps(store = new Store()): Promise<SettleDeps> {
   const { fetchSeries } = await import("../core/worlds.ts");
   const { memory } = await import("../core/memory.ts");
   const { askAnalyst } = await import("../core/llm.ts");
-  const { postResult } = await import("../core/ledger.ts");
+  const { currentChain, postResult } = await import("../core/ledger.ts");
   return {
     fetchSeries,
     store,
@@ -99,6 +107,7 @@ export async function realSettleDeps(store = new Store()): Promise<SettleDeps> {
       return (await memory(ns).rememberAsync(text, ns)).job_id;
     },
     awaitRemember: async (role, jobId) => (await memory(`kdace-analyst-${role}`).waitForRememberJob(jobId, { timeoutMs: 90_000 })).blob_id,
+    chain: currentChain(),
     log: (msg) => console.log(`[settle] ${msg}`),
   };
 }

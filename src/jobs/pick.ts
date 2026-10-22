@@ -3,6 +3,7 @@ import { pathToFileURL } from "node:url";
 import { withLock } from "../core/lock.ts";
 import { ANALYSTS, buildPickPrompt, parsePick, type AnalystPick, type Lesson, type Role } from "../core/analysts.ts";
 import { batchHash, canonicalBatch, type BatchEntry } from "../core/batch.ts";
+import type { Chain } from "../core/chain.ts";
 import { isLocked, seriesToPick, seriesToResume } from "../core/select.ts";
 import { Store, type SeriesRecord } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
@@ -13,6 +14,8 @@ export type PickDeps = {
   recall(role: Role, query: string): Promise<Lesson[]>;
   ask(prompt: string): Promise<string>;
   commit(matchId: string, hash: string, count: number): Promise<string>;
+  /** Where commit() writes; stamped on each committed record. */
+  chain: Chain;
   history(): string[];
   now(): Date;
   log(msg: string): void;
@@ -49,7 +52,7 @@ async function analystPicks(deps: PickDeps, s: Series): Promise<AnalystPick[]> {
 async function commitRecord(deps: PickDeps, r: SeriesRecord, out: { committed: string[] }) {
   const count = (JSON.parse(r.batch!) as { entries: unknown[] }).entries.length;
   const commitDigest = await deps.commit(r.series.matchId, r.batchHash!, count);
-  deps.store.put({ ...r, status: "committed", commitDigest });
+  deps.store.put({ ...r, status: "committed", commitDigest, chain: deps.chain });
   deps.log(`${r.series.matchId} ${r.series.teamA} vs ${r.series.teamB}: committed ${count} picks (${commitDigest})`);
   out.committed.push(r.series.matchId);
 }
@@ -114,7 +117,7 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
   const { fetchSeries } = await import("../core/worlds.ts");
   const { memory } = await import("../core/memory.ts");
   const { askAnalyst } = await import("../core/llm.ts");
-  const { commitBatch } = await import("../core/ledger.ts");
+  const { commitBatch, currentChain } = await import("../core/ledger.ts");
   return {
     fetchSeries,
     store,
@@ -126,6 +129,7 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
     },
     ask: async (prompt) => askAnalyst(prompt),
     commit: commitBatch,
+    chain: currentChain(),
     history: () => historyLines(store),
     now: () => new Date(),
     log: (msg) => console.log(`[pick] ${msg}`),

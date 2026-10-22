@@ -1,13 +1,14 @@
 // Simple read-only KDAce board: upcoming picks, the leaderboard, and settled series with proof links.
 // Deliberately plain; the real UI comes later.
 import { ANALYSTS } from "../../src/core/analysts.ts";
+import { chainOf } from "../../src/core/chain.ts";
 import { aiConsensus } from "../../src/core/consensus.ts";
 import type { SeriesRecord } from "../../src/core/store.ts";
 import { store } from "../lib/data";
 
 // Rendered at build time: every data commit from the tick triggers a fresh deploy.
 
-const network = process.env.SUI_NETWORK ?? "mainnet";
+const tx = (r: SeriesRecord, digest: string | null | undefined) => `https://suiscan.xyz/${chainOf(r).network}/tx/${digest}`;
 const name = (player: string) => ANALYSTS.find((a) => a.player === player)?.name ?? player;
 const when = (iso: string) => new Date(iso).toUTCString().replace(":00 GMT", " UTC");
 
@@ -55,7 +56,7 @@ export default function Home() {
         <div className="card" key={r.series.matchId}>
           <b>{r.series.teamA} vs {r.series.teamB}</b> <span className="muted">· {r.series.block} · Bo{r.series.bestOf} · {when(r.series.startTime)}</span>
           <Picks r={r} />
-          <div className="muted">Committed before the game: <a href={`https://suiscan.xyz/${network}/tx/${r.commitDigest}`}>{r.commitDigest?.slice(0, 10)}…</a></div>
+          <div className="muted">Committed before the game: <a href={tx(r, r.commitDigest)}>{r.commitDigest?.slice(0, 10)}…</a></div>
         </div>
       ))}
 
@@ -85,7 +86,7 @@ export default function Home() {
             ))}
           </ul>
           <div className="muted">
-            <a href={`https://suiscan.xyz/${network}/tx/${r.commitDigest}`}>commit</a> · <a href={`https://suiscan.xyz/${network}/tx/${r.result!.resultDigest}`}>result</a>
+            <a href={tx(r, r.commitDigest)}>commit</a> · <a href={tx(r, r.result!.resultDigest)}>result</a> <span className="muted">({chainOf(r).network})</span>
           </div>
         </div>
       ))}

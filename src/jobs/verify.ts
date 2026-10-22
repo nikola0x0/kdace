@@ -1,17 +1,20 @@
 // Verify job: re-checks every committed and settled series against Sui (read through Tatum) and recomputes the board.
+import { chainOf } from "../core/chain.ts";
 import { boardMatches, checkRecord } from "../core/checks.ts";
 import { readLedgerEvent } from "../core/ledger.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
 
-const network = process.env.SUI_NETWORK ?? "mainnet";
 const store = new Store();
 let failures = 0;
 const officialById = new Map((await fetchSeries()).map((s) => [s.matchId, s]));
 
 for (const r of store.all().filter((x) => x.status !== "missed").sort((a, b) => a.series.startTime.localeCompare(b.series.startTime))) {
-  const commit = r.commitDigest ? await readLedgerEvent(r.commitDigest) : null;
-  const result = r.result ? await readLedgerEvent(r.result.resultDigest) : null;
+  // Each record is read on the network and package it was committed on (testnet before the mainnet switch).
+  const chain = chainOf(r);
+  const network = chain.network;
+  const commit = r.commitDigest ? await readLedgerEvent(r.commitDigest, chain) : null;
+  const result = r.result ? await readLedgerEvent(r.result.resultDigest, chain) : null;
   const checks = checkRecord(r, commit, result, officialById.get(r.series.matchId));
   const { resultMatchesOfficial, ...beforeResult } = checks;
   const relevant = r.status === "settled" ? checks : beforeResult;

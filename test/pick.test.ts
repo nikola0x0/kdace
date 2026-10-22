@@ -21,6 +21,7 @@ function fakes(overrides: Partial<PickDeps> = {}) {
     recall: async () => [],
     ask: async () => good,
     commit: async (matchId) => (commits.push(matchId), "digest-1"),
+    chain: { network: "mainnet", packageId: "0xpkg" },
     history: () => [],
     now: () => before,
     log: () => {},
@@ -89,5 +90,11 @@ describe("runPick", () => {
     await runPick(deps);
     await runPick(deps);
     expect(commits).toEqual(["x"]);
+  });
+
+  it("stamps the committed record with the network and package it was committed on", async () => {
+    const { deps } = fakes();
+    await runPick(deps);
+    expect(deps.store.get("x")!.chain).toEqual({ network: "mainnet", packageId: "0xpkg" });
   });
 });

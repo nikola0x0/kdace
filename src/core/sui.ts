@@ -5,6 +5,7 @@ import { SuiGrpcClient } from "@mysten/sui/grpc";
 import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
 import { GrpcTransport } from "@protobuf-ts/grpc-transport";
 import { UnaryCall, type RpcTransport } from "@protobuf-ts/runtime-rpc";
+import { tatumGrpcHost, type Network } from "./chain.ts";
 import { env } from "./env.ts";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -45,17 +46,16 @@ function throttled(inner: GrpcTransport, minGapMs = 400): RpcTransport {
   };
 }
 
-/** Tatum's testnet gateway only speaks native gRPC (its JSON-RPC host is mainnet-only). */
-export function tatumClient() {
+/** Tatum's testnet gateway only speaks native gRPC (its JSON-RPC host is mainnet-only). Defaults to the live network. */
+export function tatumClient(network = env("SUI_NETWORK") as Network) {
   const transport = new GrpcTransport({
-    host: env("TATUM_SUI_GRPC"),
+    host: network === process.env.SUI_NETWORK ? (process.env.TATUM_SUI_GRPC ?? tatumGrpcHost(network)) : tatumGrpcHost(network),
     channelCredentials: ChannelCredentials.createSsl(),
     meta: { "x-api-key": env("TATUM_API_KEY") },
   });
-  return new SuiGrpcClient({ network: env("SUI_NETWORK") as "mainnet" | "testnet", transport: throttled(transport) });
+  return new SuiGrpcClient({ network, transport: throttled(transport) });
 }
 
-/** The Referee signer: the Sui CLI's active address (it holds the ResolverCap). */
 /** The Referee signs commits and results; its key is a `suiprivkey1…` string in SUI_REFEREE_KEY. */
 export function refereeKeypair() {
   const { scheme, secretKey } = decodeSuiPrivateKey(env("SUI_REFEREE_KEY"));

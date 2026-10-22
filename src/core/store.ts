@@ -2,6 +2,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { AnalystPick } from "./analysts.ts";
+import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
 import type { BoardRow, SettledSeries } from "./points.ts";
 import type { Series } from "./worlds.ts";
@@ -17,6 +18,8 @@ export type SeriesRecord = {
   points: Record<string, number> | null;
   debate: string | null;
   lessons: { player: string; text: string; blobId: string; jobId?: string }[];
+  /** Set at commit; missing on records from before the switch to mainnet (see chainOf). */
+  chain?: Chain;
 };
 
 /** A settled record in the shape the points module scores. */

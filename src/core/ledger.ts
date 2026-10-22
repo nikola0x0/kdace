@@ -1,5 +1,6 @@
 // KDAce ledger calls on Sui through Tatum: commit a batch fingerprint, post a result, read either back by digest.
 import { Transaction } from "@mysten/sui/transactions";
+import type { Chain, Network } from "./chain.ts";
 import { env } from "./env.ts";
 import { refereeKeypair, tatumClient } from "./sui.ts";
 
@@ -28,10 +29,13 @@ export const commitBatch = (matchId: string, batchHashHex: string, pickCount: nu
 export const postResult = (matchId: string, winner: string, score: string) =>
   callLedger("post_result", (tx) => [tx.object(env("KDACE_RESOLVER_CAP")), tx.pure.string(matchId), tx.pure.string(winner), tx.pure.string(score), tx.object.clock()]);
 
-export async function readLedgerEvent(digest: string): Promise<LedgerEvent | null> {
-  const tx = await tatumClient().getTransaction({ digest, include: { events: true } });
+/** The network and package new commits and results go to. */
+export const currentChain = (): Chain => ({ network: env("SUI_NETWORK") as Network, packageId: env("KDACE_PACKAGE_ID") });
+
+export async function readLedgerEvent(digest: string, chain = currentChain()): Promise<LedgerEvent | null> {
+  const tx = await tatumClient(chain.network).getTransaction({ digest, include: { events: true } });
   if (tx.$kind !== "Transaction") return null;
-  const prefix = `${env("KDACE_PACKAGE_ID")}::ledger::`;
+  const prefix = `${chain.packageId}::ledger::`;
   const event = (tx.Transaction.events ?? []).find((e) => e.eventType.startsWith(prefix));
   if (!event) return null;
   return { type: event.eventType.slice(prefix.length) as LedgerEvent["type"], json: event.json ?? {} };

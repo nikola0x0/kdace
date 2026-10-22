@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { ANALYSTS } from "../src/core/analysts.ts";
 import { canonicalBatch } from "../src/core/batch.ts";
+import { LEGACY_CHAIN } from "../src/core/chain.ts";
 import { Store, type SeriesRecord } from "../src/core/store.ts";
 import type { Series } from "../src/core/worlds.ts";
 import { runSettle, type SettleDeps } from "../src/jobs/settle.ts";
@@ -28,6 +29,7 @@ function fakes(overrides: Partial<SettleDeps> = {}) {
     ask: async (p) => (p.includes("debate") && p.includes("Write the debate") ? "Top: ...\nJungle: ...\nMid: ...\nADC: ...\nSupport: ..." : "ADC lesson: something."),
     startRemember: async (role, text) => (remembered.push(`${role}:${text}`), `job-${remembered.length}`),
     awaitRemember: async (_role, jobId) => jobId.replace("job", "blob"),
+    chain: LEGACY_CHAIN,
     log: () => {},
     ...overrides,
   };
@@ -81,5 +83,12 @@ describe("runSettle", () => {
     const { deps, posted } = fakes({ fetchSeries: async () => [series] });
     await runSettle(deps);
     expect(posted).toEqual([]);
+  });
+
+  it("leaves a series committed on another network for that network to settle", async () => {
+    const { deps, posted, store } = fakes({ chain: { network: "mainnet", packageId: "0xnew" } });
+    await runSettle(deps);
+    expect(posted).toEqual([]);
+    expect(store.get("x")!.status).toBe("committed");
   });
 });
