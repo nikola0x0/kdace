@@ -5,11 +5,11 @@ import dynamic from "next/dynamic";
 
 const DitherVeil = dynamic(() => import("./DitherVeil"), { ssr: false });
 
-export default function HeroVeil({ src }: { src: string }) {
+export default function HeroVeil({ src, fit = "cover", radius = 170 }: { src: string; fit?: "cover" | "contain"; radius?: number }) {
   return (
     <DitherVeil
       src={src}
-      fit="cover"
+      fit={fit}
       pattern="bayer"
       palette="rgb"
       levels={4}
@@ -17,7 +17,7 @@ export default function HeroVeil({ src }: { src: string }) {
       inkColor="#000000"
       paperColor="#ffffff"
       contrast={1.2}
-      revealRadius={170}
+      revealRadius={radius}
       softness={0.7}
       linger={1.4}
       clickBurst

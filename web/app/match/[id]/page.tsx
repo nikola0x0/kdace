@@ -5,6 +5,8 @@ import { persona } from "../../../lib/personas";
 import { art, callsOf, cardFor, lessonText, records, schedule, suiscan, walruscan } from "../../../lib/site";
 import { Avatar, RoleIcon, TeamLogo } from "../../ui/bits";
 import DitherArt from "../../ui/DitherArt";
+import HeroVeil from "../../ui/HeroVeil";
+import CountUp from "../../ui/rb/CountUp";
 import LocalTime from "../../ui/LocalTime";
 import MatchCard from "../../ui/MatchCard";
 
@@ -25,7 +27,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   return (
     <main>
       <section className="hero">
-        <DitherArt src={art("banner")} className="match-art" band={0.5} focusY={0.05} />
+        <div className="match-veil">{art("hero-trophy") ? <HeroVeil src={art("hero-trophy")!} fit="contain" radius={200} /> : <DitherArt className="match-art" />}</div>
       </section>
       <div className="wrap">
         <div className="match-head">
@@ -64,7 +66,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                       <div className="recall muted">No past lessons used for this pick yet.</div>
                     )}
                   </div>
-                  <div className={`ap-call ${right === null ? "" : right ? "right" : "wrong"}`}>{a.winner}{a.score ? ` ${a.score}` : ""}<small className="num">{a.prob}% sure</small></div>
+                  <div className={`ap-call ${right === null ? "" : right ? "right" : "wrong"}`}>{a.winner}{a.score ? ` ${a.score}` : ""}<small className="num"><CountUp to={a.prob} duration={1.2} />% sure</small></div>
                 </div>
               );
             })}

@@ -9,7 +9,7 @@ export default function UserButton() {
   if (!me) return <button className="btn sm" onClick={signIn}>Sign in</button>;
   return (
     <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
-      <Link href="/me" className="btn ghost sm">{me.displayName}</Link>
+      <Link href="/me" className="btn ghost sm">My matches · {me.displayName}</Link>
       <button className="btn ghost sm" onClick={signOut}>Sign out</button>
     </span>
   );

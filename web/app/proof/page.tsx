@@ -1,61 +1,87 @@
-// Proof: how every claim on KDAce can be re-checked, plus every commit, result and memory link.
+// Proof: the verification chain at a glance, the numbers, and every on-chain link.
 import Link from "next/link";
 import { persona } from "../../lib/personas";
 import { lessonText, records, suiscan, walruscan } from "../../lib/site";
 
 export const metadata = { title: "Proof · KDAce" };
 
+const STEPS = [
+  { k: "01", t: "Pick", d: "Analysts and fans choose" },
+  { k: "02", t: "Fingerprint", d: "All picks hashed together" },
+  { k: "03", t: "Locked on Sui", d: "Before the game starts" },
+  { k: "04", t: "Result on Sui", d: "Official score posted" },
+  { k: "05", t: "Lesson on Walrus", d: "Each analyst learns" },
+];
+
 export default function ProofPage() {
   const all = records().filter((r) => r.commitDigest).reverse();
   const lessons = all.flatMap((r) => r.lessons.filter((l) => l.blobId).map((l) => ({ ...l, r })));
+  const results = all.filter((r) => r.result).length;
   return (
     <main className="wrap">
-      <div className="section prose">
+      <div className="section">
         <div className="eyebrow">Don&apos;t trust, check</div>
-        <h1 className="page-title">How KDAce proves every pick</h1>
-        <p>Anyone can say they called it. KDAce makes the analysts (and you) prove it. Three things are public and checkable:</p>
-        <div className="steps">
-          <div className="step"><b>1 · Picks are locked before the game</b>Every pick for a match is bundled and fingerprinted, and the fingerprint is written to the Sui blockchain before the game starts. Change one pick later and the fingerprint no longer matches.</div>
-          <div className="step"><b>2 · Results are posted on Sui</b>The official result from the lolesports schedule is posted on Sui too, and the points are recomputed from the published picks.</div>
-          <div className="step"><b>3 · Memories are real and on time</b>Each analyst&apos;s lessons are stored in Walrus Memory. Every lesson an analyst used for a pick was saved <i>before</i> that pick, and each analyst only reads its own memory.</div>
+        <h1 className="page-title">Every pick is provable</h1>
+        <p className="muted" style={{ maxWidth: 560 }}>Nothing can be changed after the game starts. Anyone can re-check it.</p>
+      </div>
+
+      <div className="flow">
+        {STEPS.map((s) => (
+          <div className="flow-step" key={s.k}>
+            <span className="flow-k num">{s.k}</span>
+            <b>{s.t}</b>
+            <span className="muted">{s.d}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="proof-stats">
+        <div className="ap-kpi"><b className="num">{all.length}</b><span>Pick batches on Sui</span></div>
+        <div className="ap-kpi"><b className="num">{results}</b><span>Results on Sui</span></div>
+        <div className="ap-kpi"><b className="num">{lessons.length}</b><span>Lessons on Walrus</span></div>
+        <div className="verify-box">
+          <span className="ap-label">Verify it yourself</span>
+          <code>npm run verify</code>
+          <span className="muted">Re-reads every transaction through Tatum.</span>
         </div>
-        <h2>Check it yourself</h2>
-        <p>The code is open. Run <code>npm run verify</code>: it reads every transaction back from Sui through Tatum and checks each fingerprint, each timestamp, each result, each memory and the whole board. All picks, fingerprints and lessons are published in the repository&apos;s <code>data/</code> folder.</p>
-        <p>Honest limits: one KDAce key posts results (anyone can compare them with the official schedule), and fan picks rely on our database&apos;s clock for the minute between lock and the on-chain commit. Each fan&apos;s pick receipt lets them check they&apos;re in the batch.</p>
       </div>
 
       <section className="section">
-        <div className="section-head"><h2>Every series</h2><span className="muted">{all.length} locked on Sui</span></div>
-        <div className="panel">
-          <table className="table">
-            <thead><tr><th>Match</th><th>Picks locked</th><th>Fans</th><th>Result</th><th>Memories</th></tr></thead>
-            <tbody>
-              {all.map((r) => (
-                <tr key={r.series.matchId}>
-                  <td><Link href={`/match/${r.series.matchId}`}><b>{r.series.teamA} vs {r.series.teamB}</b> <span className="muted">· {r.series.block}</span></Link></td>
-                  <td><a className="walrus" href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">{r.commitDigest!.slice(0, 8)}… ↗</a></td>
-                  <td>{r.fans?.commitDigest ? <a className="walrus" href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">{r.fans.commitDigest.slice(0, 8)}… ↗</a> : <span className="muted">-</span>}</td>
-                  <td>{r.result ? <a className="walrus" href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">{r.result.winner} {r.result.score} ↗</a> : <span className="muted">pending</span>}</td>
-                  <td className="num">{r.lessons.filter((l) => l.blobId).length || <span className="muted">-</span>}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="section-head"><h2>Walrus Memory</h2><span className="muted">{lessons.length} lessons saved</span></div>
-        {lessons.length === 0 && <p className="muted">Lessons appear after the first settled series.</p>}
-        <div className="timeline">
-          {lessons.map((l) => (
-            <div className="memory" key={l.blobId}>
-              <div className="memory-meta"><span>{persona(l.player)?.name} · {l.r.series.teamA} vs {l.r.series.teamB}</span><a className="walrus" href={walruscan(l.blobId)} target="_blank" rel="noreferrer">{l.blobId.slice(0, 10)}… ↗</a></div>
-              <div className="lesson">{lessonText(l.text)}</div>
+        <div className="section-head"><h2>Every series</h2></div>
+        <div className="lpanel">
+          {all.map((r) => (
+            <div className="prow" key={r.series.matchId}>
+              <Link href={`/match/${r.series.matchId}`} className="prow-match"><b>{r.series.teamA}</b> <span className="muted">vs</span> <b>{r.series.teamB}</b> <span className="muted">· {r.series.block}</span></Link>
+              <a className="chip-link ok" href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">Picks locked ↗</a>
+              {r.fans?.commitDigest ? <a className="chip-link ok" href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">Fans locked ↗</a> : <span className="chip-link off">No fan picks</span>}
+              {r.result ? <a className="chip-link ok" href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">{r.result.winner} {r.result.score} ↗</a> : <span className="chip-link off">Result pending</span>}
+              <span className={`chip-link ${r.lessons.some((l) => l.blobId) ? "ok" : "off"}`}>{r.lessons.filter((l) => l.blobId).length} lessons</span>
             </div>
           ))}
         </div>
       </section>
+
+      {lessons.length > 0 && (
+        <section className="section">
+          <div className="section-head"><h2>Walrus Memory</h2></div>
+          <div className="timeline">
+            {lessons.map((l) => (
+              <div className="memory" key={l.blobId}>
+                <div className="memory-meta"><span>{persona(l.player)?.name} · {l.r.series.teamA} vs {l.r.series.teamB}</span><a className="walrus" href={walruscan(l.blobId)} target="_blank" rel="noreferrer">Walrus ↗</a></div>
+                <div className="lesson">{lessonText(l.text)}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <details className="limits">
+        <summary>Honest limits</summary>
+        <ul>
+          <li>One KDAce key posts results. Compare them with the official lolesports schedule.</li>
+          <li>For the minute between lock and the fans&apos; on-chain commit, our database&apos;s clock is trusted. Your pick receipt shows you&apos;re in the batch.</li>
+        </ul>
+      </details>
     </main>
   );
 }
