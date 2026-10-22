@@ -5,6 +5,7 @@ import type { CardData } from "../../lib/site";
 import { Avatar, TeamLogo } from "./bits";
 import Countdown from "./Countdown";
 import LocalTime from "./LocalTime";
+import SpotlightCard from "./rb/SpotlightCard";
 import { useFans } from "./FanProvider";
 
 const SCORES: Record<number, string[]> = { 1: [], 3: ["2-0", "2-1"], 5: ["3-0", "3-1", "3-2"] };
@@ -36,7 +37,7 @@ export default function MatchCard({ c }: { c: CardData }) {
   const mine = live?.mine ?? {};
 
   return (
-    <article className="card">
+    <SpotlightCard className="card" spotlightColor="rgba(255,255,255,0.10)" intensity={0.12} spotlightSize={260} style={{ padding: 0, borderRadius: 14, background: "var(--panel)" }}>
       <div className="card-top">
         <div className="glow a" /><div className="glow b" />
         <TeamLogo code={s.teamA} logo={c.logoA} />
@@ -87,7 +88,7 @@ export default function MatchCard({ c }: { c: CardData }) {
           <Link className="card-foot" href={`/match/${s.matchId}`}>Details →</Link>
         </div>
       </div>
-    </article>
+    </SpotlightCard>
   );
 }
 

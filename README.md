@@ -53,3 +53,8 @@ Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick ever
 - **Verify limit:** Tatum's gRPC gateway blocks event listing, so `npm run verify` reads each logged transaction by digest. It can't detect a second, unlogged commit for the same match; a Sui GraphQL event query would close that gap.
 - **Locking:** analysts must commit at least 5 minutes before the scheduled start, or the series is recorded as missed.
 - **`poc/` is the proof of concept from Oct 21.** It replayed the six finished Play-In series. Those picks were made after the games, and are labelled as a replay.
+
+## Credits
+
+- UI effects (DitherVeil, LogoLoop, CountUp, SpotlightCard, DecryptedText) from [React Bits](https://reactbits.dev), in `web/app/ui/rb/` and `web/app/ui/DitherVeil.tsx`.
+- LoL role icons from [Community Dragon](https://communitydragon.org). Team logos from the lolesports schedule. KDAce isn't endorsed by Riot Games.

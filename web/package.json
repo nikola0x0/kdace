@@ -15,7 +15,9 @@
     "@protobuf-ts/runtime-rpc": "2.11.1",
     "dotenv": "18.0.8",
     "jose": "6.2.13",
+    "motion": "12.23.12",
     "next": "15.5.28",
+    "ogl": "1.0.11",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

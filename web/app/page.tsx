@@ -1,15 +1,21 @@
 // Home: today's and upcoming matches first, then recent results and the top of the board.
 import Link from "next/link";
 import { PERSONAS, persona } from "../lib/personas";
-import { art, board, counters, fanNames, nameOf, settledCards, upcomingCards } from "../lib/site";
+import { art, board, counters, fanNames, nameOf, settledCards, teamLogos, upcomingCards } from "../lib/site";
 import { Avatar } from "./ui/bits";
 import DitherArt from "./ui/DitherArt";
+import HeroVeil from "./ui/HeroVeil";
+import TeamStrip from "./ui/TeamStrip";
+import CountUp from "./ui/rb/CountUp";
+import DecryptedText from "./ui/rb/DecryptedText";
 import LocalTime from "./ui/LocalTime";
 import MatchCard from "./ui/MatchCard";
 
 export default async function Home() {
   const [upcoming, settled] = await Promise.all([upcomingCards(), settledCards()]);
   const stats = counters();
+  const logos = await teamLogos();
+  const banner = art("banner");
   const rows = board().slice(0, 5);
   const names = fanNames();
   // The next slate: everything starting within 20 hours of the first upcoming series (one match day in any timezone).
@@ -20,21 +26,25 @@ export default async function Home() {
 
   return (
     <main>
-      <section className="hero">
-        <DitherArt src={art("banner")} className="hero-art" band={0.24} focusY={0} zoom={1.15} shift={0.3} />
-        <div className="hero-copy">
-          <div className="wrap">
+      <section className="hero hero-split">
+        <div className="wrap hero-grid">
+          <div className="hero-text">
             <div className="eyebrow">Worlds 2026 · Free to play</div>
-            <h1>Who reads Worlds best?</h1>
+            <h1><DecryptedText text="Who reads Worlds best?" animateOn="view" sequential revealDirection="start" speed={45} characters="KDACE01#$%&@!?" /></h1>
             <p>Call every match against five AI analysts. Their picks are locked on Sui before the game, and after every series they learn from it in Walrus Memory.</p>
             <div className="stats">
-              <span className="stat"><b className="num">{stats.memories}</b> memories saved to Walrus</span>
-              <span className="stat"><b className="num">{stats.committed}</b> series locked on Sui</span>
-              <span className="stat"><b className="num">{stats.settled}</b> settled</span>
+              <span className="stat"><b className="num"><CountUp to={stats.memories} duration={1.6} /></b> memories saved to Walrus</span>
+              <span className="stat"><b className="num"><CountUp to={stats.committed} duration={1.6} /></b> series locked on Sui</span>
+              <span className="stat"><b className="num"><CountUp to={stats.settled} duration={1.6} /></b> settled</span>
             </div>
+          </div>
+          <div className="hero-visual">
+            {banner ? <HeroVeil src={banner} /> : <DitherArt palette="hero" />}
           </div>
         </div>
       </section>
+
+      <TeamStrip logos={Object.entries(logos).map(([code, src]) => ({ code, src }))} />
 
       <div className="wrap">
         <section className="section">
