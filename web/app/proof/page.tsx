@@ -75,13 +75,6 @@ export default function ProofPage() {
         </section>
       )}
 
-      <details className="limits">
-        <summary>Honest limits</summary>
-        <ul>
-          <li>One KDAce key posts results. Compare them with the official lolesports schedule.</li>
-          <li>For the minute between lock and the fans&apos; on-chain commit, our database&apos;s clock is trusted. Your pick receipt shows you&apos;re in the batch.</li>
-        </ul>
-      </details>
     </main>
   );
 }
