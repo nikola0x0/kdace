@@ -35,6 +35,8 @@ export type FanCommitRow = {
 
 export interface FanDb {
   getFan(address: string): Promise<FanRow | null>;
+  /** Every fan with their cached SuiNS name and settled AXP, for the leaderboard. */
+  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number }[]>;
   /** Creates the fan row if it doesn't exist yet. With `auth`, also records how they signed in (a salt, once set, is kept). */
   ensureFan(address: string, auth?: FanAuth): Promise<void>;
   setSuins(address: string, name: string | null, checkedAt: string): Promise<void>;
@@ -85,6 +87,10 @@ export class SupabaseFanDb implements FanDb {
     return { status: res.status, json };
   }
 
+  async listFans() {
+    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled");
+    return (json as { address: string; suins_name: string | null; axp_settled: number }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0 }));
+  }
   async getFan(address: string) {
     const { json } = await this.req("GET", `fans?select=*&address=${eq(address)}`);
     return json?.[0] ? fromRow<FanRow>(json[0]) : null;

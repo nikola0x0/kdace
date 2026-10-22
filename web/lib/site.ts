@@ -103,13 +103,13 @@ export const suiscan = (r: SeriesRecord, digest: string | null | undefined) => `
 export const walruscan = (blobId: string) => `https://walruscan.com/mainnet/blob/${blobId}`;
 export const lessonText = (text: string) => text.split(" (from ")[0];
 
-export type AnalystStats = { calls: number; settled: number; correct: number; accuracy: number | null; balance: number; k: number; d: number; a: number; memories: number; recalled: number; form: ("W" | "L")[] };
+export type AnalystStats = { calls: number; settled: number; correct: number; accuracy: number | null; balance: number; net: number; roi: number | null; staked: number; inPlay: number; best: number; memories: number; recalled: number; form: ("W" | "L")[] };
 
 /** One analyst's record: winner-call accuracy over settled series, board numbers, memories saved and recalled, last five results. */
 export function analystStats(player: string): AnalystStats {
   const all = records();
   const row = board().find((r) => r.player === player);
-  let calls = 0, settled = 0, correct = 0, memories = 0, recalled = 0;
+  let calls = 0, settled = 0, correct = 0, memories = 0, recalled = 0, staked = 0, inPlay = 0, best = 0;
   const form: ("W" | "L")[] = [];
   for (const r of all) {
     const pick = r.picks.find((p) => p.player === player);
@@ -117,6 +117,11 @@ export function analystStats(player: string): AnalystStats {
     if (!pick) continue;
     calls++;
     recalled += pick.usedLessons?.length ?? 0;
+    const stake = ((pick as { stake?: number }).stake ?? 0) + ((pick as { scoreStake?: number }).scoreStake ?? 0);
+    if (r.axp) {
+      staked += stake;
+      best = Math.max(best, r.axp[player] ?? 0);
+    } else if (r.status === "committed" || r.status === "committing") inPlay += stake;
     if (r.result) {
       settled++;
       const win = pick.winner === r.result.winner;
@@ -124,5 +129,6 @@ export function analystStats(player: string): AnalystStats {
       form.push(win ? "W" : "L");
     }
   }
-  return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, balance: row?.balance ?? AXP_START, k: row?.k ?? 0, d: row?.d ?? 0, a: row?.a ?? 0, memories, recalled, form: form.slice(-5) };
+  const net = row?.net ?? 0;
+  return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, balance: row?.balance ?? AXP_START, net, roi: staked ? Math.round((net / staked) * 100) : null, staked, inPlay, best, memories, recalled, form: form.slice(-5) };
 }

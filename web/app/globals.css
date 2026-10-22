@@ -498,3 +498,6 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .bal { display: inline-flex; align-items: center; gap: 6px; }
 .pod-bal { display: inline-flex; align-items: center; gap: 6px; }
 .amount-box { gap: 10px; }
+.lb-row.me { background: color-mix(in srgb, var(--win) 7%, transparent); }
+.tag.you { color: var(--win); border-color: color-mix(in srgb, var(--win) 40%, transparent); }
+.pod-fan { border-radius: 50%; display: grid; place-items: center; background: var(--panel-2); font-weight: 800; font-size: 13px; color: var(--fg-2); flex: none; }

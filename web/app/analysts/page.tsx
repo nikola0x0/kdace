@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { PERSONAS } from "../../lib/personas";
 import { analystStats, art } from "../../lib/site";
-import { RoleIcon } from "../ui/bits";
+import { Axp, RoleIcon } from "../ui/bits";
 
 export const metadata = { title: "Analysts · KDAce" };
 
@@ -25,10 +25,10 @@ export default function AnalystsPage() {
             <div className="banner-info">
               <div className="banner-title">{p.title}</div>
               <div className="banner-name display">{p.name}</div>
-              <div className="banner-acc"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>accuracy{s.settled ? ` · ${s.correct}/${s.settled}` : ""}</span></div>
+              <div className="banner-acc"><b className="num bal"><Axp size={24} /> {s.balance.toLocaleString("en-US")}</b><span className={s.net > 0 ? "right" : s.net < 0 ? "wrong" : ""}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</span></div>
               <div className="banner-stats">
-                <span><b className="num">{s.balance.toLocaleString("en-US")}</b>AXP</span>
-                <span><b className="num">{s.k}/{s.d}/{s.a}</b>KDA</span>
+                <span><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b>win rate</span>
+                <span><b className="num">{s.settled ? `${s.correct}–${s.settled - s.correct}` : "0–0"}</b>record</span>
                 <span><b className="num">{s.memories}</b>memories</span>
               </div>
               <div className="banner-form">

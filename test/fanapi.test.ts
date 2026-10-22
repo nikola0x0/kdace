@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
 import { jwtToAddress } from "@mysten/sui/zklogin";
-import { getMe, googleSignIn, issueNonce, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { getMe, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
 import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
@@ -256,3 +256,20 @@ describe("getMe", () => {
     expect((await getMe(deps, null)).status).toBe(401);
   });
 });
+
+describe("leaderboardFans", () => {
+  it("lists every signed-in fan at 10,000 AXP plus settled results, with AXP in open positions", async () => {
+    const { deps, db } = fakes();
+    await signedIn(deps, A);
+    await signedIn(deps, B);
+    await db.setAxpSettled({ [B]: 420 });
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 300 });
+    const r = await leaderboardFans(deps);
+    expect(r.status).toBe(200);
+    expect((r.body as { fans: unknown[] }).fans).toEqual(expect.arrayContaining([
+      { address: A, displayName: "nikola.sui", balance: 10000, net: 0, inPlay: 300 },
+      expect.objectContaining({ address: B, balance: 10420, net: 420, inPlay: 0 }),
+    ]));
+  });
+});
+

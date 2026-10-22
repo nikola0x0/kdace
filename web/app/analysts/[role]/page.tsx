@@ -5,7 +5,7 @@ import type { CSSProperties } from "react";
 import { ANALYSTS } from "../../../../src/core/analysts.ts";
 import { PERSONAS, persona } from "../../../lib/personas";
 import { analystStats, art, lessonText, records, walruscan } from "../../../lib/site";
-import { RoleIcon } from "../../ui/bits";
+import { Axp, RoleIcon } from "../../ui/bits";
 
 export const generateStaticParams = () => PERSONAS.map((p) => ({ role: p.role }));
 
@@ -38,11 +38,11 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
           <p className="ap-lead">{p.personality}</p>
 
           <div className="ap-kpis">
-            <div className="ap-kpi big"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Accuracy{s.settled ? ` · ${s.correct}/${s.settled}` : ""}</span></div>
-            <div className="ap-kpi"><b className="num">{s.balance.toLocaleString("en-US")}</b><span>AXP</span></div>
-            <div className="ap-kpi"><b className="num">{s.k}/{s.d}/{s.a}</b><span>K / D / A</span></div>
-            <div className="ap-kpi"><b className="num">{s.memories}</b><span>Memories</span></div>
-            <div className="ap-kpi"><b className="num">{s.recalled}</b><span>Recalled</span></div>
+            <div className="ap-kpi big"><b className="num bal"><Axp size={28} /> {s.balance.toLocaleString("en-US")}</b><span>AXP balance</span></div>
+            <div className="ap-kpi"><b className={`num ${s.net > 0 ? "right" : s.net < 0 ? "wrong" : ""}`}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</b><span>Profit{s.roi === null ? "" : ` · ROI ${s.roi > 0 ? "+" : ""}${s.roi}%`}</span></div>
+            <div className="ap-kpi"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Win rate{s.settled ? ` · ${s.correct}–${s.settled - s.correct}` : ""}</span></div>
+            <div className="ap-kpi"><b className="num">{s.inPlay.toLocaleString("en-US")}</b><span>In play</span></div>
+            <div className="ap-kpi"><b className="num">{s.memories}</b><span>Memories · {s.recalled} recalled</span></div>
           </div>
 
           <div className="ap-facts">
