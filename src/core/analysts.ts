@@ -1,4 +1,5 @@
 // The five role analysts: fixed beliefs, pick prompts, pick validation and reflection prompts.
+import type { BatchEntry } from "./batch.ts";
 import { extractJson } from "./json.ts";
 import type { Series } from "./worlds.ts";
 
@@ -16,7 +17,36 @@ export type AnalystPick = {
   reasoning: string;
   usedLessons: Lesson[];
   pickedAt: string;
+  /** AXP staked on the winner (0 when the analyst had under 10 AXP available and sat this one out). */
+  stake: number;
+  /** AXP staked on the exact score; only on Bo3/Bo5, and only when there was room for it. */
+  scoreStake?: number;
 };
+
+/** The smallest stake anyone can place. */
+export const MIN_STAKE = 10;
+
+const roundTo10 = (x: number) => Math.round(x / 10) * 10;
+
+/**
+ * An analyst's stakes, deterministic from confidence p (50-100) and available AXP so anyone can recompute them:
+ * winner = clamp(roundTo10(available × (p − 50) / 100), 100, available); score (Bo3/Bo5) = roundTo10(winner × 0.3), at
+ * least 10. Neither may push the total past what is available; a bet under the 10 AXP minimum is not placed.
+ */
+export function analystStakes(p: number, available: number, bestOf: 1 | 3 | 5): { stake: number; scoreStake?: number } {
+  if (available < MIN_STAKE) return { stake: 0 };
+  const stake = Math.min(Math.max(roundTo10((available * (p - 50)) / 100), 100), available);
+  if (bestOf === 1) return { stake };
+  const scoreStake = Math.min(Math.max(roundTo10(stake * 0.3), MIN_STAKE), available - stake);
+  return scoreStake >= MIN_STAKE ? { stake, scoreStake } : { stake };
+}
+
+/** The batch entries for a series' analyst picks: one per market bet, each with its stake. */
+export const analystEntries = (bestOf: 1 | 3 | 5, picks: AnalystPick[]): BatchEntry[] =>
+  picks.flatMap((p) => [
+    ...(p.stake > 0 ? [{ player: p.player, market: "winner" as const, choice: p.winner, stake: p.stake }] : []),
+    ...(bestOf > 1 && p.score && p.scoreStake ? [{ player: p.player, market: "score" as const, choice: p.score, stake: p.scoreStake }] : []),
+  ]);
 
 const analyst = (role: Role, name: string, belief: string, voice: string): Analyst => ({ role, player: `analyst-${role}`, name, belief, voice });
 
@@ -51,7 +81,8 @@ Reply with only JSON:
 Rule: ${scoreRule}.`;
 }
 
-export function parsePick(reply: string, a: Analyst, s: Series, lessons: Lesson[], now: Date): AnalystPick {
+/** The pick as the analyst made it; the pick job adds the stakes. */
+export function parsePick(reply: string, a: Analyst, s: Series, lessons: Lesson[], now: Date): Omit<AnalystPick, "stake" | "scoreStake"> {
   const raw = extractJson<{ winner?: string; score?: string | null; winProbability?: number; reasoning?: string; usedLessonIds?: string[] }>(reply);
   if (raw.winner !== s.teamA && raw.winner !== s.teamB) throw new Error(`winner ${raw.winner} is not in ${s.teamA} vs ${s.teamB}`);
   const score = raw.score ?? null;
