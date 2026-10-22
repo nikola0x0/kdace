@@ -101,3 +101,27 @@ export function counters() {
 export const suiscan = (r: SeriesRecord, digest: string | null | undefined) => `https://suiscan.xyz/${chainOf(r).network}/tx/${digest}`;
 export const walruscan = (blobId: string) => `https://walruscan.com/mainnet/blob/${blobId}`;
 export const lessonText = (text: string) => text.split(" (from ")[0];
+
+export type AnalystStats = { calls: number; settled: number; correct: number; accuracy: number | null; points: number; k: number; d: number; a: number; memories: number; recalled: number; form: ("W" | "L")[] };
+
+/** One analyst's record: winner-call accuracy over settled series, board numbers, memories saved and recalled, last five results. */
+export function analystStats(player: string): AnalystStats {
+  const all = records();
+  const row = board().find((r) => r.player === player);
+  let calls = 0, settled = 0, correct = 0, memories = 0, recalled = 0;
+  const form: ("W" | "L")[] = [];
+  for (const r of all) {
+    const pick = r.picks.find((p) => p.player === player);
+    memories += r.lessons.filter((l) => l.player === player && l.blobId).length;
+    if (!pick) continue;
+    calls++;
+    recalled += pick.usedLessons?.length ?? 0;
+    if (r.result) {
+      settled++;
+      const win = pick.winner === r.result.winner;
+      if (win) correct++;
+      form.push(win ? "W" : "L");
+    }
+  }
+  return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, points: row?.points ?? 0, k: row?.k ?? 0, d: row?.d ?? 0, a: row?.a ?? 0, memories, recalled, form: form.slice(-5) };
+}

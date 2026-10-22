@@ -1,39 +1,43 @@
-// The five analysts: who they are, how they think, and how they're doing.
+// The five analysts as tall character banners side by side, each with their record. Hover widens a banner.
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { PERSONAS } from "../../lib/personas";
-import { art, board, records } from "../../lib/site";
-import { Avatar, RoleIcon } from "../ui/bits";
+import { analystStats, art } from "../../lib/site";
+import { RoleIcon } from "../ui/bits";
 
 export const metadata = { title: "Analysts · KDAce" };
 
 export default function AnalystsPage() {
-  const rows = board();
-  const all = records();
+  const crew = PERSONAS.map((p) => ({ p, s: analystStats(p.player), img: art(`analyst-${p.role}`) }));
   return (
     <main className="wrap">
       <div className="section">
         <div className="eyebrow">The crew</div>
         <h1 className="page-title">Five analysts, one per role</h1>
-        <p className="muted" style={{ maxWidth: 640 }}>Each sees the same data but reads it through their own belief. After every series they argue about it and save one lesson to their own Walrus Memory, which they recall before their next pick.</p>
+        <p className="muted" style={{ maxWidth: 640 }}>Same data, five beliefs. After every series they argue about it and save one lesson to their own Walrus Memory, which they recall before their next pick.</p>
       </div>
-      <div className="grid">
-        {PERSONAS.map((p) => {
-          const row = rows.find((r) => r.player === p.player);
-          const memories = all.reduce((n, r) => n + r.lessons.filter((l) => l.player === p.player && l.blobId).length, 0);
-          return (
-            <Link key={p.role} href={`/analysts/${p.role}`} className="card analyst-card">
-              <div className="card-body">
-                <div className="who"><Avatar name={p.name} color={p.color} art={art(`analyst-${p.role}`)} size={56} /><div><div style={{ fontSize: 20 }}>{p.name} <RoleIcon role={p.role} size={18} /></div><div className="ap-title">{p.title}</div></div></div>
-                <p className="muted" style={{ margin: 0 }}>{p.personality}</p>
-                <div className="kpis">
-                  <div className="kpi"><b className="num">{row?.points ?? 0}</b><span>points</span></div>
-                  <div className="kpi"><b className="num">{row ? `${row.k}/${row.d}/${row.a}` : "0/0/0"}</b><span>K / D / A</span></div>
-                  <div className="kpi"><b className="num">{memories}</b><span>memories</span></div>
-                </div>
+      <div className="banners">
+        {crew.map(({ p, s, img }) => (
+          <Link key={p.role} href={`/analysts/${p.role}`} className="banner" style={{ "--c": p.color } as CSSProperties}>
+            <div className="banner-art" style={img ? { backgroundImage: `url(${img})` } : undefined}>{!img && <span>{p.name.slice(0, 1)}</span>}</div>
+            <div className="banner-shade" />
+            <div className="banner-top"><RoleIcon role={p.role} size={18} /><span>{p.role.toUpperCase()}</span></div>
+            <div className="banner-info">
+              <div className="banner-title">{p.title}</div>
+              <div className="banner-name display">{p.name}</div>
+              <div className="banner-acc"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>accuracy{s.settled ? ` · ${s.correct}/${s.settled}` : ""}</span></div>
+              <div className="banner-stats">
+                <span><b className="num">{s.points}</b>pts</span>
+                <span><b className="num">{s.k}/{s.d}/{s.a}</b>KDA</span>
+                <span><b className="num">{s.memories}</b>memories</span>
               </div>
-            </Link>
-          );
-        })}
+              <div className="banner-form">
+                {s.form.length ? s.form.map((r, i) => <i key={i} className={r === "W" ? "w" : "l"}>{r}</i>) : <span className="muted">{s.calls} calls · no results yet</span>}
+              </div>
+              <p className="banner-quote">{p.personality}</p>
+            </div>
+          </Link>
+        ))}
       </div>
     </main>
   );

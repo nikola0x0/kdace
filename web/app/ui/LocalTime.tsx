@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 const FORMATS = {
   day: { weekday: "long", month: "short", day: "numeric" },
   short: { weekday: "short", hour: "2-digit", minute: "2-digit" },
+  time: { hour: "2-digit", minute: "2-digit" },
   full: { weekday: "short", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" },
 } as const;
 
