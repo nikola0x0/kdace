@@ -1,6 +1,6 @@
 "use client";
 // The home banner as a live dither: ordered-dither pixels in the art's own colours, full colour following the cursor
-// (drifting on its own when idle), and a colour ripple on click. WebGL is browser-only, so it loads after hydration.
+// and a colour ripple on click. WebGL is browser-only, so it loads after hydration.
 import dynamic from "next/dynamic";
 
 const DitherVeil = dynamic(() => import("./DitherVeil"), { ssr: false });
@@ -20,7 +20,6 @@ export default function HeroVeil({ src }: { src: string }) {
       revealRadius={170}
       softness={0.7}
       linger={1.4}
-      wander
       clickBurst
     />
   );
