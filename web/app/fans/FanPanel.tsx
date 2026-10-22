@@ -1,10 +1,11 @@
 "use client";
-// Minimal, deliberately unstyled fan pick flow: connect (Google via Enoki, or any Sui wallet), sign in by signing a
-// message, pick each open series, see your picks. The real UI is designed separately; this only proves the flow.
+// Minimal, deliberately unstyled fan pick flow: sign in with Google (verified ID token → zkLogin address) or connect
+// any Sui wallet and sign a message, pick each open series, see your picks. The real UI is designed separately; this only proves the flow.
 import { useCallback, useEffect, useState } from "react";
 import { DAppKitProvider, useCurrentAccount, useDAppKit } from "@mysten/dapp-kit-react";
 import { ConnectButton } from "@mysten/dapp-kit-react/ui";
 import { dAppKit } from "./dapp-kit";
+import GoogleSignIn, { googleSignOut } from "./GoogleSignIn";
 
 type Series = { matchId: string; startTime: string; block: string; bestOf: 1 | 3 | 5; teamA: string; teamB: string };
 type OpenSeries = { series: Series; lockAt: string; crowd: { fans: number; winner: Record<string, number>; score: Record<string, number> }; mine: Partial<Record<"winner" | "score", string>> };
@@ -29,7 +30,7 @@ function Fans() {
     const [m, p] = await Promise.all([api<Me>("/api/me"), api<{ series: OpenSeries[] }>("/api/picks")]);
     setMe(m.ok ? m.body : null);
     if (p.ok) setOpen(p.body.series);
-    else setMessage(p.body.error ?? `Could not load picks (${p.status})`);
+    else setMessage(p.body.error ?? "Couldn't load the matches. Please try again shortly.");
   }, []);
 
   useEffect(() => {
@@ -41,18 +42,19 @@ function Fans() {
     setMessage("");
     try {
       const n = await api<{ message: string; network: "testnet" | "mainnet" }>(`/api/auth/nonce?address=${account.address}`);
-      if (!n.ok) return setMessage(n.body.error ?? "Sign-in failed");
+      if (!n.ok) return setMessage(n.body.error ?? "Sign-in didn't work. Please try again.");
       const signed = await kit.signPersonalMessage({ message: new TextEncoder().encode(n.body.message), network: n.body.network });
       const v = await api("/api/auth/verify", { method: "POST", body: JSON.stringify({ bytes: signed.bytes, signature: signed.signature }) });
-      if (!v.ok) return setMessage(v.body.error ?? "Sign-in failed");
+      if (!v.ok) return setMessage(v.body.error ?? "Sign-in didn't work. Please try again.");
       await refresh();
     } catch (e) {
-      setMessage(`Sign-in cancelled or failed: ${(e as Error).message}`);
+      setMessage("Sign-in was cancelled or didn't work. Please try again.");
     }
   }
 
   async function signOut() {
     await api("/api/auth/logout", { method: "POST" });
+    googleSignOut();
     setMe(null);
     await refresh();
   }
@@ -60,7 +62,7 @@ function Fans() {
   async function pick(matchId: string, market: "winner" | "score", choice: string) {
     setMessage("");
     const r = await api<{ receipt: unknown }>("/api/picks", { method: "POST", body: JSON.stringify({ matchId, market, choice }) });
-    if (!r.ok) return setMessage(r.body.error ?? `Pick failed (${r.status})`);
+    if (!r.ok) return setMessage(r.body.error ?? "That pick couldn't be saved. Please try again.");
     setReceipt(r.body.receipt);
     await refresh();
   }
@@ -70,8 +72,9 @@ function Fans() {
   return (
     <section>
       <h2>Your picks</h2>
-      <ConnectButton />
-      {account && !signedIn && <button onClick={signIn}>Sign in as {account.address.slice(0, 6)}…{account.address.slice(-4)}</button>}
+      {!me && <GoogleSignIn onSignedIn={() => { setMessage(""); refresh(); }} onError={setMessage} />}
+      {(!me || account) && <ConnectButton>Use a crypto wallet instead</ConnectButton>}
+      {account && !signedIn && <button onClick={signIn}>Continue with this wallet</button>}
       {me && <p>Signed in as {me.displayName} <button onClick={signOut}>Sign out</button></p>}
       {message && <p>{message}</p>}
 
