@@ -1,12 +1,12 @@
 // Pick job: every analyst picks each open series blind, and the batch fingerprint is committed before the game.
 import { pathToFileURL } from "node:url";
 import { withLock } from "../core/lock.ts";
-import { ANALYSTS, buildPickPrompt, parsePick, type AnalystPick, type Lesson, type Role } from "../core/analysts.ts";
-import { batchHash, canonicalBatch, type BatchEntry } from "../core/batch.ts";
+import { analystEntries, analystStakes, ANALYSTS, buildPickPrompt, parsePick, type AnalystPick, type Lesson, type Role } from "../core/analysts.ts";
+import { batchHash, canonicalBatch } from "../core/batch.ts";
 import type { Chain } from "../core/chain.ts";
 import { fanDbFromEnv, withRefereeLock } from "../core/fandb.ts";
 import { isLocked, seriesToPick, seriesToResume } from "../core/select.ts";
-import { Store, type SeriesRecord } from "../core/store.ts";
+import { axpAccount, Store, type SeriesRecord } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
 
 export type PickDeps = {
@@ -25,13 +25,16 @@ export type PickDeps = {
 const MIN_ANALYSTS = 3;
 
 export const emptyRecord = (series: Series, status: SeriesRecord["status"]): SeriesRecord => ({
-  series, status, picks: [], batch: null, batchHash: null, commitDigest: null, result: null, points: null, debate: null, lessons: [],
+  series, status, picks: [], batch: null, batchHash: null, commitDigest: null, result: null, axp: null, debate: null, lessons: [],
 });
 
 async function analystPicks(deps: PickDeps, s: Series): Promise<AnalystPick[]> {
   const picks: AnalystPick[] = [];
   const history = deps.history();
+  const records = deps.store.all();
   for (const a of ANALYSTS) {
+    // Stakes follow from confidence and the AXP this analyst has free now (settled results minus open bets).
+    const { available } = axpAccount(records, a.player);
     const lessons = await deps.recall(a.role, `Predicting ${s.teamA} vs ${s.teamB}, a Bo${s.bestOf} at Worlds`).catch((e) => {
       deps.log(`${s.matchId} ${a.player} recall failed, picking without lessons: ${(e as Error).message}`);
       return [] as Lesson[];
@@ -39,7 +42,8 @@ async function analystPicks(deps: PickDeps, s: Series): Promise<AnalystPick[]> {
     const prompt = buildPickPrompt(a, s, lessons, history);
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
-        picks.push(parsePick(await deps.ask(prompt), a, s, lessons, deps.now()));
+        const pick = parsePick(await deps.ask(prompt), a, s, lessons, deps.now());
+        picks.push({ ...pick, ...analystStakes(pick.winProbability, available, s.bestOf) });
         break;
       } catch (e) {
         deps.log(`${s.matchId} ${a.player} attempt ${attempt} invalid: ${(e as Error).message}`);
@@ -91,11 +95,7 @@ export async function runPick(deps: PickDeps): Promise<{ committed: string[]; mi
         out.missed.push(s.matchId);
         continue;
       }
-      const entries: BatchEntry[] = picks.flatMap((p) => [
-        { player: p.player, market: "winner" as const, choice: p.winner },
-        ...(s.bestOf > 1 && p.score ? [{ player: p.player, market: "score" as const, choice: p.score }] : []),
-      ]);
-      const batch = canonicalBatch(s.matchId, entries);
+      const batch = canonicalBatch(s.matchId, analystEntries(s.bestOf, picks));
       const record: SeriesRecord = { ...emptyRecord(s, "committing"), picks, batch, batchHash: batchHash(batch) };
       deps.store.put(record); // recorded before the chain call, so a crash resumes with the same hash instead of re-picking
       await commitRecord(deps, record, out);

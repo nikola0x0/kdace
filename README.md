@@ -4,6 +4,15 @@
 
 Built for **Total Recall** (Tatum × Walrus), Track 1: Markets & Sports Prediction.
 
+## AXP
+
+Every player, fan or AI analyst, starts with **10,000 AXP** and stakes it on outcomes: the winner of every series, plus the exact score for Bo3/Bo5. The leaderboard ranks by AXP balance. **AXP is play money**: it has no cash value, can't be bought, sold or transferred, and isn't a token on Sui. The bets themselves are proven on Sui: every stake is inside the batch whose fingerprint is committed before the game.
+
+- **Parimutuel per market.** A market's pool is the sum of its stakes. Winners split the pool in proportion to their stakes, `net = floor(stake / winningStake × pool) − stake`; losers lose their stake. If nobody picked the winning outcome, everyone gets their stake back. Rounding leftovers are dropped.
+- **Balance** = 10,000 + net over settled markets. **Available** = balance − stakes in markets that haven't settled yet.
+- **Fans** stake at least 10 AXP per pick, up to what they have available.
+- **Analysts** stake from their confidence p (50-100) and their available AXP, so anyone can recompute it: winner stake = `clamp(roundTo10(available × (p − 50) / 100), 100, available)`, score stake = `roundTo10(winner × 0.3)`, at least 10 (never past what's available; under 10 AXP available, no bet).
+
 ## Run
 
 ```bash
@@ -11,7 +20,7 @@ npm install
 cp .env.example .env    # fill in the keys below
 npm test                # unit tests
 npm run tick            # settle finished series, then pick open ones (what launchd runs every 30 min)
-npm run verify          # re-check every commit, result, lesson and the board
+npm run verify          # re-check every commit, result, lesson, AXP payout and the board
 ```
 
 `.env` keys: `MEMWAL_ACCOUNT_ID`, `MEMWAL_PRIVATE_KEY`, `MEMWAL_SERVER_URL`, `TATUM_API_KEY`, `SUI_NETWORK`, `TATUM_SUI_GRPC`, `SUI_REFEREE_KEY` (create with `npx tsx scripts/new-referee-key.ts`), `KDACE_PACKAGE_ID`, `KDACE_RESOLVER_CAP`.
@@ -31,13 +40,13 @@ Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick ever
 
 | Piece | What it does |
 |---|---|
-| `src/jobs/pick.ts` | Each analyst recalls its own lessons, then picks winner and score. The batch's SHA-256 fingerprint is committed on Sui (`ledger::commit_batch`) before the series starts. |
-| `src/jobs/settle.ts` | Posts the official result (`ledger::post_result`), splits each market's 1000-point pot among correct picks, runs the analysts' debate, and saves one lesson per analyst to Walrus Memory. |
-| `src/jobs/verify.ts` | Reads every transaction back through Tatum and checks: fingerprint matches the published batch, commit came before the official start, result matches, every lesson an analyst used existed before its pick, and the board recomputes. |
-| `src/core/fanlock.ts` + `web/app/api/lock` | Called every minute by Supabase `pg_cron` + `pg_net`. For each series whose lock (start − 5 min) just passed, bundles every fan's final pick as `fan:<address>` entries into `canonicalBatch("<matchId>:fans", …)` and commits its fingerprint on Sui under market id `<matchId>:fans`. Recorded in `fan_commits` before and after the chain call, never committed twice. |
-| `src/core/fanapi.ts` + `web/app/api/{auth,picks,me}` | Sign-in, then an httpOnly signed cookie: Google (`src/core/google.ts`: ID token verified against Google's keys, salt = HMAC-SHA256(`ZKLOGIN_SALT_SECRET`, iss|sub) below 2^128, address = `jwtToAddress(token, salt)`; salt and method stored on the fan row) or a wallet (signed personal message verified server-side), picks (same markets and scores as the analysts; rejected at lock on server time; last pick wins; each pick returns a receipt), crowd split. SuiNS names are looked up on mainnet through Tatum and cached daily. |
-| `src/jobs/fans.ts` | Tick stage: copies fan commits into `data/series/<matchId>.json` (`fans`: batch, hash, digest, chain) and fans' SuiNS names into `data/fans.json`. Settle then splits each pot among analysts and fans together; verify checks fan commits too. |
-| `data/` | Every series' picks, batch, digests, debate and lessons, plus `board.json`. |
+| `src/jobs/pick.ts` | Each analyst recalls its own lessons, then picks winner and score; its stakes follow from its confidence and available AXP. The batch's (every pick with its stake) SHA-256 fingerprint is committed on Sui (`ledger::commit_batch`) before the series starts. |
+| `src/jobs/settle.ts` | Posts the official result (`ledger::post_result`), settles each market's AXP pool parimutuel (`src/core/points.ts`; net per player in the record's `axp`), writes the balance leaderboard, runs the analysts' debate, and saves one lesson per analyst to Walrus Memory. |
+| `src/jobs/verify.ts` | Reads every transaction back through Tatum and checks: fingerprint matches the published batch, commit came before the official start, result matches, every lesson an analyst used existed before its pick, every settled market's AXP payouts recompute from the published batches, and the board recomputes. |
+| `src/core/fanlock.ts` + `web/app/api/lock` | Called every minute by Supabase `pg_cron` + `pg_net`. For each series whose lock (start − 5 min) just passed, bundles every fan's final pick and stake as `fan:<address>` entries into `canonicalBatch("<matchId>:fans", …)` and commits its fingerprint on Sui under market id `<matchId>:fans`. Recorded in `fan_commits` before and after the chain call, never committed twice. |
+| `src/core/fanapi.ts` + `web/app/api/{auth,picks,me}` | Sign-in, then an httpOnly signed cookie: Google (`src/core/google.ts`: ID token verified against Google's keys, salt = HMAC-SHA256(`ZKLOGIN_SALT_SECRET`, iss|sub) below 2^128, address = `jwtToAddress(token, salt)`; salt and method stored on the fan row) or a wallet (signed personal message verified server-side), picks (same markets and scores as the analysts; each with a stake of at least 10 AXP, checked against the fan's available AXP; rejected at lock on server time; last pick wins; each pick returns a receipt), crowd split with the AXP pool per outcome. SuiNS names are looked up on mainnet through Tatum and cached daily. |
+| `src/jobs/fans.ts` | Tick stage: copies fan commits into `data/series/<matchId>.json` (`fans`: batch, hash, digest, chain) and fans' SuiNS names into `data/fans.json`. Settle then settles each pool among analysts and fans together, and the tick writes each fan's settled net back to Supabase (`fans.axp_settled`) for the available-AXP check; verify checks fan commits too. |
+| `data/` | Every series' picks, batch, digests, debate and lessons, plus `board.json` (the leaderboard: balance, net, KDA, bets). |
 
 ## Honesty notes
 
@@ -51,6 +60,9 @@ Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick ever
 - **The Referee is centralized.** One key posts results from the official lolesports schedule. Anyone can check them against the official results.
 - **Analysts run on Claude Haiku 5.5** through the Anthropic API (`ANTHROPIC_API_KEY`). Without a key they fall back to a local Claude Code CLI, for development only.
 - **Verify limit:** Tatum's gRPC gateway blocks event listing, so `npm run verify` reads each logged transaction by digest. It can't detect a second, unlogged commit for the same match; a Sui GraphQL event query would close that gap.
+- **AXP is play money**, never a token or a prize. It exists only to rank players.
+- **Available AXP is checked by the server** from Supabase (the settled net the tick wrote, minus open stakes). Two picks sent at the same instant could both pass the check; settlement still pays exactly what the committed batches say.
+- **Analyst stakes depend on settlement timing:** an analyst's available AXP is whatever had settled when it picked, so verify recomputes payouts from the batches but doesn't re-derive each stake.
 - **Locking:** analysts must commit at least 5 minutes before the scheduled start, or the series is recorded as missed.
 - **`poc/` is the proof of concept from Oct 21.** It replayed the six finished Play-In series. Those picks were made after the games, and are labelled as a replay.
 

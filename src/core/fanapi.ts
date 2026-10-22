@@ -1,7 +1,8 @@
 // The fan API's logic, framework-free: web/app/api/* routes only parse requests, call these and set cookies.
-import type { FanDb } from "./fandb.ts";
+import type { FanCommitRow, FanDb } from "./fandb.ts";
 import { googleAddress, zkLoginSalt, type GoogleIdentity } from "./google.ts";
 import { crowdSplit, displayName, lockAt, pickReceipt, validateFanPick, type FanPickRow } from "./fans.ts";
+import { AXP_START } from "./points.ts";
 import { isLocked } from "./select.ts";
 import { newNonce, parseSignInMessage, readToken, signInMessage, signToken } from "./session.ts";
 import { refreshSuins } from "./suins.ts";
@@ -94,19 +95,50 @@ export async function googleSignIn(deps: FanApiDeps, req: { idToken: unknown }):
 export const sessionAddress = (deps: Pick<FanApiDeps, "sessionSecret" | "now">, token: string | undefined): string | null =>
   readToken<{ address: string }>(token, deps.sessionSecret, deps.now())?.address ?? null;
 
+/** A fan's AXP: start, net over settled series, stakes still open, and what's free to stake. */
+export type FanAxp = { start: number; settled: number; open: number; available: number };
+
+/**
+ * A pick's stake is open until its series is counted into axp_settled. It is freed once that happens (the fan
+ * commit is stamped settled), when the fan batch missed the chain, or when the series ended without a fan batch.
+ */
+function isOpenPick(p: FanPickRow, commits: Map<string, FanCommitRow>, series: Map<string, Series>): boolean {
+  const c = commits.get(p.matchId);
+  if (c) return c.status !== "missed" && !c.settledAt;
+  const s = series.get(p.matchId);
+  return !!s && s.state !== "completed";
+}
+
+/** `except` leaves one market out of the open stakes: the pick being replaced doesn't count against itself. */
+async function fanAxp(deps: FanApiDeps, address: string, ctx: { picks: FanPickRow[]; commits: FanCommitRow[]; series: Series[] }, except?: { matchId: string; market: string }): Promise<FanAxp> {
+  const settled = (await deps.db.getFan(address))?.axpSettled ?? 0;
+  const commits = new Map(ctx.commits.map((c) => [c.matchId, c]));
+  const series = new Map(ctx.series.map((s) => [s.matchId, s]));
+  const open = ctx.picks
+    .filter((p) => !(except && p.matchId === except.matchId && p.market === except.market) && isOpenPick(p, commits, series))
+    .reduce((sum, p) => sum + p.stake, 0);
+  return { start: AXP_START, settled, open, available: AXP_START + settled - open };
+}
+
+const axpText = (n: number) => Math.max(0, n).toLocaleString("en-US");
+
 export async function postPick(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
   if (!address) return fail(401, "Sign in first to make a pick.");
-  const { matchId, market, choice } = (body ?? {}) as Record<string, unknown>;
+  const { matchId, market, choice, stake } = (body ?? {}) as Record<string, unknown>;
   if (typeof matchId !== "string" || typeof market !== "string" || typeof choice !== "string") return fail(400, "That pick couldn't be saved. Please try again.");
   const now = deps.now(); // server time decides the lock, never the client's
-  const s = (await deps.fetchSeries()).find((x) => x.matchId === matchId);
+  const all = await deps.fetchSeries();
+  const s = all.find((x) => x.matchId === matchId);
   if (!s) return fail(404, "That match isn't open for picks.");
   if (s.state !== "unstarted" || isLocked(s.startTime, now)) return fail(409, `picks locked at ${lockAt(s.startTime)}`);
-  const error = validateFanPick(s, market, choice, now);
+  const error = validateFanPick(s, market, choice, stake, now);
   if (error) return fail(400, error);
-  if ((await deps.db.listCommits()).some((c) => c.matchId === matchId)) return fail(409, "Picks for this match are closed.");
-  const row: FanPickRow = { matchId, address, market: market as FanPickRow["market"], choice, updatedAt: now.toISOString() };
+  const commits = await deps.db.listCommits();
+  if (commits.some((c) => c.matchId === matchId)) return fail(409, "Picks for this match are closed.");
   await deps.db.ensureFan(address);
+  const { available } = await fanAxp(deps, address, { picks: await deps.db.picksOf(address), commits, series: all }, { matchId, market });
+  if ((stake as number) > available) return fail(400, `You only have ${axpText(available)} AXP available.`);
+  const row: FanPickRow = { matchId, address, market: market as FanPickRow["market"], choice, stake: stake as number, updatedAt: now.toISOString() };
   await deps.db.upsertPick(row);
   return { status: 200, body: { receipt: pickReceipt(s, row) } };
 }
@@ -125,7 +157,7 @@ export async function listPicks(deps: FanApiDeps, address: string | null): Promi
         series: s,
         lockAt: lockAt(s.startTime),
         crowd: crowdSplit(s, rows),
-        mine: Object.fromEntries(rows.filter((r) => r.matchId === s.matchId && r.address === address).map((r) => [r.market, r.choice])),
+        mine: Object.fromEntries(rows.filter((r) => r.matchId === s.matchId && r.address === address).map((r) => [r.market, { choice: r.choice, stake: r.stake }])),
       })),
     },
   };
@@ -134,6 +166,8 @@ export async function listPicks(deps: FanApiDeps, address: string | null): Promi
 export async function getMe(deps: FanApiDeps, address: string | null): Promise<ApiResult> {
   if (!address) return fail(401, "Not signed in.");
   const suinsName = await refreshSuins(deps.db, address, deps.lookupName, deps.now());
-  const picks = (await deps.db.picksOf(address)).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
-  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), picks } };
+  const rows = (await deps.db.picksOf(address)).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  const axp = await fanAxp(deps, address, { picks: rows, commits: await deps.db.listCommits(), series: await deps.fetchSeries() });
+  const picks = rows.map(({ matchId, market, choice, stake, updatedAt }) => ({ matchId, market, choice, stake, updatedAt }));
+  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), picks, axp } };
 }

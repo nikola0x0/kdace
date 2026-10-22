@@ -3,6 +3,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { aiConsensus } from "../../src/core/consensus.ts";
 import { chainOf } from "../../src/core/chain.ts";
+import { AXP_START } from "../../src/core/points.ts";
 import { FAN_PREFIX, displayName } from "../../src/core/fans.ts";
 import type { SeriesRecord } from "../../src/core/store.ts";
 import { fetchSeries, fetchTeamLogos, type Series } from "../../src/core/worlds.ts";
@@ -102,7 +103,7 @@ export const suiscan = (r: SeriesRecord, digest: string | null | undefined) => `
 export const walruscan = (blobId: string) => `https://walruscan.com/mainnet/blob/${blobId}`;
 export const lessonText = (text: string) => text.split(" (from ")[0];
 
-export type AnalystStats = { calls: number; settled: number; correct: number; accuracy: number | null; points: number; k: number; d: number; a: number; memories: number; recalled: number; form: ("W" | "L")[] };
+export type AnalystStats = { calls: number; settled: number; correct: number; accuracy: number | null; balance: number; k: number; d: number; a: number; memories: number; recalled: number; form: ("W" | "L")[] };
 
 /** One analyst's record: winner-call accuracy over settled series, board numbers, memories saved and recalled, last five results. */
 export function analystStats(player: string): AnalystStats {
@@ -123,5 +124,5 @@ export function analystStats(player: string): AnalystStats {
       form.push(win ? "W" : "L");
     }
   }
-  return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, points: row?.points ?? 0, k: row?.k ?? 0, d: row?.d ?? 0, a: row?.a ?? 0, memories, recalled, form: form.slice(-5) };
+  return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, balance: row?.balance ?? AXP_START, k: row?.k ?? 0, d: row?.d ?? 0, a: row?.a ?? 0, memories, recalled, form: form.slice(-5) };
 }

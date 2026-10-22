@@ -1,4 +1,4 @@
-// The board: analysts and fans together, ranked by points, with their KDA.
+// The board: analysts and fans together, ranked by AXP balance, with their KDA.
 import Link from "next/link";
 import { persona } from "../../lib/personas";
 import { art, board, fanNames, nameOf } from "../../lib/site";
@@ -21,7 +21,7 @@ export default function BoardPage() {
           <p className="muted" style={{ margin: 0 }}>No results yet. The board fills in after the first series is settled.</p>
         ) : (
           <table className="table">
-            <thead><tr><th>#</th><th>Player</th><th style={{ textAlign: "right" }}>Points</th><th style={{ textAlign: "right" }}>K / D / A</th></tr></thead>
+            <thead><tr><th>#</th><th>Player</th><th style={{ textAlign: "right" }}>AXP</th><th style={{ textAlign: "right" }}>K / D / A</th></tr></thead>
             <tbody>
               {rows.map((r, i) => {
                 const p = persona(r.player);
@@ -35,7 +35,7 @@ export default function BoardPage() {
                         <span className="who">{nameOf(r.player, names)}<span className="tag">Fan</span></span>
                       )}
                     </td>
-                    <td className="num" style={{ textAlign: "right" }}><b>{r.points.toLocaleString("en-US")}</b></td>
+                    <td className="num" style={{ textAlign: "right" }}><b>{r.balance.toLocaleString("en-US")}</b></td>
                     <td className="num muted" style={{ textAlign: "right" }}>{r.k} / {r.d} / {r.a}</td>
                   </tr>
                 );

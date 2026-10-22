@@ -9,14 +9,14 @@ export default async function MePage() {
   const matches: Record<string, MyMatch> = {};
   const base = (s: { matchId: string; teamA: string; teamB: string; block: string; bestOf: 1 | 3 | 5; startTime: string }): MyMatch => ({
     matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, block: s.block, bestOf: s.bestOf, start: s.startTime,
-    logoA: logos[s.teamA] ?? null, logoB: logos[s.teamB] ?? null, result: null, points: {}, fansLocked: false,
+    logoA: logos[s.teamA] ?? null, logoB: logos[s.teamB] ?? null, result: null, axp: {}, fansLocked: false,
   });
   for (const s of await schedule()) matches[s.matchId] = base(s);
   for (const r of records())
     matches[r.series.matchId] = {
       ...base(r.series),
       result: r.result ? { winner: r.result.winner, score: r.result.score } : null,
-      points: Object.fromEntries(Object.entries(r.points ?? {}).filter(([k]) => k.startsWith("fan:"))),
+      axp: Object.fromEntries(Object.entries(r.axp ?? {}).filter(([k]) => k.startsWith("fan:"))),
       fansLocked: !!r.fans?.commitDigest,
     };
   const rows = board();
@@ -26,7 +26,7 @@ export default async function MePage() {
         <div className="eyebrow">Your record</div>
         <h1 className="page-title">My matches</h1>
       </div>
-      <MyPicks matches={matches} board={rows.map((r, i) => ({ player: r.player, rank: i + 1, points: r.points, k: r.k, d: r.d, a: r.a }))} />
+      <MyPicks matches={matches} board={rows.map((r, i) => ({ player: r.player, rank: i + 1, balance: r.balance, k: r.k, d: r.d, a: r.a }))} />
     </main>
   );
 }

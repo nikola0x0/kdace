@@ -49,6 +49,18 @@ export class MemoryFanDb implements FanDb {
     this.commits.set(matchId, { ...c, ...patch });
     return true;
   }
+  async setAxpSettled(nets: Record<string, number>) {
+    for (const [address, net] of Object.entries(nets)) {
+      await this.ensureFan(address);
+      this.fans.set(address, { ...this.fans.get(address)!, axpSettled: net });
+    }
+  }
+  async markCommitsSettled(matchIds: string[], at: string) {
+    for (const id of matchIds) {
+      const c = this.commits.get(id);
+      if (c && !c.settledAt) this.commits.set(id, { ...c, settledAt: at });
+    }
+  }
   async acquireRefereeLock(holder: string, _ttlSeconds = 120) {
     if (this.lockHolder && this.lockHolder !== holder) return false;
     this.lockHolder = holder;

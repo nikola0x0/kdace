@@ -3,10 +3,10 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { ANALYSTS } from "../src/core/analysts.ts";
-import { batchHash } from "../src/core/batch.ts";
+import { batchHash, canonicalBatch } from "../src/core/batch.ts";
 import { Store } from "../src/core/store.ts";
 import type { Series } from "../src/core/worlds.ts";
-import { runPick, type PickDeps } from "../src/jobs/pick.ts";
+import { emptyRecord, runPick, type PickDeps } from "../src/jobs/pick.ts";
 
 const series: Series = { matchId: "x", startTime: "2026-10-23T17:00:00Z", block: "Swiss", bestOf: 3, state: "unstarted", teamA: "GEN", teamB: "IG", winsA: 0, winsB: 0, winner: null };
 const before = new Date("2026-10-23T12:00:00Z");
@@ -90,6 +90,28 @@ describe("runPick", () => {
     await runPick(deps);
     await runPick(deps);
     expect(commits).toEqual(["x"]);
+  });
+
+  it("stakes from confidence and available AXP, and puts every stake in the batch", async () => {
+    const { deps } = fakes();
+    await runPick(deps);
+    const r = deps.store.get("x")!;
+    // p = 61 with 10,000 available: winner 1,100, score 30% of that
+    expect(r.picks.every((p) => p.stake === 1100 && p.scoreStake === 330)).toBe(true);
+    expect(JSON.parse(r.batch!).entries).toContainEqual({ player: "analyst-top", market: "winner", choice: "GEN", stake: 1100 });
+    expect(JSON.parse(r.batch!).entries).toContainEqual({ player: "analyst-top", market: "score", choice: "2-1", stake: 330 });
+  });
+  it("stakes from what is left after settled results and open bets", async () => {
+    const { deps } = fakes();
+    const other = (matchId: string) => ({ ...series, matchId, bestOf: 1 as const });
+    const batch = (matchId: string, stake: number) => canonicalBatch(matchId, [{ player: "analyst-top", market: "winner", choice: "GEN", stake }]);
+    deps.store.put({ ...emptyRecord(other("s"), "settled"), batch: batch("s", 500), commitDigest: "d", axp: { "analyst-top": -2000, "analyst-mid": 1000 } });
+    deps.store.put({ ...emptyRecord(other("o"), "committed"), batch: batch("o", 3000), commitDigest: "d" });
+    await runPick(deps);
+    const picks = deps.store.get("x")!.picks;
+    // top: 10,000 − 2,000 − 3,000 open = 5,000 available → 550; mid: 11,000 → 1,210 rounds to 1,210
+    expect(picks.find((p) => p.player === "analyst-top")).toMatchObject({ stake: 550, scoreStake: 170 });
+    expect(picks.find((p) => p.player === "analyst-mid")).toMatchObject({ stake: 1210, scoreStake: 360 });
   });
 
   it("stamps the committed record with the network and package it was committed on", async () => {

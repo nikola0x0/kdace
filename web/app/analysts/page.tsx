@@ -27,7 +27,7 @@ export default function AnalystsPage() {
               <div className="banner-name display">{p.name}</div>
               <div className="banner-acc"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>accuracy{s.settled ? ` · ${s.correct}/${s.settled}` : ""}</span></div>
               <div className="banner-stats">
-                <span><b className="num">{s.points}</b>pts</span>
+                <span><b className="num">{s.balance.toLocaleString("en-US")}</b>AXP</span>
                 <span><b className="num">{s.k}/{s.d}/{s.a}</b>KDA</span>
                 <span><b className="num">{s.memories}</b>memories</span>
               </div>

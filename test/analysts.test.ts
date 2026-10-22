@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ANALYSTS, buildPickPrompt, buildReflectPrompt, parsePick } from "../src/core/analysts.ts";
+import { analystEntries, analystStakes, ANALYSTS, buildPickPrompt, buildReflectPrompt, parsePick } from "../src/core/analysts.ts";
 import type { Series } from "../src/core/worlds.ts";
 
 const bo5: Series = { matchId: "m", startTime: "2026-11-03T22:00:00Z", block: "Quarterfinals", bestOf: 5, state: "unstarted", teamA: "T1", teamB: "GEN", winsA: null, winsB: null, winner: null };
@@ -34,8 +34,41 @@ describe("analysts", () => {
   });
   it("rejects a reply with no JSON", () => expect(() => parsePick("I think T1", adc, bo5, lessons, now)).toThrow());
   it("reflect prompt asks for one lesson through the analyst's belief", () => {
-    const pick = parsePick(reply({ winner: "GEN", score: "3-1", winProbability: 64, reasoning: "r", usedLessonIds: [] }), adc, bo5, lessons, now);
+    const pick = { ...parsePick(reply({ winner: "GEN", score: "3-1", winProbability: 64, reasoning: "r", usedLessonIds: [] }), adc, bo5, lessons, now), stake: 1400 };
     const p = buildReflectPrompt(adc, bo5, pick, { winner: "T1", score: "3-2" }, "Top: told you.");
     for (const s of [adc.belief, `${adc.name} lesson:`, "T1", "3-2", "Top: told you."]) expect(p).toContain(s);
+  });
+});
+
+describe("analyst stakes", () => {
+  it("stakes available × (p − 50) / 100 on the winner, rounded to 10, and 30% of that on the score", () => {
+    expect(analystStakes(64, 10000, 5)).toEqual({ stake: 1400, scoreStake: 420 });
+    expect(analystStakes(57, 3333, 3)).toEqual({ stake: 230, scoreStake: 70 });
+    expect(analystStakes(100, 10000, 3)).toEqual({ stake: 5000, scoreStake: 1500 });
+  });
+  it("stakes at least 100 on the winner, and no score stake on Bo1", () => {
+    expect(analystStakes(50, 10000, 1)).toEqual({ stake: 100 });
+    expect(analystStakes(51, 10000, 3)).toEqual({ stake: 100, scoreStake: 30 });
+  });
+  it("never stakes more than is available, and sits out below the 10 AXP minimum", () => {
+    expect(analystStakes(80, 80, 3)).toEqual({ stake: 80 });
+    expect(analystStakes(50, 120, 3)).toEqual({ stake: 100, scoreStake: 20 });
+    expect(analystStakes(50, 105, 3)).toEqual({ stake: 100 });
+    expect(analystStakes(90, 9, 3)).toEqual({ stake: 0 });
+  });
+  it("turns picks into batch entries with their stakes, leaving out bets of 0", () => {
+    const base = { score: null, winProbability: 60, reasoning: "r", usedLessons: [], pickedAt: "t" };
+    expect(analystEntries(5, [
+      { ...base, player: "analyst-top", winner: "T1", score: "3-1", stake: 1000, scoreStake: 300 },
+      { ...base, player: "analyst-mid", winner: "GEN", score: "3-0", stake: 100 },
+      { ...base, player: "analyst-adc", winner: "GEN", stake: 0 },
+    ])).toEqual([
+      { player: "analyst-top", market: "winner", choice: "T1", stake: 1000 },
+      { player: "analyst-top", market: "score", choice: "3-1", stake: 300 },
+      { player: "analyst-mid", market: "winner", choice: "GEN", stake: 100 },
+    ]);
+    expect(analystEntries(1, [{ ...base, player: "analyst-top", winner: "T1", score: "1-0", stake: 500, scoreStake: 150 }])).toEqual([
+      { player: "analyst-top", market: "winner", choice: "T1", stake: 500 },
+    ]);
   });
 });

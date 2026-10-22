@@ -1,11 +1,11 @@
-// Settle job: post each finished series' result, score it, run the analysts' debate, and save one lesson per analyst.
+// Settle job: post each finished series' result, settle its AXP bets, run the analysts' debate, and save one lesson per analyst.
 // Every step is saved before the next, so a crash resumes without posting or remembering twice.
 import { pathToFileURL } from "node:url";
 import { withLock } from "../core/lock.ts";
 import { ANALYSTS, buildReflectPrompt, type Role } from "../core/analysts.ts";
 import { chainOf, sameChain, type Chain } from "../core/chain.ts";
 import { fanDbFromEnv, withRefereeLock } from "../core/fandb.ts";
-import { computeBoard, marketPoints } from "../core/points.ts";
+import { computeBoard, marketNet } from "../core/points.ts";
 import { seriesToSettle } from "../core/select.ts";
 import { Store, toSettled, type SeriesRecord } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
@@ -50,7 +50,7 @@ async function settleOne(deps: SettleDeps, s: Series, result: { winner: string; 
   const save = (next: SeriesRecord) => (deps.store.put(next), (r = next));
   // r.series keeps the snapshot from commit time; the official feed is only used for the result.
   if (!r.result) save({ ...r, result: { ...result, resultDigest: await deps.postResult(s.matchId, result.winner, result.score) } });
-  if (!r.points) save({ ...r, points: marketPoints(toSettled(r)) });
+  if (!r.axp) save({ ...r, axp: marketNet(toSettled(r)) });
   if (!r.debate && r.picks.length) save({ ...r, debate: (await deps.ask(debatePrompt(r, result))).trim() });
   for (const pick of r.picks) {
     const a = ANALYSTS.find((x) => x.player === pick.player)!;

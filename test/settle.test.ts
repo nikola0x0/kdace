@@ -11,10 +11,10 @@ import { runSettle, type SettleDeps } from "../src/jobs/settle.ts";
 
 const series: Series = { matchId: "x", startTime: "2026-10-23T17:00:00Z", block: "Swiss", bestOf: 1, state: "unstarted", teamA: "GEN", teamB: "IG", winsA: 0, winsB: 0, winner: null };
 const done: Series = { ...series, state: "completed", winsA: 1, winsB: 0, winner: "GEN" };
-const picks = ANALYSTS.map((a, i) => ({ player: a.player, winner: i < 2 ? "GEN" : "IG", score: null, winProbability: 60, reasoning: "r", usedLessons: [], pickedAt: "2026-10-23T12:00:00Z" }));
+const picks = ANALYSTS.map((a, i) => ({ player: a.player, winner: i < 2 ? "GEN" : "IG", score: null, winProbability: 60, reasoning: "r", usedLessons: [], pickedAt: "2026-10-23T12:00:00Z", stake: 1000 }));
 const committed = (): SeriesRecord => ({
-  series, status: "committed", picks, batchHash: "h", commitDigest: "d", result: null, points: null, debate: null, lessons: [],
-  batch: canonicalBatch("x", picks.map((p) => ({ player: p.player, market: "winner" as const, choice: p.winner }))),
+  series, status: "committed", picks, batchHash: "h", commitDigest: "d", result: null, axp: null, debate: null, lessons: [],
+  batch: canonicalBatch("x", picks.map((p) => ({ player: p.player, market: "winner" as const, choice: p.winner, stake: p.stake }))),
 });
 
 function fakes(overrides: Partial<SettleDeps> = {}) {
@@ -44,9 +44,10 @@ describe("runSettle", () => {
     expect(posted).toEqual([["x", "GEN", "1-0"]]);
     expect(remembered).toHaveLength(5);
     expect(r.status).toBe("settled");
-    expect(r.points).toEqual({ "analyst-top": 500, "analyst-jungle": 500 });
+    expect(r.axp).toEqual({ "analyst-top": 1500, "analyst-jungle": 1500, "analyst-mid": -1000, "analyst-adc": -1000, "analyst-support": -1000 });
     expect(r.debate).toContain("Support:");
-    expect(store.readBoard().reduce((sum, row) => sum + row.points, 0)).toBe(1000);
+    expect(store.readBoard()[0]).toEqual({ player: "analyst-jungle", balance: 11500, net: 1500, k: 1, d: 0, a: 1, bets: 1 });
+    expect(store.readBoard().reduce((sum, row) => sum + row.net, 0)).toBe(0);
   });
   it("resumes a timed-out lesson by waiting on the same job instead of writing it again", async () => {
     let waits = 0;

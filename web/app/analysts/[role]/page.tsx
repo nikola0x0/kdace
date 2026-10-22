@@ -39,7 +39,7 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
 
           <div className="ap-kpis">
             <div className="ap-kpi big"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Accuracy{s.settled ? ` · ${s.correct}/${s.settled}` : ""}</span></div>
-            <div className="ap-kpi"><b className="num">{s.points}</b><span>Points</span></div>
+            <div className="ap-kpi"><b className="num">{s.balance.toLocaleString("en-US")}</b><span>AXP</span></div>
             <div className="ap-kpi"><b className="num">{s.k}/{s.d}/{s.a}</b><span>K / D / A</span></div>
             <div className="ap-kpi"><b className="num">{s.memories}</b><span>Memories</span></div>
             <div className="ap-kpi"><b className="num">{s.recalled}</b><span>Recalled</span></div>

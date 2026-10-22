@@ -1,7 +1,8 @@
 // Pure verification checks: anyone can re-run these against chain data and the published records.
+import { analystEntries } from "./analysts.ts";
 import { batchHash, canonicalBatch } from "./batch.ts";
 import { FAN_PREFIX, fanMarketId } from "./fans.ts";
-import { computeBoard } from "./points.ts";
+import { computeBoard, marketNet } from "./points.ts";
 import { toSettled, type SeriesRecord, type Store } from "./store.ts";
 import type { Series } from "./worlds.ts";
 
@@ -10,14 +11,10 @@ type LedgerEvent = { type: "BatchCommitted" | "ResultPosted"; json: Record<strin
 const hashHex = (raw: unknown): string =>
   Array.isArray(raw) ? Buffer.from(raw as number[]).toString("hex") : typeof raw === "string" ? Buffer.from(raw, "base64").toString("hex") : "";
 
-/** The picks shown to people must be exactly the ones that were hashed. */
+/** The picks and stakes shown to people must be exactly the ones that were hashed. */
 function picksMatchBatch(r: SeriesRecord): boolean {
   if (!r.batch) return false;
-  const shown = canonicalBatch(r.series.matchId, r.picks.flatMap((p) => [
-    { player: p.player, market: "winner" as const, choice: p.winner },
-    ...(r.series.bestOf > 1 && p.score ? [{ player: p.player, market: "score" as const, choice: p.score }] : []),
-  ]));
-  return shown === r.batch;
+  return canonicalBatch(r.series.matchId, analystEntries(r.series.bestOf, r.picks)) === r.batch;
 }
 
 /**
@@ -56,6 +53,14 @@ export function checkFans(r: SeriesRecord, commit: LedgerEvent, official: Series
   };
 }
 
+/** A settled record's AXP results must be exactly what its published batches (analysts and fans) pay out. */
+export function axpMatches(r: SeriesRecord): boolean {
+  if (!r.result || !r.axp) return false;
+  const sorted = (o: Record<string, number>) => JSON.stringify(Object.entries(o).sort(([a], [b]) => a.localeCompare(b)));
+  return sorted(marketNet(toSettled(r))) === sorted(r.axp);
+}
+
+/** The leaderboard must be exactly what the settled records' published batches add up to. */
 export function boardMatches(store: Store): boolean {
   const recomputed = computeBoard(store.all().filter((r) => r.status === "settled").map(toSettled));
   return JSON.stringify(recomputed) === JSON.stringify(store.readBoard());

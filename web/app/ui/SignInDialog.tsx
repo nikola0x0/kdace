@@ -37,7 +37,7 @@ function Body({ onClose, onSignedIn }: Props) {
     <div className="overlay" onClick={onClose}>
       <div className="dialog" role="dialog" aria-modal="true" aria-labelledby="signin-title" onClick={(e) => e.stopPropagation()}>
         <h3 id="signin-title">Join the board</h3>
-        <p>Picks are free. Sign in to call every match and race the five AI analysts for points.</p>
+        <p>Picks are free. Sign in to call every match and race the five AI analysts for AXP.</p>
         <GoogleSignIn onSignedIn={onSignedIn} onError={setError} />
         <div className="or"><span />or<span /></div>
         {account ? (

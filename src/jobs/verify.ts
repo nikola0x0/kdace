@@ -1,7 +1,8 @@
-// Verify job: re-checks every committed and settled series against Sui (read through Tatum) and recomputes the board.
+// Verify job: re-checks every committed and settled series against Sui (read through Tatum), recomputes every market's
+// AXP payouts from the published batches, and recomputes the leaderboard.
 // Fan batches (committed under `<matchId>:fans` at lock) are checked the same way.
 import { chainOf } from "../core/chain.ts";
-import { boardMatches, checkFans, checkRecord } from "../core/checks.ts";
+import { axpMatches, boardMatches, checkFans, checkRecord } from "../core/checks.ts";
 import { readLedgerEvent } from "../core/ledger.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
@@ -22,7 +23,8 @@ for (const r of store.all().filter((x) => x.status !== "missed" || fansCommitted
   const relevant: Record<string, boolean> = {
     // A series the analysts missed has no analyst batch; only its fan batch and result are checked.
     ...(r.batch ? analystChecks : {}),
-    ...(r.status === "settled" ? { resultMatchesOfficial } : {}),
+    // A settled series' AXP results are recomputed from its published batches (parimutuel per market).
+    ...(r.status === "settled" ? { resultMatchesOfficial, axpRecomputes: axpMatches(r) } : {}),
   };
   if (fansCommitted(r)) {
     const fanCommit = await readLedgerEvent(r.fans!.commitDigest!, r.fans!.chain);
@@ -39,7 +41,7 @@ for (const r of store.all().filter((x) => x.status !== "missed" || fansCommitted
 
 const board = boardMatches(store);
 if (!board) failures++;
-console.log(`${board ? "PASS" : "FAIL"} board recomputes from settled records (analysts and fans)`);
+console.log(`${board ? "PASS" : "FAIL"} leaderboard recomputes from the settled batches (analysts and fans)`);
 console.log("Note: a second commit for the same match cannot be detected here (Tatum gRPC blocks event listing).");
 console.log("Note: fan picks between lock and the fan commit (normally under a minute) rely on the database's timestamps; the commit itself is checked to land before the start.");
 console.log(failures ? `\n${failures} check group(s) failed.` : "\nAll checks passed.");

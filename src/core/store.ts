@@ -4,7 +4,7 @@ import { join } from "node:path";
 import type { AnalystPick } from "./analysts.ts";
 import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
-import type { BoardRow, SettledSeries } from "./points.ts";
+import { AXP_START, type BoardRow, type SettledSeries } from "./points.ts";
 import type { Series } from "./worlds.ts";
 
 export type SeriesRecord = {
@@ -15,7 +15,8 @@ export type SeriesRecord = {
   batchHash: string | null;
   commitDigest: string | null;
   result: { winner: string; score: string; resultDigest: string } | null;
-  points: Record<string, number> | null;
+  /** Net AXP per player for this series (both markets, analysts and fans), written at settle. */
+  axp: Record<string, number> | null;
   debate: string | null;
   lessons: { player: string; text: string; blobId: string; jobId?: string }[];
   /** Set at commit; missing on records from before the switch to mainnet (see chainOf). */
@@ -39,13 +40,33 @@ export type FanSection = {
 
 const batchEntries = (batch: string | null): BatchEntry[] => (batch ? (JSON.parse(batch) as { entries: BatchEntry[] }).entries : []);
 
-/** A settled record in the shape the points module scores: analysts and fans share each market's pot. */
+const fanBatchEntries = (r: SeriesRecord): BatchEntry[] => (r.fans?.status === "committed" ? batchEntries(r.fans.batch) : []);
+/** Every bet that is on chain: the analysts' batch once committed, and the fans' batch once committed. */
+const allEntries = (r: SeriesRecord): BatchEntry[] => [...(r.commitDigest ? batchEntries(r.batch) : []), ...fanBatchEntries(r)];
+
+/** A settled record in the shape the points module scores: analysts and fans share each market's pool. */
 export const toSettled = (r: SeriesRecord): SettledSeries => ({
   matchId: r.series.matchId,
   bestOf: r.series.bestOf,
-  entries: [...batchEntries(r.batch), ...(r.fans?.status === "committed" ? batchEntries(r.fans.batch) : [])],
+  entries: allEntries(r),
   result: { winner: r.result!.winner, score: r.result!.score },
 });
+
+export type AxpAccount = { start: number; settled: number; open: number; available: number };
+
+/**
+ * A player's AXP from the published records: settled = net over settled series; open = stakes in series that are
+ * committed (or still committing) but not settled yet; available = start + settled − open. A record whose commit was
+ * interrupted past lock is "missed": its analyst batch never reached the chain, so it holds nothing back.
+ */
+export function axpAccount(records: SeriesRecord[], player: string): AxpAccount {
+  let settled = 0, open = 0;
+  for (const r of records) {
+    if (r.status === "settled") settled += r.axp?.[player] ?? 0;
+    else for (const e of [...(r.status === "missed" ? [] : batchEntries(r.batch)), ...fanBatchEntries(r)]) if (e.player === player) open += e.stake;
+  }
+  return { start: AXP_START, settled, open, available: AXP_START + settled - open };
+}
 
 const readJson = <T>(path: string): T => JSON.parse(readFileSync(path, "utf8"));
 const writeJson = (path: string, value: unknown) => writeFileSync(path, JSON.stringify(value, null, 2) + "\n");
