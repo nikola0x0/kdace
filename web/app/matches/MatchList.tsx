@@ -56,13 +56,16 @@ function Row({ c }: { c: CardData }) {
 export default function MatchList({ upcoming, settled }: { upcoming: CardData[]; settled: CardData[] }) {
   const [tab, setTab] = useState<"upcoming" | "results">("upcoming");
   const list = tab === "upcoming" ? upcoming : settled;
+  // Group into match days: a new group starts when a series begins 20+ hours after the group's first one, so a day's
+  // slate stays together in every timezone.
   const groups = useMemo(() => {
-    const m = new Map<string, CardData[]>();
+    const out: [string, CardData[]][] = [];
     for (const c of list) {
-      const k = c.series.startTime.slice(0, 10);
-      m.set(k, [...(m.get(k) ?? []), c]);
+      const g = out[out.length - 1];
+      if (g && Math.abs(Date.parse(c.series.startTime) - Date.parse(g[1][0].series.startTime)) < 20 * 3600_000) g[1].push(c);
+      else out.push([c.series.matchId, [c]]);
     }
-    return [...m.entries()];
+    return out;
   }, [list]);
   return (
     <>
