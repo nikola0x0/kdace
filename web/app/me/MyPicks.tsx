@@ -1,5 +1,5 @@
 "use client";
-// A fan's record: stats up top, then upcoming picks and history as rows with their pick, the result and points earned.
+// A fan's record: stats up top, then upcoming picks and history as rows with their pick, the result and AXP won or lost.
 import Link from "next/link";
 import { useState, type CSSProperties } from "react";
 import { teamColor } from "../../lib/teams";
@@ -11,10 +11,10 @@ export type MyMatch = {
   matchId: string; teamA: string; teamB: string; block: string; bestOf: 1 | 3 | 5; start: string;
   logoA: string | null; logoB: string | null;
   result: { winner: string; score: string } | null;
-  points: Record<string, number>;
+  axp: Record<string, number>;
   fansLocked: boolean;
 };
-type BoardRow = { player: string; rank: number; points: number; k: number; d: number; a: number };
+type BoardRow = { player: string; rank: number; balance: number; k: number; d: number; a: number };
 
 export default function MyPicks({ matches, board }: { matches: Record<string, MyMatch>; board: BoardRow[] }) {
   const { me, ready, signIn } = useFans();
@@ -44,7 +44,7 @@ export default function MyPicks({ matches, board }: { matches: Record<string, My
         <div className="me-name"><span className="ap-label">Signed in as</span><b>{me.displayName}</b></div>
         <div className="me-kpis">
           <div className="ap-kpi big"><b className="num">{history.length ? `${Math.round((correct / history.length) * 100)}%` : "-"}</b><span>Accuracy{history.length ? ` · ${correct}/${history.length}` : ""}</span></div>
-          <div className="ap-kpi"><b className="num">{row?.points ?? 0}</b><span>Points</span></div>
+          <div className="ap-kpi"><b className="num">{(row?.balance ?? 10000).toLocaleString("en-US")}</b><span>AXP</span></div>
           <div className="ap-kpi"><b className="num">{row ? `#${row.rank}` : "-"}</b><span>Board rank</span></div>
           <div className="ap-kpi"><b className="num">{row ? `${row.k}/${row.d}/${row.a}` : "0/0/0"}</b><span>K / D / A</span></div>
           <div className="ap-kpi"><b className="num">{mine.length}</b><span>Picks made</span></div>
@@ -66,7 +66,7 @@ export default function MyPicks({ matches, board }: { matches: Record<string, My
         <div className="lpanel">
           {list.map(({ m, pick }) => {
             const right = m.result ? pick.winner === m.result.winner : null;
-            const pts = m.points[`fan:${me.address}`] ?? 0;
+            const pts = m.axp[`fan:${me.address}`] ?? 0;
             const vars = { "--ta": teamColor(m.teamA), "--tb": teamColor(m.teamB) } as CSSProperties;
             return (
               <Link key={m.matchId} href={`/match/${m.matchId}`} className="mrow" style={vars}>
@@ -82,7 +82,7 @@ export default function MyPicks({ matches, board }: { matches: Record<string, My
                 <div className="mrow-res">
                   {m.result ? <><span className="ap-label">Result</span><b>{m.result.winner} {m.result.score}</b></> : <><span className="ap-label">Status</span><b className="muted">{m.fansLocked ? "Locked on Sui" : "Open"}</b></>}
                 </div>
-                <span className={`call-res ${right === null ? "" : right ? "w" : "l"}`}>{right === null ? "Pending" : right ? `+${pts} pts` : "Missed"}</span>
+                <span className={`call-res ${right === null ? "" : right ? "w" : "l"}`}>{right === null ? "Pending" : `${pts > 0 ? "+" : ""}${pts.toLocaleString("en-US")} AXP`}</span>
               </Link>
             );
           })}

@@ -19,7 +19,7 @@ function Row({ c }: { c: CardData }) {
   const fans = live?.crowd.fans ?? 0;
   const fanA = fans ? Math.round(((live!.crowd.winner[s.teamA] ?? 0) / fans) * 100) : null;
   const aiA = c.consensusA === null ? null : Math.round(c.consensusA);
-  const mine = live?.mine.winner;
+  const mine = live?.mine.winner?.choice;
   const vars = { "--ta": teamColor(s.teamA), "--tb": teamColor(s.teamB) } as CSSProperties;
   const outcome = (t: string, k: 0 | 1) => {
     const ai = aiA === null ? null : k ? 100 - aiA : aiA;

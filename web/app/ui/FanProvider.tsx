@@ -4,15 +4,20 @@
 import dynamic from "next/dynamic";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
-export type Crowd = { fans: number; winner: Record<string, number>; score: Record<string, number> };
-export type OpenSeries = { series: { matchId: string }; lockAt: string; crowd: Crowd; mine: Partial<Record<"winner" | "score", string>> };
-export type Me = { address: string; displayName: string; picks: { matchId: string; market: string; choice: string; updatedAt: string }[] };
+export type Crowd = { fans: number; winner: Record<string, number>; score: Record<string, number>; winnerPool: Record<string, number>; scorePool: Record<string, number> };
+export type MyBet = { choice: string; stake: number };
+export type OpenSeries = { series: { matchId: string }; lockAt: string; crowd: Crowd; mine: Partial<Record<"winner" | "score", MyBet>> };
+export type Axp = { start: number; settled: number; open: number; available: number };
+export type Me = { address: string; displayName: string; picks: { matchId: string; market: string; choice: string; stake: number; updatedAt: string }[]; axp: Axp };
+
+/** Stake used when a caller doesn't pass one (the stake picker is part of the UI redesign). */
+const DEFAULT_STAKE = 100;
 
 type FanState = {
   me: Me | null;
   open: Record<string, OpenSeries>;
   ready: boolean;
-  pick(matchId: string, market: "winner" | "score", choice: string): Promise<void>;
+  pick(matchId: string, market: "winner" | "score", choice: string, stake?: number): Promise<void>;
   signIn(): void;
   signOut(): Promise<void>;
 };
@@ -51,9 +56,9 @@ export default function FanProvider({ children }: { children: React.ReactNode })
   }, [refresh]);
 
   const pick = useCallback(
-    async (matchId: string, market: "winner" | "score", choice: string) => {
+    async (matchId: string, market: "winner" | "score", choice: string, stake = DEFAULT_STAKE) => {
       if (!me) return setDialog(true);
-      const r = await api("/api/picks", { method: "POST", body: JSON.stringify({ matchId, market, choice }) });
+      const r = await api("/api/picks", { method: "POST", body: JSON.stringify({ matchId, market, choice, stake }) });
       if (!r.ok) return say(r.body.error ?? "That pick couldn't be saved. Please try again.");
       say(`Pick saved: ${choice}`);
       await refresh();

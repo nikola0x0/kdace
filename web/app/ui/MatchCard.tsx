@@ -106,15 +106,15 @@ export default function MatchCard({ c }: { c: CardData }) {
           <>
             <div className="picks">
               {[s.teamA, s.teamB].map((t, k) => (
-                <button key={t} className={`pick ${k ? "b" : "a"} ${mine.winner === t ? "on" : ""}`} disabled={closed} onClick={() => pick(s.matchId, "winner", t)}>
-                  {mine.winner === t ? "✓ " : ""}{t}
+                <button key={t} className={`pick ${k ? "b" : "a"} ${mine.winner?.choice === t ? "on" : ""}`} disabled={closed} onClick={() => pick(s.matchId, "winner", t)}>
+                  {mine.winner?.choice === t ? "✓ " : ""}{t}
                 </button>
               ))}
             </div>
             {s.bestOf > 1 && (
               <div className="chips">
                 {SCORES[s.bestOf].map((sc) => (
-                  <button key={sc} className={`chip num ${mine.score === sc ? "on" : ""}`} disabled={closed} onClick={() => pick(s.matchId, "score", sc)}>{sc}</button>
+                  <button key={sc} className={`chip num ${mine.score?.choice === sc ? "on" : ""}`} disabled={closed} onClick={() => pick(s.matchId, "score", sc)}>{sc}</button>
                 ))}
                 <span className="chip-note">exact score</span>
               </div>
