@@ -13,6 +13,8 @@ export type FanRow = {
   createdAt: string;
   authMethod?: FanAuthMethod | null;
   zkloginSalt?: string | null;
+  /** Net AXP over settled series, written by the tick (0 until the fan's first series settles). */
+  axpSettled?: number;
 };
 
 /** One fan batch per series. Written before the chain call (`committing`) and after it (`committed`), like src/jobs/pick.ts. */
@@ -27,6 +29,8 @@ export type FanCommitRow = {
   packageId: string;
   committedAt: string | null;
   attemptedAt: string;
+  /** Set by the tick once this series' result is counted in the fans' axp_settled; until then its stakes stay open. */
+  settledAt?: string | null;
 };
 
 export interface FanDb {
@@ -44,6 +48,10 @@ export interface FanDb {
   insertCommit(row: FanCommitRow): Promise<boolean>;
   /** With `ifAttemptedAt`, only updates if the row still has that attempt stamp. True when a row changed. */
   updateCommit(matchId: string, patch: Partial<FanCommitRow>, ifAttemptedAt?: string): Promise<boolean>;
+  /** Writes each fan's net AXP over settled series (address → net). Touches no other column. */
+  setAxpSettled(nets: Record<string, number>): Promise<void>;
+  /** Stamps settled_at on these fan commits, unless already stamped. */
+  markCommitsSettled(matchIds: string[], at: string): Promise<void>;
   /** Mutex for Referee transactions shared by the tick and the lock route (database clock decides expiry). */
   acquireRefereeLock(holder: string, ttlSeconds: number): Promise<boolean>;
   releaseRefereeLock(holder: string): Promise<void>;
@@ -116,6 +124,16 @@ export class SupabaseFanDb implements FanDb {
     const guard = ifAttemptedAt ? `&attempted_at=${eq(ifAttemptedAt)}` : "";
     const { json } = await this.req("PATCH", `fan_commits?match_id=${eq(matchId)}${guard}`, toRow(patch), "return=representation");
     return Array.isArray(json) && json.length > 0;
+  }
+  async setAxpSettled(nets: Record<string, number>) {
+    const rows = Object.entries(nets).map(([address, net]) => ({ address, axp_settled: net }));
+    if (!rows.length) return;
+    // merge-duplicates updates only the columns sent, so names, salts and sign-in methods are untouched.
+    await this.req("POST", "fans?on_conflict=address", rows, "resolution=merge-duplicates,return=minimal");
+  }
+  async markCommitsSettled(matchIds: string[], at: string) {
+    if (!matchIds.length) return;
+    await this.req("PATCH", `fan_commits?match_id=${inList(matchIds)}&settled_at=is.null`, { settled_at: at }, "return=minimal");
   }
   async acquireRefereeLock(holder: string, ttlSeconds: number) {
     return (await this.req("POST", "rpc/acquire_referee_lock", { p_holder: holder, p_ttl_seconds: ttlSeconds })).json === true;

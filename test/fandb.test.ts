@@ -21,11 +21,34 @@ const A = "0x" + "a".repeat(64);
 describe("SupabaseFanDb", () => {
   it("upserts a pick on (match_id, address, market) so the last pick wins", async () => {
     const { calls, fetchImpl } = fakeFetch(() => ({ status: 201 }));
-    await new SupabaseFanDb(URL_, "sb_secret_x", fetchImpl).upsertPick({ matchId: "m", address: A, market: "winner", choice: "GEN", updatedAt: "2026-10-23T12:00:00.000Z" });
+    await new SupabaseFanDb(URL_, "sb_secret_x", fetchImpl).upsertPick({ matchId: "m", address: A, market: "winner", choice: "GEN", stake: 250, updatedAt: "2026-10-23T12:00:00.000Z" });
     expect(calls[0].method).toBe("POST");
     expect(calls[0].url).toBe(`${URL_}/rest/v1/picks?on_conflict=match_id,address,market`);
     expect(calls[0].headers.Prefer).toContain("resolution=merge-duplicates");
-    expect(calls[0].body).toEqual({ match_id: "m", address: A, market: "winner", choice: "GEN", updated_at: "2026-10-23T12:00:00.000Z" });
+    expect(calls[0].body).toEqual({ match_id: "m", address: A, market: "winner", choice: "GEN", stake: 250, updated_at: "2026-10-23T12:00:00.000Z" });
+  });
+
+  it("writes every fan's settled AXP in one upsert that only touches axp_settled", async () => {
+    const { calls, fetchImpl } = fakeFetch(() => ({ status: 201 }));
+    const db = new SupabaseFanDb(URL_, "k", fetchImpl);
+    await db.setAxpSettled({ [A]: -350 });
+    expect(calls[0].method).toBe("POST");
+    expect(calls[0].url).toBe(`${URL_}/rest/v1/fans?on_conflict=address`);
+    expect(calls[0].headers.Prefer).toContain("resolution=merge-duplicates");
+    expect(calls[0].body).toEqual([{ address: A, axp_settled: -350 }]);
+    await db.setAxpSettled({});
+    expect(calls).toHaveLength(1);
+  });
+
+  it("marks fan commits settled once, leaving ones already marked alone", async () => {
+    const { calls, fetchImpl } = fakeFetch(() => ({ json: [] }));
+    const db = new SupabaseFanDb(URL_, "k", fetchImpl);
+    await db.markCommitsSettled(["m", "n"], "2026-10-23T20:00:00.000Z");
+    expect(calls[0].method).toBe("PATCH");
+    expect(decodeURIComponent(calls[0].url)).toBe(`${URL_}/rest/v1/fan_commits?match_id=in.("m","n")&settled_at=is.null`);
+    expect(calls[0].body).toEqual({ settled_at: "2026-10-23T20:00:00.000Z" });
+    await db.markCommitsSettled([], "t");
+    expect(calls).toHaveLength(1);
   });
 
   it("creates a fan without touching an existing row, or records how they signed in", async () => {
@@ -53,10 +76,10 @@ describe("SupabaseFanDb", () => {
   });
 
   it("maps snake_case rows and filters picks by match ids", async () => {
-    const { calls, fetchImpl } = fakeFetch(() => ({ json: [{ match_id: "m", address: A, market: "score", choice: "2-1", updated_at: "2026-10-23T12:00:00+00:00" }] }));
+    const { calls, fetchImpl } = fakeFetch(() => ({ json: [{ match_id: "m", address: A, market: "score", choice: "2-1", stake: 40, updated_at: "2026-10-23T12:00:00+00:00" }] }));
     const rows = await new SupabaseFanDb(URL_, "k", fetchImpl).picksFor(["m", "n"]);
     expect(decodeURIComponent(calls[0].url)).toBe(`${URL_}/rest/v1/picks?select=*&match_id=in.("m","n")`);
-    expect(rows).toEqual([{ matchId: "m", address: A, market: "score", choice: "2-1", updatedAt: "2026-10-23T12:00:00+00:00" }]);
+    expect(rows).toEqual([{ matchId: "m", address: A, market: "score", choice: "2-1", stake: 40, updatedAt: "2026-10-23T12:00:00+00:00" }]);
     expect(await new SupabaseFanDb(URL_, "k", fetchImpl).picksFor([])).toEqual([]);
     expect(calls).toHaveLength(1);
   });
