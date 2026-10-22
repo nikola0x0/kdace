@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { persona } from "../../../lib/personas";
-import { art, callsOf, cardFor, lessonText, records, schedule, suiscan, walruscan } from "../../../lib/site";
+import { art, callsOf, cardFor, lessonText, records, schedule, suiscan, verifyInput, walruscan } from "../../../lib/site";
+import VerifyButton from "../../ui/VerifyButton";
 import { Avatar, RoleIcon, TeamLogo } from "../../ui/bits";
 import DitherArt from "../../ui/DitherArt";
 import HeroVeil from "../../ui/HeroVeil";
@@ -58,7 +59,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                         <summary>🧠 Recalled {a.recalled.length} lesson{a.recalled.length > 1 ? "s" : ""} from Walrus Memory before picking</summary>
                         <ul>
                           {a.recalled.map((l) => (
-                            <li key={l.blobId}><span className="lesson">{lessonText(l.text)}</span> <span className="muted">· saved {new Date(l.createdAt).toISOString().slice(0, 10)}</span> <a className="walrus" href={walruscan(l.blobId)} target="_blank" rel="noreferrer">on Walrus ↗</a></li>
+                            <li key={l.blobId}><span className="lesson">{lessonText(l.text)}</span> <span className="muted">· saved <LocalTime iso={l.createdAt} format="date" /></span> <a className="walrus" href={walruscan(l.blobId)} target="_blank" rel="noreferrer">on Walrus ↗</a></li>
                           ))}
                         </ul>
                       </details>
@@ -79,6 +80,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                 <h3 style={{ marginTop: 0 }}>Proof</h3>
                 <p className="muted" style={{ marginTop: 0, fontSize: 14 }}>Every pick was fingerprinted and locked on Sui before the game. The result is posted on Sui too. Anyone can re-check.</p>
                 <div className="proof-links">
+                  {r.commitDigest && <VerifyButton input={verifyInput(r)} title={`${s.teamA} vs ${s.teamB}`} />}
                   {r.commitDigest && <a href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">Analysts&apos; picks ↗</a>}
                   {r.fans?.commitDigest && <a href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">Fans&apos; picks ↗</a>}
                   {r.result && <a href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">Result ↗</a>}

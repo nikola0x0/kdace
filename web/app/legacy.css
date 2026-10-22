@@ -401,9 +401,9 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .flow-k { font-size: 11px; color: var(--dim); font-weight: 700; }
 .proof-stats { display: grid; grid-template-columns: 1fr 1fr 1fr 1.5fr; gap: 10px; }
 .verify-box { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 6px; }
-.verify-box code { font-size: 16px; background: #000; border: 1px solid var(--line-2); border-radius: 8px; padding: 8px 12px; color: var(--win); width: max-content; }
+.verify-box code { font-size: 12px; background: #000; border: 1px solid var(--line-2); border-radius: 8px; padding: 8px 12px; color: var(--win); width: max-content; }
 .verify-box .muted { font-size: 12px; }
-.prow { display: grid; grid-template-columns: 1.4fr repeat(4, auto); gap: 10px; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+.prow { display: grid; grid-template-columns: 1.4fr repeat(5, auto); gap: 10px; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--line); }
 .prow:last-child { border-bottom: 0; }
 .chip-link { font-size: 12px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line-2); white-space: nowrap; }
 .chip-link.ok { color: var(--fg-2); } .chip-link.ok:hover { border-color: #555; color: #fff; }

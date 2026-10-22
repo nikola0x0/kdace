@@ -132,3 +132,24 @@ export function analystStats(player: string): AnalystStats {
   const net = row?.net ?? 0;
   return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, balance: row?.balance ?? AXP_START, net, roi: staked ? Math.round((net / staked) * 100) : null, staked, inPlay, best, memories, recalled, form: form.slice(-5) };
 }
+
+/** What the in-browser verifier needs for one series (all public, straight from the published record). */
+export function verifyInput(r: SeriesRecord) {
+  const chain = chainOf(r);
+  return {
+    network: chain.network,
+    packageId: chain.packageId,
+    startTime: r.series.startTime,
+    batch: r.commitDigest ? r.batch : null,
+    commitDigest: r.commitDigest,
+    fansBatch: r.fans?.commitDigest ? r.fans.batch : null,
+    fansDigest: r.fans?.commitDigest ?? null,
+    result: r.result,
+  };
+}
+
+/** Every individual pick locked on Sui so far: analysts' and fans' batch entries. */
+export function picksLocked() {
+  const count = (batch: string | null | undefined) => (batch ? (JSON.parse(batch) as { entries: unknown[] }).entries.length : 0);
+  return records().reduce((n, r) => n + (r.commitDigest ? count(r.batch) : 0) + (r.fans?.commitDigest ? count(r.fans.batch) : 0), 0);
+}

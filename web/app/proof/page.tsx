@@ -1,7 +1,8 @@
 // Proof: the verification chain at a glance, the numbers, and every on-chain link.
 import Link from "next/link";
 import { persona } from "../../lib/personas";
-import { lessonText, records, suiscan, walruscan } from "../../lib/site";
+import { lessonText, picksLocked, records, suiscan, verifyInput, walruscan } from "../../lib/site";
+import VerifyButton from "../ui/VerifyButton";
 
 export const metadata = { title: "Proof · KDAce" };
 
@@ -36,13 +37,13 @@ export default function ProofPage() {
       </div>
 
       <div className="proof-stats">
-        <div className="ap-kpi"><b className="num">{all.length}</b><span>Pick batches on Sui</span></div>
+        <div className="ap-kpi"><b className="num">{picksLocked().toLocaleString("en-US")}</b><span>Picks locked on Sui</span></div>
         <div className="ap-kpi"><b className="num">{results}</b><span>Results on Sui</span></div>
         <div className="ap-kpi"><b className="num">{lessons.length}</b><span>Lessons on Walrus</span></div>
         <div className="verify-box">
           <span className="ap-label">Verify it yourself</span>
-          <code>npm run verify</code>
-          <span className="muted">Re-reads every transaction through Tatum.</span>
+          <span>Press <b>Verify</b> on any match. Your browser checks it against Sui directly.</span>
+          <span className="muted">Developers: <code>npm run verify</code> re-checks everything.</span>
         </div>
       </div>
 
@@ -52,6 +53,7 @@ export default function ProofPage() {
           {all.map((r) => (
             <div className="prow" key={r.series.matchId}>
               <Link href={`/match/${r.series.matchId}`} className="prow-match"><b>{r.series.teamA}</b> <span className="muted">vs</span> <b>{r.series.teamB}</b> <span className="muted">· {r.series.block}</span></Link>
+              <VerifyButton compact input={verifyInput(r)} title={`${r.series.teamA} vs ${r.series.teamB}`} />
               <a className="chip-link ok" href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">Picks locked ↗</a>
               {r.fans?.commitDigest ? <a className="chip-link ok" href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">Fans locked ↗</a> : <span className="chip-link off">No fan picks</span>}
               {r.result ? <a className="chip-link ok" href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">{r.result.winner} {r.result.score} ↗</a> : <span className="chip-link off">Result pending</span>}
