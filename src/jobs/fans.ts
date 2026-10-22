@@ -1,6 +1,6 @@
 // Fan stage of the tick: copy each fan-batch commit from Supabase into data/series/<matchId>.json, so verify and the
-// static site read it from git like everything else. Runs before settle, so points include the fans.
-import type { FanCommitRow } from "../core/fandb.ts";
+// static site read it from git like everything else. Runs before settle, so AXP settlement includes the fans.
+import type { FanCommitRow, FanDb } from "../core/fandb.ts";
 import type { Network } from "../core/chain.ts";
 import { FAN_PREFIX } from "../core/fans.ts";
 import type { FanSection, Store } from "../core/store.ts";
@@ -19,6 +19,30 @@ export function fanAddresses(store: Store): string[] {
   return [...out].sort();
 }
 
+/** Each fan's net AXP over settled series (address → net), from the published records. */
+export function fanSettledNets(store: Store): Record<string, number> {
+  const nets: Record<string, number> = {};
+  for (const r of store.all()) {
+    if (r.status !== "settled") continue;
+    for (const [player, net] of Object.entries(r.axp ?? {})) {
+      if (player.startsWith(FAN_PREFIX)) nets[player.slice(FAN_PREFIX.length)] = (nets[player.slice(FAN_PREFIX.length)] ?? 0) + net;
+    }
+  }
+  return nets;
+}
+
+/**
+ * After settle: writes every fan's settled net to Supabase (fans.axp_settled), then stamps the fan commits of settled
+ * series, so the API stops holding their stakes as open. In that order, so a stake is never both freed and uncounted.
+ */
+export async function syncFanAxp(store: Store, db: FanDb, now: Date): Promise<{ fans: number; settledCommits: string[] }> {
+  const nets = fanSettledNets(store);
+  await db.setAxpSettled(nets);
+  const settledCommits = (await db.listCommits()).filter((c) => !c.settledAt && store.get(c.matchId)?.status === "settled").map((c) => c.matchId);
+  await db.markCommitsSettled(settledCommits, now.toISOString());
+  return { fans: Object.keys(nets).length, settledCommits };
+}
+
 /** Returns the match ids whose record changed. */
 export function mirrorFanCommits(store: Store, rows: FanCommitRow[], series: Series[], log: (msg: string) => void = () => {}): string[] {
   const changed: string[] = [];
@@ -33,7 +57,7 @@ export function mirrorFanCommits(store: Store, rows: FanCommitRow[], series: Ser
     };
     if (JSON.stringify(r.fans) === JSON.stringify(fans)) continue;
     if (r.status === "settled") {
-      // Points are already final; adding fans now would change them after the fact.
+      // AXP is already settled; adding fans now would change it after the fact.
       log(`${row.matchId}: fan batch arrived after settlement, not mirrored`);
       continue;
     }

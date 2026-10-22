@@ -1,13 +1,14 @@
-// Tick (every 30 min): pick first because it is time-critical, then mirror fan commits from Supabase, then settle,
-// then commit and push data/. Each stage is isolated so one failure never skips the others (except: settle waits for
-// a successful fan mirror, so points are never computed without the fans), and one lock keeps manual runs from overlapping.
+// Tick (every 30 min): pick first because it is time-critical, then mirror fan commits from Supabase, then settle, then
+// write the fans' settled AXP back to Supabase, then commit and push data/. Each stage is isolated so one failure never
+// skips the others (except: settle waits for a successful fan mirror, so AXP is never settled without the fans), and one
+// lock keeps manual runs from overlapping.
 import { execFileSync } from "node:child_process";
 import "../core/env.ts"; // loads .env before Supabase settings are read
 import { fanDbFromEnv } from "../core/fandb.ts";
 import { withLock } from "../core/lock.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
-import { fanAddresses, mirrorFanCommits } from "./fans.ts";
+import { fanAddresses, mirrorFanCommits, syncFanAxp } from "./fans.ts";
 import { realPickDeps, runPick } from "./pick.ts";
 import { realSettleDeps, runSettle } from "./settle.ts";
 
@@ -32,6 +33,8 @@ await withLock("data", async () => {
     ["pick", async () => console.log("[tick] pick", await runPick(await realPickDeps(store)))],
     ["fans", fans],
     ["settle", async () => (fansOk ? console.log("[tick] settle", await runSettle(await realSettleDeps(store))) : console.log("[tick] settle skipped: fan commits could not be mirrored"))],
+    // Each fan's settled net goes back to Supabase, where the API checks stakes against available AXP.
+    ["axp", async () => (db ? console.log("[tick] fan axp", await syncFanAxp(store, db, new Date())) : undefined)],
   ] as const) {
     try {
       await run();
