@@ -40,3 +40,8 @@ public fun commit_batch(
 public fun post_result(_: &ResolverCap, market_id: String, winner: String, score: String, clock: &Clock) {
     event::emit(ResultPosted { market_id, winner, score, posted_at_ms: clock.timestamp_ms() });
 }
+
+#[test_only]
+public fun new_resolver_cap_for_testing(ctx: &mut TxContext): ResolverCap {
+    ResolverCap { id: object::new(ctx) }
+}
