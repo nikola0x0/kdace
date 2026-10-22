@@ -220,9 +220,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 24px; align-items: center; }
 .hero-text { position: relative; z-index: 1; }
 .hero-text h1 { margin: 10px 0 14px; }
-.hero-visual { position: relative; height: clamp(360px, 38vw, 560px); border-radius: 18px; overflow: hidden;
-  -webkit-mask-image: radial-gradient(ellipse 70% 72% at 50% 46%, #000 55%, transparent 100%);
-  mask-image: radial-gradient(ellipse 70% 72% at 50% 46%, #000 55%, transparent 100%); }
+.hero-visual { position: relative; height: clamp(380px, 40vw, 600px); }
 .hero-visual .art { height: 100%; }
 @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } .hero-visual { height: 320px; order: -1; } }
 

@@ -15,7 +15,7 @@ export default async function Home() {
   const [upcoming, settled] = await Promise.all([upcomingCards(), settledCards()]);
   const stats = counters();
   const logos = await teamLogos();
-  const banner = art("banner");
+  const banner = art("hero-trophy") ?? art("banner");
   const rows = board().slice(0, 5);
   const names = fanNames();
   // The next slate: everything starting within 20 hours of the first upcoming series (one match day in any timezone).
