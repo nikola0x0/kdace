@@ -23,6 +23,8 @@ export interface FanDb {
   /** Creates the fan row if it doesn't exist yet. */
   ensureFan(address: string): Promise<void>;
   setSuins(address: string, name: string | null, checkedAt: string): Promise<void>;
+  /** Cached SuiNS names (address → name or null) for the given fans. */
+  fanNames(addresses: string[]): Promise<Record<string, string | null>>;
   upsertPick(row: FanPickRow): Promise<void>;
   picksFor(matchIds: string[]): Promise<FanPickRow[]>;
   picksOf(address: string): Promise<FanPickRow[]>;
@@ -71,6 +73,11 @@ export class SupabaseFanDb implements FanDb {
   }
   async setSuins(address: string, name: string | null, checkedAt: string) {
     await this.req("PATCH", `fans?address=${eq(address)}`, { suins_name: name, suins_checked_at: checkedAt }, "return=minimal");
+  }
+  async fanNames(addresses: string[]) {
+    if (!addresses.length) return {};
+    const { json } = await this.req("GET", `fans?select=address,suins_name&address=${inList(addresses)}`);
+    return Object.fromEntries((json as { address: string; suins_name: string | null }[]).map((r) => [r.address, r.suins_name]));
   }
   async upsertPick(row: FanPickRow) {
     await this.req("POST", "picks?on_conflict=match_id,address,market", toRow(row), "resolution=merge-duplicates,return=minimal");

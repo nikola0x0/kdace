@@ -9,7 +9,8 @@ import type { FanCommitRow } from "../src/core/fandb.ts";
 import { seriesToSettle } from "../src/core/select.ts";
 import { Store, toSettled, type SeriesRecord } from "../src/core/store.ts";
 import type { Series } from "../src/core/worlds.ts";
-import { mirrorFanCommits } from "../src/jobs/fans.ts";
+import { fanAddresses, mirrorFanCommits } from "../src/jobs/fans.ts";
+import { playerName } from "../src/core/fans.ts";
 import { runSettle, type SettleDeps } from "../src/jobs/settle.ts";
 
 const A = "0x" + "a".repeat(64);
@@ -93,6 +94,19 @@ describe("runSettle with fans", () => {
     await runSettle(settleDeps(st, asked));
     expect(asked).toEqual([]);
     expect(st.get("x")).toMatchObject({ status: "settled", points: { [`fan:${A}`]: 1000 }, lessons: [] });
+  });
+});
+
+describe("fan names", () => {
+  it("lists the fans who appear in published batches and stores their names for the static site", () => {
+    const st = store();
+    mirrorFanCommits(st, [fanRow], [series]);
+    expect(fanAddresses(st)).toEqual([A]);
+    st.writeFanNames({ [A]: "nikola.sui" });
+    expect(st.readFanNames()).toEqual({ [A]: "nikola.sui" });
+    expect(playerName(`fan:${A}`, st.readFanNames())).toBe("nikola.sui");
+    expect(playerName(`fan:${"0x" + "c".repeat(64)}`, {})).toBe("0xcccc…cccc");
+    expect(playerName("analyst-mid", {})).toBe("Mid");
   });
 });
 

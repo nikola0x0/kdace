@@ -2,9 +2,22 @@
 // static site read it from git like everything else. Runs before settle, so points include the fans.
 import type { FanCommitRow } from "../core/fandb.ts";
 import type { Network } from "../core/chain.ts";
+import { FAN_PREFIX } from "../core/fans.ts";
 import type { FanSection, Store } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
 import { emptyRecord } from "./pick.ts";
+
+/** Every fan address that appears in a published fan batch, sorted. */
+export function fanAddresses(store: Store): string[] {
+  const out = new Set<string>();
+  for (const r of store.all()) {
+    if (!r.fans?.batch) continue;
+    for (const e of (JSON.parse(r.fans.batch) as { entries: { player: string }[] }).entries) {
+      if (e.player.startsWith(FAN_PREFIX)) out.add(e.player.slice(FAN_PREFIX.length));
+    }
+  }
+  return [...out].sort();
+}
 
 /** Returns the match ids whose record changed. */
 export function mirrorFanCommits(store: Store, rows: FanCommitRow[], series: Series[], log: (msg: string) => void = () => {}): string[] {

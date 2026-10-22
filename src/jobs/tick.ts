@@ -7,7 +7,7 @@ import { fanDbFromEnv } from "../core/fandb.ts";
 import { withLock } from "../core/lock.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
-import { mirrorFanCommits } from "./fans.ts";
+import { fanAddresses, mirrorFanCommits } from "./fans.ts";
 import { realPickDeps, runPick } from "./pick.ts";
 import { realSettleDeps, runSettle } from "./settle.ts";
 
@@ -24,6 +24,8 @@ await withLock("data", async () => {
     await db.ping(); // also keeps the free Supabase project from pausing
     const changed = mirrorFanCommits(store, await db.listCommits(), await fetchSeries(), (m) => console.log(`[tick] fans ${m}`));
     console.log("[tick] fans mirrored", changed);
+    const names = await db.fanNames(fanAddresses(store));
+    if (JSON.stringify(names) !== JSON.stringify(store.readFanNames())) store.writeFanNames(names);
     fansOk = true;
   };
   for (const [stage, run] of [

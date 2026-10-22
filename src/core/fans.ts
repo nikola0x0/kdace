@@ -1,6 +1,6 @@
 // Fan pick rules: same markets and valid scores as the analysts, last pick before lock counts.
 // Dependency-free so the web app's API routes can import it.
-import { VALID_SCORES } from "./analysts.ts";
+import { ANALYSTS, VALID_SCORES } from "./analysts.ts";
 import type { BatchEntry } from "./batch.ts";
 import { isLocked, LOCK_MARGIN_MS } from "./select.ts";
 import type { Series } from "./worlds.ts";
@@ -64,7 +64,11 @@ export function pickReceipt(s: Series, r: FanPickRow) {
   };
 }
 
-export const shortAddress = (address: string) => `${address.slice(0, 6)}…${address.slice(-4)}`;
+/** A board or batch player's display name: the analyst's role name, or the fan's SuiNS name / short address. */
+export const playerName = (player: string, fanNames: Record<string, string | null>) =>
+  ANALYSTS.find((a) => a.player === player)?.name ?? (player.startsWith(FAN_PREFIX) ? displayName(player, fanNames[player.slice(FAN_PREFIX.length)]) : player);
+
+export const shortAddress =(address: string) => `${address.slice(0, 6)}…${address.slice(-4)}`;
 
 /** A fan's name wherever they appear: their default SuiNS name, else a shortened address. */
 export const displayName = (addressOrPlayer: string, suinsName?: string | null) =>

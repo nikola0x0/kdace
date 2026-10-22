@@ -67,6 +67,12 @@ describe("SupabaseFanDb", () => {
     await expect(new SupabaseFanDb(URL_, "k", fetchImpl).listCommits()).rejects.toThrow(/500/);
   });
 
+  it("reads cached SuiNS names for a set of fans", async () => {
+    const { calls, fetchImpl } = fakeFetch(() => ({ json: [{ address: A, suins_name: "nikola.sui" }] }));
+    expect(await new SupabaseFanDb(URL_, "k", fetchImpl).fanNames([A])).toEqual({ [A]: "nikola.sui" });
+    expect(decodeURIComponent(calls[0].url)).toBe(`${URL_}/rest/v1/fans?select=address,suins_name&address=in.("${A}")`);
+  });
+
   it("takes the referee lock through an RPC", async () => {
     const { calls, fetchImpl } = fakeFetch(() => ({ json: true }));
     expect(await new SupabaseFanDb(URL_, "k", fetchImpl).acquireRefereeLock("tick", 120)).toBe(true);

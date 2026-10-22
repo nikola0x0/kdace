@@ -19,6 +19,9 @@ export class MemoryFanDb implements FanDb {
     const f = this.fans.get(address);
     if (f) this.fans.set(address, { ...f, suinsName: name, suinsCheckedAt: checkedAt });
   }
+  async fanNames(addresses: string[]) {
+    return Object.fromEntries(addresses.flatMap((a) => (this.fans.has(a) ? [[a, this.fans.get(a)!.suinsName]] : [])));
+  }
   async upsertPick(row: FanPickRow) {
     this.picks.set(`${row.matchId}|${row.address}|${row.market}`, { ...row });
   }

@@ -77,6 +77,16 @@ export class Store {
     writeJson(join(this.dir, "board.json"), rows);
   }
 
+  /** Fans' SuiNS names (address → name or null), copied from Supabase so the static site can show them. */
+  writeFanNames(names: Record<string, string | null>): void {
+    writeJson(join(this.dir, "fans.json"), names);
+  }
+
+  readFanNames(): Record<string, string | null> {
+    const path = join(this.dir, "fans.json");
+    return existsSync(path) ? readJson(path) : {};
+  }
+
   readBoard(): BoardRow[] {
     const path = join(this.dir, "board.json");
     return existsSync(path) ? readJson(path) : [];
