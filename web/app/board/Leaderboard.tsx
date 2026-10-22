@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState, type CSSProperties } from "react";
 import { Avatar, Axp, RoleIcon } from "../ui/bits";
+import Pnl from "../ui/Pnl";
 import { useFans } from "../ui/FanProvider";
 
 export type LbRow = { player: string; name: string; role?: string; color?: string; art?: string | null; balance: number; net: number; inPlay: number; w: number; l: number };
@@ -39,7 +40,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
               {who(r, i === 0 ? 76 : 60)}
               <b className="pod-name">{r.name}</b>
               <span className="pod-bal num"><Axp size={20} /> {fmt(r.balance)}</span>
-              <span className={`num ${r.net > 0 ? "right" : r.net < 0 ? "wrong" : "muted"}`}>{r.net > 0 ? "+" : ""}{fmt(r.net)}</span>
+              <Pnl net={r.net} />
             </div>
           );
         })}
@@ -58,7 +59,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
             <b className="num bal"><Axp size={15} /> {fmt(r.balance)}</b>
             <span className="num">{fmt(r.balance - r.inPlay)}</span>
             <span className="num muted">{r.inPlay ? fmt(r.inPlay) : "-"}</span>
-            <span className={`num ${r.net > 0 ? "right" : r.net < 0 ? "wrong" : "muted"}`}>{r.net > 0 ? "+" : ""}{fmt(r.net)}<small className="muted"> · {r.w}–{r.l}</small></span>
+            <span className="flex items-center gap-2"><Pnl net={r.net} /><small className="num muted">{r.net > 0 ? "+" : ""}{fmt(r.net)} · {r.w}–{r.l}</small></span>
           </div>
         ))}
       </div>
