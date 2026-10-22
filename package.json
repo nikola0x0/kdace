@@ -16,6 +16,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.1.0",
     "@grpc/grpc-js": "^1.14.6",
     "@mysten-incubation/memwal": "^0.1.8",
     "@mysten/sui": "^2.37.0",
