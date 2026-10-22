@@ -10,7 +10,7 @@ export const GOOGLE_JWKS_URL = "https://www.googleapis.com/oauth2/v3/certs";
 const SKEW_SECONDS = 60;
 
 /** Only what the salt needs. The token itself and its other claims are never stored or logged: verify, derive, discard. */
-export type GoogleIdentity = { iss: string; sub: string };
+export type GoogleIdentity = { iss: string; sub: string; picture?: string };
 
 /** Google's signing keys, fetched on first use and cached (jose refetches on an unknown kid, at most every 30 s). */
 let googleKeys: JWTVerifyGetKey | null = null;
@@ -38,7 +38,9 @@ export async function verifyGoogleIdToken(idToken: string, opts: { clientId: str
     throw new Error(`Google ID token rejected: ${(e as Error).message}`);
   }
   if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Google ID token rejected: no subject");
-  return { iss: payload.iss!, sub: payload.sub };
+  // The profile photo, if any: only Google's own image host, so a token can't make us display an arbitrary URL.
+  const picture = typeof payload.picture === "string" && /^https:\/\/[a-z0-9-]+\.googleusercontent\.com\//.test(payload.picture) ? payload.picture : undefined;
+  return { iss: payload.iss!, sub: payload.sub, picture };
 }
 
 /** zkLogin normalizes the bare Google issuer to its https form; the salt does too, so both spellings are one account. */

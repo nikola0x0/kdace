@@ -16,7 +16,7 @@ export class MemoryFanDb implements FanDb {
     if (!this.fans.has(address)) this.fans.set(address, { address, suinsName: null, suinsCheckedAt: null, createdAt: new Date().toISOString(), authMethod: null, zkloginSalt: null });
     if (auth) {
       const f = this.fans.get(address)!;
-      this.fans.set(address, { ...f, authMethod: auth.method, zkloginSalt: auth.zkloginSalt ?? f.zkloginSalt });
+      this.fans.set(address, { ...f, authMethod: auth.method, zkloginSalt: auth.zkloginSalt ?? f.zkloginSalt, avatarUrl: auth.avatarUrl ?? f.avatarUrl ?? null });
     }
   }
   async setSuins(address: string, name: string | null, checkedAt: string) {
@@ -27,7 +27,7 @@ export class MemoryFanDb implements FanDb {
     return Object.fromEntries(addresses.flatMap((a) => (this.fans.has(a) ? [[a, this.fans.get(a)!.suinsName]] : [])));
   }
   async listFans() {
-    return [...this.fans.values()].map((f) => ({ address: f.address, suinsName: f.suinsName ?? null, axpSettled: f.axpSettled ?? 0 }));
+    return [...this.fans.values()].map((f) => ({ address: f.address, suinsName: f.suinsName ?? null, axpSettled: f.axpSettled ?? 0, avatarUrl: f.avatarUrl ?? null }));
   }
   async upsertPick(row: FanPickRow) {
     this.picks.set(`${row.matchId}|${row.address}|${row.market}|${row.choice}`, { ...row });

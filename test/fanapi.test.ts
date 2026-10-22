@@ -99,8 +99,8 @@ describe("Google sign-in", () => {
     const f = fakes({ zkLoginSaltSecret: SALT_SECRET, ...overrides });
     f.deps.verifyGoogleToken = (t) => verifyGoogleIdToken(t, { clientId: CLIENT, jwks, now: f.deps.now() });
     const iat = Math.floor(f.deps.now().getTime() / 1000) - 10;
-    const token = (aud = CLIENT) =>
-      new SignJWT({}).setProtectedHeader({ alg: "RS256", kid: "k1" }).setIssuer("https://accounts.google.com").setAudience(aud).setSubject(SUB).setIssuedAt(iat).setExpirationTime(iat + 3600).sign(privateKey);
+    const token = (aud = CLIENT, claims: Record<string, unknown> = {}) =>
+      new SignJWT(claims).setProtectedHeader({ alg: "RS256", kid: "k1" }).setIssuer("https://accounts.google.com").setAudience(aud).setSubject(SUB).setIssuedAt(iat).setExpirationTime(iat + 3600).sign(privateKey);
     return { ...f, token };
   }
 
@@ -115,6 +115,16 @@ describe("Google sign-in", () => {
     expect(sessionAddress(deps, r.session!)).toBe(address);
     expect(await db.getFan(address)).toMatchObject({ authMethod: "google", zkloginSalt: salt, suinsName: "nikola.sui" });
     expect(verified).toEqual([]); // no wallet signature involved
+  });
+
+  it("keeps the Google profile photo, but only from Google's image host", async () => {
+    const { deps, db, token } = await google();
+    const pic = "https://lh3.googleusercontent.com/a/abc123=s96-c";
+    const r = await googleSignIn(deps, { idToken: await token(CLIENT, { picture: pic }) });
+    const address = (r.body as { address: string }).address;
+    expect((await db.getFan(address))?.avatarUrl).toBe(pic);
+    await googleSignIn(deps, { idToken: await token(CLIENT, { picture: "https://evil.example/x.png" }) });
+    expect((await db.getFan(address))?.avatarUrl).toBe(pic);
   });
 
   it("gives the same address on every sign-in", async () => {
@@ -249,7 +259,7 @@ describe("getMe", () => {
     await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 400 });
     const r = await getMe(deps, A);
     expect(r.body).toEqual({
-      address: A, suinsName: "nikola.sui", displayName: "nikola.sui",
+      address: A, suinsName: "nikola.sui", displayName: "nikola.sui", avatarUrl: null,
       picks: [{ matchId: "x", market: "winner", choice: "GEN", stake: 400, updatedAt: "2026-10-23T12:00:00.000Z" }],
       axp: { start: 10000, settled: 750, open: 400, available: 10350 },
     });
@@ -267,7 +277,7 @@ describe("leaderboardFans", () => {
     const r = await leaderboardFans(deps);
     expect(r.status).toBe(200);
     expect((r.body as { fans: unknown[] }).fans).toEqual(expect.arrayContaining([
-      { address: A, displayName: "nikola.sui", balance: 10000, net: 0, inPlay: 300 },
+      { address: A, displayName: "nikola.sui", avatarUrl: null, balance: 10000, net: 0, inPlay: 300 },
       expect.objectContaining({ address: B, balance: 10420, net: 420, inPlay: 0 }),
     ]));
   });

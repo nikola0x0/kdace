@@ -88,7 +88,7 @@ export async function googleSignIn(deps: FanApiDeps, req: { idToken: unknown }):
   } catch {
     return fail(400, "This Google account can't be used here. Use a crypto wallet instead.");
   }
-  await deps.db.ensureFan(address, { method: "google", zkloginSalt: salt });
+  await deps.db.ensureFan(address, { method: "google", zkloginSalt: salt, ...(id.picture ? { avatarUrl: id.picture } : {}) });
   return startSession(deps, address, deps.now());
 }
 
@@ -174,7 +174,7 @@ export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   for (const p of await deps.db.picksFor(openIds)) if (isOpenPick(p, commits, series)) inPlay[p.address] = (inPlay[p.address] ?? 0) + p.stake;
   return {
     status: 200,
-    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), balance: AXP_START + f.axpSettled, net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
+    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, balance: AXP_START + f.axpSettled, net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
   };
 }
 
@@ -184,5 +184,6 @@ export async function getMe(deps: FanApiDeps, address: string | null): Promise<A
   const rows = (await deps.db.picksOf(address)).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
   const axp = await fanAxp(deps, address, { picks: rows, commits: await deps.db.listCommits(), series: await deps.fetchSeries() });
   const picks = rows.map(({ matchId, market, choice, stake, updatedAt }) => ({ matchId, market, choice, stake, updatedAt }));
-  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), picks, axp } };
+  const avatarUrl = (await deps.db.getFan(address))?.avatarUrl ?? null;
+  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), avatarUrl, picks, axp } };
 }

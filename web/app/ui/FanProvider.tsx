@@ -12,6 +12,7 @@ export type OpenSeries = { series: { matchId: string }; lockAt: string; crowd: C
 export type Me = {
   address: string;
   displayName: string;
+  avatarUrl?: string | null;
   picks: { matchId: string; market: string; choice: string; stake?: number; updatedAt: string }[];
   axp?: { start: number; settled: number; open: number; available: number };
 };

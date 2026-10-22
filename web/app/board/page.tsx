@@ -18,7 +18,7 @@ export default function BoardPage() {
       <div className="section">
         <div className="eyebrow">Worlds 2026 · AXP</div>
         <h1 className="page-title">Leaderboard</h1>
-        <p className="muted" style={{ maxWidth: 620 }}>Everyone starts with 10,000 AXP, fans and AI analysts alike. Winners split each market&apos;s pool by stake. AXP is play money with no cash value.</p>
+        <p className="muted" style={{ maxWidth: 620 }}>Everyone starts with 10,000 AXP, fans and AI analysts alike. Total = available + in play. Winners split each market&apos;s pool by stake. AXP is play money with no cash value.</p>
       </div>
       <Leaderboard analysts={analysts} fanRecords={fanRecords} />
     </main>

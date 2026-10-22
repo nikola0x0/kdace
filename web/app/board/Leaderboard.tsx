@@ -6,7 +6,7 @@ import { Avatar, Axp, RoleIcon } from "../ui/bits";
 import { useFans } from "../ui/FanProvider";
 
 export type LbRow = { player: string; name: string; role?: string; color?: string; art?: string | null; balance: number; net: number; inPlay: number; w: number; l: number };
-type FanApiRow = { address: string; displayName: string; balance: number; net: number; inPlay: number };
+type FanApiRow = { address: string; displayName: string; avatarUrl?: string | null; balance: number; net: number; inPlay: number };
 const fmt = (n: number) => n.toLocaleString("en-US");
 
 export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[]; fanRecords: Record<string, { w: number; l: number }> }) {
@@ -14,7 +14,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
   const [fans, setFans] = useState<LbRow[]>([]);
   useEffect(() => {
     fetch("/api/leaderboard").then((r) => (r.ok ? r.json() : { fans: [] })).then((b: { fans: FanApiRow[] }) =>
-      setFans(b.fans.map((f) => ({ player: `fan:${f.address}`, name: f.displayName, balance: f.balance, net: f.net, inPlay: f.inPlay, w: fanRecords[f.address]?.w ?? 0, l: fanRecords[f.address]?.l ?? 0 }))),
+      setFans(b.fans.map((f) => ({ player: `fan:${f.address}`, name: f.displayName, art: f.avatarUrl ?? null, balance: f.balance, net: f.net, inPlay: f.inPlay, w: fanRecords[f.address]?.w ?? 0, l: fanRecords[f.address]?.l ?? 0 }))),
     ).catch(() => {});
   }, [fanRecords]);
 
@@ -24,7 +24,9 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
   const mineIdx = me ? rows.findIndex((r) => r.player === `fan:${me.address}`) : -1;
 
   const who = (r: LbRow, size: number) =>
-    r.role ? <Avatar name={r.name} color={r.color!} art={r.art} size={size} /> : <span className="pod-fan" style={{ width: size, height: size }}>{r.name.replace(/^0x/, "").slice(0, 2).toUpperCase()}</span>;
+    r.role ? <Avatar name={r.name} color={r.color!} art={r.art} size={size} />
+      : r.art ? <img className="pod-fan" src={r.art} alt="" referrerPolicy="no-referrer" style={{ width: size, height: size, objectFit: "cover" }} />
+      : <span className="pod-fan" style={{ width: size, height: size }}>{r.name.replace(/^0x/, "").slice(0, 2).toUpperCase()}</span>;
 
   return (
     <>
@@ -44,7 +46,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
       </div>
 
       <div className="lpanel">
-        <div className="lb-head"><span>#</span><span>Player</span><span>Balance</span><span>Profit</span><span>In play</span><span>Record</span></div>
+        <div className="lb-head"><span>#</span><span>Player</span><span>Total</span><span>Available</span><span>In play</span><span>Profit</span></div>
         {rows.map((r, i) => (
           <div key={r.player} className={`lb-row ${i === mineIdx ? "me" : ""}`}>
             <span className="num muted">{i + 1}</span>
@@ -54,9 +56,9 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
               <span className="who">{who(r, 30)}{r.name}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
             )}
             <b className="num bal"><Axp size={15} /> {fmt(r.balance)}</b>
-            <span className={`num ${r.net > 0 ? "right" : r.net < 0 ? "wrong" : "muted"}`}>{r.net > 0 ? "+" : ""}{fmt(r.net)}</span>
+            <span className="num">{fmt(r.balance - r.inPlay)}</span>
             <span className="num muted">{r.inPlay ? fmt(r.inPlay) : "-"}</span>
-            <span className="num muted">{r.w}–{r.l}</span>
+            <span className={`num ${r.net > 0 ? "right" : r.net < 0 ? "wrong" : "muted"}`}>{r.net > 0 ? "+" : ""}{fmt(r.net)}<small className="muted"> · {r.w}–{r.l}</small></span>
           </div>
         ))}
       </div>
@@ -66,7 +68,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
           <span className="num">#{mineIdx + 1}</span>
           <b>{rows[mineIdx].name} <span className="tag you">You</span></b>
           <b className="num bal"><Axp size={15} /> {fmt(rows[mineIdx].balance)}</b>
-          <span className="num muted">{rows[mineIdx].inPlay ? `${fmt(rows[mineIdx].inPlay)} in play` : ""}</span>
+          <span className="num muted">{fmt(rows[mineIdx].balance - rows[mineIdx].inPlay)} available · {fmt(rows[mineIdx].inPlay)} in play</span>
         </div>
       )}
     </>

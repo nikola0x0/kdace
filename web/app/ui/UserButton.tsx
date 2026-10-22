@@ -11,8 +11,8 @@ export default function UserButton() {
   return (
     <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
       <Link href="/me" className="axp-pill" title="Available AXP"><Axp size={18} /><b className="num">{available.toLocaleString("en-US")}</b></Link>
-      <Link href="/me" className="btn ghost sm">{me.displayName}</Link>
-      <button className="btn ghost sm" onClick={signOut}>Sign out</button>
+      <Link href="/me" className="btn ghost sm me-btn">{me.avatarUrl ? <img src={me.avatarUrl} alt="" className="me-avatar" referrerPolicy="no-referrer" /> : null}<span className="me-name-txt">{me.displayName}</span></Link>
+      <button className="btn ghost sm signout-btn" onClick={signOut}>Sign out</button>
     </span>
   );
 }

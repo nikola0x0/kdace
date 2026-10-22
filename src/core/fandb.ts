@@ -4,7 +4,7 @@ import type { FanPickRow } from "./fans.ts";
 
 export type FanAuthMethod = "google" | "wallet";
 /** How a fan last signed in. Google fans also carry their zkLogin salt (the only way back to their address without ZKLOGIN_SALT_SECRET). */
-export type FanAuth = { method: FanAuthMethod; zkloginSalt?: string };
+export type FanAuth = { method: FanAuthMethod; zkloginSalt?: string; avatarUrl?: string };
 
 export type FanRow = {
   address: string;
@@ -15,6 +15,8 @@ export type FanRow = {
   zkloginSalt?: string | null;
   /** Net AXP over settled series, written by the tick (0 until the fan's first series settles). */
   axpSettled?: number;
+  /** Google profile photo (Google sign-in only). */
+  avatarUrl?: string | null;
 };
 
 /** One fan batch per series. Written before the chain call (`committing`) and after it (`committed`), like src/jobs/pick.ts. */
@@ -36,7 +38,7 @@ export type FanCommitRow = {
 export interface FanDb {
   getFan(address: string): Promise<FanRow | null>;
   /** Every fan with their cached SuiNS name and settled AXP, for the leaderboard. */
-  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number }[]>;
+  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number; avatarUrl: string | null }[]>;
   /** Creates the fan row if it doesn't exist yet. With `auth`, also records how they signed in (a salt, once set, is kept). */
   ensureFan(address: string, auth?: FanAuth): Promise<void>;
   setSuins(address: string, name: string | null, checkedAt: string): Promise<void>;
@@ -88,8 +90,8 @@ export class SupabaseFanDb implements FanDb {
   }
 
   async listFans() {
-    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled");
-    return (json as { address: string; suins_name: string | null; axp_settled: number }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0 }));
+    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url");
+    return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null }));
   }
   async getFan(address: string) {
     const { json } = await this.req("GET", `fans?select=*&address=${eq(address)}`);
@@ -99,6 +101,7 @@ export class SupabaseFanDb implements FanDb {
     if (!auth) return void (await this.req("POST", "fans?on_conflict=address", { address }, "resolution=ignore-duplicates,return=minimal"));
     const row: Record<string, string> = { address, auth_method: auth.method };
     if (auth.zkloginSalt !== undefined) row.zklogin_salt = auth.zkloginSalt;
+    if (auth.avatarUrl !== undefined) row.avatar_url = auth.avatarUrl;
     await this.req("POST", "fans?on_conflict=address", row, "resolution=merge-duplicates,return=minimal");
   }
   async setSuins(address: string, name: string | null, checkedAt: string) {

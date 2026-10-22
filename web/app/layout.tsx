@@ -4,6 +4,8 @@ import Link from "next/link";
 import "./globals.css";
 import { Logo } from "./ui/bits";
 import FanProvider from "./ui/FanProvider";
+import SeasonBar from "./ui/SeasonBar";
+import TabBar from "./ui/TabBar";
 import UserButton from "./ui/UserButton";
 
 const inter = Inter_Tight({ subsets: ["latin"], variable: "--font-inter-tight", display: "swap" });
@@ -33,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <UserButton />
             </div>
           </header>
+          <SeasonBar />
           {children}
           <footer className="foot">
             <div className="wrap foot-row">
@@ -44,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </nav>
             </div>
           </footer>
+          <TabBar />
         </FanProvider>
       </body>
     </html>

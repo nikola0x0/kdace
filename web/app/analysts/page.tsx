@@ -25,16 +25,19 @@ export default function AnalystsPage() {
             <div className="banner-info">
               <div className="banner-title">{p.title}</div>
               <div className="banner-name display">{p.name}</div>
-              <div className="banner-acc"><b className="num bal"><Axp size={24} /> {s.balance.toLocaleString("en-US")}</b><span className={s.net > 0 ? "right" : s.net < 0 ? "wrong" : ""}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</span></div>
-              <div className="banner-stats">
-                <span><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b>win rate</span>
-                <span><b className="num">{s.settled ? `${s.correct}–${s.settled - s.correct}` : "0–0"}</b>record</span>
-                <span><b className="num">{s.memories}</b>memories</span>
+              <div className="banner-bal">
+                <b className="num bal"><Axp size={22} /> {s.balance.toLocaleString("en-US")}</b>
+                {s.net !== 0 && <span className={`num ${s.net > 0 ? "right" : "wrong"}`}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</span>}
               </div>
-              <div className="banner-form">
-                {s.form.length ? s.form.map((r, i) => <i key={i} className={r === "W" ? "w" : "l"}>{r}</i>) : <span className="muted">{s.calls} calls · no results yet</span>}
+              <div className="banner-more">
+                <div className="stat-strip">
+                  <div><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Win rate</span></div>
+                  <div><b className="num">{s.correct}–{s.settled - s.correct}</b><span>Record</span></div>
+                  <div><b className="num">{s.memories}</b><span>Memories</span></div>
+                </div>
+                {s.form.length > 0 && <div className="banner-form">{s.form.map((r, i) => <i key={i} className={r === "W" ? "w" : "l"}>{r}</i>)}</div>}
+                <p className="banner-quote">{p.personality}</p>
               </div>
-              <p className="banner-quote">{p.personality}</p>
             </div>
           </Link>
         ))}
