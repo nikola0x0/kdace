@@ -65,7 +65,7 @@ export default function GoogleSignIn({ onSignedIn, onError }: { onSignedIn: () =
             }
           },
         });
-        gsi.renderButton(button.current, { type: "standard", theme: "filled_black", size: "large", text: "continue_with", shape: "rectangular", width: 352 });
+        gsi.renderButton(button.current, { type: "standard", theme: "filled_black", size: "large", text: "continue_with", shape: "rectangular", width: Math.min(400, button.current.clientWidth || 352) });
       })
       .catch((e: Error) => callbacks.current.onError(e.message));
     return () => {
@@ -74,5 +74,7 @@ export default function GoogleSignIn({ onSignedIn, onError }: { onSignedIn: () =
   }, []);
 
   if (!clientId) return null;
-  return <div ref={button} />;
+  // Google's button is an iframe; on a page with a dark colour scheme the browser paints it an opaque white backdrop.
+  // A light scheme on just this wrapper keeps the iframe transparent around the button.
+  return <div ref={button} style={{ colorScheme: "light", width: "100%", minHeight: 44 }} />;
 }
