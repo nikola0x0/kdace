@@ -119,7 +119,8 @@ export default function MatchCard({ c }: { c: CardData }) {
                 );
               })}
             </div>
-            {held.length > 0 && <div className="held-line num">You hold {held.map(([t, v]) => `${v.toLocaleString("en-US")} AXP on ${t}`).join(" and ")}</div>}
+            {/* Always takes the same space, so every card in a row lines up whether you hold a position or not. */}
+            <div className="held-line num" aria-hidden={!held.length}>{held.length ? `You hold ${held.map(([t, v]) => `${v.toLocaleString("en-US")} AXP on ${t}`).join(" and ")}` : "\u00a0"}</div>
             {s.bestOf > 1 && (
               <div className="chips">
                 {SCORES[s.bestOf].map((sc) => (

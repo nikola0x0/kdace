@@ -545,6 +545,8 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 
 .pick { display: flex; align-items: center; justify-content: center; gap: 10px; height: 46px; white-space: nowrap; }
 .pick-mult { font-family: var(--font); font-size: 13px; font-weight: 700; letter-spacing: 0; color: var(--kd-muted); }
-.held-line { margin-top: -4px; font-size: 12px; color: var(--win); text-align: center; }
+.held-line { margin-top: -4px; min-height: 16px; line-height: 16px; font-size: 12px; color: var(--win); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pick.on .pick-mult { color: rgba(0,0,0,.65); }
 .lr-held { grid-column: 1 / -1; font-size: 11px; color: var(--win); text-align: center; margin-top: -2px; }
+.card.match .card-body { flex: 1; }
+.card.match .card-foot-row { margin-top: auto; }
