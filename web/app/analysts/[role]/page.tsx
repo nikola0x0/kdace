@@ -1,9 +1,10 @@
-// One analyst: portrait, personality, record, and their memory timeline on Walrus.
+// One analyst: portrait banner, personality and record up top; their Walrus memory and recent calls below.
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { CSSProperties } from "react";
 import { ANALYSTS } from "../../../../src/core/analysts.ts";
 import { PERSONAS, persona } from "../../../lib/personas";
-import { art, board, lessonText, records, walruscan } from "../../../lib/site";
+import { analystStats, art, lessonText, records, walruscan } from "../../../lib/site";
 import { RoleIcon } from "../../ui/bits";
 
 export const generateStaticParams = () => PERSONAS.map((p) => ({ role: p.role }));
@@ -13,70 +14,104 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
   const p = persona(role);
   if (!p) notFound();
   const belief = ANALYSTS.find((a) => a.player === p.player)!.belief;
-  const row = board().find((r) => r.player === p.player);
+  const s = analystStats(p.player);
   const all = records();
-  const memories = all
-    .flatMap((r) => r.lessons.filter((l) => l.player === p.player && l.blobId).map((l) => ({ ...l, series: r.series })))
-    .reverse();
+  const memories = all.flatMap((r) => r.lessons.filter((l) => l.player === p.player && l.blobId).map((l) => ({ ...l, series: r.series }))).reverse();
   const uses = new Map<string, number>();
   for (const r of all) for (const pick of r.picks) if (pick.player === p.player) for (const l of pick.usedLessons ?? []) uses.set(l.blobId, (uses.get(l.blobId) ?? 0) + 1);
-  const picks = all.filter((r) => r.picks.some((x) => x.player === p.player)).reverse().slice(0, 8);
-  const portrait = art(`analyst-${p.role}`);
+  const calls = all.filter((r) => r.picks.some((x) => x.player === p.player)).reverse().slice(0, 10);
+  const img = art(`analyst-${p.role}`);
+  const others = PERSONAS.filter((x) => x.role !== p.role);
 
   return (
-    <main className="wrap">
-      <div className="profile">
-        <div className="portrait" style={{ background: `radial-gradient(circle at 30% 25%, #ffffff55 0, ${p.color} 65%)` }}>
-          {portrait ? <img src={portrait} alt={p.name} /> : p.name.slice(0, 1)}
+    <main className="wrap" style={{ "--c": p.color } as CSSProperties}>
+      <section className="ap-hero">
+        <div className="banner ap-banner">
+          <div className="banner-art" style={img ? { backgroundImage: `url(${img})` } : undefined}>{!img && <span>{p.name.slice(0, 1)}</span>}</div>
+          <div className="banner-shade" />
+          <div className="banner-top"><RoleIcon role={p.role} size={18} /><span>{p.role.toUpperCase()}</span></div>
         </div>
-        <div>
-          <div className="eyebrow"><RoleIcon role={p.role} /> {p.role.toUpperCase()} · {p.title}</div>
-          <h1 className="page-title">{p.name}</h1>
-          <p style={{ color: "var(--fg-2)", fontSize: 17, maxWidth: 620 }}>{p.personality}</p>
-          <p className="muted" style={{ maxWidth: 620 }}><b style={{ color: "var(--fg)" }}>Believes:</b> {belief}</p>
-          <p className="muted"><b style={{ color: "var(--fg)" }}>Meta picks:</b> {p.meta.join(", ")}</p>
-          <div className="kpis" style={{ marginTop: 18 }}>
-            <div className="kpi"><b className="num">{row?.points ?? 0}</b><span>points</span></div>
-            <div className="kpi"><b className="num">{row ? `${row.k} / ${row.d} / ${row.a}` : "0 / 0 / 0"}</b><span>K / D / A</span></div>
-            <div className="kpi"><b className="num">{memories.length}</b><span>memories on Walrus</span></div>
-            <div className="kpi"><b className="num">{[...uses.values()].reduce((a, b) => a + b, 0)}</b><span>times recalled</span></div>
+
+        <div className="ap-info">
+          <div className="banner-title">{p.title}</div>
+          <h1 className="page-title" style={{ margin: "6px 0 12px" }}>{p.name}</h1>
+          <p className="ap-lead">{p.personality}</p>
+
+          <div className="ap-kpis">
+            <div className="ap-kpi big"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Accuracy{s.settled ? ` · ${s.correct}/${s.settled}` : ""}</span></div>
+            <div className="ap-kpi"><b className="num">{s.points}</b><span>Points</span></div>
+            <div className="ap-kpi"><b className="num">{s.k}/{s.d}/{s.a}</b><span>K / D / A</span></div>
+            <div className="ap-kpi"><b className="num">{s.memories}</b><span>Memories</span></div>
+            <div className="ap-kpi"><b className="num">{s.recalled}</b><span>Recalled</span></div>
+          </div>
+
+          <div className="ap-facts">
+            <div><span className="ap-label">Believes</span><p>{belief}</p></div>
+            <div><span className="ap-label">Meta picks</span><div className="ap-chips">{p.meta.map((m) => <span key={m} className="tag">{m}</span>)}</div></div>
+            <div><span className="ap-label">Form</span><div className="banner-form">{s.form.length ? s.form.map((r, i) => <i key={i} className={r === "W" ? "w" : "l"}>{r}</i>) : <span className="muted">No results yet</span>}</div></div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="two section">
         <section>
-          <div className="section-head"><h2>Memory</h2><span className="muted">Newest first · each one lives in {p.name}&apos;s own Walrus Memory</span></div>
-          {memories.length === 0 && <p className="muted">No lessons yet. {p.name} saves one after every settled series.</p>}
-          <div className="timeline">
-            {memories.map((m) => (
-              <div className="memory" key={m.blobId}>
-                <div className="memory-meta">
-                  <Link href={`/match/${m.series.matchId}`}>{m.series.teamA} vs {m.series.teamB} · {m.series.block}</Link>
-                  <span>{uses.get(m.blobId) ? `recalled ${uses.get(m.blobId)}×` : "not recalled yet"} · <a className="walrus" href={walruscan(m.blobId)} target="_blank" rel="noreferrer">Walrus ↗</a></span>
-                </div>
-                <div className="lesson">{lessonText(m.text)}</div>
-              </div>
-            ))}
+          <div className="section-head stacked">
+            <h2>Memory</h2>
+            <p className="muted">Lessons {p.name} saved to its own Walrus Memory, newest first.</p>
           </div>
+          {memories.length === 0 ? (
+            <div className="panel empty-state">
+              <b>No lessons yet</b>
+              <span className="muted">{p.name} writes one after every settled series, then recalls it before future picks.</span>
+            </div>
+          ) : (
+            <div className="timeline">
+              {memories.map((m) => (
+                <div className="memory" key={m.blobId}>
+                  <div className="memory-meta">
+                    <Link href={`/match/${m.series.matchId}`}>{m.series.teamA} vs {m.series.teamB} · {m.series.block}</Link>
+                    <span>{uses.get(m.blobId) ? `recalled ${uses.get(m.blobId)}×` : "not recalled yet"} · <a className="walrus" href={walruscan(m.blobId)} target="_blank" rel="noreferrer">Walrus ↗</a></span>
+                  </div>
+                  <div className="lesson">{lessonText(m.text)}</div>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
+
         <section>
-          <div className="section-head"><h2>Recent calls</h2></div>
-          <div className="panel">
-            {picks.length === 0 && <p className="muted" style={{ margin: 0 }}>No calls yet.</p>}
-            {picks.map((r) => {
+          <div className="section-head stacked">
+            <h2>Recent calls</h2>
+            <p className="muted">Every pick is locked on Sui before the game.</p>
+          </div>
+          <div className="panel calls">
+            {calls.length === 0 && <span className="muted">No calls yet.</span>}
+            {calls.map((r) => {
               const pick = r.picks.find((x) => x.player === p.player)!;
               const right = r.result ? pick.winner === r.result.winner : null;
               return (
-                <Link key={r.series.matchId} href={`/match/${r.series.matchId}`} className="call-row">
-                  <span>{r.series.teamA} vs {r.series.teamB}</span>
-                  <span className={right === null ? "muted" : right ? "right" : "wrong"}>{pick.winner}{pick.score ? ` ${pick.score}` : ""} · <span className="num">{pick.winProbability}%</span>{right === null ? "" : right ? " ✓" : " ✗"}</span>
+                <Link key={r.series.matchId} href={`/match/${r.series.matchId}`} className="call">
+                  <span className="call-match"><b>{r.series.teamA}</b> <span className="muted">vs</span> <b>{r.series.teamB}</b></span>
+                  <span className="call-pick">{pick.winner}{pick.score ? ` ${pick.score}` : ""} <span className="muted num">{pick.winProbability}%</span></span>
+                  <span className={`call-res ${right === null ? "" : right ? "w" : "l"}`}>{right === null ? "Pending" : right ? "Right" : "Wrong"}</span>
                 </Link>
               );
             })}
           </div>
         </section>
       </div>
+
+      <section className="section">
+        <div className="section-head"><h2>The rest of the crew</h2></div>
+        <div className="crew-row">
+          {others.map((o) => (
+            <Link key={o.role} href={`/analysts/${o.role}`} className="crew-chip" style={{ "--c": o.color } as CSSProperties}>
+              <span className="crew-img" style={art(`analyst-${o.role}`) ? { backgroundImage: `url(${art(`analyst-${o.role}`)})` } : undefined} />
+              <span><b>{o.name}</b><small>{o.title}</small></span>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

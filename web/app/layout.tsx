@@ -35,9 +35,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </header>
           {children}
           <footer className="foot">
-            <div className="wrap">
-              <span>KDAce · built for Total Recall (Tatum × Walrus). Picks are free; points have no cash value.</span>
-              <span>KDAce isn&apos;t endorsed by Riot Games and doesn&apos;t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, League of Legends and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</span>
+            <div className="wrap foot-row">
+              <span className="brand-sm"><Logo size={16} /> KDAce</span>
+              <nav className="foot-links">
+                <Link href="/proof">Proof</Link>
+                <Link href="/terms">Terms &amp; legal</Link>
+                <a href="https://github.com/nikola0x0/kdace" target="_blank" rel="noreferrer">Code</a>
+              </nav>
             </div>
           </footer>
         </FanProvider>
