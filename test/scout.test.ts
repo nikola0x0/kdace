@@ -6,6 +6,8 @@ import {
   type SeriesResult,
   aggregateTeam,
   buildTeams,
+  champ,
+  densifyTimes,
   digestFor,
   firstTo,
   floor10,
@@ -131,6 +133,75 @@ function summaryInput() {
   });
 }
 
+// Player-level frames for fun facts. Participants 1-5 blue (KC), 6-10 red (C9), as in the real fixture's metadata.
+type P = { k?: number; d?: number; a?: number };
+function pf(sec: number, blue: ReturnType<typeof tf>, red: ReturnType<typeof tf>, ps: Record<number, P> = {}, state = "in_game"): Frame {
+  return {
+    ...f(sec, blue, red, state),
+    players: Array.from({ length: 10 }, (_, i) => ({ participantId: i + 1, kills: ps[i + 1]?.k ?? 0, deaths: ps[i + 1]?.d ?? 0, assists: ps[i + 1]?.a ?? 0, gold: 0, cs: 0 })),
+  };
+}
+const kcC9 = { "111692118851466302": "KC", "98767991877340524": "C9" };
+
+describe("fun facts", () => {
+  const frames = [
+    pf(0, tf(2500), tf(2500)),
+    pf(60, tf(2600), tf(2600)),
+    pf(95, tf(3000, 1), tf(2700), { 3: { k: 1 }, 8: { d: 1 } }),
+    pf(600, tf(16000, 1), tf(15000), { 3: { k: 1 }, 8: { d: 1 } }),
+    pf(1200, tf(36000, 2, 3), tf(30000), { 3: { k: 1 }, 8: { d: 1 } }),
+    pf(1210, tf(37000, 3, 3), tf(30000), { 3: { k: 2 }, 8: { d: 2 } }),
+    pf(1220, tf(38000, 4, 3), tf(30000), { 3: { k: 4 }, 8: { d: 3 } }),
+    pf(1230, tf(39000, 5, 3), tf(30000), { 3: { k: 5 }, 8: { d: 4 } }),
+    pf(1400, tf(45000, 9, 9), tf(31000, 1, 1), { 3: { k: 5 }, 5: { k: 2, a: 9 }, 7: { k: 0, d: 9, a: 1 }, 8: { d: 4 } }, "finished"),
+  ];
+  const details = [
+    { participantId: 9, kills: 0, deaths: 0, assists: 0, damageShare: 0.2, killParticipation: null, cs: 100, wards: 10 },
+    { participantId: 10, kills: 0, deaths: 0, assists: 0, damageShare: 0.05, killParticipation: null, cs: 20, wards: 90 },
+    { participantId: 4, kills: 0, deaths: 0, assists: 0, damageShare: 0.45, killParticipation: null, cs: 250, wards: 10 },
+  ];
+  const s = summarizeGame({ meta: first.meta!, frames, details: [], teams: kcC9, league: "LCK 2026", number: 1, winnerHint: null });
+  const texts = summarizeGame({ meta: first.meta!, frames, details, teams: kcC9, league: "LCK 2026", number: 1, winnerHint: null }).funFacts.map((x) => x.text);
+  it("spots likely multi-kills only inside a 30-second span", () => {
+    expect(texts).toContain("Likely quadra kill: KC kyeahoo (Syndra) at 20:30");
+  });
+  it("spots rough patches, rough days and deathless games", () => {
+    expect(texts).toContain("C9 Loki (Locke) died 3 times between 20:00 and 20:30");
+    expect(texts).toContain("C9 Blaber (Xin Zhao) finished 0/9/1");
+    expect(texts).toContain("KC Busio (Nautilus) went 2/0/9 without dying");
+  });
+  it("spots an early first blood and a stomp", () => {
+    expect(texts).toContain("First blood before 1:35 (KC)");
+    expect(texts).toContain("KC won in 23:20");
+  });
+  it("spots odd details-feed stats", () => {
+    expect(texts).toContain("C9 Tactical (Ezreal) had 100 CS in 23 min");
+    expect(texts).toContain("C9 Vulcan (Karma) placed 90 wards");
+    expect(texts).toContain("KC Caliste (Miss Fortune) dealt 45% of KC's champion damage");
+    expect(s.funFacts.some((x) => x.kind === "cs")).toBe(false);
+  });
+  it("spots a peaceful early game, a marathon, a 10k comeback and an elder that flipped it", () => {
+    const fs: Frame[] = [];
+    for (let m = 0; m <= 41; m++) {
+      const d = m < 30 ? -m * 400 : -12000 + (m - 30) * 2500; // red leads by 12k at 30:00, blue comes back
+      fs.push(pf(m * 60, tf(2500 + m * 2000 + d / 2, m >= 11 ? 5 : 0, m >= 40 ? 9 : 2, m >= 33 ? ["elder"] : []), tf(2500 + m * 2000 - d / 2, m >= 11 ? 5 : 0, m >= 20 ? 8 : 1), {}, m === 41 ? "finished" : "in_game"));
+    }
+    const t = summarizeGame({ meta: first.meta!, frames: fs, details: [], teams: kcC9, league: "LCK 2026", number: 1, winnerHint: null }).funFacts.map((x) => x.text);
+    expect(t).toContain("No kills before 10:00");
+    expect(t).toContain("Marathon: 41:00");
+    expect(t).toContain("KC came back from 12.0k down");
+    expect(t).toContain("KC took Elder at 33:00 while 7.0k down and won");
+  });
+});
+
+describe("densifyTimes", () => {
+  it("fills the gap where a player's kills jumped by 3+ with 10-second windows", () => {
+    const fs = [pf(0, tf(0), tf(0)), pf(60, tf(0), tf(0)), pf(120, tf(0, 3), tf(0), { 2: { k: 3 } })];
+    expect(densifyTimes(fs)).toEqual(["2026-01-01T00:01:10Z", "2026-01-01T00:01:20Z", "2026-01-01T00:01:30Z", "2026-01-01T00:01:40Z", "2026-01-01T00:01:50Z"]);
+    expect(densifyTimes(fs.slice(0, 2))).toEqual([]);
+  });
+});
+
 describe("summarizeGame (real fixture)", () => {
   const s = summarizeGame({ meta: first.meta!, frames, details, teams: { "111692118851466302": "KC", "98767991877340524": "C9" }, league: "Worlds 2026", number: 1, winnerHint: null });
   it("names sides, winner, gold at 15 and duration", () => {
@@ -250,6 +321,14 @@ describe("aggregateTeam", () => {
   });
 });
 
+describe("champ", () => {
+  it("turns feed ids into display names", () => {
+    expect(champ("MissFortune")).toBe("Miss Fortune");
+    expect(champ("MonkeyKing")).toBe("Wukong");
+    expect(champ("KSante")).toBe("K'Sante");
+  });
+});
+
 describe("digestFor", () => {
   const games = [summary()];
   const teams = buildTeams(["BLG", "TES", "GEN"], series, games);
@@ -261,6 +340,21 @@ describe("digestFor", () => {
     expect(text).toMatch(/Head-to-head 2026: BLG 3-0 TES/);
     expect(text).toContain("BLG came back from -4.2k at 20:00 vs TES (Worlds 2026)");
     expect(text.split("\n").length).toBeLessThanOrEqual(30);
+  });
+  it("adds at most two fun facts", () => {
+    const withFacts = games.map((g) => ({
+      ...g,
+      funFacts: [
+        { kind: "multikill", team: "BLG", text: "Likely penta kill: BLG Viper (Kai'Sa) at 31:10" },
+        { kind: "stomp", team: "BLG", text: "BLG won in 22:00" },
+        { kind: "roughDay", team: "TES", text: "TES 369 (Rumble) finished 0/8/1" },
+      ],
+    }));
+    const t = digestFor("BLG", "TES", teams, series, withFacts);
+    expect(t).toContain("Fun facts:");
+    expect(t).toContain("Likely penta kill: BLG Viper (Kai'Sa) at 31:10 (vs TES, Worlds 2026)");
+    expect(t.split("\n").filter((l) => l.startsWith("  * ")).length).toBe(2);
+    expect(t.split("\n").length).toBeLessThanOrEqual(30);
   });
   it("lists comebacks, throws and big swings as moments", () => {
     expect(moments("BLG", games)).toContain("BLG swung 8.5k in 5 min (23:00-28:00) vs TES (Worlds 2026)");

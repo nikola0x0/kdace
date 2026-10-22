@@ -14,7 +14,18 @@ export type PlayerFrame = { participantId: number; kills: number; deaths: number
 export type Frame = { ts: string; state: string; blue: TeamFrame; red: TeamFrame; players?: PlayerFrame[] };
 export type PlayerMeta = { participantId: number; name: string; champion: string; role: Role };
 export type GameMeta = { gameId: string; matchId: string; patch: string; blue: { teamId: string; players: PlayerMeta[] }; red: { teamId: string; players: PlayerMeta[] } };
-export type PlayerDetail = { participantId: number; kills: number; deaths: number; assists: number; damageShare: number | null; killParticipation: number | null };
+export type PlayerDetail = {
+  participantId: number;
+  kills: number;
+  deaths: number;
+  assists: number;
+  damageShare: number | null;
+  killParticipation: number | null;
+  cs?: number | null;
+  wards?: number | null;
+};
+/** A light, strictly data-derived observation about a game ("Likely quadra kill: ... at 20:30"). */
+export type FunFact = { kind: string; team: string | null; text: string };
 export type EventInfo = { matchId: string; teams: { id: string; code: string }[]; games: { id: string; number: number; state: string; blueId: string; redId: string }[] };
 
 export type SideSummary = {
@@ -56,6 +67,7 @@ export type GameSummary = {
   events: GameEvent[];
   players: PlayerLine[];
   standout: PlayerLine | null;
+  funFacts: FunFact[];
 };
 
 /** Team codes that differ between events for the same organisation (EWC uses its own tags). */
@@ -135,6 +147,8 @@ export function parseDetails(json: any): PlayerDetail[] {
     assists: p.assists,
     damageShare: typeof p.championDamageShare === "number" ? p.championDamageShare : null,
     killParticipation: typeof p.killParticipation === "number" ? p.killParticipation : null,
+    cs: typeof p.creepScore === "number" ? p.creepScore : null,
+    wards: typeof p.wardsPlaced === "number" ? p.wardsPlaced : null,
   }));
 }
 
@@ -320,6 +334,8 @@ export function summarizeGame(input: GameInput): GameSummary {
   const kda = (p: PlayerLine) => (p.k + p.a) / Math.max(1, p.d);
   const standout = [...players].sort((a, b) => b.k - a.k || kda(b) - kda(a))[0] ?? null;
 
+  const funFacts = findFunFacts({ meta, frames, details, code, t0ms, duration, winner, events, comeback, players, firstBloodFrame: fb ? atFirst("kills") : null, fb });
+
   const side15 = frameNear(frames, t0ms + 15 * 60_000);
   const sideSummary = (side: Side): SideSummary => {
     const champions = Object.fromEntries(ROLES.map((r) => [r, meta[side].players.find((p) => p.role === r)?.champion ?? ""])) as Record<Role, string>;
@@ -359,7 +375,117 @@ export function summarizeGame(input: GameInput): GameSummary {
     events,
     players,
     standout,
+    funFacts,
   };
+}
+
+// ---------- fun facts ----------
+
+const MULTI_KILL_SEC = 30;
+const ROUGH_PATCH_SEC = 125;
+const MULTI = ["", "", "", "triple", "quadra", "penta"];
+
+/** Window start times (10 s apart) that fill any gap over 30 s where one player's kills rose by 3+, so multi-kills can be checked. */
+export function densifyTimes(frames: Frame[]): string[] {
+  const out = new Set<string>();
+  const have = new Set(frames.map((f) => floor10(Date.parse(f.ts))));
+  for (let i = 1; i < frames.length; i++) {
+    const a = frames[i - 1];
+    const b = frames[i];
+    const lo = Date.parse(a.ts);
+    const hi = Date.parse(b.ts);
+    if (hi - lo <= MULTI_KILL_SEC * 1000 || !a.players || !b.players) continue;
+    const jump = b.players.some((p) => p.kills - (a.players!.find((q) => q.participantId === p.participantId)?.kills ?? p.kills) >= 3);
+    if (!jump) continue;
+    for (let t = Math.floor(lo / 10_000) * 10_000 + 10_000; t < hi; t += 10_000) {
+      const iso = floor10(t);
+      if (!have.has(iso)) out.add(iso);
+    }
+  }
+  return [...out].sort();
+}
+
+function findFunFacts(x: {
+  meta: GameMeta;
+  frames: Frame[];
+  details: PlayerDetail[];
+  code: Record<Side, string>;
+  t0ms: number;
+  duration: number;
+  winner: string | null;
+  events: GameEvent[];
+  comeback: GameSummary["comeback"];
+  players: PlayerLine[];
+  firstBloodFrame: Frame | null;
+  fb: Side | null;
+}): FunFact[] {
+  const facts: FunFact[] = [];
+  const at = (ts: string) => clock((Date.parse(ts) - x.t0ms) / 60_000);
+  const who = new Map<number, { team: string; name: string; champion: string; role: Role }>();
+  for (const side of ["blue", "red"] as const) for (const p of x.meta[side].players) who.set(p.participantId, { team: x.code[side], name: p.name, champion: champ(p.champion), role: p.role });
+  const label = (id: number) => `${who.get(id)!.name} (${who.get(id)!.champion})`;
+  const withPlayers = x.frames.filter((f) => f.players?.length);
+
+  // Per-player streaks from frames: kills rising 3+ inside 30 s, deaths rising 3+ inside ~2 min.
+  for (const id of who.keys()) {
+    const series = withPlayers.map((f) => ({ ms: Date.parse(f.ts), ts: f.ts, p: f.players!.find((p) => p.participantId === id) })).filter((s) => s.p);
+    // Every frame j where 3+ kills landed since the earliest frame within 30 s; overlapping spans are one burst.
+    const bursts: { n: number; start: number; end: number; ts: string }[] = [];
+    for (let j = 0; j < series.length; j++) {
+      const i = series.findIndex((s) => series[j].ms - s.ms <= MULTI_KILL_SEC * 1000);
+      const n = series[j].p!.kills - series[i].p!.kills;
+      if (n < 3) continue;
+      const prev = bursts.at(-1);
+      if (prev && series[i].ms < prev.end) {
+        if (n > prev.n) Object.assign(prev, { n, end: series[j].ms, ts: series[j].ts });
+        else prev.end = Math.max(prev.end, series[j].ms);
+      } else bursts.push({ n, start: series[i].ms, end: series[j].ms, ts: series[j].ts });
+    }
+    for (const b of bursts) facts.push({ kind: "multikill", team: who.get(id)!.team, text: `Likely ${MULTI[Math.min(5, b.n)]} kill: ${label(id)} at ${at(b.ts)}` });
+    for (let j = 0; j < series.length; j++) {
+      const i = series.findIndex((s) => series[j].ms - s.ms <= ROUGH_PATCH_SEC * 1000);
+      if (i >= 0 && i < j && series[j].p!.deaths - series[i].p!.deaths >= 3) {
+        facts.push({ kind: "roughPatch", team: who.get(id)!.team, text: `${label(id)} died ${series[j].p!.deaths - series[i].p!.deaths} times between ${at(series[i].ts)} and ${at(series[j].ts)}` });
+        break;
+      }
+    }
+  }
+
+  // Final lines.
+  for (const p of x.players) {
+    const id = x.meta.blue.players.concat(x.meta.red.players).find((m) => m.name === p.name && m.champion === p.champion)?.participantId;
+    if (id === undefined) continue;
+    if (p.d >= 8 && p.k <= 1) facts.push({ kind: "roughDay", team: p.code, text: `${label(id)} finished ${p.k}/${p.d}/${p.a}` });
+    if (p.d === 0 && p.k + p.a >= 10) facts.push({ kind: "perfect", team: p.code, text: `${label(id)} went ${p.k}/${p.d}/${p.a} without dying` });
+  }
+
+  // Game shape.
+  if (x.firstBloodFrame && x.fb && Date.parse(x.firstBloodFrame.ts) - x.t0ms < 120_000)
+    facts.push({ kind: "earlyBlood", team: x.code[x.fb], text: `First blood before ${at(x.firstBloodFrame.ts)} (${x.code[x.fb]})` });
+  const at10 = frameNear(x.frames, x.t0ms + 600_000, 15_000);
+  if (at10 && at10.blue.kills + at10.red.kills === 0) facts.push({ kind: "peaceful", team: null, text: "No kills before 10:00" });
+  if (x.duration >= 40) facts.push({ kind: "marathon", team: null, text: `Marathon: ${clock(x.duration)}` });
+  if (x.winner && x.duration < 25) facts.push({ kind: "stomp", team: x.winner, text: `${x.winner} won in ${clock(x.duration)}` });
+  if (x.comeback && x.comeback.deficit >= 10_000) facts.push({ kind: "bigComeback", team: x.comeback.team, text: `${x.comeback.team} came back from ${(x.comeback.deficit / 1000).toFixed(1)}k down` });
+  let steals = 0;
+  for (const e of x.events) {
+    if (!e.behind) continue;
+    if (e.type === "elder" && e.team === x.winner) facts.push({ kind: "elderFlip", team: e.team, text: `${e.team} took Elder at ${clock(e.min)} while ${(e.behind / 1000).toFixed(1)}k down and won` });
+    else if ((e.type === "baron" || e.type === "dragon") && e.behind >= 2000 && steals++ < 2)
+      facts.push({ kind: "steal", team: e.team, text: `${e.team} took ${e.type === "baron" ? "Baron" : `a ${e.detail ?? ""} dragon`.replace("  ", " ")} at ${clock(e.min)} while ${(e.behind / 1000).toFixed(1)}k down` });
+  }
+
+  // Odd stats from the details feed.
+  for (const d of x.details) {
+    const p = who.get(d.participantId);
+    if (!p) continue;
+    if (d.cs != null && ["top", "mid", "bottom"].includes(p.role) && x.duration >= 15 && d.cs / x.duration < 5)
+      facts.push({ kind: "cs", team: p.team, text: `${label(d.participantId)} had ${d.cs} CS in ${Math.floor(x.duration)} min` });
+    if (d.wards != null && x.duration >= 15 && d.wards / x.duration >= 3) facts.push({ kind: "wards", team: p.team, text: `${label(d.participantId)} placed ${d.wards} wards` });
+    if (d.damageShare !== null && d.damageShare >= 0.4)
+      facts.push({ kind: "damage", team: p.team, text: `${label(d.participantId)} dealt ${Math.round(d.damageShare * 100)}% of ${p.team}'s champion damage` });
+  }
+  return facts;
 }
 
 // ---------- aggregates ----------
@@ -540,8 +666,16 @@ export function buildTeams(codes: string[], series: SeriesResult[], games: GameS
 
 const k = (gold: number) => `${gold < 0 ? "-" : "+"}${(Math.abs(gold) / 1000).toFixed(1)}k`;
 const pct = (x: number | null) => (x === null ? "n/a" : `${Math.round(x * 100)}%`);
-const clock = (min: number) => `${Math.floor(min)}:${String(Math.round((min % 1) * 60)).padStart(2, "0")}`;
-const champ = (c: string) => c.replace(/([a-z])([A-Z])/g, "$1 $2");
+const clock = (min: number) => {
+  const sec = Math.round(min * 60);
+  return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, "0")}`;
+};
+const CHAMPION_NAMES: Record<string, string> = {
+  MonkeyKing: "Wukong", KSante: "K'Sante", Belveth: "Bel'Veth", Chogath: "Cho'Gath", Kaisa: "Kai'Sa", Khazix: "Kha'Zix",
+  KogMaw: "Kog'Maw", Velkoz: "Vel'Koz", RekSai: "Rek'Sai", Leblanc: "LeBlanc", JarvanIV: "Jarvan IV", Nunu: "Nunu",
+};
+/** Feed champion ids ("MissFortune", "MonkeyKing") as display names. */
+export const champ = (c: string) => CHAMPION_NAMES[c] ?? c.replace(/([a-z])([A-Z])/g, "$1 $2");
 
 /** Notable moments involving a team, best first. Each is one short line. */
 export function moments(code: string, games: GameSummary[], opponent?: string): string[] {
@@ -562,6 +696,27 @@ export function moments(code: string, games: GameSummary[], opponent?: string): 
     if (g.winner === code && g.durationMin < 27) out.push({ score: 2 + (27 - g.durationMin) / 3 + bonus, text: `${code} won in ${clock(g.durationMin)} ${tag}` });
   }
   return out.sort((a, b) => b.score - a.score).map((x) => x.text);
+}
+
+const FUN_WEIGHT: Record<string, number> = {
+  multikill: 4, bigComeback: 7, elderFlip: 6, steal: 5, perfect: 4, roughDay: 4, roughPatch: 3, earlyBlood: 3, cs: 3, wards: 3, damage: 3, peaceful: 2, marathon: 2, stomp: 2,
+};
+
+/** Fun facts from both teams' games, best first, each tagged with the opponent and source. */
+export function funFactsFor(a: string, b: string, games: GameSummary[]): string[] {
+  const out: { score: number; text: string }[] = [];
+  for (const g of games) {
+    const sides = [g.blue.code, g.red.code];
+    if (!sides.includes(a) && !sides.includes(b)) continue;
+    const bonus = (sides.includes(a) && sides.includes(b) ? 3 : 0) + (g.league.startsWith("Worlds ") ? 2 : 0) + Date.parse(g.date) / 1e13;
+    for (const f of g.funFacts ?? []) {
+      if (f.team !== null && f.team !== a && f.team !== b) continue;
+      const opp = f.team === null ? null : sides[0] === f.team ? sides[1] : sides[0];
+      const extra = f.kind === "multikill" ? (/penta/.test(f.text) ? 6 : /quadra/.test(f.text) ? 4 : 1) : 0;
+      out.push({ score: (FUN_WEIGHT[f.kind] ?? 1) + extra + bonus, text: `${f.text} (${opp ? `vs ${opp}` : `${sides[0]} vs ${sides[1]}`}, ${g.league})` });
+    }
+  }
+  return [...new Set(out.sort((x, y) => y.score - x.score).map((x) => x.text))];
 }
 
 function teamLines(t: TeamAggregate): string[] {
@@ -604,5 +759,7 @@ export function digestFor(a: string, b: string, teams: Record<string, TeamAggreg
   const ms = [...moments(a, games, b).slice(0, 2), ...moments(b, games, a).slice(0, 2)];
   const unique = [...new Set(ms)].slice(0, 4);
   if (unique.length) lines.push("Key moments:", ...unique.map((m) => `  - ${m}`));
+  const fun = funFactsFor(a, b, games).slice(0, 2);
+  if (fun.length) lines.push("Fun facts:", ...fun.map((f) => `  * ${f}`));
   return lines.slice(0, 30).join("\n");
 }

@@ -11,6 +11,7 @@ import {
   type GameSummary,
   type SeriesResult,
   buildTeams,
+  densifyTimes,
   digestFor,
   floor10,
   mergeFrames,
@@ -35,6 +36,7 @@ const STEP_WORLDS = 60;
 const STEP_OTHER = Number(process.env.SCOUT_STEP_SEC ?? 120);
 const RECENT_GAMES = Number(process.env.SCOUT_RECENT_GAMES ?? 20);
 const MAX_PROBES = 12;
+const MAX_DENSIFY = 36;
 
 // League slug -> label prefix. Leagues without a Worlds team simply contribute nothing.
 const LEAGUES: Record<string, string> = {
@@ -128,6 +130,8 @@ async function gameFrames(gameId: string, stepSec: number): Promise<{ meta: Retu
   if (!last || last.state !== "finished") return null;
   let frames = mergeFrames(first.frames, end.frames);
   for (const t of sampleTimes(t0, last.ts, stepSec)) frames = mergeFrames(frames, parseWindow(await win(t)).frames);
+  // Fill gaps where a player's kills jumped by 3+ so likely multi-kills can be told apart (capped per game).
+  for (const t of densifyTimes(frames).slice(0, MAX_DENSIFY)) frames = mergeFrames(frames, parseWindow(await win(t)).frames);
   for (let i = 0; i < MAX_PROBES; i++) {
     const probe = nextProbe(frames, ["kills", "towers", "dragons"]);
     if (!probe) break;
