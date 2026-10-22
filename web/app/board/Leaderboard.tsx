@@ -5,7 +5,6 @@ import { useEffect, useState, type CSSProperties } from "react";
 import { Avatar, Axp, RoleIcon } from "../ui/bits";
 import Pnl from "../ui/Pnl";
 import { useFans } from "../ui/FanProvider";
-import { projectedPrizes, usd } from "../../lib/prizes";
 
 export type LbRow = { player: string; name: string; role?: string; /** A fan's favourite role. */ fav?: string | null; color?: string; art?: string | null; balance: number; net: number; inPlay: number; w: number; l: number };
 type FanApiRow = { address: string; displayName: string; avatarUrl?: string | null; favRole?: string | null; balance: number; net: number; inPlay: number };
@@ -23,8 +22,6 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
   const rows = [...analysts, ...fans].sort((a, b) => b.balance - a.balance || b.inPlay - a.inPlay || a.name.localeCompare(b.name));
   const podium = rows.slice(0, 3);
   const order = [1, 0, 2].filter((i) => podium[i]);
-  // Season prize pool preview: what each top-20 fan would win if the season ended now.
-  const prizes = projectedPrizes(rows.map((r) => ({ player: r.player, total: r.balance, net: r.net })));
   const mineIdx = me ? rows.findIndex((r) => r.player === `fan:${me.address}`) : -1;
 
   const who = (r: LbRow, size: number) =>
@@ -57,7 +54,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
             {r.role ? (
               <Link href={`/analysts/${r.role}`} className="who">{who(r, 30)}{r.name} <RoleIcon role={r.role} /><span className="tag">AI</span></Link>
             ) : (
-              <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}{prizes.has(r.player) && <PrizeChip cents={prizes.get(r.player)!.cents} />}</span>
+              <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
             )}
             <b className="num bal"><Axp size={15} /> {fmt(r.balance)}</b>
             <span className="num">{fmt(r.balance - r.inPlay)}</span>
@@ -77,9 +74,4 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
       )}
     </>
   );
-}
-
-/** Projected season prize for a top-20 fan (preview, not live). */
-function PrizeChip({ cents }: { cents: number }) {
-  return <span className="rounded-full border border-dashed border-win/50 px-2 py-0.5 text-[11px] font-semibold text-win tabular-nums" title="Projected prize if the season ended now. Preview: prizes are not live yet.">{usd(cents)}</span>;
 }
