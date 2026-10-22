@@ -28,6 +28,20 @@ describe("SupabaseFanDb", () => {
     expect(calls[0].body).toEqual({ match_id: "m", address: A, market: "winner", choice: "GEN", updated_at: "2026-10-23T12:00:00.000Z" });
   });
 
+  it("creates a fan without touching an existing row, or records how they signed in", async () => {
+    const { calls, fetchImpl } = fakeFetch(() => ({ status: 201 }));
+    const db = new SupabaseFanDb(URL_, "k", fetchImpl);
+    await db.ensureFan(A);
+    expect(calls[0].url).toBe(`${URL_}/rest/v1/fans?on_conflict=address`);
+    expect(calls[0].headers.Prefer).toContain("resolution=ignore-duplicates");
+    expect(calls[0].body).toEqual({ address: A });
+    await db.ensureFan(A, { method: "google", zkloginSalt: "123" });
+    expect(calls[1].headers.Prefer).toContain("resolution=merge-duplicates");
+    expect(calls[1].body).toEqual({ address: A, auth_method: "google", zklogin_salt: "123" });
+    await db.ensureFan(A, { method: "wallet" });
+    expect(calls[2].body).toEqual({ address: A, auth_method: "wallet" }); // keeps a salt recorded earlier
+  });
+
   it("sends the key as apikey, and as a Bearer token only when it is a JWT", async () => {
     const a = fakeFetch();
     await new SupabaseFanDb(URL_, "sb_secret_x", a.fetchImpl).ping();

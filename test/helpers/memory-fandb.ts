@@ -1,5 +1,5 @@
 // In-memory FanDb for tests: same semantics as the Supabase tables (unique keys, conditional updates, the referee lock).
-import type { FanCommitRow, FanDb, FanRow } from "../../src/core/fandb.ts";
+import type { FanAuth, FanCommitRow, FanDb, FanRow } from "../../src/core/fandb.ts";
 import type { FanPickRow } from "../../src/core/fans.ts";
 
 export class MemoryFanDb implements FanDb {
@@ -12,8 +12,12 @@ export class MemoryFanDb implements FanDb {
   async getFan(address: string) {
     return this.fans.get(address) ?? null;
   }
-  async ensureFan(address: string) {
-    if (!this.fans.has(address)) this.fans.set(address, { address, suinsName: null, suinsCheckedAt: null, createdAt: new Date().toISOString() });
+  async ensureFan(address: string, auth?: FanAuth) {
+    if (!this.fans.has(address)) this.fans.set(address, { address, suinsName: null, suinsCheckedAt: null, createdAt: new Date().toISOString(), authMethod: null, zkloginSalt: null });
+    if (auth) {
+      const f = this.fans.get(address)!;
+      this.fans.set(address, { ...f, authMethod: auth.method, zkloginSalt: auth.zkloginSalt ?? f.zkloginSalt });
+    }
   }
   async setSuins(address: string, name: string | null, checkedAt: string) {
     const f = this.fans.get(address);

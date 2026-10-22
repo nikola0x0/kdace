@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { getMe, issueNonce, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
+import { jwtToAddress } from "@mysten/sui/zklogin";
+import { getMe, googleSignIn, issueNonce, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
 import { MemoryFanDb } from "./helpers/memory-fandb.ts";
@@ -82,6 +85,61 @@ describe("sign-in", () => {
     const { deps } = fakes();
     expect(sessionAddress(deps, signToken({ address: A }, "another-secret-0123456789", 60_000, deps.now()))).toBeNull();
     expect(sessionAddress(deps, undefined)).toBeNull();
+  });
+});
+
+describe("Google sign-in", () => {
+  const CLIENT = "kdace-test.apps.googleusercontent.com";
+  const SALT_SECRET = "salt-secret-0123456789abcdef0123456789";
+  const SUB = "110169484474386276334";
+
+  async function google(overrides: Partial<FanApiDeps> = {}) {
+    const { privateKey, publicKey } = await generateKeyPair("RS256");
+    const jwks = createLocalJWKSet({ keys: [{ ...(await exportJWK(publicKey)), kid: "k1", alg: "RS256" }] });
+    const f = fakes({ zkLoginSaltSecret: SALT_SECRET, ...overrides });
+    f.deps.verifyGoogleToken = (t) => verifyGoogleIdToken(t, { clientId: CLIENT, jwks, now: f.deps.now() });
+    const iat = Math.floor(f.deps.now().getTime() / 1000) - 10;
+    const token = (aud = CLIENT) =>
+      new SignJWT({}).setProtectedHeader({ alg: "RS256", kid: "k1" }).setIssuer("https://accounts.google.com").setAudience(aud).setSubject(SUB).setIssuedAt(iat).setExpirationTime(iat + 3600).sign(privateKey);
+    return { ...f, token };
+  }
+
+  it("verifies the token, derives the zkLogin address, records salt and method, and starts a session", async () => {
+    const { deps, db, token, verified } = await google();
+    const idToken = await token();
+    const salt = zkLoginSalt(SALT_SECRET, "https://accounts.google.com", SUB);
+    const address = jwtToAddress(idToken, salt, false);
+    const r = await googleSignIn(deps, { idToken });
+    expect(r.status).toBe(200);
+    expect(r.body).toEqual({ address, suinsName: "nikola.sui", displayName: "nikola.sui" });
+    expect(sessionAddress(deps, r.session!)).toBe(address);
+    expect(await db.getFan(address)).toMatchObject({ authMethod: "google", zkloginSalt: salt, suinsName: "nikola.sui" });
+    expect(verified).toEqual([]); // no wallet signature involved
+  });
+
+  it("gives the same address on every sign-in", async () => {
+    const { deps, token } = await google();
+    const a = (await googleSignIn(deps, { idToken: await token() })).body;
+    const b = (await googleSignIn(deps, { idToken: await token() })).body;
+    expect(a).toEqual(b);
+  });
+
+  it("rejects a token that fails verification, and a missing token", async () => {
+    const { deps, db, token } = await google();
+    expect((await googleSignIn(deps, { idToken: await token("someone-else") })).status).toBe(401);
+    expect((await googleSignIn(deps, { idToken: undefined })).status).toBe(400);
+    expect(db.fans.size).toBe(0);
+  });
+
+  it("is unavailable until Google sign-in is configured", async () => {
+    const { deps } = fakes();
+    expect((await googleSignIn(deps, { idToken: "x.y.z" })).status).toBe(503);
+  });
+
+  it("records wallet sign-ins as such", async () => {
+    const { deps, db } = fakes();
+    await signedIn(deps);
+    expect(await db.getFan(A)).toMatchObject({ authMethod: "wallet" });
   });
 });
 

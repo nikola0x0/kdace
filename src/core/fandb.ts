@@ -2,7 +2,18 @@
 // Server-side only: it uses the service role key, the only key allowed to write. Dependency-free (uses fetch).
 import type { FanPickRow } from "./fans.ts";
 
-export type FanRow = { address: string; suinsName: string | null; suinsCheckedAt: string | null; createdAt: string };
+export type FanAuthMethod = "google" | "wallet";
+/** How a fan last signed in. Google fans also carry their zkLogin salt (the only way back to their address without ZKLOGIN_SALT_SECRET). */
+export type FanAuth = { method: FanAuthMethod; zkloginSalt?: string };
+
+export type FanRow = {
+  address: string;
+  suinsName: string | null;
+  suinsCheckedAt: string | null;
+  createdAt: string;
+  authMethod?: FanAuthMethod | null;
+  zkloginSalt?: string | null;
+};
 
 /** One fan batch per series. Written before the chain call (`committing`) and after it (`committed`), like src/jobs/pick.ts. */
 export type FanCommitRow = {
@@ -20,8 +31,8 @@ export type FanCommitRow = {
 
 export interface FanDb {
   getFan(address: string): Promise<FanRow | null>;
-  /** Creates the fan row if it doesn't exist yet. */
-  ensureFan(address: string): Promise<void>;
+  /** Creates the fan row if it doesn't exist yet. With `auth`, also records how they signed in (a salt, once set, is kept). */
+  ensureFan(address: string, auth?: FanAuth): Promise<void>;
   setSuins(address: string, name: string | null, checkedAt: string): Promise<void>;
   /** Cached SuiNS names (address → name or null) for the given fans. */
   fanNames(addresses: string[]): Promise<Record<string, string | null>>;
@@ -68,8 +79,11 @@ export class SupabaseFanDb implements FanDb {
     const { json } = await this.req("GET", `fans?select=*&address=${eq(address)}`);
     return json?.[0] ? fromRow<FanRow>(json[0]) : null;
   }
-  async ensureFan(address: string) {
-    await this.req("POST", "fans?on_conflict=address", { address }, "resolution=ignore-duplicates,return=minimal");
+  async ensureFan(address: string, auth?: FanAuth) {
+    if (!auth) return void (await this.req("POST", "fans?on_conflict=address", { address }, "resolution=ignore-duplicates,return=minimal"));
+    const row: Record<string, string> = { address, auth_method: auth.method };
+    if (auth.zkloginSalt !== undefined) row.zklogin_salt = auth.zkloginSalt;
+    await this.req("POST", "fans?on_conflict=address", row, "resolution=merge-duplicates,return=minimal");
   }
   async setSuins(address: string, name: string | null, checkedAt: string) {
     await this.req("PATCH", `fans?address=${eq(address)}`, { suins_name: name, suins_checked_at: checkedAt }, "return=minimal");

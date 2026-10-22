@@ -1,5 +1,6 @@
 // The fan API's logic, framework-free: web/app/api/* routes only parse requests, call these and set cookies.
 import type { FanDb } from "./fandb.ts";
+import { googleAddress, zkLoginSalt, type GoogleIdentity } from "./google.ts";
 import { crowdSplit, displayName, lockAt, pickReceipt, validateFanPick, type FanPickRow } from "./fans.ts";
 import { isLocked } from "./select.ts";
 import { newNonce, parseSignInMessage, readToken, signInMessage, signToken } from "./session.ts";
@@ -17,6 +18,10 @@ export type FanApiDeps = {
   verifySignature(bytes: Uint8Array, signature: string, address: string): Promise<void>;
   /** Default SuiNS name on mainnet, or null. */
   lookupName(address: string): Promise<string | null>;
+  /** Google sign-in (both unset = off): throws unless `idToken` is a valid Google ID token for our client ID. */
+  verifyGoogleToken?(idToken: string): Promise<GoogleIdentity>;
+  /** Derives every Google fan's zkLogin salt. Must be backed up: losing it loses the way back to their addresses. */
+  zkLoginSaltSecret?: string;
 };
 
 export type ApiResult = { status: number; body: unknown; session?: string; nonceToken?: string };
@@ -48,13 +53,41 @@ export async function signIn(deps: FanApiDeps, req: { bytes: unknown; signature:
   } catch {
     return fail(401, "signature does not match the address");
   }
-  await deps.db.ensureFan(msg.address);
-  const suinsName = await refreshSuins(deps.db, msg.address, deps.lookupName, now, true);
+  await deps.db.ensureFan(msg.address, { method: "wallet" });
+  return startSession(deps, msg.address, now);
+}
+
+async function startSession(deps: FanApiDeps, address: string, now: Date): Promise<ApiResult> {
+  const suinsName = await refreshSuins(deps.db, address, deps.lookupName, now, true);
   return {
     status: 200,
-    body: { address: msg.address, suinsName, displayName: displayName(msg.address, suinsName) },
-    session: signToken({ address: msg.address }, deps.sessionSecret, SESSION_TTL_MS, now),
+    body: { address, suinsName, displayName: displayName(address, suinsName) },
+    session: signToken({ address }, deps.sessionSecret, SESSION_TTL_MS, now),
   };
+}
+
+/**
+ * Sign in with Google: the verified ID token is the proof. The fan's address is their zkLogin address for our salt,
+ * the same one any zkLogin prover would reach with that salt, on testnet and mainnet alike.
+ */
+export async function googleSignIn(deps: FanApiDeps, req: { idToken: unknown }): Promise<ApiResult> {
+  if (!deps.verifyGoogleToken || !deps.zkLoginSaltSecret) return fail(503, "Google sign-in is not configured on this deployment");
+  if (typeof req.idToken !== "string" || !req.idToken) return fail(400, "idToken is required");
+  let id: GoogleIdentity;
+  try {
+    id = await deps.verifyGoogleToken(req.idToken);
+  } catch {
+    return fail(401, "Google sign-in could not be verified; try again");
+  }
+  const salt = zkLoginSalt(deps.zkLoginSaltSecret, id.iss, id.sub);
+  let address: string;
+  try {
+    address = googleAddress(req.idToken, salt);
+  } catch {
+    return fail(400, "this Google account can't be mapped to a zkLogin address");
+  }
+  await deps.db.ensureFan(address, { method: "google", zkloginSalt: salt });
+  return startSession(deps, address, deps.now());
 }
 
 export const sessionAddress = (deps: Pick<FanApiDeps, "sessionSecret" | "now">, token: string | undefined): string | null =>
