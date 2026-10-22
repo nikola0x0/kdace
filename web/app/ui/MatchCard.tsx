@@ -43,7 +43,6 @@ export default function MatchCard({ c }: { c: CardData }) {
         <TeamLogo code={s.teamA} logo={c.logoA} />
         <span className="vs">vs</span>
         <TeamLogo code={s.teamB} logo={c.logoB} />
-        <div className="dither-line" />
       </div>
       <div className="card-body">
         <div className="card-meta">
