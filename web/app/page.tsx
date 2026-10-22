@@ -53,7 +53,7 @@ export default async function Home() {
             <Link href="/proof">How picks are proven →</Link>
           </div>
           {firstGroup.length ? (
-            <div className="grid">{firstGroup.map((c) => <MatchCard key={c.series.matchId} c={c} />)}</div>
+            <div className="card-grid">{firstGroup.map((c) => <MatchCard key={c.series.matchId} c={c} />)}</div>
           ) : (
             <p className="muted">No matches scheduled right now. The next stage appears here as soon as teams are set.</p>
           )}
@@ -62,7 +62,7 @@ export default async function Home() {
         {rest.length > 0 && (
           <section className="section">
             <div className="section-head"><h2>Upcoming</h2></div>
-            <div className="grid">{rest.map((c) => <MatchCard key={c.series.matchId} c={c} />)}</div>
+            <div className="card-grid">{rest.map((c) => <MatchCard key={c.series.matchId} c={c} />)}</div>
           </section>
         )}
 
@@ -70,7 +70,7 @@ export default async function Home() {
           <div>
             <div className="section-head"><h2>Recent results</h2></div>
             {settled.length ? (
-              <div className="grid">{settled.slice(0, 4).map((c) => <MatchCard key={c.series.matchId} c={c} />)}</div>
+              <div className="card-grid">{settled.slice(0, 4).map((c) => <MatchCard key={c.series.matchId} c={c} />)}</div>
             ) : (
               <p className="muted">Results land here after each series, with the analysts&apos; debate and what they learned.</p>
             )}

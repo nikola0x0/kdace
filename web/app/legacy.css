@@ -67,7 +67,7 @@ img { display: block; }
 .section-head h2 { margin: 0; font-size: 22px; letter-spacing: -.02em; }
 .section-head a { color: var(--kd-muted); font-size: 14px; }
 .section-head a:hover { color: var(--fg); }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
 
 /* Match card */
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
@@ -200,7 +200,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
   .match-head { margin-top: -60px; }
   .match-team { font-size: 20px; }
   .match-team img, .match-team .logo-fallback { width: 56px; height: 56px; }
-  .grid { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
 }
 
 /* Pages */
