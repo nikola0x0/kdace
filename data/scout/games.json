@@ -93125,5 +93125,906 @@
     "text": "KC kyeahoo (Viktor) went 4/0/11 without dying"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095006",
+  "matchId": "115660540726095005",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-23T17:21:19.869Z",
+  "patch": "16.20",
+  "durationMin": 31.4,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "IG",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "JarvanIV",
+    "mid": "Aurora",
+    "bottom": "Jhin",
+    "support": "Alistar"
+   },
+   "gold15": 17401,
+   "kills": 10,
+   "towers": 2,
+   "inhibitors": 0,
+   "dragons": [],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "GEN",
+   "champions": {
+    "top": "Ornn",
+    "jungle": "Qiyana",
+    "mid": "Akali",
+    "bottom": "Corki",
+    "support": "Nautilus"
+   },
+   "gold15": 15655,
+   "kills": 22,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "infernal",
+    "ocean",
+    "cloud",
+    "cloud"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 29.8
+  },
+  "goldDiff": [
+   0,
+   0,
+   null,
+   null,
+   null,
+   null,
+   0,
+   123,
+   3,
+   63,
+   246,
+   -28,
+   346,
+   310,
+   1300,
+   1746,
+   1297,
+   1381,
+   1422,
+   1464,
+   817,
+   1135,
+   92,
+   -477,
+   -1623,
+   -1716,
+   -3231,
+   -4316,
+   -4569,
+   -7408,
+   -8477,
+   -11678
+  ],
+  "leads": {
+   "10": 246,
+   "15": 1746,
+   "20": 817,
+   "25": -1716
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 1746,
+    "min": 15
+   },
+   "red": {
+    "gold": 11678,
+    "min": 31
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 8447,
+   "fromMin": 26,
+   "toMin": 31
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 11.8,
+    "type": "firstBlood",
+    "team": "IG"
+   },
+   {
+    "min": 11.8,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "infernal"
+   },
+   {
+    "min": 17.8,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "ocean",
+    "behind": 1381
+   },
+   {
+    "min": 20.4,
+    "type": "firstTower",
+    "team": "IG"
+   },
+   {
+    "min": 23,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "cloud"
+   },
+   {
+    "min": 28.8,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "cloud"
+   },
+   {
+    "min": 29.8,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 31.4,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 31.4,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 1,
+    "d": 5,
+    "a": 6,
+    "damageShare": 0.35
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 0,
+    "d": 3,
+    "a": 8,
+    "damageShare": 0.102
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Aurora",
+    "role": "mid",
+    "k": 4,
+    "d": 5,
+    "a": 5,
+    "damageShare": 0.303
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 5,
+    "d": 2,
+    "a": 4,
+    "damageShare": 0.198
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 7,
+    "a": 8,
+    "damageShare": 0.047
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Ornn",
+    "role": "top",
+    "k": 1,
+    "d": 3,
+    "a": 11,
+    "damageShare": 0.127
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 8,
+    "d": 1,
+    "a": 10,
+    "damageShare": 0.26899999999999996
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Akali",
+    "role": "mid",
+    "k": 8,
+    "d": 1,
+    "a": 9,
+    "damageShare": 0.29100000000000004
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Corki",
+    "role": "bottom",
+    "k": 5,
+    "d": 2,
+    "a": 12,
+    "damageShare": 0.256
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 16,
+    "damageShare": 0.055999999999999994
+   }
+  ],
+  "standout": {
+   "code": "GEN",
+   "name": "GEN Canyon",
+   "champion": "Qiyana",
+   "role": "jungle",
+   "k": 8,
+   "d": 1,
+   "a": 10,
+   "damageShare": 0.26899999999999996
+  },
+  "funFacts": [
+   {
+    "kind": "roughPatch",
+    "team": "IG",
+    "text": "IG TheShy (Rumble) died 3 times between 25:53 and 29:57"
+   },
+   {
+    "kind": "roughPatch",
+    "team": "IG",
+    "text": "IG Meiko (Alistar) died 3 times between 27:51 and 31:23"
+   },
+   {
+    "kind": "peaceful",
+    "team": null,
+    "text": "No kills before 10:00"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095014",
+  "matchId": "115660540726095013",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-23T18:23:04.908Z",
+  "patch": "16.20",
+  "durationMin": 23.9,
+  "complete": true,
+  "winner": "HLE",
+  "blue": {
+   "code": "TES",
+   "champions": {
+    "top": "KSante",
+    "jungle": "LeeSin",
+    "mid": "Orianna",
+    "bottom": "Ezreal",
+    "support": "Alistar"
+   },
+   "gold15": 25685,
+   "kills": 7,
+   "towers": 0,
+   "inhibitors": 0,
+   "dragons": [
+    "mountain"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "HLE",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Nocturne",
+    "mid": "Locke",
+    "bottom": "Jhin",
+    "support": "Shen"
+   },
+   "gold15": 26429,
+   "kills": 24,
+   "towers": 9,
+   "inhibitors": 2,
+   "dragons": [
+    "hextech",
+    "ocean"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 22
+  },
+  "goldDiff": [
+   0,
+   5,
+   68,
+   74,
+   -5,
+   -92,
+   -134,
+   -470,
+   -446,
+   -612,
+   -1309,
+   -1410,
+   -1845,
+   -1695,
+   -346,
+   -744,
+   -2867,
+   -3064,
+   -6503,
+   -7567,
+   -8783,
+   -9207,
+   -9932,
+   -12812
+  ],
+  "leads": {
+   "10": -1309,
+   "15": -744,
+   "20": -8783
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 74,
+    "min": 3
+   },
+   "red": {
+    "gold": 12812,
+    "min": 23
+   }
+  },
+  "swing": {
+   "team": "HLE",
+   "gold": 8039,
+   "fromMin": 15,
+   "toMin": 20
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 5.9,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "hextech"
+   },
+   {
+    "min": 6.9,
+    "type": "firstBlood",
+    "team": "HLE"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "ocean"
+   },
+   {
+    "min": 17.3,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "mountain",
+    "behind": 3119
+   },
+   {
+    "min": 17.8,
+    "type": "firstTower",
+    "team": "HLE"
+   },
+   {
+    "min": 22,
+    "type": "baron",
+    "team": "HLE"
+   },
+   {
+    "min": 23.9,
+    "type": "inhibitor",
+    "team": "HLE"
+   },
+   {
+    "min": 23.9,
+    "type": "end",
+    "team": "HLE"
+   }
+  ],
+  "players": [
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "KSante",
+    "role": "top",
+    "k": 1,
+    "d": 6,
+    "a": 1,
+    "damageShare": 0.14800000000000002
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 2,
+    "d": 6,
+    "a": 3,
+    "damageShare": 0.18
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 2,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.37799999999999995
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 2,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.222
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.071
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeus",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 1,
+    "d": 0,
+    "a": 16,
+    "damageShare": 0.239
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Kanavi",
+    "champion": "Nocturne",
+    "role": "jungle",
+    "k": 2,
+    "d": 4,
+    "a": 13,
+    "damageShare": 0.115
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeka",
+    "champion": "Locke",
+    "role": "mid",
+    "k": 17,
+    "d": 1,
+    "a": 5,
+    "damageShare": 0.33899999999999997
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Gumayusi",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 4,
+    "d": 0,
+    "a": 13,
+    "damageShare": 0.24
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Delight",
+    "champion": "Shen",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 17,
+    "damageShare": 0.067
+   }
+  ],
+  "standout": {
+   "code": "HLE",
+   "name": "HLE Zeka",
+   "champion": "Locke",
+   "role": "mid",
+   "k": 17,
+   "d": 1,
+   "a": 5,
+   "damageShare": 0.33899999999999997
+  },
+  "funFacts": [
+   {
+    "kind": "roughPatch",
+    "team": "TES",
+    "text": "TES 369 (K'Sante) died 3 times between 16:55 and 20:56"
+   },
+   {
+    "kind": "roughPatch",
+    "team": "TES",
+    "text": "TES Tian (Lee Sin) died 3 times between 19:55 and 23:51"
+   },
+   {
+    "kind": "multikill",
+    "team": "HLE",
+    "text": "Likely triple kill: HLE Zeka (Locke) at 17:35"
+   },
+   {
+    "kind": "perfect",
+    "team": "HLE",
+    "text": "HLE Zeus (Ambessa) went 1/0/16 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "HLE",
+    "text": "HLE Gumayusi (Jhin) went 4/0/13 without dying"
+   },
+   {
+    "kind": "stomp",
+    "team": "HLE",
+    "text": "HLE won in 23:54"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095020",
+  "matchId": "115660540726095019",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-23T19:12:48.863Z",
+  "patch": "16.20",
+  "durationMin": 38.8,
+  "complete": true,
+  "winner": "MKOI",
+  "blue": {
+   "code": "MKOI",
+   "champions": {
+    "top": "Renekton",
+    "jungle": "JarvanIV",
+    "mid": "Sylas",
+    "bottom": "Ezreal",
+    "support": "Karma"
+   },
+   "gold15": 26191,
+   "kills": 18,
+   "towers": 11,
+   "inhibitors": 2,
+   "dragons": [
+    "ocean",
+    "infernal",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 2,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 26.9
+  },
+  "red": {
+   "code": "BLG",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Pantheon",
+    "mid": "Akali",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 25045,
+   "kills": 14,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [
+    "elder"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   668,
+   894,
+   1020,
+   1052,
+   1231,
+   1968,
+   1812,
+   1403,
+   1743,
+   1730,
+   1282,
+   1685,
+   1214,
+   1146,
+   1443,
+   2417,
+   2965,
+   2917,
+   2821,
+   2857,
+   2961,
+   1273,
+   994,
+   1746,
+   1662,
+   2913,
+   4029,
+   5959,
+   3540,
+   3540,
+   2957,
+   2160,
+   2081,
+   3574,
+   3466,
+   4010,
+   4559
+  ],
+  "leads": {
+   "10": 1743,
+   "15": 1146,
+   "20": 2821,
+   "25": 1746
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 5959,
+    "min": 29
+   },
+   "red": {
+    "gold": 5,
+    "min": 1
+   }
+  },
+  "swing": {
+   "team": "MKOI",
+   "gold": 4965,
+   "fromMin": 24,
+   "toMin": 29
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 2,
+    "type": "firstBlood",
+    "team": "MKOI"
+   },
+   {
+    "min": 6.9,
+    "type": "dragon",
+    "team": "MKOI",
+    "detail": "ocean"
+   },
+   {
+    "min": 12.9,
+    "type": "dragon",
+    "team": "MKOI",
+    "detail": "infernal"
+   },
+   {
+    "min": 16.9,
+    "type": "firstTower",
+    "team": "MKOI"
+   },
+   {
+    "min": 18.9,
+    "type": "dragon",
+    "team": "MKOI",
+    "detail": "mountain"
+   },
+   {
+    "min": 24.9,
+    "type": "dragon",
+    "team": "MKOI",
+    "detail": "mountain"
+   },
+   {
+    "min": 26.9,
+    "type": "baron",
+    "team": "MKOI"
+   },
+   {
+    "min": 28.9,
+    "type": "inhibitor",
+    "team": "MKOI"
+   },
+   {
+    "min": 30.9,
+    "type": "elder",
+    "team": "BLG",
+    "behind": 3539
+   },
+   {
+    "min": 34.9,
+    "type": "baron",
+    "team": "MKOI"
+   },
+   {
+    "min": 38.5,
+    "type": "inhibitor",
+    "team": "MKOI"
+   },
+   {
+    "min": 38.8,
+    "type": "end",
+    "team": "MKOI"
+   }
+  ],
+  "players": [
+   {
+    "code": "MKOI",
+    "name": "MKOI Myrwn",
+    "champion": "Renekton",
+    "role": "top",
+    "k": 2,
+    "d": 5,
+    "a": 7,
+    "damageShare": 0.19
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Elyoya",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 2,
+    "d": 3,
+    "a": 14,
+    "damageShare": 0.168
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Jojopyun",
+    "champion": "Sylas",
+    "role": "mid",
+    "k": 9,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.188
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Supa",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 4,
+    "d": 2,
+    "a": 8,
+    "damageShare": 0.375
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Alvaro",
+    "champion": "Karma",
+    "role": "support",
+    "k": 1,
+    "d": 1,
+    "a": 17,
+    "damageShare": 0.08
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 2,
+    "d": 1,
+    "a": 6,
+    "damageShare": 0.23600000000000002
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 3,
+    "d": 3,
+    "a": 7,
+    "damageShare": 0.155
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Akali",
+    "role": "mid",
+    "k": 6,
+    "d": 4,
+    "a": 6,
+    "damageShare": 0.309
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 3,
+    "d": 5,
+    "a": 8,
+    "damageShare": 0.22699999999999998
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 11,
+    "damageShare": 0.073
+   }
+  ],
+  "standout": {
+   "code": "MKOI",
+   "name": "MKOI Jojopyun",
+   "champion": "Sylas",
+   "role": "mid",
+   "k": 9,
+   "d": 3,
+   "a": 4,
+   "damageShare": 0.188
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "MKOI",
+    "text": "Likely triple kill: MKOI Supa (Ezreal) at 38:08"
+   },
+   {
+    "kind": "earlyBlood",
+    "team": "MKOI",
+    "text": "First blood before 1:58 (MKOI)"
+   }
+  ]
  }
 ]
