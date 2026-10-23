@@ -17,6 +17,8 @@ export async function generateStaticParams() {
   return [...ids].map((id) => ({ id }));
 }
 
+const pill = "inline-flex h-9 items-center rounded-full border border-input px-3.5 text-sm text-muted-foreground transition-colors hover:border-neutral-500 hover:text-foreground";
+
 export default async function MatchPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const r = records().find((x) => x.series.matchId === id);
@@ -79,15 +81,15 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
             <MatchCard c={card} />
             <MatchActivity matchId={s.matchId} />
             {r && (
-              <div className="panel">
-                <h3 style={{ marginTop: 0 }}>Proof</h3>
-                <p className="muted" style={{ marginTop: 0, fontSize: 14 }}>Every pick was fingerprinted and locked on Sui before the game. The result is posted on Sui too. Anyone can re-check.</p>
-                <div className="proof-links">
+              <div className="panel grid gap-3">
+                <h3 className="m-0 text-base font-bold">Proof</h3>
+                <p className="m-0 text-sm leading-relaxed text-muted-foreground">Every pick was fingerprinted and locked on Sui before the game. The result is posted on Sui too. Anyone can re-check.</p>
+                <div className="flex flex-wrap items-center gap-2">
                   {r.commitDigest && <VerifyButton input={verifyInput(r)} title={`${s.teamA} vs ${s.teamB}`} />}
-                  {r.commitDigest && <a href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">Analysts&apos; picks ↗</a>}
-                  {r.fans?.commitDigest && <a href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">Fans&apos; picks ↗</a>}
-                  {r.result && <a href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">Result ↗</a>}
-                  <Link href="/proof">How it works</Link>
+                  {r.commitDigest && <a className={pill} href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">Analysts&apos; picks ↗</a>}
+                  {r.fans?.commitDigest && <a className={pill} href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">Fans&apos; picks ↗</a>}
+                  {r.result && <a className={pill} href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">Result ↗</a>}
+                  <Link className={`${pill} border-transparent px-2 hover:border-transparent`} href="/proof">How it works →</Link>
                 </div>
               </div>
             )}

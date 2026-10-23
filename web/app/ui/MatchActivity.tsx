@@ -16,7 +16,7 @@ export default function MatchActivity({ matchId }: { matchId: string }) {
   }, [matchId]);
   return (
     <div className="panel">
-      <h3 style={{ marginTop: 0 }}>Live bets</h3>
+      <h3 className="m-0 mb-3 text-base font-bold">Live bets</h3>
       {buys === null ? <p className="muted" style={{ margin: 0 }}>Loading…</p> : buys.length === 0 ? (
         <p className="muted" style={{ margin: 0 }}>No bets yet. Be the first.</p>
       ) : (
