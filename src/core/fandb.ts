@@ -98,6 +98,10 @@ export interface FanDb {
   releaseRefereeLock(holder: string): Promise<void>;
   /** A cheap read; keeps a free Supabase project from pausing. */
   ping(): Promise<void>;
+  /** When the lock route last dispatched the tick workflow (null before the first). */
+  lastDispatchAt(): Promise<string | null>;
+  /** Records a dispatch at `at` only if the last one was at or before `notSince` (or never): true when this caller won the slot. */
+  claimDispatch(at: string, notSince: string): Promise<boolean>;
 }
 
 const snake = (key: string) => key.replace(/[A-Z]/g, (c) => `_${c.toLowerCase()}`);
@@ -243,6 +247,15 @@ export class SupabaseFanDb implements FanDb {
   }
   async ping() {
     await this.req("GET", "fan_commits?select=match_id&limit=1");
+  }
+  async lastDispatchAt() {
+    const { json } = await this.req("GET", "tick_dispatch?select=last_at&id=eq.1");
+    return (json?.[0]?.last_at as string | null | undefined) ?? null;
+  }
+  async claimDispatch(at: string, notSince: string) {
+    // One conditional UPDATE, so two overlapping lock runs can't both dispatch.
+    const { json } = await this.req("PATCH", `tick_dispatch?id=eq.1&or=(last_at.is.null,last_at.lte.${encodeURIComponent(`"${notSince}"`)})`, { last_at: at }, "return=representation");
+    return Array.isArray(json) && json.length > 0;
   }
 }
 

@@ -125,6 +125,23 @@ describe("SupabaseFanDb", () => {
     expect(calls[0].url).toBe(`${URL_}/rest/v1/rpc/acquire_referee_lock`);
     expect(calls[0].body).toEqual({ p_holder: "tick", p_ttl_seconds: 120 });
   });
+
+  it("claims the tick-dispatch slot with one conditional update (null or at/before notSince)", async () => {
+    const { calls, fetchImpl } = fakeFetch(() => ({ json: [{ id: 1, last_at: "2026-10-23T18:00:00.000Z" }] }));
+    expect(await new SupabaseFanDb(URL_, "k", fetchImpl).claimDispatch("2026-10-23T18:00:00.000Z", "2026-10-23T17:56:00.000Z")).toBe(true);
+    expect(calls[0].method).toBe("PATCH");
+    expect(calls[0].url).toBe(`${URL_}/rest/v1/tick_dispatch?id=eq.1&or=(last_at.is.null,last_at.lte.${encodeURIComponent(`"2026-10-23T17:56:00.000Z"`)})`);
+    expect(calls[0].body).toEqual({ last_at: "2026-10-23T18:00:00.000Z" });
+    expect(calls[0].headers.Prefer).toBe("return=representation");
+    const none = fakeFetch(() => ({ json: [] }));
+    expect(await new SupabaseFanDb(URL_, "k", none.fetchImpl).claimDispatch("a", "b")).toBe(false);
+  });
+  it("reads the last dispatch time", async () => {
+    const { calls, fetchImpl } = fakeFetch(() => ({ json: [{ last_at: "2026-10-23T18:00:00+00:00" }] }));
+    expect(await new SupabaseFanDb(URL_, "k", fetchImpl).lastDispatchAt()).toBe("2026-10-23T18:00:00+00:00");
+    expect(calls[0].url).toBe(`${URL_}/rest/v1/tick_dispatch?select=last_at&id=eq.1`);
+    expect(await new SupabaseFanDb(URL_, "k", fakeFetch(() => ({ json: [] })).fetchImpl).lastDispatchAt()).toBeNull();
+  });
 });
 
 describe("fanDbFromEnv", () => {

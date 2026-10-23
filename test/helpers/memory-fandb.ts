@@ -135,4 +135,13 @@ export class MemoryFanDb implements FanDb {
   async ping() {
     this.pings++;
   }
+  dispatchAt: string | null = null;
+  async lastDispatchAt() {
+    return this.dispatchAt;
+  }
+  async claimDispatch(at: string, notSince: string) {
+    if (this.dispatchAt !== null && Date.parse(this.dispatchAt) > Date.parse(notSince)) return false;
+    this.dispatchAt = at;
+    return true;
+  }
 }
