@@ -2,12 +2,14 @@
 // Analysts come from the published records; fans load live (everyone who has signed in).
 import { PERSONAS } from "../../lib/personas";
 import { analystStats, art, board } from "../../lib/site";
+import { loadRecords } from "../../lib/data";
 import Leaderboard, { type LbRow } from "./Leaderboard";
 import PrizePool from "./PrizePool";
 
 export const metadata = { title: "Leaderboard · KDAce" };
 
-export default function BoardPage() {
+export default async function BoardPage() {
+  await loadRecords();
   const settled = new Map(board().map((r) => [r.player, r]));
   const analysts: LbRow[] = PERSONAS.map((p) => {
     const s = analystStats(p.player);

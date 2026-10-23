@@ -3,6 +3,7 @@ import Link from "next/link";
 import SeasonBar from "./ui/SeasonBar";
 import { PERSONAS, persona } from "../lib/personas";
 import { art, board, counters, fanNames, nameOf, settledCards, teamLogos, titleDay, upcomingCards } from "../lib/site";
+import { loadRecords } from "../lib/data";
 import { Avatar } from "./ui/bits";
 import DitherArt from "./ui/DitherArt";
 import HeroVeil from "./ui/HeroVeil";
@@ -14,6 +15,7 @@ import LocalTime from "./ui/LocalTime";
 import MatchCard from "./ui/MatchCard";
 
 export default async function Home() {
+  await loadRecords();
   const [upcoming, settled] = await Promise.all([upcomingCards(), settledCards()]);
   const stats = counters();
   const logos = await teamLogos();

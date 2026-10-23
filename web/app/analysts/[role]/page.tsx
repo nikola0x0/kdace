@@ -6,11 +6,13 @@ import { ANALYSTS } from "../../../../src/core/analysts.ts";
 import { championIcons } from "../../../lib/champions";
 import { PERSONAS, persona } from "../../../lib/personas";
 import { analystStats, art, lessonText, records, teamLogos, titleCallsOf, walruscan } from "../../../lib/site";
+import { loadRecords } from "../../../lib/data";
 import { Axp, RoleIcon, TeamLogo } from "../../ui/bits";
 
 export const generateStaticParams = () => PERSONAS.map((p) => ({ role: p.role }));
 
 export default async function AnalystPage({ params }: { params: Promise<{ role: string }> }) {
+  await loadRecords();
   const { role } = await params;
   const p = persona(role);
   if (!p) notFound();

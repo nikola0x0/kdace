@@ -3,11 +3,13 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { PERSONAS, shortName } from "../../lib/personas";
 import { analystStats, art } from "../../lib/site";
+import { loadRecords } from "../../lib/data";
 import { Axp, RoleIcon } from "../ui/bits";
 
 export const metadata = { title: "Analysts · KDAce" };
 
-export default function AnalystsPage() {
+export default async function AnalystsPage() {
+  await loadRecords();
   const crew = PERSONAS.map((p) => ({ p, s: analystStats(p.player), img: art(`analyst-${p.role}`) }));
   return (
     <main className="wrap">

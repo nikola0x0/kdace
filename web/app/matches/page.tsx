@@ -1,11 +1,13 @@
 // Matches: every series as a clean list, OKX Outcomes style.
 import { settledCards, upcomingCards } from "../../lib/site";
+import { loadRecords } from "../../lib/data";
 import SeasonBar from "../ui/SeasonBar";
 import MatchList from "./MatchList";
 
 export const metadata = { title: "Matches · KDAce" };
 
 export default async function MatchesPage() {
+  await loadRecords();
   const [upcoming, settled] = await Promise.all([upcomingCards(), settledCards()]);
   return (
     <>

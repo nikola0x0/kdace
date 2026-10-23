@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { persona } from "../../lib/personas";
 import { lessonText, picksLocked, records, suiscan, verifyInput, walruscan } from "../../lib/site";
+import { loadRecords } from "../../lib/data";
 import VerifyButton from "../ui/VerifyButton";
 
 export const metadata = { title: "Proof · KDAce" };
@@ -14,7 +15,8 @@ const STEPS = [
   { k: "05", t: "Lesson on Walrus", d: "Each analyst learns" },
 ];
 
-export default function ProofPage() {
+export default async function ProofPage() {
+  await loadRecords();
   const all = records().filter((r) => r.commitDigest).reverse();
   const lessons = all.flatMap((r) => r.lessons.filter((l) => l.blobId).map((l) => ({ ...l, r })));
   const results = all.filter((r) => r.result).length;

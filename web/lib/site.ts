@@ -1,4 +1,5 @@
-// Server-side data for the pages: published records from ../data, plus the schedule and team logos fetched at build time.
+// Server-side data for the pages: published records (../data, or Supabase with KDACE_STORE=supabase; see ./data), plus
+// the schedule and team logos fetched at build time (the schedule every minute in Supabase mode).
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { aiConsensus } from "../../src/core/consensus.ts";
@@ -8,7 +9,7 @@ import { AXP_START } from "../../src/core/points.ts";
 import { FAN_PREFIX, displayName } from "../../src/core/fans.ts";
 import type { SeriesRecord } from "../../src/core/store.ts";
 import { fetchSeries, fetchTeamLogos, type Series } from "../../src/core/worlds.ts";
-import { store } from "./data";
+import { store, supabaseMode } from "./data";
 import { PERSONAS, persona } from "./personas";
 
 export type AnalystCall = { player: string; name: string; title: string; color: string; art: string | null; winner: string; score: string | null; prob: number; stake: number; reasoning: string; thinking: string | null; recalled: { blobId: string; text: string; createdAt: string }[]; /** The analyst's final-call top-up on its side (committed), or null. */ topUp: { add: number; reasoning: string } | null };
@@ -54,8 +55,13 @@ export const stageKey = (block: string) => {
 let logosCache: Promise<Record<string, string>> | undefined;
 export const teamLogos = () => (logosCache ??= fetchTeamLogos().catch(() => ({}) as Record<string, string>));
 
-let scheduleCache: Promise<Series[]> | undefined;
-export const schedule = () => (scheduleCache ??= fetchSeries().catch(() => []));
+// Fetched once per build in file mode (every data commit redeploys); refreshed every minute in Supabase mode, where
+// pages render per request and nothing redeploys.
+let scheduleCache: { at: number; series: Promise<Series[]> } | undefined;
+export const schedule = () => {
+  if (!scheduleCache || (supabaseMode() && Date.now() - scheduleCache.at > 60_000)) scheduleCache = { at: Date.now(), series: fetchSeries().catch(() => []) };
+  return scheduleCache.series;
+};
 
 export const records = () => store().all().sort((a, b) => a.series.startTime.localeCompare(b.series.startTime));
 export const board = () => store().readBoard();

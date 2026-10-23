@@ -1,10 +1,12 @@
 // My matches: a signed-in fan's record, upcoming picks and history.
 import { board, records, schedule, teamLogos } from "../../lib/site";
+import { loadRecords } from "../../lib/data";
 import MyPicks, { type MyMatch } from "./MyPicks";
 
 export const metadata = { title: "My matches · KDAce" };
 
 export default async function MePage() {
+  await loadRecords();
   const logos = await teamLogos();
   const matches: Record<string, MyMatch> = {};
   const base = (s: { matchId: string; teamA: string; teamB: string; block: string; bestOf: 1 | 3 | 5; startTime: string }): MyMatch => ({
