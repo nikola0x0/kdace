@@ -1,13 +1,17 @@
 // Verify job: re-checks every committed and settled series against Sui (read through Tatum), recomputes every market's
 // AXP payouts from the published batches, and recomputes the leaderboard.
 // Fan batches (committed under `<matchId>:fans` at lock) are checked the same way.
+// Reads data/ by default; with KDACE_RECORDS_URL (e.g. https://kdace.xyz/api/records) it checks the live records instead.
 import { chainOf } from "../core/chain.ts";
 import { axpMatches, boardMatches, checkFans, checkFinalCall, checkRecord, checkTitleDay, checkVoid, startShift } from "../core/checks.ts";
 import { readLedgerEvent } from "../core/ledger.ts";
-import { Store } from "../core/store.ts";
+import { recordsFromUrl } from "../core/records.ts";
+import { Store, type RecordReader } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
 
-const store = new Store();
+const recordsUrl = process.env.KDACE_RECORDS_URL;
+const store: RecordReader = recordsUrl ? await recordsFromUrl(recordsUrl) : new Store();
+console.log(`Records: ${recordsUrl ?? "data/"}`);
 let failures = 0;
 const officialById = new Map((await fetchSeries()).map((s) => [s.matchId, s]));
 const fansCommitted = (r: { fans?: { status: string } }) => r.fans?.status === "committed";

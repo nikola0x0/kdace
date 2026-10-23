@@ -5,7 +5,7 @@ import { finalCallEntries, finalMarketId } from "./finalcall.ts";
 import { FAN_PREFIX, fanMarketId } from "./fans.ts";
 import { computeBoard } from "./points.ts";
 import { VOID } from "./results.ts";
-import { seriesNet, toSettled, voidNet, type SeriesRecord, type Store } from "./store.ts";
+import { seriesNet, toSettled, voidNet, type RecordReader, type SeriesRecord } from "./store.ts";
 import { titleMarketId, type TitleDay } from "./titles.ts";
 import type { Series } from "./worlds.ts";
 
@@ -137,6 +137,6 @@ export function axpMatches(r: SeriesRecord): boolean {
 }
 
 /** The leaderboard must be exactly what the settled records' published batches add up to. */
-export function boardMatches(store: Store): boolean {
+export function boardMatches(store: Pick<RecordReader, "all" | "readBoard">): boolean {
   return safely(() => JSON.stringify(computeBoard(store.all().filter((r) => r.status === "settled").map(toSettled))) === JSON.stringify(store.readBoard()));
 }
