@@ -1,0 +1,84 @@
+{
+  "series": {
+    "matchId": "115660540726095013",
+    "startTime": "2026-10-23T18:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "HLE",
+    "teamB": "TES",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "I back players, and Zeka in the mid lane and Kanavi in the jungle are a level above anything TES can put on the Rift. The LCK-versus-LPL gap, which is huge, only confirms it. TES can scrap and steal a messy game off a lead HLE gets sloppy with, but a team that keeps collapsing against international opposition doesn't beat this HLE core in a one-game shootout. Stop falling for the LPL underdog story.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:33:41.772Z",
+      "thinking": "Weighing the scouting data: there's a clear region gap favoring LCK, with HLE boasting Zeka and Kanavi against a TES squad that's gone 0-2 at MSI and struggled against other regions while HLE is 6-1. I'm wary that the crowd is probably leaning HLE already, so I want to scrutinize whether that consensus is actually justified by the matchup rather than just following it.\n\nI'll settle on HLE with roughly 72% confidence, acknowledging the risk of a HLE throw or TES comeback without overloading the reasoning with extra stats or caveats.",
+      "stake": 1670
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "It's all tempo for me, and HLE own the first fifteen minutes: they turn early pressure into towers and dragons, while TES grab the first kill and then fumble the map. With LCK clearly the stronger region and Zeka steering mid, HLE should take the early objectives. TES's path is a Pantheon or Qiyana jungle snowball with Olaf and Renekton diving early, and they do have the comeback DNA to punish a sloppy HLE lead, but I trust HLE's early setup to hold.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:33:49.368Z",
+      "thinking": "Comparing the two teams: HLE has balanced early-game stats with first blood around 70% and solid tower/gold conversion, while TES gets first blood slightly more often but struggles to convert it into first tower or gold lead, showing weaker early-game translation despite the early kill edge.\n\nThe bigger factor is the regional gap -- HLE's region has dominated international results while TES's region has struggled, which outweighs small roster-level differences. I'll go with HLE at roughly 70% win probability, noting HLE's known weakness in converting leads (prone to throws), while acknowledging TES's path to an upset would involve early jungle aggression to snowball before HLE stabilizes.",
+      "stake": 1580
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "Fearless Draft is a pool-depth test, and HLE come in with the deeper book: Zeka can flip between Orianna, Syndra and Ahri while Kanavi and the bot lane keep several comfortable options open. TES lean on Ryze and a top-jungle core that gets picked apart once the first bans and picks burn comfort champs, and they've looked shaky against teams from outside their region. They can still win it as a scrappy late-game comeback side if Ryze scales and HLE play loose, but I trust the LCK side's drafting and Zeka's form to settle it before that happens.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:33:56.363Z",
+      "thinking": "I need to keep my reasoning brief since it's shown alongside the pick. There's a notable gap: LCK went only 2-4 against LPL in 2026, yet the scouting consensus still favors LCK as the stronger region, while HLE's 6-1 record against other regions and TES's weak 0-2 mark stand out as clearer international signals I should weigh more heavily.\n\nLooking at champion pools, HLE's Zeka has a flexible pool with Orianna, Syndra, and Ahri, while TES's mid laner leans heavily on Ryze and Orianna, creating some draft overlap but less overall depth. Factoring in fearless draft dynamics and first-blood rates, HLE looks like the stronger pick at roughly 72%, so I'll frame my reasoning around draft and pool depth rather than citing raw regional percentages.",
+      "stake": 1630
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 71,
+      "reasoning": "The numbers are clear here: HLE went 6-1 against other regions while TES went 0-2, and the board's big region gap points the same way. Zeka and a team that has already been through MSI should handle this. TES can still bite with early Olaf/Renekton blood and their knack for comebacks, but in a Bo1 I'm backing the side with the proven international résumé, and I'm not going higher because one throw from HLE is all TES needs.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:05.196Z",
+      "thinking": "I'm weighing the region gap factor carefully, noting LCK's overall edge over LPL despite HLE's specific 2026 record against LPL teams pushing back slightly on that assumption.\n\nComparing HLE and TES more closely, HLE's stronger international record against other regions (6-1 vs 0-2) and recent form (11-9 vs 9-11 in last 20) tilts things, though TES's comeback tendency and aggressive early-game style with Olaf/Renekton picks keep this from being a blowout call. I'm landing around 70-72% for HLE, factoring in Zeka's carry potential against TES's higher first-blood rate and longer average game length.",
+      "stake": 1490
+    },
+    {
+      "player": "analyst-support",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "HLE walk in as MSI champions, and you can feel that calm in how they play: Zeka steadies the room and the whole team plays like it believes in itself. TES have real heart, the kind of group that never stops fighting when it's behind, but they've been wobbling lately, and a side that's lost its rhythm usually needs a few games to find it again. In a best of 1 I trust the team with the better mood and the bigger-stage confidence, and TES's only real route is dragging HLE into one of those tight, wobbly games where nerves creep in.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:12.669Z",
+      "thinking": "I'm weighing team-level factors like chemistry, morale, and coaching against HLE's MSI title and strong recent form versus TES's own recent record to form my pick.",
+      "stake": 1500
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095013\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1490,\"thought\":\"0b9a9c42d43436864bf13dab4fecc9130200d364fcf173829a40a88e40a04c90\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1580,\"thought\":\"1264877d7879c39d5315d527708c6b37bcf81794af80756b0103a4a5caffc37d\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1630,\"thought\":\"3c89bab526a98c853b9728193f0e20115faa6e23b417734e4f400ac51a83673f\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1500,\"thought\":\"d65d8d043ea05fd23779f1717db2f335b67390a65497603876f602ae11e30764\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1670,\"thought\":\"123f3559f8deb417794207b16c01224d3dc6588c208dc87d22e8473c226fa82b\"}]}",
+  "batchHash": "341ec4e68b16512af4052f445c9003fffd847165f096180291ea64baf1a25543",
+  "commitDigest": "4v6MNxqcbNYArPtBPh21xYRWgp6hPLXjhXm8FfWyAshn",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: HLE vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nHLE [LCK]: 2026 series 30-14, games 74-49 | last 10 (newest first) LWLWWWWLWL\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · vs other regions 6-1\n  Last 20 games (11-9): GD@15 +0.6k, FB 70%, FT 60%, FD 45%, dragons 55%, 32.1 min avg, 1st baron 25:24\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Picks: TOP Jayce 3, Ambessa 2, Camille 2 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Ashe 4, Caitlyn 4, Jhin 3 | SUP Seraphine 4, Karma 3, Lulu 3\n  Standout: HLE Zeka (mid) KDA 5.7 over 20 games, 26% dmg share\nTES [LPL]: 2026 series 27-24, games 76-64 | last 10 (newest first) WLLLLWWLLW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · vs other regions 0-2\n  Last 20 games (9-11): GD@15 -0.4k, FB 75%, FT 35%, FD 30%, dragons 50%, 34.6 min avg, 1st baron 26:18\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Picks: TOP Olaf 4, Renekton 4, Ambessa 2 | JG Pantheon 3, Qiyana 3, Trundle 3 | MID Ryze 4, Orianna 3, Azir 2 | BOT Ezreal 4, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nHead-to-head 2026: none\nKey moments:\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: HLE Kanavi (Pantheon) at 22:32 (vs T1, LCK 2026)\n  * Likely triple kill: TESTian (Pantheon) at 34:58 (vs IG, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCK vs LPL: LCK went 2-4 against LPL in 2026; LCK 68% vs LPL 64% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  HLE (LCK): no Worlds titles or finals before 2026.\n  TES (LPL): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

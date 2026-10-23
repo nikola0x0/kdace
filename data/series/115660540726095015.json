@@ -1,0 +1,84 @@
+{
+  "series": {
+    "matchId": "115660540726095015",
+    "startTime": "2026-10-23T23:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "LOS",
+    "teamB": "T1",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "Skill wins games, and T1's players are a tier above anything LOS can put on Summoner's Rift. A reigning world champion with Faker, Keria and Peyz doesn't turn into a nervous underdog because of a patchy month, and the gap between the LCK and CBLOL is the kind of thing a hot streak at home can't paper over. LOS can win it with chaos, if Duduhh gets a Kai'Sa snowball going and T1 do their usual lead-throwing, but I'm not betting on the champs to cough one up on this stage.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:37:13.495Z",
+      "thinking": "I need to channel a stubborn, blunt persona who trusts individual skill over crowd hype—the kind of top analyst who focuses on the LCK vs CBLOL region gap as a major factor, noting T1's roster strength with Faker, Oner, Keria, and Gumayusi, while also weighing the scouting report's mention of Peyz on Varus.\n\nDespite T1's rough recent form, their individual skill edge still points me toward picking them, leaning on the region gap qualitatively rather than citing specific stats.",
+      "stake": 710
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "Tempo is my religion, and LOS actually plays my kind of game: Pantheon jungle, early tower grabs, fast map pressure. If they get first-tower control and snowball into a Duduhh Kai'Sa game, the upset is real. But that tempo was built against CBLOL opposition, and LCK sides have beaten CBLOL every time this year, so I don't trust it to survive T1's first-15 skirmishing, Keria's vision and roams, and a reigning champion who knows how to claw tempo back on the Worlds stage. I'm leaning T1, but I'd flip if LOS take early jungle priority and the first herald.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:37:24.446Z",
+      "thinking": "I need to output just JSON with my pick, keeping reasoning brief. Looking at the early-game metrics, LOS has stronger first touchdown rate, goal differential at 15 minutes, and first blood rate compared to T1 over their last 20 games, which supports the belief that early game performance decides the match.\n\nBut there's a huge region strength gap — CBLOL versus LCK is a 0-3 head-to-head historically, and T1's international results are far superior (6-4 vs other regions, 4-2 at MSI) compared to LOS's weaker showings at EWC and elsewhere. The rule about letting only clear international results move me off the core belief applies here, so I'm leaning toward T1 winning with roughly 65% probability, while noting LOS's genuine early-game tempo edge as the realistic upset path through aggressive jungle pressure and fast objectives. I'll reference Keria, Peyz, Duduhh, and Ackerman as the named players to ground the reasoning.",
+      "stake": 510
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 71,
+      "reasoning": "It comes down to the draft room, and T1 walk in with the deeper book: Keria's flexible supports, Peyz on carry duty, and a mid pool with Orianna and Anivia that can answer whatever LOS throw at them. LOS can hurt them with Pantheon early pressure and a Ryze scaling plan, and Duduhh can punish any sloppy teamfight, but that's a lot of ifs against the reigning world champions on the biggest stage. LCK drafting depth is the gap here, and I only flip if LOS win the draft cleanly and snowball early before T1 stabilize.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:37:32.179Z",
+      "thinking": "Weighing the regional gap against T1's shaky recent form, I'm leaning toward T1 anyway given their championship pedigree and international experience, settling on roughly 72% confidence in their favor despite the mediocre last-20-games record.",
+      "stake": 690
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "I'm a numbers guy, and the number that matters most is CBLOL's 0-3 against the LCK this year. LOS arrive in great form and Ackerman and Duduhh can absolutely make a mess of a Bo1, but T1's 9-11 slump in recent games is the only thing keeping me from going higher. A reigning champion with Keria and Peyz on the Worlds stage doesn't usually let an underdog's hot streak decide it, so I'm leaning T1 without shouting about it.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:37:42.415Z",
+      "thinking": "I'm weighing the region gap against recent form: T1 has the LCK pedigree but shaky recent numbers (9-11, negative goal diff, low first blood rate), while LOS is performing better domestically. Since domestic records between regions aren't directly comparable, I'm leaning on the house rule that region strength only gets overridden by clear international results, and checking LOS's actual cross-region record to see if it clears that bar.\n\nI'm landing on T1 at roughly 70-72% probability, citing something like \"CBLOL 0-3 vs LCK\" alongside T1's international résumé to justify the pick concisely, keeping the final write-up tight and not restating the full analysis.",
+      "stake": 560
+    },
+    {
+      "player": "analyst-support",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 67,
+      "reasoning": "LOS walk in with the happiest locker room in the tournament, and Ackerman's calm shot-calling could trip T1 if the early game snowballs. But I trust the reigning champions' room, with Keria steadying everyone and Peyz carrying the nerve of someone who has lifted this trophy, and that kind of Worlds composure usually beats a hot streak from a weaker region. T1 have been wobbly lately, and that's the upset path, but I'm betting they find each other when the stage gets loud.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:37:50.123Z",
+      "thinking": "I need to weigh team chemistry, morale, and recent form rather than just rankings. T1 is the reigning champion but lost the EWC final and has mixed recent results, while LOS looks hot with a strong recent run. I'll keep my reasoning concise since only the final JSON pick matters.",
+      "stake": 550
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095015\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":560,\"thought\":\"181a8df429f74b9899ef042ff646ff86d90791b996a417b4220a7382e6c711fc\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":510,\"thought\":\"3687f7089b9af2f8f22ebd7102c1ded65319a347770f5e3c06ef8d81f2769ffd\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":690,\"thought\":\"ee526925b8445501e0e5a829a09eb9f13248b8c5633606b8b7ac656c8ced910f\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":550,\"thought\":\"14a3770077825ace8eaa547a6cce112b4c1ed267440eb7b6aa50d30041f6825a\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":710,\"thought\":\"a3d02b76fbbbeb7e2a6998d6e16626c251a1abfbbe021a6cc8e2ca395051d5c9\"}]}",
+  "batchHash": "5dd74de3d86d1fcfc8b144a4a20f837b5b239b9aec27c0b212d9a1bbfd91e8d0",
+  "commitDigest": "7mpbtsfFuv3VvNxoxcB8qwob1WmbroL3gzbpquFKFLqo",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: LOS vs T1 (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLOS [CBLOL]: 2026 series 24-11, games 55-36 | last 10 (newest first) WWWWLWWWWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · vs other regions 1-2\n  Last 20 games (12-8): GD@15 +0.8k, FB 45%, FT 70%, FD 40%, dragons 49%, 32.5 min avg, 1st baron 27:24\n  Leads @15 converted 7/10, comeback wins 2, throws 0, objectives taken while 1k+ behind 12\n  Picks: TOP Gnar 3, Rumble 3, Ambessa 2 | JG Pantheon 5, Wukong 4, Jarvan IV 3 | MID Ryze 4, Orianna 3, Cassiopeia 2 | BOT Sivir 3, Ashe 2, Kai'Sa 2 | SUP Alistar 3, Bard 2, Karma 2\n  Standout: LOS Ackerman (support) KDA 6.2 over 20 games, 8% dmg share\nT1 [LCK]: 2026 series 32-19, games 87-55 | last 10 (newest first) LWLWLWLLLW\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · vs other regions 6-4\n  Last 20 games (9-11): GD@15 -0.8k, FB 25%, FT 40%, FD 50%, dragons 44%, 32 min avg, 1st baron 30:00\n  Leads @15 converted 3/4, comeback wins 2, throws 1, objectives taken while 1k+ behind 11\n  Picks: TOP Jayce 3, Gwen 2, Kennen 2 | JG Naafiri 4, Skarner 3, Nocturne 2 | MID Anivia 3, Orianna 3, Akali 2 | BOT Lucian 3, Ezreal 2, Jhin 2 | SUP Milio 3, Renata 3, Alistar 2\n  Standout: T1 Keria (support) KDA 4.9 over 20 games, 10% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -5.1k at 28:00 vs FUR (CBLOL 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\n  - T1 threw a +4.8k lead (36:00) vs GEN (LCK 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is CBLOL vs LCK: CBLOL went 0-3 against LCK in 2026; CBLOL 36% vs LCK 68% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LOS (CBLOL): no Worlds titles or finals before 2026.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

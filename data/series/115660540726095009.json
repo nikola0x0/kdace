@@ -1,0 +1,124 @@
+{
+  "series": {
+    "matchId": "115660540726095009",
+    "startTime": "2026-10-23T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "AL",
+    "teamB": "KC",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "I'm backing the better players, and the LPL side has the sharper hands, with Hope at bot and Kael's shotcalling behind him. KC's 3-0 Worlds start has the crowd drooling, and that's exactly when I fade the hype; the EWC sweep is a footnote, not a verdict. KC are a lane-lead team that coughs up leads, and AL are more battle-tested against the tougher side of the international ladder. If Caliste carries bot lane and Hope gets camped out of the game, I'm wrong, but I'm not flipping on that.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:58.469Z",
+      "thinking": "Being stubborn and skeptical of crowd hype, I'm leaning toward individual skill and the region gap favoring AL, even though KC has the better record and H2H edge—but KC's Caliste has a weak KDA and low damage share that undercuts their hype.",
+      "stake": 370
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "Tempo is the whole story here: KC's jungle-led early setups keep landing them first tower and a gold lead by 15, and they already ran AL over 2-0 at EWC. The LPL badge pulls me toward AL and they could still flip it with early skirmishes, but this AL side keeps drifting even through the opening 15 and gives back the map, so I trust the team that actually controls the early game.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:35:07.098Z",
+      "thinking": "I'm weighing region strength against actual early-game numbers — KC shows stronger GD@15 and first tower rate and beat AL head-to-head at EWC, even though AL hails from the stronger LPL region. But KC's Worlds first-blood and first-dragon rates aren't as dominant, so I need to reconcile that discrepancy before deciding.\n\nThe house rule says region gap should only be overridden by clear international results, and KC's 8-4 record against other regions plus beating AL directly counts as that. Given AL's shaky 10-10 recent form versus KC's stronger international resume, I'm leaning toward picking KC around 57-58% confidence, reasoning in voice without quoting raw stats.",
+      "stake": 360
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "Fearless Draft rewards the team with the deeper bench of comfort picks, and AL can pull from Gnar, K'Sante, Qiyana, Annie and Yone without blinking. LPL drafting has also been tougher than what KC has faced from the West. KC beat them at EWC and Caliste is a real carry threat, so if KC gets Ryze or Viktor online and funnels resources into him, this flips fast. But I'm backing AL's flexibility and the stronger region behind them in a one-game coin flip.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:35:20.210Z",
+      "thinking": "I'm weighing the region gap against KC's strong Worlds form and head-to-head edge over AL, considering their deep champion pool with Rumble, Ambessa, Jayce, Vi, Lee Sin, and Ryze as reasons to lean toward KC despite LPL's reputed strength.\n\nKC's international record (8-4, 3-0 Worlds, 2-0 H2H over AL) counts as a clear result in my book, though AL also has decent showings vs other regions. Both teams actually have comparably deep fearless pools, so draft flexibility doesn't tip things much. I'll lean AL around 58%, giving weight to the region gap while still trusting my read.",
+      "stake": 320
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "I respect the LPL name on the jersey, and that's why this isn't a lean-hard call, but KC already walked through AL 2-0 at EWC and are 8-4 against the other regions, so the international results back them up. Caliste is the best bot laner in this match, carrying 28% of the damage at 5.5 KDA, while AL's standout is a support. AL's own form is 10-10 over their last 20 games, and I won't pick against a team with that much recent evidence on its side.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:35:35.705Z",
+      "thinking": "I keep in mind that the LPL vs LEC region gap is a major factor that should only shift with clear international results. Looking at AL's numbers, I'm noting their series and game records, recent win rates, gold diff at 15 minutes, and their strong conversion on early leads, along with their last ten games trending mostly positive.\n\nKC's record is notably stronger — high series and game win rates, a clean Worlds sweep, and a convincing 2-0 head-to-head win over AL at EWC. Weighing this against AL's smaller region-gap edge, KC's direct international results against AL and other regions look like the kind of clear signal that should actually move me off the default region-based lean, especially combined with their much better GD@15.\n\nLooking at throws and conversions, KC had fewer throws relative to leads while AL converted nearly all theirs, and AL even threw a lead despite holding Baron while behind. Weighing the honest numbers I lean KC around 57%, and given their clear international record including the direct head-to-head sweep, I think that's enough to justify moving off the region-based pick toward AL... though AL's recent stretch with wins at the end still gives me pause.",
+      "stake": 330
+    },
+    {
+      "player": "analyst-support",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "I'll admit the LPL badge on AL's chest gives me pause, but KC walk into this one with the better room: they've already beaten this AL side on a big stage, they've shown they can claw back from a nightmare deficit without panicking, and Caliste and the squad look like a group that trusts each other. AL's recent form has that wobbly, cross-the-fingers feel, with momentum swinging and leads slipping, and in a single game I'll back the team whose mood is steady. If AL's bot lane and Kael's shotcalling click early, this flips fast, so it's a lean, not a lock.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:35:46.187Z",
+      "thinking": "I'm weighing the regional strength gap—LPL being generally stronger than LEC—but noting that KC, despite being from LEC, has actually beaten AL head-to-head both at EWC and Worlds, which complicates the usual region-based assumption.\n\nLooking at form, KC's international results (EWC finalist, Worlds 3-0, direct wins over AL) feel like exactly the kind of clear evidence that should override the regional prior, even though AL comes from the stronger league. AL's inconsistency—shaky play, desperation moves like taking baron while way behind—reinforces my sense that KC's chemistry and resilience edge them out, so I'm leaning toward picking KC with moderate confidence rather than defaulting to the region gap.",
+      "stake": 390
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095009\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":330,\"thought\":\"9d3e66c790d0af4e820b21d590a5854b50b8e8917e2d84aa4eb69aa034ba6aaf\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":360,\"thought\":\"d34c873339d090bcae35a8edfd1404a0c9ea3d45166ed1016d18d46a9575347d\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":320,\"thought\":\"0ac947c1983d124fdeddccb887934325362e020a63ecf335aac9225b5485e6e3\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":390,\"thought\":\"52804c95c02808d9ab11d0e2064494ba94d98509163cbea093207b78bd2685ba\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":370,\"thought\":\"81bd8d3ab697cfacb021a5312702b9fcbd83a760848ae40a44605dca8ff96d96\"}]}",
+  "batchHash": "7ac94615722a7e603fa6c23685039ff37b584c8b48508728e5de740b71875586",
+  "commitDigest": "2pQPviSPfwWSotrFymMB4HmbMaFRQTDz5cxJD8p2UGK6",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: AL vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nAL [LPL]: 2026 series 34-19, games 83-59 | last 10 (newest first) WWLWLLLWWW\n  LPL 2026 32-18 (1 title) · EWC 2026 2-1 · vs other regions 2-1\n  Last 20 games (10-10): GD@15 -0.1k, FB 65%, FT 55%, FD 45%, dragons 54%, 33 min avg, 1st baron 27:36\n  Leads @15 converted 8/8, comeback wins 2, throws 1, objectives taken while 1k+ behind 14\n  Picks: TOP Gnar 3, K'Sante 3, Rumble 3 | JG Maokai 4, Qiyana 3, Cho'Gath 2 | MID Annie 3, Yone 3, Akali 2 | BOT Lucian 3, Ashe 2, Caitlyn 2 | SUP Seraphine 4, Milio 3, Neeko 3\n  Standout: ALKael (support) KDA 4.8 over 20 games, 9% dmg share\nKC [LEC]: 2026 series 40-15, games 89-49 | last 10 (newest first) WWWLLWWWWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 3-0 · vs other regions 8-4\n  Last 31 games (21-10): GD@15 +1.3k, FB 65%, FT 65%, FD 52%, dragons 53%, 33.5 min avg, 1st baron 26:00\n  Leads @15 converted 15/17, comeback wins 1, throws 4, objectives taken while 1k+ behind 5\n  Worlds 2026 11 games (9-2): GD@15 +1.4k, FB 36%, FT 73%, FD 27%, dragons 54%, 33.6 min avg, 1st baron 26:12\n  Picks: TOP Rumble 6, Ambessa 5, Jayce 5 | JG Vi 6, Lee Sin 5, Jarvan IV 4 | MID Ryze 5, Viktor 5, Syndra 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.5 over 31 games, 28% dmg share\nHead-to-head 2026: AL 0-1 KC\n  2026-07-17 EWC 2026 Quarterfinals: KC 2-0 AL\nKey moments:\n  - AL took Baron at 33:54 while down 10.5k vs BLG (LPL 2026), lost\n  - AL threw a +4.5k lead (18:00) vs TES (LPL 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.4k lead (22:00) vs SHFT (LEC 2026)\nFun facts:\n  * Likely penta kill: ALHope (Miss Fortune) at 30:31 (vs BLG, LPL 2026)\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LPL vs LEC: LPL went 4-2 against LEC in 2026; LPL 64% vs LEC 50% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  AL (LPL): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "KC's 3-0 start has everyone drooling, so I'm fading it. AL have the sharper hands, and Hope wins that lane. The EWC sweep is a footnote."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Footnote? KC ran AL over 2-0 and they'll take first tower again. Your sharper hands don't matter if AL are 15 minutes behind on tempo."
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Vyne, you're calling a rematch a trend. Fearless Draft rewards AL's bench of Gnar, K'Sante, Qiyana and Yone, and KC has never had to draft against that depth."
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "Nyx0, depth doesn't show up in the numbers. KC are 8-4 against other regions, and AL are 10-10 over their last 20. I'll take the 2-0 and the 28% damage share from Caliste."
+      },
+      {
+        "by": "support",
+        "replyTo": 0,
+        "text": "Kairo, you fade hype so confidently. 😊 I just think KC's room is steadier, and a steady team is easier to trust in a Bo1. Please be nice to Hope's camp timer."
+      },
+      {
+        "by": "top",
+        "replyTo": 4,
+        "text": "Lumi, you're adorable, and I'm still not flipping. If Caliste gets the bot lane rolling I'll eat it, but Hope doesn't get camped out of this one."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 5,
+        "text": "Kairo, you just wrote your own loss condition. Lumi gets it, so go watch the 2-0 again."
+      }
+    ],
+    "at": "2026-10-23T07:38:45.462Z"
+  }
+}

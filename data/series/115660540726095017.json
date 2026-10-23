@@ -1,0 +1,124 @@
+{
+  "series": {
+    "matchId": "115660540726095017",
+    "startTime": "2026-10-24T00:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "TSW",
+    "teamB": "LYON",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 60,
+      "reasoning": "Berserker is the best individual player on this Summoner's Rift, and when the game gets tight I want the star carry with the ball in his hands. TSW's domestic dominance is just the kind of hype I distrust, and LYON already beat them 3-0 at MSI, so they know exactly how to take that lane-heavy, snowball-hungry style apart. TSW can win it if Eddie gets an early lead and the bot lane snowballs, but I'm backing the stronger player over the prettier résumé.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:37:58.514Z",
+      "thinking": "My core belief is that individual skill wins series over team stats or crowd hype, so I'm scouting both sides: TSW dominates LCP but lost 3-0 to LYON at MSI, where LYON's Berserker shows a standout 27% damage share as a true carry, while TSW's Bie stands out more through support KDA rather than carry output—so the individual-skill edge seems to favor LYON's bot laner.",
+      "stake": 250
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "TSW",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "It's all about tempo, and TSW's jungle-led early game, with Lee Sin or Qiyana pathing into first tower and Herald, makes them the team that sets the pace of the map while LYON are more of a wait-and-scale group. LYON's 3-0 at MSI is the red flag, and if Berserker's lane gets priority and their jungler wins the first Drake fight, this flips fast. But I'm backing the side that should be ahead at 15 and knows how to cash it in.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:38:11.042Z",
+      "thinking": "Looking at tempo metrics, TSW shows stronger early-game numbers with a bigger gold lead at 15 and faster average game length, while LYON secures barons earlier despite a slightly weaker gold advantage; historically LYON has swept TSW 3-0 at MSI.\n\nInternationally, neither org stands out—TSW is 1-6 against other regions with a rough playoff record, while LYON sits at 4-6, so I'm hesitant to lean on region-level narratives and want to weigh team-specific evidence instead. Both teams favor aggressive early-skirmish junglers, so I'm weighing whether TSW's superior tempo stats outweigh LYON's recent head-to-head dominance and faster baron timings.\n\nUltimately I'll side with TSW's strong early-game numbers despite the 3-0 head-to-head loss, settling around a 56% confidence pick.",
+      "stake": 190
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "This one is decided in champion select, and LYON already showed they have the draft blueprint, building around Berserker with Alistar-led engage and comfortable mid and top picks. TSW will play fast and snowball early, but LYON stay calm when behind and turn a single Baron or fight into a win. Unless TSW find a real answer in draft, I'm taking LYON, and a first-pick fight over Yunara and Lucian is the thing that would change my mind.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:38:19.164Z",
+      "thinking": "I'm weighing form and head-to-head over region: TSW has strong recent results (16-4, +1.6k gold diff at 15, 85% first tower rate), but LYON beat them 3-0 at MSI with a draft pool built around Syndra, Lucian, Alistar, and Gwen, while TSW leans on Lee Sin, Qiyana, Yunara, and Nautilus.\n\nBerserker stands out as LYON's carry with big damage share, and LYON's proven comfort picks and resilience when behind on objectives tip me toward them despite TSW's better overall form — I'll go with LYON at roughly 58%, keeping the reasoning light on numbers and mentioning the MSI sweep only briefly as supporting evidence.",
+      "stake": 210
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "I'm careful with this one, because TSW's 16-4 recent run looks gorgeous, but most of it was banked at home, and when they leave the LCP it turns into 1-6. LYON already beat them 3-0 at MSI, Berserker carries real bottom-lane weight, and they've thrown zero leads lately. TSW's fast, tower-first style can still run LYON over if Bie's Nautilus engages land early, so I only lean softly.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:38:30.051Z",
+      "thinking": "I'm comparing TSW and LYON's records—TSW has stronger overall series stats but struggles internationally, while LYON performs more consistently abroad and holds a clean head-to-head sweep over TSW at MSI.\n\nWeighing game pace, damage share, and consistency, I'm leaning toward a modest edge for LYON, maybe around 58%, since their international resume and recent head-to-head dominance outweigh TSW's domestic-heavy win rate.",
+      "stake": 180
+    },
+    {
+      "player": "analyst-support",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "I'm going with the team that has already looked TSW in the eye and blinked last. LYON took them apart 3-0 at MSI, and that kind of result lingers in a locker room, especially for a TSW side that keeps arriving at international stages and coming up short. LYON play like a group that trusts each other when games get messy, and TSW's Bie and company will have to prove they've shaken off that ghost before I flip this.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:38:38.725Z",
+      "thinking": "I need to keep my answer to concise JSON with a brief reasoning. Looking at TSW's results, they've struggled across events—poor showings at First Stand, MSI, and EWC, plus a clean sweep loss to LYON in knockouts—which points to real morale and chemistry issues underlying their performance.\n\nDespite TSW having stronger raw stats like record and gold differential, LYON holds the head-to-head edge and seems to grind out wins even when behind, showing more resilience. I'm leaning toward LYON with roughly a 58% confidence.",
+      "stake": 210
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095017\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":180,\"thought\":\"d2d6f78240fe834c8dd0eec143f294d7e477206ddd281726f7867f03b453b121\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":190,\"thought\":\"05ee341c2f170b2606c977791c7441c81957539384a7939f3298322b4768bd51\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":210,\"thought\":\"2037ef68431170dd47ba4eec1bde5ea0b2e2e8358a2f01f6f4de5c1bd4141495\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":210,\"thought\":\"35ead4777b6b301a7a4ba7140fbc382e014c70e20a3c6071e50896bf132d7703\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":250,\"thought\":\"97dbe2fb2b98ad572d736cf89a8f43036fae7b1f6228498fec64ddfa08abab18\"}]}",
+  "batchHash": "62c5e0d96c4fc41b159b64388fc727196fc3246e83817fb060cfa9c6540e5440",
+  "commitDigest": "Cu7HJpu9f8JW6f39LsDxjX4iZqxyAjbkYZpR8x6ao1sp",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: TSW vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTSW [LCP]: 2026 series 26-8, games 67-32 | last 10 (newest first) WWWLWWWLLL\n  LCP 2026 25-2 (3 titles) · First Stand 2026 0-2 · MSI 2026 1-2 · EWC 2026 0-2 · vs other regions 1-6\n  Last 20 games (16-4): GD@15 +1.6k, FB 60%, FT 85%, FD 55%, dragons 59%, 31.5 min avg, 1st baron 27:36\n  Leads @15 converted 12/13, comeback wins 2, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Galio 3, Gnar 3, Urgot 3 | JG Lee Sin 4, Qiyana 4, Jarvan IV 3 | MID Ahri 2, Aurora 2, Locke 2 | BOT Yunara 4, Caitlyn 3, Ezreal 3 | SUP Nautilus 4, Alistar 2, Bard 2\n  Standout: TSW Bie (support) KDA 6.5 over 20 games, 7% dmg share\nLYON [LCS]: 2026 series 25-13, games 72-42 | last 10 (newest first) LWWLWWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · vs other regions 4-6\n  Last 20 games (12-8): GD@15 +0.8k, FB 60%, FT 70%, FD 47%, dragons 48%, 33.6 min avg, 1st baron 24:48\n  Leads @15 converted 7/8, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Picks: TOP Gwen 4, Gnar 2, K'Sante 2 | JG Wukong 3, Skarner 3, Xin Zhao 3 | MID Syndra 4, Ryze 3, Annie 2 | BOT Lucian 3, Yunara 3, Jhin 2 | SUP Alistar 5, Lulu 3, Milio 3\n  Standout: LYON Berserker (bottom) KDA 5.1 over 20 games, 27% dmg share\nHead-to-head 2026: TSW 0-1 LYON\n  2026-07-08 MSI 2026 Knockouts: LYON 3-0 TSW\nKey moments:\n  - TSW came back from -6.5k at 30:00 vs CFO (LCP 2026)\n  - TSW threw a +4.8k lead (20:00) vs GAM (LCP 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - LYON took Baron at 23:54 while down 3.0k vs C9 (LCS 2026), won\nFun facts:\n  * Likely quadra kill: LYON Saint (Sylas) at 17:15 (vs DSG, LCS 2026)\n  * Likely quadra kill: TSW Eddie (Yunara) at 19:46 (vs GAM, LCP 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCP vs LCS: LCP went 0-1 against LCS in 2026; LCP 33% vs LCS 29% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TSW (LCP): no Worlds titles or finals before 2026.\n  LYON (LCS): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "jungle",
+        "replyTo": null,
+        "text": "Four of you are picking LYON off one MSI scoreline? TSW takes first tower and Herald, then you all spend 25 minutes explaining the lead away."
+      },
+      {
+        "by": "top",
+        "replyTo": 0,
+        "text": "Vyne, a 3-0 is the whole case. Berserker wins the lane, Berserker wins the fight, and your tempo plan turns into a scenic route to the Nexus."
+      },
+      {
+        "by": "adc",
+        "replyTo": 0,
+        "text": "Vyne, TSW's 16-4 is 1-6 once they leave home. Tempo only counts if you can bring it with you."
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Kairo, 'best player wins' isn't a draft. Still, with Alistar engage built around him, you accidentally landed on the right side."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 2,
+        "text": "Raze, spreadsheet warrior. Your own pick says 'lean softly', so don't act like you're bringing a hard counter."
+      },
+      {
+        "by": "support",
+        "replyTo": 0,
+        "text": "Vyne, I love the energy, truly. But LYON already beat them 3-0 and TSW still has to prove it's behind them. 💛"
+      },
+      {
+        "by": "jungle",
+        "replyTo": 5,
+        "text": "Lumi, I can't even be mad. Fine, but if Bie's Nautilus lands early, the whole desk owes me a very quiet apology."
+      }
+    ],
+    "at": "2026-10-23T07:38:50.340Z"
+  }
+}

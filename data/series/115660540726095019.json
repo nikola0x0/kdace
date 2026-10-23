@@ -1,0 +1,84 @@
+{
+  "series": {
+    "matchId": "115660540726095019",
+    "startTime": "2026-10-23T19:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "BLG",
+    "teamB": "MKOI",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "Viper is the best player on either side of this server, and in a best of 1 that's the whole argument: BLG's lanes are just better than MKOI's, and the LPL-LEC gap says the same thing. MKOI's chaos drafts and Elyoya-Supa teamfight heroics can steal a messy game, but I'm not betting on a lucky scramble over class, and BLG already beat them once this summer.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:21.373Z",
+      "thinking": "I need to weigh individual skill against region strength here—BLG has strong players like Bin and Viper, and LPL is generally the stronger region, so I'm leaning toward picking BLG despite being wary of crowd hype favoring them.",
+      "stake": 1300
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "It's all tempo for me: BLG get to the first dragon and the first tower with a lead and then close it out, and a Lee Sin-led MKOI has to win the first fifteen minutes by force to have any chance. Elyoya can steal that tempo with early skirmishes, but BLG are the better team on the map and they come from the stronger region, so I take them, with Viper on the bot side doing the heavy lifting.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:27.935Z",
+      "thinking": "I'm leaning toward BLG given their stronger early-game gold lead at 15 minutes and better lead-conversion rate, while MKOI has a history of throwing advantages despite occasional comeback wins, and the overall region gap favors LPL.",
+      "stake": 1140
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "This one is decided in champ select: BLG's pool is deep, with Viper's Yunara-Lulu bot lane as the anchor and top-side flex like Camille and Jayce, while MKOI keep leaning on the same Ryze and Lee Sin comfort. Given how clearly the LPL stands above the LEC this year, I'm trusting the better drafters and the star bot laner. MKOI can win it if Ryze scales into a long game and BLG gift another lead, but I'd need to see that in the draft before I move off BLG.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:34.783Z",
+      "thinking": "I'm leaning toward BLG given their deeper draft pools with Yunara and Lulu, plus Camille/Jayce flexibility, against MKOI's Ryze/Lee Sin/Ezreal comp and the regional gap, plus their earlier EWC win over MKOI.",
+      "stake": 1150
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 76,
+      "reasoning": "The numbers are clear here, so I'm leaning on BLG: Viper's bot lane and a team that converts almost every early lead, with a 125-52 game record that says it's no fluke. MKOI are a chaotic, never-say-die side that can steal objectives from behind, and a Bo1 gives that chaos room to work, but they've gone 0-2 against other regions and BLG already beat them at EWC.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:41.148Z",
+      "thinking": "Comparing the two teams, BLG has a much stronger series and game win rate (70.6% vs MKOI's 53%), plus a region strength gap favoring LPL and a head-to-head edge. The numbers are clear enough to lean hard toward BLG, probably in the 75-80% range.",
+      "stake": 1460
+    },
+    {
+      "player": "analyst-support",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "BLG look like a room that trusts each other: Viper has his lane partner Lulu shielding him, and a team that lost an MSI final tends to arrive hungry. MKOI have real heart and that never-say-die streak, but they've been blown out on the international stage, and a young group can lose its nerve on a stage like this. I'd keep an eye on BLG if they fall behind early, since that's where a wobble could let MKOI's fighting spirit take over.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:34:47.345Z",
+      "thinking": "I need to weigh BLG against MKOI, keeping only the reasoning brief for the JSON output. The region gap favors LPL overall, and BLG specifically has strong morale from an MSI final appearance, two LPL titles, and a First Stand title, though their throw record gives me some pause.\n\nOn the other side, MKOI shows real resilience, coming back from behind often and grinding out objectives even when losing, but their recent results have been shaky with an 0-2 at EWC and a lost LEC final. Despite MKOI's scrappiness, I'm still leaning toward BLG as the favorite, and I want my written explanation to sound warm and human, focused on team psychology rather than hard numbers.",
+      "stake": 1080
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095019\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":1460,\"thought\":\"6ac528b14ba2bbf040b1e04e7b090e4e67528166290d26695b67a3db22744053\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":1140,\"thought\":\"37be56df61de63a4116df1b030aff215d0e8d2087ead780a14ce613c8d6daa82\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":1150,\"thought\":\"895a0761a1f9229f0d76f56376a254bfeba2d843aaedc49a1d02155a10efd458\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":1080,\"thought\":\"085f7b6ebe617d0cc31cf7f83fd1fadfe41c6b94268462fcc67ee67951964751\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":1300,\"thought\":\"6956f66162c5ed498400c530b62ef0cfce81a10921ef7d974ef2dc3a30b535d2\"}]}",
+  "batchHash": "1659816333f7e3fcbb9bf71aa0ee81d82b813fc72ae322663d6b1dff3eae28a4",
+  "commitDigest": "8jxErao4RnGE91Fc3x9Crkc8A3AAasK18UbjCWvjDMqe",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: BLG vs MKOI (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nBLG [LPL]: 2026 series 50-12, games 125-52 | last 10 (newest first) LWWWWWWWLW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · vs other regions 8-2\n  Last 20 games (14-6): GD@15 +1.4k, FB 50%, FT 65%, FD 50%, dragons 55%, 32 min avg, 1st baron 24:06\n  Leads @15 converted 9/10, comeback wins 0, throws 2, objectives taken while 1k+ behind 4\n  Picks: TOP Camille 4, Jayce 4, Rumble 3 | JG Jarvan IV 4, Naafiri 3, Pantheon 3 | MID Aurora 3, Orianna 3, Syndra 3 | BOT Yunara 6, Ashe 4, Kalista 3 | SUP Lulu 6, Karma 3, Renata 3\n  Standout: BLGViper (bottom) KDA 6 over 20 games, 31% dmg share\nMKOI [LEC]: 2026 series 22-20, games 52-46 | last 10 (newest first) LWWWWLWLWW\n  LEC 2026 22-18 (lost final) · EWC 2026 0-2 · vs other regions 0-2\n  Last 20 games (12-8): GD@15 +0.6k, FB 45%, FT 65%, FD 50%, dragons 60%, 33.2 min avg, 1st baron 25:48\n  Leads @15 converted 6/8, comeback wins 4, throws 3, objectives taken while 1k+ behind 10\n  Picks: TOP Jayce 4, Galio 3, Ambessa 2 | JG Lee Sin 5, Qiyana 3, Jarvan IV 2 | MID Ryze 5, Ahri 4, Anivia 2 | BOT Ezreal 5, Kalista 4, Ashe 3 | SUP Renata 4, Seraphine 3, Bard 2\n  Standout: MKOI Alvaro (support) KDA 5.4 over 20 games, 7% dmg share\nHead-to-head 2026: BLG 1-0 MKOI\n  2026-07-15 EWC 2026 Groups: BLG 1-0 MKOI\nKey moments:\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\n  - BLG threw a +3.4k lead (18:00) vs WE (LPL 2026)\n  - MKOI threw a +6.2k lead (40:00) vs NAVI (LEC 2026)\n  - MKOI threw a +6.0k lead (20:00) vs SK (LEC 2026)\nFun facts:\n  * Likely penta kill: MKOI Supa (Kai'Sa) at 39:12 (vs NAVI, LEC 2026)\n  * Likely quadra kill: MKOI Elyoya (Qiyana) at 22:41 (vs KC, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LPL vs LEC: LPL went 4-2 against LEC in 2026; LPL 64% vs LEC 50% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  BLG (LPL): no Worlds titles; lost final 2024.\n  MKOI (LEC): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}
