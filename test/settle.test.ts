@@ -18,12 +18,12 @@ const committed = (): SeriesRecord => ({
   batch: canonicalBatch("x", picks.map((p) => ({ player: p.player, market: "winner" as const, choice: p.winner, stake: p.stake }))),
 });
 
-function fakes(overrides: Partial<SettleDeps> = {}) {
+function fakes(overrides: Partial<Omit<SettleDeps, "store">> & { store?: Store } = {}) {
   const posted: string[][] = [];
   const remembered: string[] = [];
   const store = new Store(mkdtempSync(join(tmpdir(), "kdace-")));
   store.put(committed());
-  const deps: SettleDeps = {
+  const deps: Omit<SettleDeps, "store"> & { store: Store } = {
     fetchSeries: async () => [done],
     store,
     postResult: async (m, w, s) => (posted.push([m, w, s]), "result-digest"),

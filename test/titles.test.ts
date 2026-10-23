@@ -52,9 +52,9 @@ describe("parseTitlePick", () => {
   });
 });
 
-function fakes(over: Partial<TitleDeps> = {}) {
+function fakes(over: Partial<Omit<TitleDeps, "store">> & { store?: Store } = {}) {
   const commits: string[] = [];
-  const deps: TitleDeps = {
+  const deps: Omit<TitleDeps, "store"> & { store: Store } = {
     fetchSeries: async () => [s({ teamA: "GEN", teamB: "BLG" })],
     store: new Store(mkdtempSync(join(tmpdir(), "kdace-"))),
     ask: async () => '{"champion":"GEN","probability":30,"contenders":["BLG"],"reasoning":"r"}',

@@ -26,27 +26,27 @@ const fanRow: FanCommitRow = { matchId: "x", status: "committed", batch: fanBatc
 const store = () => new Store(mkdtempSync(join(tmpdir(), "kdace-")));
 
 describe("mirrorFanCommits", () => {
-  it("copies a committed fan batch into the series record with its chain stamp", () => {
+  it("copies a committed fan batch into the series record with its chain stamp", async () => {
     const st = store();
     st.put(committed());
-    expect(mirrorFanCommits(st, [fanRow], [series])).toEqual(["x"]);
+    expect(await mirrorFanCommits(st, [fanRow], [series])).toEqual(["x"]);
     expect(st.get("x")!.fans).toEqual({ status: "committed", batch: fanBatch, batchHash: batchHash(fanBatch), pickCount: 1, commitDigest: "fd", committedAt: "2026-10-23T16:55:31.000Z", chain });
     expect(st.get("x")!.status).toBe("committed");
   });
-  it("creates a record for a series the analysts missed, stamped with the fans' chain", () => {
+  it("creates a record for a series the analysts missed, stamped with the fans' chain", async () => {
     const st = store();
-    mirrorFanCommits(st, [fanRow], [series]);
+    await mirrorFanCommits(st, [fanRow], [series]);
     expect(st.get("x")).toMatchObject({ status: "missed", picks: [], batch: null, chain, fans: { status: "committed" } });
   });
-  it("skips in-flight commits, unchanged records and settled records", () => {
+  it("skips in-flight commits, unchanged records and settled records", async () => {
     const st = store();
     st.put(committed());
-    expect(mirrorFanCommits(st, [{ ...fanRow, status: "committing", commitDigest: null }], [series])).toEqual([]);
+    expect(await mirrorFanCommits(st, [{ ...fanRow, status: "committing", commitDigest: null }], [series])).toEqual([]);
     expect(st.get("x")!.fans).toBeUndefined();
-    mirrorFanCommits(st, [fanRow], [series]);
-    expect(mirrorFanCommits(st, [fanRow], [series])).toEqual([]);
+    await mirrorFanCommits(st, [fanRow], [series]);
+    expect(await mirrorFanCommits(st, [fanRow], [series])).toEqual([]);
     st.put({ ...committed(), status: "settled" });
-    expect(mirrorFanCommits(st, [fanRow], [series])).toEqual([]);
+    expect(await mirrorFanCommits(st, [fanRow], [series])).toEqual([]);
     expect(st.get("x")!.fans).toBeUndefined();
   });
 });
@@ -61,9 +61,9 @@ describe("toSettled with fans", () => {
 });
 
 describe("seriesToSettle with fans", () => {
-  it("settles a missed series when fans committed", () => {
+  it("settles a missed series when fans committed", async () => {
     const st = store();
-    mirrorFanCommits(st, [fanRow], [series]);
+    await mirrorFanCommits(st, [fanRow], [series]);
     expect(seriesToSettle([done], st).map((s) => s.matchId)).toEqual(["x"]);
     st.put({ ...st.get("x")!, fans: { ...st.get("x")!.fans!, status: "missed" } });
     expect(seriesToSettle([done], st)).toEqual([]);
@@ -82,7 +82,7 @@ describe("runSettle with fans", () => {
   it("splits each pool between the analysts and fans who called it", async () => {
     const st = store();
     st.put(committed());
-    mirrorFanCommits(st, [fanRow], [series]);
+    await mirrorFanCommits(st, [fanRow], [series]);
     await runSettle(settleDeps(st, []));
     expect(st.get("x")!.axp).toEqual({ "analyst-top": 2000, "analyst-jungle": -1000, "analyst-mid": -1000, "analyst-adc": -1000, "analyst-support": -1000, [`fan:${A}`]: 2000 });
     expect(st.readBoard().map((r) => r.player)).toContain(`fan:${A}`);
@@ -90,7 +90,7 @@ describe("runSettle with fans", () => {
   });
   it("settles a fans-only series without a debate or lessons", async () => {
     const st = store();
-    mirrorFanCommits(st, [fanRow], [series]);
+    await mirrorFanCommits(st, [fanRow], [series]);
     const asked: string[] = [];
     await runSettle(settleDeps(st, asked));
     expect(asked).toEqual([]);
@@ -105,7 +105,7 @@ describe("syncFanAxp", () => {
     const db = new MemoryFanDb();
     await db.insertCommit(fanRow);
     await db.insertCommit({ ...fanRow, matchId: "late" }); // a series still waiting for its result
-    mirrorFanCommits(st, [fanRow], [series]);
+    await mirrorFanCommits(st, [fanRow], [series]);
     await runSettle(settleDeps(st, []));
     st.put({ ...st.get("x")!, series: { ...series, matchId: "x2" }, axp: { [`fan:${A}`]: -500 } }); // a second settled series
     expect(fanSettledNets(st)).toEqual({ [A]: 1500 });
@@ -123,9 +123,9 @@ describe("syncFanAxp", () => {
 });
 
 describe("fan names", () => {
-  it("lists the fans who appear in published batches and stores their names for the static site", () => {
+  it("lists the fans who appear in published batches and stores their names for the static site", async () => {
     const st = store();
-    mirrorFanCommits(st, [fanRow], [series]);
+    await mirrorFanCommits(st, [fanRow], [series]);
     expect(fanAddresses(st)).toEqual([A]);
     st.writeFanNames({ [A]: "nikola.sui" });
     expect(st.readFanNames()).toEqual({ [A]: "nikola.sui" });
@@ -164,9 +164,9 @@ describe("void series and the fans", () => {
     expect(await db.results()).toEqual([]); // no unclaimed win
     expect(fanSettledNets(st)).toEqual({ [A]: 0 });
   });
-  it("does not mirror a fan batch onto a series that was already voided", () => {
+  it("does not mirror a fan batch onto a series that was already voided", async () => {
     const st = store();
     st.put({ ...voided(), fans: undefined });
-    expect(mirrorFanCommits(st, [fanRow], [series])).toEqual([]);
+    expect(await mirrorFanCommits(st, [fanRow], [series])).toEqual([]);
   });
 });

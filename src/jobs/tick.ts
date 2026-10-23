@@ -11,7 +11,7 @@ import { fanDbFromEnv } from "../core/fandb.ts";
 import { withLock } from "../core/lock.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
-import { fanAddresses, mirrorFanCommits, syncFanAxp } from "./fans.ts";
+import { mirrorFans, syncFanAxp } from "./fans.ts";
 import { realFinalCallDeps, runFinalCall } from "./finalcall.ts";
 import { realPickDeps, runPick } from "./pick.ts";
 import { realSettleDeps, runSettleFast, runSettleSlow } from "./settle.ts";
@@ -28,11 +28,8 @@ await withLock("data", async () => {
   const fans = async () => {
     if (!db) return console.log("[tick] fans: Supabase not configured, skipping");
     fansOk = false;
-    await db.ping(); // also keeps the free Supabase project from pausing
-    const changed = mirrorFanCommits(store, await db.listCommits(), await fetchSeries(), (m) => console.log(`[tick] fans ${m}`));
-    console.log("[tick] fans mirrored", changed);
-    const names = await db.fanNames(fanAddresses(store));
-    if (JSON.stringify(names) !== JSON.stringify(store.readFanNames())) store.writeFanNames(names);
+    const { mirrored } = await mirrorFans(store, db, fetchSeries, (m) => console.log(`[tick] fans ${m}`));
+    console.log("[tick] fans mirrored", mirrored);
     fansOk = true;
   };
   for (const [stage, run] of [

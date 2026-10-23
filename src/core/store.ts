@@ -1,4 +1,6 @@
-// Per-series state in data/series/<matchId>.json and the board in data/board.json, committed to git.
+// Per-series state in data/series/<matchId>.json and the board in data/board.json, committed to git (the file Store).
+// RecordStore is the interface every job and the site go through; the file Store implements it, and so do MemoryStore
+// (tests, snapshots) and SupabaseStore (src/core/supastore.ts, chosen with KDACE_STORE=supabase).
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { AnalystPick } from "./analysts.ts";
@@ -7,6 +9,7 @@ import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
 import type { FinalCallEntry } from "./finalcall.ts";
 import { AXP_START, marketNet, type BoardRow, type SettledSeries } from "./points.ts";
+import type { ScoutData } from "./scoutstore.ts";
 import type { TitleDay } from "./titles.ts";
 import type { Series } from "./worlds.ts";
 
@@ -109,7 +112,119 @@ export function axpAccount(records: SeriesRecord[], player: string): AxpAccount 
 const readJson = <T>(path: string): T => JSON.parse(readFileSync(path, "utf8"));
 const writeJson = (path: string, value: unknown) => writeFileSync(path, JSON.stringify(value, null, 2) + "\n");
 
-export class Store {
+/** A value, or a promise of one: the file and memory stores answer synchronously, SupabaseStore asynchronously. */
+export type Awaitable<T> = T | Promise<T>;
+
+/** Scout's files (data/scout/<key>.json): the three the analysts read, plus the run's meta. */
+export const SCOUT_KEYS = ["series", "games", "teams", "meta"] as const;
+export type ScoutKey = (typeof SCOUT_KEYS)[number];
+
+/** Everything the site and verify read: every series record, the board, every title day and the fans' names. */
+export type RecordsSnapshot = { series: SeriesRecord[]; board: BoardRow[]; titleDays: TitleDay[]; fanNames: Record<string, string | null> };
+
+/**
+ * Where the published records live. Jobs always `await` these calls, so a synchronous store (file, memory) and an
+ * asynchronous one (Supabase) are interchangeable. `put` must never silently overwrite an update made in between.
+ */
+export interface RecordStore {
+  get(matchId: string): Awaitable<SeriesRecord | null>;
+  put(record: SeriesRecord): Awaitable<void>;
+  all(): Awaitable<SeriesRecord[]>;
+  writeBoard(rows: BoardRow[]): Awaitable<void>;
+  readBoard(): Awaitable<BoardRow[]>;
+  writeFanNames(names: Record<string, string | null>): Awaitable<void>;
+  readFanNames(): Awaitable<Record<string, string | null>>;
+  getTitleDay(date: string): Awaitable<TitleDay | null>;
+  putTitleDay(day: TitleDay): Awaitable<void>;
+  titleDays(): Awaitable<TitleDay[]>;
+  writePending(rows: unknown[]): Awaitable<void>;
+  /** Scout's series, games and teams, or null until all three exist. */
+  readScout(): Awaitable<ScoutData | null>;
+  readScoutFile(key: ScoutKey): Awaitable<unknown | null>;
+  writeScout(files: Partial<Record<ScoutKey, unknown>>): Awaitable<void>;
+}
+
+/** The synchronous reads the site and the pure checks use (file Store and MemoryStore). */
+export type RecordReader = {
+  get(matchId: string): SeriesRecord | null;
+  all(): SeriesRecord[];
+  readBoard(): BoardRow[];
+  readFanNames(): Record<string, string | null>;
+  titleDays(): TitleDay[];
+};
+
+/** A synchronous read-only view of records already loaded (e.g. `await store.all()`), for the pure selectors. */
+export function viewOf(records: SeriesRecord[]): Pick<RecordReader, "get" | "all"> {
+  const byId = new Map(records.map((r) => [r.series.matchId, r]));
+  return { get: (matchId) => byId.get(matchId) ?? null, all: () => records };
+}
+
+const clone = <T>(v: T): T => (v === undefined ? v : JSON.parse(JSON.stringify(v)));
+
+/** A store held in memory (values copied in and out, like a real store): tests, and snapshots read from Supabase or /api/records. */
+export class MemoryStore implements RecordStore, RecordReader {
+  series = new Map<string, SeriesRecord>();
+  days = new Map<string, TitleDay>();
+  board: BoardRow[] = [];
+  fanNames: Record<string, string | null> = {};
+  pending: unknown[] = [];
+  scout: Partial<Record<ScoutKey, unknown>> = {};
+
+  static from(snap: RecordsSnapshot): MemoryStore {
+    const st = new MemoryStore();
+    for (const r of snap.series) st.put(r);
+    for (const d of snap.titleDays) st.putTitleDay(d);
+    st.writeBoard(snap.board);
+    st.writeFanNames(snap.fanNames ?? {});
+    return st;
+  }
+
+  get(matchId: string): SeriesRecord | null {
+    return clone(this.series.get(matchId) ?? null);
+  }
+  put(record: SeriesRecord): void {
+    this.series.set(record.series.matchId, clone(record));
+  }
+  all(): SeriesRecord[] {
+    return [...this.series.values()].map(clone);
+  }
+  writeBoard(rows: BoardRow[]): void {
+    this.board = clone(rows);
+  }
+  readBoard(): BoardRow[] {
+    return clone(this.board);
+  }
+  writeFanNames(names: Record<string, string | null>): void {
+    this.fanNames = clone(names);
+  }
+  readFanNames(): Record<string, string | null> {
+    return clone(this.fanNames);
+  }
+  getTitleDay(date: string): TitleDay | null {
+    return clone(this.days.get(date) ?? null);
+  }
+  putTitleDay(day: TitleDay): void {
+    this.days.set(day.date, clone(day));
+  }
+  titleDays(): TitleDay[] {
+    return [...this.days.values()].sort((a, b) => a.date.localeCompare(b.date)).map(clone);
+  }
+  writePending(rows: unknown[]): void {
+    this.pending = clone(rows);
+  }
+  readScout(): ScoutData | null {
+    const { series, games, teams } = this.scout;
+    return series && games && teams ? clone({ series, games, teams } as ScoutData) : null;
+  }
+  readScoutFile(key: ScoutKey): unknown | null {
+    return clone(this.scout[key] ?? null);
+  }
+  writeScout(files: Partial<Record<ScoutKey, unknown>>): void {
+    this.scout = { ...this.scout, ...clone(files) };
+  }
+}
+
+export class Store implements RecordStore, RecordReader {
   private seriesDir: string;
 
   constructor(private dir = "data") {
@@ -172,5 +287,21 @@ export class Store {
   readBoard(): BoardRow[] {
     const path = join(this.dir, "board.json");
     return existsSync(path) ? readJson(path) : [];
+  }
+
+  /** Scout's data in data/scout/, as `npm run scout` writes it (one-space indent). */
+  readScout(): ScoutData | null {
+    const [series, games, teams] = (["series", "games", "teams"] as const).map((k) => this.readScoutFile(k));
+    return series && games && teams ? ({ series, games, teams } as ScoutData) : null;
+  }
+
+  readScoutFile(key: ScoutKey): unknown | null {
+    const path = join(this.dir, "scout", `${key}.json`);
+    return existsSync(path) ? readJson(path) : null;
+  }
+
+  writeScout(files: Partial<Record<ScoutKey, unknown>>): void {
+    mkdirSync(join(this.dir, "scout"), { recursive: true });
+    for (const [key, value] of Object.entries(files)) writeFileSync(join(this.dir, "scout", `${key}.json`), JSON.stringify(value, null, 1) + "\n");
   }
 }

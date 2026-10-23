@@ -13,9 +13,9 @@ const before = new Date("2026-10-23T12:00:00Z");
 const after = new Date("2026-10-23T17:30:00Z");
 const good = JSON.stringify({ winner: "GEN", score: "2-1", winProbability: 61, reasoning: "r", usedLessonIds: [] });
 
-function fakes(overrides: Partial<PickDeps> = {}) {
+function fakes(overrides: Partial<Omit<PickDeps, "store">> & { store?: Store } = {}) {
   const commits: string[] = [];
-  const deps: PickDeps = {
+  const deps: Omit<PickDeps, "store"> & { store: Store } = {
     fetchSeries: async () => [series],
     store: new Store(mkdtempSync(join(tmpdir(), "kdace-"))),
     recall: async () => [],

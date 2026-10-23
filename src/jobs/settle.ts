@@ -10,12 +10,12 @@ import { fanDbFromEnv, withRefereeLock } from "../core/fandb.ts";
 import { computeBoard, marketNet } from "../core/points.ts";
 import { settleAction, VOID } from "../core/results.ts";
 import { awaitingResult } from "../core/select.ts";
-import { Store, toSettled, voidNet, type SeriesRecord } from "../core/store.ts";
+import { Store, toSettled, voidNet, type RecordStore, type SeriesRecord } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
 
 export type SettleDeps = {
   fetchSeries(): Promise<Series[]>;
-  store: Store;
+  store: RecordStore;
   postResult(matchId: string, winner: string, score: string): Promise<string>;
   ask(prompt: string): Promise<string>;
   /** Queue a Walrus Memory write; returns the relayer job id. */
@@ -42,12 +42,12 @@ Write the debate: exactly one short line per analyst who picked, in their own vo
 
 /** Result on chain, then AXP, then "settled" (or "void"); each saved before the next step. */
 async function finishOne(deps: SettleDeps, matchId: string, result: { winner: string; score: string }, isVoid: boolean) {
-  let r = deps.store.get(matchId)!;
-  const save = (next: SeriesRecord) => (deps.store.put(next), (r = next));
+  let r = (await deps.store.get(matchId))!;
+  const save = async (next: SeriesRecord) => (await deps.store.put(next), (r = next));
   // r.series keeps the snapshot from commit time; the official feed is only used for the result.
-  if (!r.result) save({ ...r, result: { ...result, resultDigest: await deps.postResult(matchId, result.winner, result.score) } });
-  if (!r.axp) save({ ...r, axp: isVoid ? voidNet(r) : marketNet(toSettled(r)) });
-  save({ ...r, status: isVoid ? "void" : "settled" });
+  if (!r.result) await save({ ...r, result: { ...result, resultDigest: await deps.postResult(matchId, result.winner, result.score) } });
+  if (!r.axp) await save({ ...r, axp: isVoid ? voidNet(r) : marketNet(toSettled(r)) });
+  await save({ ...r, status: isVoid ? "void" : "settled" });
   deps.log(`${matchId} ${r.series.teamA} vs ${r.series.teamB}: ${isVoid ? "void, every stake refunded" : `${result.winner} ${result.score}`}`);
 }
 
@@ -64,7 +64,7 @@ export async function runSettleFast(deps: SettleDeps): Promise<{ settled: string
     deps.log(`schedule unavailable, only finishing results already posted: ${(e as Error).message}`);
   }
   const byId = new Map((schedule ?? []).map((s) => [s.matchId, s]));
-  for (const r of deps.store.all().filter(awaitingResult)) {
+  for (const r of (await deps.store.all()).filter(awaitingResult)) {
     const id = r.series.matchId;
     const action = settleAction(r, byId.get(id), schedule !== null, deps.now());
     if (action.kind === "wait") {
@@ -88,37 +88,61 @@ export async function runSettleFast(deps: SettleDeps): Promise<{ settled: string
       deps.log(`${id} settle failed, will resume next run: ${(e as Error).message}`);
     }
   }
-  deps.store.writeBoard(computeBoard(deps.store.all().filter((x) => x.status === "settled").map(toSettled)));
+  await deps.store.writeBoard(computeBoard((await deps.store.all()).filter((x) => x.status === "settled").map(toSettled)));
   return out;
 }
 
-const needsReflection = (r: SeriesRecord) => r.status === "settled" && !!r.result && r.picks.length > 0 && (!r.debate || r.picks.some((p) => !r.lessons.find((l) => l.player === p.player)?.blobId));
+/** A settled series still owed its debate or a lesson. */
+export const needsReflection = (r: SeriesRecord) => r.status === "settled" && !!r.result && r.picks.length > 0 && (!r.debate || r.picks.some((p) => !r.lessons.find((l) => l.player === p.player)?.blobId));
+
+/** Options for the slow part. The defaults are the tick's; the Vercel runner does one series per run and stops before its time is up. */
+export type SettleSlowOptions = {
+  /** At most this many series per run (oldest first). */
+  maxRecords?: number;
+  /** Checked before each step (debate, lesson, wait); once true, the run stops and the next one resumes where it left off. */
+  outOfTime?: () => boolean;
+};
+
+class OutOfTime extends Error {}
 
 /** Slow part: for settled series, the debate, then one lesson per analyst (saved with its job id before waiting). */
-export async function runSettleSlow(deps: SettleDeps): Promise<{ reflected: string[] }> {
+export async function runSettleSlow(deps: SettleDeps, opts: SettleSlowOptions = {}): Promise<{ reflected: string[] }> {
+  const { maxRecords = Infinity, outOfTime = () => false } = opts;
+  const step = () => {
+    if (outOfTime()) throw new OutOfTime("out of time");
+  };
   const reflected: string[] = [];
-  for (const start of deps.store.all().filter(needsReflection)) {
+  const todo = (await deps.store.all()).filter(needsReflection);
+  if (Number.isFinite(maxRecords)) todo.sort((a, b) => a.series.startTime.localeCompare(b.series.startTime)).splice(maxRecords);
+  for (const start of todo) {
     let r = start;
-    const save = (next: SeriesRecord) => (deps.store.put(next), (r = next));
+    const save = async (next: SeriesRecord) => (await deps.store.put(next), (r = next));
     const result = r.result!;
     try {
-      if (!r.debate) save({ ...r, debate: (await deps.ask(debatePrompt(r, result))).trim() });
+      step();
+      if (!r.debate) await save({ ...r, debate: (await deps.ask(debatePrompt(r, result))).trim() });
       for (const pick of r.picks) {
         const a = ANALYSTS.find((x) => x.player === pick.player)!;
         let lesson = r.lessons.find((l) => l.player === pick.player);
         if (lesson?.blobId) continue;
         if (!lesson) {
+          step();
           const text = `${(await deps.ask(buildReflectPrompt(a, r.series, pick, result, r.debate!))).trim()} (from ${r.series.block} ${r.series.teamA} vs ${r.series.teamB}; picked ${pick.winner}${pick.score ? ` ${pick.score}` : ""}, actual ${result.winner} ${result.score})`;
           // Saved with its job id before waiting, so a timeout resumes the same write instead of storing the lesson twice.
           lesson = { player: pick.player, text, blobId: "", jobId: await deps.startRemember(a.role, text) };
-          save({ ...r, lessons: [...r.lessons, lesson] });
+          await save({ ...r, lessons: [...r.lessons, lesson] });
         }
+        step();
         const blobId = await deps.awaitRemember(a.role, lesson.jobId!);
-        save({ ...r, lessons: r.lessons.map((l) => (l.player === pick.player ? { ...l, blobId } : l)) });
+        await save({ ...r, lessons: r.lessons.map((l) => (l.player === pick.player ? { ...l, blobId } : l)) });
       }
       deps.log(`${r.series.matchId} ${r.series.teamA} vs ${r.series.teamB}: debate and ${r.lessons.length} lessons saved`);
       reflected.push(r.series.matchId);
     } catch (e) {
+      if (e instanceof OutOfTime) {
+        deps.log(`${r.series.matchId} debate/lessons paused (out of time), resuming next run`);
+        break;
+      }
       deps.log(`${r.series.matchId} debate/lessons failed, will resume next run: ${(e as Error).message}`);
     }
   }
@@ -131,7 +155,7 @@ export async function runSettle(deps: SettleDeps): Promise<{ settled: string[]; 
   return { ...fast, ...(await runSettleSlow(deps)) };
 }
 
-export async function realSettleDeps(store = new Store()): Promise<SettleDeps> {
+export async function realSettleDeps(store: RecordStore = new Store()): Promise<SettleDeps> {
   const { fetchSeries } = await import("../core/worlds.ts");
   const { memory } = await import("../core/memory.ts");
   const { askAnalyst } = await import("../core/llm.ts");
