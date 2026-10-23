@@ -1,0 +1,79 @@
+{
+  "series": {
+    "matchId": "115660540726095013",
+    "startTime": "2026-10-23T18:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "HLE",
+    "teamB": "TES",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "Region strength favours LCK: 15-7 against other regions this year versus LPL's 9-5, and LCK has ten Worlds titles to LPL's three. Zeka's 5.7 KDA over TES's weakest-link support profile is the individual edge I trust, even though LCK went 2-4 against LPL in 2026.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:01.608Z",
+      "stake": 1040
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "Tempo says HLE: they take towers (60%) and dragons (45%) where TES only manage 35% and 30%, and they're the only ones with a positive GD@15. LCK also holds the stronger international record and the Worlds history, so this is a fast, early-objective lead for HLE, not a coin flip.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:05.061Z",
+      "stake": 1120
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "Drafts favour HLE: their pool is deeper in the mid and bot lanes, and Zeka is the standout. The region rule settles it, since LCK holds the stronger international record (15-7 vs LPL's 9-5) and ten Worlds titles to LPL's three, even though LCK lost 2-4 to LPL this year. TES's 0-2 at MSI and 0-2 against other regions keep me from going higher.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:08.191Z",
+      "stake": 1010
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "LCK holds the stronger international record (15-7 vs other regions against LPL's 9-5) and the Worlds history, and HLE's 4-1 MSI and 2-1 EWC results back that up. TES's 0-2 at MSI and 0-2 against other regions is a weak international base, so I lean HLE, though the 2-4 LCK-vs-LPL 2026 mark and HLE's 11-9 last-20 record keep this close.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:11.956Z",
+      "stake": 690
+    },
+    {
+      "player": "analyst-support",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "LCK has the stronger international record (15-7 against other regions versus LPL's 9-5) and HLE's last ten are clearly better than TES's, so the region edge and the form both favour them. I still watch HLE's habit of throwing leads, but the TES team that is 9-11 over its last 20 games doesn't look settled enough to punish it.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:15.608Z",
+      "stake": 1060
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095013\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":690},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1120},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1010},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1060},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1040}]}",
+  "batchHash": "c0bb9632855da133da8f19a1e856b9c7840a8c14eb7db6820a1ae16f7e68aa56",
+  "commitDigest": "DBenfMboQLUeZL83eMhtAotKHD434FA3tDoGFyV8KnrY",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: HLE vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nHLE [LCK]: 2026 series 30-14, games 74-49 | last 10 (newest first) LWLWWWWLWL\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · vs other regions 6-1\n  Last 20 games (11-9): GD@15 +0.6k, FB 70%, FT 60%, FD 45%, dragons 55%, 32.1 min avg, 1st baron 25:24\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Picks: TOP Jayce 3, Ambessa 2, Camille 2 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Ashe 4, Caitlyn 4, Jhin 3 | SUP Seraphine 4, Karma 3, Lulu 3\n  Standout: HLE Zeka (mid) KDA 5.7 over 20 games, 26% dmg share\nTES [LPL]: 2026 series 27-24, games 76-64 | last 10 (newest first) WLLLLWWLLW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · vs other regions 0-2\n  Last 20 games (9-11): GD@15 -0.4k, FB 75%, FT 35%, FD 30%, dragons 50%, 34.6 min avg, 1st baron 26:18\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Picks: TOP Olaf 4, Renekton 4, Ambessa 2 | JG Pantheon 3, Qiyana 3, Trundle 3 | MID Ryze 4, Orianna 3, Azir 2 | BOT Ezreal 4, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nHead-to-head 2026: none\nKey moments:\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: HLE Kanavi (Pantheon) at 22:32 (vs T1, LCK 2026)\n  * Likely triple kill: TESTian (Pantheon) at 34:58 (vs IG, LPL 2026)\nRegion strength (a VERY BIG factor: domestic records from different leagues are NOT comparable; international results count most):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCK vs LPL: LCK went 2-4 against LPL in 2026; LCK 68% vs LPL 64% against other regions overall.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  HLE (LCK): no Worlds titles or finals before 2026.\n  TES (LPL): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

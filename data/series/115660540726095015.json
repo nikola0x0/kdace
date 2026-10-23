@@ -1,0 +1,79 @@
+{
+  "series": {
+    "matchId": "115660540726095015",
+    "startTime": "2026-10-23T23:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "LOS",
+    "teamB": "T1",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "CBLOL is 0-3 against the LCK this year, and LCK has won 10 of the last 13 Worlds titles while CBLOL has never reached a final. T1's recent form is ugly, but their players are the better individuals and they have the bigger stage history, so I'm not buying the LOS hype.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:06:53.042Z",
+      "stake": 870
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "LOS owns the early tempo on paper: 70% first towers, +0.8k at 15, and a 45% first blood rate, while T1 is -0.8k at 15 and only 40% first towers. But CBLOL is 0-3 against the LCK this year, the LCK holds 68% against other regions to CBLOL's 36%, and T1 are the reigning world champions who won 6 titles and reached the EWC final. Region strength outweighs LOS's early lead, so I'm taking T1 to close out the tempo fight.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:06:56.715Z",
+      "stake": 960
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "CBLOL went 0-3 against the LCK in 2026 and the LCK holds 68% against other regions to CBLOL's 36%, with the last ten Worlds titles going to the LCK, so T1's international edge is decisive for me. T1's recent form (LWLWLWLLLW) and their 9-11 record over the last 20 games are real concerns, but their draft depth on Fearless and Keria's steadiness should carry them past a region that has not beaten the LCK this year.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:06:59.689Z",
+      "stake": 1030
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 78,
+      "reasoning": "CBLOL is 0-3 against the LCK in 2026 and only 36% against other regions versus the LCK's 68%, and T1 are the reigning world champions with six titles, so region strength decides this for me. LOS's 24-11 series record is built on a weaker league, and T1's recent form is shaky, so I keep the confidence measured.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:07:01.752Z",
+      "stake": 1430
+    },
+    {
+      "player": "analyst-support",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 66,
+      "reasoning": "LOS are riding a hot streak and have the calmer, comeback-capable group, but T1's recent slump is more about nerves than talent, and reigning champions with an LCK edge that big usually find their rhythm on the Worlds stage. I'm backing T1 to steady themselves when it matters.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:07:06.343Z",
+      "stake": 840
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095015\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1430},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":960},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1030},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":840},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":870}]}",
+  "batchHash": "35750c616cd2bd91f319cb5f1cf520887045c34f8d6a799fbcf41ae56013f15e",
+  "commitDigest": "2PFBfGTDzAm8t6wftTpt3k6ZGSKEaUvsZsTXzKG3nTy3",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: LOS vs T1 (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLOS [CBLOL]: 2026 series 24-11, games 55-36 | last 10 (newest first) WWWWLWWWWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · vs other regions 1-2\n  Last 20 games (12-8): GD@15 +0.8k, FB 45%, FT 70%, FD 40%, dragons 49%, 32.5 min avg, 1st baron 27:24\n  Leads @15 converted 7/10, comeback wins 2, throws 0, objectives taken while 1k+ behind 12\n  Picks: TOP Gnar 3, Rumble 3, Ambessa 2 | JG Pantheon 5, Wukong 4, Jarvan IV 3 | MID Ryze 4, Orianna 3, Cassiopeia 2 | BOT Sivir 3, Ashe 2, Kai'Sa 2 | SUP Alistar 3, Bard 2, Karma 2\n  Standout: LOS Ackerman (support) KDA 6.2 over 20 games, 8% dmg share\nT1 [LCK]: 2026 series 32-19, games 87-55 | last 10 (newest first) LWLWLWLLLW\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · vs other regions 6-4\n  Last 20 games (9-11): GD@15 -0.8k, FB 25%, FT 40%, FD 50%, dragons 44%, 32 min avg, 1st baron 30:00\n  Leads @15 converted 3/4, comeback wins 2, throws 1, objectives taken while 1k+ behind 11\n  Picks: TOP Jayce 3, Gwen 2, Kennen 2 | JG Naafiri 4, Skarner 3, Nocturne 2 | MID Anivia 3, Orianna 3, Akali 2 | BOT Lucian 3, Ezreal 2, Jhin 2 | SUP Milio 3, Renata 3, Alistar 2\n  Standout: T1 Keria (support) KDA 4.9 over 20 games, 10% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -5.1k at 28:00 vs FUR (CBLOL 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\n  - T1 threw a +4.8k lead (36:00) vs GEN (LCK 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\nRegion strength (a VERY BIG factor: domestic records from different leagues are NOT comparable; international results count most):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is CBLOL vs LCK: CBLOL went 0-3 against LCK in 2026; CBLOL 36% vs LCK 68% against other regions overall.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LOS (CBLOL): no Worlds titles or finals before 2026.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-23",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "GEN has the best record here that matters, 37-10 in series with three titles and 5-1 against other regions, and LCK has won ten of the last thirteen Worlds. BLG's 50-12 is loud, but it's LPL dominance on a smaller international sample, and I don't trust the hype until it beats the Korean teams.",
+      "pickedAt": "2026-10-23T07:07:37.206Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "GEN",
+      "probability": 20,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "Tempo says GEN: 37-10 in 2026 with a 5-1 record against other regions, and LCK's 10 titles back the pick. BLG has the best early GD@15 (+1.4k) and the best cross-region record, so they're right behind, and DK brings a world champion's early-game discipline.",
+      "pickedAt": "2026-10-23T07:07:40.433Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "GEN",
+      "probability": 20,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "GEN combines LCK pedigree, 37-10 in series, and a 5-1 record against other regions, and their drafts travel well under Fearless. BLG's 8-2 cross-region record is the strongest challenge, but LCK's title history makes GEN my call.",
+      "pickedAt": "2026-10-23T07:07:47.264Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "DK"
+      ],
+      "reasoning": "BLG has the strongest record on the board at 50-12 in series, the best cross-region mark among LPL teams at 8-2, and a +1.4k GD@15 over 20 games, though LPL has only three titles against the LCK's ten, so I'm holding this near a quarter, not higher. GEN's 37-10 and 5-1 against other regions make it the clearest alternative.",
+      "pickedAt": "2026-10-23T07:07:50.126Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "GEN",
+      "probability": 20,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "GEN has the steady mood of a team that has learned how to win together, with a 37-10 series record, three titles, and the LCK's history behind them. BLG has the best numbers in the field, but I'd want to see how their chemistry holds up against the best of the other regions before I trust them over GEN.",
+      "pickedAt": "2026-10-23T07:07:52.781Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-23\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0}]}",
+  "batchHash": "0f83283df01ed35795f1481537f3dab554ee58fd74b93051b2135fb991f8052f",
+  "commitDigest": "75nQKFodBuy3CbXHc6iSyLsqxM57Fzq6TTiLoQmc2nYx",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

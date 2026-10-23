@@ -1,0 +1,79 @@
+{
+  "series": {
+    "matchId": "115660540726095009",
+    "startTime": "2026-10-23T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "AL",
+    "teamB": "KC",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "The region rule decides this: LPL has beaten LEC 4-2 in 2026 and sits at 64% against other regions versus LEC's 50%, so AL's league is the stronger one. KC's 9-2 Worlds run and the 2-0 win over AL at EWC are the crowd's favourite story, and I don't buy it enough to pick against the region data.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:40.691Z",
+      "stake": 450
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "KC owns the early tempo on paper (+1.4k at 15 at Worlds, 65% first blood and first tower) and beat AL 2-0 in July, but the LPL went 4-2 against the LEC this year and the region-strength rule says that carries more weight than a stat edge, so I'm backing AL to win this one.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:45.110Z",
+      "stake": 490
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "LPL has the stronger international record here (9-5 against other regions, 4-2 over LEC this year), and the region rule weighs that heavily, so I'm backing AL despite KC's 2-0 win at EWC. KC's deeper pools and Caliste's form keep this close, and AL's draft will need to stay flexible to win it.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:49.189Z",
+      "stake": 430
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "The house region rule carries the call: LPL beat LEC 4-2 in 2026 and wins 64% of international series against LEC's 50%. KC's numbers are stronger (+1.3k GD@15 against AL's -0.1k, plus a 9-2 Worlds run), so this is a lean, not a clear read.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:53.019Z",
+      "stake": 400
+    },
+    {
+      "player": "analyst-support",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "KC has the better form and beat AL 2-0 at EWC, and their Worlds run is full of calm, connected play. But the LPL has the stronger international record, with a 4-2 edge over the LEC this year and all three Worlds titles to the LEC's zero, so I'll back AL to win this one. My concern is their mood: they've thrown leads and their last 20 games sit at 10-10, so I'd call this close.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:05:57.268Z",
+      "stake": 470
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095009\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":400},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":490},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":430},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":470},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":450}]}",
+  "batchHash": "e656e4325c4cf3bf0166972400ef60f7214f3e424e32057779f0d7ef49874cba",
+  "commitDigest": "699vhM1DikuomZoRkzwTM4DHxTbrLfJj8rVCZgt9FLr5",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: AL vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nAL [LPL]: 2026 series 34-19, games 83-59 | last 10 (newest first) WWLWLLLWWW\n  LPL 2026 32-18 (1 title) · EWC 2026 2-1 · vs other regions 2-1\n  Last 20 games (10-10): GD@15 -0.1k, FB 65%, FT 55%, FD 45%, dragons 54%, 33 min avg, 1st baron 27:36\n  Leads @15 converted 8/8, comeback wins 2, throws 1, objectives taken while 1k+ behind 14\n  Picks: TOP Gnar 3, K'Sante 3, Rumble 3 | JG Maokai 4, Qiyana 3, Cho'Gath 2 | MID Annie 3, Yone 3, Akali 2 | BOT Lucian 3, Ashe 2, Caitlyn 2 | SUP Seraphine 4, Milio 3, Neeko 3\n  Standout: ALKael (support) KDA 4.8 over 20 games, 9% dmg share\nKC [LEC]: 2026 series 40-15, games 89-49 | last 10 (newest first) WWWLLWWWWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 3-0 · vs other regions 8-4\n  Last 31 games (21-10): GD@15 +1.3k, FB 65%, FT 65%, FD 52%, dragons 53%, 33.5 min avg, 1st baron 26:00\n  Leads @15 converted 15/17, comeback wins 1, throws 4, objectives taken while 1k+ behind 5\n  Worlds 2026 11 games (9-2): GD@15 +1.4k, FB 36%, FT 73%, FD 27%, dragons 54%, 33.6 min avg, 1st baron 26:12\n  Picks: TOP Rumble 6, Ambessa 5, Jayce 5 | JG Vi 6, Lee Sin 5, Jarvan IV 4 | MID Ryze 5, Viktor 5, Syndra 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.5 over 31 games, 28% dmg share\nHead-to-head 2026: AL 0-1 KC\n  2026-07-17 EWC 2026 Quarterfinals: KC 2-0 AL\nKey moments:\n  - AL took Baron at 33:54 while down 10.5k vs BLG (LPL 2026), lost\n  - AL threw a +4.5k lead (18:00) vs TES (LPL 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.4k lead (22:00) vs SHFT (LEC 2026)\nFun facts:\n  * Likely penta kill: ALHope (Miss Fortune) at 30:31 (vs BLG, LPL 2026)\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\nRegion strength (a VERY BIG factor: domestic records from different leagues are NOT comparable; international results count most):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LPL vs LEC: LPL went 4-2 against LEC in 2026; LPL 64% vs LEC 50% against other regions overall.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  AL (LPL): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}
