@@ -1,6 +1,6 @@
 // Tick (every 30 min, or dispatched early by the lock route): mirror fan commits from Supabase, then the fast settle
-// (results on Sui, AXP, board, voids) and the fans' settled AXP back to Supabase, then picks and the analysts' final
-// calls (time-critical), then the daily title picks and banter, then the slow settle (debate and Walrus lessons), then
+// (results on Sui, AXP, board, voids) and the fans' settled AXP back to Supabase, then the analysts' final calls and the
+// picks (time-critical), then the daily title picks and banter, then the slow settle (debate and Walrus lessons), then
 // publish data/pending.json for the dispatcher and commit and push data/. Each stage is isolated so one failure never
 // skips the others (except: settle waits for a successful fan mirror, so AXP is never settled without the fans), and one
 // lock keeps manual runs from overlapping.
@@ -41,9 +41,10 @@ await withLock("data", async () => {
     ["settle", async () => (fansOk ? console.log("[tick] settle", await runSettleFast(await realSettleDeps(store))) : console.log("[tick] settle skipped: fan commits could not be mirrored"))],
     // Each fan's settled net goes back to Supabase, where the API checks stakes against available AXP.
     ["axp", async () => (db ? console.log("[tick] fan axp", await syncFanAxp(store, db, new Date())) : undefined)],
-    ["pick", async () => console.log("[tick] pick", await runPick(await realPickDeps(store)))],
-    // Top-ups shortly before lock, on the side each analyst picked.
+    // Top-ups shortly before lock, on the side each analyst picked. Before the picks: it's bounded (the five analysts
+    // answer in parallel) and its window is minutes wide, while picking several new series can take a while.
     ["final", async () => console.log("[tick] final call", await runFinalCall(await realFinalCallDeps(store)))],
+    ["pick", async () => console.log("[tick] pick", await runPick(await realPickDeps(store)))],
     // Who wins Worlds: once per UTC day, after the time-critical series picks.
     ["titles", async () => console.log("[tick] titles", await runTitles(await realTitleDeps(store)))],
     // Trash talk on series the analysts split on (flavour only, never fingerprinted).
