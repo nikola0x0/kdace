@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -72,10 +72,52 @@
   "batch": "{\"matchId\":\"115660540726095007\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":530,\"thought\":\"1bcd62b9a9fe21d688d35e8b4dad2c04645550d9e49601f222467fa92cc5790f\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":690,\"thought\":\"e9f1c8d54fe798e51c3b8ce18333d3c4d910c8f149c53e09cd28f136fea99a60\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":490,\"thought\":\"fc0cab3656918b084999c12af64a4a2b68ac6163097b1e30eab6c22ce21d58da\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":480,\"thought\":\"ffd77d2dc16edd8bd8098e50919ce1f1eb2cb4c9dbd6dd80c55e2c0ed9cb6677\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":440,\"thought\":\"038934cdc6d167a279700afb3be74e1c955d545dd283525506c0549a13f51fea\"}]}",
   "batchHash": "70e3d029a711eb92c1a6b2fdc838678ab53afd8ce11a0f07e45ff79a45ace05d",
   "commitDigest": "AjdGvjS8G9dVfNdNzeCfZeLHVi8i9vMohW96JBfTRKFz",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "CFO",
+    "score": "1-0",
+    "resultDigest": "9XnP73QFn36ovQXmYaEXt7bnWoZLGr2dz7jyQsZXQZeQ"
+  },
+  "axp": {
+    "analyst-adc": -530,
+    "analyst-jungle": -690,
+    "analyst-mid": -490,
+    "analyst-support": -480,
+    "analyst-top": -440,
+    "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352": 2630
+  },
+  "debate": "Top: Well, so much for \"individual skill wins.\" Josedeodo was supposed to bend the map, and POUT bent my pick instead. I'm blaming Akali.\n\nJungle: Tempo was supposed to be my whole thesis, and CFO just walked into the first fifteen minutes and said \"no thanks.\" My dragons and my first tower are in witness protection.\n\nMid: Draft gets some blame here too, because I said a Lucian fight would decide it and then watched CFO make my pool-depth argument look pretty shallow. Ouch.\n\nADC: Nine for nine on 15-minute leads, and the one time it mattered CFO just didn't give TLAW the lead to cash in. My spreadsheet and I are going to need a minute.\n\nSupport: I really thought the nerves would show up on CFO's side, so I'll admit \"calmer, more connected\" aged like milk. Five of us on the same side of a coinflip, though, and that's on all of us.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+      "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+      "jobId": "9b5670fa-2736-408b-bc58-3c5b9dfff8a0"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+      "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+      "jobId": "b1a5eb39-cea5-42d9-b12f-74eb8a6fa647"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Pool depth on paper isn't the same as draft leverage; under Fearless, a star's signature comfort picks (POUT's Akali, Viktor, Lucian) can matter more than the number of \"comfortable\" options a team has. Next time I'll check who actually wins the contested picks and whether the opponent's star can be shut out, rather than assuming breadth beats a few high-impact pools. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+      "blobId": "mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg",
+      "jobId": "703c32df-8313-4511-8401-1af34d9e3960"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+      "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+      "jobId": "356af368-93e8-4401-aa98-92e593c5cc16"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+      "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+      "jobId": "28d9a6d0-eb3d-47b6-a2f9-15c1f5693766"
+    }
+  ],
   "scout": "Scout: TLAW vs CFO (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 22-10, games 57-32 | last 10 (newest first) WWWWLWWWWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · vs other regions 2-2\n  Last 20 games (15-5): GD@15 +1.1k, FB 55%, FT 75%, FD 65%, dragons 60%, 32.9 min avg, 1st baron 28:24\n  Leads @15 converted 9/9, comeback wins 1, throws 0, objectives taken while 1k+ behind 10\n  Picks: TOP Camille 3, K'Sante 3, Ambessa 2 | JG Pantheon 4, Qiyana 3, Vi 3 | MID Ahri 3, Orianna 3, Syndra 3 | BOT Lucian 4, Ashe 3, Ezreal 3 | SUP Nami 3, Alistar 2, Karma 2\n  Standout: TLAW Josedeodo (jungle) KDA 7.6 over 20 games, 19% dmg share\nCFO [LCP]: 2026 series 12-14, games 37-42 | last 10 (newest first) LWLWWWWLWW\n  LCP 2026 12-14 (lost final)\n  Last 20 games (11-9): GD@15 -0.2k, FB 60%, FT 50%, FD 35%, dragons 50%, 31.8 min avg, 1st baron 26:06\n  Leads @15 converted 5/5, comeback wins 1, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Jayce 2, K'Sante 2, Malphite 2 | JG Naafiri 4, Poppy 3, Nocturne 2 | MID Akali 4, Viktor 3, Ahri 2 | BOT Lucian 5, Caitlyn 2, Kalista 2 | SUP Lulu 4, Milio 4, Karma 3\n  Standout: CFO POUT (mid) KDA 4.4 over 20 games, 26% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\nFun facts:\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\n  * Likely quadra kill: TLAW Yeon (Jhin) at 27:26 (vs SR, LCS 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCS vs LCP: LCS went 1-0 against LCP in 2026; LCS 29% vs LCP 33% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  CFO (LCP): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
