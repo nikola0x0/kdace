@@ -2,6 +2,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { AnalystPick } from "./analysts.ts";
+import type { Banter } from "./banter.ts";
 import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
 import { AXP_START, type BoardRow, type SettledSeries } from "./points.ts";
@@ -20,6 +21,8 @@ export type SeriesRecord = {
   axp: Record<string, number> | null;
   debate: string | null;
   lessons: { player: string; text: string; blobId: string; jobId?: string }[];
+  /** Pre-game trash talk when the analysts split (flavour only, not fingerprinted). */
+  banter?: Banter;
   /** The Scout stats digest every analyst saw for this matchup (official lolesports data), when there was one. */
   scout?: string;
   /** Set at commit; missing on records from before the switch to mainnet (see chainOf). */

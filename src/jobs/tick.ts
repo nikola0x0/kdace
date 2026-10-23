@@ -12,6 +12,7 @@ import { fanAddresses, mirrorFanCommits, syncFanAxp } from "./fans.ts";
 import { realPickDeps, runPick } from "./pick.ts";
 import { realSettleDeps, runSettle } from "./settle.ts";
 import { realTitleDeps, runTitles } from "./titles.ts";
+import { realBanterDeps, runBanter } from "./banter.ts";
 
 const started = new Date().toISOString();
 const git = (...args: string[]) => execFileSync("git", args, { encoding: "utf8" });
@@ -34,6 +35,8 @@ await withLock("data", async () => {
     ["pick", async () => console.log("[tick] pick", await runPick(await realPickDeps(store)))],
     // Who wins Worlds: once per UTC day, after the time-critical series picks.
     ["titles", async () => console.log("[tick] titles", await runTitles(await realTitleDeps(store)))],
+    // Trash talk on series the analysts split on (flavour only, never fingerprinted).
+    ["banter", async () => console.log("[tick] banter", await runBanter(await realBanterDeps(store)))],
     ["fans", fans],
     ["settle", async () => (fansOk ? console.log("[tick] settle", await runSettle(await realSettleDeps(store))) : console.log("[tick] settle skipped: fan commits could not be mirrored"))],
     // Each fan's settled net goes back to Supabase, where the API checks stakes against available AXP.
