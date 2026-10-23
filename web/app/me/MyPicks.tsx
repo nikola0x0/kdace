@@ -19,7 +19,8 @@ export type MyMatch = {
 type BoardRow = { player: string; rank: number; balance: number; k: number; d: number; a: number };
 
 export default function MyPicks({ matches, board }: { matches: Record<string, MyMatch>; board: BoardRow[] }) {
-  const { me, ready, signIn, claim } = useFans();
+  const { me, ready, signIn, claim, cancelBuy } = useFans();
+  const [cancelling, setCancelling] = useState<number | null>(null);
   const [claiming, setClaiming] = useState<string | null>(null);
   const [tab, setTab] = useState<"upcoming" | "history">("upcoming");
   if (!ready) return <div className="panel muted">Loading…</div>;
@@ -91,7 +92,19 @@ export default function MyPicks({ matches, board }: { matches: Record<string, My
                   <b><span style={{ color: teamTone(m, b.choice) }}>{b.choice}</span> · <span className="num">{fmt(b.amount)} AXP</span></b>
                 </div>
                 <div className="mrow-res"><span className="ap-label">Status</span><b className="muted">{m.fansLocked ? "Locked on Sui" : "Open"}</b></div>
-                <span className="call-res">Pending</span>
+                {m.fansLocked || Date.parse(m.start) - 5 * 60_000 <= Date.now() ? (
+                  <span className="call-res">Pending</span>
+                ) : (
+                  <button
+                    type="button"
+                    disabled={cancelling === b.id}
+                    onClick={async (e) => { e.preventDefault(); e.stopPropagation(); setCancelling(b.id); await cancelBuy(b.id); setCancelling(null); }}
+                    className="btn ghost sm"
+                    title="Cancel this bet and get the AXP back (until the match locks)"
+                  >
+                    {cancelling === b.id ? "Cancelling…" : "Cancel"}
+                  </button>
+                )}
               </Link>
             );
           })}

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
 import { jwtToAddress } from "@mysten/sui/zklogin";
-import { activity, claimWinnings, getMe, setAvatar, setFavChamps, setFavRole, setNickname, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { activity, cancelBuy, claimWinnings, getMe, setAvatar, setFavChamps, setFavRole, setNickname, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
 import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
@@ -277,6 +277,36 @@ describe("one side per market", () => {
     expect((other.body as { error: string }).error).toContain("You're on GEN");
     expect((await postPick(deps, A, { matchId: "x", market: "score", choice: "2-1", stake: 50 })).status).toBe(200);
     expect(((await getMe(deps, A)).body as { buys: unknown[] }).buys).toHaveLength(3);
+  });
+});
+
+describe("cancelling a buy", () => {
+  it("returns that buy's AXP before lock, leaves the other buys, and frees the other side once the market is empty", async () => {
+    const { deps, db } = fakes();
+    await signedIn(deps);
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 300 });
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 200 });
+    const [second, first] = ((await getMe(deps, A)).body as { buys: { id: number }[] }).buys;
+    expect((await cancelBuy(deps, A, { buyId: second.id })).body).toMatchObject({ refunded: 200, axp: { open: 300, available: 9700 } });
+    expect(await db.picksOf(A)).toMatchObject([{ choice: "GEN", stake: 300 }]);
+    expect((await cancelBuy(deps, A, { buyId: second.id })).status).toBe(404);
+    await cancelBuy(deps, A, { buyId: first.id });
+    expect(await db.picksOf(A)).toEqual([]);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "IG", stake: 100 })).status).toBe(200);
+  });
+  it("refuses once the match is locked, and for buys that aren't yours", async () => {
+    const { deps, db, setClock } = fakes();
+    await signedIn(deps);
+    await signedIn(deps, B);
+    await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 300 });
+    const buyId = ((await getMe(deps, A)).body as { buys: { id: number }[] }).buys[0].id;
+    expect((await cancelBuy(deps, B, { buyId })).status).toBe(404);
+    setClock("2026-10-23T16:56:00Z");
+    expect((await cancelBuy(deps, A, { buyId })).status).toBe(409);
+    setClock("2026-10-23T12:00:00Z");
+    await db.insertCommit({ matchId: "x", status: "committing", batch: null, batchHash: null, pickCount: 0, commitDigest: null, network: "testnet", packageId: "0x", committedAt: null, attemptedAt: "2026-10-23T12:00:00Z" });
+    expect((await cancelBuy(deps, A, { buyId })).status).toBe(409);
+    expect((await cancelBuy(deps, null, { buyId })).status).toBe(401);
   });
 });
 

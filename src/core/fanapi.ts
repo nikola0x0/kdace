@@ -225,6 +225,26 @@ export async function getMe(deps: FanApiDeps, address: string | null): Promise<A
   };
 }
 
+/** Cancels one of the fan's buys before the match locks: its AXP returns to their balance. */
+export async function cancelBuy(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
+  if (!address) return fail(401, "Not signed in.");
+  const buyId = (body as { buyId?: unknown } | null)?.buyId;
+  if (!Number.isInteger(buyId)) return fail(400, "Which bet are you cancelling?");
+  const buy = (await deps.db.buysOf(address)).find((b) => b.id === buyId);
+  if (!buy) return fail(404, "That bet isn't yours or was already cancelled.");
+  const all = await deps.fetchSeries();
+  const s = all.find((x) => x.matchId === buy.matchId);
+  if (!s || s.state !== "unstarted" || isLocked(s.startTime, deps.now())) return fail(409, "That match is locked. Bets can't be cancelled after lock.");
+  let refunded: number;
+  try {
+    refunded = await deps.db.cancelBuy(buy.id, address, deps.now().toISOString());
+  } catch (e) {
+    return /locked/.test((e as Error).message) ? fail(409, "That match is locked. Bets can't be cancelled after lock.") : fail(404, "That bet isn't yours or was already cancelled.");
+  }
+  const axp = await fanAxp(deps, address, { picks: await deps.db.picksOf(address), commits: await deps.db.listCommits(), series: all });
+  return { status: 200, body: { refunded, axp } };
+}
+
 /** Claims a settled win: its payout (stake + winnings) joins the fan's balance. Once per series. */
 export async function claimWinnings(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
   if (!address) return fail(401, "Not signed in.");

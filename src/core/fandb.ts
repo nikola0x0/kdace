@@ -6,7 +6,7 @@ import type { FanPickRow } from "./fans.ts";
 export type FanResultRow = { matchId: string; address: string; stake: number; net: number; claimedAt: string | null };
 
 /** One buy as it happened (positions in picks keep only the total). */
-export type BuyRow = { id: number; matchId: string; address: string; market: string; choice: string; amount: number; at: string };
+export type BuyRow = { id: number; matchId: string; address: string; market: string; choice: string; amount: number; at: string; canceledAt?: string | null };
 
 export type FanAuthMethod = "google" | "wallet";
 /** How a fan last signed in. Google fans also carry their zkLogin salt (the only way back to their address without ZKLOGIN_SALT_SECRET). */
@@ -76,6 +76,8 @@ export interface FanDb {
   results(address?: string): Promise<FanResultRow[]>;
   /** Marks an unclaimed win as claimed (once); returns it, or null if there was nothing to claim. */
   claimResult(matchId: string, address: string, at: string): Promise<FanResultRow | null>;
+  /** Cancels one of the fan's buys before lock (its AXP leaves the position); returns the amount. Throws "locked" / "no_such_buy". */
+  cancelBuy(buyId: number, address: string, at: string): Promise<number>;
   /** Every buy one fan made, newest first. */
   buysOf(address: string): Promise<BuyRow[]>;
   /** Most recent buys from the append-only log (newest first), optionally for one match. */
@@ -134,12 +136,16 @@ export class SupabaseFanDb implements FanDb {
     const { json } = await this.req("PATCH", `fan_results?match_id=${eq(matchId)}&address=${eq(address)}&claimed_at=is.null&net=gt.0`, { claimed_at: at }, "return=representation");
     return json?.[0] ? fromRow<FanResultRow>(json[0]) : null;
   }
+  async cancelBuy(buyId: number, address: string, at: string) {
+    const { json } = await this.req("POST", "rpc/cancel_buy", { p_buy_id: buyId, p_address: address, p_at: at });
+    return Number(json);
+  }
   async buysOf(address: string) {
-    const { json } = await this.req("GET", `buys?select=*&address=${eq(address)}&order=at.desc,id.desc`);
+    const { json } = await this.req("GET", `buys?select=*&address=${eq(address)}&canceled_at=is.null&order=at.desc,id.desc`);
     return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
   }
   async recentBuys(limit: number, matchId?: string) {
-    const { json } = await this.req("GET", `buys?select=*&order=at.desc,id.desc&limit=${limit}${matchId ? `&match_id=${eq(matchId)}` : ""}`);
+    const { json } = await this.req("GET", `buys?select=*&canceled_at=is.null&order=at.desc,id.desc&limit=${limit}${matchId ? `&match_id=${eq(matchId)}` : ""}`);
     return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
   }
   async listFans() {

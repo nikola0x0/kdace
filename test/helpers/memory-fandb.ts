@@ -50,9 +50,9 @@ export class MemoryFanDb implements FanDb {
   async upsertPick(row: FanPickRow) {
     this.picks.set(`${row.matchId}|${row.address}|${row.market}|${row.choice}`, { ...row });
   }
-  buys: { id: number; matchId: string; address: string; market: string; choice: string; amount: number; at: string }[] = [];
+  buys: { id: number; matchId: string; address: string; market: string; choice: string; amount: number; at: string; canceledAt?: string | null }[] = [];
   async recentBuys(limit: number, matchId?: string) {
-    return this.buys.filter((b) => !matchId || b.matchId === matchId).sort((a, b) => b.at.localeCompare(a.at) || b.id - a.id).slice(0, limit);
+    return this.buys.filter((b) => !b.canceledAt && (!matchId || b.matchId === matchId)).sort((a, b) => b.at.localeCompare(a.at) || b.id - a.id).slice(0, limit);
   }
   resultRows = new Map<string, FanResultRow>();
   async upsertResults(rows: Omit<FanResultRow, "claimedAt">[]) {
@@ -70,8 +70,19 @@ export class MemoryFanDb implements FanDb {
     r.claimedAt = at;
     return { ...r };
   }
+  async cancelBuy(buyId: number, address: string, at: string) {
+    const b = this.buys.find((x) => x.id === buyId && x.address === address && !x.canceledAt);
+    if (!b) throw new Error("Supabase POST rpc/cancel_buy HTTP 400: no_such_buy");
+    if (this.commits.has(b.matchId)) throw new Error("Supabase POST rpc/cancel_buy HTTP 400: locked");
+    b.canceledAt = at;
+    const key = `${b.matchId}|${address}|${b.market}|${b.choice}`;
+    const p = this.picks.get(key)!;
+    if (p.stake - b.amount <= 0) this.picks.delete(key);
+    else this.picks.set(key, { ...p, stake: p.stake - b.amount, updatedAt: at });
+    return b.amount;
+  }
   async buysOf(address: string) {
-    return this.buys.filter((b) => b.address === address).sort((a, b) => b.at.localeCompare(a.at) || b.id - a.id);
+    return this.buys.filter((b) => b.address === address && !b.canceledAt).sort((a, b) => b.at.localeCompare(a.at) || b.id - a.id);
   }
   async buyPick(row: FanPickRow) {
     if ([...this.picks.values()].some((p) => p.matchId === row.matchId && p.address === row.address && p.market === row.market && p.choice !== row.choice)) throw new Error("Supabase POST rpc/buy_pick HTTP 400: other_side");

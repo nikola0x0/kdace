@@ -42,6 +42,8 @@ type FanState = {
   placeBet(matchId: string, market: Market, choice: string, stake: number): Promise<boolean>;
   signIn(): void;
   signOut(): Promise<void>;
+  /** Cancels one buy before lock; true when its AXP is back in the balance. */
+  cancelBuy(buyId: number): Promise<boolean>;
   /** Claims a settled win; true when the payout joined the balance. */
   claim(matchId: string): Promise<boolean>;
   /** Sets your favourite role and/or photo (a data URL, or null to remove it). */
@@ -131,10 +133,24 @@ export default function FanProvider({ children }: { children: React.ReactNode })
     [refresh, say],
   );
 
+  const cancelBuy = useCallback(
+    async (buyId: number) => {
+      const r = await api<{ refunded: number }>("/api/cancel", { method: "POST", body: JSON.stringify({ buyId }) });
+      if (!r.ok) {
+        say(r.body.error ?? "That bet couldn't be cancelled. Please try again.", "error");
+        return false;
+      }
+      say(`Cancelled · ${r.body.refunded.toLocaleString("en-US")} AXP back in your balance`);
+      await refresh();
+      return true;
+    },
+    [refresh, say],
+  );
+
   const available = me?.axp?.available ?? AXP_START;
 
   return (
-    <Ctx.Provider value={{ me, open, ready, available, slip, openSlip, closeSlip: () => setSlip(null), placeBet, signIn: () => setDialog(true), signOut, updateProfile, claim }}>
+    <Ctx.Provider value={{ me, open, ready, available, slip, openSlip, closeSlip: () => setSlip(null), placeBet, signIn: () => setDialog(true), signOut, updateProfile, claim, cancelBuy }}>
       {children}
       {dialog && (
         <SignInDialog
