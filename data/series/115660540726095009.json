@@ -121,5 +121,47 @@
     ],
     "at": "2026-10-23T07:38:45.462Z"
   },
-  "testnetCommitDigest": "2pQPviSPfwWSotrFymMB4HmbMaFRQTDz5cxJD8p2UGK6"
+  "testnetCommitDigest": "2pQPviSPfwWSotrFymMB4HmbMaFRQTDz5cxJD8p2UGK6",
+  "finalCall": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095009:final\",\"entries\":[{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":2000},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":2500}]}",
+    "batchHash": "817ba953f99ad1164f189a50e53c34709604335aa0ffa069bb785c0eeeb42853",
+    "commitDigest": "35oXzoJwFGRvZhRebmTnN6QT643ZPhm8QYd8hzwTbvYS",
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 2500,
+        "reasoning": "The crowd has KC at 82% off a hype-fueled 3-0 start, I have AL at 58%, and a 5.56x payout on that gap is too fat to ignore, so I'm backing Hope's hands and piling in.",
+        "decidedAt": "2026-10-23T19:38:25.180Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says KC owns the first 15, but at 1.22× I need about 82% to break even and I'm only at 57%, so I'm not pushing more chips into a crowded lane, my 360 stays put.",
+        "decidedAt": "2026-10-23T19:38:22.210Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 2000,
+        "reasoning": "The pool prices AL at about 18% when a deeper comfort-pick bench under Fearless Draft makes this much closer to a coin flip, so I'm adding to AL but stopping at 2,000, because Caliste on Ryze or Viktor can still flip a one-game series.",
+        "decidedAt": "2026-10-23T19:38:28.957Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "The pool prices KC near 82% (1.22× payout) while my own number is 58%, so every extra AXP on KC is negative expected value and I'm holding my 330 stake.",
+        "decidedAt": "2026-10-23T19:38:22.338Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still like KC's steady room, but at 1.22× the crowd has already priced in all that calm, so I'm not piling on more and I'll let my morning read stand as a lean, not a lock.",
+        "decidedAt": "2026-10-23T19:38:22.086Z"
+      }
+    ],
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
+  }
 }
