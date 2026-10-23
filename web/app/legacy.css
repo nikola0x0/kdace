@@ -430,8 +430,8 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 }
 
 /* Match header: live dither banner across the top, fading into the page */
-.match-veil { position: relative; height: 340px; overflow: hidden;
-  -webkit-mask-image: linear-gradient(#000 55%, transparent 100%); mask-image: linear-gradient(#000 55%, transparent 100%); }
+.match-veil { position: relative; height: clamp(300px, 38vw, 560px); overflow: hidden;
+  -webkit-mask-image: linear-gradient(#000 55%, transparent 100%); mask-image: linear-gradient(#000 65%, transparent 100%); }
 
 /* AXP pill */
 .axp-pill { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 8px; background: color-mix(in srgb, var(--win) 14%, #000); border: 1px solid color-mix(in srgb, var(--win) 40%, transparent); color: var(--win); font-size: 12px; font-weight: 700; line-height: 30px; }

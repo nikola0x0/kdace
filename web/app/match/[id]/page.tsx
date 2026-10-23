@@ -30,7 +30,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   return (
     <main>
       <section className="hero">
-        <div className="match-veil">{matchArt ? <HeroVeil src={matchArt} fit="contain" radius={200} /> : <DitherArt className="match-art" />}</div>
+        <div className="match-veil">{matchArt ? <HeroVeil src={matchArt} fit="cover" radius={260} /> : <DitherArt className="match-art" />}</div>
       </section>
       <div className="wrap">
         <div className="match-head">
