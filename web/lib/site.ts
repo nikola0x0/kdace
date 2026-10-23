@@ -2,7 +2,8 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { aiConsensus } from "../../src/core/consensus.ts";
-import { chainOf } from "../../src/core/chain.ts";
+import { chainOf, type Chain } from "../../src/core/chain.ts";
+import { titleHistory, type TitleDay } from "../../src/core/titles.ts";
 import { AXP_START } from "../../src/core/points.ts";
 import { FAN_PREFIX, displayName } from "../../src/core/fans.ts";
 import type { SeriesRecord } from "../../src/core/store.ts";
@@ -43,6 +44,10 @@ export const schedule = () => (scheduleCache ??= fetchSeries().catch(() => []));
 
 export const records = () => store().all().sort((a, b) => a.series.startTime.localeCompare(b.series.startTime));
 export const board = () => store().readBoard();
+/** The latest day of committed title calls (who wins Worlds), or null before the first. */
+export const titleDay = (): TitleDay | null => store().titleDays().filter((d) => d.status === "committed").pop() ?? null;
+/** One analyst's title calls over time, oldest first. */
+export const titleCallsOf = (player: string) => titleHistory(store().titleDays())[player] ?? [];
 export const fanNames = () => store().readFanNames();
 
 export function nameOf(player: string, names = fanNames()) {
@@ -99,7 +104,7 @@ export function counters() {
   };
 }
 
-export const suiscan = (r: SeriesRecord, digest: string | null | undefined) => `https://suiscan.xyz/${chainOf(r).network}/tx/${digest}`;
+export const suiscan = (r: { chain?: Chain }, digest: string | null | undefined) => `https://suiscan.xyz/${chainOf(r).network}/tx/${digest}`;
 export const walruscan = (blobId: string) => `https://walruscan.com/mainnet/blob/${blobId}`;
 export const lessonText = (text: string) => text.split(" (from ")[0];
 

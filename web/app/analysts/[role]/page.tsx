@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { ANALYSTS } from "../../../../src/core/analysts.ts";
 import { PERSONAS, persona } from "../../../lib/personas";
-import { analystStats, art, lessonText, records, walruscan } from "../../../lib/site";
-import { Axp, RoleIcon } from "../../ui/bits";
+import { analystStats, art, lessonText, records, teamLogos, titleCallsOf, walruscan } from "../../../lib/site";
+import { Axp, RoleIcon, TeamLogo } from "../../ui/bits";
 
 export const generateStaticParams = () => PERSONAS.map((p) => ({ role: p.role }));
 
@@ -22,6 +22,9 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
   const calls = all.filter((r) => r.picks.some((x) => x.player === p.player)).reverse().slice(0, 10);
   const img = art(`analyst-${p.role}`);
   const others = PERSONAS.filter((x) => x.role !== p.role);
+  const titleCalls = titleCallsOf(p.player);
+  const current = titleCalls.at(-1);
+  const logos = current ? await teamLogos() : {};
 
   return (
     <main className="wrap" style={{ "--c": p.color } as CSSProperties}>
@@ -48,6 +51,15 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
           <div className="ap-facts">
             <div><span className="ap-label">Believes</span><p>{belief}</p></div>
             <div><span className="ap-label">Meta picks</span><div className="ap-chips">{p.meta.map((m) => <span key={m} className="tag">{m}</span>)}</div></div>
+            {current && (
+              <div>
+                <span className="ap-label">Wins Worlds</span>
+                <p className="flex items-center gap-2 [&_.tlogo]:size-6"><TeamLogo code={current.champion} logo={logos[current.champion] ?? null} /><b>{current.champion}</b><span className="muted">{current.probability}% chance</span></p>
+                {titleCalls.length > 1 && (
+                  <div className="ap-chips">{titleCalls.slice(-6).map((c) => <span key={c.date} className="tag" title={`${c.probability}%`}>{c.date.slice(5)} {c.champion}</span>)}</div>
+                )}
+              </div>
+            )}
             <div><span className="ap-label">Form</span><div className="banner-form">{s.form.length ? s.form.map((r, i) => <i key={i} className={r === "W" ? "w" : "l"}>{r}</i>) : <span className="muted">No results yet</span>}</div></div>
           </div>
         </div>

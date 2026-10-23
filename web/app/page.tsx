@@ -1,11 +1,12 @@
 // Home: today's and upcoming matches first, then recent results and the top of the board.
 import Link from "next/link";
 import { PERSONAS, persona } from "../lib/personas";
-import { art, board, counters, fanNames, nameOf, settledCards, teamLogos, upcomingCards } from "../lib/site";
+import { art, board, counters, fanNames, nameOf, settledCards, teamLogos, titleDay, upcomingCards } from "../lib/site";
 import { Avatar } from "./ui/bits";
 import DitherArt from "./ui/DitherArt";
 import HeroVeil from "./ui/HeroVeil";
 import TeamStrip from "./ui/TeamStrip";
+import TitleRace from "./ui/TitleRace";
 import CountUp from "./ui/rb/CountUp";
 import DecryptedText from "./ui/rb/DecryptedText";
 import LocalTime from "./ui/LocalTime";
@@ -18,6 +19,7 @@ export default async function Home() {
   const banner = art("hero-trophy") ?? art("banner");
   const rows = board().slice(0, 5);
   const names = fanNames();
+  const title = titleDay();
   // The next slate: everything starting within 20 hours of the first upcoming series (one match day in any timezone).
   const first = upcoming[0] ? Date.parse(upcoming[0].series.startTime) : 0;
   const firstGroup = upcoming.filter((c) => Date.parse(c.series.startTime) - first < 20 * 3600_000);
@@ -58,6 +60,8 @@ export default async function Home() {
             <p className="muted">No matches scheduled right now. The next stage appears here as soon as teams are set.</p>
           )}
         </section>
+
+        {title && <TitleRace day={title} logos={logos} />}
 
         {rest.length > 0 && (
           <section className="section">
