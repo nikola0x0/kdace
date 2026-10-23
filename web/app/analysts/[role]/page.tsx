@@ -65,10 +65,12 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
             {current && (
               <div>
                 <span className="ap-label">Wins Worlds</span>
-                <p className="flex items-center gap-2 [&_.tlogo]:size-6"><TeamLogo code={current.champion} logo={logos[current.champion] ?? null} /><b>{current.champion}</b><span className="muted">{current.probability}% chance</span></p>
-                {titleCalls.length > 1 && (
-                  <div className="ap-chips">{titleCalls.slice(-6).map((c) => <span key={c.date} className="tag" title={`${c.probability}%`}>{c.date.slice(5)} {c.champion}</span>)}</div>
-                )}
+                <div className="grid gap-2">
+                  <p className="flex items-center gap-2 [&_.tlogo]:size-6"><TeamLogo code={current.champion} logo={logos[current.champion] ?? null} /><b>{current.champion}</b><span className="muted">{current.probability}% chance</span></p>
+                  {titleCalls.length > 1 && (
+                    <div className="ap-chips">{titleCalls.slice(-6).map((c) => <span key={c.date} className="tag" title={`${c.probability}%`}>{c.date.slice(5)} {c.champion}</span>)}</div>
+                  )}
+                </div>
               </div>
             )}
             <div><span className="ap-label">Form</span><div className="banner-form">{s.form.length ? s.form.map((r, i) => <i key={i} className={r === "W" ? "w" : "l"}>{r}</i>) : <span className="muted">No results yet</span>}</div></div>

@@ -364,7 +364,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .ap-kpi.big { border-color: color-mix(in srgb, var(--c) 45%, var(--line)); background: linear-gradient(135deg, color-mix(in srgb, var(--c) 16%, var(--panel)), var(--panel)); }
 .ap-kpi.big b { font-size: 34px; }
 .ap-facts { display: grid; gap: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
-.ap-facts > div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: baseline; }
+.ap-facts > div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: center; min-height: 36px; }
 .ap-facts p { margin: 0; color: var(--fg-2); }
 .ap-label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--kd-muted); font-weight: 600; }
 .ap-chips { display: flex; gap: 6px; flex-wrap: wrap; }
