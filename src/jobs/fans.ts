@@ -3,7 +3,7 @@
 import type { FanCommitRow, FanDb } from "../core/fandb.ts";
 import type { Network } from "../core/chain.ts";
 import { FAN_PREFIX } from "../core/fans.ts";
-import type { FanSection, Store } from "../core/store.ts";
+import { isFinal, type FanSection, type Store } from "../core/store.ts";
 import type { Series } from "../core/worlds.ts";
 import { emptyRecord } from "./pick.ts";
 
@@ -19,11 +19,11 @@ export function fanAddresses(store: Store): string[] {
   return [...out].sort();
 }
 
-/** Each fan's net AXP over settled series (address → net), from the published records. */
+/** Each fan's net AXP over settled (and void, net 0) series (address → net), from the published records. */
 export function fanSettledNets(store: Store): Record<string, number> {
   const nets: Record<string, number> = {};
   for (const r of store.all()) {
-    if (r.status !== "settled") continue;
+    if (!isFinal(r)) continue;
     for (const [player, net] of Object.entries(r.axp ?? {})) {
       if (player.startsWith(FAN_PREFIX)) nets[player.slice(FAN_PREFIX.length)] = (nets[player.slice(FAN_PREFIX.length)] ?? 0) + net;
     }
@@ -31,15 +31,15 @@ export function fanSettledNets(store: Store): Record<string, number> {
   return nets;
 }
 
-/** Each fan's stake and net on every settled series with a committed fan batch (stake covers both markets). */
+/** Each fan's stake and net on every settled series with a committed fan batch (stake covers both markets). A void series is net 0: nothing to claim. */
 export function fanResults(store: Store): { matchId: string; address: string; stake: number; net: number }[] {
   const out: { matchId: string; address: string; stake: number; net: number }[] = [];
   for (const r of store.all()) {
-    if (r.status !== "settled" || r.fans?.status !== "committed" || !r.fans.batch) continue;
+    if (!isFinal(r) || r.fans?.status !== "committed" || !r.fans.batch) continue;
     const stakes: Record<string, number> = {};
     for (const e of JSON.parse(r.fans.batch).entries as { player: string; stake: number }[])
       if (e.player.startsWith(FAN_PREFIX)) stakes[e.player.slice(FAN_PREFIX.length)] = (stakes[e.player.slice(FAN_PREFIX.length)] ?? 0) + e.stake;
-    for (const [address, stake] of Object.entries(stakes)) out.push({ matchId: r.series.matchId, address, stake, net: r.axp?.[`${FAN_PREFIX}${address}`] ?? -stake });
+    for (const [address, stake] of Object.entries(stakes)) out.push({ matchId: r.series.matchId, address, stake, net: r.status === "void" ? 0 : r.axp?.[`${FAN_PREFIX}${address}`] ?? -stake });
   }
   return out;
 }
@@ -52,7 +52,10 @@ export async function syncFanAxp(store: Store, db: FanDb, now: Date): Promise<{ 
   await db.upsertResults(fanResults(store)); // before the nets, so a new win is held for its claim, never spendable early
   const nets = fanSettledNets(store);
   await db.setAxpSettled(nets);
-  const settledCommits = (await db.listCommits()).filter((c) => !c.settledAt && store.get(c.matchId)?.status === "settled").map((c) => c.matchId);
+  const settledCommits = (await db.listCommits()).filter((c) => {
+    const r = c.settledAt ? null : store.get(c.matchId);
+    return !!r && isFinal(r);
+  }).map((c) => c.matchId);
   await db.markCommitsSettled(settledCommits, now.toISOString());
   return { fans: Object.keys(nets).length, settledCommits };
 }
@@ -70,8 +73,8 @@ export function mirrorFanCommits(store: Store, rows: FanCommitRow[], series: Ser
       committedAt: row.committedAt, chain: { network: row.network as Network, packageId: row.packageId },
     };
     if (JSON.stringify(r.fans) === JSON.stringify(fans)) continue;
-    if (r.status === "settled") {
-      // AXP is already settled; adding fans now would change it after the fact.
+    if (isFinal(r)) {
+      // AXP is already settled (or the series voided); adding fans now would change it after the fact.
       log(`${row.matchId}: fan batch arrived after settlement, not mirrored`);
       continue;
     }

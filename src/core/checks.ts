@@ -2,8 +2,9 @@
 import { analystEntries } from "./analysts.ts";
 import { batchHash, canonicalBatch } from "./batch.ts";
 import { FAN_PREFIX, fanMarketId } from "./fans.ts";
-import { computeBoard, marketNet } from "./points.ts";
-import { toSettled, type SeriesRecord, type Store } from "./store.ts";
+import { computeBoard } from "./points.ts";
+import { VOID } from "./results.ts";
+import { seriesNet, toSettled, voidNet, type SeriesRecord, type Store } from "./store.ts";
 import { titleMarketId, type TitleDay } from "./titles.ts";
 import type { Series } from "./worlds.ts";
 
@@ -27,6 +28,17 @@ function picksMatchBatch(r: SeriesRecord): boolean {
   return safely(() => canonicalBatch(r.series.matchId, analystEntries(r.series.bestOf, r.picks)) === r.batch);
 }
 
+/** The deadline a commit must beat: the start stored at commit, or the official start if it has since moved earlier. */
+const startDeadline = (r: SeriesRecord, official: Series | undefined) => Math.min(Date.parse(r.series.startTime), official ? Date.parse(official.startTime) : Infinity);
+
+/** A plain note when the official start differs from the one stored at commit (null when it doesn't, or isn't listed). */
+export function startShift(r: SeriesRecord, official: Series | undefined): string | null {
+  if (!official) return null;
+  const mins = Math.round((Date.parse(official.startTime) - Date.parse(r.series.startTime)) / 60000);
+  if (!mins) return null;
+  return `official start moved ${Math.abs(mins)} min ${mins < 0 ? "earlier" : "later"} than the ${r.series.startTime} stored at commit; commits are checked against the earlier of the two`;
+}
+
 /**
  * Checks one series against the chain (`commit`, `result`, read through Tatum) and the official lolesports feed (`official`).
  * Limit: Tatum's gRPC blocks event listing, so a second commit for the same match cannot be detected from here.
@@ -40,7 +52,7 @@ export function checkRecord(r: SeriesRecord, commit: LedgerEvent, result: Ledger
   return {
     hashMatches: commitOk && !!r.batch && JSON.parse(r.batch).matchId === matchId && onchain === batchHash(r.batch) && onchain === r.batchHash,
     picksMatchBatch: picksMatchBatch(r),
-    committedBeforeStart: commitOk && !!official && Number(commit!.json.committed_at_ms) < Date.parse(official.startTime),
+    committedBeforeStart: commitOk && Number(commit!.json.committed_at_ms) < startDeadline(r, official),
     resultMatchesOfficial: resultOk && !!official?.winner && result!.json.winner === official.winner && result!.json.score === officialScore,
     lessonsPredatePicks: r.picks.every((p) => p.usedLessons.every((l) => Date.parse(l.createdAt) < Date.parse(p.pickedAt))),
   };
@@ -59,7 +71,7 @@ export function checkFans(r: SeriesRecord, commit: LedgerEvent, official: Series
   return {
     fanHashMatches: commitOk && parsed!.matchId === marketId && onchain === batchHash(f!.batch!) && onchain === f!.batchHash,
     fanEntriesAreFans: !!parsed && parsed.entries.every((e) => e.player.startsWith(FAN_PREFIX)),
-    fanCommittedBeforeStart: commitOk && !!official && Number(commit!.json.committed_at_ms) < Date.parse(official.startTime),
+    fanCommittedBeforeStart: commitOk && Number(commit!.json.committed_at_ms) < startDeadline(r, official),
   };
 }
 
@@ -77,11 +89,20 @@ export function checkTitleDay(day: TitleDay, commit: LedgerEvent) {
   };
 }
 
-/** A settled record's AXP results must be exactly what its published batches (analysts and fans) pay out. */
+/** A void series: VOID/VOID posted on chain for this match (as published), and every player with a bet on chain refunded (net 0). */
+export function checkVoid(r: SeriesRecord, result: LedgerEvent) {
+  const resultOk = result?.type === "ResultPosted" && result.json.market_id === r.series.matchId;
+  return {
+    voidResultOnChain: resultOk && result!.json.winner === VOID && result!.json.score === VOID && r.result?.winner === VOID && r.result?.score === VOID,
+    voidRefundsAll: !!r.axp && safely(() => JSON.stringify(Object.entries(voidNet(r)).sort()) === JSON.stringify(Object.entries(r.axp!).sort())),
+  };
+}
+
+/** A settled record's AXP results must be exactly what its published batches (analysts and fans) pay out; a void one refunds all. */
 export function axpMatches(r: SeriesRecord): boolean {
   if (!r.result || !r.axp) return false;
   const sorted = (o: Record<string, number>) => JSON.stringify(Object.entries(o).sort(([a], [b]) => a.localeCompare(b)));
-  return safely(() => sorted(marketNet(toSettled(r))) === sorted(r.axp!));
+  return safely(() => sorted(seriesNet(r)) === sorted(r.axp!));
 }
 
 /** The leaderboard must be exactly what the settled records' published batches add up to. */

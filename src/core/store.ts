@@ -5,13 +5,14 @@ import type { AnalystPick } from "./analysts.ts";
 import type { Banter } from "./banter.ts";
 import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
-import { AXP_START, type BoardRow, type SettledSeries } from "./points.ts";
+import { AXP_START, marketNet, type BoardRow, type SettledSeries } from "./points.ts";
 import type { TitleDay } from "./titles.ts";
 import type { Series } from "./worlds.ts";
 
 export type SeriesRecord = {
   series: Series;
-  status: "committing" | "committed" | "settled" | "missed";
+  /** "void": no official result 48 h after the start (or cancelled); VOID was posted on chain and every stake refunded. */
+  status: "committing" | "committed" | "settled" | "missed" | "void";
   picks: AnalystPick[];
   batch: string | null;
   batchHash: string | null;
@@ -58,17 +59,27 @@ export const toSettled = (r: SeriesRecord): SettledSeries => ({
   result: { winner: r.result!.winner, score: r.result!.score },
 });
 
+/** A void series refunds everyone: net 0 for every player with a bet on chain. */
+export const voidNet = (r: SeriesRecord): Record<string, number> => Object.fromEntries(allEntries(r).map((e) => [e.player, 0]));
+
+/** Each player's net for a series with a result: parimutuel per market, or all zeros when it was voided. */
+export const seriesNet = (r: SeriesRecord): Record<string, number> => (r.status === "void" ? voidNet(r) : marketNet(toSettled(r)));
+
+/** Settled and void series are final: their nets count, and nothing in them is held back as open. */
+export const isFinal = (r: SeriesRecord) => r.status === "settled" || r.status === "void";
+
 export type AxpAccount = { start: number; settled: number; open: number; available: number };
 
 /**
  * A player's AXP from the published records: settled = net over settled series; open = stakes in series that are
  * committed (or still committing) but not settled yet; available = start + settled − open. A record whose commit was
- * interrupted past lock is "missed": its analyst batch never reached the chain, so it holds nothing back.
+ * interrupted past lock is "missed": its analyst batch never reached the chain, so it holds nothing back. A void series
+ * counts like a settled one (every net is 0).
  */
 export function axpAccount(records: SeriesRecord[], player: string): AxpAccount {
   let settled = 0, open = 0;
   for (const r of records) {
-    if (r.status === "settled") settled += r.axp?.[player] ?? 0;
+    if (isFinal(r)) settled += r.axp?.[player] ?? 0;
     else for (const e of [...(r.status === "missed" ? [] : batchEntries(r.batch)), ...fanBatchEntries(r)]) if (e.player === player) open += e.stake;
   }
   return { start: AXP_START, settled, open, available: AXP_START + settled - open };

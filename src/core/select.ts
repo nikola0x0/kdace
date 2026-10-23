@@ -22,6 +22,9 @@ export function seriesToResume(store: Store, now: Date): SeriesRecord[] {
   return store.all().filter((r) => r.status === "committing" && !isLocked(r.series.startTime, now));
 }
 
+/** A record whose bets are on chain and whose result isn't settled yet: committed, or missed by the analysts but committed by the fans. */
+export const awaitingResult = (r: SeriesRecord) => r.status === "committed" || (r.status === "missed" && r.fans?.status === "committed");
+
 /** Committed series, plus series the analysts missed but the fans committed. */
 export function seriesToSettle(all: Series[], store: Store): Series[] {
   return all.filter((s) => {

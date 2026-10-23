@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { batchHash, canonicalBatch } from "../src/core/batch.ts";
-import { axpMatches, boardMatches, checkRecord } from "../src/core/checks.ts";
+import { axpMatches, boardMatches, checkRecord, checkVoid, startShift } from "../src/core/checks.ts";
 import { computeBoard } from "../src/core/points.ts";
 import { Store, type SeriesRecord } from "../src/core/store.ts";
 
@@ -87,3 +87,46 @@ describe("boardMatches", () => {
     expect(boardMatches(st)).toBe(false);
   });
 });
+
+describe("start time moved after the commit", () => {
+  it("judges the commit against the earlier of the stored and official start", () => {
+    const movedEarlier = { ...official, startTime: "2026-10-23T12:00:30Z" };
+    expect(checkRecord(record, commit, result, movedEarlier).committedBeforeStart).toBe(false);
+    const movedLater = { ...official, startTime: "2026-10-24T17:00:00Z" };
+    expect(checkRecord(record, commit, result, movedLater).committedBeforeStart).toBe(true);
+  });
+  it("falls back to the start stored at commit when the series left the schedule", () => {
+    expect(checkRecord(record, commit, result, undefined).committedBeforeStart).toBe(true);
+  });
+  it("says clearly when the official start differs from the one stored at commit", () => {
+    expect(startShift(record, official)).toBeNull();
+    expect(startShift(record, undefined)).toBeNull();
+    expect(startShift(record, { ...official, startTime: "2026-10-23T16:00:00Z" })).toMatch(/moved 60 min earlier/);
+    expect(startShift(record, { ...official, startTime: "2026-10-23T19:00:00Z" })).toMatch(/moved 120 min later/);
+  });
+});
+
+describe("void records", () => {
+  const two = canonicalBatch("x", [{ player: "analyst-adc", market: "winner", choice: "GEN", stake: 1000 }, { player: "analyst-top", market: "winner", choice: "IG", stake: 500 }]);
+  const voided: SeriesRecord = { ...record, status: "void", batch: two, result: { winner: "VOID", score: "VOID", resultDigest: "r" }, axp: { "analyst-adc": 0, "analyst-top": 0 }, debate: null };
+  const voidEvent = { type: "ResultPosted" as const, json: { market_id: "x", winner: "VOID", score: "VOID" } };
+  it("accepts a VOID result on chain with every stake refunded", () => {
+    expect(checkVoid(voided, voidEvent)).toEqual({ voidResultOnChain: true, voidRefundsAll: true });
+    expect(axpMatches(voided)).toBe(true);
+  });
+  it("flags a void that paid someone, missed a player, or has no VOID event on chain", () => {
+    expect(checkVoid({ ...voided, axp: { "analyst-adc": 500, "analyst-top": -500 } }, voidEvent).voidRefundsAll).toBe(false);
+    expect(checkVoid({ ...voided, axp: { "analyst-adc": 0 } }, voidEvent).voidRefundsAll).toBe(false);
+    expect(axpMatches({ ...voided, axp: { "analyst-adc": 500, "analyst-top": -500 } })).toBe(false);
+    expect(checkVoid(voided, result).voidResultOnChain).toBe(false);
+    expect(checkVoid(voided, null).voidResultOnChain).toBe(false);
+    expect(checkVoid(voided, { ...voidEvent, json: { ...voidEvent.json, market_id: "y" } }).voidResultOnChain).toBe(false);
+  });
+  it("leaves void records off the board", () => {
+    const st = new Store(mkdtempSync(join(tmpdir(), "kdace-")));
+    st.put(voided);
+    st.writeBoard([]);
+    expect(boardMatches(st)).toBe(true);
+  });
+});
+

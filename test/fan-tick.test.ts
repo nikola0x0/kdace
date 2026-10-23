@@ -74,7 +74,7 @@ function settleDeps(st: Store, asked: string[]): SettleDeps {
   return {
     fetchSeries: async () => [done], store: st, postResult: async () => "result-digest",
     ask: async (p) => (asked.push(p), p.includes("Write the debate") ? "Top: gg" : "Top lesson: x."),
-    startRemember: async () => "job", awaitRemember: async () => "blob", chain, log: () => {},
+    startRemember: async () => "job", awaitRemember: async () => "blob", chain, now: () => new Date("2026-10-23T20:00:00Z"), log: () => {},
   };
 }
 
@@ -148,5 +148,25 @@ describe("checkFans", () => {
     const sneaky = canonicalBatch("x:fans", [{ player: "analyst-top", market: "winner", choice: "GEN", stake: 1000 }]);
     expect(checkFans({ ...r, fans: { ...r.fans, batch: sneaky, batchHash: batchHash(sneaky) } }, commit, series).fanEntriesAreFans).toBe(false);
     expect(checkFans(r, null, series)).toMatchObject({ fanHashMatches: false, fanCommittedBeforeStart: false });
+  });
+});
+
+describe("void series and the fans", () => {
+  const voided = (): SeriesRecord => ({ ...committed(), status: "void", fans: { status: "committed", batch: fanBatch, batchHash: batchHash(fanBatch), pickCount: 1, commitDigest: "fd", committedAt: "t", chain }, result: { winner: "VOID", score: "VOID", resultDigest: "r" }, axp: Object.fromEntries([...picks.map((p) => [p.player, 0]), [`fan:${A}`, 0]]) });
+  it("writes a net-0 result row (nothing to claim) and frees the fan commit", async () => {
+    const st = store();
+    st.put(voided());
+    const db = new MemoryFanDb();
+    db.commits.set("x", { ...fanRow });
+    const out = await syncFanAxp(st, db, new Date("2026-10-26T00:00:00Z"));
+    expect(out.settledCommits).toEqual(["x"]);
+    expect(await db.results(A)).toEqual([{ matchId: "x", address: A, stake: 1000, net: 0, claimedAt: null }]);
+    expect(await db.results()).toEqual([]); // no unclaimed win
+    expect(fanSettledNets(st)).toEqual({ [A]: 0 });
+  });
+  it("does not mirror a fan batch onto a series that was already voided", () => {
+    const st = store();
+    st.put({ ...voided(), fans: undefined });
+    expect(mirrorFanCommits(st, [fanRow], [series])).toEqual([]);
   });
 });

@@ -68,4 +68,8 @@ describe("axpAccount", () => {
       fans: { status: "committed", batch: fanBatch, batchHash: "h", pickCount: 1, commitDigest: "fd", committedAt: "t", chain: { network: "testnet", packageId: "0x1" } } };
     expect(axpAccount([r], "fan:0xa").open).toBe(250);
   });
+  it("frees every stake of a void series (all nets 0)", () => {
+    const r = { ...withBatch("v", "void", 800, { [P]: 0, "analyst-mid": 0 }), result: { winner: "VOID", score: "VOID", resultDigest: "r" } };
+    expect(axpAccount([r], P)).toEqual({ start: 10000, settled: 0, open: 0, available: 10000 });
+  });
 });

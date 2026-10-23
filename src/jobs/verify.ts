@@ -2,7 +2,7 @@
 // AXP payouts from the published batches, and recomputes the leaderboard.
 // Fan batches (committed under `<matchId>:fans` at lock) are checked the same way.
 import { chainOf } from "../core/chain.ts";
-import { axpMatches, boardMatches, checkFans, checkRecord, checkTitleDay } from "../core/checks.ts";
+import { axpMatches, boardMatches, checkFans, checkRecord, checkTitleDay, checkVoid, startShift } from "../core/checks.ts";
 import { readLedgerEvent } from "../core/ledger.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
@@ -25,6 +25,8 @@ for (const r of store.all().filter((x) => x.status !== "missed" || fansCommitted
     ...(r.batch ? analystChecks : {}),
     // A settled series' AXP results are recomputed from its published batches (parimutuel per market).
     ...(r.status === "settled" ? { resultMatchesOfficial, axpRecomputes: axpMatches(r) } : {}),
+    // A void series (no official result 48 h after the start, or cancelled): VOID on chain and every stake refunded.
+    ...(r.status === "void" ? { ...checkVoid(r, result), axpRecomputes: axpMatches(r) } : {}),
   };
   if (fansCommitted(r)) {
     const fanCommit = await readLedgerEvent(r.fans!.commitDigest!, r.fans!.chain);
@@ -33,6 +35,8 @@ for (const r of store.all().filter((x) => x.status !== "missed" || fansCommitted
   const pass = Object.values(relevant).every(Boolean);
   if (!pass) failures++;
   console.log(`${pass ? "PASS" : "FAIL"} ${r.series.block} ${r.series.teamA} vs ${r.series.teamB} [${r.status}]`, relevant);
+  const shift = startShift(r, official);
+  if (shift) console.log(`   note   ${shift}`);
   if (r.commitDigest) console.log(`   commit https://suiscan.xyz/${network}/tx/${r.commitDigest}`);
   if (fansCommitted(r)) console.log(`   fans   https://suiscan.xyz/${r.fans!.chain.network}/tx/${r.fans!.commitDigest} (${r.fans!.pickCount} fan picks)`);
   if (r.result) console.log(`   result https://suiscan.xyz/${network}/tx/${r.result.resultDigest}`);
