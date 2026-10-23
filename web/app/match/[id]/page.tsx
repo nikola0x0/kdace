@@ -74,9 +74,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                           ))}
                         </ul>
                       </details>
-                    ) : (
-                      <div className="recall muted">No past lessons used for this pick yet.</div>
-                    )}
+                    ) : null}
                   </div>
                   <div className={`ap-call ${right === null ? "" : right ? "right" : "wrong"}`}>{a.winner}{a.score ? ` ${a.score}` : ""}<small className="num"><CountUp to={a.prob} duration={1.2} />% sure</small></div>
                 </div>
