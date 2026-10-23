@@ -1,8 +1,8 @@
 // GET /api/me → the signed-in fan's address, display name (SuiNS or short address), picks with stakes and AXP
 // ({ start, settled, open, available }); 401 when signed out.
-// POST /api/me { favRole } → sets the role you cheer for (or null). { favChamps } → up to two favourite champions. { image } → sets your photo from a data URL (or null).
+// POST /api/me { favRole } → sets the role you cheer for (or null). { favChamps } → up to two favourite champions. { nickname } → your shown name (or null). { image } → sets your photo from a data URL (or null).
 import type { NextRequest } from "next/server";
-import { getMe, setAvatar, setFavChamps, setFavRole } from "../../../../src/core/fanapi.ts";
+import { getMe, setAvatar, setFavChamps, setFavRole, setNickname } from "../../../../src/core/fanapi.ts";
 import { guarded, currentFan, fanDeps, notConfigured, readJson, respond } from "../../../lib/server/fans";
 
 export const runtime = "nodejs";
@@ -23,5 +23,5 @@ export const POST = guarded(async (req: NextRequest) => {
   const body = await readJson(req);
   const fan = currentFan(deps, req);
   const has = (k: string) => !!body && typeof body === "object" && k in body;
-  return respond(has("image") ? await setAvatar(deps, fan, body) : has("favChamps") ? await setFavChamps(deps, fan, body) : await setFavRole(deps, fan, body));
+  return respond(has("image") ? await setAvatar(deps, fan, body) : has("nickname") ? await setNickname(deps, fan, body) : has("favChamps") ? await setFavChamps(deps, fan, body) : await setFavRole(deps, fan, body));
 });

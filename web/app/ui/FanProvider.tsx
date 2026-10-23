@@ -13,6 +13,8 @@ export type OpenSeries = { series: { matchId: string; teamA?: string; teamB?: st
 export type Me = {
   address: string;
   displayName: string;
+  /** The name the fan picked (null: SuiNS name or short address is shown). */
+  nickname?: string | null;
   avatarUrl?: string | null;
   /** The role the fan cheers for (top, jungle, mid, adc, support). */
   favRole?: string | null;
@@ -37,7 +39,7 @@ type FanState = {
   signIn(): void;
   signOut(): Promise<void>;
   /** Sets your favourite role and/or photo (a data URL, or null to remove it). */
-  updateProfile(patch: { favRole?: string | null; image?: string | null; favChamps?: string[] }): Promise<boolean>;
+  updateProfile(patch: { favRole?: string | null; image?: string | null; favChamps?: string[]; nickname?: string | null }): Promise<boolean>;
 };
 
 export const AXP_START = 10_000;
@@ -97,8 +99,8 @@ export default function FanProvider({ children }: { children: React.ReactNode })
   }, [refresh]);
 
   const updateProfile = useCallback(
-    async (patch: { favRole?: string | null; image?: string | null; favChamps?: string[] }) => {
-      const r = await api<{ favRole?: string | null; avatarUrl?: string | null; favChamps?: string[] }>("/api/me", { method: "POST", body: JSON.stringify(patch) });
+    async (patch: { favRole?: string | null; image?: string | null; favChamps?: string[]; nickname?: string | null }) => {
+      const r = await api<{ favRole?: string | null; avatarUrl?: string | null; favChamps?: string[]; nickname?: string | null; displayName?: string }>("/api/me", { method: "POST", body: JSON.stringify(patch) });
       if (!r.ok) {
         say(r.body.error ?? "That didn't save. Please try again.", "error");
         return false;

@@ -42,6 +42,8 @@ export default function UserButton() {
   const [uploading, setUploading] = useState(false);
   const [copied, setCopied] = useState(false);
   const [champsOpen, setChampsOpen] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState("");
   const { icon, name } = useChampions();
   if (!ready) return <span style={{ width: 88 }} />;
   if (!me) return <button className="btn sm" onClick={signIn}>Sign in</button>;
@@ -64,6 +66,14 @@ export default function UserButton() {
     } finally {
       setUploading(false);
       if (fileRef.current) fileRef.current.value = "";
+    }
+  }
+
+  async function saveName() {
+    const name = draft.trim();
+    if (await updateProfile({ nickname: name ? name : null })) {
+      toast.success(name ? `You're ${name} now` : "Name cleared");
+      setEditing(false);
     }
   }
 
@@ -97,7 +107,25 @@ export default function UserButton() {
               </span>
             </button>
             <span className="grid min-w-0 gap-0.5">
-              <span className="truncate text-sm font-semibold">{me.displayName}</span>
+              {editing ? (
+                <form className="flex items-center gap-1" onSubmit={(e) => { e.preventDefault(); saveName(); }}>
+                  <input
+                    autoFocus
+                    value={draft}
+                    maxLength={20}
+                    onChange={(e) => setDraft(e.target.value)}
+                    onKeyDown={(e) => { e.stopPropagation(); if (e.key === "Escape") setEditing(false); }}
+                    placeholder="Your name"
+                    className="h-7 w-36 rounded-md border border-input bg-secondary px-2 text-sm font-semibold outline-none focus:border-neutral-500"
+                  />
+                  <button type="submit" title="Save name" className="grid size-7 place-items-center rounded-md text-win hover:bg-white/5"><Check className="size-4" /></button>
+                </form>
+              ) : (
+                <span className="flex min-w-0 items-center gap-1.5">
+                  <span className="truncate text-sm font-semibold">{me.displayName}</span>
+                  <button type="button" onClick={() => { setDraft(me.nickname ?? ""); setEditing(true); }} title="Change your name" className="grid size-6 shrink-0 place-items-center rounded-md text-muted-foreground hover:bg-white/5 hover:text-foreground"><Pencil className="size-3.5" /></button>
+                </span>
+              )}
               <button type="button" onClick={copyAddress} title="Copy wallet address" className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-foreground">
                 <span className="tabular-nums">{me.address.slice(0, 6)}…{me.address.slice(-4)}</span>
                 {copied ? <Check className="size-3.5 text-win" /> : <Copy className="size-3.5" />}
@@ -152,9 +180,6 @@ export default function UserButton() {
           </DropdownMenuItem>
           <DropdownMenuItem asChild className="cursor-pointer gap-2.5 py-2">
             <Link href="/board"><Trophy className="size-4" /> Leaderboard</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem onSelect={() => fileRef.current?.click()} className="cursor-pointer gap-2.5 py-2">
-            <Camera className="size-4" /> Change photo
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem onSelect={() => signOut()} className="cursor-pointer gap-2.5 py-2 text-muted-foreground">

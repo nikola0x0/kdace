@@ -61,9 +61,10 @@ export async function signIn(deps: FanApiDeps, req: { bytes: unknown; signature:
 
 async function startSession(deps: FanApiDeps, address: string, now: Date): Promise<ApiResult> {
   const suinsName = await refreshSuins(deps.db, address, deps.lookupName, now, true);
+  const nickname = (await deps.db.getFan(address))?.nickname ?? null;
   return {
     status: 200,
-    body: { address, suinsName, displayName: displayName(address, suinsName) },
+    body: { address, suinsName, displayName: displayName(address, nickname || suinsName) },
     session: signToken({ address }, deps.sessionSecret, SESSION_TTL_MS, now),
   };
 }
@@ -174,7 +175,7 @@ export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   for (const p of await deps.db.picksFor(openIds)) if (isOpenPick(p, commits, series)) inPlay[p.address] = (inPlay[p.address] ?? 0) + p.stake;
   return {
     status: 200,
-    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, favChamps: f.favChamps, total: AXP_START + f.axpSettled, balance: AXP_START + f.axpSettled - (inPlay[f.address] ?? 0), net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
+    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.nickname || f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, favChamps: f.favChamps, total: AXP_START + f.axpSettled, balance: AXP_START + f.axpSettled - (inPlay[f.address] ?? 0), net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
   };
 }
 
@@ -185,7 +186,7 @@ export async function activity(deps: FanApiDeps, opts: { matchId?: string; limit
   return {
     status: 200,
     body: {
-      buys: buys.map((b) => ({ id: b.id, matchId: b.matchId, market: b.market, choice: b.choice, amount: b.amount, at: b.at, address: b.address, name: displayName(b.address, fans.get(b.address)?.suinsName), avatarUrl: fans.get(b.address)?.avatarUrl ?? null, favRole: fans.get(b.address)?.favRole ?? null, favChamps: fans.get(b.address)?.favChamps ?? [] })),
+      buys: buys.map((b) => ({ id: b.id, matchId: b.matchId, market: b.market, choice: b.choice, amount: b.amount, at: b.at, address: b.address, name: displayName(b.address, fans.get(b.address)?.nickname || fans.get(b.address)?.suinsName), avatarUrl: fans.get(b.address)?.avatarUrl ?? null, favRole: fans.get(b.address)?.favRole ?? null, favChamps: fans.get(b.address)?.favChamps ?? [] })),
     },
   };
 }
@@ -197,7 +198,7 @@ export async function getMe(deps: FanApiDeps, address: string | null): Promise<A
   const axp = await fanAxp(deps, address, { picks: rows, commits: await deps.db.listCommits(), series: await deps.fetchSeries() });
   const picks = rows.map(({ matchId, market, choice, stake, updatedAt }) => ({ matchId, market, choice, stake, updatedAt }));
   const fan = await deps.db.getFan(address);
-  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), avatarUrl: fan?.avatarUrl ?? null, favRole: fan?.favRole ?? null, favChamps: fan?.favChamps ?? [], picks, axp } };
+  return { status: 200, body: { address, suinsName, nickname: fan?.nickname ?? null, displayName: displayName(address, fan?.nickname || suinsName), avatarUrl: fan?.avatarUrl ?? null, favRole: fan?.favRole ?? null, favChamps: fan?.favChamps ?? [], picks, axp } };
 }
 
 const AVATAR_MAX_BYTES = 200 * 1024;
@@ -228,6 +229,24 @@ export async function setFavChamps(deps: FanApiDeps, address: string | null, bod
   const champs = [...new Set(raw as string[])];
   await deps.db.setFavChamps(address, champs);
   return { status: 200, body: { favChamps: champs } };
+}
+
+// Names that would pass for an analyst or for KDAce itself.
+const RESERVED = /^(agent\b|kdace|kairo|vyne|nyx0|raze|lumi|admin|official)/i;
+
+/** Sets the fan's chosen name: 3-20 letters, numbers, spaces, _ - . (trimmed); null clears it. */
+export async function setNickname(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
+  if (!address) return fail(401, "Not signed in.");
+  const raw = (body as { nickname?: unknown } | null)?.nickname;
+  if (raw === null) {
+    await deps.db.setNickname(address, null);
+    return { status: 200, body: { nickname: null, displayName: displayName(address, (await deps.db.getFan(address))?.suinsName) } };
+  }
+  const name = typeof raw === "string" ? raw.trim().replace(/\s+/g, " ") : "";
+  if (!/^[\p{L}\p{N} _.-]{3,20}$/u.test(name)) return fail(400, "Names are 3 to 20 letters, numbers, spaces, _ - or .");
+  if (RESERVED.test(name)) return fail(400, "That name is taken by the analysts. Pick another one.");
+  await deps.db.setNickname(address, name);
+  return { status: 200, body: { nickname: name, displayName: name } };
 }
 
 export const FAV_ROLES = ["top", "jungle", "mid", "adc", "support"] as const;

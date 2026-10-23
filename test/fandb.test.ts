@@ -112,10 +112,11 @@ describe("SupabaseFanDb", () => {
     await expect(new SupabaseFanDb(URL_, "k", fetchImpl).listCommits()).rejects.toThrow(/500/);
   });
 
-  it("reads cached SuiNS names for a set of fans", async () => {
-    const { calls, fetchImpl } = fakeFetch(() => ({ json: [{ address: A, suins_name: "nikola.sui" }] }));
-    expect(await new SupabaseFanDb(URL_, "k", fetchImpl).fanNames([A])).toEqual({ [A]: "nikola.sui" });
-    expect(decodeURIComponent(calls[0].url)).toBe(`${URL_}/rest/v1/fans?select=address,suins_name&address=in.("${A}")`);
+  it("reads names for a set of fans: their chosen name first, else the cached SuiNS name", async () => {
+    const B = "0x" + "b".repeat(64);
+    const { calls, fetchImpl } = fakeFetch(() => ({ json: [{ address: A, suins_name: "nikola.sui", nickname: null }, { address: B, suins_name: "x.sui", nickname: "Faker Fan" }] }));
+    expect(await new SupabaseFanDb(URL_, "k", fetchImpl).fanNames([A, B])).toEqual({ [A]: "nikola.sui", [B]: "Faker Fan" });
+    expect(decodeURIComponent(calls[0].url)).toBe(`${URL_}/rest/v1/fans?select=address,suins_name,nickname&address=in.("${A}","${B}")`);
   });
 
   it("takes the referee lock through an RPC", async () => {

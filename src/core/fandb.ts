@@ -27,6 +27,8 @@ export type FanRow = {
   favRole?: string | null;
   /** Up to two favourite champions (Data Dragon ids). */
   favChamps?: string[];
+  /** A name the fan picked for themselves; shown before their SuiNS name or address. */
+  nickname?: string | null;
 };
 
 /** One fan batch per series. Written before the chain call (`committing`) and after it (`committed`), like src/jobs/pick.ts. */
@@ -48,7 +50,9 @@ export type FanCommitRow = {
 export interface FanDb {
   getFan(address: string): Promise<FanRow | null>;
   /** Every fan with their cached SuiNS name and settled AXP, for the leaderboard. */
-  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number; avatarUrl: string | null; favRole: string | null; favChamps: string[] }[]>;
+  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number; avatarUrl: string | null; favRole: string | null; favChamps: string[]; nickname: string | null }[]>;
+  /** Sets (or with null clears) the fan's chosen name (already validated). */
+  setNickname(address: string, nickname: string | null): Promise<void>;
   /** Stores a profile photo the fan uploaded and points their avatar at it (null clears the avatar). Returns the URL. */
   setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null): Promise<string | null>;
   /** Sets the fan's favourite champions (up to two ids, already validated). */
@@ -58,7 +62,7 @@ export interface FanDb {
   /** Creates the fan row if it doesn't exist yet. With `auth`, also records how they signed in (a salt, once set, is kept). */
   ensureFan(address: string, auth?: FanAuth): Promise<void>;
   setSuins(address: string, name: string | null, checkedAt: string): Promise<void>;
-  /** Cached SuiNS names (address → name or null) for the given fans. */
+  /** Names to show (address → chosen name, else cached SuiNS name, else null) for the given fans. */
   fanNames(addresses: string[]): Promise<Record<string, string | null>>;
   upsertPick(row: FanPickRow): Promise<void>;
   /** Adds `row.stake` to the fan's position on that outcome (creating it at that stake); returns the position. */
@@ -112,8 +116,8 @@ export class SupabaseFanDb implements FanDb {
     return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
   }
   async listFans() {
-    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url,fav_role,fav_champs");
-    return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null; fav_role: string | null; fav_champs: string[] | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null, favRole: r.fav_role ?? null, favChamps: r.fav_champs ?? [] }));
+    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url,fav_role,fav_champs,nickname");
+    return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null; fav_role: string | null; fav_champs: string[] | null; nickname: string | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null, favRole: r.fav_role ?? null, favChamps: r.fav_champs ?? [], nickname: r.nickname ?? null }));
   }
   async setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null) {
     let url: string | null = null;
@@ -129,6 +133,9 @@ export class SupabaseFanDb implements FanDb {
     }
     await this.req("PATCH", `fans?address=${eq(address)}`, { avatar_url: url }, "return=minimal");
     return url;
+  }
+  async setNickname(address: string, nickname: string | null) {
+    await this.req("PATCH", `fans?address=${eq(address)}`, { nickname }, "return=minimal");
   }
   async setFavChamps(address: string, champs: string[]) {
     await this.req("PATCH", `fans?address=${eq(address)}`, { fav_champs: champs }, "return=minimal");
@@ -152,8 +159,8 @@ export class SupabaseFanDb implements FanDb {
   }
   async fanNames(addresses: string[]) {
     if (!addresses.length) return {};
-    const { json } = await this.req("GET", `fans?select=address,suins_name&address=${inList(addresses)}`);
-    return Object.fromEntries((json as { address: string; suins_name: string | null }[]).map((r) => [r.address, r.suins_name]));
+    const { json } = await this.req("GET", `fans?select=address,suins_name,nickname&address=${inList(addresses)}`);
+    return Object.fromEntries((json as { address: string; suins_name: string | null; nickname: string | null }[]).map((r) => [r.address, r.nickname || r.suins_name]));
   }
   async upsertPick(row: FanPickRow) {
     await this.req("POST", "picks?on_conflict=match_id,address,market,choice", toRow(row), "resolution=merge-duplicates,return=minimal");

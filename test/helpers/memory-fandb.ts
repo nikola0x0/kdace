@@ -24,16 +24,20 @@ export class MemoryFanDb implements FanDb {
     if (f) this.fans.set(address, { ...f, suinsName: name, suinsCheckedAt: checkedAt });
   }
   async fanNames(addresses: string[]) {
-    return Object.fromEntries(addresses.flatMap((a) => (this.fans.has(a) ? [[a, this.fans.get(a)!.suinsName]] : [])));
+    return Object.fromEntries(addresses.flatMap((a) => (this.fans.has(a) ? [[a, this.fans.get(a)!.nickname || this.fans.get(a)!.suinsName]] : [])));
   }
   async listFans() {
-    return [...this.fans.values()].map((f) => ({ address: f.address, suinsName: f.suinsName ?? null, axpSettled: f.axpSettled ?? 0, avatarUrl: f.avatarUrl ?? null, favRole: f.favRole ?? null, favChamps: f.favChamps ?? [] }));
+    return [...this.fans.values()].map((f) => ({ address: f.address, suinsName: f.suinsName ?? null, axpSettled: f.axpSettled ?? 0, avatarUrl: f.avatarUrl ?? null, favRole: f.favRole ?? null, favChamps: f.favChamps ?? [], nickname: f.nickname ?? null }));
   }
   async setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null) {
     const f = this.fans.get(address);
     const url = image ? `https://storage.test/storage/v1/object/public/avatars/${address}?v=${image.bytes.length}` : null;
     if (f) this.fans.set(address, { ...f, avatarUrl: url });
     return url;
+  }
+  async setNickname(address: string, nickname: string | null) {
+    const f = this.fans.get(address);
+    if (f) this.fans.set(address, { ...f, nickname });
   }
   async setFavChamps(address: string, champs: string[]) {
     const f = this.fans.get(address);

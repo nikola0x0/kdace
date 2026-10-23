@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
 import { jwtToAddress } from "@mysten/sui/zklogin";
-import { activity, getMe, setAvatar, setFavChamps, setFavRole, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { activity, getMe, setAvatar, setFavChamps, setFavRole, setNickname, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
 import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
@@ -259,7 +259,7 @@ describe("getMe", () => {
     await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 400 });
     const r = await getMe(deps, A);
     expect(r.body).toEqual({
-      address: A, suinsName: "nikola.sui", displayName: "nikola.sui", avatarUrl: null, favRole: null, favChamps: [],
+      address: A, suinsName: "nikola.sui", nickname: null, displayName: "nikola.sui", avatarUrl: null, favRole: null, favChamps: [],
       picks: [{ matchId: "x", market: "winner", choice: "GEN", stake: 400, updatedAt: "2026-10-23T12:00:00.000Z" }],
       axp: { start: 10000, settled: 750, open: 400, available: 10350 },
     });
@@ -328,6 +328,24 @@ describe("setFavChamps", () => {
     expect((await setFavChamps(deps, A, { favChamps: ["<img src=x>"] })).status).toBe(400);
     expect((await setFavChamps(deps, A, { favChamps: "Ahri" })).status).toBe(400);
     expect((await setFavChamps(deps, null, { favChamps: ["Ahri"] })).status).toBe(401);
+  });
+});
+
+describe("setNickname", () => {
+  it("shows the chosen name instead of SuiNS or the address, everywhere, and clears back with null", async () => {
+    const { deps, db } = fakes();
+    await signedIn(deps);
+    expect((await setNickname(deps, A, { nickname: "  Faker   Fan  " })).body).toEqual({ nickname: "Faker Fan", displayName: "Faker Fan" });
+    expect((await getMe(deps, A)).body).toMatchObject({ nickname: "Faker Fan", displayName: "Faker Fan" });
+    expect((await leaderboardFans(deps)).body).toMatchObject({ fans: [{ address: A, displayName: "Faker Fan" }] });
+    expect(await db.fanNames([A])).toEqual({ [A]: "Faker Fan" });
+    expect((await setNickname(deps, A, { nickname: null })).body).toEqual({ nickname: null, displayName: "nikola.sui" });
+  });
+  it("rejects names that are too short, too long, odd characters, or pass for an analyst", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    for (const nickname of ["ab", "x".repeat(21), "<script>", "Agent Smith", "lumi_fan", "KDAce official", 42]) expect((await setNickname(deps, A, { nickname })).status).toBe(400);
+    expect((await setNickname(deps, null, { nickname: "Faker Fan" })).status).toBe(401);
   });
 });
 
