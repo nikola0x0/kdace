@@ -87,7 +87,7 @@ ${history.join("\n") || "(none yet)"}
 
 Who wins Worlds 2026? Make your call for today; you can change it tomorrow.
 Reply with only JSON:
-{"champion":"<one of ${alive.join(", ")}>","probability":<1-100, its chance to win the whole tournament>,"contenders":["<next most likely>","<third>"],"reasoning":"<one or two sentences in your voice>"}`;
+{"champion":"<one of ${alive.join(", ")}>","probability":<1-100, its chance to win the whole tournament>,"contenders":["<next most likely>","<third>"],"reasoning":"<one or two sentences in your voice: talk like a passionate analyst on the Worlds desk, not a spreadsheet; one number at most>"}`;
 }
 
 export function parseTitlePick(reply: string, a: Analyst, alive: string[], now: Date): TitlePick {

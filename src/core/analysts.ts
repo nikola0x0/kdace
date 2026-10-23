@@ -83,7 +83,7 @@ ${scout ? `\nScouting report (official 2026 match data; use it, but read it thro
 Predict ${s.teamA} vs ${s.teamB}, best of ${s.bestOf} (${s.block}). Pick blind: you do not know what anyone else picked.
 Reply with only JSON:
 {"winner":"<${s.teamA} or ${s.teamB}>","score":<see rule>,"winProbability":<50-100, your chance the winner wins>,"reasoning":"<one or two sentences>","usedLessonIds":["<ids of lessons you relied on>"]}
-Reasoning: argue it from YOUR core belief, in your voice, like an analyst at the caster desk, not a spreadsheet. ${a.role === "adc" ? "You love numbers: use at most two." : "Use at most one number, or none."} Don't repeat the scouting report back.
+Reasoning: this is sport, so talk like a passionate analyst on the Worlds desk, not a spreadsheet. Argue from YOUR core belief, in your voice: players, storylines, rivalries, momentum, the stage, the vibe. ${a.role === "adc" ? "Numbers are your thing, but two at most, and make them land like a punchline." : "Numbers only as seasoning: one at most, ideally none."} Never read the scouting report back.
 Rule: ${scoreRule}.`;
 }
 
