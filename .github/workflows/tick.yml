@@ -1,4 +1,5 @@
-# Runs the KDAce tick in the cloud: pick open series, settle finished ones, commit data/ back to main.
+# Runs the KDAce tick in the cloud: settle finished series, pick open ones, final calls, commit data/ back to main.
+# Every 30 minutes, plus workflow_dispatch (manual, or the lock route's dispatcher when GITHUB_DISPATCH_TOKEN is set on Vercel).
 name: tick
 
 on:
@@ -29,6 +30,8 @@ jobs:
           git config user.name "kdace-tick"
           git config user.email "kdace-tick@users.noreply.github.com"
       - name: Scout (fetch new games from the official lolesports feeds; the tick commits data/scout)
+        # Runs dispatched early by the lock route (a result is in, a final call is due) skip it to get to the tick fast.
+        if: github.event_name != 'workflow_dispatch'
         run: npm run scout
         continue-on-error: true
         timeout-minutes: 8

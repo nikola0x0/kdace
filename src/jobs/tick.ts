@@ -1,16 +1,20 @@
-// Tick (every 30 min): pick first because it is time-critical, then the daily title picks, then mirror fan commits from Supabase, then settle, then
-// write the fans' settled AXP back to Supabase, then commit and push data/. Each stage is isolated so one failure never
+// Tick (every 30 min, or dispatched early by the lock route): mirror fan commits from Supabase, then the fast settle
+// (results on Sui, AXP, board, voids) and the fans' settled AXP back to Supabase, then picks and the analysts' final
+// calls (time-critical), then the daily title picks and banter, then the slow settle (debate and Walrus lessons), then
+// publish data/pending.json for the dispatcher and commit and push data/. Each stage is isolated so one failure never
 // skips the others (except: settle waits for a successful fan mirror, so AXP is never settled without the fans), and one
 // lock keeps manual runs from overlapping.
 import { execFileSync } from "node:child_process";
 import "../core/env.ts"; // loads .env before Supabase settings are read
+import { pendingRecords } from "../core/dispatch.ts";
 import { fanDbFromEnv } from "../core/fandb.ts";
 import { withLock } from "../core/lock.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
 import { fanAddresses, mirrorFanCommits, syncFanAxp } from "./fans.ts";
+import { realFinalCallDeps, runFinalCall } from "./finalcall.ts";
 import { realPickDeps, runPick } from "./pick.ts";
-import { realSettleDeps, runSettle } from "./settle.ts";
+import { realSettleDeps, runSettleFast, runSettleSlow } from "./settle.ts";
 import { realTitleDeps, runTitles } from "./titles.ts";
 import { realBanterDeps, runBanter } from "./banter.ts";
 
@@ -32,15 +36,21 @@ await withLock("data", async () => {
     fansOk = true;
   };
   for (const [stage, run] of [
+    ["fans", fans],
+    // Results first: posting a result and settling AXP is quick, and frees AXP for the picks and final calls below.
+    ["settle", async () => (fansOk ? console.log("[tick] settle", await runSettleFast(await realSettleDeps(store))) : console.log("[tick] settle skipped: fan commits could not be mirrored"))],
+    // Each fan's settled net goes back to Supabase, where the API checks stakes against available AXP.
+    ["axp", async () => (db ? console.log("[tick] fan axp", await syncFanAxp(store, db, new Date())) : undefined)],
     ["pick", async () => console.log("[tick] pick", await runPick(await realPickDeps(store)))],
+    // Top-ups shortly before lock, on the side each analyst picked.
+    ["final", async () => console.log("[tick] final call", await runFinalCall(await realFinalCallDeps(store)))],
     // Who wins Worlds: once per UTC day, after the time-critical series picks.
     ["titles", async () => console.log("[tick] titles", await runTitles(await realTitleDeps(store)))],
     // Trash talk on series the analysts split on (flavour only, never fingerprinted).
     ["banter", async () => console.log("[tick] banter", await runBanter(await realBanterDeps(store)))],
-    ["fans", fans],
-    ["settle", async () => (fansOk ? console.log("[tick] settle", await runSettle(await realSettleDeps(store))) : console.log("[tick] settle skipped: fan commits could not be mirrored"))],
-    // Each fan's settled net goes back to Supabase, where the API checks stakes against available AXP.
-    ["axp", async () => (db ? console.log("[tick] fan axp", await syncFanAxp(store, db, new Date())) : undefined)],
+    // The slow part of settling: the debate and one Walrus lesson per analyst.
+    ["lessons", async () => console.log("[tick] lessons", await runSettleSlow(await realSettleDeps(store)))],
+    ["pending", async () => store.writePending(pendingRecords(store.all(), (await import("../core/ledger.ts")).currentChain()))],
   ] as const) {
     try {
       await run();

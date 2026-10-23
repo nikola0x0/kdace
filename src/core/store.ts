@@ -164,6 +164,11 @@ export class Store {
     return readdirSync(dir).filter((f) => f.endsWith(".json")).sort().map((f) => readJson<TitleDay>(join(dir, f)));
   }
 
+  /** Records still awaiting a result (data/pending.json), read by the lock route's tick dispatcher from GitHub. */
+  writePending(rows: unknown[]): void {
+    writeJson(join(this.dir, "pending.json"), rows);
+  }
+
   readBoard(): BoardRow[] {
     const path = join(this.dir, "board.json");
     return existsSync(path) ? readJson(path) : [];
