@@ -38,7 +38,7 @@ export default function SeasonStepper({ season, stages }: { season: string; stag
     <div className="wrap pt-4">
       <div className={cn("flex items-center gap-6 rounded-xl border border-amber-300/20 bg-[linear-gradient(100deg,rgba(252,211,77,0.13),rgba(252,211,77,0.04)_45%,rgba(252,211,77,0.01))] px-4 max-md:flex-col max-md:items-stretch max-md:gap-2", collapsed ? "py-2" : "py-3")}>
         <div className="flex shrink-0 items-center justify-between gap-3">
-          <span className="flex items-center gap-2 font-display text-xl font-black uppercase leading-none tracking-wide text-amber-200"><Trophy className="size-4" />{season}</span>
+          <span className="font-display text-xl font-black uppercase leading-none tracking-wide text-amber-200">{season}</span>
           {collapsed && <span className="text-xs text-amber-100/70">{status}</span>}
         </div>
         {!collapsed && (
