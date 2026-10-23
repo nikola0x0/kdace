@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-23",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "HLE"
+      ],
+      "reasoning": "GEN has the best stable core on this board, 37-10 in series and 5-1 against other regions, and I trust that kind of player quality over the noise. BLG's 50-12 record is real, but I'm not paying a premium for a crowd favorite when GEN's top players have won three titles and keep showing up in the big spots.",
+      "pickedAt": "2026-10-23T05:53:44.430Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "KC"
+      ],
+      "reasoning": "BLG has the best international record on this board at 8-2 and a +1.4k GD@15 that says they take the map before the first dragon even spawns. Give me the tempo, the early jungle pressure, and the first three objectives, and this is a clean lift of the Worlds trophy.",
+      "pickedAt": "2026-10-23T05:53:47.399Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "KC"
+      ],
+      "reasoning": "BLG brings the deepest pool on the board: a 50-12 series record, 8-2 against other regions, and a +1.4k GD@15 that says their early leads come from draft, not luck. Under Fearless, that breadth of champions should keep them a step ahead of GEN, who have the same titles but a thinner record against outside regions.",
+      "pickedAt": "2026-10-23T05:53:49.469Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "BLG",
+      "probability": 20,
+      "contenders": [
+        "GEN",
+        "KC"
+      ],
+      "reasoning": "BLG leads the field on the strongest combined profile: a .806 series win rate (50-12), a .706 game win rate, the best GD@15 (+1.4k), and an 8-2 record against other regions. GEN's numbers are close behind, so the edge is real but not decisive, and a 20% chance reflects that.",
+      "pickedAt": "2026-10-23T05:53:52.216Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "G2"
+      ],
+      "reasoning": "BLG's 50-12 series record and 8-2 mark against other regions tell me this group plays with the calm of a team that trusts each other, and that steadiness is what carries a best-of-five bracket. GEN's chemistry is close behind, but BLG's mood looks the most settled right now.",
+      "pickedAt": "2026-10-23T05:53:57.557Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-23\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0}]}",
+  "batchHash": "7d2e6dddda2c6d9cfbfb125647c64fab4168f4707a9d0f788f3b2be8ecfbbe8b",
+  "commitDigest": "8SFoYKLGsB82oBH9B5sej464Y4w7syGpVovSP3hfgn21",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}
