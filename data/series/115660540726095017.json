@@ -1,0 +1,119 @@
+{
+  "series": {
+    "matchId": "115660540726095017",
+    "startTime": "2026-10-24T00:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "TSW",
+    "teamB": "LYON",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "TSW's LCP résumé is built on a league that rolls over everyone, and the crowd is buying that. When the stage got bigger, they came up short, and LYON beat them clean. Berserker is the one who carries damage in that bot lane, and Saint is the kind of player who decides a game by himself. I'll take the individual talent over the hype.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:18:10.456Z",
+      "stake": 180
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "TSW",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "This is a tempo game and TSW owns the first 15 minutes: they take the first tower, the first dragon, and they close out leads once they get them. LYON can hold their own early, but they are more likely to be chasing the map than setting its pace. The MSI result stings, but it doesn't change who controls the opening.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:18:13.885Z",
+      "stake": 450
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "TSW",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "Under Fearless, the side that keeps more of its signature champions alive wins the draft fight, and TSW's spread of Ahri, Aurora, Locke, Yunara and Lee Sin gives them more ways to attack than LYON's Syndra-Ryze mid pool. Their recent form on the star carries also points the same way, so I'm taking TSW to close it out.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:18:19.247Z",
+      "stake": 290
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "TSW",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "Over their last 20 games TSW is 16-4 with a +1.6k gold lead at 15, and they've converted 12 of 13 leads, which is the kind of consistency I trust over one recent series. LYON's 3-0 win in May is a real mark against TSW, but it's a single sample, and LYON's form has been softer over the same stretch. This is a lean, not a strong call.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:18:23.276Z",
+      "stake": 240
+    },
+    {
+      "player": "analyst-support",
+      "winner": "LYON",
+      "score": null,
+      "winProbability": 56,
+      "reasoning": "TSW's last two results were losses, and a team that just lost twice in a row can carry that into a single-game gamble, especially when the other side just beat them 3-0 and still looks settled in the room. LYON has the steadier mood and the calmer hands when a game slips, so I trust them to hold their nerve for one map.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:18:27.558Z",
+      "stake": 170
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095017\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":240},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":450},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":290},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":170},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":180}]}",
+  "batchHash": "3a80ef08af2fc54c3ab982418a169e71545ef41335c2c64658328110487504dc",
+  "commitDigest": "5Evu6N4oRmXtzup7B6uvaq3RYv6vbXyzC31zW1gUCVbt",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: TSW vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTSW [LCP]: 2026 series 26-8, games 67-32 | last 10 (newest first) WWWLWWWLLL\n  LCP 2026 25-2 (3 titles) · First Stand 2026 0-2 · MSI 2026 1-2 · EWC 2026 0-2 · vs other regions 1-6\n  Last 20 games (16-4): GD@15 +1.6k, FB 60%, FT 85%, FD 55%, dragons 59%, 31.5 min avg, 1st baron 27:36\n  Leads @15 converted 12/13, comeback wins 2, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Galio 3, Gnar 3, Urgot 3 | JG Lee Sin 4, Qiyana 4, Jarvan IV 3 | MID Ahri 2, Aurora 2, Locke 2 | BOT Yunara 4, Caitlyn 3, Ezreal 3 | SUP Nautilus 4, Alistar 2, Bard 2\n  Standout: TSW Bie (support) KDA 6.5 over 20 games, 7% dmg share\nLYON [LCS]: 2026 series 25-13, games 72-42 | last 10 (newest first) LWWLWWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · vs other regions 4-6\n  Last 20 games (12-8): GD@15 +0.8k, FB 60%, FT 70%, FD 47%, dragons 48%, 33.6 min avg, 1st baron 24:48\n  Leads @15 converted 7/8, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Picks: TOP Gwen 4, Gnar 2, K'Sante 2 | JG Wukong 3, Skarner 3, Xin Zhao 3 | MID Syndra 4, Ryze 3, Annie 2 | BOT Lucian 3, Yunara 3, Jhin 2 | SUP Alistar 5, Lulu 3, Milio 3\n  Standout: LYON Berserker (bottom) KDA 5.1 over 20 games, 27% dmg share\nHead-to-head 2026: TSW 0-1 LYON\n  2026-07-08 MSI 2026 Knockouts: LYON 3-0 TSW\nKey moments:\n  - TSW came back from -6.5k at 30:00 vs CFO (LCP 2026)\n  - TSW threw a +4.8k lead (20:00) vs GAM (LCP 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - LYON took Baron at 23:54 while down 3.0k vs C9 (LCS 2026), won\nFun facts:\n  * Likely quadra kill: LYON Saint (Sylas) at 17:15 (vs DSG, LCS 2026)\n  * Likely quadra kill: TSW Eddie (Yunara) at 19:46 (vs GAM, LCP 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCP vs LCS: LCP went 0-1 against LCS in 2026; LCP 33% vs LCS 29% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TSW (LCP): no Worlds titles or finals before 2026.\n  LYON (LCS): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "Vyne talks tempo, Nyx0 talks spreads, Raze talks spreadsheets. Berserker carries the damage in that bot lane and Saint takes games over alone. Pick the talent, not the vibe."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, the 1v1 only happens if you survive the first fight. TSW owns the opening, and that's the whole game."
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Tempo means nothing if your draft leaves you with a dead pick. TSW keeps Ahri, Aurora, Locke, Yunara and Lee Sin alive under Fearless, and LYON's Syndra-Ryze pool can't match that."
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "16-4 over 20 games and 12 of 13 converted leads is the sample I trust. Kairo wants to judge one series, and I'll take consistency over the vibe check."
+      },
+      {
+        "by": "top",
+        "replyTo": 3,
+        "text": "Your consistency stat comes from a league that rolls over everyone, Raze. When the stage got bigger, TSW came up short, and that's the sample that matters here."
+      },
+      {
+        "by": "support",
+        "replyTo": 4,
+        "text": "Everybody's so loud today! TSW's two straight losses are a real worry, but LYON keeps calm hands when a game slips, so I'm trusting their nerve. Nobody fight, I still love you all!"
+      },
+      {
+        "by": "jungle",
+        "replyTo": 5,
+        "text": "Lumi, calm hands don't stop a first dragon, but we still love you. Pick TSW and we'll see who's chasing by minute fifteen."
+      }
+    ],
+    "at": "2026-10-23T07:19:03.384Z"
+  }
+}
