@@ -121,5 +121,47 @@
     ],
     "at": "2026-10-23T07:38:50.340Z"
   },
-  "testnetCommitDigest": "Cu7HJpu9f8JW6f39LsDxjX4iZqxyAjbkYZpR8x6ao1sp"
+  "testnetCommitDigest": "Cu7HJpu9f8JW6f39LsDxjX4iZqxyAjbkYZpR8x6ao1sp",
+  "finalCall": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095017:final\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":600},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":500},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":500},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":1500}]}",
+    "batchHash": "f2719bf6d7ecee6c3d5bde6edf6b250ed8462f47dffc9e1cab6ea9f09807b7ef",
+    "commitDigest": "9TaQQj56BnLW1Afy3pJyrcHtVJaZvDncx2rQoujnJM61",
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 1500,
+        "reasoning": "The crowd is piling onto TSW's résumé, and I'm taking Berserker at 5.7× over a 3-0 MSI loss they never solved, so I'm going big but not reckless.",
+        "decidedAt": "2026-10-23T23:44:31.565Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo's mine, but at 1.21× I'd need about 83% to break even and I'm sitting at 56%, so I'm not feeding more AXP into a crowded side when one lost Drake fight flips the whole map.",
+        "decidedAt": "2026-10-23T23:44:28.037Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 500,
+        "reasoning": "The draft blueprint is still with LYON, and at 5.73× the pool is badly underpricing a team that stays calm when behind, so I'm pressing the edge but not going all-in, since one first-pick Yunara/Lucian fight could flip it.",
+        "decidedAt": "2026-10-23T23:44:32.623Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 600,
+        "reasoning": "LYON at 58% against a 5.73× payout is clearly positive value, but my edge is a soft lean on a best-of-1 where TSW's fast engages can still win, so I'm adding a partial stake of about half the optimal size.",
+        "decidedAt": "2026-10-23T23:44:33.832Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 500,
+        "reasoning": "LYON have already seen TSW flinch once at MSI, and at 5.7× the payout I'll back that locker-room read with a solid but not reckless top-up.",
+        "decidedAt": "2026-10-23T23:44:33.723Z"
+      }
+    ],
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
+  }
 }
