@@ -3,25 +3,47 @@
   "installCommand": "npm ci --prefix .. --ignore-scripts && npm ci",
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "www.kdace.xyz"
         }
       ],
-      "destination": "https://kdace.xyz/:path*",
+      "destination": "https://kdace.xyz/",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.kdace.xyz"
+        }
+      ],
+      "destination": "https://kdace.xyz/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "kdace-zeta.vercel.app"
         }
       ],
-      "destination": "https://kdace.xyz/:path*",
+      "destination": "https://kdace.xyz/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "host",
+          "value": "kdace-zeta.vercel.app"
+        }
+      ],
+      "destination": "https://kdace.xyz/:path+",
       "permanent": true
     }
   ]
