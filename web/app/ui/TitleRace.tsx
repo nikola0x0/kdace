@@ -4,6 +4,7 @@ import type { TitleDay } from "../../../src/core/titles.ts";
 import { persona } from "../../lib/personas";
 import { art, suiscan } from "../../lib/site";
 import { Avatar, RoleIcon, TeamLogo } from "./bits";
+import ShinyText from "./rb/ShinyText";
 
 export default function TitleRace({ day, logos }: { day: TitleDay; logos: Record<string, string> }) {
   const votes = new Map<string, { n: number; prob: number }>();
@@ -29,7 +30,7 @@ export default function TitleRace({ day, logos }: { day: TitleDay; logos: Record
             <span className="text-xs text-muted-foreground">The AI favourite</span>
             <div className="flex items-center gap-3">
               <span className="[&_.tlogo]:size-14"><TeamLogo code={fav} logo={logos[fav] ?? null} /></span>
-              <span className="display text-6xl leading-none">{fav}</span>
+              <ShinyText text={fav} className="display text-6xl leading-none" color="#e5e5e5" shineColor="#fcd34d" speed={3.5} delay={1.5} />
             </div>
             <span className="text-sm text-muted-foreground">{favVotes.n} of {day.picks.length} analysts · {Math.round(favVotes.prob / favVotes.n)}% average chance</span>
           </div>

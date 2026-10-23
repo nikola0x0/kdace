@@ -254,7 +254,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .tug-row { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 10px; font-size: 13px; }
 .tug-label { text-align: center; color: var(--kd-muted); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
 .tug-bar { display: flex; gap: 3px; height: 6px; }
-.tug-bar i { display: block; border-radius: 1px; transition: flex .4s ease; }
+.tug-bar i { display: block; border-radius: 1px; transition: flex .9s cubic-bezier(.22,1,.36,1); }
 .tug-bar i:first-child { clip-path: polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%); }
 .tug-bar i:last-child { clip-path: polygon(4px 0, 100% 0, 100% 100%, 0 100%); }
 .draft { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 0 2px; border-top: 1px solid var(--line); }

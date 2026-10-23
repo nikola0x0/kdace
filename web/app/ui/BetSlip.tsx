@@ -1,18 +1,20 @@
 "use client";
 // The bet slip: pick a side, set an AXP amount, see what it would return from the current pool, confirm.
 // Side panel on desktop, bottom sheet on phones.
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { teamColor } from "../../lib/teams";
 import { Axp, TeamLogo } from "./bits";
 import Countdown from "./Countdown";
 import { useFans, type Market } from "./FanProvider";
+import ClickSpark, { type ClickSparkHandle } from "./rb/ClickSpark";
 
 const SCORES: Record<number, string[]> = { 1: [], 3: ["2-0", "2-1"], 5: ["3-0", "3-1", "3-2"] };
 const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
 
 export default function BetSlip() {
   const { slip, closeSlip, open, available, placeBet } = useFans();
+  const spark = useRef<ClickSparkHandle>(null);
   const [market, setMarket] = useState<Market>(slip!.market);
   const [choice, setChoice] = useState(slip!.choice);
   const live = open[slip!.match.matchId];
@@ -59,7 +61,9 @@ export default function BetSlip() {
     setBusy(true);
     const ok = await placeBet(m.matchId, market, choice, stake);
     setBusy(false);
-    if (ok) closeSlip();
+    if (!ok) return;
+    spark.current?.spark();
+    setTimeout(closeSlip, 550); // let the burst play before the sheet closes
   }
 
   return (
@@ -120,9 +124,11 @@ export default function BetSlip() {
           <div><span>Multiplier</span><b className="num">{valid ? `${est.mult.toFixed(2)}×` : "-"}</b></div>
         </div>
 
-        <button className="btn slip-go" disabled={!valid || busy} onClick={confirm}>
-          {busy ? "Buying…" : `Buy ${fmt(stake)} AXP of ${choice}`}
-        </button>
+        <ClickSpark ref={spark} sparkColor={["#fcd34d", "#4ade80", "#ffffff"]} sparkCount={14} sparkRadius={46} sparkSize={12} duration={600} shape="star" glow={0.6} ring className="block">
+          <button className="btn slip-go w-full" disabled={!valid || busy} onClick={confirm}>
+            {busy ? "Buying…" : `Buy ${fmt(stake)} AXP of ${choice}`}
+          </button>
+        </ClickSpark>
         <p className="slip-note">
           {stake > max ? `You only have ${fmt(max)} AXP available.` : stake < 10 ? "Minimum bet is 10 AXP." : "Each buy adds to your position. Winners split the pool by stake. Buying closes 5 minutes before the game; positions are proven on Sui."}
         </p>

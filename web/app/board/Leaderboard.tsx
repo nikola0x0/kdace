@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState, type CSSProperties } from "react";
 import { Avatar, Axp, RoleIcon } from "../ui/bits";
 import Pnl from "../ui/Pnl";
+import CountUp from "../ui/rb/CountUp";
+import { motion } from "motion/react";
 import { useFans } from "../ui/FanProvider";
 import { useChampions } from "../ui/useChampions";
 
@@ -41,7 +43,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
               <span className="pod-rank display">{i + 1}</span>
               {who(r, i === 0 ? 76 : 60)}
               <b className="pod-name">{r.name}</b>
-              <span className="pod-bal num"><Axp size={20} /> {fmt(r.total)}</span>
+              <span className="pod-bal num"><Axp size={20} /> <CountUp to={r.total} from={10_000} duration={1.1} separator="," /></span>
               <Pnl net={r.net} />
             </div>
           );
@@ -51,16 +53,16 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
       <div className="lpanel">
         <div className="lb-head"><span>#</span><span>Player</span><span>Total</span><span>Profit</span></div>
         {rows.map((r, i) => (
-          <div key={r.player} className={`lb-row ${i === mineIdx ? "me" : ""}`}>
+          <motion.div layout="position" transition={{ type: "spring", stiffness: 420, damping: 38 }} key={r.player} className={`lb-row ${i === mineIdx ? "me" : ""}`}>
             <span className="num muted">{i + 1}</span>
             {r.role ? (
               <Link href={`/analysts/${r.role}`} className="who">{who(r, 30)}{r.name} <RoleIcon role={r.role} /><span className="tag">AI</span></Link>
             ) : (
               <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{r.champs?.map((c) => champ.icon(c) && <img key={c} src={champ.icon(c)!} alt={champ.name(c)} title={champ.name(c)} className="size-5 rounded-full border border-border object-cover" />)}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
             )}
-            <b className="num bal"><Axp size={15} /> {fmt(r.total)}</b>
+            <b className="num bal"><Axp size={15} /> <CountUp to={r.total} from={10_000} duration={1.1} separator="," /></b>
             <span title={`${r.net > 0 ? "+" : ""}${fmt(r.net)} AXP · ${r.w}–${r.l}`}><Pnl net={r.net} /></span>
-          </div>
+          </motion.div>
         ))}
       </div>
 

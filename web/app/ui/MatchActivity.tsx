@@ -1,5 +1,6 @@
 "use client";
 // Latest buys on one match, refreshed every 15 seconds.
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Axp } from "./bits";
 import LocalTime from "./LocalTime";
@@ -22,12 +23,12 @@ export default function MatchActivity({ matchId }: { matchId: string }) {
       ) : (
         <ul className="grid gap-2">
           {buys.map((b) => (
-            <li key={b.id} className="flex items-center gap-2.5 text-sm">
+            <motion.li key={b.id} layout initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }} className="flex items-center gap-2.5 text-sm">
               {b.avatarUrl ? <img src={b.avatarUrl} alt="" referrerPolicy="no-referrer" className="size-6 rounded-full object-cover" /> : <span className="grid size-6 place-items-center rounded-full bg-secondary text-[10px] font-bold text-muted-foreground">{b.name.replace(/^0x/, "").slice(0, 2).toUpperCase()}</span>}
               <span className="min-w-0 flex-1 truncate"><b>{b.name}</b> <span className="text-muted-foreground">bought</span> <b>{b.choice}</b>{b.market === "score" ? <span className="text-muted-foreground"> (score)</span> : null}</span>
               <span className="inline-flex items-center gap-1 font-semibold tabular-nums"><Axp size={13} />{b.amount.toLocaleString("en-US")}</span>
               <span className="w-14 text-right text-xs text-muted-foreground"><LocalTime iso={b.at} format="time" /></span>
-            </li>
+            </motion.li>
           ))}
         </ul>
       )}

@@ -3,6 +3,7 @@ import type { Banter } from "../../../src/core/banter.ts";
 import { persona, shortName } from "../../lib/personas";
 import { art } from "../../lib/site";
 import { Avatar } from "./bits";
+import Reveal from "./Reveal";
 
 export default function TrashTalk({ banter, picks }: { banter: Banter; picks: Record<string, string> }) {
   return (
@@ -17,7 +18,7 @@ export default function TrashTalk({ banter, picks }: { banter: Banter; picks: Re
           if (!p) return null;
           const to = c.replyTo !== null ? persona(`analyst-${banter.comments[c.replyTo].by}`) : null;
           return (
-            <li key={i} className={c.replyTo !== null ? "ml-6 border-l border-border pl-3" : ""}>
+            <Reveal key={i} index={i} className={c.replyTo !== null ? "ml-6 border-l border-border pl-3" : ""}>
               <div className="flex gap-2.5">
                 <Avatar name={p.name} color={p.color} art={art(`analyst-${p.role}`)} size={28} />
                 <div className="min-w-0">
@@ -29,7 +30,7 @@ export default function TrashTalk({ banter, picks }: { banter: Banter; picks: Re
                   <p className="m-0 text-sm leading-snug">{c.text}</p>
                 </div>
               </div>
-            </li>
+            </Reveal>
           );
         })}
       </ul>
