@@ -25,7 +25,10 @@ describe("aliveTeams", () => {
     expect(aliveTeams(series)).toEqual(["BLG", "GEN"]);
   });
   it("uses every team before the main stage exists", () => expect(aliveTeams([s({ teamA: "X", teamB: "Y", block: "Play-In" })])).toEqual(["X", "Y"]));
-  it("knows when the final is done", () => expect(tournamentOver([won("GEN", "BLG", "GEN", "Final")])).toBe(true));
+  it("knows when the final is done (the schedule calls it \"Finals\"), not after a semifinal", () => {
+    expect(tournamentOver([won("GEN", "BLG", "GEN", "Finals")])).toBe(true);
+    expect(tournamentOver([won("GEN", "BLG", "GEN", "Semifinals")])).toBe(false);
+  });
 });
 
 describe("parseTitlePick", () => {

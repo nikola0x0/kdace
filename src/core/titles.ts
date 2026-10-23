@@ -56,7 +56,8 @@ export function aliveTeams(series: Series[]): string[] {
 }
 
 /** True once the final has been played: no more title picks. */
-export const tournamentOver = (series: Series[]) => series.some((s) => s.block.toLowerCase() === "final" && s.state === "completed");
+const isFinal = (block: string) => /final/i.test(block) && !/semi|quarter/i.test(block);
+export const tournamentOver = (series: Series[]) => series.some((s) => isFinal(s.block) && s.state === "completed");
 
 /** One line per team from Scout's aggregates, so the analysts compare the field on real numbers. */
 export function fieldLines(teams: string[], aggregates: Record<string, TeamAggregate>): string[] {
