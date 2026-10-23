@@ -54,10 +54,9 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
   const { open, openSlip } = useFans();
   const s = c.series, live = open[s.matchId];
   const lockAt = live?.lockAt ?? new Date(Date.parse(s.startTime) - LOCK_MS).toISOString();
-  const closed = !!c.result || Date.parse(lockAt) <= Date.now();
+  const closed = !!c.result || c.void || Date.parse(lockAt) <= Date.now();
   const mine = live?.mine ?? {};
-  const aiPool: Record<string, number> = {};
-  for (const a of c.calls) aiPool[a.winner] = (aiPool[a.winner] ?? 0) + a.stake;
+  const aiPool = c.aiPool; // morning stakes plus final-call top-ups
   const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
   // Belief is weighted by AXP staked, not by heads; each side's payout comes from the combined pool.
   const odds = winnerOdds(s.teamA, s.teamB, aiPool, live?.crowd.winnerPool);
@@ -73,7 +72,7 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
         <div className="mh-side b"><TeamLogo code={s.teamB} logo={c.logoB} /></div>
         <div className="mh-vs"><span>VS</span></div>
         <span className="mh-tag">{s.block} · Bo{s.bestOf}</span>
-        <span className="mh-clock">{c.result ? "FINAL" : <Countdown lockAt={lockAt} />}</span>
+        <span className="mh-clock">{c.void ? "VOID" : c.result ? "FINAL" : <Countdown lockAt={lockAt} />}</span>
       </div>
 
       <div className="card-body">
@@ -83,7 +82,7 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
             {s.bestOf > 1 ? <Pips bestOf={s.bestOf} wins={winsOf(s.teamA)} /> : null}
           </div>
           <div className="sr-mid">
-            {c.result ? <span className="sr-score display num">{winsOf(s.teamA)}<i>:</i>{winsOf(s.teamB)}</span> : <span className="sr-time"><LocalTime iso={s.startTime} /></span>}
+            {c.void ? <span className="sr-time">Void · refunded</span> : c.result ? <span className="sr-score display num">{winsOf(s.teamA)}<i>:</i>{winsOf(s.teamB)}</span> : <span className="sr-time"><LocalTime iso={s.startTime} /></span>}
           </div>
           <div className="sr-team b">
             {s.bestOf > 1 ? <Pips bestOf={s.bestOf} wins={winsOf(s.teamB)} /> : null}
@@ -107,7 +106,7 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
           ))}
         </div>}
 
-        {!c.result && (
+        {!c.result && !c.void && (
           <>
             <div className="picks">
               {[s.teamA, s.teamB].map((t, k) => {

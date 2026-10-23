@@ -16,11 +16,10 @@ function Row({ c }: { c: CardData }) {
   const { open, openSlip } = useFans();
   const s = c.series, live = open[s.matchId];
   const lockAt = live?.lockAt ?? new Date(Date.parse(s.startTime) - LOCK_MS).toISOString();
-  const closed = !!c.result || Date.parse(lockAt) <= Date.now();
+  const closed = !!c.result || c.void || Date.parse(lockAt) <= Date.now();
 
   const mine = live?.mine.winner ?? {};
-  const aiPool: Record<string, number> = {};
-  for (const a of c.calls) aiPool[a.winner] = (aiPool[a.winner] ?? 0) + a.stake;
+  const aiPool = c.aiPool; // morning stakes plus final-call top-ups
   const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
   const odds = winnerOdds(s.teamA, s.teamB, aiPool, live?.crowd.winnerPool);
   const aiA = odds.aiPctA === null ? null : Math.round(odds.aiPctA);
@@ -52,7 +51,7 @@ function Row({ c }: { c: CardData }) {
         <div className="mini-tug"><i style={{ flex: fanA ?? 50, background: fanA === null ? "#222" : "var(--ta)" }} /><i style={{ flex: fanA === null ? 50 : 100 - fanA, background: fanA === null ? "#222" : "var(--tb)" }} /></div>
       </div>
       <div className="lr-out">{outcome(s.teamA, 0)}{outcome(s.teamB, 1)}{Object.keys(mine).length > 0 && <span className="lr-held num">You hold {Object.entries(mine).map(([t, v]) => `${v.toLocaleString("en-US")} on ${t}`).join(" · ")}</span>}</div>
-      <div className="lr-lock">{c.result ? <span className="muted">Final</span> : <Countdown lockAt={lockAt} />}</div>
+      <div className="lr-lock">{c.void ? <span className="muted">Void · refunded</span> : c.result ? <span className="muted">Final</span> : <Countdown lockAt={lockAt} />}</div>
     </div>
   );
 }

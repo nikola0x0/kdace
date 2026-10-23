@@ -56,7 +56,7 @@ export default function ProofPage() {
               <VerifyButton compact input={verifyInput(r)} title={`${r.series.teamA} vs ${r.series.teamB}`} />
               <a className="chip-link ok" href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">Picks locked ↗</a>
               {r.fans?.commitDigest ? <a className="chip-link ok" href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">Fans locked ↗</a> : <span className="chip-link off">No fan picks</span>}
-              {r.result ? <a className="chip-link ok" href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">{r.result.winner} {r.result.score} ↗</a> : <span className="chip-link off">Result pending</span>}
+              {r.result ? <a className="chip-link ok" href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">{r.status === "void" ? "Void · refunded" : `${r.result.winner} ${r.result.score}`} ↗</a> : <span className="chip-link off">Result pending</span>}
               <span className={`chip-link ${r.lessons.some((l) => l.blobId) ? "ok" : "off"}`}>{r.lessons.filter((l) => l.blobId).length} lessons</span>
             </div>
           ))}

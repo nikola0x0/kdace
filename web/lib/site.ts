@@ -11,7 +11,7 @@ import { fetchSeries, fetchTeamLogos, type Series } from "../../src/core/worlds.
 import { store } from "./data";
 import { PERSONAS, persona } from "./personas";
 
-export type AnalystCall = { player: string; name: string; title: string; color: string; art: string | null; winner: string; score: string | null; prob: number; stake: number; reasoning: string; thinking: string | null; recalled: { blobId: string; text: string; createdAt: string }[] };
+export type AnalystCall = { player: string; name: string; title: string; color: string; art: string | null; winner: string; score: string | null; prob: number; stake: number; reasoning: string; thinking: string | null; recalled: { blobId: string; text: string; createdAt: string }[]; /** The analyst's final-call top-up on its side (committed), or null. */ topUp: { add: number; reasoning: string } | null };
 
 export type CardData = {
   series: Series;
@@ -22,7 +22,12 @@ export type CardData = {
   calls: AnalystCall[];
   consensusA: number | null;
   status: SeriesRecord["status"] | "open";
+  /** The official result; null before it and for a void series. */
   result: { winner: string; score: string } | null;
+  /** No official result 48 h after the start (or cancelled): every stake refunded. */
+  void: boolean;
+  /** AXP the analysts have on each team's win: morning stakes plus committed final-call top-ups. */
+  aiPool: Record<string, number>;
 };
 
 /** A public art file if the user has dropped it into web/public/art, else null (a placeholder is drawn). */
@@ -61,23 +66,41 @@ export function callsOf(r: SeriesRecord | undefined): AnalystCall[] {
   return PERSONAS.flatMap((p) => {
     const pick = r.picks.find((x) => x.player === p.player);
     if (!pick) return [];
-    return [{ player: p.player, name: p.name, title: p.title, color: p.color, art: art(`analyst-${p.role}`), winner: pick.winner, score: pick.score, prob: pick.winProbability, stake: (pick as { stake?: number }).stake ?? 0, reasoning: pick.reasoning, thinking: pick.thinking || null, recalled: pick.usedLessons ?? [] }];
+    return [{ player: p.player, name: p.name, title: p.title, color: p.color, art: art(`analyst-${p.role}`), winner: pick.winner, score: pick.score, prob: pick.winProbability, stake: (pick as { stake?: number }).stake ?? 0, reasoning: pick.reasoning, thinking: pick.thinking || null, recalled: pick.usedLessons ?? [], topUp: topUpOf(r, p.player) }];
   });
+}
+
+/** An analyst's committed final-call top-up (only adds above 0 are on chain). */
+export function topUpOf(r: SeriesRecord, player: string): { add: number; reasoning: string } | null {
+  if (r.finalCall?.status !== "committed") return null;
+  const c = r.finalCall.calls.find((x) => x.player === player && x.add > 0);
+  return c ? { add: c.add, reasoning: c.reasoning } : null;
+}
+
+/** The analysts' AXP on each team's win: each call's stake plus its final-call top-up. */
+export function aiPool(calls: AnalystCall[]): Record<string, number> {
+  const pool: Record<string, number> = {};
+  for (const a of calls) pool[a.winner] = (pool[a.winner] ?? 0) + a.stake + (a.topUp?.add ?? 0);
+  return pool;
 }
 
 export async function cardFor(s: Series, r: SeriesRecord | undefined): Promise<CardData> {
   const logos = await teamLogos();
   const key = stageKey(s.block);
+  const calls = callsOf(r);
+  const isVoid = r?.status === "void";
   return {
     series: r?.series ?? s,
     logoA: logos[s.teamA] ?? null,
     logoB: logos[s.teamB] ?? null,
     stageArt: art(`stage-${key}`),
     stageKey: key,
-    calls: callsOf(r),
+    calls,
     consensusA: r ? aiConsensus(r.picks, r.series.teamA) : null,
     status: r?.status ?? "open",
-    result: r?.result ? { winner: r.result.winner, score: r.result.score } : null,
+    result: r?.result && !isVoid ? { winner: r.result.winner, score: r.result.score } : null,
+    void: isVoid,
+    aiPool: aiPool(calls),
   };
 }
 
@@ -92,7 +115,7 @@ export async function upcomingCards(): Promise<CardData[]> {
 }
 
 export async function settledCards(): Promise<CardData[]> {
-  return Promise.all(records().filter((r) => r.status === "settled").reverse().map((r) => cardFor(r.series, r)));
+  return Promise.all(records().filter((r) => r.status === "settled" || r.status === "void").reverse().map((r) => cardFor(r.series, r)));
 }
 
 export function counters() {
@@ -122,7 +145,10 @@ export function analystStats(player: string): AnalystStats {
     if (!pick) continue;
     calls++;
     recalled += pick.usedLessons?.length ?? 0;
-    const stake = ((pick as { stake?: number }).stake ?? 0) + ((pick as { scoreStake?: number }).scoreStake ?? 0);
+    if (r.status === "void") continue; // refunded: no stake, no result
+    // Final-call top-ups count once on chain (committed), or as in play while their commit is in flight.
+    const topUp = r.finalCall?.status === "committed" || r.finalCall?.status === "committing" ? (r.finalCall.calls.find((c) => c.player === player)?.add ?? 0) : 0;
+    const stake = ((pick as { stake?: number }).stake ?? 0) + ((pick as { scoreStake?: number }).scoreStake ?? 0) + topUp;
     if (r.axp) {
       staked += stake;
       best = Math.max(best, r.axp[player] ?? 0);
@@ -144,6 +170,7 @@ export function verifyInput(r: SeriesRecord) {
   return {
     network: chain.network,
     packageId: chain.packageId,
+    matchId: r.series.matchId,
     startTime: r.series.startTime,
     batch: r.commitDigest ? r.batch : null,
     commitDigest: r.commitDigest,
@@ -152,11 +179,14 @@ export function verifyInput(r: SeriesRecord) {
     result: r.result,
     memories: r.picks.flatMap((p) => (p.usedLessons ?? []).map((l) => ({ player: p.player, blobId: l.blobId, savedAt: l.createdAt, pickedAt: p.pickedAt }))),
     thoughts: r.picks.flatMap((p) => (p.thinking !== undefined && p.stake > 0 ? [{ player: p.player, reasoning: p.reasoning, thinking: p.thinking }] : [])),
+    ...(r.finalCall?.status === "committed"
+      ? { finalBatch: r.finalCall.batch, finalDigest: r.finalCall.commitDigest, finalCalls: r.finalCall.calls.map((c) => ({ player: c.player, add: c.add, side: r.picks.find((p) => p.player === c.player)?.winner ?? "" })) }
+      : {}),
   };
 }
 
 /** Every individual pick locked on Sui so far: analysts' and fans' batch entries. */
 export function picksLocked() {
   const count = (batch: string | null | undefined) => (batch ? (JSON.parse(batch) as { entries: unknown[] }).entries.length : 0);
-  return records().reduce((n, r) => n + (r.commitDigest ? count(r.batch) : 0) + (r.fans?.commitDigest ? count(r.fans.batch) : 0), 0);
+  return records().reduce((n, r) => n + (r.commitDigest ? count(r.batch) : 0) + (r.finalCall?.commitDigest ? count(r.finalCall.batch) : 0) + (r.fans?.commitDigest ? count(r.fans.batch) : 0), 0);
 }

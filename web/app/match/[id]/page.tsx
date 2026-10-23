@@ -27,7 +27,8 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   if (!s) notFound();
   const card = await cardFor(s, r);
   const calls = callsOf(r);
-  const result = r?.result ?? null;
+  const isVoid = r?.status === "void";
+  const result = isVoid ? null : r?.result ?? null;
   const matchArt = art("match-banner") ?? art("hero-trophy");
 
   return (
@@ -40,7 +41,8 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
           <div className="match-team"><TeamLogo code={s.teamA} logo={card.logoA} />{s.teamA}</div>
           <div style={{ textAlign: "center" }}>
             <div className="eyebrow">{s.block} · Best of {s.bestOf}</div>
-            <div className="score-big num">{result ? (result.winner === s.teamA ? result.score : result.score.split("-").reverse().join("-")) : "vs"}</div>
+            <div className="score-big num">{isVoid ? "VOID" : result ? (result.winner === s.teamA ? result.score : result.score.split("-").reverse().join("-")) : "vs"}</div>
+            {isVoid && <div className="muted" style={{ fontSize: 13 }}>Void · refunded: no official result, every stake returned</div>}
             <div className="muted" style={{ fontSize: 13 }}><LocalTime iso={s.startTime} format="full" /></div>
           </div>
           <div className="match-team"><TeamLogo code={s.teamB} logo={card.logoB} />{s.teamB}</div>
@@ -59,6 +61,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                   <div>
                     <div className="ap-name"><RoleIcon role={p.role} /> {a.name} <span className="ap-title">· {a.title}</span></div>
                     <p className="ap-quote">“{a.reasoning}”</p>
+                    {a.topUp && <p className="m-0 mb-2 text-sm text-muted-foreground">💰 {a.name} added <b className="num text-foreground">{a.topUp.add.toLocaleString("en-US")} AXP</b> on {a.winner} at the final call{a.topUp.reasoning ? <>: “{a.topUp.reasoning}”</> : null}</p>}
                     {a.thinking && (
                       <details className="recall">
                         <summary>💭 How {shortName(persona(a.player)!)} thought it through</summary>
@@ -93,8 +96,9 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                 <div className="flex flex-wrap items-center gap-2">
                   {r.commitDigest && <VerifyButton input={verifyInput(r)} title={`${s.teamA} vs ${s.teamB}`} />}
                   {r.commitDigest && <a className={pill} href={suiscan(r, r.commitDigest)} target="_blank" rel="noreferrer">Analysts&apos; picks ↗</a>}
+                  {r.finalCall?.status === "committed" && <a className={pill} href={suiscan(r.finalCall, r.finalCall.commitDigest)} target="_blank" rel="noreferrer">Final call ↗</a>}
                   {r.fans?.commitDigest && <a className={pill} href={suiscan(r, r.fans.commitDigest)} target="_blank" rel="noreferrer">Fans&apos; picks ↗</a>}
-                  {r.result && <a className={pill} href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">Result ↗</a>}
+                  {r.result && <a className={pill} href={suiscan(r, r.result.resultDigest)} target="_blank" rel="noreferrer">{isVoid ? "Void result ↗" : "Result ↗"}</a>}
                   <Link className={`${pill} border-transparent px-2 hover:border-transparent`} href="/proof">How it works →</Link>
                 </div>
               </div>

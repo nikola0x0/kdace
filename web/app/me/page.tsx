@@ -15,7 +15,8 @@ export default async function MePage() {
   for (const r of records())
     matches[r.series.matchId] = {
       ...base(r.series),
-      result: r.result ? { winner: r.result.winner, score: r.result.score } : null,
+      // A void series shows as "Void · refunded" in the result column.
+      result: r.status === "void" ? { winner: "Void", score: "· refunded" } : r.result ? { winner: r.result.winner, score: r.result.score } : null,
       axp: Object.fromEntries(Object.entries(r.axp ?? {}).filter(([k]) => k.startsWith("fan:"))),
       fansLocked: !!r.fans?.commitDigest,
     };

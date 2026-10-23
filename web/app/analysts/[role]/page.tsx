@@ -113,7 +113,7 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
             {calls.length === 0 && <span className="muted">No calls yet.</span>}
             {calls.map((r) => {
               const pick = r.picks.find((x) => x.player === p.player)!;
-              const right = r.result ? pick.winner === r.result.winner : null;
+              const right = r.result && r.status !== "void" ? pick.winner === r.result.winner : null;
               return (
                 <Link key={r.series.matchId} href={`/match/${r.series.matchId}`} className="call">
                   <span className="call-match"><b>{r.series.teamA}</b> <span className="muted">vs</span> <b>{r.series.teamB}</b></span>

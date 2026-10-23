@@ -1,10 +1,14 @@
 // In-browser verification of one series, straight against Sui's public GraphQL (not KDAce's servers):
 // the published picks hash to the fingerprint on chain, the commit landed before the game, the result is on chain,
-// and (when signed in) the viewer's own bet is inside the fans' batch.
+// the analysts' final-call top-ups (when there were any) are the published ones, on each analyst's own side, and locked
+// before the game, and (when signed in) the viewer's own bet is inside the fans' batch.
 
 export type VerifyInput = {
   network: "testnet" | "mainnet";
   packageId: string;
+  /** The match id; the final call is committed under `<matchId>:final`. */
+  matchId?: string;
+  /** The scheduled start as stored at commit time. */
   startTime: string;
   batch: string | null;
   commitDigest: string | null;
@@ -15,6 +19,11 @@ export type VerifyInput = {
   memories?: { player: string; blobId: string; savedAt: string; pickedAt: string }[];
   /** Each analyst's published reasoning and thinking summary: re-hashed and checked against the fingerprinted batch. */
   thoughts?: { player: string; reasoning: string; thinking: string }[];
+  /** The analysts' final-call top-ups (committed under `<matchId>:final`), when there were any. */
+  finalBatch?: string | null;
+  finalDigest?: string | null;
+  /** Each published final call: what the analyst added and the side it originally picked. */
+  finalCalls?: { player: string; add: number; side: string }[];
   me?: string | null; // fan address
 };
 export type Check = { label: string; ok: boolean | null; detail: string };
@@ -37,7 +46,7 @@ async function events(network: string, digest: string): Promise<{ events: Ev[]; 
   return { timestamp: fx.timestamp ?? null, events: (fx.events?.nodes ?? []).map((n: { contents: { type: { repr: string }; json: Record<string, string> } }) => ({ type: n.contents.type.repr, json: n.contents.json })) };
 }
 
-async function commitChecks(label: string, input: VerifyInput, batch: string, digest: string): Promise<Check[]> {
+async function commitChecks(label: string, input: VerifyInput, batch: string, digest: string, marketId?: string): Promise<Check[]> {
   const out: Check[] = [];
   try {
     const { events: evs } = await events(input.network, digest);
@@ -45,7 +54,8 @@ async function commitChecks(label: string, input: VerifyInput, batch: string, di
     if (!ev) return [{ label: `${label}: fingerprint on Sui`, ok: false, detail: "no KDAce commit event in that transaction" }];
     const local = await sha256Hex(batch);
     const onchain = b64ToHex(ev.json.batch_hash);
-    out.push({ label: `${label}: fingerprint matches`, ok: local === onchain, detail: `${local.slice(0, 12)}… ${local === onchain ? "=" : "≠"} on-chain ${onchain.slice(0, 12)}…` });
+    const wrongMarket = marketId !== undefined && ev.json.market_id !== marketId;
+    out.push({ label: `${label}: fingerprint matches`, ok: local === onchain && !wrongMarket, detail: wrongMarket ? `committed under ${ev.json.market_id}, not ${marketId}` : `${local.slice(0, 12)}… ${local === onchain ? "=" : "≠"} on-chain ${onchain.slice(0, 12)}…` });
     const at = Number(ev.json.committed_at_ms), start = Date.parse(input.startTime);
     const mins = Math.round((start - at) / 60000);
     out.push({ label: `${label}: locked before the game`, ok: at < start, detail: at < start ? `${mins >= 120 ? `${Math.round(mins / 60)} h` : `${mins} min`} before the start` : "committed after the start" });
@@ -59,6 +69,7 @@ export async function verifySeries(input: VerifyInput): Promise<Check[]> {
   const checks: Check[] = [];
   if (input.batch && input.commitDigest) checks.push(...(await commitChecks("Analysts' picks", input, input.batch, input.commitDigest)));
   if (input.fansBatch && input.fansDigest) checks.push(...(await commitChecks("Fans' picks", input, input.fansBatch, input.fansDigest)));
+  if (input.finalBatch && input.finalDigest) checks.push(...(await commitChecks("Final call", input, input.finalBatch, input.finalDigest, input.matchId ? `${input.matchId}:final` : undefined)), ...finalCallChecks(input));
   if (input.batch && input.memories?.length) {
     // Which memories each analyst used is inside the fingerprint, so it was fixed before the game.
     const locked = new Set((JSON.parse(input.batch).entries as { player: string; lessons?: string[] }[]).flatMap((e) => (e.lessons ?? []).map((id) => `${e.player}|${id}`)));
@@ -87,10 +98,38 @@ export async function verifySeries(input: VerifyInput): Promise<Check[]> {
       const { events: evs } = await events(input.network, input.result.resultDigest);
       const ev = evs.find((e) => e.type === `${input.packageId}::ledger::ResultPosted`);
       const ok = !!ev && ev.json.winner === input.result.winner && ev.json.score === input.result.score;
-      checks.push({ label: "Result on Sui", ok, detail: ev ? `${ev.json.winner} ${ev.json.score}` : "no result event found" });
+      const isVoid = ev?.json.winner === "VOID" && ev?.json.score === "VOID";
+      checks.push({ label: "Result on Sui", ok, detail: !ev ? "no result event found" : isVoid ? "Void: no official result, every stake refunded" : `${ev.json.winner} ${ev.json.score}` });
     } catch (e) {
       checks.push({ label: "Result on Sui", ok: false, detail: (e as Error).message });
     }
   } else checks.push({ label: "Result on Sui", ok: null, detail: "posted after the game" });
   return checks;
+}
+
+type Entry = { player: string; market: string; choice: string; stake: number };
+
+/** The final-call batch holds exactly the published top-ups, each a winner bet of at least 10 AXP on the analyst's own side. */
+function finalCallChecks(input: VerifyInput): Check[] {
+  let entries: Entry[] = [];
+  let analysts: Entry[] = [];
+  try {
+    entries = JSON.parse(input.finalBatch!).entries;
+    analysts = input.batch ? JSON.parse(input.batch).entries : [];
+  } catch {
+    return [{ label: "Final call: top-ups match the published calls", ok: false, detail: "the published batch can't be read" }];
+  }
+  const key = (player: string, side: string, stake: number) => `${player}|${side}|${stake}`;
+  const published = (input.finalCalls ?? []).filter((c) => c.add > 0).map((c) => key(c.player, c.side, c.add)).sort();
+  const locked = entries.map((e) => key(e.player, e.choice, e.stake)).sort();
+  const match = entries.every((e) => e.market === "winner") && JSON.stringify(published) === JSON.stringify(locked);
+  const sides = new Map((input.finalCalls ?? []).map((c) => [c.player, c.side]));
+  // The original side: the analyst's winner bet in the committed analysts' batch, or its published pick if it staked nothing.
+  const sideOf = (player: string) => analysts.find((e) => e.player === player && e.market === "winner")?.choice ?? sides.get(player);
+  const ownSide = entries.length > 0 && entries.every((e) => e.market === "winner" && sideOf(e.player) !== undefined && e.choice === sideOf(e.player) && Number.isInteger(e.stake) && e.stake >= 10);
+  const total = entries.reduce((n, e) => n + e.stake, 0);
+  return [
+    { label: "Final call: top-ups match the published calls", ok: match, detail: match ? `${entries.length} top-up${entries.length === 1 ? "" : "s"}, ${total.toLocaleString("en-US")} AXP in all` : "the published calls differ from what was locked" },
+    { label: "Final call: every top-up is on the analyst's own side", ok: ownSide, detail: ownSide ? "each analyst only added to the team it picked" : "a top-up isn't on the side that analyst picked" },
+  ];
 }
