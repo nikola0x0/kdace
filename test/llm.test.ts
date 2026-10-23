@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { analystProvider, replyText } from "../src/core/llm.ts";
+import { analystProvider, replyParts, replyText } from "../src/core/llm.ts";
 
 describe("analystProvider", () => {
   it("uses the Anthropic API when a key is set", () => expect(analystProvider({ ANTHROPIC_API_KEY: "k" })).toBe("anthropic"));
@@ -14,5 +14,12 @@ describe("replyText", () => {
   });
   it("throws on a refusal so the caller retries or skips the analyst", () => {
     expect(() => replyText({ stop_reason: "refusal", content: [] } as any)).toThrow(/refus/);
+  });
+});
+
+describe("replyParts", () => {
+  it("returns the answer and the thinking summary separately", () => {
+    const msg = { stop_reason: "end_turn", content: [{ type: "thinking", thinking: "T1 are LCK champions; LOS are from CBLOL." }, { type: "text", text: '{"winner":"T1"}' }] };
+    expect(replyParts(msg)).toEqual({ text: '{"winner":"T1"}', thinking: "T1 are LCK champions; LOS are from CBLOL." });
   });
 });

@@ -7,13 +7,15 @@ import type { Chain } from "../core/chain.ts";
 import { fanDbFromEnv, withRefereeLock } from "../core/fandb.ts";
 import { isLocked, seriesToPick, seriesToResume } from "../core/select.ts";
 import { axpAccount, Store, type SeriesRecord } from "../core/store.ts";
+import type { AnalystReply } from "../core/llm.ts";
 import type { Series } from "../core/worlds.ts";
 
 export type PickDeps = {
   fetchSeries(): Promise<Series[]>;
   store: Store;
   recall(role: Role, query: string): Promise<Lesson[]>;
-  ask(prompt: string): Promise<string>;
+  /** The analyst's reply; with thinking on, also its thinking summary. */
+  ask(prompt: string): Promise<string | AnalystReply>;
   commit(matchId: string, hash: string, count: number): Promise<string>;
   /** Where commit() writes; stamped on each committed record. */
   chain: Chain;
@@ -44,8 +46,10 @@ async function analystPicks(deps: PickDeps, s: Series, scout: string | null): Pr
     const prompt = buildPickPrompt(a, s, lessons, history, scout);
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
-        const pick = parsePick(await deps.ask(prompt), a, s, lessons, deps.now());
-        picks.push({ ...pick, ...analystStakes(pick.winProbability, available, s.bestOf) });
+        const reply = await deps.ask(prompt);
+        const { text, thinking } = typeof reply === "string" ? { text: reply, thinking: undefined } : reply;
+        const pick = parsePick(text, a, s, lessons, deps.now());
+        picks.push({ ...pick, ...(thinking !== undefined ? { thinking } : {}), ...analystStakes(pick.winProbability, available, s.bestOf) });
         break;
       } catch (e) {
         deps.log(`${s.matchId} ${a.player} attempt ${attempt} invalid: ${(e as Error).message}`);
@@ -120,7 +124,7 @@ export function historyLines(store: Store): string[] {
 export async function realPickDeps(store = new Store()): Promise<PickDeps> {
   const { fetchSeries } = await import("../core/worlds.ts");
   const { memory } = await import("../core/memory.ts");
-  const { askAnalyst } = await import("../core/llm.ts");
+  const { askAnalystFull } = await import("../core/llm.ts");
   const { loadScout, scoutDigest } = await import("../core/scoutstore.ts");
   const scoutData = loadScout();
   const { commitBatch, currentChain } = await import("../core/ledger.ts");
@@ -133,7 +137,7 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
       // Lessons without a timestamp can't be proven to predate a pick, so they are not offered.
       return res.results.flatMap((r) => (r.created_at ? [{ blobId: r.blob_id, text: r.text, createdAt: r.created_at }] : []));
     },
-    ask: async (prompt) => askAnalyst(prompt),
+    ask: (prompt) => askAnalystFull(prompt),
     // Shares the Referee with the fan lock route; the Supabase mutex keeps their transactions apart.
     commit: (matchId, hash, count) => withRefereeLock(fanDbFromEnv(), "tick", () => commitBatch(matchId, hash, count), { waitMs: 5 * 60_000, proceedIfDbDown: true }),
     chain: currentChain(),

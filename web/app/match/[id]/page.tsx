@@ -1,7 +1,7 @@
 // Match page: each analyst's call with what they remembered; after the game the result, the debate and what they learned.
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { persona } from "../../../lib/personas";
+import { persona, shortName } from "../../../lib/personas";
 import { art, callsOf, cardFor, lessonText, records, schedule, suiscan, verifyInput, walruscan } from "../../../lib/site";
 import VerifyButton from "../../ui/VerifyButton";
 import { Avatar, RoleIcon, TeamLogo } from "../../ui/bits";
@@ -59,6 +59,12 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                   <div>
                     <div className="ap-name"><RoleIcon role={p.role} /> {a.name} <span className="ap-title">· {a.title}</span></div>
                     <p className="ap-quote">“{a.reasoning}”</p>
+                    {a.thinking && (
+                      <details className="recall">
+                        <summary>💭 How {shortName(persona(a.player)!)} thought it through</summary>
+                        <p className="m-0 mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{a.thinking}</p>
+                      </details>
+                    )}
                     {a.recalled.length > 0 ? (
                       <details className="recall">
                         <summary>🧠 Recalled {a.recalled.length} lesson{a.recalled.length > 1 ? "s" : ""} from Walrus Memory before picking</summary>

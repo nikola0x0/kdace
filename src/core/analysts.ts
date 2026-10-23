@@ -1,5 +1,5 @@
 // The five role analysts: fixed beliefs, pick prompts, pick validation and reflection prompts.
-import type { BatchEntry } from "./batch.ts";
+import { thoughtHash, type BatchEntry } from "./batch.ts";
 import { extractJson } from "./json.ts";
 import type { Series } from "./worlds.ts";
 
@@ -17,6 +17,8 @@ export type AnalystPick = {
   reasoning: string;
   usedLessons: Lesson[];
   pickedAt: string;
+  /** The model's thinking summary (picks made with thinking on); its hash and the reasoning's are in the batch. */
+  thinking?: string;
   /** AXP staked on the winner (0 when the analyst had under 10 AXP available and sat this one out). */
   stake: number;
   /** AXP staked on the exact score; only on Bo3/Bo5, and only when there was room for it. */
@@ -45,7 +47,7 @@ export function analystStakes(p: number, available: number, bestOf: 1 | 3 | 5): 
 export const analystEntries = (bestOf: 1 | 3 | 5, picks: AnalystPick[]): BatchEntry[] =>
   picks.flatMap((p) => [
     ...(p.stake > 0
-      ? [{ player: p.player, market: "winner" as const, choice: p.winner, stake: p.stake, ...(p.usedLessons?.length ? { lessons: p.usedLessons.map((l) => l.blobId).sort() } : {}) }]
+      ? [{ player: p.player, market: "winner" as const, choice: p.winner, stake: p.stake, ...(p.usedLessons?.length ? { lessons: p.usedLessons.map((l) => l.blobId).sort() } : {}), ...(p.thinking !== undefined ? { thought: thoughtHash(p.reasoning, p.thinking) } : {}) }]
       : []),
     ...(bestOf > 1 && p.score && p.scoreStake ? [{ player: p.player, market: "score" as const, choice: p.score, stake: p.scoreStake }] : []),
   ]);

@@ -13,6 +13,8 @@ export type VerifyInput = {
   result: { winner: string; score: string; resultDigest: string } | null;
   /** Lessons each analyst recalled, as published: checked against the fingerprinted batch and the pick time. */
   memories?: { player: string; blobId: string; savedAt: string; pickedAt: string }[];
+  /** Each analyst's published reasoning and thinking summary: re-hashed and checked against the fingerprinted batch. */
+  thoughts?: { player: string; reasoning: string; thinking: string }[];
   me?: string | null; // fan address
 };
 export type Check = { label: string; ok: boolean | null; detail: string };
@@ -65,6 +67,13 @@ export async function verifySeries(input: VerifyInput): Promise<Check[]> {
     const n = input.memories.length;
     checks.push({ label: "Memories used are locked in", ok: inBatch, detail: inBatch ? `${n} recalled lesson${n > 1 ? "s" : ""} covered by the fingerprint` : "a recalled lesson isn't in the committed batch" });
     checks.push({ label: "Each memory existed before the pick", ok: before, detail: before ? "every lesson was saved to Walrus Memory before it was used" : "a lesson was saved after the pick" });
+  }
+  if (input.batch && input.thoughts?.length) {
+    const locked = new Map((JSON.parse(input.batch).entries as { player: string; market: string; thought?: string }[]).filter((e) => e.market === "winner" && e.thought).map((e) => [e.player, e.thought!]));
+    const results = await Promise.all(input.thoughts.map(async (t) => locked.get(t.player) === (await sha256Hex(JSON.stringify([t.reasoning, t.thinking])))));
+    const ok = results.every(Boolean);
+    const n = input.thoughts.length;
+    checks.push({ label: "Their reasoning is locked in", ok, detail: ok ? `${n} analyst${n > 1 ? "s'" : "'s"} reasoning and thinking match the fingerprint` : "a published reasoning doesn't match what was locked" });
   }
   if (input.me) {
     const entries = input.fansBatch ? (JSON.parse(input.fansBatch).entries as { player: string; choice: string; stake: number }[]) : [];

@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { ANALYSTS } from "../src/core/analysts.ts";
-import { batchHash, canonicalBatch } from "../src/core/batch.ts";
+import { batchHash, canonicalBatch, thoughtHash } from "../src/core/batch.ts";
 import { Store } from "../src/core/store.ts";
 import type { Series } from "../src/core/worlds.ts";
 import { emptyRecord, runPick, type PickDeps } from "../src/jobs/pick.ts";
@@ -31,6 +31,15 @@ function fakes(overrides: Partial<PickDeps> = {}) {
 }
 
 describe("runPick", () => {
+  it("publishes each analyst's thinking summary and locks it, with the reasoning, into the batch", async () => {
+    const { deps } = fakes({ ask: async () => ({ text: good, thinking: "LCK over CBLOL, but GEN's early game..." }) });
+    await runPick(deps);
+    const r = deps.store.get("x")!;
+    expect(r.picks[0].thinking).toBe("LCK over CBLOL, but GEN's early game...");
+    const entry = (JSON.parse(r.batch!).entries as { player: string; market: string; thought?: string }[]).find((e) => e.player === r.picks[0].player && e.market === "winner")!;
+    expect(entry.thought).toBe(thoughtHash("r", "LCK over CBLOL, but GEN's early game..."));
+  });
+
   it("gives every analyst the Scout digest for the matchup and keeps it on the record", async () => {
     const prompts: string[] = [];
     const { deps } = fakes({ scout: (a, b) => `Scout: ${a} vs ${b} digest`, ask: async (p) => (prompts.push(p), good) });
