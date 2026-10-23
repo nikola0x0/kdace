@@ -71,14 +71,15 @@
   ],
   "batch": "{\"matchId\":\"115660540726095007\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":530,\"thought\":\"1bcd62b9a9fe21d688d35e8b4dad2c04645550d9e49601f222467fa92cc5790f\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":690,\"thought\":\"e9f1c8d54fe798e51c3b8ce18333d3c4d910c8f149c53e09cd28f136fea99a60\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":490,\"thought\":\"fc0cab3656918b084999c12af64a4a2b68ac6163097b1e30eab6c22ce21d58da\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":480,\"thought\":\"ffd77d2dc16edd8bd8098e50919ce1f1eb2cb4c9dbd6dd80c55e2c0ed9cb6677\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":440,\"thought\":\"038934cdc6d167a279700afb3be74e1c955d545dd283525506c0549a13f51fea\"}]}",
   "batchHash": "70e3d029a711eb92c1a6b2fdc838678ab53afd8ce11a0f07e45ff79a45ace05d",
-  "commitDigest": "6sQ7yVkx5VBjEwCV17W2T6qxDUF7nmq7u4MJQKuj6TVN",
+  "commitDigest": "AjdGvjS8G9dVfNdNzeCfZeLHVi8i9vMohW96JBfTRKFz",
   "result": null,
   "axp": null,
   "debate": null,
   "lessons": [],
   "scout": "Scout: TLAW vs CFO (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 22-10, games 57-32 | last 10 (newest first) WWWWLWWWWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · vs other regions 2-2\n  Last 20 games (15-5): GD@15 +1.1k, FB 55%, FT 75%, FD 65%, dragons 60%, 32.9 min avg, 1st baron 28:24\n  Leads @15 converted 9/9, comeback wins 1, throws 0, objectives taken while 1k+ behind 10\n  Picks: TOP Camille 3, K'Sante 3, Ambessa 2 | JG Pantheon 4, Qiyana 3, Vi 3 | MID Ahri 3, Orianna 3, Syndra 3 | BOT Lucian 4, Ashe 3, Ezreal 3 | SUP Nami 3, Alistar 2, Karma 2\n  Standout: TLAW Josedeodo (jungle) KDA 7.6 over 20 games, 19% dmg share\nCFO [LCP]: 2026 series 12-14, games 37-42 | last 10 (newest first) LWLWWWWLWW\n  LCP 2026 12-14 (lost final)\n  Last 20 games (11-9): GD@15 -0.2k, FB 60%, FT 50%, FD 35%, dragons 50%, 31.8 min avg, 1st baron 26:06\n  Leads @15 converted 5/5, comeback wins 1, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Jayce 2, K'Sante 2, Malphite 2 | JG Naafiri 4, Poppy 3, Nocturne 2 | MID Akali 4, Viktor 3, Ahri 2 | BOT Lucian 5, Caitlyn 2, Kalista 2 | SUP Lulu 4, Milio 4, Karma 3\n  Standout: CFO POUT (mid) KDA 4.4 over 20 games, 26% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\nFun facts:\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\n  * Likely quadra kill: TLAW Yeon (Jhin) at 27:26 (vs SR, LCS 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCS vs LCP: LCS went 1-0 against LCP in 2026; LCS 29% vs LCP 33% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  CFO (LCP): no Worlds titles or finals before 2026.",
   "chain": {
-    "network": "testnet",
-    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
-  }
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "testnetCommitDigest": "6sQ7yVkx5VBjEwCV17W2T6qxDUF7nmq7u4MJQKuj6TVN"
 }
