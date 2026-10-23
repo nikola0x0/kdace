@@ -38,7 +38,7 @@ export async function askAnalyst(prompt: string): Promise<string> {
 }
 
 /** One analyst turn with its thinking summary. On a policy decline the API re-runs it on a fallback model. */
-export async function askAnalystFull(prompt: string): Promise<AnalystReply> {
+export async function askAnalystFull(prompt: string, effort: "high" | "xhigh" = "high"): Promise<AnalystReply> {
   if (analystProvider() === "claude-cli") {
     // A hung CLI call would block every later tick, so it is killed after 3 minutes.
     const text = execFileSync("claude", ["-p", "--output-format", "text"], { input: prompt, maxBuffer: 1 << 20, timeout: 180_000 }).toString().trim();
@@ -49,7 +49,7 @@ export async function askAnalystFull(prompt: string): Promise<AnalystReply> {
     model: ANALYST_MODEL,
     max_tokens: 16000,
     thinking: { type: "adaptive", display: "summarized" },
-    output_config: { effort: "high" },
+    output_config: { effort },
     betas: ["server-side-fallback-2026-07-01"],
     fallbacks: "default",
     messages: [{ role: "user", content: prompt }],

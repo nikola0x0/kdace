@@ -137,7 +137,8 @@ export async function realPickDeps(store = new Store()): Promise<PickDeps> {
       // Lessons without a timestamp can't be proven to predate a pick, so they are not offered.
       return res.results.flatMap((r) => (r.created_at ? [{ blobId: r.blob_id, text: r.text, createdAt: r.created_at }] : []));
     },
-    ask: (prompt) => askAnalystFull(prompt),
+    // Picks get the deepest thinking: each one is fingerprinted and published with its thinking summary.
+    ask: (prompt) => askAnalystFull(prompt, "xhigh"),
     // Shares the Referee with the fan lock route; the Supabase mutex keeps their transactions apart.
     commit: (matchId, hash, count) => withRefereeLock(fanDbFromEnv(), "tick", () => commitBatch(matchId, hash, count), { waitMs: 5 * 60_000, proceedIfDbDown: true }),
     chain: currentChain(),
