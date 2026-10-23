@@ -25,11 +25,12 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
   const card = await cardFor(s, r);
   const calls = callsOf(r);
   const result = r?.result ?? null;
+  const matchArt = art("match-banner") ?? art("hero-trophy");
 
   return (
     <main>
       <section className="hero">
-        <div className="match-veil">{art("hero-trophy") ? <HeroVeil src={art("hero-trophy")!} fit="contain" radius={200} /> : <DitherArt className="match-art" />}</div>
+        <div className="match-veil">{matchArt ? <HeroVeil src={matchArt} fit="contain" radius={200} /> : <DitherArt className="match-art" />}</div>
       </section>
       <div className="wrap">
         <div className="match-head">
