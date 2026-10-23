@@ -4,6 +4,7 @@ import type { Analyst } from "./analysts.ts";
 import type { BatchEntry } from "./batch.ts";
 import type { Chain } from "./chain.ts";
 import { extractJson } from "./json.ts";
+import { WORLDS_HISTORY } from "./pedigree.ts";
 import type { TeamAggregate } from "./scout.ts";
 import type { Series } from "./worlds.ts";
 
@@ -68,7 +69,7 @@ export function fieldLines(teams: string[], aggregates: Record<string, TeamAggre
     const titles = a.sources.reduce((n, s) => n + s.titles, 0);
     const st = a.stats;
     return [
-      `${t} [${a.homeLeague ?? "?"}]: 2026 series ${rec(a.season.series)}, games ${rec(a.season.games)}, ${titles} title${titles === 1 ? "" : "s"}, vs other regions ${rec(a.vsInternational)}, form ${a.form}`,
+      `${t} [${a.homeLeague ?? "?"}${WORLDS_HISTORY[t]?.titles.length ? `, ${WORLDS_HISTORY[t].titles.length}x world champion` : ""}]: 2026 series ${rec(a.season.series)}, games ${rec(a.season.games)}, ${titles} title${titles === 1 ? "" : "s"}, vs other regions ${rec(a.vsInternational)}, form ${a.form}`,
       st?.avgGoldDiff15 != null ? `GD@15 ${st.avgGoldDiff15 >= 0 ? "+" : ""}${(st.avgGoldDiff15 / 1000).toFixed(1)}k over ${st.games} recent games` : null,
     ].filter(Boolean).join(" | ");
   });
@@ -78,7 +79,7 @@ export function buildTitlePrompt(a: Analyst, alive: string[], field: string[], h
   return `You are the ${a.name} analyst on KDAce, a LoL Worlds 2026 prediction board. Your voice: ${a.voice}
 Core belief: ${a.belief}
 
-Teams still alive at Worlds 2026:
+Teams still alive at Worlds 2026 (region strength is a VERY BIG factor and records from different leagues are not comparable: LCK and LPL are the strongest regions, then LEC, then LCS, LCP and CBLOL; Worlds history counts):
 ${field.join("\n")}
 
 Results so far this tournament:

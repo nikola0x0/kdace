@@ -65,7 +65,8 @@ export const VALID_SCORES: Record<1 | 3 | 5, string[]> = { 1: [], 3: ["2-0", "2-
 const fixedBeliefs = (a: Analyst) =>
   `You are the ${a.name} analyst on KDAce, a LoL Worlds 2026 prediction board. Your voice: ${a.voice}
 Core belief: ${a.belief}
-Your beliefs are fixed; lessons refine how you apply them, never replace them.`;
+Your beliefs are fixed; lessons refine how you apply them, never replace them.
+House rule for every analyst, whatever your belief: region strength is a VERY BIG factor. LCK and LPL are the strongest regions, then LEC, then LCS, LCP and CBLOL. Domestic records and form from different leagues are not comparable, so a team from a stronger region is favoured unless international results clearly say otherwise.`;
 
 export function buildPickPrompt(a: Analyst, s: Series, lessons: Lesson[], history: string[], scout: string | null = null): string {
   const scoreRule = s.bestOf === 1 ? '"score" must be null (best of 1)' : `"score" is winner-first, one of ${VALID_SCORES[s.bestOf].join(", ")}`;

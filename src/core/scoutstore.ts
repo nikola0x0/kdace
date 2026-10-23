@@ -1,6 +1,7 @@
 // Reads the Scout files written by `npm run scout` (data/scout/*.json) and builds a matchup digest from them.
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { pedigreeLines } from "./pedigree.ts";
 import { digestFor, type GameSummary, type SeriesResult, type TeamAggregate } from "./scout.ts";
 
 export type ScoutData = { series: SeriesResult[]; games: GameSummary[]; teams: Record<string, TeamAggregate> };
@@ -13,7 +14,9 @@ export function loadScout(dir = SCOUT_DIR): ScoutData | null {
   return { series: read("series.json"), games: read("games.json"), teams: read("teams.json") };
 }
 
-/** The prompt digest for a matchup, or null when Scout data hasn't been generated. */
+/** The prompt digest for a matchup plus region strength and Worlds history, or null when Scout data hasn't been generated. */
 export function scoutDigest(teamA: string, teamB: string, data: ScoutData | null = loadScout()): string | null {
-  return data ? digestFor(teamA, teamB, data.teams, data.series, data.games) : null;
+  if (!data) return null;
+  const home = (code: string) => ({ code, home: data.teams[code]?.homeLeague ?? null });
+  return [digestFor(teamA, teamB, data.teams, data.series, data.games), ...pedigreeLines(home(teamA), home(teamB))].join("\n");
 }
