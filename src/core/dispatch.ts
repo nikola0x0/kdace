@@ -14,6 +14,11 @@ import type { Series } from "./worlds.ts";
 export type PendingRecord = { matchId: string; startTime: string; finalCallOpen: boolean };
 
 export const DISPATCH_DEBOUNCE_MS = 4 * 60_000;
+/** Heartbeat: with a match near or under way, a tick at least this often (GitHub's own cron is often late or skipped). */
+export const HEARTBEAT_MS = 15 * 60_000;
+/** "Near or under way": starting within this long, or started within ACTIVE_AFTER_MS. */
+export const ACTIVE_BEFORE_MS = 3 * 3600_000;
+export const ACTIVE_AFTER_MS = 6 * 3600_000;
 /** A final call is chased from this long before lock. */
 export const FINAL_CALL_LEAD_MS = 20 * 60_000;
 /** A finished series is chased for this long after its start; past that, a settle that keeps failing waits for the regular ticks. */
@@ -35,8 +40,8 @@ export function pendingRecords(records: SeriesRecord[], chain: Chain): PendingRe
  * start), or a pending series owed a final call that is within 20 minutes of its lock and still 3 minutes before it
  * (by the stored start, or the official one if it moved earlier). `schedule` is null when lolesports couldn't be read.
  */
-export function decideDispatch(input: { pending: PendingRecord[]; schedule: Series[] | null; now: Date; lastDispatchAt: string | null; tickActive: boolean }): { dispatch: boolean; reasons: string[] } {
-  const { pending, schedule, now, lastDispatchAt, tickActive } = input;
+export function decideDispatch(input: { pending: PendingRecord[]; schedule: Series[] | null; now: Date; lastDispatchAt: string | null; tickActive: boolean; lastTickAt?: string | null }): { dispatch: boolean; reasons: string[] } {
+  const { pending, schedule, now, lastDispatchAt, tickActive, lastTickAt } = input;
   const t = now.getTime();
   const byId = new Map((schedule ?? []).map((s) => [s.matchId, s]));
   const reasons: string[] = [];
@@ -47,6 +52,9 @@ export function decideDispatch(input: { pending: PendingRecord[]; schedule: Seri
     const lock = start - LOCK_MARGIN_MS;
     if (p.finalCallOpen && (!official || official.state === "unstarted") && t >= lock - FINAL_CALL_LEAD_MS && t < lock - FINAL_CALL_MARGIN_MS) reasons.push(`${p.matchId}: final call due`);
   }
+  // Heartbeat: keep ticking while matches are near or under way, whatever GitHub's cron does.
+  const active = (schedule ?? []).some((s) => { const st = Date.parse(s.startTime); return st - t < ACTIVE_BEFORE_MS && t - st < ACTIVE_AFTER_MS && s.teamA !== "TBD"; });
+  if (active && lastTickAt !== undefined && (!lastTickAt || t - Date.parse(lastTickAt) >= HEARTBEAT_MS)) reasons.push("heartbeat: matches under way and no tick for 15 min");
   if (!reasons.length) return { dispatch: false, reasons };
   if (lastDispatchAt && t - Date.parse(lastDispatchAt) < DISPATCH_DEBOUNCE_MS) return { dispatch: false, reasons };
   if (tickActive) return { dispatch: false, reasons };
@@ -58,6 +66,8 @@ export type DispatchDeps = {
   /** The published pending records (data/pending.json on main). */
   loadPending(): Promise<PendingRecord[]>;
   fetchSeries(): Promise<Series[]>;
+  /** When the latest tick run started (any trigger), or null if none. */
+  lastTickAt(): Promise<string | null>;
   /** True when a tick run is queued or in progress. */
   tickActive(): Promise<boolean>;
   /** Dispatches the tick workflow. */
@@ -69,10 +79,11 @@ export type DispatchDeps = {
 /** One dispatcher run: decide, check no tick is running, claim the 4-minute slot in Supabase, then dispatch. */
 export async function runDispatch(deps: DispatchDeps): Promise<{ dispatched: boolean; reasons: string[] }> {
   const now = deps.now();
-  const pending = await deps.loadPending();
-  if (!pending.length) return { dispatched: false, reasons: [] };
+  // The pending list needs the token's Contents permission; without it the heartbeat still runs.
+  const pending = await deps.loadPending().catch((e) => (deps.log(`pending list unavailable: ${(e as Error).message}`), [] as PendingRecord[]));
   const schedule = await deps.fetchSeries().catch((e) => (deps.log(`schedule unavailable: ${(e as Error).message}`), null));
-  const base = { pending, schedule, now, lastDispatchAt: await deps.db.lastDispatchAt() };
+  const lastTickAt = await deps.lastTickAt().catch(() => undefined);
+  const base = { pending, schedule, now, lastDispatchAt: await deps.db.lastDispatchAt(), lastTickAt };
   const first = decideDispatch({ ...base, tickActive: false });
   if (!first.dispatch) return { dispatched: false, reasons: first.reasons };
   if (await deps.tickActive()) {
@@ -86,7 +97,7 @@ export async function runDispatch(deps: DispatchDeps): Promise<{ dispatched: boo
 }
 
 /** The GitHub side of the dispatcher, over the REST API with a token that can read contents and dispatch workflows. */
-export function githubDispatcher(token: string, fetchImpl: typeof fetch = fetch): Pick<DispatchDeps, "loadPending" | "tickActive" | "trigger"> {
+export function githubDispatcher(token: string, fetchImpl: typeof fetch = fetch): Pick<DispatchDeps, "loadPending" | "tickActive" | "trigger" | "lastTickAt"> {
   const api = (path: string, init: RequestInit = {}, accept = "application/vnd.github+json") =>
     fetchImpl(`https://api.github.com/repos/${REPO}/${path}`, { ...init, headers: { Authorization: `Bearer ${token}`, Accept: accept, "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json" }, cache: "no-store" });
   const runs = async (status: string) => {
@@ -100,6 +111,11 @@ export function githubDispatcher(token: string, fetchImpl: typeof fetch = fetch)
       if (res.status === 404) return [];
       if (!res.ok) throw new Error(`GitHub pending.json HTTP ${res.status}`);
       return (await res.json()) as PendingRecord[];
+    },
+    lastTickAt: async () => {
+      const res = await api(`actions/workflows/${WORKFLOW}/runs?per_page=1`);
+      if (!res.ok) throw new Error(`GitHub runs HTTP ${res.status}`);
+      return ((await res.json()) as { workflow_runs: { created_at: string }[] }).workflow_runs[0]?.created_at ?? null;
     },
     tickActive: async () => (await runs("queued")) > 0 || (await runs("in_progress")) > 0,
     trigger: async () => {

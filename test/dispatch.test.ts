@@ -73,6 +73,8 @@ function fakes(overrides: Partial<DispatchDeps> = {}) {
     trigger: async () => void triggered.push("tick"),
     now: () => at(60),
     log: () => {},
+    // A tick just ran, unless a test says otherwise, so the heartbeat stays quiet.
+    lastTickAt: async () => deps.now().toISOString(),
     ...overrides,
   };
   return { deps, db, triggered };
@@ -150,5 +152,23 @@ describe("githubDispatcher", () => {
       "https://api.github.com/repos/nikola0x0/kdace/actions/workflows/tick.yml/runs?status=queued&per_page=1",
       "https://api.github.com/repos/nikola0x0/kdace/actions/workflows/tick.yml/runs?status=in_progress&per_page=1",
     ]);
+  });
+});
+
+describe("heartbeat", () => {
+  const upcoming: Series = { ...done, matchId: "u", state: "unstarted", winner: null, startTime: new Date(Date.parse(done.startTime) + 3600_000).toISOString() };
+  it("dispatches when matches are near and no tick ran for 15 minutes, even without the pending list", async () => {
+    const { deps, triggered } = fakes({
+      loadPending: async () => { throw new Error("GitHub pending.json HTTP 403"); },
+      fetchSeries: async () => [upcoming],
+      lastTickAt: async () => new Date(at(60).getTime() - 16 * 60_000).toISOString(),
+    });
+    expect(await runDispatch(deps)).toMatchObject({ dispatched: true, reasons: ["heartbeat: matches under way and no tick for 15 min"] });
+    expect(triggered).toEqual(["tick"]);
+  });
+  it("stays quiet when a tick ran recently or nothing is near", async () => {
+    expect((await runDispatch(fakes({ loadPending: async () => [], fetchSeries: async () => [upcoming], lastTickAt: async () => new Date(at(60).getTime() - 5 * 60_000).toISOString() }).deps)).dispatched).toBe(false);
+    const far: Series = { ...upcoming, startTime: new Date(at(60).getTime() + 10 * 3600_000).toISOString() };
+    expect((await runDispatch(fakes({ loadPending: async () => [], fetchSeries: async () => [far], lastTickAt: async () => null }).deps)).dispatched).toBe(false);
   });
 });
