@@ -47,7 +47,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
       </div>
 
       <div className="lpanel">
-        <div className="lb-head"><span>#</span><span>Player</span><span>Total</span><span>In play</span><span>Profit</span></div>
+        <div className="lb-head"><span>#</span><span>Player</span><span>Total</span><span>Profit</span></div>
         {rows.map((r, i) => (
           <div key={r.player} className={`lb-row ${i === mineIdx ? "me" : ""}`}>
             <span className="num muted">{i + 1}</span>
@@ -57,7 +57,6 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
               <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
             )}
             <b className="num bal"><Axp size={15} /> {fmt(r.total)}</b>
-            <span className="num muted">{r.inPlay ? fmt(r.inPlay) : "-"}</span>
             <span className="flex items-center gap-2"><Pnl net={r.net} /><small className="num muted">{r.net > 0 ? "+" : ""}{fmt(r.net)} · {r.w}–{r.l}</small></span>
           </div>
         ))}
@@ -68,7 +67,6 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
           <span className="num">#{mineIdx + 1}</span>
           <b>{rows[mineIdx].name} <span className="tag you">You</span></b>
           <b className="num bal"><Axp size={15} /> {fmt(rows[mineIdx].total)}</b>
-          <span className="num muted">{fmt(rows[mineIdx].inPlay)} in play</span>
         </div>
       )}
     </>
