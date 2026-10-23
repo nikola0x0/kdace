@@ -78,7 +78,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
           </div>
 
           <div style={{ display: "grid", gap: 20 }}>
-            <MatchCard c={card} />
+            <MatchCard c={card} onPage />
             <MatchActivity matchId={s.matchId} />
             {r && (
               <div className="panel grid gap-3">

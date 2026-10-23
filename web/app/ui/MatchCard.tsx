@@ -49,7 +49,8 @@ function Pips({ bestOf, wins }: { bestOf: number; wins: number }) {
   );
 }
 
-export default function MatchCard({ c }: { c: CardData }) {
+/** `onPage`: the card is shown on its own match page, so there's no "Details" link back to it. */
+export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?: boolean }) {
   const { open, openSlip } = useFans();
   const s = c.series, live = open[s.matchId];
   const lockAt = live?.lockAt ?? new Date(Date.parse(s.startTime) - LOCK_MS).toISOString();
@@ -132,9 +133,11 @@ export default function MatchCard({ c }: { c: CardData }) {
           </>
         )}
 
-        <div className="card-foot-row">
-          <Link className="card-foot" href={`/match/${s.matchId}`}>Details →</Link>
-        </div>
+        {!onPage && (
+          <div className="card-foot-row">
+            <Link className="card-foot" href={`/match/${s.matchId}`}>Details →</Link>
+          </div>
+        )}
       </div>
     </SpotlightCard>
   );
