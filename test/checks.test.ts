@@ -70,6 +70,11 @@ describe("axpMatches", () => {
     expect(axpMatches({ ...r, axp: { "analyst-adc": 1500, "analyst-top": -500 } })).toBe(false);
     expect(axpMatches({ ...r, axp: null })).toBe(false);
   });
+  it("fails (instead of crashing) on a published batch with a negative stake", () => {
+    const bad = JSON.stringify({ matchId: "x", entries: [{ player: "analyst-adc", market: "winner", choice: "GEN", stake: -5 }] });
+    expect(axpMatches({ ...record, batch: bad })).toBe(false);
+    expect(checkRecord({ ...record, batch: bad, picks: [{ ...record.picks[0], stake: -5 }] }, commit, result, official).picksMatchBatch).toBe(false);
+  });
 });
 
 describe("boardMatches", () => {

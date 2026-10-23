@@ -1,6 +1,6 @@
 // AXP settlement and the leaderboard. AXP is play money: every player starts with 10,000 and stakes it on outcomes.
 // Each market settles parimutuel: the winners split the market's pool in proportion to their stakes.
-import type { BatchEntry } from "./batch.ts";
+import { assertStakes, type BatchEntry } from "./batch.ts";
 
 export type SettledSeries = { matchId: string; bestOf: 1 | 3 | 5; entries: BatchEntry[]; result: { winner: string; score: string } };
 
@@ -21,6 +21,7 @@ const isCorrect = (s: SettledSeries, e: BatchEntry) => e.choice === (e.market ==
  * back, losers lose their stake; if nobody picked the winning outcome, everyone gets their stake back. Rounding dust is dropped.
  */
 export function marketNet(s: SettledSeries): Record<string, number> {
+  assertStakes(s.entries); // a negative or fractional stake would corrupt every payout in its market
   const net: Record<string, number> = {};
   for (const market of ["winner", "score"] as const) {
     const entries = countedEntries(s).filter((e) => e.market === market);

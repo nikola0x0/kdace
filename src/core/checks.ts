@@ -9,13 +9,22 @@ import type { Series } from "./worlds.ts";
 
 type LedgerEvent = { type: "BatchCommitted" | "ResultPosted"; json: Record<string, unknown> } | null;
 
+/** Runs a check that parses or recomputes published data; malformed data fails the check instead of crashing verify. */
+const safely = (f: () => boolean): boolean => {
+  try {
+    return f();
+  } catch {
+    return false;
+  }
+};
+
 const hashHex = (raw: unknown): string =>
   Array.isArray(raw) ? Buffer.from(raw as number[]).toString("hex") : typeof raw === "string" ? Buffer.from(raw, "base64").toString("hex") : "";
 
 /** The picks and stakes shown to people must be exactly the ones that were hashed. */
 function picksMatchBatch(r: SeriesRecord): boolean {
   if (!r.batch) return false;
-  return canonicalBatch(r.series.matchId, analystEntries(r.series.bestOf, r.picks)) === r.batch;
+  return safely(() => canonicalBatch(r.series.matchId, analystEntries(r.series.bestOf, r.picks)) === r.batch);
 }
 
 /**
@@ -72,11 +81,10 @@ export function checkTitleDay(day: TitleDay, commit: LedgerEvent) {
 export function axpMatches(r: SeriesRecord): boolean {
   if (!r.result || !r.axp) return false;
   const sorted = (o: Record<string, number>) => JSON.stringify(Object.entries(o).sort(([a], [b]) => a.localeCompare(b)));
-  return sorted(marketNet(toSettled(r))) === sorted(r.axp);
+  return safely(() => sorted(marketNet(toSettled(r))) === sorted(r.axp!));
 }
 
 /** The leaderboard must be exactly what the settled records' published batches add up to. */
 export function boardMatches(store: Store): boolean {
-  const recomputed = computeBoard(store.all().filter((r) => r.status === "settled").map(toSettled));
-  return JSON.stringify(recomputed) === JSON.stringify(store.readBoard());
+  return safely(() => JSON.stringify(computeBoard(store.all().filter((r) => r.status === "settled").map(toSettled))) === JSON.stringify(store.readBoard()));
 }

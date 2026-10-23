@@ -37,3 +37,12 @@ describe("canonicalBatch", () => {
   });
 });
 
+describe("canonicalBatch stake guard", () => {
+  it.each([[-10], [Number.NaN], [12.5], [Number.POSITIVE_INFINITY]])("refuses a stake of %s", (stake) => {
+    expect(() => canonicalBatch("m", [{ ...a, stake }])).toThrow(/stake/);
+  });
+  it("accepts 0 (title calls carry no AXP)", () => {
+    expect(() => canonicalBatch("title:2026-10-23", [{ player: "analyst-mid", market: "title", choice: "T1", stake: 0 }])).not.toThrow();
+  });
+});
+

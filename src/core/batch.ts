@@ -7,7 +7,17 @@ import { createHash } from "node:crypto";
 /** `thought`: SHA-256 of the analyst's published reasoning and thinking summary (see thoughtHash), so neither can change after lock. */
 export type BatchEntry = { player: string; market: "winner" | "score" | "title"; choice: string; stake: number; lessons?: string[]; thought?: string };
 
+/** A stake that may appear in a batch: a whole, finite, non-negative number of AXP (0 only for title calls). */
+export const isBatchStake = (stake: unknown): stake is number => typeof stake === "number" && Number.isInteger(stake) && stake >= 0;
+
+/** Throws on any entry whose stake isn't a whole, non-negative AXP amount, so a bad stake never gets fingerprinted. */
+export function assertStakes(entries: { player: string; stake: unknown }[]): void {
+  const bad = entries.find((e) => !isBatchStake(e.stake));
+  if (bad) throw new Error(`invalid stake ${String(bad.stake)} for ${bad.player}`);
+}
+
 export function canonicalBatch(matchId: string, entries: BatchEntry[]): string {
+  assertStakes(entries);
   const sorted = [...entries]
     .sort((x, y) => x.player.localeCompare(y.player) || x.market.localeCompare(y.market) || x.choice.localeCompare(y.choice))
     .map(({ player, market, choice, stake, lessons, thought }) => ({

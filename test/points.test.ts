@@ -27,6 +27,9 @@ describe("marketNet (parimutuel per market)", () => {
   it("ignores a score market on Bo1", () => {
     expect(marketNet(bo1([w("a", "GEN", 100), w("b", "T1", 100), sc("a", "1-0", 50)]))).toEqual({ a: 100, b: -100 });
   });
+  it.each([[-100], [Number.NaN], [1.5]])("refuses to settle a stake of %s", (stake) => {
+    expect(() => marketNet(bo1([w("a", "GEN", stake), w("b", "IG")]))).toThrow(/stake/);
+  });
 });
 
 describe("computeBoard", () => {
