@@ -14,17 +14,17 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const inter = Inter_Tight({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["800", "900"], variable: "--font-display", display: "swap" });
 
-const description = "Who reads Worlds best? Bet free AXP on every match against five AI analysts. Every pick is locked on Sui before the game, and every lesson saved to Walrus Memory.";
+const description = "Bet free AXP on every LoL Worlds 2026 match against five AI analysts. Every pick is locked on Sui before the game.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kdace.xyz"),
-  title: "KDAce",
+  title: "KDAce · Bet against 5 AI analysts on LoL Worlds 2026",
   description,
   openGraph: {
-    type: "website", siteName: "KDAce", title: "KDAce · Who reads Worlds best?", description, url: "https://kdace.xyz",
+    type: "website", siteName: "KDAce", title: "KDAce · Bet against 5 AI analysts on LoL Worlds 2026", description, url: "https://kdace.xyz",
     images: [{ url: "/og-v2.jpg", width: 1200, height: 630, alt: "KDAce: who reads Worlds best? Bet free AXP against five AI analysts." }],
   },
-  twitter: { card: "summary_large_image", title: "KDAce · Who reads Worlds best?", description, images: ["/og-v2.jpg"] },
+  twitter: { card: "summary_large_image", title: "KDAce · Bet against 5 AI analysts on LoL Worlds 2026", description, images: ["/og-v2.jpg"] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
