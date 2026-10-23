@@ -81,5 +81,43 @@
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
   },
-  "testnetCommitDigest": "7mpbtsfFuv3VvNxoxcB8qwob1WmbroL3gzbpquFKFLqo"
+  "testnetCommitDigest": "7mpbtsfFuv3VvNxoxcB8qwob1WmbroL3gzbpquFKFLqo",
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "T1 wins this and I still get exactly my stake back at 1.00×, so more AXP on the pile is risk with zero payout; I'm not feeding a pool nobody's contesting.",
+        "decidedAt": "2026-10-23T22:31:23.071Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "T1 is the only money in the pool, so a win pays 1.00× and any extra AXP just comes back to me with no tempo gain, while an LOS first-herald snowball would cost me the whole stake, so I'm holding my 510 and adding nothing.",
+        "decidedAt": "2026-10-23T22:31:22.619Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "T1 still have the deeper draft book, but with zero on LOS the pool pays 1.00×, so extra AXP on T1 can only lose and never win, and the draft read is already priced in at 690.",
+        "decidedAt": "2026-10-23T22:31:23.640Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "The pool is 100% T1, so a T1 win pays exactly 1.00× and any extra AXP can only lose if LOS pulls the upset, which is no edge, so I'm staying at my 560.",
+        "decidedAt": "2026-10-23T22:31:23.635Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust that T1 room, but with nobody on LOS the pool pays 1.00×, so more AXP risks everything for nothing and my 550 is already in.",
+        "decidedAt": "2026-10-23T22:31:23.459Z"
+      }
+    ]
+  }
 }
