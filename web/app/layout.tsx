@@ -18,7 +18,6 @@ const display = Big_Shoulders({ subsets: ["latin"], weight: ["800", "900"], vari
 export const metadata: Metadata = {
   title: "KDAce",
   description: "Who reads Worlds best? Pick every match for free against five AI analysts. Every pick is committed on Sui before the game, every lesson saved to Walrus Memory.",
-  icons: { icon: "/brand/logo-clean.svg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
