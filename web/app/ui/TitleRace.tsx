@@ -4,6 +4,7 @@ import type { TitleDay } from "../../../src/core/titles.ts";
 import { persona } from "../../lib/personas";
 import { art, suiscan } from "../../lib/site";
 import { Avatar, RoleIcon, TeamLogo } from "./bits";
+import Expandable from "./Expandable";
 import ShinyText from "./rb/ShinyText";
 
 export default function TitleRace({ day, logos }: { day: TitleDay; logos: Record<string, string> }) {
@@ -54,7 +55,7 @@ export default function TitleRace({ day, logos }: { day: TitleDay; logos: Record
                 <Link href={`/analysts/${p.role}`}><Avatar name={p.name} color={p.color} art={art(`analyst-${p.role}`)} size={36} /></Link>
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5 text-sm font-semibold"><RoleIcon role={p.role} size={14} />{p.name}</div>
-                  <p className="line-clamp-2 text-xs text-muted-foreground" title={pick.reasoning}>{pick.reasoning}</p>
+                  <Expandable text={pick.reasoning} className="text-xs leading-snug text-muted-foreground hover:text-neutral-300" />
                 </div>
                 <div className="grid justify-items-end gap-1">
                   <span className="flex items-center gap-1.5 font-bold [&_.tlogo]:size-6"><TeamLogo code={pick.champion} logo={logos[pick.champion] ?? null} />{pick.champion}</span>

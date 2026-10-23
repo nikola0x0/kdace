@@ -4,7 +4,6 @@ import Link from "next/link";
 import "./globals.css";
 import { Logo } from "./ui/bits";
 import FanProvider from "./ui/FanProvider";
-import SeasonBar from "./ui/SeasonBar";
 import ActivityToasts from "./ui/ActivityToasts";
 import TabBar from "./ui/TabBar";
 import UserButton from "./ui/UserButton";
@@ -39,7 +38,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <UserButton />
             </div>
           </header>
-          <SeasonBar />
           {children}
           <footer className="foot">
             <div className="wrap foot-row">

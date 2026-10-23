@@ -75,19 +75,29 @@ export function fieldLines(teams: string[], aggregates: Record<string, TeamAggre
   });
 }
 
+/** The question each analyst's belief asks of the field, so five beliefs don't collapse onto one favourite. */
+const LENS: Record<string, string> = {
+  top: "Which roster has the best individual players right now, the ones who win their lanes and take over games on their own?",
+  jungle: "Which team wins the early game most reliably: first objectives, tempo, map control in the first 15 minutes?",
+  mid: "Which team has the deepest champion pools and adapts best in the draft, where Fearless Draft takes comfort picks away?",
+  adc: "Whose numbers are strongest across the board: records, game win rate, results against other regions?",
+  support: "Which team has the chemistry, composure and momentum to peak at the right time, the room that holds together when it gets tense?",
+};
+
 export function buildTitlePrompt(a: Analyst, alive: string[], field: string[], history: string[]): string {
   return `You are the ${a.name} analyst on KDAce, a LoL Worlds 2026 prediction board. Your voice: ${a.voice}
 Core belief: ${a.belief}
 
-Teams still alive at Worlds 2026 (region strength is a VERY BIG factor and records from different leagues are not comparable; Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0):
+Teams still alive at Worlds 2026 (records from different leagues are not directly comparable):
 ${field.join("\n")}
 
 Results so far this tournament:
 ${history.join("\n") || "(none yet)"}
 
-Who wins Worlds 2026? Make your call for today; you can change it tomorrow.
+Who wins Worlds 2026? Answer it through YOUR question: ${LENS[a.role]}
+Five analysts make this call. A desk where everyone picks the same team is boring and usually wrong somewhere, so back the team your belief points to, even if it isn't the obvious favourite. Make your call for today; you can change it tomorrow.
 Reply with only JSON:
-{"champion":"<one of ${alive.join(", ")}>","probability":<1-100, its chance to win the whole tournament>,"contenders":["<next most likely>","<third>"],"reasoning":"<one or two sentences in your voice: talk like a passionate analyst on the Worlds desk, not a spreadsheet; one number at most>"}`;
+{"champion":"<one of ${alive.join(", ")}>","probability":<1-100, its chance to win the whole tournament>,"contenders":["<next most likely>","<third>"],"reasoning":"<one punchy sentence in your voice, under 180 characters: a passionate analyst on the Worlds desk, not a spreadsheet; one number at most>"}`;
 }
 
 export function parseTitlePick(reply: string, a: Analyst, alive: string[], now: Date): TitlePick {

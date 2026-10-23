@@ -6,7 +6,7 @@ import { ANALYSTS } from "../src/core/analysts.ts";
 import { batchHash, canonicalBatch } from "../src/core/batch.ts";
 import { checkTitleDay } from "../src/core/checks.ts";
 import { Store } from "../src/core/store.ts";
-import { aliveTeams, parseTitlePick, titleHistory, tournamentOver } from "../src/core/titles.ts";
+import { aliveTeams, buildTitlePrompt, parseTitlePick, titleHistory, tournamentOver } from "../src/core/titles.ts";
 import type { Series } from "../src/core/worlds.ts";
 import { runTitles, type TitleDeps } from "../src/jobs/titles.ts";
 
@@ -28,6 +28,15 @@ describe("aliveTeams", () => {
   it("knows when the final is done (the schedule calls it \"Finals\"), not after a semifinal", () => {
     expect(tournamentOver([won("GEN", "BLG", "GEN", "Finals")])).toBe(true);
     expect(tournamentOver([won("GEN", "BLG", "GEN", "Semifinals")])).toBe(false);
+  });
+});
+
+describe("buildTitlePrompt", () => {
+  it("asks each analyst its own question, so they don't all land on the favourite", () => {
+    const [top, , , , support] = ANALYSTS.map((a) => buildTitlePrompt(a, ["GEN", "BLG"], ["GEN: ...", "BLG: ..."], []));
+    expect(top).toContain("best individual players");
+    expect(support).toContain("chemistry, composure and momentum");
+    expect(top).toContain("even if it isn't the obvious favourite");
   });
 });
 
