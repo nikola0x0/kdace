@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -72,10 +72,55 @@
   "batch": "{\"matchId\":\"115660540726095009\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":330,\"thought\":\"9d3e66c790d0af4e820b21d590a5854b50b8e8917e2d84aa4eb69aa034ba6aaf\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":360,\"thought\":\"d34c873339d090bcae35a8edfd1404a0c9ea3d45166ed1016d18d46a9575347d\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":320,\"thought\":\"0ac947c1983d124fdeddccb887934325362e020a63ecf335aac9225b5485e6e3\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":390,\"thought\":\"52804c95c02808d9ab11d0e2064494ba94d98509163cbea093207b78bd2685ba\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":370,\"thought\":\"81bd8d3ab697cfacb021a5312702b9fcbd83a760848ae40a44605dca8ff96d96\"}]}",
   "batchHash": "7ac94615722a7e603fa6c23685039ff37b584c8b48508728e5de740b71875586",
   "commitDigest": "BdsyYCQcwQJJhS6n9QYzmHq6AFp18ohL4DNnr52S2R2Y",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "KC",
+    "score": "1-0",
+    "resultDigest": "7j2LpinbiF7SVhoZZtqX8D41s7kikcnt9SZwwBDrExKH"
+  },
+  "axp": {
+    "analyst-adc": 185,
+    "analyst-jungle": 201,
+    "analyst-mid": -2320,
+    "analyst-support": 218,
+    "analyst-top": -2870,
+    "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352": -100,
+    "fan:0x66de107731e52f27fa393e0359284b1e30b552c2b6b846722946b5d876852c6f": 5606,
+    "fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b": 1177,
+    "fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b": -2100
+  },
+  "debate": "Top: Okay, I got burned. KC won, and I faded the hype at the exact wrong time. Still, one game doesn't prove they have better hands than AL.\n\nJungle: Told you tempo was the whole story. KC took the early map again, AL drifted, and the 2-0 at EWC turned out to be a real preview, not a footnote.\n\nMid: Fair, my five-champion bench didn't matter much once Caliste got going. I'm still saying Fearless Draft favors AL over a longer series, though a one-game coin flip landed on the wrong side for me.\n\nADC: The numbers had it: 2-0 at EWC, 8-4 against other regions, and Caliste the best bot laner on the server. I'll take the 1-0 and the 58%, and I'm not apologizing for it.\n\nSupport: The mood was steady and KC played like a team that trusts each other, so I'm happy. Top, you can still back the better players, but the better room just won.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but I have to verify who has the stronger players on the actual rosters rather than assume the name on the jersey does. Caliste outplayed Hope in the lane that mattered, so next time I'll compare the player matchups first, and fade the hype only when the skill gap points the same way. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+      "blobId": "5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U",
+      "jobId": "a724b370-4a7e-4df3-8cbf-4ca77d5f440d"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: KC's early-map control (first tower, a gold lead by 15) beat AL's LPL badge once again, so in future Bo1s I'll weight who actually wins the first 15 minutes, and recent head-to-head tempo like that 2-0 at EWC, above league reputation. I'll still treat early control as the lens, but I'll back it harder when the opponent keeps drifting through the opening and gives away the map. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+      "blobId": "m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk",
+      "jobId": "da2deefa-3d3d-44e0-a444-8d1cc5c3f279"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Bench depth only matters if it's the star's comfort picks that get through draft, so next time I'll check whether the opponent's carry, like Caliste on Ryze or Viktor, can be left open or denied, and weight that carry's current form heavily in a Bo1. I also won't use region strength as a tiebreaker unless the scouting report flags a big gap, and will let the draft and star matchup decide instead. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+      "blobId": "O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w",
+      "jobId": "def0ab5f-5627-465a-8adb-e07f50f1571f"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Numbers over stories means sizing each number by its sample, and a 1-0 result in a single game doesn't validate the 58%. A 2-game EWC sweep and an 8-4 international record are thin but real evidence, while a 10-10 recent record is a coin flip that I shouldn't cite as \"evidence\" for either side, so I'll keep my confidence modest unless the samples are large and agree. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+      "blobId": "WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw",
+      "jobId": "bf923e28-32e3-42de-b345-de7635aa7e0f"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: My read on the room was right, but I should lean on concrete signs of cohesion, like how a team recovered from a deficit or how it handled a prior head-to-head, rather than a general sense of steady mood, and I should state those signs plainly. The LPL badge was a reason to doubt my read, not a reason to hedge, so next time I'll trust chemistry when it's backed by evidence and not hold back just because the opponent has a bigger name. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+      "blobId": "n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk",
+      "jobId": "8a311465-eda4-47ae-9dd8-42193140ca3e"
+    }
+  ],
   "scout": "Scout: AL vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nAL [LPL]: 2026 series 34-19, games 83-59 | last 10 (newest first) WWLWLLLWWW\n  LPL 2026 32-18 (1 title) · EWC 2026 2-1 · vs other regions 2-1\n  Last 20 games (10-10): GD@15 -0.1k, FB 65%, FT 55%, FD 45%, dragons 54%, 33 min avg, 1st baron 27:36\n  Leads @15 converted 8/8, comeback wins 2, throws 1, objectives taken while 1k+ behind 14\n  Picks: TOP Gnar 3, K'Sante 3, Rumble 3 | JG Maokai 4, Qiyana 3, Cho'Gath 2 | MID Annie 3, Yone 3, Akali 2 | BOT Lucian 3, Ashe 2, Caitlyn 2 | SUP Seraphine 4, Milio 3, Neeko 3\n  Standout: ALKael (support) KDA 4.8 over 20 games, 9% dmg share\nKC [LEC]: 2026 series 40-15, games 89-49 | last 10 (newest first) WWWLLWWWWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 3-0 · vs other regions 8-4\n  Last 31 games (21-10): GD@15 +1.3k, FB 65%, FT 65%, FD 52%, dragons 53%, 33.5 min avg, 1st baron 26:00\n  Leads @15 converted 15/17, comeback wins 1, throws 4, objectives taken while 1k+ behind 5\n  Worlds 2026 11 games (9-2): GD@15 +1.4k, FB 36%, FT 73%, FD 27%, dragons 54%, 33.6 min avg, 1st baron 26:12\n  Picks: TOP Rumble 6, Ambessa 5, Jayce 5 | JG Vi 6, Lee Sin 5, Jarvan IV 4 | MID Ryze 5, Viktor 5, Syndra 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.5 over 31 games, 28% dmg share\nHead-to-head 2026: AL 0-1 KC\n  2026-07-17 EWC 2026 Quarterfinals: KC 2-0 AL\nKey moments:\n  - AL took Baron at 33:54 while down 10.5k vs BLG (LPL 2026), lost\n  - AL threw a +4.5k lead (18:00) vs TES (LPL 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.4k lead (22:00) vs SHFT (LEC 2026)\nFun facts:\n  * Likely penta kill: ALHope (Miss Fortune) at 30:31 (vs BLG, LPL 2026)\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LPL vs LEC: LPL went 4-2 against LEC in 2026; LPL 64% vs LEC 50% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  AL (LPL): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
