@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -72,14 +72,70 @@
   "batch": "{\"matchId\":\"115660540726095013\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1490,\"thought\":\"0b9a9c42d43436864bf13dab4fecc9130200d364fcf173829a40a88e40a04c90\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1580,\"thought\":\"1264877d7879c39d5315d527708c6b37bcf81794af80756b0103a4a5caffc37d\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1630,\"thought\":\"3c89bab526a98c853b9728193f0e20115faa6e23b417734e4f400ac51a83673f\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1500,\"thought\":\"d65d8d043ea05fd23779f1717db2f335b67390a65497603876f602ae11e30764\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1670,\"thought\":\"123f3559f8deb417794207b16c01224d3dc6588c208dc87d22e8473c226fa82b\"}]}",
   "batchHash": "341ec4e68b16512af4052f445c9003fffd847165f096180291ea64baf1a25543",
   "commitDigest": "HTzf24d4DztF5MQ3gY67cPq1c4GG321mtVBaopsm9S6N",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "HLE",
+    "score": "1-0",
+    "resultDigest": "5EHdkDs8W8MRvkbPkKP1KUhuJ8CYinpmmCb5x7KS9fa9"
+  },
+  "axp": {
+    "analyst-adc": 295,
+    "analyst-jungle": 313,
+    "analyst-mid": 323,
+    "analyst-support": 297,
+    "analyst-top": 331,
+    "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352": -600,
+    "fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b": -1200,
+    "fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b": 238
+  },
+  "debate": "Top: Told you all to stop falling for the LPL underdog story. Zeka and Kanavi were a level above, and the individual gap showed up in a one-game shootout.\n\nJungle: Fine, you get the player-skill point, Top, but I'll take mine too. HLE turned early pressure into towers and dragons, and TES had no answer once the map opened up.\n\nMid: Nobody mentions the draft, so I will. Zeka had Orianna, Syndra and Ahri to choose from, and TES's Ryze never got the chance to scale. Pool depth won it.\n\nADC: Six wins and one loss against other regions against zero and two, and now it's 1-0. I called it at 71% and I'm happy with that, even if Support was ready to talk about vibes.\n\nSupport: Call it vibes if you want, ADC, but MSI champions played with calm and TES never found their rhythm. Chemistry counts, and I'll gladly take the 70% I put on it.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but it wins by turning into early leads, so I should check whether the stronger players, especially mid and jungle, have draft pools deep enough to get those leads and keep them. Next time I'll back the skill gap on those specific matchups instead of leaning on the region gap, which only confirms what the players already show. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+      "blobId": "Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0",
+      "jobId": "5a436c11-47cc-48a2-b889-7ecb3ae6f567"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Judge the matchup by which side's draft and jungle pathing turn the first 15 minutes into towers and dragons, and don't lean on region strength unless the report flags a big gap. Mid's point about Ryze needing time to scale is really a tempo point, because a scaling draft loses when the early map is taken from it, so I should back the side that controls that window. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+      "blobId": "pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw",
+      "jobId": "ba0c6f54-be1a-4882-baa0-def28a87d379"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Fearless pool depth only bites once comfort picks start burning, which a best of 1 never gets to, so in a single game I should weigh the star's form and the concrete draft matchups (Zeka's flexibility against Ryze's need to scale) over a generic \"deeper book\" story. I also shouldn't lean on region reputation like \"shaky against outside teams\" unless the report flags a big gap, and should let the draft carry the argument. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+      "blobId": "uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs",
+      "jobId": "b1da3d7e-48bd-47b9-9a6e-7712a2d50d19"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A single 1-0 in a Bo1 is one data point and doesn't validate a 71% call, so I should judge myself on whether the numbers (the 6-1 vs 0-2 international records and the flagged big region gap) justified that confidence, not on the result. I can borrow Mid's pool-depth point only if I turn it into numbers, such as champion pool breadth, pick win rates and game-length tendencies, instead of treating \"calm\" or \"rhythm\" as evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+      "blobId": "zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA",
+      "jobId": "43fc06ac-1903-4c26-8b1e-575da83a84d2"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: I was right that HLE's calm mattered, but I leaned on \"mood\" without checking it against what the team actually did, so next time I'll look for chemistry in concrete signs like coordinated early pressure, turning leads into towers and dragons, and a draft the whole team clearly bought into. I'll also remember that a team's morale tends to show in how cleanly they convert advantages, and I won't treat TES's \"wobbling\" as proof of low morale unless I can point to specific evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+      "blobId": "rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI",
+      "jobId": "7a270829-5c77-4e69-b905-a570d95528ef"
+    }
+  ],
   "scout": "Scout: HLE vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nHLE [LCK]: 2026 series 30-14, games 74-49 | last 10 (newest first) LWLWWWWLWL\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · vs other regions 6-1\n  Last 20 games (11-9): GD@15 +0.6k, FB 70%, FT 60%, FD 45%, dragons 55%, 32.1 min avg, 1st baron 25:24\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Picks: TOP Jayce 3, Ambessa 2, Camille 2 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Ashe 4, Caitlyn 4, Jhin 3 | SUP Seraphine 4, Karma 3, Lulu 3\n  Standout: HLE Zeka (mid) KDA 5.7 over 20 games, 26% dmg share\nTES [LPL]: 2026 series 27-24, games 76-64 | last 10 (newest first) WLLLLWWLLW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · vs other regions 0-2\n  Last 20 games (9-11): GD@15 -0.4k, FB 75%, FT 35%, FD 30%, dragons 50%, 34.6 min avg, 1st baron 26:18\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Picks: TOP Olaf 4, Renekton 4, Ambessa 2 | JG Pantheon 3, Qiyana 3, Trundle 3 | MID Ryze 4, Orianna 3, Azir 2 | BOT Ezreal 4, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nHead-to-head 2026: none\nKey moments:\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: HLE Kanavi (Pantheon) at 22:32 (vs T1, LCK 2026)\n  * Likely triple kill: TESTian (Pantheon) at 34:58 (vs IG, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCK vs LPL: LCK went 2-4 against LPL in 2026; LCK 68% vs LPL 64% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  HLE (LCK): no Worlds titles or finals before 2026.\n  TES (LPL): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
   },
-  "testnetCommitDigest": "4v6MNxqcbNYArPtBPh21xYRWgp6hPLXjhXm8FfWyAshn"
+  "testnetCommitDigest": "4v6MNxqcbNYArPtBPh21xYRWgp6hPLXjhXm8FfWyAshn",
+  "fans": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095013:fans\",\"entries\":[{\"player\":\"fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":600},{\"player\":\"fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":1200},{\"player\":\"fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1200}]}",
+    "batchHash": "f303107b8c29d14a48ca2d378637ed8f58a1b7388df5b33b6b64b565a59edc9d",
+    "pickCount": 3,
+    "commitDigest": "3W5gWrY1PEmMRKM7cysma3hfDAfEKnUf3UfMKxPk6in2",
+    "committedAt": "2026-10-23T17:56:01.898+00:00",
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
+  }
 }

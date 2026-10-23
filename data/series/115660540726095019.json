@@ -81,5 +81,17 @@
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
   },
-  "testnetCommitDigest": "8jxErao4RnGE91Fc3x9Crkc8A3AAasK18UbjCWvjDMqe"
+  "testnetCommitDigest": "8jxErao4RnGE91Fc3x9Crkc8A3AAasK18UbjCWvjDMqe",
+  "fans": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095019:fans\",\"entries\":[{\"player\":\"fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":300},{\"player\":\"fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b\",\"market\":\"winner\",\"choice\":\"MKOI\",\"stake\":1200},{\"player\":\"fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":2100}]}",
+    "batchHash": "8b88ff6d826572365b39faeecc8478f733965e56062601fee1e31342d3de1a73",
+    "pickCount": 3,
+    "commitDigest": "7kqnXFRxt23pj75ShpTsnD4LKeCb6BJ8Y6iQvS99Q4ji",
+    "committedAt": "2026-10-23T18:56:02.827+00:00",
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
+  }
 }

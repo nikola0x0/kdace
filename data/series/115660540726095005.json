@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -72,10 +72,55 @@
   "batch": "{\"matchId\":\"115660540726095005\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2900,\"thought\":\"ebd961f4a3d3e9b5f0d70b07bd69625f0b0605f71fe57ee09454b2171a78d7ae\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2100,\"thought\":\"a56f2b5d43249131b4e8806f7ef92fc94232e67898420d845cdcb7ef63bc2244\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2600,\"thought\":\"a2069fa6b9fcc24270512b32e131848febb4e949a6811d99aafad15ca17523e7\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2500,\"thought\":\"5a55730b626f3c0104143578f857f8a01474e672bed4dcb7605b53a9850f9252\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2400,\"thought\":\"af5898cd69241ae9e439469da9759a56604f76fbe800c99b60b8e823056db213\"}]}",
   "batchHash": "0da3122c8b1d69ab663995ea5ab167ea8efc436675ebc70e3efa732a27266d7f",
   "commitDigest": "8CyRpw8tKAgtV7vWNWxG4aY2Ec1EXKYKur12VjCoQQYB",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "GEN",
+    "score": "1-0",
+    "resultDigest": "73Yvy1Ne4no5M4uQi1bkbzm1MZKQsQym9u7zFpzqtLor"
+  },
+  "axp": {
+    "analyst-adc": 212,
+    "analyst-jungle": 154,
+    "analyst-mid": 190,
+    "analyst-support": 183,
+    "analyst-top": 176,
+    "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352": 80,
+    "fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b": -1200,
+    "fan:0xdd19e8efcbf95f41740e09c559ce3a7f6b781cf2a4458544dc65a93fd0d4f4f6": -100,
+    "fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b": 301
+  },
+  "debate": "Top: Told you, Chovy over Rookie every time. Stronger player, stronger roster, and nobody got to hype IG into a win.\n\nJungle: Nice, but let's not rewrite history, Top. GEN took the early tempo and the map, and that's what decided it, not some solo-lane flex.\n\nMid: You're both a little right, but it was the draft. Fearless depth meant GEN always had an answer, and Rookie's star power couldn't beat that.\n\nADC: Numbers called it, as usual. 37-10 against 18-25 is why I was at 79%, and I'm happy to take my victory lap quietly.\n\nSupport: Quietly? Sure. Honestly, that locked-in GEN energy and the way they steadied each other were obvious, and the stats just caught up to the vibes.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+      "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+      "jobId": "247ecc8a-c19b-4b37-8f65-d5139a13a35a"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+      "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+      "jobId": "816cf2d9-3740-44e0-99b2-d9b9b3224432"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+      "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+      "jobId": "f7de13ef-d4fa-40c0-b879-af5a8ab96c11"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: The 37-10 vs 18-25 series gap set a sound 79%, but my reasoning also leaned on a Chovy-vs-Rookie story I never backed with lane numbers. Next time I'll price the confidence only from measurable inputs (series records, head-to-heads, game length tendencies) and check Jungle's point that early tempo decided it by looking at first-objective and gold-at-15 stats before crediting any one matchup. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+      "blobId": "Wa2-ULj-on4ItXklHhEkJjMibZGssdWijCLVdQRtNJ4",
+      "jobId": "d804772e-da38-4dfd-aeff-04615a50e6d6"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+      "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+      "jobId": "72c21848-61de-4e67-b437-d5cfb2d10562"
+    }
+  ],
   "scout": "Scout: GEN vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 37-10, games 88-32 | last 10 (newest first) WWWLWWWWWL\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · vs other regions 5-1\n  Last 20 games (15-5): GD@15 +0.6k, FB 30%, FT 65%, FD 55%, dragons 60%, 34.2 min avg, 1st baron 27:30\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 17\n  Picks: TOP Olaf 3, Ambessa 2, Gwen 2 | JG Lee Sin 4, Jarvan IV 3, Cho'Gath 2 | MID Ryze 5, Syndra 3, Akali 2 | BOT Ezreal 3, Kalista 3, Ashe 2 | SUP Seraphine 4, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.6 over 20 games, 25% dmg share\nIG [LPL]: 2026 series 18-25, games 57-67 | last 10 (newest first) WLLWWWWLWW\n  LPL 2026 18-25\n  Last 20 games (12-8): GD@15 +0.0k, FB 30%, FT 40%, FD 45%, dragons 48%, 32.6 min avg, 1st baron 26:36\n  Leads @15 converted 6/6, comeback wins 3, throws 1, objectives taken while 1k+ behind 14\n  Picks: TOP Gnar 3, Rumble 3, Gwen 2 | JG Naafiri 4, Maokai 3, Jarvan IV 2 | MID Syndra 4, Aurora 3, Orianna 2 | BOT Aphelios 3, Yunara 3, Ashe 2 | SUP Lulu 4, Seraphine 3, Thresh 3\n  Standout: IGRookie (mid) KDA 5.2 over 20 games, 25% dmg share\nHead-to-head 2026: none\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN came back from -4.8k at 36:00 vs T1 (LCK 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely quadra kill: IGJiaQi (Ezreal) at 29:33 (vs JDG, LPL 2026)\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCK vs LPL: LCK went 2-4 against LPL in 2026; LCK 68% vs LPL 64% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  IG (LPL): 1 Worlds title (2018).",
   "chain": {
     "network": "mainnet",

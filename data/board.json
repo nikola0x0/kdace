@@ -1,1 +1,83 @@
-[]
+[
+  {
+    "player": "fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b",
+    "balance": 10539,
+    "net": 539,
+    "k": 2,
+    "d": 0,
+    "a": 2,
+    "bets": 2
+  },
+  {
+    "player": "analyst-mid",
+    "balance": 10513,
+    "net": 513,
+    "k": 2,
+    "d": 0,
+    "a": 2,
+    "bets": 2
+  },
+  {
+    "player": "analyst-adc",
+    "balance": 10507,
+    "net": 507,
+    "k": 2,
+    "d": 0,
+    "a": 2,
+    "bets": 2
+  },
+  {
+    "player": "analyst-top",
+    "balance": 10507,
+    "net": 507,
+    "k": 2,
+    "d": 0,
+    "a": 2,
+    "bets": 2
+  },
+  {
+    "player": "analyst-support",
+    "balance": 10480,
+    "net": 480,
+    "k": 2,
+    "d": 0,
+    "a": 2,
+    "bets": 2
+  },
+  {
+    "player": "analyst-jungle",
+    "balance": 10467,
+    "net": 467,
+    "k": 2,
+    "d": 0,
+    "a": 2,
+    "bets": 2
+  },
+  {
+    "player": "fan:0xdd19e8efcbf95f41740e09c559ce3a7f6b781cf2a4458544dc65a93fd0d4f4f6",
+    "balance": 9900,
+    "net": -100,
+    "k": 0,
+    "d": 1,
+    "a": 0,
+    "bets": 1
+  },
+  {
+    "player": "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352",
+    "balance": 9480,
+    "net": -520,
+    "k": 1,
+    "d": 1,
+    "a": 1,
+    "bets": 2
+  },
+  {
+    "player": "fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b",
+    "balance": 7600,
+    "net": -2400,
+    "k": 0,
+    "d": 2,
+    "a": 0,
+    "bets": 2
+  }
+]
