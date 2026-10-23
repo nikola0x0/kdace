@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { ANALYSTS } from "../../../../src/core/analysts.ts";
+import { championIcons } from "../../../lib/champions";
 import { PERSONAS, persona } from "../../../lib/personas";
 import { analystStats, art, lessonText, records, teamLogos, titleCallsOf, walruscan } from "../../../lib/site";
 import { Axp, RoleIcon, TeamLogo } from "../../ui/bits";
@@ -22,6 +23,7 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
   const calls = all.filter((r) => r.picks.some((x) => x.player === p.player)).reverse().slice(0, 10);
   const img = art(`analyst-${p.role}`);
   const others = PERSONAS.filter((x) => x.role !== p.role);
+  const champIcon = await championIcons();
   const titleCalls = titleCallsOf(p.player);
   const current = titleCalls.at(-1);
   const logos = current ? await teamLogos() : {};
@@ -51,7 +53,15 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
 
           <div className="ap-facts">
             <div><span className="ap-label">Believes</span><p>{belief}</p></div>
-            <div><span className="ap-label">Meta picks</span><div className="ap-chips">{p.meta.map((m) => <span key={m} className="tag">{m}</span>)}</div></div>
+            <div><span className="ap-label">Meta picks</span><div className="flex flex-wrap gap-2">{p.meta.map((m) => {
+              const icon = champIcon(m);
+              return (
+                <span key={m} className="flex items-center gap-2 rounded-full border border-border bg-secondary py-1 pr-3 pl-1 text-sm font-semibold">
+                  {icon ? <img src={icon} alt="" loading="lazy" className="size-7 rounded-full border border-border object-cover" /> : <span className="grid size-7 place-items-center rounded-full bg-neutral-800 text-[10px]">{m.slice(0, 2)}</span>}
+                  {m}
+                </span>
+              );
+            })}</div></div>
             {current && (
               <div>
                 <span className="ap-label">Wins Worlds</span>
