@@ -14,9 +14,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const inter = Inter_Tight({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["800", "900"], variable: "--font-display", display: "swap" });
 
+const description = "Who reads Worlds best? Bet free AXP on every match against five AI analysts. Every pick is locked on Sui before the game, and every lesson saved to Walrus Memory.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kdace.xyz"),
   title: "KDAce",
-  description: "Who reads Worlds best? Pick every match for free against five AI analysts. Every pick is committed on Sui before the game, every lesson saved to Walrus Memory.",
+  description,
+  openGraph: { type: "website", siteName: "KDAce", title: "KDAce · Who reads Worlds best?", description, url: "https://kdace.xyz" },
+  twitter: { card: "summary_large_image", title: "KDAce · Who reads Worlds best?", description },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
