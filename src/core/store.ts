@@ -5,6 +5,7 @@ import type { AnalystPick } from "./analysts.ts";
 import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
 import { AXP_START, type BoardRow, type SettledSeries } from "./points.ts";
+import type { TitleDay } from "./titles.ts";
 import type { Series } from "./worlds.ts";
 
 export type SeriesRecord = {
@@ -108,6 +109,24 @@ export class Store {
   readFanNames(): Record<string, string | null> {
     const path = join(this.dir, "fans.json");
     return existsSync(path) ? readJson(path) : {};
+  }
+
+  /** Daily title picks, one file per UTC day (data/titles/<YYYY-MM-DD>.json). */
+  getTitleDay(date: string): TitleDay | null {
+    const path = join(this.dir, "titles", `${date}.json`);
+    return existsSync(path) ? readJson(path) : null;
+  }
+
+  putTitleDay(day: TitleDay): void {
+    mkdirSync(join(this.dir, "titles"), { recursive: true });
+    writeJson(join(this.dir, "titles", `${day.date}.json`), day);
+  }
+
+  /** Every title day, oldest first. */
+  titleDays(): TitleDay[] {
+    const dir = join(this.dir, "titles");
+    if (!existsSync(dir)) return [];
+    return readdirSync(dir).filter((f) => f.endsWith(".json")).sort().map((f) => readJson<TitleDay>(join(dir, f)));
   }
 
   readBoard(): BoardRow[] {

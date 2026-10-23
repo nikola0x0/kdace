@@ -4,6 +4,7 @@ import { batchHash, canonicalBatch } from "./batch.ts";
 import { FAN_PREFIX, fanMarketId } from "./fans.ts";
 import { computeBoard, marketNet } from "./points.ts";
 import { toSettled, type SeriesRecord, type Store } from "./store.ts";
+import { titleMarketId, type TitleDay } from "./titles.ts";
 import type { Series } from "./worlds.ts";
 
 type LedgerEvent = { type: "BatchCommitted" | "ResultPosted"; json: Record<string, unknown> } | null;
@@ -50,6 +51,20 @@ export function checkFans(r: SeriesRecord, commit: LedgerEvent, official: Series
     fanHashMatches: commitOk && parsed!.matchId === marketId && onchain === batchHash(f!.batch!) && onchain === f!.batchHash,
     fanEntriesAreFans: !!parsed && parsed.entries.every((e) => e.player.startsWith(FAN_PREFIX)),
     fanCommittedBeforeStart: commitOk && !!official && Number(commit!.json.committed_at_ms) < Date.parse(official.startTime),
+  };
+}
+
+/** A day's title calls: the on-chain fingerprint is this exact batch, committed on that UTC day, one entry per analyst call. */
+export function checkTitleDay(day: TitleDay, commit: LedgerEvent) {
+  const marketId = titleMarketId(day.date);
+  const commitOk = commit?.type === "BatchCommitted" && commit.json.market_id === marketId;
+  const onchain = commitOk ? hashHex(commit!.json.batch_hash) : "";
+  const parsed = JSON.parse(day.batch) as { matchId: string; entries: { player: string; market: string; choice: string }[] };
+  const calls = new Map(day.picks.map((p) => [p.player, p.champion]));
+  return {
+    titleHashMatches: commitOk && parsed.matchId === marketId && onchain === batchHash(day.batch) && onchain === day.batchHash,
+    titleCommittedThatDay: commitOk && new Date(Number(commit!.json.committed_at_ms)).toISOString().slice(0, 10) === day.date,
+    titleEntriesMatchCalls: parsed.entries.length === calls.size && parsed.entries.every((e) => e.market === "title" && calls.get(e.player) === e.choice),
   };
 }
 

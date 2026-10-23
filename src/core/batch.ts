@@ -3,7 +3,8 @@ import { createHash } from "node:crypto";
 
 /** One bet: a player's choice in one market and the AXP staked on it (a whole number, at least 1). */
 /** `lessons`: the Walrus Memory blob ids an analyst recalled for this pick (analysts only), so the fingerprint covers them. */
-export type BatchEntry = { player: string; market: "winner" | "score"; choice: string; stake: number; lessons?: string[] };
+/** Market "title" is a daily "who wins Worlds" call: no AXP, so its stake is 0. */
+export type BatchEntry = { player: string; market: "winner" | "score" | "title"; choice: string; stake: number; lessons?: string[] };
 
 export function canonicalBatch(matchId: string, entries: BatchEntry[]): string {
   const sorted = [...entries]

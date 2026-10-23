@@ -2,7 +2,7 @@
 // AXP payouts from the published batches, and recomputes the leaderboard.
 // Fan batches (committed under `<matchId>:fans` at lock) are checked the same way.
 import { chainOf } from "../core/chain.ts";
-import { axpMatches, boardMatches, checkFans, checkRecord } from "../core/checks.ts";
+import { axpMatches, boardMatches, checkFans, checkRecord, checkTitleDay } from "../core/checks.ts";
 import { readLedgerEvent } from "../core/ledger.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
@@ -37,6 +37,14 @@ for (const r of store.all().filter((x) => x.status !== "missed" || fansCommitted
   if (fansCommitted(r)) console.log(`   fans   https://suiscan.xyz/${r.fans!.chain.network}/tx/${r.fans!.commitDigest} (${r.fans!.pickCount} fan picks)`);
   if (r.result) console.log(`   result https://suiscan.xyz/${network}/tx/${r.result.resultDigest}`);
   for (const l of r.lessons) console.log(`   lesson https://walruscan.com/mainnet/blob/${l.blobId} (${l.player})`);
+}
+
+for (const day of store.titleDays().filter((d) => d.status === "committed")) {
+  const checks = checkTitleDay(day, await readLedgerEvent(day.commitDigest!, chainOf(day)));
+  const pass = Object.values(checks).every(Boolean);
+  if (!pass) failures++;
+  console.log(`${pass ? "PASS" : "FAIL"} title calls ${day.date}`, checks);
+  console.log(`   commit https://suiscan.xyz/${(chainOf(day)).network}/tx/${day.commitDigest}`);
 }
 
 const board = boardMatches(store);

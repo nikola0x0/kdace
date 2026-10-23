@@ -1,4 +1,4 @@
-// Tick (every 30 min): pick first because it is time-critical, then mirror fan commits from Supabase, then settle, then
+// Tick (every 30 min): pick first because it is time-critical, then the daily title picks, then mirror fan commits from Supabase, then settle, then
 // write the fans' settled AXP back to Supabase, then commit and push data/. Each stage is isolated so one failure never
 // skips the others (except: settle waits for a successful fan mirror, so AXP is never settled without the fans), and one
 // lock keeps manual runs from overlapping.
@@ -11,6 +11,7 @@ import { fetchSeries } from "../core/worlds.ts";
 import { fanAddresses, mirrorFanCommits, syncFanAxp } from "./fans.ts";
 import { realPickDeps, runPick } from "./pick.ts";
 import { realSettleDeps, runSettle } from "./settle.ts";
+import { realTitleDeps, runTitles } from "./titles.ts";
 
 const started = new Date().toISOString();
 const git = (...args: string[]) => execFileSync("git", args, { encoding: "utf8" });
@@ -31,6 +32,8 @@ await withLock("data", async () => {
   };
   for (const [stage, run] of [
     ["pick", async () => console.log("[tick] pick", await runPick(await realPickDeps(store)))],
+    // Who wins Worlds: once per UTC day, after the time-critical series picks.
+    ["titles", async () => console.log("[tick] titles", await runTitles(await realTitleDeps(store)))],
     ["fans", fans],
     ["settle", async () => (fansOk ? console.log("[tick] settle", await runSettle(await realSettleDeps(store))) : console.log("[tick] settle skipped: fan commits could not be mirrored"))],
     // Each fan's settled net goes back to Supabase, where the API checks stakes against available AXP.
