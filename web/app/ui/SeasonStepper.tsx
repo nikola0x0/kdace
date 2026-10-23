@@ -35,29 +35,30 @@ export default function SeasonStepper({ season, stages }: { season: string; stag
   const status = !current || now === null ? "" : current.progress === 0 ? `${current.name} starts ${fmt(current.first)}` : `${current.name}, day ${Math.floor((now - current.from) / DAY) + 1} of ${current.days}`;
 
   return (
-    <div className="border-b border-border bg-black">
-      <div className="wrap flex items-center gap-6 py-3 max-md:flex-col max-md:items-stretch max-md:gap-2" style={collapsed ? { paddingTop: 6, paddingBottom: 6 } : undefined}>
+    <div className="wrap pt-4">
+      <div className={cn("flex items-center gap-6 rounded-xl border border-amber-300/20 bg-[linear-gradient(100deg,rgba(252,211,77,0.13),rgba(252,211,77,0.04)_45%,rgba(252,211,77,0.01))] px-4 max-md:flex-col max-md:items-stretch max-md:gap-2", collapsed ? "py-2" : "py-3")}>
         <div className="flex shrink-0 items-center justify-between gap-3">
-          <span className="font-display text-xl font-black uppercase leading-none tracking-wide">{season}</span>
-          {collapsed && <span className="text-xs text-muted-foreground">{status}</span>}
+          <span className="flex items-center gap-2 font-display text-xl font-black uppercase leading-none tracking-wide text-amber-200"><Trophy className="size-4" />{season}</span>
+          {collapsed && <span className="text-xs text-amber-100/70">{status}</span>}
         </div>
         {!collapsed && (
           <ol className="flex flex-1 items-stretch gap-1.5 overflow-x-auto [scrollbar-width:none]">
             {view.map((s, i) => {
               const done = i < currentIdx, live = i === currentIdx, final = i === view.length - 1;
               return (
-                <li key={s.name} className={cn("relative flex min-w-[112px] flex-1 flex-col justify-center gap-0.5 overflow-hidden rounded-md border px-3 py-1.5", live ? "border-white/25 bg-white/[0.06]" : "border-transparent")}>
-                  <span className={cn("flex items-center gap-1.5 text-[13px] font-semibold", live ? "text-white" : done ? "text-neutral-400" : "text-neutral-500")}>
+                <li key={s.name} className={cn("relative flex min-w-[112px] flex-1 flex-col justify-center gap-0.5 overflow-hidden rounded-md border px-3 py-1.5", live ? "border-amber-300/40 bg-amber-300/10" : "border-transparent")}>
+                  <span className={cn("flex items-center gap-1.5 text-[13px] font-semibold", live ? "text-amber-50" : done ? "text-neutral-300" : "text-neutral-500")}>
                     {done && <Check className="size-3.5 text-win" strokeWidth={3} />}
-                    {final && <Trophy className={cn("size-3.5", live ? "text-amber-300" : "text-neutral-500")} />}
+                    {live && <span className="size-1.5 animate-pulse rounded-full bg-amber-300" />}
+                    {final && !live && <Trophy className="size-3.5 text-neutral-500" />}
                     {s.name}
                   </span>
-                  <span className={cn("text-[11px] tabular-nums", live ? "text-neutral-300" : "text-neutral-600")} suppressHydrationWarning>
+                  <span className={cn("text-[11px] tabular-nums", live ? "text-amber-100/80" : "text-neutral-500")} suppressHydrationWarning>
                     {live && s.progress === 0 ? `Starts ${fmt(s.first)}` : live ? `Day ${Math.floor(((now ?? 0) - s.from) / DAY) + 1} of ${s.days}` : s.days <= 1 ? fmt(s.first) : `${fmt(s.first)} – ${fmt(s.last)}`}
                   </span>
                   {live && (
-                    <span className="absolute inset-x-0 bottom-0 h-[3px] bg-white/10">
-                      <span className="block h-full bg-win" style={{ width: `${Math.max(3, s.progress * 100)}%` }} />
+                    <span className="absolute inset-x-0 bottom-0 h-[3px] bg-amber-300/15">
+                      <span className="block h-full bg-amber-300" style={{ width: `${Math.max(3, s.progress * 100)}%` }} />
                     </span>
                   )}
                 </li>
@@ -65,7 +66,7 @@ export default function SeasonStepper({ season, stages }: { season: string; stag
             })}
           </ol>
         )}
-        <button onClick={toggle} aria-label={collapsed ? "Show the season timeline" : "Hide the season timeline"} className={cn("grid size-7 shrink-0 place-items-center rounded-md text-muted-foreground hover:bg-white/5 hover:text-foreground max-md:hidden", collapsed && "ml-auto")}>
+        <button onClick={toggle} aria-label={collapsed ? "Show the season timeline" : "Hide the season timeline"} className={cn("grid size-7 shrink-0 place-items-center rounded-md text-amber-200/70 hover:bg-amber-300/10 hover:text-amber-100 max-md:hidden", collapsed && "ml-auto")}>
           {collapsed ? <ChevronDown className="size-4" /> : <ChevronUp className="size-4" />}
         </button>
       </div>
