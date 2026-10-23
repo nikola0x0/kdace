@@ -42,25 +42,25 @@ export default function SeasonStepper({ season, stages }: { season: string; stag
           {collapsed && <span className="text-xs text-amber-100/70">{status}</span>}
         </div>
         {!collapsed && (
-          <ol className="flex flex-1 items-stretch gap-1.5 overflow-x-auto [scrollbar-width:none]">
+          <ol className="flex flex-1 items-stretch gap-3 overflow-x-auto [scrollbar-width:none]">
             {view.map((s, i) => {
               const done = i < currentIdx, live = i === currentIdx, final = i === view.length - 1;
               return (
-                <li key={s.name} className={cn("relative flex min-w-[112px] flex-1 flex-col justify-center gap-0.5 overflow-hidden rounded-md border px-3 py-1.5", live ? "border-amber-300/40 bg-amber-300/10" : "border-transparent")}>
-                  <span className={cn("flex items-center gap-1.5 text-[13px] font-semibold", live ? "text-amber-50" : done ? "text-neutral-300" : "text-neutral-500")}>
-                    {done && <Check className="size-3.5 text-win" strokeWidth={3} />}
-                    {live && <span className="size-1.5 animate-pulse rounded-full bg-amber-300" />}
-                    {final && !live && <Trophy className="size-3.5 text-neutral-500" />}
-                    {s.name}
+                <li key={s.name} className="flex min-w-[112px] flex-1 flex-col gap-2">
+                  <span className="relative h-[3px] overflow-hidden rounded-full bg-white/10">
+                    <span className={cn("absolute inset-y-0 left-0 rounded-full", done ? "bg-amber-300/50" : "bg-amber-300")} style={{ width: done ? "100%" : live ? `${Math.max(4, s.progress * 100)}%` : "0%" }} />
                   </span>
-                  <span className={cn("text-[11px] tabular-nums", live ? "text-amber-100/80" : "text-neutral-500")} suppressHydrationWarning>
-                    {live && s.progress === 0 ? `Starts ${fmt(s.first)}` : live ? `Day ${Math.floor(((now ?? 0) - s.from) / DAY) + 1} of ${s.days}` : s.days <= 1 ? fmt(s.first) : `${fmt(s.first)} – ${fmt(s.last)}`}
-                  </span>
-                  {live && (
-                    <span className="absolute inset-x-0 bottom-0 h-[3px] bg-amber-300/15">
-                      <span className="block h-full bg-amber-300" style={{ width: `${Math.max(3, s.progress * 100)}%` }} />
+                  <span className="grid gap-0.5">
+                    <span className={cn("flex items-center gap-1.5 text-[13px] font-semibold", live ? "text-amber-100" : done ? "text-neutral-300" : "text-neutral-500")}>
+                      {done && <Check className="size-3.5 text-amber-300/80" strokeWidth={3} />}
+                      {live && <span className="size-1.5 animate-pulse rounded-full bg-amber-300" />}
+                      {final && !live && <Trophy className="size-3.5 text-neutral-500" />}
+                      {s.name}
                     </span>
-                  )}
+                    <span className={cn("text-[11px] tabular-nums", live ? "text-amber-100/70" : "text-neutral-500")} suppressHydrationWarning>
+                      {live && s.progress === 0 ? `Starts ${fmt(s.first)}` : live ? `Day ${Math.floor(((now ?? 0) - s.from) / DAY) + 1} of ${s.days}` : s.days <= 1 ? fmt(s.first) : `${fmt(s.first)} – ${fmt(s.last)}`}
+                    </span>
+                  </span>
                 </li>
               );
             })}
