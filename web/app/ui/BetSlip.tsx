@@ -35,6 +35,11 @@ export default function BetSlip() {
   const max = available;
   // What you already hold on each outcome of this market; a buy adds to it.
   const held = live?.mine[market] ?? {};
+  // One side per market: once you hold an outcome, more buys go on it.
+  const lockedTo = Object.entries(held).find(([, v]) => v > 0)?.[0] ?? null;
+  useEffect(() => {
+    if (lockedTo && choice !== lockedTo) setChoice(lockedTo);
+  }, [lockedTo, choice]);
   const position = held[choice] ?? 0;
   const options = market === "winner" ? [m.teamA, m.teamB] : SCORES[m.bestOf];
 
@@ -96,7 +101,7 @@ export default function BetSlip() {
             const share = tot ? Math.round(((est.pool[o] ?? 0) / tot) * 100) : null;
             const tone = market === "winner" ? (o === m.teamA ? "a" : "b") : "n";
             return (
-              <button key={o} className={`slip-opt ${tone} ${choice === o ? "on" : ""}`} onClick={() => setChoice(o)}>
+              <button key={o} disabled={!!lockedTo && o !== lockedTo} title={lockedTo && o !== lockedTo ? `You're on ${lockedTo} here` : undefined} className={`slip-opt ${tone} ${choice === o ? "on" : ""} disabled:cursor-not-allowed disabled:opacity-35`} onClick={() => setChoice(o)}>
                 <b>{o}</b>
                 <span className="num">{share === null ? "no bets yet" : `${share}% of pool`}</span>
                 {held[o] ? <span className="held num">You hold {fmt(held[o])}</span> : null}
@@ -130,7 +135,7 @@ export default function BetSlip() {
           </button>
         </ClickSpark>
         <p className="slip-note">
-          {stake > max ? `You only have ${fmt(max)} AXP available.` : stake < 10 ? "Minimum bet is 10 AXP." : "Each buy adds to your position. Winners split the pool by stake. Buying closes 5 minutes before the game; positions are proven on Sui."}
+          {lockedTo ? `You're on ${lockedTo} in this ${market === "score" ? "score market" : "match"}: each buy adds a new position on ${lockedTo}. ` : ""}{stake > max ? `You only have ${fmt(max)} AXP available.` : stake < 10 ? "Minimum bet is 10 AXP." : "Each buy adds to your position. Winners split the pool by stake. Buying closes 5 minutes before the game; positions are proven on Sui."}
         </p>
         <p className="slip-note dim">AXP is play money with no cash value.</p>
       </SheetContent>

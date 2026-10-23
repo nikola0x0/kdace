@@ -1,5 +1,5 @@
 // The fan API's logic, framework-free: web/app/api/* routes only parse requests, call these and set cookies.
-import type { FanCommitRow, FanDb } from "./fandb.ts";
+import type { FanCommitRow, FanDb, FanResultRow } from "./fandb.ts";
 import { googleAddress, zkLoginSalt, type GoogleIdentity } from "./google.ts";
 import { crowdSplit, displayName, lockAt, pickReceipt, validateFanPick, type FanPickRow } from "./fans.ts";
 import { AXP_START } from "./points.ts";
@@ -96,8 +96,14 @@ export async function googleSignIn(deps: FanApiDeps, req: { idToken: unknown }):
 export const sessionAddress = (deps: Pick<FanApiDeps, "sessionSecret" | "now">, token: string | undefined): string | null =>
   readToken<{ address: string }>(token, deps.sessionSecret, deps.now())?.address ?? null;
 
-/** A fan's AXP: start, net over settled series, stakes still open, and what's free to stake. */
-export type FanAxp = { start: number; settled: number; open: number; available: number };
+/**
+ * A fan's AXP: start, net over settled series, stakes still open, winnings waiting to be claimed (stake + net of each
+ * unclaimed win), and what's free to stake. Losses count straight away; a win's payout joins the balance when claimed.
+ */
+export type FanAxp = { start: number; settled: number; open: number; claimable: number; available: number };
+
+const payoutOf = (r: FanResultRow) => r.stake + r.net;
+const unclaimed = (r: FanResultRow) => r.net > 0 && r.claimedAt === null;
 
 /**
  * A pick's stake is open until its series is counted into axp_settled. It is freed once that happens (the fan
@@ -111,14 +117,15 @@ function isOpenPick(p: FanPickRow, commits: Map<string, FanCommitRow>, series: M
 }
 
 /** `except` leaves one market out of the open stakes: the pick being replaced doesn't count against itself. */
-async function fanAxp(deps: FanApiDeps, address: string, ctx: { picks: FanPickRow[]; commits: FanCommitRow[]; series: Series[] }): Promise<FanAxp> {
+async function fanAxp(deps: FanApiDeps, address: string, ctx: { picks: FanPickRow[]; commits: FanCommitRow[]; series: Series[]; results?: FanResultRow[] }): Promise<FanAxp> {
   const settled = (await deps.db.getFan(address))?.axpSettled ?? 0;
   const commits = new Map(ctx.commits.map((c) => [c.matchId, c]));
   const series = new Map(ctx.series.map((s) => [s.matchId, s]));
   const open = ctx.picks
     .filter((p) => isOpenPick(p, commits, series))
     .reduce((sum, p) => sum + p.stake, 0);
-  return { start: AXP_START, settled, open, available: AXP_START + settled - open };
+  const claimable = (ctx.results ?? (await deps.db.results(address))).filter(unclaimed).reduce((sum, r) => sum + payoutOf(r), 0);
+  return { start: AXP_START, settled, open, claimable, available: AXP_START + settled - open - claimable };
 }
 
 const axpText = (n: number) => Math.max(0, n).toLocaleString("en-US");
@@ -137,7 +144,11 @@ export async function postPick(deps: FanApiDeps, address: string | null, body: u
   const commits = await deps.db.listCommits();
   if (commits.some((c) => c.matchId === matchId)) return fail(409, "Picks for this match are closed.");
   await deps.db.ensureFan(address);
-  const { available } = await fanAxp(deps, address, { picks: await deps.db.picksOf(address), commits, series: all });
+  const picks = await deps.db.picksOf(address);
+  // One side per market: more buys go on the outcome the fan already holds (Postgres enforces it too).
+  const held = picks.find((p) => p.matchId === matchId && p.market === market && p.choice !== choice);
+  if (held) return fail(409, `You're on ${held.choice} in this ${market === "score" ? "score market" : "match"}. You can add to ${held.choice}, not switch sides.`);
+  const { available } = await fanAxp(deps, address, { picks, commits, series: all });
   if ((stake as number) > available) return fail(400, `You only have ${axpText(available)} AXP available.`);
   // A buy adds to the fan's position on this outcome, like buying more shares on Outcomes.
   const position = await deps.db.buyPick({ matchId, address, market: market as FanPickRow["market"], choice, stake: stake as number, updatedAt: now.toISOString() });
@@ -173,9 +184,11 @@ export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   const openIds = [...new Set([...seriesRows.filter((s) => s.state !== "completed").map((s) => s.matchId), ...commitRows.filter((c) => c.status !== "missed" && !c.settledAt).map((c) => c.matchId)])];
   const inPlay: Record<string, number> = {};
   for (const p of await deps.db.picksFor(openIds)) if (isOpenPick(p, commits, series)) inPlay[p.address] = (inPlay[p.address] ?? 0) + p.stake;
+  const claimable: Record<string, number> = {};
+  for (const r of await deps.db.results()) if (unclaimed(r)) claimable[r.address] = (claimable[r.address] ?? 0) + payoutOf(r);
   return {
     status: 200,
-    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.nickname || f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, favChamps: f.favChamps, total: AXP_START + f.axpSettled, balance: AXP_START + f.axpSettled - (inPlay[f.address] ?? 0), net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
+    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.nickname || f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, favChamps: f.favChamps, total: AXP_START + f.axpSettled, balance: AXP_START + f.axpSettled - (inPlay[f.address] ?? 0) - (claimable[f.address] ?? 0), net: f.axpSettled, inPlay: inPlay[f.address] ?? 0, claimable: claimable[f.address] ?? 0 })) },
   };
 }
 
@@ -195,10 +208,32 @@ export async function getMe(deps: FanApiDeps, address: string | null): Promise<A
   if (!address) return fail(401, "Not signed in.");
   const suinsName = await refreshSuins(deps.db, address, deps.lookupName, deps.now());
   const rows = (await deps.db.picksOf(address)).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
-  const axp = await fanAxp(deps, address, { picks: rows, commits: await deps.db.listCommits(), series: await deps.fetchSeries() });
+  const results = await deps.db.results(address);
+  const axp = await fanAxp(deps, address, { picks: rows, commits: await deps.db.listCommits(), series: await deps.fetchSeries(), results });
   const picks = rows.map(({ matchId, market, choice, stake, updatedAt }) => ({ matchId, market, choice, stake, updatedAt }));
+  // Each buy is its own position on My bets.
+  const buys = (await deps.db.buysOf(address)).map(({ id, matchId, market, choice, amount, at }) => ({ id, matchId, market, choice, amount, at }));
   const fan = await deps.db.getFan(address);
-  return { status: 200, body: { address, suinsName, nickname: fan?.nickname ?? null, displayName: displayName(address, fan?.nickname || suinsName), avatarUrl: fan?.avatarUrl ?? null, favRole: fan?.favRole ?? null, favChamps: fan?.favChamps ?? [], picks, axp } };
+  return {
+    status: 200,
+    body: {
+      address, suinsName, nickname: fan?.nickname ?? null, displayName: displayName(address, fan?.nickname || suinsName), avatarUrl: fan?.avatarUrl ?? null, favRole: fan?.favRole ?? null, favChamps: fan?.favChamps ?? [],
+      picks, buys,
+      results: results.map((r) => ({ matchId: r.matchId, stake: r.stake, net: r.net, payout: r.net > 0 ? payoutOf(r) : 0, claimable: unclaimed(r), claimedAt: r.claimedAt })),
+      axp,
+    },
+  };
+}
+
+/** Claims a settled win: its payout (stake + winnings) joins the fan's balance. Once per series. */
+export async function claimWinnings(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
+  if (!address) return fail(401, "Not signed in.");
+  const matchId = (body as { matchId?: unknown } | null)?.matchId;
+  if (typeof matchId !== "string") return fail(400, "Which match are you claiming?");
+  const claimed = await deps.db.claimResult(matchId, address, deps.now().toISOString());
+  if (!claimed) return fail(409, "Nothing to claim on that match.");
+  const axp = await fanAxp(deps, address, { picks: await deps.db.picksOf(address), commits: await deps.db.listCommits(), series: await deps.fetchSeries() });
+  return { status: 200, body: { claimed: payoutOf(claimed), axp } };
 }
 
 const AVATAR_MAX_BYTES = 200 * 1024;

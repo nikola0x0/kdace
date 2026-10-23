@@ -111,6 +111,11 @@ describe("syncFanAxp", () => {
     expect(fanSettledNets(st)).toEqual({ [A]: 1500 });
     expect(await syncFanAxp(st, db, new Date("2026-10-23T20:00:00Z"))).toEqual({ fans: 1, settledCommits: ["x"] });
     expect((await db.getFan(A))!.axpSettled).toBe(1500);
+    // Per-series results for claiming: the win on x waits for a claim; the loss on x2 counts straight away.
+    expect(await db.results(A)).toEqual([
+      { matchId: "x", address: A, stake: 1000, net: 2000, claimedAt: null },
+      { matchId: "x2", address: A, stake: 1000, net: -500, claimedAt: null },
+    ]);
     expect(db.commits.get("x")!.settledAt).toBe("2026-10-23T20:00:00.000Z");
     expect(db.commits.get("late")!.settledAt).toBeUndefined();
     expect((await syncFanAxp(st, db, new Date("2026-10-23T20:30:00Z"))).settledCommits).toEqual([]);

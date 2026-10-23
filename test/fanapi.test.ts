@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
 import { jwtToAddress } from "@mysten/sui/zklogin";
-import { activity, getMe, setAvatar, setFavChamps, setFavRole, setNickname, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { activity, claimWinnings, getMe, setAvatar, setFavChamps, setFavRole, setNickname, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
 import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
@@ -156,7 +156,7 @@ describe("Google sign-in", () => {
 describe("postPick", () => {
   it("needs a session", async () => expect((await postPick(fakes().deps, null, { matchId: "x", market: "winner", choice: "GEN", stake: 100 })).status).toBe(401));
 
-  it("adds each buy to the fan's position on that outcome, and a buy on the other side opens a second position", async () => {
+  it("adds each buy to the fan's position on that outcome, and refuses the other side", async () => {
     const { deps, db, setClock } = fakes();
     await signedIn(deps);
     await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 10 });
@@ -164,11 +164,8 @@ describe("postPick", () => {
     const r = await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 90 });
     expect(r.status).toBe(200);
     expect(r.body).toMatchObject({ receipt: { entry: { player: `fan:${A}`, market: "winner", choice: "GEN", stake: 100 }, marketId: "x:fans", pickedAt: "2026-10-23T13:00:00.000Z" } });
-    await postPick(deps, A, { matchId: "x", market: "winner", choice: "IG", stake: 50 });
-    expect(await db.picksOf(A)).toEqual([
-      { matchId: "x", address: A, market: "winner", choice: "GEN", stake: 100, updatedAt: "2026-10-23T13:00:00.000Z" },
-      { matchId: "x", address: A, market: "winner", choice: "IG", stake: 50, updatedAt: "2026-10-23T13:00:00.000Z" },
-    ]);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "IG", stake: 50 })).status).toBe(409);
+    expect(await db.picksOf(A)).toEqual([{ matchId: "x", address: A, market: "winner", choice: "GEN", stake: 100, updatedAt: "2026-10-23T13:00:00.000Z" }]);
   });
 
   it("rejects picks at lock, after the start and once the fan batch exists", async () => {
@@ -226,7 +223,7 @@ describe("postPick", () => {
     await old("u", 500); // committed, waiting for its result: still open
     await commit("u", "committed", null);
     const r = await getMe(deps, A);
-    expect((r.body as { axp: unknown }).axp).toEqual({ start: 10000, settled: 0, open: 500, available: 9500 });
+    expect((r.body as { axp: unknown }).axp).toEqual({ start: 10000, settled: 0, open: 500, claimable: 0, available: 9500 });
   });
 });
 
@@ -261,9 +258,44 @@ describe("getMe", () => {
     expect(r.body).toEqual({
       address: A, suinsName: "nikola.sui", nickname: null, displayName: "nikola.sui", avatarUrl: null, favRole: null, favChamps: [],
       picks: [{ matchId: "x", market: "winner", choice: "GEN", stake: 400, updatedAt: "2026-10-23T12:00:00.000Z" }],
-      axp: { start: 10000, settled: 750, open: 400, available: 10350 },
+      buys: [{ id: 1, matchId: "x", market: "winner", choice: "GEN", amount: 400, at: "2026-10-23T12:00:00.000Z" }],
+      results: [],
+      axp: { start: 10000, settled: 750, open: 400, claimable: 0, available: 10350 },
     });
     expect((await getMe(deps, null)).status).toBe(401);
+  });
+});
+
+describe("one side per market", () => {
+  it("lets a fan add to the outcome they hold, but not buy the other side of the same market", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 100 })).status).toBe(200);
+    expect((await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 50 })).status).toBe(200);
+    const other = await postPick(deps, A, { matchId: "x", market: "winner", choice: "IG", stake: 100 });
+    expect(other.status).toBe(409);
+    expect((other.body as { error: string }).error).toContain("You're on GEN");
+    expect((await postPick(deps, A, { matchId: "x", market: "score", choice: "2-1", stake: 50 })).status).toBe(200);
+    expect(((await getMe(deps, A)).body as { buys: unknown[] }).buys).toHaveLength(3);
+  });
+});
+
+describe("claiming winnings", () => {
+  it("deducts losses straight away, holds a win until it's claimed, and claims once", async () => {
+    const { deps, db } = fakes();
+    await signedIn(deps);
+    await db.setAxpSettled({ [A]: 300 - 200 });
+    await db.upsertResults([{ matchId: "z", address: A, stake: 200, net: 300 }, { matchId: "y", address: A, stake: 200, net: -200 }]);
+    const before = (await getMe(deps, A)).body as { axp: Record<string, number>; results: { matchId: string; claimable: boolean }[] };
+    // Won 300 on a 200 stake (payout 500, unclaimed), lost 200: balance = 10,000 - 200 (loss) - 200 (stake of the unclaimed win).
+    expect(before.axp).toEqual({ start: 10000, settled: 100, open: 0, claimable: 500, available: 9600 });
+    expect(before.results.find((r) => r.matchId === "z")?.claimable).toBe(true);
+    expect((await leaderboardFans(deps)).body).toMatchObject({ fans: [{ address: A, total: 10100, balance: 9600, claimable: 500 }] });
+    const claim = await claimWinnings(deps, A, { matchId: "z" });
+    expect(claim.body).toMatchObject({ claimed: 500, axp: { claimable: 0, available: 10100 } });
+    expect((await claimWinnings(deps, A, { matchId: "z" })).status).toBe(409);
+    expect((await claimWinnings(deps, A, { matchId: "y" })).status).toBe(409);
+    expect((await claimWinnings(deps, null, { matchId: "z" })).status).toBe(401);
   });
 });
 
@@ -359,7 +391,7 @@ describe("leaderboardFans", () => {
     const r = await leaderboardFans(deps);
     expect(r.status).toBe(200);
     expect((r.body as { fans: unknown[] }).fans).toEqual(expect.arrayContaining([
-      { address: A, displayName: "nikola.sui", avatarUrl: null, favRole: null, favChamps: [], total: 10000, balance: 9700, net: 0, inPlay: 300 },
+      { address: A, displayName: "nikola.sui", avatarUrl: null, favRole: null, favChamps: [], total: 10000, balance: 9700, net: 0, inPlay: 300, claimable: 0 },
       expect.objectContaining({ address: B, total: 10420, balance: 10420, net: 420, inPlay: 0 }),
     ]));
   });

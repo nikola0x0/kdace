@@ -1,5 +1,5 @@
 // In-memory FanDb for tests: same semantics as the Supabase tables (unique keys, conditional updates, the referee lock).
-import { isCustomAvatar, type FanAuth, type FanCommitRow, type FanDb, type FanRow } from "../../src/core/fandb.ts";
+import { isCustomAvatar, type FanAuth, type FanCommitRow, type FanDb, type FanResultRow, type FanRow } from "../../src/core/fandb.ts";
 import type { FanPickRow } from "../../src/core/fans.ts";
 
 export class MemoryFanDb implements FanDb {
@@ -54,7 +54,27 @@ export class MemoryFanDb implements FanDb {
   async recentBuys(limit: number, matchId?: string) {
     return this.buys.filter((b) => !matchId || b.matchId === matchId).sort((a, b) => b.at.localeCompare(a.at) || b.id - a.id).slice(0, limit);
   }
+  resultRows = new Map<string, FanResultRow>();
+  async upsertResults(rows: Omit<FanResultRow, "claimedAt">[]) {
+    for (const r of rows) {
+      const key = `${r.matchId}|${r.address}`;
+      this.resultRows.set(key, { ...r, claimedAt: this.resultRows.get(key)?.claimedAt ?? null });
+    }
+  }
+  async results(address?: string) {
+    return [...this.resultRows.values()].filter((r) => (address ? r.address === address : r.claimedAt === null && r.net > 0)).map((r) => ({ ...r }));
+  }
+  async claimResult(matchId: string, address: string, at: string) {
+    const r = this.resultRows.get(`${matchId}|${address}`);
+    if (!r || r.claimedAt !== null || r.net <= 0) return null;
+    r.claimedAt = at;
+    return { ...r };
+  }
+  async buysOf(address: string) {
+    return this.buys.filter((b) => b.address === address).sort((a, b) => b.at.localeCompare(a.at) || b.id - a.id);
+  }
   async buyPick(row: FanPickRow) {
+    if ([...this.picks.values()].some((p) => p.matchId === row.matchId && p.address === row.address && p.market === row.market && p.choice !== row.choice)) throw new Error("Supabase POST rpc/buy_pick HTTP 400: other_side");
     this.buys.push({ id: this.buys.length + 1, matchId: row.matchId, address: row.address, market: row.market, choice: row.choice, amount: row.stake, at: row.updatedAt });
     const key = `${row.matchId}|${row.address}|${row.market}|${row.choice}`;
     const next = { ...row, stake: (this.picks.get(key)?.stake ?? 0) + row.stake };

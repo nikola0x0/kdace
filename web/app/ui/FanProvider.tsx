@@ -21,7 +21,11 @@ export type Me = {
   /** Up to two favourite champions (Data Dragon ids). */
   favChamps?: string[];
   picks: { matchId: string; market: string; choice: string; stake?: number; updatedAt: string }[];
-  axp?: { start: number; settled: number; open: number; available: number };
+  /** Every buy, newest first: each one is its own position. */
+  buys?: { id: number; matchId: string; market: string; choice: string; amount: number; at: string }[];
+  /** Results per settled match; a win waits for a claim. */
+  results?: { matchId: string; stake: number; net: number; payout: number; claimable: boolean; claimedAt: string | null }[];
+  axp?: { start: number; settled: number; open: number; claimable?: number; available: number };
 };
 /** What the bet slip needs to show a market: the teams, the analysts' stakes already in the pool, and the format. */
 export type SlipMatch = { matchId: string; teamA: string; teamB: string; logoA: string | null; logoB: string | null; bestOf: 1 | 3 | 5; block: string; aiPool: Record<string, number> };
@@ -38,6 +42,8 @@ type FanState = {
   placeBet(matchId: string, market: Market, choice: string, stake: number): Promise<boolean>;
   signIn(): void;
   signOut(): Promise<void>;
+  /** Claims a settled win; true when the payout joined the balance. */
+  claim(matchId: string): Promise<boolean>;
   /** Sets your favourite role and/or photo (a data URL, or null to remove it). */
   updateProfile(patch: { favRole?: string | null; image?: string | null; favChamps?: string[]; nickname?: string | null }): Promise<boolean>;
 };
@@ -111,10 +117,24 @@ export default function FanProvider({ children }: { children: React.ReactNode })
     [say],
   );
 
+  const claim = useCallback(
+    async (matchId: string) => {
+      const r = await api<{ claimed: number }>("/api/claim", { method: "POST", body: JSON.stringify({ matchId }) });
+      if (!r.ok) {
+        say(r.body.error ?? "That claim didn't go through. Please try again.", "error");
+        return false;
+      }
+      say(`Claimed ${r.body.claimed.toLocaleString("en-US")} AXP`);
+      await refresh();
+      return true;
+    },
+    [refresh, say],
+  );
+
   const available = me?.axp?.available ?? AXP_START;
 
   return (
-    <Ctx.Provider value={{ me, open, ready, available, slip, openSlip, closeSlip: () => setSlip(null), placeBet, signIn: () => setDialog(true), signOut, updateProfile }}>
+    <Ctx.Provider value={{ me, open, ready, available, slip, openSlip, closeSlip: () => setSlip(null), placeBet, signIn: () => setDialog(true), signOut, updateProfile, claim }}>
       {children}
       {dialog && (
         <SignInDialog

@@ -89,6 +89,11 @@ export default function UserButton() {
       <Link href="/me" className="axp-pill" title="Your balance: AXP you can still bet">
         <Axp size={18} /><b className="num">{available.toLocaleString("en-US")}</b><Pnl net={settled} hideZero className="text-[11px]" />
       </Link>
+      {(me.axp?.claimable ?? 0) > 0 && (
+        <Link href="/me" title="You have winnings to claim" className="flex h-8 items-center gap-1 rounded-lg bg-win px-2.5 text-xs font-bold text-black transition-transform hover:scale-105">
+          Claim {(me.axp!.claimable!).toLocaleString("en-US")}
+        </Link>
+      )}
       <ChampPicker open={champsOpen} onOpenChange={setChampsOpen} />
       <input ref={fileRef} type="file" accept="image/png,image/jpeg,image/webp" hidden onChange={(e) => pickPhoto(e.target.files?.[0])} />
       <DropdownMenu modal={false}>

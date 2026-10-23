@@ -31,11 +31,25 @@ export function fanSettledNets(store: Store): Record<string, number> {
   return nets;
 }
 
+/** Each fan's stake and net on every settled series with a committed fan batch (stake covers both markets). */
+export function fanResults(store: Store): { matchId: string; address: string; stake: number; net: number }[] {
+  const out: { matchId: string; address: string; stake: number; net: number }[] = [];
+  for (const r of store.all()) {
+    if (r.status !== "settled" || r.fans?.status !== "committed" || !r.fans.batch) continue;
+    const stakes: Record<string, number> = {};
+    for (const e of JSON.parse(r.fans.batch).entries as { player: string; stake: number }[])
+      if (e.player.startsWith(FAN_PREFIX)) stakes[e.player.slice(FAN_PREFIX.length)] = (stakes[e.player.slice(FAN_PREFIX.length)] ?? 0) + e.stake;
+    for (const [address, stake] of Object.entries(stakes)) out.push({ matchId: r.series.matchId, address, stake, net: r.axp?.[`${FAN_PREFIX}${address}`] ?? -stake });
+  }
+  return out;
+}
+
 /**
- * After settle: writes every fan's settled net to Supabase (fans.axp_settled), then stamps the fan commits of settled
+ * After settle: writes each fan's per-series results (wins then wait for a claim), then every fan's settled net to Supabase (fans.axp_settled), then stamps the fan commits of settled
  * series, so the API stops holding their stakes as open. In that order, so a stake is never both freed and uncounted.
  */
 export async function syncFanAxp(store: Store, db: FanDb, now: Date): Promise<{ fans: number; settledCommits: string[] }> {
+  await db.upsertResults(fanResults(store)); // before the nets, so a new win is held for its claim, never spendable early
   const nets = fanSettledNets(store);
   await db.setAxpSettled(nets);
   const settledCommits = (await db.listCommits()).filter((c) => !c.settledAt && store.get(c.matchId)?.status === "settled").map((c) => c.matchId);

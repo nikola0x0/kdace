@@ -2,6 +2,9 @@
 // Server-side only: it uses the service role key, the only key allowed to write. Dependency-free (uses fetch).
 import type { FanPickRow } from "./fans.ts";
 
+/** A fan's result on one settled series. A win (net > 0) waits for the fan to claim it. */
+export type FanResultRow = { matchId: string; address: string; stake: number; net: number; claimedAt: string | null };
+
 /** One buy as it happened (positions in picks keep only the total). */
 export type BuyRow = { id: number; matchId: string; address: string; market: string; choice: string; amount: number; at: string };
 
@@ -67,6 +70,14 @@ export interface FanDb {
   upsertPick(row: FanPickRow): Promise<void>;
   /** Adds `row.stake` to the fan's position on that outcome (creating it at that stake); returns the position. */
   buyPick(row: FanPickRow): Promise<FanPickRow>;
+  /** Writes each fan's result per settled series; never touches claimed_at. */
+  upsertResults(rows: Omit<FanResultRow, "claimedAt">[]): Promise<void>;
+  /** All results for one fan, or every unclaimed win when `address` is omitted. */
+  results(address?: string): Promise<FanResultRow[]>;
+  /** Marks an unclaimed win as claimed (once); returns it, or null if there was nothing to claim. */
+  claimResult(matchId: string, address: string, at: string): Promise<FanResultRow | null>;
+  /** Every buy one fan made, newest first. */
+  buysOf(address: string): Promise<BuyRow[]>;
   /** Most recent buys from the append-only log (newest first), optionally for one match. */
   recentBuys(limit: number, matchId?: string): Promise<BuyRow[]>;
   picksFor(matchIds: string[]): Promise<FanPickRow[]>;
@@ -111,6 +122,22 @@ export class SupabaseFanDb implements FanDb {
     return { status: res.status, json };
   }
 
+  async upsertResults(rows: Omit<FanResultRow, "claimedAt">[]) {
+    if (!rows.length) return;
+    await this.req("POST", "fan_results?on_conflict=match_id,address", rows.map((r) => toRow(r)), "resolution=merge-duplicates,return=minimal");
+  }
+  async results(address?: string) {
+    const { json } = await this.req("GET", address ? `fan_results?select=*&address=${eq(address)}` : "fan_results?select=*&claimed_at=is.null&net=gt.0");
+    return (json as Record<string, unknown>[]).map((r) => fromRow<FanResultRow>(r));
+  }
+  async claimResult(matchId: string, address: string, at: string) {
+    const { json } = await this.req("PATCH", `fan_results?match_id=${eq(matchId)}&address=${eq(address)}&claimed_at=is.null&net=gt.0`, { claimed_at: at }, "return=representation");
+    return json?.[0] ? fromRow<FanResultRow>(json[0]) : null;
+  }
+  async buysOf(address: string) {
+    const { json } = await this.req("GET", `buys?select=*&address=${eq(address)}&order=at.desc,id.desc`);
+    return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
+  }
   async recentBuys(limit: number, matchId?: string) {
     const { json } = await this.req("GET", `buys?select=*&order=at.desc,id.desc&limit=${limit}${matchId ? `&match_id=${eq(matchId)}` : ""}`);
     return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
@@ -167,6 +194,7 @@ export class SupabaseFanDb implements FanDb {
   }
   async buyPick(row: FanPickRow) {
     // One atomic statement in Postgres (insert, or add to the existing stake), so concurrent buys never lose AXP.
+    // Postgres also refuses a buy on the other side of a market the fan already holds (raises "other_side").
     const { json } = await this.req("POST", "rpc/buy_pick", { p_match_id: row.matchId, p_address: row.address, p_market: row.market, p_choice: row.choice, p_amount: row.stake, p_at: row.updatedAt });
     return { ...row, stake: Number(json) };
   }
