@@ -15,7 +15,7 @@ describe("region strength", () => {
   });
   it("puts the real records, the matchup's head-to-head and Worlds history in front of the analysts", () => {
     const lines = pedigreeLines({ code: "LOS", home: "CBLOL 2026" }, { code: "T1", home: "LCK 2026" }, series, homes).join("\n");
-    expect(lines).toContain("VERY BIG factor");
+    expect(lines).toContain("BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor");
     expect(lines).toContain("LCK 2-0, LEC 1-0, CBLOL 0-3");
     expect(lines).toContain("This matchup is CBLOL vs LCK: CBLOL went 0-2 against LCK in 2026; CBLOL 0% vs LCK 100% against other regions overall.");
     expect(lines).toContain("Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.");
@@ -24,5 +24,10 @@ describe("region strength", () => {
   });
   it("says records are comparable when both teams share a region", () => {
     expect(pedigreeLines({ code: "T1", home: "LCK 2026" }, { code: "GEN", home: "LCK 2026" }, series, homes).join("\n")).toContain("Both teams are from LCK");
+  });
+  it("tells the analysts to treat regions as even when there's no real gap, instead of deciding on a tiny edge", () => {
+    const lines = pedigreeLines({ code: "G2", home: "LEC 2026" }, { code: "LOS", home: "CBLOL 2026" }, series, homes).join("\n");
+    expect(lines).toContain("No big region gap");
+    expect(lines).not.toContain("VERY BIG");
   });
 });

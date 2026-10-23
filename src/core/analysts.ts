@@ -66,7 +66,7 @@ const fixedBeliefs = (a: Analyst) =>
   `You are the ${a.name} analyst on KDAce, a LoL Worlds 2026 prediction board. Your voice: ${a.voice}
 Core belief: ${a.belief}
 Your beliefs are fixed; lessons refine how you apply them, never replace them.
-House rule for every analyst, whatever your belief: region strength is a VERY BIG factor. Domestic records and form from different leagues are not comparable; judge regions by their international results (in the scouting report) and Worlds history, and favour the team from the region that proves stronger there.`;
+House rule for every analyst: domestic records from different leagues are not comparable. When the scouting report flags a BIG REGION GAP, that is a VERY BIG factor; when it says there's no big gap, don't decide on region at all and don't quote region percentages.`;
 
 export function buildPickPrompt(a: Analyst, s: Series, lessons: Lesson[], history: string[], scout: string | null = null): string {
   const scoreRule = s.bestOf === 1 ? '"score" must be null (best of 1)' : `"score" is winner-first, one of ${VALID_SCORES[s.bestOf].join(", ")}`;
@@ -80,7 +80,8 @@ ${history.join("\n") || "(none yet)"}
 ${scout ? `\nScouting report (official 2026 match data; use it, but read it through your own beliefs):\n${scout}\n` : ""}
 Predict ${s.teamA} vs ${s.teamB}, best of ${s.bestOf} (${s.block}). Pick blind: you do not know what anyone else picked.
 Reply with only JSON:
-{"winner":"<${s.teamA} or ${s.teamB}>","score":<see rule>,"winProbability":<50-100, your chance the winner wins>,"reasoning":"<one or two sentences in your voice>","usedLessonIds":["<ids of lessons you relied on>"]}
+{"winner":"<${s.teamA} or ${s.teamB}>","score":<see rule>,"winProbability":<50-100, your chance the winner wins>,"reasoning":"<one or two sentences>","usedLessonIds":["<ids of lessons you relied on>"]}
+Reasoning: argue it from YOUR core belief, in your voice, like an analyst at the caster desk, not a spreadsheet. ${a.role === "adc" ? "You love numbers: use at most two." : "Use at most one number, or none."} Don't repeat the scouting report back.
 Rule: ${scoreRule}.`;
 }
 

@@ -57,13 +57,19 @@ function teamLine(t: Side): string {
 export function pedigreeLines(a: Side, b: Side, series: SeriesResult[] = [], homes: Record<string, string | null> = {}): string[] {
   const { byRegion, pair } = regionRecords(series, homes);
   const ra = league(a.home), rb = league(b.home);
-  const lines = ["Region strength (a VERY BIG factor: domestic records from different leagues are NOT comparable; international results count most):"];
+  const lines = ["Region strength (domestic records from different leagues are not comparable; international results count):"];
   const table = Object.entries(byRegion).sort(([, x], [, y]) => pct(y) - pct(x) || y.w - x.w).map(([r, rec]) => `${r} ${fmt(rec)}`);
   if (table.length) lines.push(`  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): ${table.join(", ")}.`);
   if (ra && rb && ra !== rb) {
     const h2h = pair[`${ra}|${rb}`];
     const recA = byRegion[ra], recB = byRegion[rb];
     lines.push(`  This matchup is ${ra} vs ${rb}: ${h2h ? `${ra} went ${fmt(h2h)} against ${rb} in 2026` : `no ${ra} vs ${rb} series in 2026`}${recA && recB ? `; ${ra} ${pct(recA)}% vs ${rb} ${pct(recB)}% against other regions overall` : ""}.`);
+    const titles = (r: string) => (r === "LCK" ? 10 : r === "LPL" ? 3 : 0);
+    const big = recA && recB && recA.w + recA.l >= 6 && recB.w + recB.l >= 6 && Math.abs(pct(recA) - pct(recB)) >= 20;
+    const strong = big ? (pct(recA) > pct(recB) ? ra : rb) : titles(ra) !== titles(rb) && (titles(ra) >= 3 || titles(rb) >= 3) ? (titles(ra) > titles(rb) ? ra : rb) : null;
+    lines.push(strong
+      ? `  BIG REGION GAP: ${strong} is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.`
+      : `  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.`);
   } else if (ra && ra === rb) lines.push(`  Both teams are from ${ra}, so their domestic records are directly comparable.`);
   lines.push(`  Worlds champions by region since 2013: ${TITLES_BY_REGION}.`, `  ${teamLine(a)}`, `  ${teamLine(b)}`);
   return lines;
