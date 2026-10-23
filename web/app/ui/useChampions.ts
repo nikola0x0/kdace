@@ -11,9 +11,17 @@ export function useChampions() {
   useEffect(() => {
     load().then(setList);
   }, []);
+  // Accepts a Data Dragon id ("JarvanIV") or a display name ("Jarvan IV").
+  const find = (key: string) => {
+    const n = key.toLowerCase().replace(/[^a-z]/g, "");
+    return list?.champions.find((c) => c.id === key || c.id.toLowerCase() === n || c.name.toLowerCase().replace(/[^a-z]/g, "") === n);
+  };
   return {
     champions: list?.champions ?? [],
-    icon: (id: string) => (list ? championIcon(list.version, id) : null),
-    name: (id: string) => list?.champions.find((c) => c.id === id)?.name ?? id,
+    icon: (key: string) => {
+      const c = find(key);
+      return list && c ? championIcon(list.version, c.id) : null;
+    },
+    name: (key: string) => find(key)?.name ?? key,
   };
 }

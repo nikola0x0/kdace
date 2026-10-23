@@ -11,7 +11,7 @@ export default function BoardPage() {
   const settled = new Map(board().map((r) => [r.player, r]));
   const analysts: LbRow[] = PERSONAS.map((p) => {
     const s = analystStats(p.player);
-    return { player: p.player, name: p.name, role: p.role, color: p.color, art: art(`analyst-${p.role}`), total: s.total, net: s.net, inPlay: s.inPlay, w: s.correct, l: s.settled - s.correct };
+    return { player: p.player, name: p.name, role: p.role, champs: p.meta.slice(0, 2), color: p.color, art: art(`analyst-${p.role}`), total: s.total, net: s.net, inPlay: s.inPlay, w: s.correct, l: s.settled - s.correct };
   });
   const fanRecords = Object.fromEntries([...settled.values()].filter((r) => r.player.startsWith("fan:")).map((r) => [r.player.slice(4), { w: r.k, l: r.d }]));
   return (
