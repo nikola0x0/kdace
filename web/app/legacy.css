@@ -485,9 +485,9 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .lb-head, .lb-row { display: grid; grid-template-columns: 48px 2fr 1fr 1.2fr; gap: 12px; align-items: center; padding: 12px 18px; }
 .lb-head { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--kd-muted); border-bottom: 1px solid var(--line); }
 .lb-row { border-bottom: 1px solid var(--line); } .lb-row:last-child { border-bottom: 0; } .lb-row:hover { background: #0e0e0e; }
-.me-pin { position: sticky; bottom: 12px; z-index: 5; display: grid; grid-template-columns: 48px 1.6fr 1fr 1fr; gap: 12px; align-items: center; margin-top: 12px; padding: 12px 18px; border-radius: 12px;
+.me-pin { position: sticky; bottom: 12px; z-index: 5; display: grid; grid-template-columns: 48px 2fr 1fr 1.2fr; gap: 12px; align-items: center; margin-top: 12px; padding: 12px 18px; border-radius: 12px;
   background: rgba(20,20,20,.92); border: 1px solid color-mix(in srgb, var(--win) 40%, var(--line)); backdrop-filter: blur(10px); }
-@media (max-width: 760px) { .podium { grid-template-columns: 1fr; } .lb-head, .lb-row { grid-template-columns: 36px 1.4fr 1fr 1fr; } }
+@media (max-width: 760px) { .podium { grid-template-columns: 1fr; } .lb-head, .lb-row, .me-pin { grid-template-columns: 36px 1.4fr 1fr 1fr; } }
 /* Profile portrait has no text on it, so no dark shade over the art. */
 .ap-banner .banner-shade { background: linear-gradient(180deg, rgba(0,0,0,.3) 0%, transparent 18%); }
 .ap-banner .banner-art { background-position: 50% 30%; }

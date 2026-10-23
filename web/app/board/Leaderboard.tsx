@@ -85,6 +85,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
           <span className="num">#{mineIdx + 1}</span>
           <b>{rows[mineIdx].name} <span className="tag you">You</span></b>
           <b className="num bal"><Axp size={15} /> {fmt(rows[mineIdx].total)}</b>
+          <span title={`${rows[mineIdx].net > 0 ? "+" : ""}${fmt(rows[mineIdx].net)} AXP · ${rows[mineIdx].w}–${rows[mineIdx].l}`}><Pnl net={rows[mineIdx].net} /></span>
         </div>
       )}
     </>
