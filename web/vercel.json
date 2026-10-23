@@ -1,4 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm ci --prefix .. --ignore-scripts && npm ci"
+  "installCommand": "npm ci --prefix .. --ignore-scripts && npm ci",
+  "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.kdace.xyz" }], "destination": "https://kdace.xyz/:path*", "permanent": true }
+  ]
 }
