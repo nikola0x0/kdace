@@ -124,7 +124,7 @@ export default function BetSlip() {
           <div><span>Multiplier</span><b className="num">{valid ? `${est.mult.toFixed(2)}×` : "-"}</b></div>
         </div>
 
-        <ClickSpark ref={spark} sparkColor={["#fcd34d", "#4ade80", "#ffffff"]} sparkCount={14} sparkRadius={46} sparkSize={12} duration={600} shape="star" glow={0.6} ring className="block">
+        <ClickSpark ref={spark} trigger="manual" sparkColor={["#fcd34d", "#4ade80", "#ffffff"]} sparkCount={14} sparkRadius={46} sparkSize={12} duration={600} shape="star" glow={0.6} ring className="block">
           <button className="btn slip-go w-full" disabled={!valid || busy} onClick={confirm}>
             {busy ? "Buying…" : `Buy ${fmt(stake)} AXP of ${choice}`}
           </button>

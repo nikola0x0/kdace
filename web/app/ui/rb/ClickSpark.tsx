@@ -24,6 +24,8 @@ export interface ClickSparkProps {
   ring?: boolean;
   layer?: 'front' | 'back';
   disabled?: boolean;
+  /** 'manual': no bursts on clicks; only the imperative spark() handle fires one (KDAce: a confirmed bet). */
+  trigger?: 'click' | 'manual';
   className?: string;
   style?: CSSProperties;
   children?: ReactNode;
@@ -153,6 +155,7 @@ const ClickSpark = forwardRef<ClickSparkHandle, ClickSparkProps>(
       ring = false,
       layer = 'front',
       disabled = false,
+      trigger = 'click',
       className = '',
       style,
       children
@@ -438,8 +441,10 @@ const ClickSpark = forwardRef<ClickSparkHandle, ClickSparkProps>(
         if (!recent) spawn(event.clientX, event.clientY);
       };
 
-      root.addEventListener('pointerdown', onPointerDown);
-      root.addEventListener('click', onClick);
+      if (trigger === 'click') {
+        root.addEventListener('pointerdown', onPointerDown);
+        root.addEventListener('click', onClick);
+      }
 
       engineRef.current = {
         spark: (x?: number, y?: number) => {
