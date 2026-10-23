@@ -1,0 +1,42 @@
+[
+  {
+    "matchId": "115660540726095005",
+    "startTime": "2026-10-23T17:00:00Z",
+    "finalCallOpen": true
+  },
+  {
+    "matchId": "115660540726095013",
+    "startTime": "2026-10-23T18:00:00Z",
+    "finalCallOpen": true
+  },
+  {
+    "matchId": "115660540726095019",
+    "startTime": "2026-10-23T19:00:00Z",
+    "finalCallOpen": true
+  },
+  {
+    "matchId": "115660540726095009",
+    "startTime": "2026-10-23T20:00:00Z",
+    "finalCallOpen": true
+  },
+  {
+    "matchId": "115660540726095011",
+    "startTime": "2026-10-23T21:00:00Z",
+    "finalCallOpen": true
+  },
+  {
+    "matchId": "115660540726095007",
+    "startTime": "2026-10-23T22:00:00Z",
+    "finalCallOpen": true
+  },
+  {
+    "matchId": "115660540726095015",
+    "startTime": "2026-10-23T23:00:00Z",
+    "finalCallOpen": true
+  },
+  {
+    "matchId": "115660540726095017",
+    "startTime": "2026-10-24T00:00:00Z",
+    "finalCallOpen": true
+  }
+]
