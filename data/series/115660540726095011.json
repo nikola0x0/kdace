@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -72,10 +72,53 @@
   "batch": "{\"matchId\":\"115660540726095011\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":500,\"thought\":\"06b2cae2746dea09a74d344e6bea6e083ec1e352fd93e83c752f52f63e161385\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":480,\"thought\":\"ab644d7f1d8aab33a72e8409f8041a7d75d4c4a70eab5488b0a054ccf73a83cd\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":520,\"thought\":\"2b38e6b360f30558930687810ea272c8726a381e33ad83ed0d1777015d9090b8\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":820,\"thought\":\"0a60b52e0c71c2990696d0727f2379bcc67b7a022923d66f14077af243f9e8a9\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":600,\"thought\":\"070d589e599ecb7e25e5609cebdbd2a9da9a63663d3948009a2d0516a682f551\"}]}",
   "batchHash": "1a2e7949a84411df3396a6be36bd9be8f02c77e3b4c3220c8a8720b18d550ca1",
   "commitDigest": "C3Ac9rZJ1DRsCTRKbBjgekYzVeQDdqFz2TKkPciyQhPZ",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "DK",
+    "score": "1-0",
+    "resultDigest": "2DuovhgT9dVh8EdnRxccvpv1Es9fp9kDQqMbxeVUafpV"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0,
+    "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352": 0,
+    "fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b": 0
+  },
+  "debate": "Top: DK won, and the better individual talent carried it, just like I said. Smash popped off and Caps couldn't do it alone. Nobody flip on me now, Jungle.\n\nJungle: I didn't flip, Top, because G2 never got the first tower and Herald, so my trigger never fired. Tempo decided it, and Vi/Jarvan won the early skirmishes.\n\nMid: Draft room, gentlemen. Jayce/Gnar with Smash scaling was a puzzle Caps' Orianna and Akali never solved, so I'll take my 62% and my smug face.\n\nADC: I'll stay humble at 63%, because the numbers were right but DK's habit of throwing leads almost made me look silly. Mid, the draft was good, but don't pretend the head-to-head wasn't doing the heavy lifting.\n\nSupport: Belief, my friends. DK walked in with trophy swagger and the 2-0 sat in G2's heads, which my 68% said out loud. ADC, you can have your spreadsheet, I'll take the vibes and the win.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+      "jobId": "9cf4aa7f-66f5-4fe0-9260-40058149f689"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Tempo decides the game, so I should build my pick on concrete early-game triggers like first dragon, Herald, first tower and who wins the early skirmishes. That worked here because my flip condition never fired, and I should keep naming those triggers rather than leaning on narratives like head-to-head history, trophy swagger or region reputation. Next time I'll also check whether a team can hold a lead past 15 minutes, since DK's habit of throwing leads nearly cost me. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I",
+      "jobId": "808921b0-d861-4acf-bb61-de1d5f59649d"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: A draft edge is only as good as the early tempo and closing power it creates. Vi/Jarvan winning the first skirmishes mattered as much as the Jayce/Gnar scaling puzzle, so I should check whether a comp gets priority and can finish a lead, not just whether it outscales the opposing star. I should also anchor on draft and pool evidence and leave region out of it unless the scouting report flags a big gap. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc",
+      "jobId": "76baf881-2d04-4e85-96ef-972159adf6fb"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Numbers over stories means the 2-0 head-to-head was a real edge, so I should keep weighting recorded results like that over a \"hot month\" narrative, while still sizing confidence to how thin the sample is (one prior series, a 9-11 recent record). Next time I'll also check whether a game-length or lead-throwing tendency actually showed up in the numbers before I let it drag my confidence down, instead of hedging on a habit I haven't quantified. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc",
+      "jobId": "5e8040fa-1370-4414-9c78-eba50d8cced0"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: Chemistry and morale call a match best when I can point to something concrete, like DK holding their composure and playing as one unit through the early skirmishes, rather than just the swagger of a trophy or a past 2-0. Next time I'll weigh a team's state of mind alongside signs it actually shows up in play, and I'll say plainly what would crack it, such as DK doubting each other after a thrown lead. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU",
+      "jobId": "e606257d-dc77-4cb4-879d-3285f187414f"
+    }
+  ],
   "scout": "Scout: G2 vs DK (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nG2 [LEC]: 2026 series 34-17, games 80-44 | last 10 (newest first) WWWLLWWWWL\n  LEC 2026 28-11 (3 titles) · First Stand 2026 3-2 (lost final) · MSI 2026 2-2 · EWC 2026 1-2 · vs other regions 6-6\n  Last 20 games (15-5): GD@15 +0.7k, FB 45%, FT 80%, FD 60%, dragons 58%, 33 min avg, 1st baron 27:42\n  Leads @15 converted 8/9, comeback wins 1, throws 0, objectives taken while 1k+ behind 8\n  Picks: TOP Rumble 3, Ambessa 2, Camille 2 | JG Xin Zhao 4, Skarner 3, Jarvan IV 2 | MID Orianna 4, Akali 3, Anivia 2 | BOT Yunara 4, Ashe 3, Lucian 3 | SUP Alistar 3, Lulu 3, Milio 3\n  Standout: G2 Caps (mid) KDA 5.5 over 20 games, 23% dmg share\nDK [LCK]: 2026 series 32-17, games 77-58 | last 10 (newest first) LWWLWLWWWL\n  LCK 2026 27-16 · EWC 2026 5-1 (1 title) · vs other regions 4-1\n  Last 20 games (9-11): GD@15 +0.7k, FB 60%, FT 40%, FD 60%, dragons 46%, 35 min avg, 1st baron 27:42\n  Leads @15 converted 7/9, comeback wins 1, throws 2, objectives taken while 1k+ behind 9\n  Picks: TOP Jayce 5, Gnar 4, Ambessa 2 | JG Vi 4, Jarvan IV 3, Naafiri 3 | MID Annie 4, Viktor 3, Ahri 2 | BOT Lucian 3, Yunara 3, Ashe 2 | SUP Lulu 4, Milio 3, Camille 2\n  Standout: DK Smash (bottom) KDA 4.4 over 20 games, 29% dmg share\nHead-to-head 2026: G2 0-1 DK\n  2026-07-16 EWC 2026 Groups: DK 2-0 G2\nKey moments:\n  - G2 came back from -3.6k at 22:00 vs VIT (LEC 2026)\n  - G2 swung 9.7k in 4 min (24:00-28:00) vs MKOI (LEC 2026)\n  - DK threw a +13.1k lead (34:00) vs KT (LCK 2026)\n  - DK threw a +4.5k lead (26:00) vs HLE (LCK 2026)\nFun facts:\n  * Likely quadra kill: G2 Caps (Viktor) at 24:15 (vs KC, LEC 2026)\n  * Likely quadra kill: DK Smash (Miss Fortune) at 31:04 (vs KT, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LEC vs LCK: LEC went 3-5 against LCK in 2026; LEC 50% vs LCK 68% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  G2 (LEC): no Worlds titles; lost final 2019.\n  DK (LCK): 1 Worlds title (2020); lost final 2021; won 2020 as DAMWON Gaming.",
   "chain": {
     "network": "mainnet",

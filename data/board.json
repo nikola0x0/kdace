@@ -30,63 +30,63 @@
     "player": "analyst-support",
     "balance": 9618,
     "net": -382,
-    "k": 3,
+    "k": 4,
     "d": 1,
-    "a": 3,
-    "bets": 4
+    "a": 4,
+    "bets": 5
   },
   {
     "player": "analyst-jungle",
     "balance": 9528,
     "net": -472,
-    "k": 3,
+    "k": 4,
     "d": 1,
-    "a": 3,
-    "bets": 4
+    "a": 4,
+    "bets": 5
   },
   {
     "player": "analyst-adc",
     "balance": 9232,
     "net": -768,
-    "k": 3,
+    "k": 4,
     "d": 1,
-    "a": 3,
-    "bets": 4
+    "a": 4,
+    "bets": 5
   },
   {
     "player": "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352",
     "balance": 9080,
     "net": -920,
-    "k": 1,
+    "k": 2,
     "d": 3,
-    "a": 1,
-    "bets": 4
+    "a": 2,
+    "bets": 5
   },
   {
     "player": "analyst-mid",
     "balance": 7043,
     "net": -2957,
-    "k": 2,
+    "k": 3,
     "d": 3,
-    "a": 2,
-    "bets": 5
+    "a": 3,
+    "bets": 6
   },
   {
     "player": "fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b",
     "balance": 6339,
     "net": -3661,
-    "k": 2,
+    "k": 3,
     "d": 2,
-    "a": 2,
-    "bets": 4
+    "a": 3,
+    "bets": 5
   },
   {
     "player": "analyst-top",
     "balance": 6337,
     "net": -3663,
-    "k": 2,
+    "k": 3,
     "d": 3,
-    "a": 2,
-    "bets": 5
+    "a": 3,
+    "bets": 6
   }
 ]
