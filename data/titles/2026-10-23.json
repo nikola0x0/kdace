@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-23",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "HLE"
+      ],
+      "reasoning": "Stats are noise. GEN has the best lane-winning players in the field, they've been taking games over by themselves all year, and I'm not backing the hyped LPL pick over that.",
+      "pickedAt": "2026-10-23T09:24:18.203Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "KC",
+        "GEN"
+      ],
+      "reasoning": "BLG snowballs the first 15 like nobody else: +1.4k GD@15, 50-12 in series, and they take the first drake and Herald before anyone's even done their first back.",
+      "pickedAt": "2026-10-23T09:24:20.020Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "GEN",
+      "probability": 22,
+      "contenders": [
+        "BLG",
+        "KC"
+      ],
+      "reasoning": "Fearless strips comfort picks, and Gen.G's 88-32 games and a deep, flexible roster across every role say they out-draft anyone once the pool runs dry.",
+      "pickedAt": "2026-10-23T09:24:21.873Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "KC"
+      ],
+      "reasoning": "BLG's numbers are the cleanest on the board: 50-12 in series, 125-52 in games, 8-2 against other regions. LPL records aren't directly comparable, so I'm not leaning hard.",
+      "pickedAt": "2026-10-23T09:24:23.368Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "KC",
+      "probability": 14,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Everyone will say BLG or GEN, but KC is a room that just keeps winning together, 40 series wins and a hot finish, and that belief holds when the pressure arrives.",
+      "pickedAt": "2026-10-23T09:24:24.972Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-23\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0}]}",
+  "batchHash": "89c895dccfe5bf60aa8b03228e027f9c930f7404d99c6399b6ee6d494da21bc0",
+  "commitDigest": "p6NEJ6GEbdYoQnCwU415KFZu4JFW81TLX5sSCprz2xt",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}
