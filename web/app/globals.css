@@ -72,3 +72,7 @@
   h1 { font-size: 2em; font-weight: 800; } h2 { font-size: 1.5em; font-weight: 700; } h3 { font-size: 1.17em; font-weight: 700; }
   .prose ul, .limits ul, details.recall ul { list-style: disc; padding-left: 18px; }
 }
+
+/* The page always reserves the scrollbar's space (scrollbar-gutter: stable), so when a dialog or the bet slip locks
+   scrolling there's nothing to compensate for: drop the extra margin the scroll lock adds, or the page shifts. */
+html body[data-scroll-locked] { margin-right: 0 !important; --removed-body-scroll-bar-size: 0px !important; }
