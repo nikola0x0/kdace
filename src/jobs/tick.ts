@@ -4,12 +4,17 @@
 // publish data/pending.json for the dispatcher and commit and push data/. Each stage is isolated so one failure never
 // skips the others (except: settle waits for a successful fan mirror, so AXP is never settled without the fans), and one
 // lock keeps manual runs from overlapping.
+//
+// With KDACE_STORE=supabase the records live in Supabase instead: the tick then runs the same staged runner as the
+// Vercel route (src/jobs/runner.ts), one stage per call under the shared runner lock, until there is nothing left to
+// do, and commits nothing to git (the daily snapshot does). Running it next to the Vercel cron is safe.
 import { execFileSync } from "node:child_process";
 import "../core/env.ts"; // loads .env before Supabase settings are read
 import { pendingRecords } from "../core/dispatch.ts";
 import { fanDbFromEnv } from "../core/fandb.ts";
 import { withLock } from "../core/lock.ts";
 import { Store } from "../core/store.ts";
+import { storeKind } from "../core/supastore.ts";
 import { fetchSeries } from "../core/worlds.ts";
 import { mirrorFans, syncFanAxp } from "./fans.ts";
 import { realFinalCallDeps, runFinalCall } from "./finalcall.ts";
@@ -20,6 +25,13 @@ import { realBanterDeps, runBanter } from "./banter.ts";
 
 const started = new Date().toISOString();
 const git = (...args: string[]) => execFileSync("git", args, { encoding: "utf8" });
+
+if (storeKind() === "supabase") {
+  const { runUntilIdle } = await import("./runner.ts");
+  const out = await runUntilIdle({ holder: `github:${process.env.GITHUB_RUN_ID ?? process.pid}`, maxMs: 20 * 60_000 });
+  console.log(`[tick] supabase runner: ${out.runs} call(s), stopped: ${out.stopped}`);
+  process.exit(0);
+}
 
 await withLock("data", async () => {
   const store = new Store();

@@ -93,6 +93,15 @@ describe("runTitles", () => {
     expect(asks).toBe(5);
     expect(deps.store.getTitleDay("2026-10-23")!.batchHash).toBe(recorded.batchHash);
   });
+  it("in parallel, asks all five at once and commits the same batch", async () => {
+    let inFlight = 0, peak = 0;
+    const seq = fakes();
+    await runTitles(seq.deps);
+    const par = fakes({ ask: async () => { peak = Math.max(peak, ++inFlight); await new Promise((r) => setTimeout(r, 5)); inFlight--; return '{"champion":"GEN","probability":30,"contenders":["BLG"],"reasoning":"r"}'; } });
+    expect((await runTitles(par.deps, { parallel: true })).status).toBe("committed");
+    expect(peak).toBe(5);
+    expect(par.deps.store.getTitleDay("2026-10-23")!.batch).toBe(seq.deps.store.getTitleDay("2026-10-23")!.batch);
+  });
   it("needs at least 3 valid analysts, and stops after the final", async () => {
     let n = 0;
     expect((await runTitles(fakes({ ask: async () => (n++ < 6 ? "nope" : '{"champion":"GEN","probability":30}') }).deps)).status).toMatch(/only 2 valid/);

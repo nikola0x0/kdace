@@ -33,12 +33,15 @@ export function replyParts(message: Reply): AnalystReply {
 
 let client: Anthropic | undefined;
 
-export async function askAnalyst(prompt: string): Promise<string> {
-  return (await askAnalystFull(prompt)).text;
+/** Per-call limits, for callers with a deadline (the Vercel runner): one attempt, cut off after `timeoutMs`. */
+export type AskOptions = { timeoutMs?: number };
+
+export async function askAnalyst(prompt: string, opts: AskOptions = {}): Promise<string> {
+  return (await askAnalystFull(prompt, "high", opts)).text;
 }
 
 /** One analyst turn with its thinking summary. On a policy decline the API re-runs it on a fallback model. */
-export async function askAnalystFull(prompt: string, effort: "high" | "xhigh" = "high"): Promise<AnalystReply> {
+export async function askAnalystFull(prompt: string, effort: "high" | "xhigh" = "high", opts: AskOptions = {}): Promise<AnalystReply> {
   if (analystProvider() === "claude-cli") {
     // A hung CLI call would block every later tick, so it is killed after 3 minutes.
     const text = execFileSync("claude", ["-p", "--output-format", "text"], { input: prompt, maxBuffer: 1 << 20, timeout: 180_000 }).toString().trim();
@@ -53,7 +56,7 @@ export async function askAnalystFull(prompt: string, effort: "high" | "xhigh" = 
     betas: ["server-side-fallback-2026-07-01"],
     fallbacks: "default",
     messages: [{ role: "user", content: prompt }],
-  });
+  }, opts.timeoutMs ? { timeout: opts.timeoutMs, maxRetries: 0 } : undefined);
   return replyParts(message);
 }
 

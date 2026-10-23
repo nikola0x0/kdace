@@ -124,6 +124,14 @@ describe("runFinalCall", () => {
     expect(f).toMatchObject({ commitDigest: "final-digest", chain });
     expect(finalMarketId("x")).toBe("x:final");
   });
+  it("with maxNew, makes one final call per run, soonest first", async () => {
+    const later: Series = { ...series, matchId: "w", startTime: "2026-10-23T17:10:00Z" };
+    const { deps, store } = fakes({ fetchSeries: async () => [series, later] });
+    store.put(committed(later));
+    expect((await runFinalCall(deps, { maxNew: 1 })).committed).toEqual(["x"]);
+    expect(store.get("w")!.finalCall).toBeUndefined();
+    expect((await runFinalCall(deps, { maxNew: 1 })).committed).toEqual(["w"]);
+  });
   it("never runs twice for a series", async () => {
     const { deps, commits } = fakes();
     await runFinalCall(deps);

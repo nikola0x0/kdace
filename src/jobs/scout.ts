@@ -3,13 +3,17 @@
 // international schedules. Tier 2: livestats for every Worlds 2026 game plus each team's most recent games elsewhere.
 // Requests are sequential with a small delay; raw responses are cached under data/scout/raw/ (gitignored),
 // and games already in games.json are never fetched again. Usage: npm run scout [-- [--rebuild] [TEAM_A TEAM_B]]
+// refreshScout() is the same run as a function: the staged runner (src/jobs/runner.ts) calls it on a temp dir seeded
+// with the store's games.json, with a deadline, then copies the four files into the store.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { pathToFileURL } from "node:url";
 import { gunzipSync, gzipSync } from "node:zlib";
 import {
   type Frame,
   type GameSummary,
   type SeriesResult,
+  type TeamAggregate,
   buildTeams,
   densifyTimes,
   digestFor,
@@ -31,7 +35,9 @@ import { SCOUT_DIR } from "../core/scoutstore.ts";
 const API = "https://esports-api.lolesports.com/persisted/gw";
 const FEED = "https://feed.lolesports.com/livestats/v1";
 const API_KEY = "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"; // public key the lolesports site uses (same as worlds.ts)
-const RAW = join(SCOUT_DIR, "raw");
+// Where this run writes (data/scout from the CLI; a temp dir when the staged runner refreshes the store). Set by refreshScout.
+let OUT = SCOUT_DIR;
+let RAW = join(OUT, "raw");
 const DELAY_MS = Number(process.env.SCOUT_DELAY_MS ?? 60);
 // Seconds of game time between gold samples: every minute at Worlds, every two minutes elsewhere (keeps a full run near an hour).
 const STEP_WORLDS = 60;
@@ -153,104 +159,124 @@ function writeJson(path: string, value: unknown) {
   writeFileSync(path, JSON.stringify(value, null, 1) + "\n");
 }
 
-// ---------- Tier 1: schedules ----------
-const ids = await leagueIds();
-const series: SeriesResult[] = [];
-const allPerLeague: Record<string, number> = {};
-let worldsTeams: string[] = [];
-for (const [slug, prefix] of Object.entries(LEAGUES)) {
-  if (!ids[slug]) {
-    console.warn(`league ${slug} not found in getLeagues`);
-    continue;
-  }
-  const label = `${prefix} 2026`;
-  const json = { data: { schedule: { events: await scheduleOf(ids[slug]) } } };
-  if (slug === "worlds")
-    worldsTeams = [...new Set(json.data.schedule.events.filter((e: any) => e.startTime?.startsWith("2026")).flatMap((e: any) => e.match?.teams ?? []).map((t: any) => TEAM_ALIASES[t.code] ?? t.code))].filter(
-      (c): c is string => typeof c === "string" && c !== "TBD",
-    );
-  const parsed = parseLeagueSeries(json, label);
-  allPerLeague[label] = parsed.length;
-  series.push(...parsed);
-  console.log(`${label}: ${parsed.length} completed 2026 series`);
-}
-const worlds = new Set(worldsTeams);
-const unique = new Map<string, SeriesResult>();
-for (const s of series) if (worlds.has(s.teamA) || worlds.has(s.teamB)) unique.set(s.matchId, s);
-const relevant = [...unique.values()].sort((a, b) => a.startTime.localeCompare(b.startTime));
-writeJson(join(SCOUT_DIR, "series.json"), relevant);
-console.log(`${worldsTeams.length} Worlds teams: ${worldsTeams.sort().join(" ")}; ${relevant.length} series involve them`);
-
-// ---------- Tier 2: livestats ----------
-const selected = new Set<string>(relevant.filter((s) => s.league.startsWith("Worlds ")).map((s) => s.matchId));
-for (const team of worldsTeams) {
-  let n = 0;
-  for (const s of [...relevant].reverse()) {
-    if (n >= RECENT_GAMES) break;
-    if (s.league.startsWith("Worlds ") || (s.teamA !== team && s.teamB !== team)) continue;
-    selected.add(s.matchId);
-    n += (s.winsA ?? 0) + (s.winsB ?? 0);
-  }
-}
-const gamesPath = join(SCOUT_DIR, "games.json");
-// --rebuild re-summarises every game from the raw cache (after a parsing change) instead of reusing games.json.
-const args = process.argv.slice(2).filter((a) => !a.startsWith("--"));
-const rebuild = process.argv.includes("--rebuild");
-const games = new Map<string, GameSummary>(rebuild ? [] : readJson<GameSummary[]>(gamesPath, []).map((g) => [g.gameId, g]));
-const missing: string[] = [];
-const mismatches: string[] = [];
-const reconciled: string[] = [];
-const save = () => writeJson(gamesPath, [...games.values()].sort((a, b) => a.date.localeCompare(b.date) || a.gameId.localeCompare(b.gameId)));
-const todo = relevant.filter((s) => selected.has(s.matchId));
-console.log(`livestats: ${todo.length} series selected, ${games.size} games already summarised`);
-let done = 0;
-for (const s of todo) {
-  done++;
-  const ev = parseEvent(await cached(join(RAW, "events", `${s.matchId}.json`), `${API}/getEventDetails?hl=en-US&id=${s.matchId}`, true));
-  const codes = Object.fromEntries(ev.teams.map((t) => [t.id, t.code]));
-  let fetched = 0;
-  for (const g of ev.games.filter((x) => x.state === "completed")) {
-    if (games.has(g.id)) continue;
-    const raw = await gameFrames(g.id, s.league.startsWith("Worlds ") ? STEP_WORLDS : STEP_OTHER);
-    if (!raw?.meta) {
-      missing.push(`${s.league} ${s.teamA}-${s.teamB} game ${g.number} (${g.id})`);
+/** One Scout run. Returns whether it got through every selected series before `deadline` (ms since epoch). */
+export async function refreshScout(opts: { dir?: string; rebuild?: boolean; deadline?: number } = {}): Promise<{ complete: boolean; requests: number; teams: Record<string, TeamAggregate>; series: SeriesResult[]; games: GameSummary[] }> {
+  OUT = opts.dir ?? SCOUT_DIR;
+  RAW = join(OUT, "raw");
+  requests = 0;
+  const rebuild = opts.rebuild ?? false;
+  const deadline = opts.deadline ?? Infinity;
+  // ---------- Tier 1: schedules ----------
+  const ids = await leagueIds();
+  const series: SeriesResult[] = [];
+  const allPerLeague: Record<string, number> = {};
+  let worldsTeams: string[] = [];
+  for (const [slug, prefix] of Object.entries(LEAGUES)) {
+    if (!ids[slug]) {
+      console.warn(`league ${slug} not found in getLeagues`);
       continue;
     }
-    games.set(g.id, summarizeGame({ meta: raw.meta, frames: raw.frames, details: parseDetails(raw.details), teams: codes, league: s.league, number: g.number, winnerHint: null }));
-    fetched++;
+    const label = `${prefix} 2026`;
+    const json = { data: { schedule: { events: await scheduleOf(ids[slug]) } } };
+    if (slug === "worlds")
+      worldsTeams = [...new Set(json.data.schedule.events.filter((e: any) => e.startTime?.startsWith("2026")).flatMap((e: any) => e.match?.teams ?? []).map((t: any) => TEAM_ALIASES[t.code] ?? t.code))].filter(
+        (c): c is string => typeof c === "string" && c !== "TBD",
+      );
+    const parsed = parseLeagueSeries(json, label);
+    allPerLeague[label] = parsed.length;
+    series.push(...parsed);
+    console.log(`${label}: ${parsed.length} completed 2026 series`);
   }
-  // Per-game winners come from the final frame; make them add up to the official series score (re-summarised from the cache).
-  const fixes = reconcileWinners([...games.values()].filter((g) => g.matchId === s.matchId), s);
-  for (const [gameId, winner] of Object.entries(fixes)) {
-    const g = games.get(gameId)!;
-    const raw = await gameFrames(gameId, s.league.startsWith("Worlds ") ? STEP_WORLDS : STEP_OTHER);
-    if (!raw?.meta) continue;
-    games.set(gameId, summarizeGame({ meta: raw.meta, frames: raw.frames, details: parseDetails(raw.details), teams: codes, league: s.league, number: g.number, winnerHint: winner }));
-    reconciled.push(`${s.league} ${s.teamA} ${s.winsA}-${s.winsB} ${s.teamB} game ${g.number}: ${g.winner ?? "unknown"} -> ${winner}`);
-  }
-  const mine = [...games.values()].filter((g) => g.matchId === s.matchId);
-  const wa = mine.filter((g) => g.winner === s.teamA).length;
-  const wb = mine.filter((g) => g.winner === s.teamB).length;
-  if (mine.length === (s.winsA ?? 0) + (s.winsB ?? 0) && (wa !== s.winsA || wb !== s.winsB))
-    mismatches.push(`${s.league} ${s.teamA} ${s.winsA}-${s.winsB} ${s.teamB}: frames say ${wa}-${wb}`);
-  if (fetched) {
-    save();
-    console.log(`[${done}/${todo.length}] ${s.startTime.slice(0, 10)} ${s.league} ${s.teamA}-${s.teamB}: +${fetched} games (${requests} requests so far)`);
-  }
-}
-save();
+  const worlds = new Set(worldsTeams);
+  const unique = new Map<string, SeriesResult>();
+  for (const s of series) if (worlds.has(s.teamA) || worlds.has(s.teamB)) unique.set(s.matchId, s);
+  const relevant = [...unique.values()].sort((a, b) => a.startTime.localeCompare(b.startTime));
+  writeJson(join(OUT, "series.json"), relevant);
+  console.log(`${worldsTeams.length} Worlds teams: ${worldsTeams.sort().join(" ")}; ${relevant.length} series involve them`);
 
-// ---------- aggregates ----------
-const allGames = [...games.values()];
-const teams = buildTeams(worldsTeams, relevant, allGames, RECENT_GAMES);
-writeJson(join(SCOUT_DIR, "teams.json"), teams);
-const perLeague: Record<string, { series: number; seriesAll: number; games: number }> = {};
-for (const [label, n] of Object.entries(allPerLeague)) perLeague[label] = { series: relevant.filter((s) => s.league === label).length, seriesAll: n, games: allGames.filter((g) => g.league === label).length };
-writeJson(join(SCOUT_DIR, "meta.json"), { generatedAt: new Date().toISOString(), source: "lolesports official feeds (esports-api getSchedule/getEventDetails, feed livestats window/details)", worldsTeams, perLeague, missing, winnersReconciled: reconciled, winnerMismatches: mismatches });
-console.log(JSON.stringify(perLeague, null, 1));
-if (missing.length) console.log(`no livestats for ${missing.length} games:\n  ${missing.join("\n  ")}`);
-if (reconciled.length) console.log(`winners corrected to match series scores:\n  ${reconciled.join("\n  ")}`);
-if (mismatches.length) console.log(`winner mismatches:\n  ${mismatches.join("\n  ")}`);
-console.log(`${requests} requests. Sample digest:\n`);
-const [a, b] = args.length === 2 ? args : ["GEN", "IG"];
-console.log(digestFor(a, b, teams, relevant, allGames));
+  // ---------- Tier 2: livestats ----------
+  const selected = new Set<string>(relevant.filter((s) => s.league.startsWith("Worlds ")).map((s) => s.matchId));
+  for (const team of worldsTeams) {
+    let n = 0;
+    for (const s of [...relevant].reverse()) {
+      if (n >= RECENT_GAMES) break;
+      if (s.league.startsWith("Worlds ") || (s.teamA !== team && s.teamB !== team)) continue;
+      selected.add(s.matchId);
+      n += (s.winsA ?? 0) + (s.winsB ?? 0);
+    }
+  }
+  const gamesPath = join(OUT, "games.json");
+  // rebuild re-summarises every game from the raw cache (after a parsing change) instead of reusing games.json.
+  const games = new Map<string, GameSummary>(rebuild ? [] : readJson<GameSummary[]>(gamesPath, []).map((g) => [g.gameId, g]));
+  const missing: string[] = [];
+  const mismatches: string[] = [];
+  const reconciled: string[] = [];
+  const save = () => writeJson(gamesPath, [...games.values()].sort((a, b) => a.date.localeCompare(b.date) || a.gameId.localeCompare(b.gameId)));
+  const todo = relevant.filter((s) => selected.has(s.matchId));
+  console.log(`livestats: ${todo.length} series selected, ${games.size} games already summarised`);
+  let done = 0;
+  let complete = true;
+  for (const s of todo) {
+    // Out of time (the staged runner): stop fetching; what was fetched is saved, and the next run carries on.
+    if (Date.now() >= deadline) {
+      complete = false;
+      console.log(`out of time after ${done}/${todo.length} series; the next run carries on`);
+      break;
+    }
+    done++;
+    const ev = parseEvent(await cached(join(RAW, "events", `${s.matchId}.json`), `${API}/getEventDetails?hl=en-US&id=${s.matchId}`, true));
+    const codes = Object.fromEntries(ev.teams.map((t) => [t.id, t.code]));
+    let fetched = 0;
+    for (const g of ev.games.filter((x) => x.state === "completed")) {
+      if (games.has(g.id)) continue;
+      const raw = await gameFrames(g.id, s.league.startsWith("Worlds ") ? STEP_WORLDS : STEP_OTHER);
+      if (!raw?.meta) {
+        missing.push(`${s.league} ${s.teamA}-${s.teamB} game ${g.number} (${g.id})`);
+        continue;
+      }
+      games.set(g.id, summarizeGame({ meta: raw.meta, frames: raw.frames, details: parseDetails(raw.details), teams: codes, league: s.league, number: g.number, winnerHint: null }));
+      fetched++;
+    }
+    // Per-game winners come from the final frame; make them add up to the official series score (re-summarised from the cache).
+    const fixes = reconcileWinners([...games.values()].filter((g) => g.matchId === s.matchId), s);
+    for (const [gameId, winner] of Object.entries(fixes)) {
+      const g = games.get(gameId)!;
+      const raw = await gameFrames(gameId, s.league.startsWith("Worlds ") ? STEP_WORLDS : STEP_OTHER);
+      if (!raw?.meta) continue;
+      games.set(gameId, summarizeGame({ meta: raw.meta, frames: raw.frames, details: parseDetails(raw.details), teams: codes, league: s.league, number: g.number, winnerHint: winner }));
+      reconciled.push(`${s.league} ${s.teamA} ${s.winsA}-${s.winsB} ${s.teamB} game ${g.number}: ${g.winner ?? "unknown"} -> ${winner}`);
+    }
+    const mine = [...games.values()].filter((g) => g.matchId === s.matchId);
+    const wa = mine.filter((g) => g.winner === s.teamA).length;
+    const wb = mine.filter((g) => g.winner === s.teamB).length;
+    if (mine.length === (s.winsA ?? 0) + (s.winsB ?? 0) && (wa !== s.winsA || wb !== s.winsB))
+      mismatches.push(`${s.league} ${s.teamA} ${s.winsA}-${s.winsB} ${s.teamB}: frames say ${wa}-${wb}`);
+    if (fetched) {
+      save();
+      console.log(`[${done}/${todo.length}] ${s.startTime.slice(0, 10)} ${s.league} ${s.teamA}-${s.teamB}: +${fetched} games (${requests} requests so far)`);
+    }
+  }
+  save();
+
+  // ---------- aggregates ----------
+  const allGames = [...games.values()];
+  const teams = buildTeams(worldsTeams, relevant, allGames, RECENT_GAMES);
+  writeJson(join(OUT, "teams.json"), teams);
+  const perLeague: Record<string, { series: number; seriesAll: number; games: number }> = {};
+  for (const [label, n] of Object.entries(allPerLeague)) perLeague[label] = { series: relevant.filter((s) => s.league === label).length, seriesAll: n, games: allGames.filter((g) => g.league === label).length };
+  writeJson(join(OUT, "meta.json"), { generatedAt: new Date().toISOString(), source: "lolesports official feeds (esports-api getSchedule/getEventDetails, feed livestats window/details)", worldsTeams, perLeague, missing, winnersReconciled: reconciled, winnerMismatches: mismatches });
+  console.log(JSON.stringify(perLeague, null, 1));
+  if (missing.length) console.log(`no livestats for ${missing.length} games:\n  ${missing.join("\n  ")}`);
+  if (reconciled.length) console.log(`winners corrected to match series scores:\n  ${reconciled.join("\n  ")}`);
+  if (mismatches.length) console.log(`winner mismatches:\n  ${mismatches.join("\n  ")}`);
+  console.log(`${requests} requests.`);
+  return { complete, requests, teams, series: relevant, games: allGames };
+}
+
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
+  const args = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+  const { teams, series, games } = await refreshScout({ rebuild: process.argv.includes("--rebuild") });
+  console.log("Sample digest:\n");
+  const [a, b] = args.length === 2 ? args : ["GEN", "IG"];
+  console.log(digestFor(a, b, teams, series, games));
+}

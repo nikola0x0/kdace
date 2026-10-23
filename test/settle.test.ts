@@ -131,6 +131,20 @@ describe("fast and slow settle", () => {
     expect(await runSettleSlow(deps)).toEqual({ reflected: [] });
     expect(remembered).toHaveLength(5);
   });
+  it("slow, bounded: stops before a step once out of time and resumes from what was saved", async () => {
+    const { deps, store, remembered } = fakes();
+    await runSettleFast(deps);
+    let steps = 0;
+    expect(await runSettleSlow(deps, { maxRecords: 1, outOfTime: () => ++steps > 3 })).toEqual({ reflected: [] });
+    const partial = store.get("x")!;
+    expect(partial.debate).toContain("Top:");
+    expect(partial.lessons).toHaveLength(1);
+    expect(partial.lessons[0].blobId).toBe("blob-1");
+    expect(await runSettleSlow(deps, { maxRecords: 1 })).toEqual({ reflected: ["x"] });
+    expect(remembered).toHaveLength(5);
+    expect(store.get("x")!.lessons.every((l) => l.blobId)).toBe(true);
+  });
+
   it("finishes a record left mid-settle by the old single-pass job (result and axp saved, status committed)", async () => {
     const { deps, posted, store } = fakes();
     store.put({ ...committed(), result: { winner: "GEN", score: "1-0", resultDigest: "rd" }, axp: { "analyst-top": 1500 } });

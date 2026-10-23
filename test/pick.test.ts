@@ -132,6 +132,32 @@ describe("runPick", () => {
     expect(picks.find((p) => p.player === "analyst-mid")).toMatchObject({ stake: 1210, scoreStake: 360 });
   });
 
+  it("with maxNew, picks only the soonest open series per run (missed ones are still recorded)", async () => {
+    const later = { ...series, matchId: "later", startTime: "2026-10-23T20:00:00Z" };
+    const gone = { ...series, matchId: "gone", startTime: "2026-10-23T11:00:00Z" };
+    const { deps, commits } = fakes({ fetchSeries: async () => [later, series, gone] });
+    expect(await runPick(deps, { maxNew: 1 })).toEqual({ committed: ["x"], missed: ["gone"] });
+    expect(await runPick(deps, { maxNew: 1 })).toEqual({ committed: ["later"], missed: [] });
+    expect(commits).toEqual(["x", "later"]);
+  });
+
+  it("in parallel, asks all five analysts at once and builds the same batch, in the analysts' order", async () => {
+    let inFlight = 0, peak = 0;
+    const slow = async () => {
+      peak = Math.max(peak, ++inFlight);
+      await new Promise((r) => setTimeout(r, 5));
+      inFlight--;
+      return good;
+    };
+    const seq = fakes();
+    await runPick(seq.deps);
+    const par = fakes({ ask: slow });
+    await runPick(par.deps, { parallel: true });
+    expect(peak).toBe(5);
+    expect(par.deps.store.get("x")!.batch).toBe(seq.deps.store.get("x")!.batch);
+    expect(par.deps.store.get("x")!.picks.map((p) => p.player)).toEqual(ANALYSTS.map((a) => a.player));
+  });
+
   it("stamps the committed record with the network and package it was committed on", async () => {
     const { deps } = fakes();
     await runPick(deps);
