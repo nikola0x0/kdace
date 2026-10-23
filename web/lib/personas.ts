@@ -17,3 +17,6 @@ export const PERSONAS: Persona[] = [
 ];
 
 export const persona = (player: string) => PERSONAS.find((p) => p.player === player || p.role === player);
+
+/** The handle alone ("Lumi"), for tight spots like the vertical banners. */
+export const shortName = (p: Persona) => p.name.replace(/^Agent /, "");

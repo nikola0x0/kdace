@@ -43,12 +43,12 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
           <p className="ap-lead">{p.personality}</p>
 
           <div className="ap-kpis">
-            <div className="ap-kpi big"><b className="num bal"><Axp size={28} /> {s.balance.toLocaleString("en-US")}</b><span>Balance · AXP free to bet</span></div>
-            <div className="ap-kpi"><b className="num">{s.total.toLocaleString("en-US")}</b><span>Total · balance + in play</span></div>
-            <div className="ap-kpi"><b className={`num ${s.net > 0 ? "right" : s.net < 0 ? "wrong" : ""}`}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</b><span>Profit{s.roi === null ? "" : ` · ROI ${s.roi > 0 ? "+" : ""}${s.roi}%`}</span></div>
-            <div className="ap-kpi"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Win rate{s.settled ? ` · ${s.correct}–${s.settled - s.correct}` : ""}</span></div>
-            <div className="ap-kpi"><b className="num">{s.inPlay.toLocaleString("en-US")}</b><span>In play</span></div>
-            <div className="ap-kpi"><b className="num">{s.memories}</b><span>Memories · {s.recalled} recalled</span></div>
+            <div className="ap-kpi big" title="AXP free to bet"><b className="num bal"><Axp size={26} /> {s.balance.toLocaleString("en-US")}</b><span>Balance</span></div>
+            <div className="ap-kpi" title="AXP in open bets"><b className="num">{s.inPlay.toLocaleString("en-US")}</b><span>In play</span></div>
+            <div className="ap-kpi" title="Balance + in play"><b className="num">{s.total.toLocaleString("en-US")}</b><span>Total</span></div>
+            <div className="ap-kpi" title={s.roi === null ? undefined : `ROI ${s.roi > 0 ? "+" : ""}${s.roi}%`}><b className={`num ${s.net > 0 ? "right" : s.net < 0 ? "wrong" : ""}`}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</b><span>Profit</span></div>
+            <div className="ap-kpi" title={s.settled ? `${s.correct}–${s.settled - s.correct}` : undefined}><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Win rate</span></div>
+            <div className="ap-kpi" title={`${s.recalled} recalled before picks`}><b className="num">{s.memories}</b><span>Memories</span></div>
           </div>
 
           <div className="ap-facts">

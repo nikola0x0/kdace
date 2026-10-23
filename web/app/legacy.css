@@ -357,7 +357,8 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .ap-banner { height: 480px; flex: none; } .ap-banner:hover { flex: none; }
 .ap-info { display: flex; flex-direction: column; justify-content: center; }
 .ap-lead { color: var(--fg-2); font-size: 18px; max-width: 620px; margin: 0 0 22px; }
-.ap-kpis { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 10px; margin-bottom: 22px; }
+.ap-kpis { display: grid; grid-template-columns: 1.35fr repeat(5, minmax(0, 1fr)); gap: 8px; margin-bottom: 22px; }
+.ap-kpis .ap-kpi { padding: 12px 14px; min-width: 0; } .ap-kpis .ap-kpi b { font-size: 20px; white-space: nowrap; } .ap-kpis .ap-kpi.big b { font-size: 28px; }
 .ap-kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 4px; }
 .ap-kpi b { font-size: 22px; letter-spacing: -.02em; } .ap-kpi span { font-size: 11px; color: var(--kd-muted); text-transform: uppercase; letter-spacing: .1em; }
 .ap-kpi.big { border-color: color-mix(in srgb, var(--c) 45%, var(--line)); background: linear-gradient(135deg, color-mix(in srgb, var(--c) 16%, var(--panel)), var(--panel)); }
@@ -383,7 +384,7 @@ details.recall ul { margin: 8px 0 0; padding-left: 16px; }
 .crew-chip b { display: block; } .crew-chip small { color: var(--kd-muted); font-size: 12px; }
 @media (max-width: 900px) {
   .ap-hero { grid-template-columns: 1fr; } .ap-banner { height: 360px; }
-  .ap-kpis { grid-template-columns: repeat(2, 1fr); } .ap-kpi.big { grid-column: 1 / -1; }
+  .ap-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ap-kpi.big { grid-column: 1 / -1; }
   .crew-row { grid-template-columns: repeat(2, 1fr); }
 }
 

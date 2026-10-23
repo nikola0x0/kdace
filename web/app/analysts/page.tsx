@@ -1,7 +1,7 @@
 // The five analysts as tall character banners side by side, each with their record. Hover widens a banner.
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { PERSONAS } from "../../lib/personas";
+import { PERSONAS, shortName } from "../../lib/personas";
 import { analystStats, art } from "../../lib/site";
 import { Axp, RoleIcon } from "../ui/bits";
 
@@ -24,7 +24,7 @@ export default function AnalystsPage() {
             <div className="banner-top"><RoleIcon role={p.role} size={18} /><span>{p.role.toUpperCase()}</span></div>
             <div className="banner-info">
               <div className="banner-title">{p.title}</div>
-              <div className="banner-name display">{p.name}</div>
+              <div className="banner-name display">{shortName(p)}</div>
               <div className="banner-bal">
                 <b className="num bal" title="Balance: AXP free to bet"><Axp size={22} /> {s.balance.toLocaleString("en-US")}</b>
                 {s.inPlay > 0 && <span className="num muted" title="AXP in open bets">+{s.inPlay.toLocaleString("en-US")} in play</span>}

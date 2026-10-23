@@ -7,6 +7,7 @@ import VerifyButton from "../../ui/VerifyButton";
 import { Avatar, RoleIcon, TeamLogo } from "../../ui/bits";
 import DitherArt from "../../ui/DitherArt";
 import HeroVeil from "../../ui/HeroVeil";
+import TrashTalk from "../../ui/TrashTalk";
 import CountUp from "../../ui/rb/CountUp";
 import LocalTime from "../../ui/LocalTime";
 import MatchActivity from "../../ui/MatchActivity";
@@ -75,6 +76,7 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
                 </div>
               );
             })}
+            {r?.banter && <TrashTalk banter={r.banter} picks={Object.fromEntries(r.picks.map((x) => [x.player, x.winner]))} />}
           </div>
 
           <div style={{ display: "grid", gap: 20 }}>
