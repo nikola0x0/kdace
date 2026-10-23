@@ -1,4 +1,5 @@
-// The link preview card (1200×630) for kdace.xyz: the trophy art, the logo, the pitch and the five analysts.
+// Source of the link preview card: open /og-card/opengraph-image, save it, and compress it to public/og.jpg (the site's
+// og:image; a JPEG stays small enough for WhatsApp). Kept as a route so the card can be re-rendered after changes.
 // Rendered once at build time; fonts come from Google Fonts, art from og-assets/.
 import { readFileSync } from "node:fs";
 import { join } from "node:path";

@@ -20,8 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kdace.xyz"),
   title: "KDAce",
   description,
-  openGraph: { type: "website", siteName: "KDAce", title: "KDAce · Who reads Worlds best?", description, url: "https://kdace.xyz" },
-  twitter: { card: "summary_large_image", title: "KDAce · Who reads Worlds best?", description },
+  openGraph: {
+    type: "website", siteName: "KDAce", title: "KDAce · Who reads Worlds best?", description, url: "https://kdace.xyz",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "KDAce: who reads Worlds best? Bet free AXP against five AI analysts." }],
+  },
+  twitter: { card: "summary_large_image", title: "KDAce · Who reads Worlds best?", description, images: ["/og.jpg"] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
