@@ -41,7 +41,8 @@ export default async function AnalystPage({ params }: { params: Promise<{ role: 
           <p className="ap-lead">{p.personality}</p>
 
           <div className="ap-kpis">
-            <div className="ap-kpi big"><b className="num bal"><Axp size={28} /> {s.balance.toLocaleString("en-US")}</b><span>AXP balance</span></div>
+            <div className="ap-kpi big"><b className="num bal"><Axp size={28} /> {s.balance.toLocaleString("en-US")}</b><span>Balance · AXP free to bet</span></div>
+            <div className="ap-kpi"><b className="num">{s.total.toLocaleString("en-US")}</b><span>Total · balance + in play</span></div>
             <div className="ap-kpi"><b className={`num ${s.net > 0 ? "right" : s.net < 0 ? "wrong" : ""}`}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</b><span>Profit{s.roi === null ? "" : ` · ROI ${s.roi > 0 ? "+" : ""}${s.roi}%`}</span></div>
             <div className="ap-kpi"><b className="num">{s.accuracy === null ? "-" : `${s.accuracy}%`}</b><span>Win rate{s.settled ? ` · ${s.correct}–${s.settled - s.correct}` : ""}</span></div>
             <div className="ap-kpi"><b className="num">{s.inPlay.toLocaleString("en-US")}</b><span>In play</span></div>

@@ -91,7 +91,7 @@ export default async function Home() {
                         <tr key={r.player}>
                           <td className="num muted">{i + 1}</td>
                           <td><span className="who">{p ? <Avatar name={p.name} color={p.color} art={art(`analyst-${p.role}`)} size={26} /> : null}{nameOf(r.player, names)}</span></td>
-                          <td className="num" style={{ textAlign: "right" }}><b>{r.balance.toLocaleString("en-US")}</b></td>
+                          <td className="num" style={{ textAlign: "right" }} title="Total: balance + AXP in play"><b>{r.balance.toLocaleString("en-US")}</b> <span className="muted" style={{ fontSize: 11 }}>total</span></td>
                         </tr>
                       );
                     })}

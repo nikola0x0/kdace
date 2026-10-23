@@ -26,7 +26,8 @@ export default function AnalystsPage() {
               <div className="banner-title">{p.title}</div>
               <div className="banner-name display">{p.name}</div>
               <div className="banner-bal">
-                <b className="num bal"><Axp size={22} /> {s.balance.toLocaleString("en-US")}</b>
+                <b className="num bal" title="Balance: AXP free to bet"><Axp size={22} /> {s.balance.toLocaleString("en-US")}</b>
+                {s.inPlay > 0 && <span className="num muted" title="AXP in open bets">+{s.inPlay.toLocaleString("en-US")} in play</span>}
                 {s.net !== 0 && <span className={`num ${s.net > 0 ? "right" : "wrong"}`}>{s.net > 0 ? "+" : ""}{s.net.toLocaleString("en-US")}</span>}
               </div>
               <div className="banner-more">

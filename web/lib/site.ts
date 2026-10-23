@@ -108,7 +108,7 @@ export const suiscan = (r: { chain?: Chain }, digest: string | null | undefined)
 export const walruscan = (blobId: string) => `https://walruscan.com/mainnet/blob/${blobId}`;
 export const lessonText = (text: string) => text.split(" (from ")[0];
 
-export type AnalystStats = { calls: number; settled: number; correct: number; accuracy: number | null; balance: number; net: number; roi: number | null; staked: number; inPlay: number; best: number; memories: number; recalled: number; form: ("W" | "L")[] };
+export type AnalystStats = { calls: number; settled: number; correct: number; accuracy: number | null; /** AXP free to bet (total − in play). */ balance: number; /** Balance + AXP in play (what the board ranks by). */ total: number; net: number; roi: number | null; staked: number; inPlay: number; best: number; memories: number; recalled: number; form: ("W" | "L")[] };
 
 /** One analyst's record: winner-call accuracy over settled series, board numbers, memories saved and recalled, last five results. */
 export function analystStats(player: string): AnalystStats {
@@ -135,7 +135,7 @@ export function analystStats(player: string): AnalystStats {
     }
   }
   const net = row?.net ?? 0;
-  return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, balance: row?.balance ?? AXP_START, net, roi: staked ? Math.round((net / staked) * 100) : null, staked, inPlay, best, memories, recalled, form: form.slice(-5) };
+  return { calls, settled, correct, accuracy: settled ? Math.round((correct / settled) * 100) : null, balance: (row?.balance ?? AXP_START) - inPlay, total: row?.balance ?? AXP_START, net, roi: staked ? Math.round((net / staked) * 100) : null, staked, inPlay, best, memories, recalled, form: form.slice(-5) };
 }
 
 /** What the in-browser verifier needs for one series (all public, straight from the published record). */

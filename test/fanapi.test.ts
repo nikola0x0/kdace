@@ -321,8 +321,8 @@ describe("leaderboardFans", () => {
     const r = await leaderboardFans(deps);
     expect(r.status).toBe(200);
     expect((r.body as { fans: unknown[] }).fans).toEqual(expect.arrayContaining([
-      { address: A, displayName: "nikola.sui", avatarUrl: null, favRole: null, balance: 10000, net: 0, inPlay: 300 },
-      expect.objectContaining({ address: B, balance: 10420, net: 420, inPlay: 0 }),
+      { address: A, displayName: "nikola.sui", avatarUrl: null, favRole: null, total: 10000, balance: 9700, net: 0, inPlay: 300 },
+      expect.objectContaining({ address: B, total: 10420, balance: 10420, net: 420, inPlay: 0 }),
     ]));
   });
 });

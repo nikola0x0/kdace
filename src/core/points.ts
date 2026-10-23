@@ -5,6 +5,7 @@ import type { BatchEntry } from "./batch.ts";
 export type SettledSeries = { matchId: string; bestOf: 1 | 3 | 5; entries: BatchEntry[]; result: { winner: string; score: string } };
 
 /** A leaderboard row: balance = AXP_START + net over settled markets; bets = markets entered; KDA as before. */
+/** `balance` here is the settled total (10,000 + net); the site subtracts AXP in play to show what's free to bet. */
 export type BoardRow = { player: string; balance: number; net: number; k: number; d: number; a: number; bets: number };
 
 /** Every player's starting balance. */

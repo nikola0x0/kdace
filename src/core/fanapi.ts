@@ -164,7 +164,7 @@ export async function listPicks(deps: FanApiDeps, address: string | null): Promi
   };
 }
 
-/** Every signed-in fan for the leaderboard: 10,000 AXP plus settled results, and AXP currently in open positions. */
+/** Every signed-in fan for the leaderboard: total (10,000 AXP plus settled results), AXP in open positions, and balance (total − in play, free to bet). */
 export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   const [fans, commitRows, seriesRows] = await Promise.all([deps.db.listFans(), deps.db.listCommits(), deps.fetchSeries()]);
   const commits = new Map(commitRows.map((c) => [c.matchId, c]));
@@ -174,7 +174,7 @@ export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   for (const p of await deps.db.picksFor(openIds)) if (isOpenPick(p, commits, series)) inPlay[p.address] = (inPlay[p.address] ?? 0) + p.stake;
   return {
     status: 200,
-    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, balance: AXP_START + f.axpSettled, net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
+    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, total: AXP_START + f.axpSettled, balance: AXP_START + f.axpSettled - (inPlay[f.address] ?? 0), net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
   };
 }
 
