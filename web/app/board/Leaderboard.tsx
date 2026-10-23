@@ -57,7 +57,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
               <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
             )}
             <b className="num bal"><Axp size={15} /> {fmt(r.total)}</b>
-            <span className="flex items-center gap-2"><Pnl net={r.net} /><small className="num muted">{r.net > 0 ? "+" : ""}{fmt(r.net)} · {r.w}–{r.l}</small></span>
+            <span title={`${r.net > 0 ? "+" : ""}${fmt(r.net)} AXP · ${r.w}–${r.l}`}><Pnl net={r.net} /></span>
           </div>
         ))}
       </div>
