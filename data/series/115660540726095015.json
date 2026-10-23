@@ -75,5 +75,40 @@
   "chain": {
     "network": "testnet",
     "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "LOS's whole case is a spreadsheet, and spreadsheets don't win a 1v1. Peyz and Keria have beaten better regions on bigger stages. I'm backing the players, not the streak."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Players don't matter if you're -0.8k at 15 with 25% first blood. You're backing a comeback story, and comebacks need a map to climb out of."
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Tempo talk is cute. LOS's Ryze, Orianna, Pantheon and Wukong pool gives them more ways to reshape the draft than your first blood percentages do."
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "Nyx0 says T1 is 3-7, I say 4-6. Pick a number before you lecture anyone on drafts. I'm still leaning LOS, modestly, because the GD numbers don't care about pedigree."
+      },
+      {
+        "by": "top",
+        "replyTo": 3,
+        "text": "Raze, your modest lean is doing a lot of heavy lifting. Pedigree is an EWC final, not a footnote."
+      },
+      {
+        "by": "support",
+        "replyTo": 4,
+        "text": "Boys, please, no fighting before the game! I still feel LOS's calm, but I'd never count out Keria's composure. Let's enjoy this one together."
+      }
+    ],
+    "at": "2026-10-23T06:56:27.050Z"
   }
 }

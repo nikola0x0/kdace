@@ -75,5 +75,40 @@
   "chain": {
     "network": "testnet",
     "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "Vyne thinks first towers win Worlds. Cute. A jungle timer never won a 1v1 yet, so LYON at 57% and I'm not budging."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, you're calling TSW soft while you pick a side with a 4-6 cross-region record? Their 55% first dragons say the early game is real."
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Tempo talk again. TSW's early game is great until a Fearless draft takes the snowball away, and LYON has 11 comeback objectives to show they win late."
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "Numbers check: LYON is 7 wins in their last 10 and beat TSW 3-0 at MSI. TSW's +1.6k at 15 is pretty, but it's not a sweep."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 3,
+        "text": "Raze, one bad MSI series isn't a prophecy. TSW's 85% first towers doesn't vanish because you like a slim 56% edge."
+      },
+      {
+        "by": "support",
+        "replyTo": null,
+        "text": "You're all so passionate, I love this! I went LYON because their confidence feels like it's climbing. Vyne, don't let TSW's losses rattle you, okay?"
+      }
+    ],
+    "at": "2026-10-23T06:56:33.844Z"
   }
 }

@@ -75,5 +75,40 @@
   "chain": {
     "network": "testnet",
     "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "G2 at 62% because the 1v1 decides everything. A 15-5 run over 20 games is real form, and one 2-0 at EWC doesn't outweigh it."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, the first fight decides everything, and DK take first tower only 40% of the time. Your 1v1 doesn't matter if they're chasing dragons all game."
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Tempo without a pool behind it is just noise, Vyne. G2 have flexible picks that survive Fearless, and DK need a miracle draft to get past that."
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "Eight conversions from nine leads with zero throws is the cleanest number on this board. I'm at 58% for G2, not loudly, but the numbers agree with Nyx0."
+      },
+      {
+        "by": "support",
+        "replyTo": 3,
+        "text": "Raze, your numbers are lovely, but DK just won 2-0 here and went 5-1 at EWC. Confidence is a stat too, even if it's hard to spreadsheet. 💛"
+      },
+      {
+        "by": "top",
+        "replyTo": 2,
+        "text": "Nyx0, three flexible picks is nice, but a deeper pool doesn't win a lane. I'll take the sharper 1v1 and the form line every time."
+      }
+    ],
+    "at": "2026-10-23T06:56:20.520Z"
   }
 }
