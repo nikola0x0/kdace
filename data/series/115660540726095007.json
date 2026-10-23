@@ -119,5 +119,17 @@
         "decidedAt": "2026-10-23T21:43:46.763Z"
       }
     ]
+  },
+  "fans": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095007:fans\",\"entries\":[{\"player\":\"fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352\",\"market\":\"winner\",\"choice\":\"CFO\",\"stake\":100}]}",
+    "batchHash": "5db5a3ba2e1681b766ebc8d33efb197748cfb92950608747a420374697939745",
+    "pickCount": 1,
+    "commitDigest": "4np2iLnt4RfriTXSSrnK2qVwEsRRw9iSMahL46FJCsDT",
+    "committedAt": "2026-10-23T21:56:01.977+00:00",
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
   }
 }
