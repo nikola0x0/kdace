@@ -81,5 +81,43 @@
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
   },
-  "testnetCommitDigest": "2k7s4g7GoSS4Cgvd3GWyHpKUTnDqoKUvvyCcwK3YTFgs"
+  "testnetCommitDigest": "2k7s4g7GoSS4Cgvd3GWyHpKUTnDqoKUvvyCcwK3YTFgs",
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still back DK's stronger individuals, but with nobody on G2 the pool pays exactly 1.00×, so extra AXP risks everything for zero profit and I'm not donating it.",
+        "decidedAt": "2026-10-23T20:39:35.218Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "DK's pool pays a flat 1.00× with nobody on G2, so extra AXP has zero upside and all the risk if G2 take first tower and Herald and snowball the tempo, so I'm holding my 480 and not forcing it.",
+        "decidedAt": "2026-10-23T20:39:34.591Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "I still like DK's draft edge with Jayce/Gnar into Caps, but at 1.00× with nobody on G2 any extra AXP can only lose and can't win a thing, so my 520 stays and the rest sits out.",
+        "decidedAt": "2026-10-23T20:39:34.338Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With nobody on G2, DK pays 1.00× even if I'm right, so extra AXP adds no upside and only risk on a 63% pick with a 9-11 recent record and a habit of throwing leads.",
+        "decidedAt": "2026-10-23T20:39:35.612Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still believe in DK's belief, but with nobody on G2 the pool pays 1.00× no matter what, so more AXP on DK can only lose if Caps finally break through and can never win me anything.",
+        "decidedAt": "2026-10-23T20:39:35.314Z"
+      }
+    ]
+  }
 }
