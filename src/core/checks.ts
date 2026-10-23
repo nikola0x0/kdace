@@ -1,6 +1,7 @@
 // Pure verification checks: anyone can re-run these against chain data and the published records.
-import { analystEntries } from "./analysts.ts";
-import { batchHash, canonicalBatch } from "./batch.ts";
+import { analystEntries, MIN_STAKE } from "./analysts.ts";
+import { batchHash, canonicalBatch, type BatchEntry } from "./batch.ts";
+import { finalCallEntries, finalMarketId } from "./finalcall.ts";
 import { FAN_PREFIX, fanMarketId } from "./fans.ts";
 import { computeBoard } from "./points.ts";
 import { VOID } from "./results.ts";
@@ -74,6 +75,36 @@ export function checkFans(r: SeriesRecord, commit: LedgerEvent, official: Series
     fanCommittedBeforeStart: commitOk && Number(commit!.json.committed_at_ms) < startDeadline(r, official),
   };
 }
+
+/**
+ * Checks a series' final call: the on-chain fingerprint under `<matchId>:final` is the published batch, it landed before
+ * the start, its entries are exactly the published calls that added AXP, and every top-up is a winner bet of at least
+ * 10 AXP on the side that analyst originally picked.
+ */
+export function checkFinalCall(r: SeriesRecord, commit: LedgerEvent, official: Series | undefined) {
+  const marketId = finalMarketId(r.series.matchId);
+  const f = r.finalCall;
+  const commitOk = !!f?.batch && commit?.type === "BatchCommitted" && commit.json.market_id === marketId;
+  const onchain = commitOk ? hashHex(commit!.json.batch_hash) : "";
+  const parsed = safelyParse(f?.batch);
+  return {
+    finalHashMatches: commitOk && parsed?.matchId === marketId && onchain === batchHash(f!.batch!) && onchain === f!.batchHash,
+    finalCommittedBeforeStart: commitOk && Number(commit!.json.committed_at_ms) < startDeadline(r, official),
+    finalEntriesMatchCalls: !!f?.batch && safely(() => canonicalBatch(marketId, finalCallEntries(r.picks, f.calls)) === f.batch),
+    finalOnOriginalSide: !!parsed && parsed.entries.length > 0 && parsed.entries.every((e) => {
+      const pick = r.picks.find((p) => p.player === e.player);
+      return !!pick && e.market === "winner" && e.choice === pick.winner && Number.isInteger(e.stake) && e.stake >= MIN_STAKE;
+    }),
+  };
+}
+
+const safelyParse = (batch: string | null | undefined): { matchId: string; entries: BatchEntry[] } | null => {
+  try {
+    return batch ? JSON.parse(batch) : null;
+  } catch {
+    return null;
+  }
+};
 
 /** A day's title calls: the on-chain fingerprint is this exact batch, committed on that UTC day, one entry per analyst call. */
 export function checkTitleDay(day: TitleDay, commit: LedgerEvent) {

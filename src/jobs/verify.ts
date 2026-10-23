@@ -2,7 +2,7 @@
 // AXP payouts from the published batches, and recomputes the leaderboard.
 // Fan batches (committed under `<matchId>:fans` at lock) are checked the same way.
 import { chainOf } from "../core/chain.ts";
-import { axpMatches, boardMatches, checkFans, checkRecord, checkTitleDay, checkVoid, startShift } from "../core/checks.ts";
+import { axpMatches, boardMatches, checkFans, checkFinalCall, checkRecord, checkTitleDay, checkVoid, startShift } from "../core/checks.ts";
 import { readLedgerEvent } from "../core/ledger.ts";
 import { Store } from "../core/store.ts";
 import { fetchSeries } from "../core/worlds.ts";
@@ -32,6 +32,9 @@ for (const r of store.all().filter((x) => x.status !== "missed" || fansCommitted
     const fanCommit = await readLedgerEvent(r.fans!.commitDigest!, r.fans!.chain);
     Object.assign(relevant, checkFans(r, fanCommit, official));
   }
+  // The analysts' final call (top-ups before lock under <matchId>:final), when one was committed.
+  const final = r.finalCall?.status === "committed" ? r.finalCall : null;
+  if (final) Object.assign(relevant, checkFinalCall(r, await readLedgerEvent(final.commitDigest!, chainOf(final)), official));
   const pass = Object.values(relevant).every(Boolean);
   if (!pass) failures++;
   console.log(`${pass ? "PASS" : "FAIL"} ${r.series.block} ${r.series.teamA} vs ${r.series.teamB} [${r.status}]`, relevant);
@@ -39,6 +42,7 @@ for (const r of store.all().filter((x) => x.status !== "missed" || fansCommitted
   if (shift) console.log(`   note   ${shift}`);
   if (r.commitDigest) console.log(`   commit https://suiscan.xyz/${network}/tx/${r.commitDigest}`);
   if (fansCommitted(r)) console.log(`   fans   https://suiscan.xyz/${r.fans!.chain.network}/tx/${r.fans!.commitDigest} (${r.fans!.pickCount} fan picks)`);
+  if (final) console.log(`   final  https://suiscan.xyz/${chainOf(final).network}/tx/${final.commitDigest} (${final.calls.filter((c) => c.add > 0).length} top-ups)`);
   if (r.result) console.log(`   result https://suiscan.xyz/${network}/tx/${r.result.resultDigest}`);
   for (const l of r.lessons) console.log(`   lesson https://walruscan.com/mainnet/blob/${l.blobId} (${l.player})`);
 }

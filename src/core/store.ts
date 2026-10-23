@@ -5,6 +5,7 @@ import type { AnalystPick } from "./analysts.ts";
 import type { Banter } from "./banter.ts";
 import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
+import type { FinalCallEntry } from "./finalcall.ts";
 import { AXP_START, marketNet, type BoardRow, type SettledSeries } from "./points.ts";
 import type { TitleDay } from "./titles.ts";
 import type { Series } from "./worlds.ts";
@@ -32,6 +33,22 @@ export type SeriesRecord = {
   testnetCommitDigest?: string;
   /** The fans' batch for this series, mirrored from Supabase by the tick (committed under `<matchId>:fans`). */
   fans?: FanSection;
+  /** The analysts' final call (top-ups on their own side, shortly before lock), committed under `<matchId>:final`. */
+  finalCall?: FinalCall;
+};
+
+/**
+ * A series' final call. Recorded as "committing" (batch and hash) before the chain call, "committed" after; "none" when
+ * nobody added (no chain call); "missed" when lock passed before the commit (its top-ups never count).
+ */
+export type FinalCall = {
+  status: "committing" | "committed" | "none" | "missed";
+  batch: string | null;
+  batchHash: string | null;
+  commitDigest: string | null;
+  /** Set at commit, like SeriesRecord.chain. */
+  chain?: Chain;
+  calls: FinalCallEntry[];
 };
 
 /** A fan batch as committed at lock: the canonical batch, its hash, and where it went on chain. */
@@ -48,8 +65,12 @@ export type FanSection = {
 const batchEntries = (batch: string | null): BatchEntry[] => (batch ? (JSON.parse(batch) as { entries: BatchEntry[] }).entries : []);
 
 const fanBatchEntries = (r: SeriesRecord): BatchEntry[] => (r.fans?.status === "committed" ? batchEntries(r.fans.batch) : []);
-/** Every bet that is on chain: the analysts' batch once committed, and the fans' batch once committed. */
-const allEntries = (r: SeriesRecord): BatchEntry[] => [...(r.commitDigest ? batchEntries(r.batch) : []), ...fanBatchEntries(r)];
+/** Final-call top-ups that are on chain. */
+const finalEntries = (r: SeriesRecord): BatchEntry[] => (r.finalCall?.status === "committed" ? batchEntries(r.finalCall.batch) : []);
+/** Final-call top-ups that hold AXP back until settle: on chain, or on their way there. */
+const finalOpenEntries = (r: SeriesRecord): BatchEntry[] => (r.finalCall?.status === "committed" || r.finalCall?.status === "committing" ? batchEntries(r.finalCall.batch) : []);
+/** Every bet that is on chain: the analysts' batch once committed, their final-call top-ups once committed, and the fans' batch once committed. */
+const allEntries = (r: SeriesRecord): BatchEntry[] => [...(r.commitDigest ? batchEntries(r.batch) : []), ...finalEntries(r), ...fanBatchEntries(r)];
 
 /** A settled record in the shape the points module scores: analysts and fans share each market's pool. */
 export const toSettled = (r: SeriesRecord): SettledSeries => ({
@@ -80,7 +101,7 @@ export function axpAccount(records: SeriesRecord[], player: string): AxpAccount 
   let settled = 0, open = 0;
   for (const r of records) {
     if (isFinal(r)) settled += r.axp?.[player] ?? 0;
-    else for (const e of [...(r.status === "missed" ? [] : batchEntries(r.batch)), ...fanBatchEntries(r)]) if (e.player === player) open += e.stake;
+    else for (const e of [...(r.status === "missed" ? [] : batchEntries(r.batch)), ...finalOpenEntries(r), ...fanBatchEntries(r)]) if (e.player === player) open += e.stake;
   }
   return { start: AXP_START, settled, open, available: AXP_START + settled - open };
 }
