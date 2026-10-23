@@ -59,7 +59,8 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
   const aiPool = c.aiPool; // morning stakes plus final-call top-ups
   const slipMatch = { matchId: s.matchId, teamA: s.teamA, teamB: s.teamB, logoA: c.logoA, logoB: c.logoB, bestOf: s.bestOf, block: s.block, aiPool };
   // Belief is weighted by AXP staked, not by heads; each side's payout comes from the combined pool.
-  const odds = winnerOdds(s.teamA, s.teamB, aiPool, live?.crowd.winnerPool);
+  // Open matches use the live crowd; once locked, the fans' committed batch (live drops off at lock).
+  const odds = winnerOdds(s.teamA, s.teamB, aiPool, live?.crowd.winnerPool ?? c.fanPool ?? undefined);
   const held = Object.entries(mine.winner ?? {});
   const winsOf = (t: string) => (c.result ? (c.result.winner === t ? +c.result.score.split("-")[0] : +c.result.score.split("-")[1]) : 0);
   const side = (t: string) => c.calls.filter((a) => a.winner === t);
@@ -91,7 +92,7 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
         </div>
 
         <TugBar label={odds.aiTotal ? `AI analysts · ${axpShort(odds.aiTotal)} AXP` : "AI analysts"} pctA={odds.aiPctA} empty="picks coming" />
-        <TugBar label={odds.fanTotal ? `Fans · ${axpShort(odds.fanTotal)} AXP` : "Fans"} pctA={odds.fanPctA} empty="no bets yet" />
+        <TugBar label={odds.fanTotal ? `Fans · ${axpShort(odds.fanTotal)} AXP` : "Fans"} pctA={odds.fanPctA} empty={c.status === "open" || (c.status === "committed" && !c.fanPool) ? "no bets yet" : "no fan bets"} />
 
         {c.calls.length > 0 && <div className="draft" aria-label="Which side each analyst picked">
           {[s.teamA, s.teamB].map((t, k) => (

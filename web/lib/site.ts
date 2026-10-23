@@ -28,7 +28,17 @@ export type CardData = {
   void: boolean;
   /** AXP the analysts have on each team's win: morning stakes plus committed final-call top-ups. */
   aiPool: Record<string, number>;
+  /** The fans' locked winner pool from their committed batch (null until the fans' batch is on chain). */
+  fanPool: Record<string, number> | null;
 };
+
+/** Fans' AXP on each team's win, from the batch committed at lock. */
+export function lockedFanPool(r: SeriesRecord | undefined): Record<string, number> | null {
+  if (r?.fans?.status !== "committed" || !r.fans.batch) return null;
+  const pool: Record<string, number> = {};
+  for (const e of JSON.parse(r.fans.batch).entries as { market: string; choice: string; stake: number }[]) if (e.market === "winner") pool[e.choice] = (pool[e.choice] ?? 0) + e.stake;
+  return pool;
+}
 
 /** A public art file if the user has dropped it into web/public/art, else null (a placeholder is drawn). */
 export function art(file: string): string | null {
@@ -101,6 +111,7 @@ export async function cardFor(s: Series, r: SeriesRecord | undefined): Promise<C
     result: r?.result && !isVoid ? { winner: r.result.winner, score: r.result.score } : null,
     void: isVoid,
     aiPool: aiPool(calls),
+    fanPool: lockedFanPool(r),
   };
 }
 
