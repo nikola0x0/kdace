@@ -5,17 +5,19 @@ import { useEffect, useState, type CSSProperties } from "react";
 import { Avatar, Axp, RoleIcon } from "../ui/bits";
 import Pnl from "../ui/Pnl";
 import { useFans } from "../ui/FanProvider";
+import { useChampions } from "../ui/useChampions";
 
-export type LbRow = { player: string; name: string; role?: string; /** A fan's favourite role. */ fav?: string | null; color?: string; art?: string | null; /** Balance + in play: what the board ranks by. */ total: number; net: number; inPlay: number; w: number; l: number };
-type FanApiRow = { address: string; displayName: string; avatarUrl?: string | null; favRole?: string | null; total: number; balance: number; net: number; inPlay: number };
+export type LbRow = { player: string; name: string; role?: string; /** A fan's favourite role. */ fav?: string | null; /** A fan's favourite champions. */ champs?: string[]; color?: string; art?: string | null; /** Balance + in play: what the board ranks by. */ total: number; net: number; inPlay: number; w: number; l: number };
+type FanApiRow = { address: string; displayName: string; avatarUrl?: string | null; favRole?: string | null; favChamps?: string[]; total: number; balance: number; net: number; inPlay: number };
 const fmt = (n: number) => n.toLocaleString("en-US");
 
 export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[]; fanRecords: Record<string, { w: number; l: number }> }) {
   const { me } = useFans();
+  const champ = useChampions();
   const [fans, setFans] = useState<LbRow[]>([]);
   useEffect(() => {
     fetch("/api/leaderboard").then((r) => (r.ok ? r.json() : { fans: [] })).then((b: { fans: FanApiRow[] }) =>
-      setFans(b.fans.map((f) => ({ player: `fan:${f.address}`, name: f.displayName, art: f.avatarUrl ?? null, fav: f.favRole ?? null, total: f.total, net: f.net, inPlay: f.inPlay, w: fanRecords[f.address]?.w ?? 0, l: fanRecords[f.address]?.l ?? 0 }))),
+      setFans(b.fans.map((f) => ({ player: `fan:${f.address}`, name: f.displayName, art: f.avatarUrl ?? null, fav: f.favRole ?? null, champs: f.favChamps ?? [], total: f.total, net: f.net, inPlay: f.inPlay, w: fanRecords[f.address]?.w ?? 0, l: fanRecords[f.address]?.l ?? 0 }))),
     ).catch(() => {});
   }, [fanRecords]);
 
@@ -54,7 +56,7 @@ export default function Leaderboard({ analysts, fanRecords }: { analysts: LbRow[
             {r.role ? (
               <Link href={`/analysts/${r.role}`} className="who">{who(r, 30)}{r.name} <RoleIcon role={r.role} /><span className="tag">AI</span></Link>
             ) : (
-              <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
+              <span className="who">{who(r, 30)}{r.name}{r.fav && <RoleIcon role={r.fav} />}{r.champs?.map((c) => champ.icon(c) && <img key={c} src={champ.icon(c)!} alt={champ.name(c)} title={champ.name(c)} className="size-5 rounded-full border border-border object-cover" />)}{i === mineIdx ? <span className="tag you">You</span> : <span className="tag">Fan</span>}</span>
             )}
             <b className="num bal"><Axp size={15} /> {fmt(r.total)}</b>
             <span title={`${r.net > 0 ? "+" : ""}${fmt(r.net)} AXP · ${r.w}–${r.l}`}><Pnl net={r.net} /></span>

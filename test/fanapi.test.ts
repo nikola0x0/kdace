@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from "jose";
 import { jwtToAddress } from "@mysten/sui/zklogin";
-import { activity, getMe, setAvatar, setFavRole, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
+import { activity, getMe, setAvatar, setFavChamps, setFavRole, googleSignIn, issueNonce, leaderboardFans, listPicks, postPick, sessionAddress, signIn, type FanApiDeps } from "../src/core/fanapi.ts";
 import { verifyGoogleIdToken, zkLoginSalt } from "../src/core/google.ts";
 import { signToken } from "../src/core/session.ts";
 import type { Series } from "../src/core/worlds.ts";
@@ -259,7 +259,7 @@ describe("getMe", () => {
     await postPick(deps, A, { matchId: "x", market: "winner", choice: "GEN", stake: 400 });
     const r = await getMe(deps, A);
     expect(r.body).toEqual({
-      address: A, suinsName: "nikola.sui", displayName: "nikola.sui", avatarUrl: null, favRole: null,
+      address: A, suinsName: "nikola.sui", displayName: "nikola.sui", avatarUrl: null, favRole: null, favChamps: [],
       picks: [{ matchId: "x", market: "winner", choice: "GEN", stake: 400, updatedAt: "2026-10-23T12:00:00.000Z" }],
       axp: { start: 10000, settled: 750, open: 400, available: 10350 },
     });
@@ -311,6 +311,26 @@ describe("setAvatar", () => {
   });
 });
 
+describe("setFavChamps", () => {
+  it("saves up to two favourite champions (deduplicated) and shows them on the profile and leaderboard", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    expect((await setFavChamps(deps, A, { favChamps: ["Ahri", "JarvanIV", "Ahri"].slice(0, 2) })).body).toEqual({ favChamps: ["Ahri", "JarvanIV"] });
+    expect((await getMe(deps, A)).body).toMatchObject({ favChamps: ["Ahri", "JarvanIV"] });
+    expect((await leaderboardFans(deps)).body).toMatchObject({ fans: [{ address: A, favChamps: ["Ahri", "JarvanIV"] }] });
+    expect((await setFavChamps(deps, A, { favChamps: ["Lulu", "Lulu"] })).body).toEqual({ favChamps: ["Lulu"] });
+    expect((await setFavChamps(deps, A, { favChamps: [] })).body).toEqual({ favChamps: [] });
+  });
+  it("rejects more than two, anything that isn't a champion id, and signed-out callers", async () => {
+    const { deps } = fakes();
+    await signedIn(deps);
+    expect((await setFavChamps(deps, A, { favChamps: ["Ahri", "Lulu", "Vi"] })).status).toBe(400);
+    expect((await setFavChamps(deps, A, { favChamps: ["<img src=x>"] })).status).toBe(400);
+    expect((await setFavChamps(deps, A, { favChamps: "Ahri" })).status).toBe(400);
+    expect((await setFavChamps(deps, null, { favChamps: ["Ahri"] })).status).toBe(401);
+  });
+});
+
 describe("leaderboardFans", () => {
   it("lists every signed-in fan at 10,000 AXP plus settled results, with AXP in open positions", async () => {
     const { deps, db } = fakes();
@@ -321,7 +341,7 @@ describe("leaderboardFans", () => {
     const r = await leaderboardFans(deps);
     expect(r.status).toBe(200);
     expect((r.body as { fans: unknown[] }).fans).toEqual(expect.arrayContaining([
-      { address: A, displayName: "nikola.sui", avatarUrl: null, favRole: null, total: 10000, balance: 9700, net: 0, inPlay: 300 },
+      { address: A, displayName: "nikola.sui", avatarUrl: null, favRole: null, favChamps: [], total: 10000, balance: 9700, net: 0, inPlay: 300 },
       expect.objectContaining({ address: B, total: 10420, balance: 10420, net: 420, inPlay: 0 }),
     ]));
   });

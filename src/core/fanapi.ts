@@ -174,7 +174,7 @@ export async function leaderboardFans(deps: FanApiDeps): Promise<ApiResult> {
   for (const p of await deps.db.picksFor(openIds)) if (isOpenPick(p, commits, series)) inPlay[p.address] = (inPlay[p.address] ?? 0) + p.stake;
   return {
     status: 200,
-    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, total: AXP_START + f.axpSettled, balance: AXP_START + f.axpSettled - (inPlay[f.address] ?? 0), net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
+    body: { fans: fans.map((f) => ({ address: f.address, displayName: displayName(f.address, f.suinsName), avatarUrl: f.avatarUrl, favRole: f.favRole, favChamps: f.favChamps, total: AXP_START + f.axpSettled, balance: AXP_START + f.axpSettled - (inPlay[f.address] ?? 0), net: f.axpSettled, inPlay: inPlay[f.address] ?? 0 })) },
   };
 }
 
@@ -185,7 +185,7 @@ export async function activity(deps: FanApiDeps, opts: { matchId?: string; limit
   return {
     status: 200,
     body: {
-      buys: buys.map((b) => ({ id: b.id, matchId: b.matchId, market: b.market, choice: b.choice, amount: b.amount, at: b.at, address: b.address, name: displayName(b.address, fans.get(b.address)?.suinsName), avatarUrl: fans.get(b.address)?.avatarUrl ?? null, favRole: fans.get(b.address)?.favRole ?? null })),
+      buys: buys.map((b) => ({ id: b.id, matchId: b.matchId, market: b.market, choice: b.choice, amount: b.amount, at: b.at, address: b.address, name: displayName(b.address, fans.get(b.address)?.suinsName), avatarUrl: fans.get(b.address)?.avatarUrl ?? null, favRole: fans.get(b.address)?.favRole ?? null, favChamps: fans.get(b.address)?.favChamps ?? [] })),
     },
   };
 }
@@ -197,7 +197,7 @@ export async function getMe(deps: FanApiDeps, address: string | null): Promise<A
   const axp = await fanAxp(deps, address, { picks: rows, commits: await deps.db.listCommits(), series: await deps.fetchSeries() });
   const picks = rows.map(({ matchId, market, choice, stake, updatedAt }) => ({ matchId, market, choice, stake, updatedAt }));
   const fan = await deps.db.getFan(address);
-  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), avatarUrl: fan?.avatarUrl ?? null, favRole: fan?.favRole ?? null, picks, axp } };
+  return { status: 200, body: { address, suinsName, displayName: displayName(address, suinsName), avatarUrl: fan?.avatarUrl ?? null, favRole: fan?.favRole ?? null, favChamps: fan?.favChamps ?? [], picks, axp } };
 }
 
 const AVATAR_MAX_BYTES = 200 * 1024;
@@ -218,6 +218,16 @@ export async function setAvatar(deps: FanApiDeps, address: string | null, body: 
   if (bytes.length > AVATAR_MAX_BYTES) return fail(400, "That image is too big (200 KB max).");
   if (!AVATAR_TYPES[m[1]](bytes)) return fail(400, "Use a JPG, PNG or WebP image.");
   return { status: 200, body: { avatarUrl: await deps.db.setCustomAvatar(address, { bytes, type: m[1] }) } };
+}
+
+/** Sets up to two favourite champions by Data Dragon id (letters only, like "JarvanIV"); duplicates collapse. */
+export async function setFavChamps(deps: FanApiDeps, address: string | null, body: unknown): Promise<ApiResult> {
+  if (!address) return fail(401, "Not signed in.");
+  const raw = (body as { favChamps?: unknown } | null)?.favChamps;
+  if (!Array.isArray(raw) || raw.length > 2 || !raw.every((c) => typeof c === "string" && /^[A-Za-z]{2,24}$/.test(c))) return fail(400, "Pick up to two champions.");
+  const champs = [...new Set(raw as string[])];
+  await deps.db.setFavChamps(address, champs);
+  return { status: 200, body: { favChamps: champs } };
 }
 
 export const FAV_ROLES = ["top", "jungle", "mid", "adc", "support"] as const;

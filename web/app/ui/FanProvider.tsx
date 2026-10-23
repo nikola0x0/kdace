@@ -16,6 +16,8 @@ export type Me = {
   avatarUrl?: string | null;
   /** The role the fan cheers for (top, jungle, mid, adc, support). */
   favRole?: string | null;
+  /** Up to two favourite champions (Data Dragon ids). */
+  favChamps?: string[];
   picks: { matchId: string; market: string; choice: string; stake?: number; updatedAt: string }[];
   axp?: { start: number; settled: number; open: number; available: number };
 };
@@ -35,7 +37,7 @@ type FanState = {
   signIn(): void;
   signOut(): Promise<void>;
   /** Sets your favourite role and/or photo (a data URL, or null to remove it). */
-  updateProfile(patch: { favRole?: string | null; image?: string | null }): Promise<boolean>;
+  updateProfile(patch: { favRole?: string | null; image?: string | null; favChamps?: string[] }): Promise<boolean>;
 };
 
 export const AXP_START = 10_000;
@@ -95,8 +97,8 @@ export default function FanProvider({ children }: { children: React.ReactNode })
   }, [refresh]);
 
   const updateProfile = useCallback(
-    async (patch: { favRole?: string | null; image?: string | null }) => {
-      const r = await api<{ favRole?: string | null; avatarUrl?: string | null }>("/api/me", { method: "POST", body: JSON.stringify(patch) });
+    async (patch: { favRole?: string | null; image?: string | null; favChamps?: string[] }) => {
+      const r = await api<{ favRole?: string | null; avatarUrl?: string | null; favChamps?: string[] }>("/api/me", { method: "POST", body: JSON.stringify(patch) });
       if (!r.ok) {
         say(r.body.error ?? "That didn't save. Please try again.", "error");
         return false;

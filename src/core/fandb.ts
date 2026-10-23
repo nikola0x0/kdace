@@ -25,6 +25,8 @@ export type FanRow = {
   avatarUrl?: string | null;
   /** The role the fan cheers for (top, jungle, mid, adc, support), or null. */
   favRole?: string | null;
+  /** Up to two favourite champions (Data Dragon ids). */
+  favChamps?: string[];
 };
 
 /** One fan batch per series. Written before the chain call (`committing`) and after it (`committed`), like src/jobs/pick.ts. */
@@ -46,9 +48,11 @@ export type FanCommitRow = {
 export interface FanDb {
   getFan(address: string): Promise<FanRow | null>;
   /** Every fan with their cached SuiNS name and settled AXP, for the leaderboard. */
-  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number; avatarUrl: string | null; favRole: string | null }[]>;
+  listFans(): Promise<{ address: string; suinsName: string | null; axpSettled: number; avatarUrl: string | null; favRole: string | null; favChamps: string[] }[]>;
   /** Stores a profile photo the fan uploaded and points their avatar at it (null clears the avatar). Returns the URL. */
   setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null): Promise<string | null>;
+  /** Sets the fan's favourite champions (up to two ids, already validated). */
+  setFavChamps(address: string, champs: string[]): Promise<void>;
   /** Sets (or with null clears) the fan's favourite role. */
   setFavRole(address: string, role: string | null): Promise<void>;
   /** Creates the fan row if it doesn't exist yet. With `auth`, also records how they signed in (a salt, once set, is kept). */
@@ -108,8 +112,8 @@ export class SupabaseFanDb implements FanDb {
     return (json as Record<string, unknown>[]).map((r) => fromRow<BuyRow>(r));
   }
   async listFans() {
-    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url,fav_role");
-    return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null; fav_role: string | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null, favRole: r.fav_role ?? null }));
+    const { json } = await this.req("GET", "fans?select=address,suins_name,axp_settled,avatar_url,fav_role,fav_champs");
+    return (json as { address: string; suins_name: string | null; axp_settled: number; avatar_url: string | null; fav_role: string | null; fav_champs: string[] | null }[]).map((r) => ({ address: r.address, suinsName: r.suins_name, axpSettled: r.axp_settled ?? 0, avatarUrl: r.avatar_url ?? null, favRole: r.fav_role ?? null, favChamps: r.fav_champs ?? [] }));
   }
   async setCustomAvatar(address: string, image: { bytes: Uint8Array; type: string } | null) {
     let url: string | null = null;
@@ -125,6 +129,9 @@ export class SupabaseFanDb implements FanDb {
     }
     await this.req("PATCH", `fans?address=${eq(address)}`, { avatar_url: url }, "return=minimal");
     return url;
+  }
+  async setFavChamps(address: string, champs: string[]) {
+    await this.req("PATCH", `fans?address=${eq(address)}`, { fav_champs: champs }, "return=minimal");
   }
   async setFavRole(address: string, role: string | null) {
     await this.req("PATCH", `fans?address=${eq(address)}`, { fav_role: role }, "return=minimal");

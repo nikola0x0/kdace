@@ -1,7 +1,7 @@
 "use client";
 // Header account: the AXP pill (balance you can still bet), and an account menu (avatar, name, chevron) with your
 // photo, wallet address, favourite role, balance, AXP in play, your bets, the leaderboard and sign-out.
-import { Camera, Check, ChevronDown, Copy, LogOut, Ticket, Trophy } from "lucide-react";
+import { Camera, Check, ChevronDown, Copy, LogOut, Pencil, Ticket, Trophy } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -17,8 +17,10 @@ import {
 import { cn } from "@/lib/utils";
 import { PERSONAS } from "../../lib/personas";
 import { Axp, RoleIcon } from "./bits";
+import ChampPicker from "./ChampPicker";
 import Pnl from "./Pnl";
 import { useFans } from "./FanProvider";
+import { useChampions } from "./useChampions";
 
 /** Center-crops a picked photo to a 256px square, WebP where the browser can encode it (JPEG otherwise). */
 async function squarePhoto(file: File): Promise<string> {
@@ -39,6 +41,8 @@ export default function UserButton() {
   const fileRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [champsOpen, setChampsOpen] = useState(false);
+  const { icon, name } = useChampions();
   if (!ready) return <span style={{ width: 88 }} />;
   if (!me) return <button className="btn sm" onClick={signIn}>Sign in</button>;
 
@@ -75,6 +79,7 @@ export default function UserButton() {
       <Link href="/me" className="axp-pill" title="Your balance: AXP you can still bet">
         <Axp size={18} /><b className="num">{available.toLocaleString("en-US")}</b><Pnl net={settled} hideZero className="text-[11px]" />
       </Link>
+      <ChampPicker open={champsOpen} onOpenChange={setChampsOpen} />
       <input ref={fileRef} type="file" accept="image/png,image/jpeg,image/webp" hidden onChange={(e) => pickPhoto(e.target.files?.[0])} />
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger className="flex h-9 items-center gap-2 rounded-full border border-input bg-secondary py-1 pl-1 pr-2.5 text-sm font-semibold transition-colors hover:border-neutral-500 hover:bg-accent data-[state=open]:border-neutral-500">
@@ -117,6 +122,16 @@ export default function UserButton() {
               })}
             </div>
           </div>
+
+          <button type="button" onClick={() => setChampsOpen(true)} className="mx-2 mb-2 flex w-[calc(100%-1rem)] items-center gap-2 rounded-lg bg-secondary px-2.5 py-2 text-left text-xs transition-colors hover:bg-accent">
+            <span className="text-muted-foreground">Your mains</span>
+            <span className="ml-auto flex items-center gap-1">
+              {(me.favChamps ?? []).length
+                ? me.favChamps!.map((c) => icon(c) && <img key={c} src={icon(c)!} alt={name(c)} title={name(c)} className="size-6 rounded-full border border-border object-cover" />)
+                : <span className="text-foreground">Pick up to 2</span>}
+              <Pencil className="ml-1 size-3.5 text-muted-foreground" />
+            </span>
+          </button>
 
           <div className="mx-2 mb-1.5 grid grid-cols-2 gap-1.5 text-xs">
             <div className="rounded-md bg-secondary px-2.5 py-2">
