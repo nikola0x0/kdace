@@ -17,6 +17,7 @@ export function loadScout(dir = SCOUT_DIR): ScoutData | null {
 /** The prompt digest for a matchup plus region strength and Worlds history, or null when Scout data hasn't been generated. */
 export function scoutDigest(teamA: string, teamB: string, data: ScoutData | null = loadScout()): string | null {
   if (!data) return null;
-  const home = (code: string) => ({ code, home: data.teams[code]?.homeLeague ?? null });
-  return [digestFor(teamA, teamB, data.teams, data.series, data.games), ...pedigreeLines(home(teamA), home(teamB))].join("\n");
+  const homes = Object.fromEntries(Object.values(data.teams).map((t) => [t.code, t.homeLeague]));
+  const side = (code: string) => ({ code, home: homes[code] ?? null });
+  return [digestFor(teamA, teamB, data.teams, data.series, data.games), ...pedigreeLines(side(teamA), side(teamB), data.series, homes)].join("\n");
 }

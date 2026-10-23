@@ -79,7 +79,7 @@ export function buildTitlePrompt(a: Analyst, alive: string[], field: string[], h
   return `You are the ${a.name} analyst on KDAce, a LoL Worlds 2026 prediction board. Your voice: ${a.voice}
 Core belief: ${a.belief}
 
-Teams still alive at Worlds 2026 (region strength is a VERY BIG factor and records from different leagues are not comparable: LCK and LPL are the strongest regions, then LEC, then LCS, LCP and CBLOL; Worlds history counts):
+Teams still alive at Worlds 2026 (region strength is a VERY BIG factor and records from different leagues are not comparable; Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0):
 ${field.join("\n")}
 
 Results so far this tournament:

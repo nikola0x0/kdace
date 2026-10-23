@@ -1,9 +1,10 @@
-// Context Scout's 2026-only numbers can't show: how strong each home region is at Worlds, and each team's Worlds
-// history. Without it a 23-9 record in a smaller league reads the same as 25-14 in the LCK. Facts are pre-2026 and
-// static; update after each Worlds.
+// Context Scout's per-team numbers can't show on their own: how strong each home region is, measured from real
+// cross-region series (2026 internationals in Scout's data), plus each team's Worlds history. Without it a 23-9 record
+// in a smaller league reads the same as 25-14 in the LCK. The Worlds history is static and pre-2026.
+import type { SeriesResult } from "./scout.ts";
 
-/** How strong each region has been at Worlds (1 = strongest). */
-const REGION_TIER: Record<string, 1 | 2 | 3> = { LCK: 1, LPL: 1, LEC: 2, LCS: 3, LCP: 3, CBLOL: 3 };
+type Rec = { w: number; l: number };
+type Side = { code: string; home: string | null };
 
 /** Worlds titles and lost finals before 2026, for teams at Worlds 2026 (organisation lineage noted where it differs). */
 export const WORLDS_HISTORY: Record<string, { titles: number[]; finals: number[]; note?: string }> = {
@@ -14,40 +15,56 @@ export const WORLDS_HISTORY: Record<string, { titles: number[]; finals: number[]
   G2: { titles: [], finals: [2019] },
   BLG: { titles: [], finals: [2024] },
 };
+/** Worlds champions by region, 2013-2025. */
+const TITLES_BY_REGION = "LCK 10, LPL 3, every other region 0";
 
 const league = (home: string | null) => (home ?? "").replace(/ 2026$/, "");
+const DOMESTIC = /^(LCK|LPL|LEC|LCS|CBLOL|LCP)\b/;
+const pct = (r: Rec) => Math.round((r.w / (r.w + r.l)) * 100);
+const fmt = (r: Rec) => `${r.w}-${r.l}`;
 
-function teamLine(code: string, home: string | null): string {
-  const h = WORLDS_HISTORY[code];
-  const tier = REGION_TIER[league(home)];
-  const region = home ? `${league(home)} (${tier === 1 ? "one of the two strongest regions" : tier === 2 ? "second-tier region" : tier === 3 ? "weaker region at Worlds" : "region"})` : "unknown region";
-  if (!h) return `${code}: ${region}; no Worlds titles or finals before 2026.`;
+/** Cross-region series records from international events: per region, and per region pair ("A|B" from A's side). */
+export function regionRecords(series: SeriesResult[], homes: Record<string, string | null>) {
+  const byRegion: Record<string, Rec> = {};
+  const pair: Record<string, Rec> = {};
+  for (const s of series) {
+    if (s.state !== "completed" || !s.winner || DOMESTIC.test(s.league)) continue;
+    const a = league(homes[s.teamA] ?? null), b = league(homes[s.teamB] ?? null);
+    if (!a || !b || a === b) continue;
+    const [w, l] = s.winner === s.teamA ? [a, b] : [b, a];
+    (byRegion[w] ??= { w: 0, l: 0 }).w++;
+    (byRegion[l] ??= { w: 0, l: 0 }).l++;
+    (pair[`${w}|${l}`] ??= { w: 0, l: 0 }).w++;
+    (pair[`${l}|${w}`] ??= { w: 0, l: 0 }).l++;
+  }
+  return { byRegion, pair };
+}
+
+function teamLine(t: Side): string {
+  const h = WORLDS_HISTORY[t.code];
+  const region = league(t.home) || "unknown region";
+  if (!h) return `${t.code} (${region}): no Worlds titles or finals before 2026.`;
   const parts = [
     h.titles.length ? `${h.titles.length} Worlds title${h.titles.length > 1 ? "s" : ""} (${h.titles.join(", ")})` : "no Worlds titles",
     h.finals.length ? `lost final${h.finals.length > 1 ? "s" : ""} ${h.finals.join(", ")}` : null,
     h.titles.includes(2025) ? "reigning world champion" : null,
     h.note ?? null,
   ].filter(Boolean);
-  return `${code}: ${region}; ${parts.join("; ")}.`;
+  return `${t.code} (${region}): ${parts.join("; ")}.`;
 }
 
-/** One line on the region gap between two teams, when there is one. */
-export function regionGap(a: { code: string; home: string | null }, b: { code: string; home: string | null }): string | null {
-  const ta = REGION_TIER[league(a.home)], tb = REGION_TIER[league(b.home)];
-  if (!ta || !tb || ta === tb) return null;
-  const [strong, weak] = ta < tb ? [a, b] : [b, a];
-  const gap = Math.abs(ta - tb);
-  return `REGION GAP: ${strong.code} (${league(strong.home)}) is ${gap === 2 ? "two tiers" : "a tier"} above ${weak.code} (${league(weak.home)}). This is a VERY BIG factor: at Worlds, teams from the weaker region rarely beat the stronger region's teams${gap === 2 ? ", and a two-tier gap usually makes the stronger team a clear favourite (around 75-85%)" : ""}, whatever their domestic records say. Only clear international results should move you off it.`;
-}
-
-/** The context block appended to a matchup digest. */
-export function pedigreeLines(a: { code: string; home: string | null }, b: { code: string; home: string | null }): string[] {
-  const gap = regionGap(a, b);
-  return [
-    ...(gap ? [gap] : []),
-    "Context beyond 2026 (records from different leagues are NOT directly comparable):",
-    "  Region strength at Worlds: LCK and LPL strongest, then LEC, then LCS, LCP and CBLOL. Form and records earned in a weaker league count for less; international results count most.",
-    `  ${teamLine(a.code, a.home)}`,
-    `  ${teamLine(b.code, b.home)}`,
-  ];
+/** The context block appended to a matchup digest: region strength from real results, then Worlds history. */
+export function pedigreeLines(a: Side, b: Side, series: SeriesResult[] = [], homes: Record<string, string | null> = {}): string[] {
+  const { byRegion, pair } = regionRecords(series, homes);
+  const ra = league(a.home), rb = league(b.home);
+  const lines = ["Region strength (a VERY BIG factor: domestic records from different leagues are NOT comparable; international results count most):"];
+  const table = Object.entries(byRegion).sort(([, x], [, y]) => pct(y) - pct(x) || y.w - x.w).map(([r, rec]) => `${r} ${fmt(rec)}`);
+  if (table.length) lines.push(`  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): ${table.join(", ")}.`);
+  if (ra && rb && ra !== rb) {
+    const h2h = pair[`${ra}|${rb}`];
+    const recA = byRegion[ra], recB = byRegion[rb];
+    lines.push(`  This matchup is ${ra} vs ${rb}: ${h2h ? `${ra} went ${fmt(h2h)} against ${rb} in 2026` : `no ${ra} vs ${rb} series in 2026`}${recA && recB ? `; ${ra} ${pct(recA)}% vs ${rb} ${pct(recB)}% against other regions overall` : ""}.`);
+  } else if (ra && ra === rb) lines.push(`  Both teams are from ${ra}, so their domestic records are directly comparable.`);
+  lines.push(`  Worlds champions by region since 2013: ${TITLES_BY_REGION}.`, `  ${teamLine(a)}`, `  ${teamLine(b)}`);
+  return lines;
 }
