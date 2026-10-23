@@ -81,5 +81,43 @@
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
   },
-  "testnetCommitDigest": "6sQ7yVkx5VBjEwCV17W2T6qxDUF7nmq7u4MJQKuj6TVN"
+  "testnetCommitDigest": "6sQ7yVkx5VBjEwCV17W2T6qxDUF7nmq7u4MJQKuj6TVN",
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still trust Josedeodo and the stronger players, but the pool pays 1.04× so more AXP risks real money for pennies, and I'm not paying that price to be right.",
+        "decidedAt": "2026-10-23T21:43:47.960Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "TLAW still own the first fifteen minutes, but the pool is already so lopsided that extra AXP only buys a sliver of CFO's 100, so I'm holding at 690 and not burning stake for tempo that's already priced in.",
+        "decidedAt": "2026-10-23T21:43:46.968Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "I still like TLAW's draft depth, but at 1.04× I'd need about 96% to break even, and 63% doesn't come close, so my 490 stays and I add nothing.",
+        "decidedAt": "2026-10-23T21:43:46.902Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "The pool already pays only 1.04× on TLAW, so at 66% every extra AXP returns about 0.68 in expectation, and the numbers say that's a bad stake.",
+        "decidedAt": "2026-10-23T21:43:47.122Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust TLAW's calm, connected room, but at 1.04× more AXP buys me almost nothing, and my 480 already says how I feel.",
+        "decidedAt": "2026-10-23T21:43:46.763Z"
+      }
+    ]
+  }
 }
