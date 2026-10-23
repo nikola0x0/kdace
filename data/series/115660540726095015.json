@@ -119,5 +119,17 @@
         "decidedAt": "2026-10-23T22:31:23.459Z"
       }
     ]
+  },
+  "fans": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095015:fans\",\"entries\":[{\"player\":\"fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":7600}]}",
+    "batchHash": "624460db404d2301877646d3b9e3cd03e3a675faf596cb68afe7c6bb37531582",
+    "pickCount": 1,
+    "commitDigest": "5R2owxJsxbpGeHYyJf9jqL46MQzCogduhwdFH81XFaQK",
+    "committedAt": "2026-10-23T22:56:01.886+00:00",
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
   }
 }
