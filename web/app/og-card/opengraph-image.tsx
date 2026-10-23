@@ -1,4 +1,4 @@
-// Source of the link preview card: open /og-card/opengraph-image, save it, and compress it to public/og.jpg (the site's
+// Source of the link preview card: open /og-card/opengraph-image, save it, and compress it to public/og-v2.jpg (bump the name on every change, since apps cache by URL) (the site's
 // og:image; a JPEG stays small enough for WhatsApp). Kept as a route so the card can be re-rendered after changes.
 // Rendered once at build time; fonts come from Google Fonts, art from og-assets/.
 import { readFileSync } from "node:fs";
@@ -30,7 +30,6 @@ export default async function Image() {
         <img src={asset("trophy.jpg")} width={760} height={595} style={{ position: "absolute", right: -110, top: 18, objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", background: "linear-gradient(90deg, #000 38%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0) 80%)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", background: "linear-gradient(0deg, #000 0%, rgba(0,0,0,0) 28%)" }} />
-        <span style={{ position: "absolute", right: 56, bottom: 52, fontSize: 26, color: "#4ade80" }}>kdace.xyz</span>
         <div style={{ position: "relative", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "56px 64px", width: 760 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <img src={`data:image/svg+xml;base64,${Buffer.from(LOGO).toString("base64")}`} width={52} height={52} />
