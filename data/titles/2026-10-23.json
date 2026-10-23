@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-23",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "HLE"
+      ],
+      "reasoning": "Gen.G has the strongest roster left in the field, and the LCK has won 10 of the 13 Worlds since 2013. Their game record is the most dominant of the LCK teams. BLG looks great on paper, but I don't trust LPL stat-padding when the crowd is this hyped, and the best players beat the best systems in a Bo5. T1's form is a mess, and I'm not buying the nostalgia.",
+      "pickedAt": "2026-10-23T07:30:07.191Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "HLE"
+      ],
+      "reasoning": "Gen.G is my pick because they snowball the first 15 minutes better than anyone: they take first drake and Herald, get the jungle tempo, and then convert it with clean LCK macro. BLG has the LPL's best early map control and is the biggest threat, but the LCK has won 10 of the 13 Worlds titles and I'm not betting against that. Gen.G's 88-32 game record shows how often they win the early game.",
+      "pickedAt": "2026-10-23T07:30:09.422Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "HLE"
+      ],
+      "reasoning": "Gen.G has the deepest champion pool in the field, and that matters most when Fearless Draft starts taking comfort picks away by game 4. They're 88-32 in games with a 5-1 record against other regions, and the LCK has taken 10 of the 13 Worlds titles. BLG is the only team I'd call a real threat from the LPL, since the bracket could easily put them in the way.",
+      "pickedAt": "2026-10-23T07:30:13.493Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 20,
+      "contenders": [
+        "BLG",
+        "HLE"
+      ],
+      "reasoning": "Gen.G is my pick: 88-32 in games this year, and the LCK has taken 10 of the 13 Worlds titles, so I trust them more than anyone else here. BLG is the closest challenger with a huge LPL record and a strong GD@15, but I won't put them above an LCK side with this much region history behind it. With 16 teams left, I'm keeping the probability modest.",
+      "pickedAt": "2026-10-23T07:30:15.653Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "HLE"
+      ],
+      "reasoning": "Gen.G just feel like the team that has it all figured out: they win with calm and trust in each other, the kind of room where everyone knows their job and nobody's rattled when a game slips. BLG have the form and the swagger, and LCK sides have a long habit of showing up on the Worlds stage, but I'll back the steadiest locker room, 88-32 in games and not a lot of drama.",
+      "pickedAt": "2026-10-23T07:30:18.547Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-23\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0}]}",
+  "batchHash": "6e2086006f33ab514e170ec948ba08f9d3d3a1ece4dbecc8d16a48c3103e84f1",
+  "commitDigest": "7YSJBvzLRT39fHsKAnGwmixJXUHMZkZfPD2fsF9ghqtt",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

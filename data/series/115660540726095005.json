@@ -1,0 +1,84 @@
+{
+  "series": {
+    "matchId": "115660540726095005",
+    "startTime": "2026-10-23T17:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "GEN",
+    "teamB": "IG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "Chovy is the best mid laner on the planet, and Ruler is waiting behind him. Gen.G has the stronger players in nearly every lane, and that wins a single game. IG have Rookie, sure, but one star doesn't beat a whole lineup of them, and the LCK side carries the bigger gap here. I'm not buying any hype around an IG upset.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:09.621Z",
+      "thinking": "",
+      "stake": 2200
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "Early tempo is everything, and GEN's jungle-mid duo can grab first objectives, flip the map and snowball it from there. Chovy keeps lane priority, so the jungler gets to pick the first dragon and Herald fights. IG only competes if Rookie wins lane and Naafiri finds early picks, but the big region gap pushes me firmly to GEN.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:14.413Z",
+      "thinking": "",
+      "stake": 1800
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "Draft is where this one gets decided, and GEN walk in with the deeper book: Chovy on Ryze or Syndra, a jungle and support pairing that knows exactly how to build around him, and plenty of comfort picks to fall back on if Fearless takes the first options away. IG have Rookie and some real fight in them, but GEN's mid-jungle priority should shape the draft, and in a Bo1 Chovy's control of the tempo is the difference.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:17.881Z",
+      "thinking": "",
+      "stake": 2000
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 76,
+      "reasoning": "Numbers over stories, and this one isn't close: GEN have lost just 10 series all year while IG have lost 25, and Chovy's steady hand in a best of 1 is exactly what you want. IG's Rookie can absolutely pop off, and that LCK 2-4 against the LPL keeps me from going higher, but GEN's control is the call.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:23.125Z",
+      "thinking": "GEN's the pick here — 37-10 overall against IG's 18-25 is a big gap, and even with that LCK-vs-LPL regional wrinkle in mind, I'd put GEN around 76% favorites. Keeping the numbers tight and the tone confident without just reciting the report back.",
+      "stake": 2600
+    },
+    {
+      "player": "analyst-support",
+      "winner": "GEN",
+      "score": null,
+      "winProbability": 72,
+      "reasoning": "What I see in this Gen.G room is a group that's been through the fire and found each other: they've pulled games back from the brink, and a team that stays calm when things go sideways is a joy to watch. IG has real spark and Rookie can light up any stage, but the feeling around them is more up-and-down, and in a one-game Swiss showdown I trust the steadier, tighter locker room.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:27.652Z",
+      "thinking": "",
+      "stake": 2200
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095005\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2600,\"thought\":\"24149ad49aad494fbb597aac95c0f90cf9895fa53354416ca29afbef3f1161ad\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800,\"thought\":\"d1754676924d076a68ca5ec95e4f09e2366371308123ac5b54162b5594e5d405\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2000,\"thought\":\"fb06b41128d916974e83776c5a4143ccd0fea621e4989a4e7723d8c2cf6a533f\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2200,\"thought\":\"55395069ecf5c699ace305f67308a61b31abdab17cda337230c1cb154e7f1c24\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2200,\"thought\":\"e9523e0b16a797bcb5aedcff5f02d0fd80a7576b520dfc50529c54ca43981070\"}]}",
+  "batchHash": "ce3541d4763d074f5b746bdc70294678f2827874b23b868172a6cc9395a2ee71",
+  "commitDigest": "8KLoMdVtZo4eUggNCEgHTSWBtZ2EBL6PkTEkNasHRPKk",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: GEN vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 37-10, games 88-32 | last 10 (newest first) WWWLWWWWWL\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · vs other regions 5-1\n  Last 20 games (15-5): GD@15 +0.6k, FB 30%, FT 65%, FD 55%, dragons 60%, 34.2 min avg, 1st baron 27:30\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 17\n  Picks: TOP Olaf 3, Ambessa 2, Gwen 2 | JG Lee Sin 4, Jarvan IV 3, Cho'Gath 2 | MID Ryze 5, Syndra 3, Akali 2 | BOT Ezreal 3, Kalista 3, Ashe 2 | SUP Seraphine 4, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.6 over 20 games, 25% dmg share\nIG [LPL]: 2026 series 18-25, games 57-67 | last 10 (newest first) WLLWWWWLWW\n  LPL 2026 18-25\n  Last 20 games (12-8): GD@15 +0.0k, FB 30%, FT 40%, FD 45%, dragons 48%, 32.6 min avg, 1st baron 26:36\n  Leads @15 converted 6/6, comeback wins 3, throws 1, objectives taken while 1k+ behind 14\n  Picks: TOP Gnar 3, Rumble 3, Gwen 2 | JG Naafiri 4, Maokai 3, Jarvan IV 2 | MID Syndra 4, Aurora 3, Orianna 2 | BOT Aphelios 3, Yunara 3, Ashe 2 | SUP Lulu 4, Seraphine 3, Thresh 3\n  Standout: IGRookie (mid) KDA 5.2 over 20 games, 25% dmg share\nHead-to-head 2026: none\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN came back from -4.8k at 36:00 vs T1 (LCK 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely quadra kill: IGJiaQi (Ezreal) at 29:33 (vs JDG, LPL 2026)\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCK vs LPL: LCK went 2-4 against LPL in 2026; LCK 68% vs LPL 64% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  IG (LPL): 1 Worlds title (2018).",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

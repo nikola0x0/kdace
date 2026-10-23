@@ -1,0 +1,84 @@
+{
+  "series": {
+    "matchId": "115660540726095013",
+    "startTime": "2026-10-23T18:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "HLE",
+    "teamB": "TES",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "Zeka in the mid lane is the best individual player on this Summoner's Rift, and in a one-game Swiss match that matters more than anything else. HLE also come in from the stronger region, which is a big edge here, and TES have no star who can answer him. I'm not buying any hype about TES scrapping back from behind. You can't count on comebacks when the other team has the better players.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:35.069Z",
+      "thinking": "",
+      "stake": 1400
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "Tempo is everything, and HLE are the team that actually plays the first fifteen minutes like they own the map. Kanavi sets the pace, Zeka is rolling on mid priority, and they're grabbing first tower and dragon way more often than TES. TES love to fight early for blood but can't turn it into objectives, and that's a recipe for getting out-tempoed. The LCK vs LPL gap is a big factor and it points to HLE too, though TES's scrappy comeback habit keeps this from being a lock.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:38.427Z",
+      "thinking": "",
+      "stake": 1480
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "Draft is where this game gets decided, and HLE walk in with the deeper, more flexible book: Zeka can play Orianna or Syndra, and they have enough jungle and top options to stay comfortable once Fearless starts taking champions away. TES lean hard on Ryze, Olaf and Renekton, and once those get picked or banned they have to improvise on the biggest stage. Add a clear gap between the regions, and I'm taking Zeka and HLE to out-draft them and carry the mid-game.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:41.823Z",
+      "thinking": "",
+      "stake": 1440
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 69,
+      "reasoning": "The numbers point one way here, and I don't lean this hard often. HLE have gone 6-1 outside their own region, while TES are 0-2 and haven't yet shown they can carry the LPL's form onto an international stage. Zeka's steady mid play gives HLE a safer floor, and TES's habit of falling behind and needing a miracle comeback is a risky plan in a single game.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:46.295Z",
+      "thinking": "I'm leaning toward HLE given the flagged region gap favoring LCK over LPL, plus HLE's stronger overall record and their dominant cross-region performance compared to TES. That puts my confidence around 70%.",
+      "stake": 1410
+    },
+    {
+      "player": "analyst-support",
+      "winner": "HLE",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "I'm backing HLE because this team has the feel of a locker room that believes in itself. They've bounced back from heartbreak, they've lifted a trophy this year, and Zeka plays with the calm of someone who knows where he fits. TES has real fight in them and I love their never-say-die spirit, but they've been wobbling lately and the international stage hasn't been kind to them, so I trust HLE's steadier mood and chemistry to win it.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:27:50.126Z",
+      "thinking": "",
+      "stake": 1400
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095013\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1410,\"thought\":\"69dcd54d275191ffec2fca358aded86a71fad6f62bbff3e67b51c84a81cd1021\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1480,\"thought\":\"cd297183c1a59b581a6b2ad6cc1ca72a832705fee6b4c1a0d76dd561b1a49630\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1440,\"thought\":\"b0a471c6246f8b2db14c0d708310b2d537b708472d65db59a0f1a288b9fb6a96\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1400,\"thought\":\"5d676b4986e2e46795f4e9aea921911a98894f56067a09e6625cdba1193d6468\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1400,\"thought\":\"965187aa9b16d7561aa8d35ce023e8d553c9e15f4fa88fa01f88531462eeb41b\"}]}",
+  "batchHash": "5f98ed67ce03ff6ddad062d9ce06bf2db4bf1d147993401c9db3b5f03506610e",
+  "commitDigest": "FTtQjaDssRpdNvSqYBDUkeqy43N9PENZYmbFnGNyMUB2",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: HLE vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nHLE [LCK]: 2026 series 30-14, games 74-49 | last 10 (newest first) LWLWWWWLWL\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · vs other regions 6-1\n  Last 20 games (11-9): GD@15 +0.6k, FB 70%, FT 60%, FD 45%, dragons 55%, 32.1 min avg, 1st baron 25:24\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Picks: TOP Jayce 3, Ambessa 2, Camille 2 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Ashe 4, Caitlyn 4, Jhin 3 | SUP Seraphine 4, Karma 3, Lulu 3\n  Standout: HLE Zeka (mid) KDA 5.7 over 20 games, 26% dmg share\nTES [LPL]: 2026 series 27-24, games 76-64 | last 10 (newest first) WLLLLWWLLW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · vs other regions 0-2\n  Last 20 games (9-11): GD@15 -0.4k, FB 75%, FT 35%, FD 30%, dragons 50%, 34.6 min avg, 1st baron 26:18\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Picks: TOP Olaf 4, Renekton 4, Ambessa 2 | JG Pantheon 3, Qiyana 3, Trundle 3 | MID Ryze 4, Orianna 3, Azir 2 | BOT Ezreal 4, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nHead-to-head 2026: none\nKey moments:\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: HLE Kanavi (Pantheon) at 22:32 (vs T1, LCK 2026)\n  * Likely triple kill: TESTian (Pantheon) at 34:58 (vs IG, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCK vs LPL: LCK went 2-4 against LPL in 2026; LCK 68% vs LPL 64% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  HLE (LCK): no Worlds titles or finals before 2026.\n  TES (LPL): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}

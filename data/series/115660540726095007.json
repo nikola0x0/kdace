@@ -1,0 +1,84 @@
+{
+  "series": {
+    "matchId": "115660540726095007",
+    "startTime": "2026-10-23T22:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "TLAW",
+    "teamB": "CFO",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "TLAW",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "No region gap here, so I'm deciding this on players, and TLAW has the stronger roster. Josedeodo in the jungle is a monster, and the lanes around him don't fold when the game gets ugly. CFO has POUT popping off in mid, but this team keeps handing leads back, and I won't pick a squad that can't close just because the crowd loves a scrappy underdog story.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:29:10.371Z",
+      "thinking": "",
+      "stake": 440
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "TLAW",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "It's all about tempo, and TLAW own the first 15 minutes: first towers, early dragons, and they actually close out the leads they build. Josedeodo on Pantheon or Vi can set the pace and snowball before CFO's Naafiri and Akali even get rolling. CFO have the flashy skirmish power, but they keep handing back leads when they can't convert tempo into objectives.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:29:13.290Z",
+      "thinking": "",
+      "stake": 810
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "TLAW",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "This is a draft read first. TLAW's pools run deep across every role, with Ahri, Orianna and Syndra in mid and Josedeodo steering the jungle, so they can bend Fearless Draft their way. CFO lean on POUT and Akali, but that pool is narrower and they have a habit of letting leads slip. TLAW close out the games they should win, so I'm taking them in a draft-driven game.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:29:16.116Z",
+      "thinking": "",
+      "stake": 550
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "TLAW",
+      "score": null,
+      "winProbability": 66,
+      "reasoning": "No region gap here, so this comes down to the two teams, and the numbers favor TLAW. They've won 15 of their last 20 games and have never blown a lead at 15, while CFO went 12-14 on the year and has coughed up two huge leads in LCP play. Josedeodo's jungle control should give TLAW the early edge, and CFO's habit of leaving the door open is how a careful analyst ends up on the more consistent side.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:29:19.175Z",
+      "thinking": "",
+      "stake": 590
+    },
+    {
+      "player": "analyst-support",
+      "winner": "TLAW",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "This TLAW group feels like a team that believes in itself. They've been rolling lately, and they've come back from deep holes, which tells me the mood in that room is calm and connected. CFO have talent and a real star in POUT, but they've let big leads slip, and on a Worlds stage that kind of doubt can creep in. I'm trusting the steadier locker room.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-23T07:29:22.517Z",
+      "thinking": "",
+      "stake": 470
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095007\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":590,\"thought\":\"243023527d49d7356626e6f258f3a6b3e3105ef0c22ae0ad3709bed5fbb96e65\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":810,\"thought\":\"1735972551e6c50abf1b1393bf9203a2fc45e033f832932a4da7ce118ac77225\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":550,\"thought\":\"9cad9c04510e5dcb9af5ef7eee76f005534552de20576b04cce19dbfc6501352\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":470,\"thought\":\"8238078b9a82b4501b7ee35bb7ff832534d720c923652ce1b4aa87ce4445dbee\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":440,\"thought\":\"0cde12e1a6efa74b0803271546143ba70a6a8cbab3e73bb17036dc69deeca12e\"}]}",
+  "batchHash": "2a26e1b3d8c26d5b29e850fbed6d72835744cfb0e4e691f035403532748b6bbb",
+  "commitDigest": "J7PKHKQ3mzGKyDJNFeoX96Ms9SDhVB2ZcGgs62qzDKLe",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: TLAW vs CFO (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 22-10, games 57-32 | last 10 (newest first) WWWWLWWWWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · vs other regions 2-2\n  Last 20 games (15-5): GD@15 +1.1k, FB 55%, FT 75%, FD 65%, dragons 60%, 32.9 min avg, 1st baron 28:24\n  Leads @15 converted 9/9, comeback wins 1, throws 0, objectives taken while 1k+ behind 10\n  Picks: TOP Camille 3, K'Sante 3, Ambessa 2 | JG Pantheon 4, Qiyana 3, Vi 3 | MID Ahri 3, Orianna 3, Syndra 3 | BOT Lucian 4, Ashe 3, Ezreal 3 | SUP Nami 3, Alistar 2, Karma 2\n  Standout: TLAW Josedeodo (jungle) KDA 7.6 over 20 games, 19% dmg share\nCFO [LCP]: 2026 series 12-14, games 37-42 | last 10 (newest first) LWLWWWWLWW\n  LCP 2026 12-14 (lost final)\n  Last 20 games (11-9): GD@15 -0.2k, FB 60%, FT 50%, FD 35%, dragons 50%, 31.8 min avg, 1st baron 26:06\n  Leads @15 converted 5/5, comeback wins 1, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Jayce 2, K'Sante 2, Malphite 2 | JG Naafiri 4, Poppy 3, Nocturne 2 | MID Akali 4, Viktor 3, Ahri 2 | BOT Lucian 5, Caitlyn 2, Kalista 2 | SUP Lulu 4, Milio 4, Karma 3\n  Standout: CFO POUT (mid) KDA 4.4 over 20 games, 26% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\nFun facts:\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\n  * Likely quadra kill: TLAW Yeon (Jhin) at 27:26 (vs SR, LCS 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCS vs LCP: LCS went 1-0 against LCP in 2026; LCS 29% vs LCP 33% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  CFO (LCP): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "testnet",
+    "packageId": "0x3ed6ca261704df0b8f3cfef3e81d1bdfc73726ab759da673dada1032fca21481"
+  }
+}
