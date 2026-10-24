@@ -14,7 +14,7 @@ import { pendingRecords } from "../core/dispatch.ts";
 import { fanDbFromEnv } from "../core/fandb.ts";
 import { withLock } from "../core/lock.ts";
 import { Store } from "../core/store.ts";
-import { storeKind } from "../core/supastore.ts";
+import { recordsLiveInSupabase, storeKind } from "../core/supastore.ts";
 import { fetchSeries } from "../core/worlds.ts";
 import { mirrorFans, syncFanAxp } from "./fans.ts";
 import { realFinalCallDeps, runFinalCall } from "./finalcall.ts";
@@ -31,6 +31,13 @@ if (storeKind() === "supabase") {
   const out = await runUntilIdle({ holder: `github:${process.env.GITHUB_RUN_ID ?? process.pid}`, maxMs: 20 * 60_000 });
   console.log(`[tick] supabase runner: ${out.runs} call(s), stopped: ${out.stopped}`);
   process.exit(0);
+}
+
+// Once the records live in Supabase, data/ is only a snapshot: a file-mode tick must not act on it (it could re-pick a
+// committed series). Stops until KDACE_STORE=supabase is set here too, or the copy is rolled back (runbook).
+if (await recordsLiveInSupabase()) {
+  console.error("[tick] records live in Supabase (series_records has rows) but KDACE_STORE is not supabase; not running on data/");
+  process.exit(1);
 }
 
 await withLock("data", async () => {

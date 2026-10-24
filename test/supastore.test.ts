@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { Store, type SeriesRecord } from "../src/core/store.ts";
-import { StoreConflictError, SupabaseRest, SupabaseRunnerDb, SupabaseStore, storeFromEnv, storeKind } from "../src/core/supastore.ts";
+import { recordsLiveInSupabase, StoreConflictError, SupabaseRest, SupabaseRunnerDb, SupabaseStore, storeFromEnv, storeKind } from "../src/core/supastore.ts";
 import type { TitleDay } from "../src/core/titles.ts";
 import { FakePostgrest } from "./helpers/fake-postgrest.ts";
 
@@ -151,6 +151,21 @@ describe("SupabaseRunnerDb", () => {
     await db.writeState("scout", { nextAt: "2026-10-24T10:30:00.000Z", lastAt: "2026-10-24T10:00:00.000Z", note: "complete" });
     await db.writeState("scout", { nextAt: "2026-10-24T11:00:00.000Z", lastAt: "2026-10-24T10:30:00.000Z", note: "complete" });
     expect(await db.readState()).toEqual({ scout: { nextAt: "2026-10-24T11:00:00.000Z", lastAt: "2026-10-24T10:30:00.000Z", note: "complete" } });
+  });
+});
+
+describe("recordsLiveInSupabase", () => {
+  const env = { SUPABASE_URL: URL_, SUPABASE_SERVICE_ROLE_KEY: "k" };
+  it("is false before the copy (no table, empty table, no config, Supabase down) and true after", async () => {
+    const pg = new FakePostgrest();
+    expect(await recordsLiveInSupabase({}, pg.fetch)).toBe(false);
+    expect(await recordsLiveInSupabase(env, pg.fetch)).toBe(false);
+    const missing = (async () => new Response(JSON.stringify({ code: "PGRST205" }), { status: 404 })) as unknown as typeof fetch;
+    expect(await recordsLiveInSupabase(env, missing)).toBe(false);
+    const down = (async () => { throw new TypeError("fetch failed"); }) as unknown as typeof fetch;
+    expect(await recordsLiveInSupabase(env, down)).toBe(false);
+    pg.tables.series_records.push({ match_id: "x", record: {}, version: 1 });
+    expect(await recordsLiveInSupabase(env, pg.fetch)).toBe(true);
   });
 });
 

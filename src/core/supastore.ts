@@ -219,6 +219,21 @@ export function supabaseRestFromEnv(env: Record<string, string | undefined> = pr
   return new SupabaseRest(url, key, fetchImpl);
 }
 
+/**
+ * True once records have been copied into Supabase (series_records has a row). The file-mode tick checks this and
+ * stops: after cutover, data/ in git is only a snapshot, and acting on it could re-pick a series already committed.
+ * False when Supabase isn't configured, the table doesn't exist yet, or it can't be read (the tick runs as before).
+ */
+export async function recordsLiveInSupabase(env: Record<string, string | undefined> = process.env, fetchImpl: typeof fetch = fetch): Promise<boolean> {
+  if (!env.SUPABASE_URL || !env.SUPABASE_SERVICE_ROLE_KEY) return false;
+  try {
+    const { json } = await new SupabaseRest(env.SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY, fetchImpl, { retries: 1, timeoutMs: 10_000 }).req("GET", "series_records?select=match_id&limit=1");
+    return Array.isArray(json) && json.length > 0;
+  } catch {
+    return false;
+  }
+}
+
 /** The record store this process uses: the file Store in `dir` unless KDACE_STORE=supabase. */
 export function storeFromEnv(env: Record<string, string | undefined> = process.env, dir = "data"): RecordStore {
   return storeKind(env) === "supabase" ? new SupabaseStore(supabaseRestFromEnv(env)) : new Store(dir);
