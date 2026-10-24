@@ -94919,5 +94919,566 @@
     "text": "Likely triple kill: CFO Rest (Rumble) at 37:32"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095016",
+  "matchId": "115660540726095015",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-23T23:21:11.895Z",
+  "patch": "16.20",
+  "durationMin": 24.5,
+  "complete": true,
+  "winner": "T1",
+  "blue": {
+   "code": "LOS",
+   "champions": {
+    "top": "KSante",
+    "jungle": "Pantheon",
+    "mid": "Syndra",
+    "bottom": "Tristana",
+    "support": "Rakan"
+   },
+   "gold15": 25215,
+   "kills": 3,
+   "towers": 0,
+   "inhibitors": 0,
+   "dragons": [],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "T1",
+   "champions": {
+    "top": "Jayce",
+    "jungle": "LeeSin",
+    "mid": "Leblanc",
+    "bottom": "Jhin",
+    "support": "Alistar"
+   },
+   "gold15": 27623,
+   "kills": 19,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "chemtech",
+    "ocean",
+    "cloud"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 23
+  },
+  "goldDiff": [
+   0,
+   10,
+   -242,
+   -268,
+   -386,
+   -369,
+   -476,
+   -798,
+   -690,
+   -788,
+   -1011,
+   -1225,
+   -2054,
+   -1872,
+   -1167,
+   -2408,
+   -2869,
+   -3836,
+   -4210,
+   -3610,
+   -6303,
+   -6112,
+   -8399,
+   -10568,
+   -12594
+  ],
+  "leads": {
+   "10": -1011,
+   "15": -2408,
+   "20": -6303
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 10,
+    "min": 1
+   },
+   "red": {
+    "gold": 12594,
+    "min": 24
+   }
+  },
+  "swing": {
+   "team": "T1",
+   "gold": 8984,
+   "fromMin": 19,
+   "toMin": 24
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 7,
+    "type": "firstBlood",
+    "team": "T1"
+   },
+   {
+    "min": 7,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "chemtech"
+   },
+   {
+    "min": 14,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "ocean"
+   },
+   {
+    "min": 15,
+    "type": "firstTower",
+    "team": "T1"
+   },
+   {
+    "min": 20,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "cloud"
+   },
+   {
+    "min": 23,
+    "type": "baron",
+    "team": "T1"
+   },
+   {
+    "min": 24,
+    "type": "inhibitor",
+    "team": "T1"
+   },
+   {
+    "min": 24.5,
+    "type": "end",
+    "team": "T1"
+   }
+  ],
+  "players": [
+   {
+    "code": "LOS",
+    "name": "LOS Zest",
+    "champion": "KSante",
+    "role": "top",
+    "k": 1,
+    "d": 5,
+    "a": 1,
+    "damageShare": 0.20199999999999999
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Curse",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 0,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.16899999999999998
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Feisty",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 2,
+    "d": 3,
+    "a": 1,
+    "damageShare": 0.332
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Duduhh",
+    "champion": "Tristana",
+    "role": "bottom",
+    "k": 0,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.214
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Ackerman",
+    "champion": "Rakan",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.083
+   },
+   {
+    "code": "T1",
+    "name": "T1 Doran",
+    "champion": "Jayce",
+    "role": "top",
+    "k": 4,
+    "d": 0,
+    "a": 9,
+    "damageShare": 0.354
+   },
+   {
+    "code": "T1",
+    "name": "T1 Oner",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 8,
+    "d": 0,
+    "a": 6,
+    "damageShare": 0.159
+   },
+   {
+    "code": "T1",
+    "name": "T1 Faker",
+    "champion": "Leblanc",
+    "role": "mid",
+    "k": 6,
+    "d": 0,
+    "a": 7,
+    "damageShare": 0.273
+   },
+   {
+    "code": "T1",
+    "name": "T1 Peyz",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 1,
+    "d": 1,
+    "a": 9,
+    "damageShare": 0.152
+   },
+   {
+    "code": "T1",
+    "name": "T1 Keria",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 15,
+    "damageShare": 0.062
+   }
+  ],
+  "standout": {
+   "code": "T1",
+   "name": "T1 Oner",
+   "champion": "LeeSin",
+   "role": "jungle",
+   "k": 8,
+   "d": 0,
+   "a": 6,
+   "damageShare": 0.159
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "T1",
+    "text": "T1 Doran (Jayce) went 4/0/9 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "T1",
+    "text": "T1 Oner (Lee Sin) went 8/0/6 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "T1",
+    "text": "T1 Faker (LeBlanc) went 6/0/7 without dying"
+   },
+   {
+    "kind": "stomp",
+    "team": "T1",
+    "text": "T1 won in 24:27"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095018",
+  "matchId": "115660540726095017",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-24T00:11:58.894Z",
+  "patch": "16.20",
+  "durationMin": 26.9,
+  "complete": true,
+  "winner": "LYON",
+  "blue": {
+   "code": "LYON",
+   "champions": {
+    "top": "KSante",
+    "jungle": "Nocturne",
+    "mid": "Anivia",
+    "bottom": "Ezreal",
+    "support": "Alistar"
+   },
+   "gold15": 26349,
+   "kills": 22,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "cloud",
+    "chemtech"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 24.9
+  },
+  "red": {
+   "code": "TSW",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "LeeSin",
+    "mid": "Ryze",
+    "bottom": "Kaisa",
+    "support": "Nautilus"
+   },
+   "gold15": 26472,
+   "kills": 6,
+   "towers": 1,
+   "inhibitors": 0,
+   "dragons": [
+    "infernal"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   81,
+   195,
+   254,
+   341,
+   -146,
+   1340,
+   1412,
+   1277,
+   1664,
+   1864,
+   1661,
+   1754,
+   1906,
+   -123,
+   -659,
+   1506,
+   1796,
+   2986,
+   3986,
+   4757,
+   5330,
+   5444,
+   6078,
+   6019,
+   7735
+  ],
+  "leads": {
+   "10": 1664,
+   "15": -123,
+   "20": 3986,
+   "25": 6019
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 7735,
+    "min": 26
+   },
+   "red": {
+    "gold": 659,
+    "min": 16
+   }
+  },
+  "swing": {
+   "team": "LYON",
+   "gold": 5416,
+   "fromMin": 16,
+   "toMin": 21
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 6,
+    "type": "firstBlood",
+    "team": "TSW"
+   },
+   {
+    "min": 8.9,
+    "type": "dragon",
+    "team": "TSW",
+    "detail": "infernal",
+    "behind": 1407
+   },
+   {
+    "min": 14.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "cloud"
+   },
+   {
+    "min": 18.9,
+    "type": "firstTower",
+    "team": "LYON"
+   },
+   {
+    "min": 21.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "chemtech"
+   },
+   {
+    "min": 24.9,
+    "type": "baron",
+    "team": "LYON"
+   },
+   {
+    "min": 26.8,
+    "type": "inhibitor",
+    "team": "LYON"
+   },
+   {
+    "min": 26.9,
+    "type": "end",
+    "team": "LYON"
+   }
+  ],
+  "players": [
+   {
+    "code": "LYON",
+    "name": "LYON Dhokla",
+    "champion": "KSante",
+    "role": "top",
+    "k": 2,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.14800000000000002
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Inspired",
+    "champion": "Nocturne",
+    "role": "jungle",
+    "k": 2,
+    "d": 2,
+    "a": 11,
+    "damageShare": 0.20600000000000002
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Saint",
+    "champion": "Anivia",
+    "role": "mid",
+    "k": 2,
+    "d": 0,
+    "a": 11,
+    "damageShare": 0.243
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Berserker",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 13,
+    "d": 1,
+    "a": 5,
+    "damageShare": 0.34700000000000003
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Isles",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 3,
+    "d": 2,
+    "a": 18,
+    "damageShare": 0.055
+   },
+   {
+    "code": "TSW",
+    "name": "TSW Pun",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 0,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.34700000000000003
+   },
+   {
+    "code": "TSW",
+    "name": "TSW Hizto",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 0,
+    "d": 4,
+    "a": 3,
+    "damageShare": 0.132
+   },
+   {
+    "code": "TSW",
+    "name": "TSW Dire",
+    "champion": "Ryze",
+    "role": "mid",
+    "k": 4,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.235
+   },
+   {
+    "code": "TSW",
+    "name": "TSW Eddie",
+    "champion": "Kaisa",
+    "role": "bottom",
+    "k": 2,
+    "d": 4,
+    "a": 3,
+    "damageShare": 0.23399999999999999
+   },
+   {
+    "code": "TSW",
+    "name": "TSW Bie",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 7,
+    "a": 3,
+    "damageShare": 0.053
+   }
+  ],
+  "standout": {
+   "code": "LYON",
+   "name": "LYON Berserker",
+   "champion": "Ezreal",
+   "role": "bottom",
+   "k": 13,
+   "d": 1,
+   "a": 5,
+   "damageShare": 0.34700000000000003
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "LYON",
+    "text": "Likely triple kill: LYON Berserker (Ezreal) at 16:23"
+   },
+   {
+    "kind": "perfect",
+    "team": "LYON",
+    "text": "LYON Saint (Anivia) went 2/0/11 without dying"
+   }
+  ]
  }
 ]

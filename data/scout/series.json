@@ -8318,5 +8318,31 @@
   "winsB": 1,
   "winner": "CFO",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095015",
+  "startTime": "2026-10-23T23:00:00Z",
+  "block": "Swiss",
+  "bestOf": 1,
+  "state": "completed",
+  "teamA": "LOS",
+  "teamB": "T1",
+  "winsA": 0,
+  "winsB": 1,
+  "winner": "T1",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095017",
+  "startTime": "2026-10-24T00:00:00Z",
+  "block": "Swiss",
+  "bestOf": 1,
+  "state": "completed",
+  "teamA": "LYON",
+  "teamB": "TSW",
+  "winsA": 1,
+  "winsB": 0,
+  "winner": "LYON",
+  "league": "Worlds 2026"
  }
 ]
