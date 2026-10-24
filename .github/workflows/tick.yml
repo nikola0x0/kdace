@@ -31,7 +31,8 @@ jobs:
           git config user.email "kdace-tick@users.noreply.github.com"
       - name: Scout (fetch new games from the official lolesports feeds; the tick commits data/scout)
         # Runs dispatched early by the lock route (a result is in, a final call is due) skip it to get to the tick fast.
-        if: github.event_name != 'workflow_dispatch'
+        # In supabase mode Scout is a runner stage writing to the store instead, so this step is skipped.
+        if: github.event_name != 'workflow_dispatch' && vars.KDACE_STORE != 'supabase'
         run: npm run scout
         continue-on-error: true
         timeout-minutes: 8
@@ -56,6 +57,9 @@ jobs:
           # Fan commits are mirrored from Supabase (and the ping keeps the free project awake). Empty = fan stage skipped.
           SUPABASE_URL: ${{ vars.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Unset (default): records in data/, committed by the tick. "supabase": the tick drains the staged runner
+          # against Supabase under the shared runner lock (safe next to the Vercel cron) and commits nothing.
+          KDACE_STORE: ${{ vars.KDACE_STORE }}
       - name: Verify (reads every commit back through Tatum)
         run: npm run verify
         env:
@@ -63,3 +67,5 @@ jobs:
           SUI_NETWORK: ${{ vars.SUI_NETWORK }}
           TATUM_SUI_GRPC: ${{ vars.TATUM_SUI_GRPC }}
           KDACE_PACKAGE_ID: ${{ vars.KDACE_PACKAGE_ID }}
+          # Set to https://kdace.xyz/api/records after cutover to verify the live records; unset reads data/.
+          KDACE_RECORDS_URL: ${{ vars.KDACE_RECORDS_URL }}
