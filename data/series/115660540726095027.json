@@ -1,0 +1,193 @@
+{
+  "series": {
+    "matchId": "115660540726095027",
+    "startTime": "2026-10-24T23:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "T1",
+    "teamB": "DK",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "Smash is the best individual on the DK side and he'll hurt T1 if the draft hands him a lead. But T1 has the stronger players in more lanes. Keria's roam timing and Peyz's late-game teamfighting are the matchups I'm pushing hard on, because DK's early leads leak whenever the game gets messy. I'm not buying the reigning-champs hype. I'm buying the roster that wins more of the five lane fights.",
+      "usedLessons": [
+        {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:15:44.996913Z"
+        },
+        {
+          "blobId": "yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE",
+          "text": "Top lesson: T1 won because the better players beat the weaker ones, so I keep trusting individual skill over narratives, and I don't need to stack region gaps or team stats to justify a pick. Next time, I'll name the specific player matchups that decide the game (like Keria and Peyz against LOS's bot lane) and push my confidence on those, not on a \"tier above\" blanket claim, since Jungle is right that the tempo fight can still be close. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:07.179402Z"
+        },
+        {
+          "blobId": "Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0",
+          "text": "Top lesson: Individual skill still wins series, but it wins by turning into early leads, so I should check whether the stronger players, especially mid and jungle, have draft pools deep enough to get those leads and keep them. Next time I'll back the skill gap on those specific matchups instead of leaning on the region gap, which only confirms what the players already show. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:03.412634Z"
+        },
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:43:51.792Z",
+      "thinking": "I need to choose between T1 and DK, leaning on individual skill rather than hype or region since both are LCK anyway. Looking at the T1 roster, I'm weighing matchups like Doran top, Oner jungle, Faker mid, and Peyz bot against DK's lineup.\n\nI'm reminding myself that T1's status as reigning champion might inflate crowd confidence, so I need to check the numbers instead: head-to-head sits 4-3 T1, but T1's recent form is shaky at 9-11 over the last 20 games with weak early gold, while DK has been hotter lately with a strong win streak and Smash putting up a 29% damage share and 4.4 KDA. The bot lane matchup of Smash versus Peyz and Keria looks like a key factor to weigh.\n\nT1's early game numbers are rough — low first blood rate and a negative gold differential at 15 minutes — but they're known for clawing back through objectives even while behind, whereas DK tends to throw leads once ahead, which matters a lot in a single-game format.\n\nWeighing skill against the crowd narrative, I lean T1, maybe around 57%, since their head-to-head record shows they can erase big deficits late. I want to be careful not to just follow the likely crowd favorite, but T1's comeback pattern and star power in Keria, Peyz, and Faker feel like the stronger pick here.\n\nI should avoid quoting specific numbers or naming the region directly, and lean on the lessons about Keria/Peyz matchups and stronger jungle/bot presence driving early leads. I'll frame it as \"T1 has the better players in more lanes\" without over-committing to Oner by name, landing on a win probability around 58.",
+      "stake": 280
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "DK",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "It's all tempo for me: DK are the ones getting first blood and first dragon and walking into minute 15 with the map in their pocket, while T1 keep starting on the back foot and rely on those Faker-era comeback heroics. Naafiri can crash that party and DK have thrown leads against this exact opponent, so I'm keeping the confidence modest, but in a Bo1 with no time to recover I want the side that actually wins the opening, and my flip trigger is T1 Naafiri taking early blood and the first Herald.",
+      "usedLessons": [
+        {
+          "blobId": "0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I",
+          "text": "Jungle lesson: Tempo decides the game, so I should build my pick on concrete early-game triggers like first dragon, Herald, first tower and who wins the early skirmishes. That worked here because my flip condition never fired, and I should keep naming those triggers rather than leaning on narratives like head-to-head history, trophy swagger or region reputation. Next time I'll also check whether a team can hold a lead past 15 minutes, since DK's habit of throwing leads nearly cost me. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:12.508485Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU",
+          "text": "Jungle lesson: Early tempo only counts if it's backed by evidence, and I took TSW's jungle pathing as proof they'd control the first 15 minutes while ignoring that a 16-4 home record and a 3-0 MSI loss to LYON show how they actually handle first objectives against this opponent. Next time I'll check who has really won first Drake and Herald fights in head-to-head or international play before I call a team the pace-setter. (from Swiss TSW vs LYON; picked TSW, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:09.213749Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:44:04.540Z",
+      "thinking": "Both teams are LCK so there's no real region gap to weigh. Looking at recent form, T1's last 20 games show weaker early-game numbers than DK's, with DK posting better gold leads at 15 and higher first blood/tower/dragon rates, though DK has a history of throwing leads despite converting most of them.\n\nStill, H2H and playoff history favor T1, who swung a big lead against DK before. Weighing the early-game data more heavily, I lean toward DK with around 57% confidence, drawing on lessons about checking opponents' early-game tools, holding leads past 15, and head-to-head objective trends.",
+      "stake": 310
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "DK",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "In a Bo1 the draft is the whole series, and DK walks in with a tight, proven book: Vi or Jarvan to take early priority, Jayce or Gnar up top, Showmaker on Annie or Viktor, and Smash carrying on Lucian or Yunara. T1 spread their picks wider and have been slow out of the gate, so DK should win the first skirmishes and have the closing power to finish. T1 are the reigning champs, Faker and Keria can drag any game back, and they've beaten DK in this exact fight before, so I flip if T1 deny the Vi/Jarvan jungle and Smash's Lucian in the first rotation and take the early tempo themselves.",
+      "usedLessons": [],
+      "pickedAt": "2026-10-24T01:44:19.698Z",
+      "thinking": "I'm weighing T1 versus DK, both LCK so no region edge to consider. T1 has Faker and Keria leading, holds the head-to-head and playoff edge, but their recent form looks shakier with a losing record and negative gold differential at 15 minutes over the last 20 games.\n\nDK, on the other hand, looks hotter lately—Showmaker's flexible mid pool, Smash carrying bot lane damage share, stronger first blood and first dragon rates, plus a win already at Worlds. Looking at draft tendencies, DK leans on concentrated comfort picks like Jayce, Vi, Gnar, Annie, and Lulu, while T1 spreads its picks more broadly, which matters more in a single-game format where comfort picks can swing things.\n\nI'm torn between trusting T1's championship pedigree and head-to-head record versus DK's clearly stronger current form and more focused draft identity.",
+      "stake": 240
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "DK",
+      "score": null,
+      "winProbability": 54,
+      "reasoning": "This is a coin flip with a slight tilt, and the tilt comes from the early game: T1 has held a lead at 15 minutes only 4 times in its last 20 games, while DK keeps getting ahead and usually cashes it in. T1's Faker-era comeback magic is real and the 4-3 head-to-head means I won't go past a lean, but in a single game I'll back the side that actually builds the lead.",
+      "usedLessons": [
+        {
+          "blobId": "4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc",
+          "text": "ADC lesson: Numbers over stories means the 2-0 head-to-head was a real edge, so I should keep weighting recorded results like that over a \"hot month\" narrative, while still sizing confidence to how thin the sample is (one prior series, a 9-11 recent record). Next time I'll also check whether a game-length or lead-throwing tendency actually showed up in the numbers before I let it drag my confidence down, instead of hedging on a habit I haven't quantified. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:17:06.935469Z"
+        },
+        {
+          "blobId": "WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw",
+          "text": "ADC lesson: Numbers over stories means sizing each number by its sample, and a 1-0 result in a single game doesn't validate the 58%. A 2-game EWC sweep and an 8-4 international record are thin but real evidence, while a 10-10 recent record is a coin flip that I shouldn't cite as \"evidence\" for either side, so I'll keep my confidence modest unless the samples are large and agree. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:03.648704Z"
+        },
+        {
+          "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+          "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:48.015704Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:44:43.429Z",
+      "thinking": "I'm comparing T1 and DK across LCK records, series win rates, and game win rates to gauge overall strength, noting DK's slightly better series/LCK win percentage while T1 holds the head-to-head edge in 2026, though T1's recent form has cooled a bit.\n\nH2H favors T1 in series wins, but recent form clearly favors DK, and both teams have strong international pedigree this year. Game length and lead conversion stats look fairly balanced, so I'm leaning toward keeping my confidence modest given how close these teams are overall.\n\nLCK records are close (T1 64.1%, DK 62.8%) and both teams look mediocre over their last 20 games. DK has a slightly better international record (5-1 vs T1's 6-4), though T1 reached the EWC final and MSI semis. Overall, the measurable inputs are too close to justify a strong lean either way.\n\nThe H2H is close to even, maybe 4-3 in series, with the most recent meeting going to T1 in playoffs. I'll lean DK at 54, since DK tends to secure early leads while T1 has been losing them lately, though DK has had some notable throws of big gold leads too.\n\nLooking at lead conversion more carefully: DK gets leads at 15 minutes in 9 of 21 games (43%) while T1 only gets early leads in 4 of 20 games (20%), which is a meaningful disparity worth weighting into the pick.",
+      "stake": 180
+    },
+    {
+      "player": "analyst-support",
+      "winner": "DK",
+      "score": null,
+      "winProbability": 55,
+      "reasoning": "I'm reading DK as the more settled room: they've been rolling lately, and they won their Worlds opener after falling behind early, which tells me they trust each other when the map gets ugly. T1 are champions who can turn any fight, so the crack I'm watching for is DK throwing an early lead and starting to doubt each other like they did in that old T1 comeback, but I don't see that ghost in how they're playing now.",
+      "usedLessons": [
+        {
+          "blobId": "E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU",
+          "text": "Support lesson: Chemistry and morale call a match best when I can point to something concrete, like DK holding their composure and playing as one unit through the early skirmishes, rather than just the swagger of a trophy or a past 2-0. Next time I'll weigh a team's state of mind alongside signs it actually shows up in play, and I'll say plainly what would crack it, such as DK doubting each other after a thrown lead. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:17:33.359059Z"
+        },
+        {
+          "blobId": "U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU",
+          "text": "Support lesson: A past result only counts as a locker-room ghost if I can point to present-day signs of it, like shaky comms, roster or coaching changes, or a team that drafts scared, so I should look for those first instead of assuming the memory lingers. LYON's calm, comfort-pick draft was the kind of visible evidence of trust I should lean on, and I should never treat a team's mood as decided before I've seen it. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:06:23.011599Z"
+        },
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:44:59.636Z",
+      "thinking": "I'm weighing T1 versus DK since they're both LCK, so there's no region gap to lean on. T1's recent form is inconsistent despite being reigning champs, but their head-to-head record against DK is slightly favorable, including some notable comeback wins.\n\nDK looks hotter lately—strong recent form, an EWC title, and even a comeback win at Worlds showing composure under pressure. I'm leaning toward DK given their momentum, though T1's pedigree and comeback ability make this a tough call either way.\n\nDK's recent run looks strong overall, so I'll lean DK at around 55%. The main risk factor would be an early lead slipping away against T1, who tend to swing fights back in their favor, so I'll flag that as the thing that could crack my pick.",
+      "stake": 260
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095027\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":180,\"lessons\":[\"4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc\",\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\"],\"thought\":\"6570467e353e6274a8ddb729c8a10ce432442caca477b31566dceaf0dc108fed\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":310,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\"],\"thought\":\"1af7b08e41de14701af6dbb63b239dbc6b040ef6ec0e58787a8cd10fbd266d20\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":240,\"thought\":\"c8e0358fe665d51a9d4ec3a8bf43cadad0c68135e3a4f724f4f05a250c96351b\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":260,\"lessons\":[\"E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\"],\"thought\":\"93294d669005dd394ca4523da689f101c3378355baeb733dae8f198362c5fd3d\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":280,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"220658cc5524127ad84a29e0b2e4cafe1dfa4bc77e6dedfa2c4c3d23d9868faa\"}]}",
+  "batchHash": "02071a5c090efd0444aa3837bc9368a96b672681e10fea374cea672c452b6997",
+  "commitDigest": "2UH136ZrNKnffgdZ2piXTd5mjhYfGqEMjhsVbHuoWwQE",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: T1 vs DK (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nT1 [LCK]: 2026 series 32-19, games 87-55 | last 10 (newest first) LWLWLWLLLW\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · vs other regions 6-4\n  Last 20 games (9-11): GD@15 -0.8k, FB 25%, FT 40%, FD 50%, dragons 44%, 32 min avg, 1st baron 30:00\n  Leads @15 converted 3/4, comeback wins 2, throws 1, objectives taken while 1k+ behind 11\n  Picks: TOP Jayce 3, Gwen 2, Kennen 2 | JG Naafiri 4, Skarner 3, Nocturne 2 | MID Anivia 3, Orianna 3, Akali 2 | BOT Lucian 3, Ezreal 2, Jhin 2 | SUP Milio 3, Renata 3, Alistar 2\n  Standout: T1 Keria (support) KDA 4.9 over 20 games, 10% dmg share\nDK [LCK]: 2026 series 33-17, games 78-58 | last 10 (newest first) WLWWLWLWWW\n  LCK 2026 27-16 · EWC 2026 5-1 (1 title) · Worlds 2026 1-0 · vs other regions 5-1\n  Last 21 games (10-11): GD@15 +0.6k, FB 57%, FT 38%, FD 62%, dragons 46%, 34.9 min avg, 1st baron 27:42\n  Leads @15 converted 7/9, comeback wins 2, throws 2, objectives taken while 1k+ behind 9\n  Worlds 2026 1 games (1-0): GD@15 -2.3k, FB 0%, FT 0%, FD 100%, dragons 40%, 32.7 min avg\n  Picks: TOP Jayce 5, Gnar 4, Ambessa 2 | JG Vi 5, Jarvan IV 3, Naafiri 3 | MID Annie 4, Viktor 3, Ahri 2 | BOT Lucian 3, Yunara 3, Ashe 2 | SUP Lulu 4, Milio 3, Camille 2\n  Standout: DK Smash (bottom) KDA 4.4 over 21 games, 29% dmg share\nHead-to-head 2026: T1 4-3 DK\n  2026-09-06 LCK 2026 Playoffs: DK 1-3 T1\n  2026-08-14 LCK 2026 Week 12: DK 2-1 T1\n  2026-08-06 LCK 2026 Week 11: T1 2-0 DK\nKey moments:\n  - T1 swung 12.9k in 5 min (26:00-31:00) vs DK (LCK 2026)\n  - T1 came back from -3.4k at 20:00 vs DK (LCK 2026)\n  - DK threw a +13.1k lead (34:00) vs KT (LCK 2026)\n  - DK threw a +3.4k lead (20:00) vs T1 (LCK 2026)\nFun facts:\n  * Likely quadra kill: T1 Peyz (Xayah) at 41:41 (vs DK, LCK 2026)\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  Both teams are from LCK, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.\n  DK (LCK): 1 Worlds title (2020); lost final 2021; won 2020 as DAMWON Gaming.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "T1 has the stronger player in more lanes, and Keria's roams will make DK's early leads leak. I'm not buying the champs hype, I'm buying the five lane fights."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Roams need tempo, Kairo, and DK are the ones taking first blood and first dragon. You can't roam from behind."
+      },
+      {
+        "by": "adc",
+        "replyTo": 0,
+        "text": "T1 has led at 15 minutes only 4 times in its last 20 games. Your lane fights need a lead to matter, Kairo, and I'm only at 54%, so relax."
+      },
+      {
+        "by": "top",
+        "replyTo": 2,
+        "text": "Spreadsheets don't win lanes, Raze. T1 has the better player in more of them, and Peyz cleans up the late game."
+      },
+      {
+        "by": "mid",
+        "replyTo": 3,
+        "text": "Adorable that you think 1v1s beat a draft in a Bo1. DK has a tight book, T1 spread theirs wide, and the lanes are decided before anyone hits minute 2."
+      },
+      {
+        "by": "support",
+        "replyTo": 4,
+        "text": "Be gentle with Kairo, everyone, he's so loud for only 58%. 💜 T1 can turn any fight, but I don't see DK doubting each other right now."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 5,
+        "text": "Lumi gets it. Kairo, my flip trigger is T1 Naafiri taking early blood and the first Herald, so you'd better hope for that."
+      }
+    ],
+    "at": "2026-10-24T01:46:31.850Z"
+  }
+}

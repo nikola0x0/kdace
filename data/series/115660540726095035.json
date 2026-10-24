@@ -1,0 +1,189 @@
+{
+  "series": {
+    "matchId": "115660540726095035",
+    "startTime": "2026-10-25T00:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "TLAW",
+    "teamB": "BLG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 66,
+      "reasoning": "Viper and Knight are simply better players than anything TLAW can put across from them, and I'm not backing off that just because the crowd likes BLG after the MKOI hiccup. CoreJJ is a real veteran who can drag a messy game sideways, and I'm rating that as skill, not chaos, but one great support doesn't outweigh a talent edge across the map, and the LPL-over-LCS gap points the same way.",
+      "usedLessons": [
+        {
+          "blobId": "tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE",
+          "text": "Top lesson: Individual skill still wins series, but in a Bo1 I have to check whether the star's lane can actually turn that edge into a lead before I treat it as the whole argument. When the opposing team has a proven jungle-support duo that can steal a messy game, I should rate that duo as skill too, not dismiss it as chaos, and I should be more skeptical of a Viper-sized edge when the whole BLG team is the one the crowd is backing. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:10:47.127123Z"
+        },
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        },
+        {
+          "blobId": "5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U",
+          "text": "Top lesson: Individual skill still wins series, but I have to verify who has the stronger players on the actual rosters rather than assume the name on the jersey does. Caliste outplayed Hope in the lane that mattered, so next time I'll compare the player matchups first, and fade the hype only when the skill gap points the same way. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:11:45.035595Z"
+        },
+        {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:15:44.996913Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:45:17.386Z",
+      "thinking": "I'm weighing TLAW versus BLG in this Bo1 Swiss matchup, both coming off 0-1 starts at Worlds, factoring in the region strength gap favoring LPL and comparing individual roster talent like Viper, Knight, Xun on BLG's side against CoreJJ and TLAW's lineup.\n\nGiven Viper and Knight likely carrying their lanes, with CoreJJ as the main threat to watch, I'm leaning toward BLG at roughly 65-66% probability despite their inconsistency and TLAW's strong lead-converting record.",
+      "stake": 520
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "Fast take: the region gap is huge, and I want it to show up as tempo. BLG's Jarvan and Pantheon jungle plus Viper and Lulu in the bot lane can turn the first herald and first dragon into towers before TLAW settles. TLAW's early game is real, though. Lee Sin or Pantheon skirmishes with CoreJJ roaming could steal the opening, and BLG just got burned at Worlds by exactly that kind of early chaos, so I'm trimming my confidence. If TLAW takes first herald and the first tower, I flip.",
+      "usedLessons": [
+        {
+          "blobId": "2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY",
+          "text": "Jungle lesson: The early game still decides everything, so I should judge who wins the first fifteen minutes from the jungle matchup, the draft's early pressure and the first-objective setups, not from \"better team\" or region labels, which only count when the scouting report flags a big gap. When the other jungler can force early skirmishes, like Elyoya on Lee Sin, a Bo1 gives the favorite no time to recover, so I should cut my confidence instead of assuming they'll win tempo by default. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:14.870580Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8",
+          "text": "Jungle lesson: Tempo still decides games, so I should judge a team's first-15 pressure by what it shows against comparable opposition (jungle priority, first herald, first tower) instead of dismissing it as \"built against CBLOL\" or leaning on region records. I should treat region as a big factor only when the scouting report flags a BIG REGION GAP, and otherwise keep a clear flip trigger like \"LOS take early jungle priority and first herald\" and let the early map decide. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:32.857890Z"
+        },
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:45:30.394Z",
+      "thinking": "Looking at TLAW vs BLG early-game stats, both teams are 0-1 at Worlds but LPL is the stronger region overall. TLAW actually shows better early-game numbers though—higher gold lead at 15, better first tower and first dragon rates than BLG, suggesting they might outpace BLG's historically stronger LCS competition despite the region gap.\n\nChecking jungle matchups, both sides run aggressive early-skirmish champions—BLG with Jarvan/Pantheon/Naafiri, TLAW with Pantheon/Lee Sin/Qiyana—so there's real contest potential for Pantheon and tempo control. Given BLG's Worlds loss showed a significant early deficit while TLAW stayed competitive before falling, I'm leaning BLG but tempering confidence since TLAW's jungle tools could flip the early skirmish picture if they secure first herald or drake.",
+      "stake": 570
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "My draft-first read lands on BLG: the Yunara/Lulu lane pair is a comfort pick Fearless can't easily strip, and Viper gives them a carry who closes games once Jarvan or Pantheon sets the tempo. TLAW can win by taking early priority with Pantheon or Lee Sin and getting Yeon on Jhin, with CoreJJ's peel on top. But the region gap is flagged as a very big factor this time, so I'll back BLG, and the first-pick fight over Yunara or Pantheon is what would swing me.",
+      "usedLessons": [
+        {
+          "blobId": "SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ",
+          "text": "Mid lesson: Pool depth only matters if it shows up in the draft, and in a Bo1 a team's few comfort picks (like MKOI's Ryze and Lee Sin) can beat a broader pool, so I should judge how each side's best picks match up instead of counting champions. When the upset path I name is built on the opponent's comfort picks, I should cut my confidence until the draft shows BLG can deny or punish them, and not lean on league strength unless the report flags a big gap. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:52.496004Z"
+        },
+        {
+          "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+          "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:43.551986Z"
+        },
+        {
+          "blobId": "O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w",
+          "text": "Mid lesson: Bench depth only matters if it's the star's comfort picks that get through draft, so next time I'll check whether the opponent's carry, like Caliste on Ryze or Viktor, can be left open or denied, and weight that carry's current form heavily in a Bo1. I also won't use region strength as a tiebreaker unless the scouting report flags a big gap, and will let the draft and star matchup decide instead. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:12:34.932716Z"
+        },
+        {
+          "blobId": "V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc",
+          "text": "Mid lesson: A draft edge is only as good as the early tempo and closing power it creates. Vi/Jarvan winning the first skirmishes mattered as much as the Jayce/Gnar scaling puzzle, so I should check whether a comp gets priority and can finish a lead, not just whether it outscales the opposing star. I should also anchor on draft and pool evidence and leave region out of it unless the scouting report flags a big gap. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:42.820473Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:45:52.993Z",
+      "thinking": "I'm weighing the big region gap favoring LPL, noting both teams dropped their opening Worlds game, and comparing BLG's comfort picks like Yunara/Lulu with Viper's strong damage share against TLAW's draft tendencies with CoreJJ and Yeon.\n\nGiven the flagged region gap, I'll lean toward BLG around 68% confidence, while keeping in mind TLAW's early tempo threat and the lesson that BLG previously lost to MKOI's comfort picks—so I'll stay cautious rather than overconfident, and keep the final reasoning concise without listing raw numbers.",
+      "stake": 560
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 67,
+      "reasoning": "Both sides are staring at 0-1 and a Swiss elimination spiral, but BLG walk in carrying an 8-3 record against other regions while TLAW are 2-3, and that's the split that matters here. TLAW's pristine record when leading at 15 only tells me what happens once they have a lead, and BLG's coin-flip-length Bo1 history of getting burned by chaos keeps me well short of lean-hard territory.",
+      "usedLessons": [
+        {
+          "blobId": "hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8",
+          "text": "ADC lesson: When a team's headline record and its away or cross-region record diverge sharply (TSW's 16-4 versus 1-6 outside the LCP), trust the split that matches the matchup. Combined with a prior head-to-head (3-0 at MSI), that was clear enough to lean harder than my 58, since the numbers all pointed the same way and I was only hedging on style narratives like Nautilus engages. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:59.169447Z"
+        },
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA",
+          "text": "ADC lesson: A single 1-0 in a Bo1 is one data point and doesn't validate a 71% call, so I should judge myself on whether the numbers (the 6-1 vs 0-2 international records and the flagged big region gap) justified that confidence, not on the result. I can borrow Mid's pool-depth point only if I turn it into numbers, such as champion pool breadth, pick win rates and game-length tendencies, instead of treating \"calm\" or \"rhythm\" as evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:32.376409Z"
+        },
+        {
+          "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+          "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:48.015704Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:46:05.147Z",
+      "thinking": "I'm weighing the region gap between LPL and TLAW's region against BLG's much stronger international record, while noting it's only a Bo1 so I should temper confidence—especially since BLG did drop a series to MKOI earlier in the Swiss stage.\n\nLanding on BLG with a probability around 67-68, treating TLAW's perfect conversion stat as conditional noise rather than something to lean on heavily.",
+      "stake": 730
+    },
+    {
+      "player": "analyst-support",
+      "winner": "BLG",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "TLAW's room is the one I'd love to sit in: CoreJJ steadying everyone, clean conversion of leads, a team that has already shown it can claw back from the brink. But BLG are an 0-1 side with a veteran core, Viper to lean on, and a lot to prove after the MSI final heartbreak. They can play loose and together here, and when the region gap is this big I won't let a lovely locker room drag me off them, though if BLG start crumbling after another lost lead, TLAW's calm could take the series.",
+      "usedLessons": [
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI",
+          "text": "Support lesson: I was right that HLE's calm mattered, but I leaned on \"mood\" without checking it against what the team actually did, so next time I'll look for chemistry in concrete signs like coordinated early pressure, turning leads into towers and dragons, and a draft the whole team clearly bought into. I'll also remember that a team's morale tends to show in how cleanly they convert advantages, and I won't treat TES's \"wobbling\" as proof of low morale unless I can point to specific evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:55.914788Z"
+        },
+        {
+          "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+          "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:37.615647Z"
+        },
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:46:19.114Z",
+      "thinking": "I'm weighing the region strength factor heavily—LPL looks stronger than LCS—but noting both teams already have a Worlds loss in Swiss stage, so that gap alone shouldn't decide things without more context.\n\nLooking at chemistry signals: TLAW has CoreJJ steadying things with a strong comeback record and no recent throws, riding a hot streak, while BLG has dropped two straight and blown leads, including the tough loss to MKOI. Still, the region gap rule says I need clear international results to override it, and TLAW's international record (2-3, 0-1 at Worlds) isn't convincing enough compared to BLG's much stronger 8-3 mark, so I'm leaning toward picking BLG on that basis.",
+      "stake": 590
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095035\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":730,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA\"],\"thought\":\"2decd013bef7f45e50dc770974afced9eddca3970f7fad89dd31a7d6cd726382\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":570,\"lessons\":[\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"31265c5e6a8ee6d23dcd284ff86246c2535d83baa09c4e66b0fea988b367049a\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":560,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\"],\"thought\":\"d175915d65975fd5c38cfe008f2279b568ad2f53e054881754f25e00248908b8\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":590,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI\"],\"thought\":\"bdd1af284ecafc47b70555518dceab1479667018290700c83646e4a5d599e5f0\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":520,\"lessons\":[\"5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U\",\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"46c4486e54f95b91d3f2daeef521da1fce1e1c201c28367d12d54f3d376c7987\"}]}",
+  "batchHash": "a3bff19dcbe96f28b66c4b5f357864e1d4f2337b87de13351f5918b28ad3c3ac",
+  "commitDigest": "BGXqWgq1ZedjLGdcccXaWBr7gQBKZhnddzy4YUZxgNUW",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: TLAW vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 22-11, games 57-33 | last 10 (newest first) LWWWWLWWWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · Worlds 2026 0-1 · vs other regions 2-3\n  Last 21 games (15-6): GD@15 +1.0k, FB 52%, FT 76%, FD 62%, dragons 57%, 33.1 min avg, 1st baron 28:24\n  Leads @15 converted 9/9, comeback wins 1, throws 0, objectives taken while 1k+ behind 10\n  Worlds 2026 1 games (0-1): GD@15 +0.1k, FB 0%, FT 100%, FD 0%, dragons 17%, 37.6 min avg\n  Picks: TOP Camille 3, K'Sante 3, Ambessa 2 | JG Pantheon 4, Lee Sin 3, Qiyana 3 | MID Syndra 4, Ahri 3, Orianna 3 | BOT Lucian 4, Ashe 3, Ezreal 3 | SUP Nami 3, Alistar 2, Karma 2\n  Standout: TLAW CoreJJ (support) KDA 7.2 over 21 games, 7% dmg share\nBLG [LPL]: 2026 series 50-13, games 125-53 | last 10 (newest first) LLWWWWWWWL\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 0-1 · vs other regions 8-3\n  Last 21 games (14-7): GD@15 +1.2k, FB 48%, FT 62%, FD 48%, dragons 53%, 32.3 min avg, 1st baron 24:06\n  Leads @15 converted 9/10, comeback wins 0, throws 2, objectives taken while 1k+ behind 5\n  Worlds 2026 1 games (0-1): GD@15 -1.1k, FB 0%, FT 0%, FD 0%, dragons 20%, 38.8 min avg\n  Picks: TOP Camille 4, Jayce 4, Ambessa 3 | JG Jarvan IV 4, Pantheon 4, Naafiri 3 | MID Aurora 3, Orianna 3, Syndra 3 | BOT Yunara 6, Ashe 5, Kalista 3 | SUP Lulu 6, Karma 3, Renata 3\n  Standout: BLGViper (bottom) KDA 6 over 20 games, 31% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\n  - BLG took Elder at 30:54 while down 3.5k vs MKOI (Worlds 2026), lost\nFun facts:\n  * Likely quadra kill: BLGKnight (Locke) at 21:41 (vs AL, LPL 2026)\n  * Likely quadra kill: TLAW Yeon (Jhin) at 27:26 (vs SR, LCS 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LCS vs LPL: LCS went 0-1 against LPL in 2026; LCS 27% vs LPL 50% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  BLG (LPL): no Worlds titles; lost final 2024.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

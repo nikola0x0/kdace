@@ -1,0 +1,184 @@
+{
+  "series": {
+    "matchId": "115660540726095031",
+    "startTime": "2026-10-24T19:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "G2",
+    "teamB": "LOS",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "G2",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "Strip the narrative and G2 simply have the better players in more lanes, with Caps the best individual on the Rift in this game and a mid pool deep enough to turn that into early leads. LOS have real dangers in Ackerman's playmaking and Duduhh's late-game Kai'Sa, and G2 love to hand back leads, but one good fight doesn't erase a skill gap across the map, so I'm backing the stronger players.",
+      "usedLessons": [
+        {
+          "blobId": "tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE",
+          "text": "Top lesson: Individual skill still wins series, but in a Bo1 I have to check whether the star's lane can actually turn that edge into a lead before I treat it as the whole argument. When the opposing team has a proven jungle-support duo that can steal a messy game, I should rate that duo as skill too, not dismiss it as chaos, and I should be more skeptical of a Viper-sized edge when the whole BLG team is the one the crowd is backing. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:10:47.127123Z"
+        },
+        {
+          "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+          "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:21:32.122735Z"
+        },
+        {
+          "blobId": "Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0",
+          "text": "Top lesson: Individual skill still wins series, but it wins by turning into early leads, so I should check whether the stronger players, especially mid and jungle, have draft pools deep enough to get those leads and keep them. Next time I'll back the skill gap on those specific matchups instead of leaning on the region gap, which only confirms what the players already show. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:03.412634Z"
+        },
+        {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:15:44.996913Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:38:58.904Z",
+      "thinking": "I'm weighing G2 against LOS for this Bo1, leaning on individual skill rather than crowd hype since the regions seem fairly even. Checking G2's 2026 roster — BrokenBlade top, SkewMond jungle, Caps mid, Hans sama bot — to gauge their player quality.\n\nCaps stands out as a genuine star, while LOS brings Ackerman's playmaking, Duduhh's Kai'Sa scaling, and a Pantheon jungler who can snowball early, but overall G2 looks like the deeper roster internationally. I'm landing on G2 at roughly 64%, while noting G2's known tendency to throw leads as a path for LOS to steal the game.",
+      "stake": 890
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "G2",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "Tempo call: G2 turn the first fifteen minutes into towers, with Xin Zhao or Jarvan setting the pace and Caps moving first, while LOS lean on Ryze, a scaling pick that needs the map to stay quiet. Pantheon can skirmish and the first dragon is a real flip trigger, and G2 did hand DK a lead in their Worlds opener, so I'm not going higher. But if G2 win the first tower and herald and LOS can't force early fights, the Ryze draft never gets its window.",
+      "usedLessons": [
+        {
+          "blobId": "pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw",
+          "text": "Jungle lesson: Judge the matchup by which side's draft and jungle pathing turn the first 15 minutes into towers and dragons, and don't lean on region strength unless the report flags a big gap. Mid's point about Ryze needing time to scale is really a tempo point, because a scaling draft loses when the early map is taken from it, so I should back the side that controls that window. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:34.819370Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I",
+          "text": "Jungle lesson: Tempo decides the game, so I should build my pick on concrete early-game triggers like first dragon, Herald, first tower and who wins the early skirmishes. That worked here because my flip condition never fired, and I should keep naming those triggers rather than leaning on narratives like head-to-head history, trophy swagger or region reputation. Next time I'll also check whether a team can hold a lead past 15 minutes, since DK's habit of throwing leads nearly cost me. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:12.508485Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:39:10.447Z",
+      "thinking": "I need to format my pick as JSON, with reasoning as the field for analysis. Looking at G2 vs LOS, there's no major region gap, so I'll skip that angle. Early game stats favor G2 slightly with better first tower and first dragon rates, while gold at 15 is tied between them.\n\nJungle matchups both favor early skirmishing, but LOS's Pantheon adds early contest potential. I'm weighing G2's history of throwing leads against Dragon Knights at Worlds against LOS's comeback resilience and objective-taking while behind — that pushes me toward favoring G2 but with meaningful risk, since their tempo-based champions need to convert before LOS scales into Ryze. I'll settle on G2 at roughly 62% with a flip condition tied to LOS securing early objectives off Pantheon and denying G2 lane priority.",
+      "stake": 910
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "G2",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "In a Bo1 the draft is the whole series, and Caps can bend it: Orianna, Akali or Viktor lets him answer whatever LOS shows, while LOS lean on a few comfort picks in Pantheon and Wukong in the jungle and Ryze in the mid lane. G2 can ban or contest those and make Ryze play from behind a Xin Zhao or Jarvan tempo lead. The flip is G2 leaving Ryze plus Pantheon open, LOS getting early priority, and G2 repeating the Worlds habit of not closing a lead.",
+      "usedLessons": [
+        {
+          "blobId": "SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ",
+          "text": "Mid lesson: Pool depth only matters if it shows up in the draft, and in a Bo1 a team's few comfort picks (like MKOI's Ryze and Lee Sin) can beat a broader pool, so I should judge how each side's best picks match up instead of counting champions. When the upset path I name is built on the opponent's comfort picks, I should cut my confidence until the draft shows BLG can deny or punish them, and not lean on league strength unless the report flags a big gap. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:52.496004Z"
+        },
+        {
+          "blobId": "uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs",
+          "text": "Mid lesson: Fearless pool depth only bites once comfort picks start burning, which a best of 1 never gets to, so in a single game I should weigh the star's form and the concrete draft matchups (Zeka's flexibility against Ryze's need to scale) over a generic \"deeper book\" story. I also shouldn't lean on region reputation like \"shaky against outside teams\" unless the report flags a big gap, and should let the draft carry the argument. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:02.062130Z"
+        },
+        {
+          "blobId": "O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w",
+          "text": "Mid lesson: Bench depth only matters if it's the star's comfort picks that get through draft, so next time I'll check whether the opponent's carry, like Caliste on Ryze or Viktor, can be left open or denied, and weight that carry's current form heavily in a Bo1. I also won't use region strength as a tiebreaker unless the scouting report flags a big gap, and will let the draft and star matchup decide instead. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:12:34.932716Z"
+        },
+        {
+          "blobId": "V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc",
+          "text": "Mid lesson: A draft edge is only as good as the early tempo and closing power it creates. Vi/Jarvan winning the first skirmishes mattered as much as the Jayce/Gnar scaling puzzle, so I should check whether a comp gets priority and can finish a lead, not just whether it outscales the opposing star. I should also anchor on draft and pool evidence and leave region out of it unless the scouting report flags a big gap. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:42.820473Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:39:23.406Z",
+      "thinking": "I'm checking the champion pick/ban patterns across both teams, looking at G2's mid, jungle, top, bot, and support picks alongside LOS's draft tendencies to spot trends.\n\nWeighing comfort picks like Caps' Orianna/Akali/Viktor against LOS's Ryze and Pantheon/Wukong priority, plus recent form—G2's mixed streak versus LOS's hot run—I lean toward G2 given their broader pool and ability to deny Ryze, landing around 63% confidence for G2.",
+      "stake": 790
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "G2",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "With no region gap to lean on, this comes down to who actually takes the map, and G2 grabbing first tower in 81% of games against LOS's 70% is the cleanest edge on the board. Caps and company still have that DK lead-throw fresh in the memory, and LOS's Duduhh can turn any messy teamfight into a highlight reel, so in a Bo1 I'm only nudging it G2's way.",
+      "usedLessons": [
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "Wa2-ULj-on4ItXklHhEkJjMibZGssdWijCLVdQRtNJ4",
+          "text": "ADC lesson: The 37-10 vs 18-25 series gap set a sound 79%, but my reasoning also leaned on a Chovy-vs-Rookie story I never backed with lane numbers. Next time I'll price the confidence only from measurable inputs (series records, head-to-heads, game length tendencies) and check Jungle's point that early tempo decided it by looking at first-objective and gold-at-15 stats before crediting any one matchup. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:12.997489Z"
+        },
+        {
+          "blobId": "YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM",
+          "text": "ADC lesson: A win doesn't validate the reasoning, and \"reigning champion\" is a story, not a number, so I should anchor on measurable inputs like records, head-to-heads, game length and series scores, and only cite the region gap when the scouting report flags it. A 0-3 or 0-4 interregional tally is a tiny sample, so I should call it a big factor only when the report says so and keep my confidence modest otherwise. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:02:32.394299Z"
+        },
+        {
+          "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+          "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:48.015704Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:39:34.815Z",
+      "thinking": "I'm comparing G2 and LOS without leaning on regional strength, since the report doesn't show a big gap there. G2 is 65% in series and 64% in games, while LOS is 69% in series but only 60% in games, with domestic results excluded as not comparable. Recent form has G2 at 15-6 over their last 21 and LOS at 12-8 over their last 20, with gold differential at 15 minutes essentially tied at +0.8k for both.\n\nLooking at objective control, G2's first tower rate of 81% and dragon control edge stand out against LOS's weaker 70% and lower dragon numbers, though LOS converts leads slightly better. Given this is a Bo1, I'm leaning toward a modest edge for G2 around 58%, keeping confidence tempered and sticking to concrete numbers like the 81% first-tower rate rather than broad narrative claims.",
+      "stake": 550
+    },
+    {
+      "player": "analyst-support",
+      "winner": "G2",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "Both rooms are licking an 0-1 wound, so I'm reading who is steadier. G2 looked locked-in early against DK and only lost the thread late, which sounds like a closing-out problem, not a broken locker room. With Caps anchoring a veteran group that has lived through Worlds pressure, I trust them to reset. LOS are loose, resilient comeback merchants with nothing to lose, so that's a real danger, and if G2 give up an early lead again the doubt could creep in and flip this.",
+      "usedLessons": [
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+          "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:37.615647Z"
+        },
+        {
+          "blobId": "U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU",
+          "text": "Support lesson: A past result only counts as a locker-room ghost if I can point to present-day signs of it, like shaky comms, roster or coaching changes, or a team that drafts scared, so I should look for those first instead of assuming the memory lingers. LYON's calm, comfort-pick draft was the kind of visible evidence of trust I should lean on, and I should never treat a team's mood as decided before I've seen it. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:06:23.011599Z"
+        },
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:39:50.088Z",
+      "thinking": "As the Support analyst, I'm looking at G2 vs LOS in Swiss Bo1 — G2 dropped their opener to DK after blowing a sizable lead, while LOS appears to be entering their first Worlds match with no prior results to reference.\n\nG2 brings real pedigree with Caps and multiple LEC titles plus comeback experience, but the throw against DK raises a question about whether their collapse was a morale issue or a shot-calling breakdown. LOS, by contrast, is riding a hot domestic streak as CBLOL champion with zero throws and resilient comeback wins, suggesting a team playing loose with nothing to lose, which makes me want to weigh team chemistry and narrative momentum carefully rather than default to region strength.",
+      "stake": 580
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095031\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":550,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"Wa2-ULj-on4ItXklHhEkJjMibZGssdWijCLVdQRtNJ4\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\"],\"thought\":\"7555dc0d74866a75585254b6ba7a34c9678c3c56a03bbc83edc1f3deb5a8960b\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":910,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw\"],\"thought\":\"d7488250362767525cf641d418f8c3d1901cbd9e889e5ae40a5714c5c1943863\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":790,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs\"],\"thought\":\"25cf15116c40b0a2b5cb966c39aa53ec6c1b1e3ccedb49b84c23094199a381df\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":580,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"21f6e5eeaa153e6a9229e85046cc2f9efa4377af87d775e7f7be140e4fc6a18c\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":890,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\"],\"thought\":\"286eb33a0920df375975407f5d1fcaa92afc394e48ee05ae383aa36f0c793099\"}]}",
+  "batchHash": "7faec1a6fc3326245994afba3f8b70b67c359e02a01fe0fdad3ccef95764834e",
+  "commitDigest": "F7vQM5r4C6TiVKx8Dfd7bPU3gT1qTmZfQZeEu3tZhib1",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: G2 vs LOS (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nG2 [LEC]: 2026 series 34-18, games 80-45 | last 10 (newest first) LWWWLLWWWW\n  LEC 2026 28-11 (3 titles) · First Stand 2026 3-2 (lost final) · MSI 2026 2-2 · EWC 2026 1-2 · Worlds 2026 0-1 · vs other regions 6-7\n  Last 21 games (15-6): GD@15 +0.8k, FB 48%, FT 81%, FD 57%, dragons 58%, 33 min avg, 1st baron 27:54\n  Leads @15 converted 8/10, comeback wins 1, throws 1, objectives taken while 1k+ behind 8\n  Worlds 2026 1 games (0-1): GD@15 +2.3k, FB 100%, FT 100%, FD 0%, dragons 60%, 32.7 min avg, 1st baron 29:48\n  Picks: TOP K'Sante 3, Rumble 3, Ambessa 2 | JG Xin Zhao 4, Jarvan IV 3, Skarner 3 | MID Orianna 4, Akali 3, Viktor 3 | BOT Yunara 4, Ashe 3, Lucian 3 | SUP Alistar 3, Lulu 3, Milio 3\n  Standout: G2 Caps (mid) KDA 5.4 over 21 games, 23% dmg share\nLOS [CBLOL]: 2026 series 24-11, games 55-36 | last 10 (newest first) WWWWLWWWWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · vs other regions 1-2\n  Last 20 games (12-8): GD@15 +0.8k, FB 45%, FT 70%, FD 40%, dragons 49%, 32.5 min avg, 1st baron 27:24\n  Leads @15 converted 7/10, comeback wins 2, throws 0, objectives taken while 1k+ behind 12\n  Picks: TOP Gnar 3, Rumble 3, Ambessa 2 | JG Pantheon 5, Wukong 4, Jarvan IV 3 | MID Ryze 4, Orianna 3, Cassiopeia 2 | BOT Sivir 3, Ashe 2, Kai'Sa 2 | SUP Alistar 3, Bard 2, Karma 2\n  Standout: LOS Ackerman (support) KDA 6.2 over 20 games, 8% dmg share\nHead-to-head 2026: none\nKey moments:\n  - G2 threw a +3.9k lead (22:00) vs DK (Worlds 2026)\n  - G2 came back from -3.6k at 22:00 vs VIT (LEC 2026)\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -5.1k at 28:00 vs FUR (CBLOL 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LEC vs CBLOL: LEC went 1-0 against CBLOL in 2026; LEC 52% vs CBLOL 36% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  G2 (LEC): no Worlds titles; lost final 2019.\n  LOS (CBLOL): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

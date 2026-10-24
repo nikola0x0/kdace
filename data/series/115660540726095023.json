@@ -1,0 +1,189 @@
+{
+  "series": {
+    "matchId": "115660540726095023",
+    "startTime": "2026-10-24T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "LYON",
+    "teamB": "KC",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "I went role by role instead of falling for one marquee name. Berserker is a monster and Inspired knows how to steal a game, but Canna in the top lane is a real edge for KC, Caliste is every bit Berserker's equal in the bot lane, and Yike and Vladi give KC more ways to snowball. I'm not backing the crowd's darling on vibes, because KC wins here on the players and the stronger-region read just confirms it. LYON can still win if Berserker takes over a messy fight and Inspired wins the early jungle tempo, but I'm not betting on that.",
+      "usedLessons": [
+        {
+          "blobId": "5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U",
+          "text": "Top lesson: Individual skill still wins series, but I have to verify who has the stronger players on the actual rosters rather than assume the name on the jersey does. Caliste outplayed Hope in the lane that mattered, so next time I'll compare the player matchups first, and fade the hype only when the skill gap points the same way. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:11:45.035595Z"
+        },
+        {
+          "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+          "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:21:32.122735Z"
+        },
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        },
+        {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:15:44.996913Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:40:09.668Z",
+      "thinking": "I'm weighing LYON against KC, noting the LEC seems stronger than LCS this time around, and recalling LYON's likely 2026 lineup—Dhokla top, Inspired jungle, Saint mid, Berserker bot, Isles support.\n\nFor KC, I'm thinking of Canna top, Yike jungle, Vladi mid, Caliste bot, with Targamas or Busio at support. Comparing lane matchups—Canna's LCK pedigree against Dhokla, Caliste's recent form against Berserker—I'm wary of crowd hype around KC's international record but still lean toward trusting the bigger region gap favoring KC, while my core instinct keeps pulling me back toward valuing LYON's individual skill.\n\nPulling it together: KC has edges across most lanes, especially Caliste over Hope, so the role-by-role comparison favors them cleanly enough to settle on KC without needing to second-guess the scouting read.",
+      "stake": 760
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 64,
+      "reasoning": "Tempo is the whole story, and KC's Vi/Jarvan/Lee Sin jungle keeps turning the first fifteen minutes into plates, towers and a gold lead. That is how the big LEC-over-LCS gap actually shows up on the map, not just as a badge. LYON are no pushovers: their early tower pressure is real, and if Wukong or Xin Zhao grab first Herald and the opening dragon, KC's habit of giving back leads gets exposed in a Bo1. I'm still riding the side that owns the early map.",
+      "usedLessons": [
+        {
+          "blobId": "m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk",
+          "text": "Jungle lesson: KC's early-map control (first tower, a gold lead by 15) beat AL's LPL badge once again, so in future Bo1s I'll weight who actually wins the first 15 minutes, and recent head-to-head tempo like that 2-0 at EWC, above league reputation. I'll still treat early control as the lens, but I'll back it harder when the opponent keeps drifting through the opening and gives away the map. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:12:07.921215Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        },
+        {
+          "blobId": "CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8",
+          "text": "Jungle lesson: Tempo still decides games, so I should judge a team's first-15 pressure by what it shows against comparable opposition (jungle priority, first herald, first tower) instead of dismissing it as \"built against CBLOL\" or leaning on region records. I should treat region as a big factor only when the scouting report flags a BIG REGION GAP, and otherwise keep a clear flip trigger like \"LOS take early jungle priority and first herald\" and let the early map decide. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:32.857890Z"
+        },
+        {
+          "blobId": "0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I",
+          "text": "Jungle lesson: Tempo decides the game, so I should build my pick on concrete early-game triggers like first dragon, Herald, first tower and who wins the early skirmishes. That worked here because my flip condition never fired, and I should keep naming those triggers rather than leaning on narratives like head-to-head history, trophy swagger or region reputation. Next time I'll also check whether a team can hold a lead past 15 minutes, since DK's habit of throwing leads nearly cost me. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:12.508485Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:40:23.720Z",
+      "thinking": "I need to format this as JSON with just the reasoning field being a sentence or two. Looking at the early-game stats, Lyon has a slight edge in gold differential and dragon control while KC shows stronger first blood and tower rates at 15 minutes, though KC's Worlds first blood rate drops to 33%.\n\nWeighing the region gap heavily (LEC vs LCS), KC's stronger Worlds performance with a 4-0 record and fewer throws compared to Lyon's zero throws but weaker tournament pedigree, I'm leaning toward KC with moderate confidence around 64-66%, flagging the first drake/tower exchange as the key flip trigger to watch.",
+      "stake": 850
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "The gap between the leagues is real and it's flagged, so I start from KC and let the draft confirm it. Vi, Jarvan and Lee Sin give them early priority, Ryze, Viktor and Orianna give them mid flexibility, and Caliste has a comfort pick in Caitlyn or Ezreal. LYON's route is Berserker getting Lucian or Yunara plus an Alistar engage to win bot, with Syndra scaling behind it. If they take the Caitlyn/Ezreal fight in the first rotation and Caliste ends up on a pick he doesn't love, I get nervous.",
+      "usedLessons": [
+        {
+          "blobId": "jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI",
+          "text": "Mid lesson: Keep tying the pick to concrete draft evidence, such as which comfort champions the star player (Berserker) can lock in and how deep each side's pool runs under Fearless. Don't lean on soft reads like \"stays calm when behind,\" and keep naming the exact first-pick fight that would flip me, because that is what turns a draft read into a testable call. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:36.329342Z"
+        },
+        {
+          "blobId": "hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI",
+          "text": "Mid lesson: In a best of 1 the draft is the entire series, so I should build my confidence from named draft evidence (flex picks, pool depth, and which comfort picks Fearless will strip from each side) and from star form. I shouldn't lean on a league label like \"LCK depth\" or the champion aura, and I shouldn't claim \"draft depth showed up\" afterward unless I wrote down those draft signals beforehand. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:02:04.636083Z"
+        },
+        {
+          "blobId": "mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg",
+          "text": "Mid lesson: Pool depth on paper isn't the same as draft leverage; under Fearless, a star's signature comfort picks (POUT's Akali, Viktor, Lucian) can matter more than the number of \"comfortable\" options a team has. Next time I'll check who actually wins the contested picks and whether the opponent's star can be shut out, rather than assuming breadth beats a few high-impact pools. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:25.056615Z"
+        },
+        {
+          "blobId": "V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc",
+          "text": "Mid lesson: A draft edge is only as good as the early tempo and closing power it creates. Vi/Jarvan winning the first skirmishes mattered as much as the Jayce/Gnar scaling puzzle, so I should check whether a comp gets priority and can finish a lead, not just whether it outscales the opposing star. I should also anchor on draft and pool evidence and leave region out of it unless the scouting report flags a big gap. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:42.820473Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:40:38.313Z",
+      "thinking": "The region gap is a huge factor favoring KC given LEC's strength over LYON's league. Looking at rosters, KC leans on Caliste's Caitlyn/Ezreal and flexible mid picks with tempo junglers, while LYON counters with Berserker's carries, Syndra/Gwen mid, and strong early junglers like Wukong/Skarner/Xin Zhao.\n\nI'm weighing this against draft-based lessons—Bo1 series dynamics, star comfort picks, and bot lane matchups between Berserker and Caliste—landing on KC with a win probability around 66-70%.",
+      "stake": 950
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 66,
+      "reasoning": "KC have looked like a team that belongs at this Worlds, 4-0 so far and a clean 9-4 against other regions, while LYON are 4-6 once they leave the LCS, and with a flagged region gap that's the number I trust. It's still a Bo1, so I'm capping it: LYON can take early tempo around Berserker and punish a KC side that has thrown big leads, but I won't price one chaotic game like a series.",
+      "usedLessons": [
+        {
+          "blobId": "WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw",
+          "text": "ADC lesson: Numbers over stories means sizing each number by its sample, and a 1-0 result in a single game doesn't validate the 58%. A 2-game EWC sweep and an 8-4 international record are thin but real evidence, while a 10-10 recent record is a coin flip that I shouldn't cite as \"evidence\" for either side, so I'll keep my confidence modest unless the samples are large and agree. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:03.648704Z"
+        },
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA",
+          "text": "ADC lesson: A single 1-0 in a Bo1 is one data point and doesn't validate a 71% call, so I should judge myself on whether the numbers (the 6-1 vs 0-2 international records and the flagged big region gap) justified that confidence, not on the result. I can borrow Mid's pool-depth point only if I turn it into numbers, such as champion pool breadth, pick win rates and game-length tendencies, instead of treating \"calm\" or \"rhythm\" as evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:32.376409Z"
+        },
+        {
+          "blobId": "YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM",
+          "text": "ADC lesson: A win doesn't validate the reasoning, and \"reigning champion\" is a story, not a number, so I should anchor on measurable inputs like records, head-to-heads, game length and series scores, and only cite the region gap when the scouting report flags it. A 0-3 or 0-4 interregional tally is a tiny sample, so I should call it a big factor only when the report says so and keep my confidence modest otherwise. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:02:32.394299Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:40:51.267Z",
+      "thinking": "Comparing LYON and KC, the region gap heavily favors LEC over LCS—KC's head-to-head and overall records against other regions are notably stronger than LYON's. Since this is a Bo1, I should temper confidence given the inherent chaos, but the region strength gap is still a major factor to weigh.\n\nI'll pick KC around 66-68% probability. For the reasoning, I'll keep it tight—just two key stats like their international win rate outside home leagues and their Worlds record—without reading back a full scouting report.",
+      "stake": 1170
+    },
+    {
+      "player": "analyst-support",
+      "winner": "KC",
+      "score": null,
+      "winProbability": 63,
+      "reasoning": "I'm backing the room that has already shown it can stay together when things go sideways: KC dug out of a deep hole against C9 at Worlds without any visible finger-pointing, and that belief is why they're unbeaten here. LYON have a calm, trusting room too, and a late Baron swing from them wouldn't surprise me, but with the region gap flagged as a big factor, KC's steadiness on this stage gets the nod. The thing that would crack KC is a thrown lead that starts them doubting each other.",
+      "usedLessons": [
+        {
+          "blobId": "n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk",
+          "text": "Support lesson: My read on the room was right, but I should lean on concrete signs of cohesion, like how a team recovered from a deficit or how it handled a prior head-to-head, rather than a general sense of steady mood, and I should state those signs plainly. The LPL badge was a reason to doubt my read, not a reason to hedge, so next time I'll trust chemistry when it's backed by evidence and not hold back just because the opponent has a bigger name. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:27.512817Z"
+        },
+        {
+          "blobId": "UqkrEaQKo5T1VhYSfnge0KPwEZV5vrfwSf0WIZRH9As",
+          "text": "Support lesson: When I read the rooms, I should judge each team's chemistry, morale and Worlds-stage steadiness on its own evidence, and not wave off a happy locker room as \"a hot streak from a weaker region\" unless the scouting report actually flags a BIG REGION GAP. This time the champions' composure won, but I should say what I saw in their room that outweighed the \"wobbly lately\" signs, because borrowing the region story isn't reading people. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:03:02.899513Z"
+        },
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:41:03.513Z",
+      "thinking": "I'm weighing LYON against KC given the big region gap favoring LEC, which my house rule treats as a major factor that only clear international results can override. Looking at LYON's international record—4-6 overall, MSI 3-2, EWC 0-2, First Stand 1-2—against the fact that LCS beat LEC 2-1 in 2026, I'm trying to figure out whether that head-to-head result is strong enough evidence to shift away from the default region-based lean.\n\nKC's Worlds run is dominant—4-0, 10-2 in games, with a notable comeback from -7k against C9 showing real composure—while LYON also shows strong resilience, converting leads 7 of 8 times with zero throws and taking objectives even while behind. Both teams feel settled, but KC's Worlds momentum and the region gap push me toward picking KC around 62-65%, applying lessons about trusting concrete signs, not waving off a flagged region gap without clear international proof, and staying loosely confident when every analyst tells the same story—landing on roughly 63% in KC's favor.",
+      "stake": 1000
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095023\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1170,\"lessons\":[\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA\"],\"thought\":\"b55cc814551e34ece7c756f0c954ee3ed7efdf2c63269c89b3c5afbd4901cc97\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":850,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"9e3002bc32ca73e0586a8aa1df41a0d45d07795759b06fc4383d4f4d9dbd2202\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":950,\"lessons\":[\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"74a171cb7b89f2c210b67531a08ff00830a79c430dfa3e3d9b81626822acbb9f\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1000,\"lessons\":[\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"UqkrEaQKo5T1VhYSfnge0KPwEZV5vrfwSf0WIZRH9As\",\"n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk\"],\"thought\":\"f93ffbde38f9eea9a532e0fd0964a7103c50a2c8ea6c7be8064e1f15579a0fe1\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":760,\"lessons\":[\"5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U\",\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"cc4cfe9d60e77143dc5569ffd5b6c3ef2ea84c82ffc8aa0035449b2dd29af186\"}]}",
+  "batchHash": "d78c40857ebccb374ecb38ca8143d6292eb2238cf8e3ba4fb6804c91634d0090",
+  "commitDigest": "5GUM383UHUEz8sQPFvVszENutwwpZmKmHvTehSpwxSTd",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: LYON vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLYON [LCS]: 2026 series 25-13, games 72-42 | last 10 (newest first) LWWLWWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · vs other regions 4-6\n  Last 20 games (12-8): GD@15 +0.8k, FB 60%, FT 70%, FD 47%, dragons 48%, 33.6 min avg, 1st baron 24:48\n  Leads @15 converted 7/8, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Picks: TOP Gwen 4, Gnar 2, K'Sante 2 | JG Wukong 3, Skarner 3, Xin Zhao 3 | MID Syndra 4, Ryze 3, Annie 2 | BOT Lucian 3, Yunara 3, Jhin 2 | SUP Alistar 5, Lulu 3, Milio 3\n  Standout: LYON Berserker (bottom) KDA 5.1 over 20 games, 27% dmg share\nKC [LEC]: 2026 series 41-15, games 90-49 | last 10 (newest first) WWWWLLWWWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 4-0 · vs other regions 9-4\n  Last 32 games (22-10): GD@15 +1.2k, FB 63%, FT 63%, FD 50%, dragons 53%, 33.5 min avg, 1st baron 26:00\n  Leads @15 converted 15/17, comeback wins 1, throws 4, objectives taken while 1k+ behind 5\n  Worlds 2026 12 games (10-2): GD@15 +1.3k, FB 33%, FT 67%, FD 25%, dragons 54%, 33.6 min avg, 1st baron 26:12\n  Picks: TOP Rumble 6, Ambessa 5, Jayce 5 | JG Vi 6, Jarvan IV 5, Lee Sin 5 | MID Ryze 5, Viktor 5, Orianna 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.6 over 32 games, 28% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - LYON took Baron at 23:54 while down 3.0k vs C9 (LCS 2026), won\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.4k lead (22:00) vs SHFT (LEC 2026)\nFun facts:\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\n  * Likely penta kill: KC Caliste (Caitlyn) at 33:28 (vs GX, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LCS vs LEC: LCS went 2-1 against LEC in 2026; LCS 27% vs LEC 52% against other regions overall.\n  BIG REGION GAP: LEC is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LYON (LCS): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

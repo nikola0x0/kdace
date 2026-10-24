@@ -1,0 +1,194 @@
+{
+  "series": {
+    "matchId": "115660540726095029",
+    "startTime": "2026-10-24T17:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "AL",
+    "teamB": "TES",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "Hope and Kael give AL the best bot-support pairing on the server, and in a Bo1 between two LPL teams on the brink, that kind of lane skill is what gets you the early lead. TES can still steal this by scrambling it into a messy teamfight game, because AL have blown big leads against them before, so I'm not going bigger than a lean. Still, I'll take the better players in the lanes over a team that keeps winning games it had no business winning.",
+      "usedLessons": [
+        {
+          "blobId": "Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0",
+          "text": "Top lesson: Individual skill still wins series, but it wins by turning into early leads, so I should check whether the stronger players, especially mid and jungle, have draft pools deep enough to get those leads and keep them. Next time I'll back the skill gap on those specific matchups instead of leaning on the region gap, which only confirms what the players already show. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:03.412634Z"
+        },
+        {
+          "blobId": "tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE",
+          "text": "Top lesson: Individual skill still wins series, but in a Bo1 I have to check whether the star's lane can actually turn that edge into a lead before I treat it as the whole argument. When the opposing team has a proven jungle-support duo that can steal a messy game, I should rate that duo as skill too, not dismiss it as chaos, and I should be more skeptical of a Viper-sized edge when the whole BLG team is the one the crowd is backing. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:10:47.127123Z"
+        },
+        {
+          "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+          "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:21:32.122735Z"
+        },
+        {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:15:44.996913Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:36:38.823Z",
+      "thinking": "I'm weighing AL against TES, both LPL teams so their domestic records are directly comparable without needing a region gap. I'm recalling AL's current roster—Flandre top, Tarzan jungle, Shanks mid, Hope ADC, Kael support—to compare individual skill matchups.\n\nLooking at head-to-head, AL leads 4-2 and both teams dropped their Worlds openers 0-1, with AL showing a strong early game but struggling to close out leads. Given AL's stronger bot lane and better overall skill edge, I'm leaning toward picking AL with roughly 62% confidence, while staying wary of crowd hype inflating that number.",
+      "stake": 940
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "It's all about the first fifteen minutes. TES can get a Lee Sin skirmish going and grab blood, but they keep failing to turn it into towers and dragons, and a Ryze/Orianna draft needs the map handed to it. AL's Maokai/Nocturne tempo and clean first-tower setups should take that window. I'm keeping this modest because TES won the last meeting by flipping an AL lead, so if Lee Sin wins the early fights and takes the first Herald, I flip.",
+      "usedLessons": [
+        {
+          "blobId": "2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY",
+          "text": "Jungle lesson: The early game still decides everything, so I should judge who wins the first fifteen minutes from the jungle matchup, the draft's early pressure and the first-objective setups, not from \"better team\" or region labels, which only count when the scouting report flags a big gap. When the other jungler can force early skirmishes, like Elyoya on Lee Sin, a Bo1 gives the favorite no time to recover, so I should cut my confidence instead of assuming they'll win tempo by default. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:14.870580Z"
+        },
+        {
+          "blobId": "pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw",
+          "text": "Jungle lesson: Judge the matchup by which side's draft and jungle pathing turn the first 15 minutes into towers and dragons, and don't lean on region strength unless the report flags a big gap. Mid's point about Ryze needing time to scale is really a tempo point, because a scaling draft loses when the early map is taken from it, so I should back the side that controls that window. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:34.819370Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I",
+          "text": "Jungle lesson: Tempo decides the game, so I should build my pick on concrete early-game triggers like first dragon, Herald, first tower and who wins the early skirmishes. That worked here because my flip condition never fired, and I should keep naming those triggers rather than leaning on narratives like head-to-head history, trophy swagger or region reputation. Next time I'll also check whether a team can hold a lead past 15 minutes, since DK's habit of throwing leads nearly cost me. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:12.508485Z"
+        },
+        {
+          "blobId": "k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU",
+          "text": "Jungle lesson: Early tempo only counts if it's backed by evidence, and I took TSW's jungle pathing as proof they'd control the first 15 minutes while ignoring that a 16-4 home record and a 3-0 MSI loss to LYON show how they actually handle first objectives against this opponent. Next time I'll check who has really won first Drake and Herald fights in head-to-head or international play before I call a team the pace-setter. (from Swiss TSW vs LYON; picked TSW, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:09.213749Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:36:52.240Z",
+      "thinking": "Since both teams are LPL, region strength isn't a factor here. Looking at early-game stats, AL has stronger first blood but lower first tower/dragon rates than TES, while TES leads heavily in first blood but trails in towers and dragons. At Worlds, AL actually won early objectives but still lost the game, whereas TES struggled badly in the early phases there.\n\nHead-to-head AL leads 4-2 but TES won the most recent meeting, including a comeback after AL once blew a sizeable gold lead. I'm weighing whether TES's early jungle tools like Lee Sin could force skirmishes before AL's scaling picks come online, pulling in lessons from similar matchups about checking opponent early-game threats, holding leads past the laning phase, and how Ryze-based compositions need time to scale. AL's stronger conversion rate on leads overall pushes me toward picking them around the high-50s percentage range, while flagging TES's early Lee Sin aggression as the main risk factor.",
+      "stake": 690
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 60,
+      "reasoning": "This one is decided on the draft board. AL can run Akali, Annie or Yone in mid and pair them with jungle tempo from Maokai or Nocturne. TES's mid is basically Orianna or Ryze, so one ban or a first-phase pick takes away half their comfort, and the Ezreal and Lee Sin lanes then have to carry them. I'm not going to let a 4-2 head-to-head or a Worlds opening-day result decide it, because it's the first-rotation fight that matters. If TES gets Ryze and Ezreal through with early Lee Sin priority and AL can't punish the scaling, this flips, but AL's habit of finishing leads is why I'm still on them.",
+      "usedLessons": [
+        {
+          "blobId": "mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg",
+          "text": "Mid lesson: Pool depth on paper isn't the same as draft leverage; under Fearless, a star's signature comfort picks (POUT's Akali, Viktor, Lucian) can matter more than the number of \"comfortable\" options a team has. Next time I'll check who actually wins the contested picks and whether the opponent's star can be shut out, rather than assuming breadth beats a few high-impact pools. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:25.056615Z"
+        },
+        {
+          "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+          "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:43.551986Z"
+        },
+        {
+          "blobId": "jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI",
+          "text": "Mid lesson: Keep tying the pick to concrete draft evidence, such as which comfort champions the star player (Berserker) can lock in and how deep each side's pool runs under Fearless. Don't lean on soft reads like \"stays calm when behind,\" and keep naming the exact first-pick fight that would flip me, because that is what turns a draft read into a testable call. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:36.329342Z"
+        },
+        {
+          "blobId": "V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc",
+          "text": "Mid lesson: A draft edge is only as good as the early tempo and closing power it creates. Vi/Jarvan winning the first skirmishes mattered as much as the Jayce/Gnar scaling puzzle, so I should check whether a comp gets priority and can finish a lead, not just whether it outscales the opposing star. I should also anchor on draft and pool evidence and leave region out of it unless the scouting report flags a big gap. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:42.820473Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:37:05.777Z",
+      "thinking": "I'm weighing AL versus TES for this Bo1 Swiss match, both LPL teams sitting at 0-1 at Worlds so no region gap to consider. Looking at draft pools, AL seems to have broader champion flexibility across top, jungle, mid, bot, and support compared to TES's more limited showing so far.\n\nAL's mid flexibility with Akali, Annie, and Yone contrasts with TES leaning heavily on Orianna and Ryze, both of which need time to scale -- banning one practically hands them the other. Head-to-head favors AL 4-2, and their early-game numbers (strong first tower and dragon rates, converting every lead they've taken) suggest they close out games TES struggles to finish despite getting first bloods. I'll lean AL around 60% but flag the flip scenario: if TES secures Ryze or Ezreal with early Lee Sin pressure and AL can't punish it, the tempo swings their way.",
+      "stake": 730
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 60,
+      "reasoning": "Both teams are from the same league, so I can compare their records directly, and AL come out ahead on every measure: 34-20 in series against TES's 27-25, plus a 4-2 head-to-head edge. TES have a habit of falling behind on towers and dragons early, which makes them live off chaos, and they can pull that off since they've already come back from deep holes against AL. But this is a Bo1 and both sides are stumbling into it, so I'm only leaning modestly.",
+      "usedLessons": [
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw",
+          "text": "ADC lesson: Numbers over stories means sizing each number by its sample, and a 1-0 result in a single game doesn't validate the 58%. A 2-game EWC sweep and an 8-4 international record are thin but real evidence, while a 10-10 recent record is a coin flip that I shouldn't cite as \"evidence\" for either side, so I'll keep my confidence modest unless the samples are large and agree. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:03.648704Z"
+        },
+        {
+          "blobId": "4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc",
+          "text": "ADC lesson: Numbers over stories means the 2-0 head-to-head was a real edge, so I should keep weighting recorded results like that over a \"hot month\" narrative, while still sizing confidence to how thin the sample is (one prior series, a 9-11 recent record). Next time I'll also check whether a game-length or lead-throwing tendency actually showed up in the numbers before I let it drag my confidence down, instead of hedging on a habit I haven't quantified. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:17:06.935469Z"
+        },
+        {
+          "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+          "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:48.015704Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:37:19.201Z",
+      "thinking": "I'm comparing AL and TES within LPL, so there's no region gap to weigh. AL holds the edge in series record (34-20, 63%) and game record (83-60, 58%), while TES sits at 27-25 series and 76-65 games. I'm working through their 2026 head-to-head results, which show a mixed set of close series between the two teams.\n\nBoth teams have shaky recent form — AL at 10-11 and TES at 9-12 over their last 21 games — and both lost their opening Worlds match, so neither has real momentum. I'm weighing AL's stronger early-game numbers (fast takedowns, gold lead at 15) against the caution that small-sample conditional stats and Bo1 variance deserve a trimmed confidence level, landing around 60% for AL while keeping my reasoning tight and avoiding restating the full scouting report.",
+      "stake": 960
+    },
+    {
+      "player": "analyst-support",
+      "winner": "AL",
+      "score": null,
+      "winProbability": 60,
+      "reasoning": "Both rooms are stinging from a Worlds opening loss, but AL lost a fight they led early, with coordinated first pressure and a team clearly on the same page, while TES got run over fast and have been sliding into this match. TES have that old habit of clawing back against AL and nothing to lose, so if AL stumble and the 'we've thrown this one before' doubt creeps in, I could see TES flipping it, but I trust the steadier room.",
+      "usedLessons": [
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+          "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:37.615647Z"
+        },
+        {
+          "blobId": "E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU",
+          "text": "Support lesson: Chemistry and morale call a match best when I can point to something concrete, like DK holding their composure and playing as one unit through the early skirmishes, rather than just the swagger of a trophy or a past 2-0. Next time I'll weigh a team's state of mind alongside signs it actually shows up in play, and I'll say plainly what would crack it, such as DK doubting each other after a thrown lead. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:17:33.359059Z"
+        },
+        {
+          "blobId": "U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU",
+          "text": "Support lesson: A past result only counts as a locker-room ghost if I can point to present-day signs of it, like shaky comms, roster or coaching changes, or a team that drafts scared, so I should look for those first instead of assuming the memory lingers. LYON's calm, comfort-pick draft was the kind of visible evidence of trust I should lean on, and I should never treat a team's mood as decided before I've seen it. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:06:23.011599Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:37:34.360Z",
+      "thinking": "I'm weighing AL versus TES based on head-to-head record and recent form rather than region strength, noting AL's 4-2 head-to-head edge but inconsistent recent results, including a Worlds game they lost despite an early lead.\n\nCounting out both teams' last 10 games, AL comes out with 5 wins to TES's 3, and while both lost their Worlds openers, AL's loss was a hard-fought 34-minute game with strong early objectives versus TES getting blown out in 24 minutes. That morale gap tips me toward picking AL.",
+      "stake": 990
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095029\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":960,\"lessons\":[\"4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc\",\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\"],\"thought\":\"7f0d661b330359640ff28a1c1a2b8d44bb1efff8a9735af50c6fa200670cdf58\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":690,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw\"],\"thought\":\"5fbada00fd0cac1cabcc6921538476430ae740f5fbcf0f9778571c9bb9dd14ae\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":730,\"lessons\":[\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"43650892285700ab607992433dd5a6840ea115129be5f1b710818426705a200c\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":990,\"lessons\":[\"E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"aaf84d312016480c68be4ba7f368a8c7123a107bfa93f1fc5842c17282335b3d\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":940,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\"],\"thought\":\"cc4885c12f7060cea225f9c6fb36b43e1f761c527f7a6676274d24b50ceb167e\"}]}",
+  "batchHash": "16411ef104d820b018240d51718a2e4c295d473bbde088962b206fef02cb6743",
+  "commitDigest": "SguEohqs7WgRusB8KnJroAd2qXxFp7u5nTTU3rjH5Ey",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: AL vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nAL [LPL]: 2026 series 34-20, games 83-60 | last 10 (newest first) LWWLWLLLWW\n  LPL 2026 32-18 (1 title) · EWC 2026 2-1 · Worlds 2026 0-1 · vs other regions 2-2\n  Last 21 games (10-11): GD@15 -0.1k, FB 67%, FT 57%, FD 48%, dragons 53%, 33.1 min avg, 1st baron 27:36\n  Leads @15 converted 8/8, comeback wins 2, throws 1, objectives taken while 1k+ behind 14\n  Worlds 2026 1 games (0-1): GD@15 +0.6k, FB 100%, FT 100%, FD 100%, dragons 40%, 34.2 min avg\n  Picks: TOP Gnar 3, K'Sante 3, Olaf 3 | JG Maokai 4, Nocturne 3, Qiyana 3 | MID Akali 3, Annie 3, Yone 3 | BOT Lucian 3, Miss Fortune 3, Ashe 2 | SUP Neeko 4, Seraphine 4, Milio 3\n  Standout: ALKael (support) KDA 4.8 over 20 games, 9% dmg share\nTES [LPL]: 2026 series 27-25, games 76-65 | last 10 (newest first) LWLLLLWWLL\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · Worlds 2026 0-1 · vs other regions 0-3\n  Last 21 games (9-12): GD@15 -0.4k, FB 71%, FT 33%, FD 29%, dragons 50%, 34.1 min avg, 1st baron 26:18\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 16\n  Worlds 2026 1 games (0-1): GD@15 -0.7k, FB 0%, FT 0%, FD 0%, dragons 33%, 23.9 min avg\n  Picks: TOP Olaf 4, Renekton 4, Ambessa 2 | JG Lee Sin 3, Pantheon 3, Qiyana 3 | MID Orianna 4, Ryze 4, Azir 2 | BOT Ezreal 5, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nHead-to-head 2026: AL 4-2 TES\n  2026-08-19 LPL 2026 Week 5: TES 2-1 AL\n  2026-07-29 LPL 2026 Week 2: AL 2-0 TES\n  2026-05-01 LPL 2026 Week 5: TES 0-2 AL\nKey moments:\n  - AL took Baron at 33:54 while down 10.5k vs BLG (LPL 2026), lost\n  - AL threw a +4.5k lead (18:00) vs TES (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\n  - TES took Baron at 32:00 while down 4.3k vs AL (LPL 2026), won\nFun facts:\n  * Likely penta kill: ALHope (Miss Fortune) at 30:31 (vs BLG, LPL 2026)\n  * Likely quadra kill: ALHope (Sivir) at 42:21 (vs BLG, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  Both teams are from LPL, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  AL (LPL): no Worlds titles or finals before 2026.\n  TES (LPL): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

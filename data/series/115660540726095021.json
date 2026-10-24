@@ -1,0 +1,174 @@
+{
+  "series": {
+    "matchId": "115660540726095021",
+    "startTime": "2026-10-24T18:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "CFO",
+    "teamB": "MKOI",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "MKOI",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "I'm backing the players, and MKOI's jungle-and-bot core of Elyoya, Supa and Alvaro is the one that builds early tempo and steals messy games, which is exactly what I underrated last time. POUT is a real star and Doggo is no passenger, but one great mid can't carry five lanes, and I won't let CFO's Lucian-and-Akali flash turn into a reason to ignore the map around him.",
+      "usedLessons": [
+        {
+          "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+          "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:21:32.122735Z"
+        },
+        {
+          "blobId": "tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE",
+          "text": "Top lesson: Individual skill still wins series, but in a Bo1 I have to check whether the star's lane can actually turn that edge into a lead before I treat it as the whole argument. When the opposing team has a proven jungle-support duo that can steal a messy game, I should rate that duo as skill too, not dismiss it as chaos, and I should be more skeptical of a Viper-sized edge when the whole BLG team is the one the crowd is backing. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:10:47.127123Z"
+        },
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:37:53.032Z",
+      "thinking": "I'm trying to recall the rosters for CFO versus MKOI, working through which players filled which roles across 2025 and the rumored 2026 lineup changes.\n\nBoth teams are 1-0 at Worlds, so without a clear region gap I should avoid quoting percentages and lean on general skill comparisons instead—CFO's bot lane strength versus MKOI's bot/support duo and proven jungler. Given the uncertainty around exact rosters, I'll keep the pick grounded in broader individual skill rather than specific matchups.\n\nElyoya's strong reputation plus MKOI's jungle and bot-lane edge tips the scale enough for me to settle on MKOI at around 58%, leaning on lessons about early jungle/mid leads and verified roster tempo advantages.",
+      "stake": 550
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "MKOI",
+      "score": null,
+      "winProbability": 62,
+      "reasoning": "It's all about the first fifteen minutes, and MKOI come in with the cleaner tempo plan: Elyoya on Lee Sin or Jarvan forces early skirmishes, and that kind of pressure turns into first tower and first dragon in a Bo1. CFO have real early-blood tools with Naafiri and Akali, and that's the one thing that scares me, so I'm staying under 65. If CFO win the first dragon and Herald fights and Ryze never gets his scaling window, I flip, but I'll back the side that actually controls the opening.",
+      "usedLessons": [
+        {
+          "blobId": "2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY",
+          "text": "Jungle lesson: The early game still decides everything, so I should judge who wins the first fifteen minutes from the jungle matchup, the draft's early pressure and the first-objective setups, not from \"better team\" or region labels, which only count when the scouting report flags a big gap. When the other jungler can force early skirmishes, like Elyoya on Lee Sin, a Bo1 gives the favorite no time to recover, so I should cut my confidence instead of assuming they'll win tempo by default. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:14.870580Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw",
+          "text": "Jungle lesson: Judge the matchup by which side's draft and jungle pathing turn the first 15 minutes into towers and dragons, and don't lean on region strength unless the report flags a big gap. Mid's point about Ryze needing time to scale is really a tempo point, because a scaling draft loses when the early map is taken from it, so I should back the side that controls that window. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:34.819370Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:38:02.830Z",
+      "thinking": "Looking at CFO versus MKOI in this Bo1 Swiss matchup, MKOI shows stronger early-game numbers with a positive gold lead at 15 and solid first tower/dragon/blood rates, especially dominant in their Worlds performance. Their jungler pool leans toward early skirmishers like Lee Sin, Jarvan, and Qiyana, while CFO's early metrics are noticeably weaker with a negative gold differential.\n\nCFO does have strong first blood tendencies despite weaker overall early stats, drawing on champions like Naafiri and Akali that enable aggressive early plays, but their tower and dragon conversion lags behind. I'm leaning toward MKOI winning given their jungler's ability to force early skirmishes and a track record of fewer throws compared to CFO, landing around 62% probability, with a flip condition if CFO secures first blood tools plus early dragon and herald control.",
+      "stake": 950
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "MKOI",
+      "score": null,
+      "winProbability": 58,
+      "reasoning": "In a Bo1 the draft is the whole series, and MKOI walk in with the cleaner script: Lee Sin for early tempo, Ryze or Ahri in the middle, and Ezreal or Kalista with a lead to cash in. CFO can answer with POUT on Akali or Viktor plus Lucian, and he is a real threat, but they tend to start games a touch behind and need the draft to bail them out. What flips me is CFO denying Lee Sin or Ryze and landing POUT's Akali with Naafiri priority, because that takes MKOI's comfort away and puts the early tempo in CFO's hands.",
+      "usedLessons": [
+        {
+          "blobId": "SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ",
+          "text": "Mid lesson: Pool depth only matters if it shows up in the draft, and in a Bo1 a team's few comfort picks (like MKOI's Ryze and Lee Sin) can beat a broader pool, so I should judge how each side's best picks match up instead of counting champions. When the upset path I name is built on the opponent's comfort picks, I should cut my confidence until the draft shows BLG can deny or punish them, and not lean on league strength unless the report flags a big gap. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:52.496004Z"
+        },
+        {
+          "blobId": "mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg",
+          "text": "Mid lesson: Pool depth on paper isn't the same as draft leverage; under Fearless, a star's signature comfort picks (POUT's Akali, Viktor, Lucian) can matter more than the number of \"comfortable\" options a team has. Next time I'll check who actually wins the contested picks and whether the opponent's star can be shut out, rather than assuming breadth beats a few high-impact pools. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:25.056615Z"
+        },
+        {
+          "blobId": "uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs",
+          "text": "Mid lesson: Fearless pool depth only bites once comfort picks start burning, which a best of 1 never gets to, so in a single game I should weigh the star's form and the concrete draft matchups (Zeka's flexibility against Ryze's need to scale) over a generic \"deeper book\" story. I also shouldn't lean on region reputation like \"shaky against outside teams\" unless the report flags a big gap, and should let the draft carry the argument. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:02.062130Z"
+        },
+        {
+          "blobId": "V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc",
+          "text": "Mid lesson: A draft edge is only as good as the early tempo and closing power it creates. Vi/Jarvan winning the first skirmishes mattered as much as the Jayce/Gnar scaling puzzle, so I should check whether a comp gets priority and can finish a lead, not just whether it outscales the opposing star. I should also anchor on draft and pool evidence and leave region out of it unless the scouting report flags a big gap. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:42.820473Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:38:15.908Z",
+      "thinking": "I'm comparing the two drafts' compositions—looking at MKOI's picks like Ryze, Lee Sin, Ezreal/Kalista, and Jayce against CFO's Akali, Lucian, Naafiri/Poppy, and Rumble/Jayce to weigh which side has the stronger lineup.\n\nOverall I lean toward MKOI at around 58%, given their better early-game numbers (+0.6k GD@15 vs CFO's -0.2k) and stronger lead conversion, though I'm weighing the lesson that comfort picks and star form often matter more than raw stats in a Bo1—both teams have reliable comfort picks (MKOI's Ryze/Lee Sin, CFO's Akali/Viktor/Lucian), so it's close.",
+      "stake": 530
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "MKOI",
+      "score": null,
+      "winProbability": 59,
+      "reasoning": "My numbers lean MKOI, but only gently, because this is a Bo1 and one chaotic game can erase a thin edge. They're 53-46 in games to CFO's 38-42, and they're the team that actually arrives at minute 15 with gold in hand. CFO's 5-for-5 on converting leads is a conditional stat and only counts if they get the lead, which they rarely do. POUT and Doggo can still snowball a Lucian or Akali game, and both teams have thrown huge leads, so I'm not leaning harder than 59.",
+      "usedLessons": [
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+          "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:48.015704Z"
+        },
+        {
+          "blobId": "WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw",
+          "text": "ADC lesson: Numbers over stories means sizing each number by its sample, and a 1-0 result in a single game doesn't validate the 58%. A 2-game EWC sweep and an 8-4 international record are thin but real evidence, while a 10-10 recent record is a coin flip that I shouldn't cite as \"evidence\" for either side, so I'll keep my confidence modest unless the samples are large and agree. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:03.648704Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:38:26.302Z",
+      "thinking": "I'm comparing CFO and MKOI's records without weighing in on region since there's no significant gap there. CFO sits below .500 in both series and games while MKOI is above water in both, and looking at their last 21 games, MKOI holds a better record and stronger gold differential at 15 minutes compared to CFO's slight negative trend.\n\nGiven the larger sample size, better overall game record, and edge in early gold for MKOI, I'm leaning toward them with modest confidence given this is a single-game Bo1 — something around 59-60%. I want to keep the reasoning tight, citing just two key stats like the series records and the gold differential numbers, staying away from region percentages and keeping it punchy rather than repetitive.",
+      "stake": 770
+    },
+    {
+      "player": "analyst-support",
+      "winner": "MKOI",
+      "score": null,
+      "winProbability": 57,
+      "reasoning": "MKOI came out of the BLG game looking like a room that trusts each other: clean early coordination, leads turned into towers and dragons, and Alvaro seemingly holding the calls together from support. CFO's resilience is real, and they ground out a win on their own terms, so I'm holding the 'they choke leads' story loosely, but MKOI's mood is more visibly free right now. The wobble risk cuts both ways if MKOI fall behind early, so I'm only a little above a coin flip.",
+      "usedLessons": [
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        },
+        {
+          "blobId": "rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI",
+          "text": "Support lesson: I was right that HLE's calm mattered, but I leaned on \"mood\" without checking it against what the team actually did, so next time I'll look for chemistry in concrete signs like coordinated early pressure, turning leads into towers and dragons, and a draft the whole team clearly bought into. I'll also remember that a team's morale tends to show in how cleanly they convert advantages, and I won't treat TES's \"wobbling\" as proof of low morale unless I can point to specific evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:55.914788Z"
+        },
+        {
+          "blobId": "U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU",
+          "text": "Support lesson: A past result only counts as a locker-room ghost if I can point to present-day signs of it, like shaky comms, roster or coaching changes, or a team that drafts scared, so I should look for those first instead of assuming the memory lingers. LYON's calm, comfort-pick draft was the kind of visible evidence of trust I should lean on, and I should never treat a team's mood as decided before I've seen it. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:06:23.011599Z"
+        }
+      ],
+      "pickedAt": "2026-10-24T01:38:40.625Z",
+      "thinking": "Since there's no major region gap between CFO and MKOI, I should focus on chemistry and morale instead. Looking at CFO's recent form, they lost the LCP final and have a rocky last 10 games, but they did pull out a grinding win at Worlds over TLAW. I'm noting they've thrown leads twice in LCP despite converting leads well overall, with some comeback wins mixed in.\n\nMKOI's win over BLG was clean and dominant at 15 minutes, showing organized early-game play, while CFO's win was more of a scrappy comeback despite having first blood and dragon advantages. Both teams are relatively untested at Worlds, but MKOI's track record of converting leads more consistently and their support Alvaro's strong 5.7 KDA — suggesting steady shot-calling from the support role — gives me a slight lean toward MKOI at around 58%, though CFO's win over a strong LPL team keeps things close.",
+      "stake": 630
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095021\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"MKOI\",\"stake\":770,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\"],\"thought\":\"1895ac4a0b3175dbaa58fae81bf4039bb69210fa797643dab5167cf91bff9f4a\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"MKOI\",\"stake\":950,\"lessons\":[\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw\"],\"thought\":\"822f89b46f6142aaacb41ee09b0f5f4b2f8684faff65604e5397492394e18953\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"MKOI\",\"stake\":530,\"lessons\":[\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\",\"uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs\"],\"thought\":\"4e38620174b2e4f8adccd1e8abf9d4d50617dc76065fd8ad271dad91eddbb0e0\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"MKOI\",\"stake\":630,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI\"],\"thought\":\"93c288ee8261348a9743a09250d041545a867d4c81a7a679bd24f77be272d80e\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"MKOI\",\"stake\":550,\"lessons\":[\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"ded899a47394d1276188e4762f3e5595d408f8f9dc802081ffb76c4f6437b8bb\"}]}",
+  "batchHash": "2e8988a7a5be4ae804fecf3bd973be1465fc72900d12a7d7dec014a155799dc8",
+  "commitDigest": "A76W7B9zqcyw4PqxGwncsYNds9wM8bFAHnJcLZG7r1ev",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: CFO vs MKOI (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nCFO [LCP]: 2026 series 13-14, games 38-42 | last 10 (newest first) WLWLWWWWLW\n  LCP 2026 12-14 (lost final) · Worlds 2026 1-0 · vs other regions 1-0\n  Last 21 games (12-9): GD@15 -0.2k, FB 62%, FT 48%, FD 38%, dragons 52%, 32.1 min avg, 1st baron 26:48\n  Leads @15 converted 5/5, comeback wins 1, throws 1, objectives taken while 1k+ behind 8\n  Worlds 2026 1 games (1-0): GD@15 -0.1k, FB 100%, FT 0%, FD 100%, dragons 83%, 37.6 min avg, 1st baron 36:00\n  Picks: TOP Rumble 3, Jayce 2, K'Sante 2 | JG Naafiri 4, Poppy 3, Nocturne 2 | MID Akali 4, Viktor 4, Ahri 2 | BOT Lucian 5, Caitlyn 2, Kalista 2 | SUP Lulu 4, Milio 4, Karma 3\n  Standout: CFO POUT (mid) KDA 4.4 over 21 games, 26% dmg share\nMKOI [LEC]: 2026 series 23-20, games 53-46 | last 10 (newest first) WLWWWWLWLW\n  LEC 2026 22-18 (lost final) · EWC 2026 0-2 · Worlds 2026 1-0 · vs other regions 1-2\n  Last 21 games (13-8): GD@15 +0.6k, FB 48%, FT 67%, FD 52%, dragons 61%, 33.5 min avg, 1st baron 25:54\n  Leads @15 converted 7/9, comeback wins 4, throws 3, objectives taken while 1k+ behind 10\n  Worlds 2026 1 games (1-0): GD@15 +1.1k, FB 100%, FT 100%, FD 100%, dragons 80%, 38.8 min avg, 1st baron 26:54\n  Picks: TOP Jayce 4, Galio 3, Renekton 3 | JG Lee Sin 5, Jarvan IV 3, Qiyana 3 | MID Ryze 5, Ahri 4, Anivia 2 | BOT Ezreal 6, Kalista 4, Ashe 3 | SUP Renata 4, Seraphine 3, Bard 2\n  Standout: MKOI Alvaro (support) KDA 5.7 over 21 games, 7% dmg share\nHead-to-head 2026: none\nKey moments:\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\n  - MKOI threw a +6.2k lead (40:00) vs NAVI (LEC 2026)\n  - MKOI threw a +6.0k lead (20:00) vs SK (LEC 2026)\nFun facts:\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\n  * Likely penta kill: MKOI Supa (Kai'Sa) at 39:12 (vs NAVI, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LCP vs LEC: LCP went 0-4 against LEC in 2026; LCP 40% vs LEC 52% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  CFO (LCP): no Worlds titles or finals before 2026.\n  MKOI (LEC): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
