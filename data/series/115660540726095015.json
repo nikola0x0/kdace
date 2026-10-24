@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -72,10 +72,52 @@
   "batch": "{\"matchId\":\"115660540726095015\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":560,\"thought\":\"181a8df429f74b9899ef042ff646ff86d90791b996a417b4220a7382e6c711fc\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":510,\"thought\":\"3687f7089b9af2f8f22ebd7102c1ded65319a347770f5e3c06ef8d81f2769ffd\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":690,\"thought\":\"ee526925b8445501e0e5a829a09eb9f13248b8c5633606b8b7ac656c8ced910f\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":550,\"thought\":\"14a3770077825ace8eaa547a6cce112b4c1ed267440eb7b6aa50d30041f6825a\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":710,\"thought\":\"a3d02b76fbbbeb7e2a6998d6e16626c251a1abfbbe021a6cc8e2ca395051d5c9\"}]}",
   "batchHash": "5dd74de3d86d1fcfc8b144a4a20f837b5b239b9aec27c0b212d9a1bbfd91e8d0",
   "commitDigest": "4hA14ytS5d9KSgV1C2qDYNb55se64apwuxUkfbdwCifJ",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "T1",
+    "score": "1-0",
+    "resultDigest": "8jpL7SCr38BueMDEH3rggRg3vMmZZQhwhfFLJY6hyevL"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0,
+    "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352": 0
+  },
+  "debate": "Top: Told you, skill wins. Faker, Keria and Peyz are a tier above, and the crowd wanted the LOS hot-streak story. Nobody's cashing that ticket.\n\nJungle: Fine, T1 won, but I said I'd flip if LOS got early jungle priority and first herald, so I'm not eating crow. I still say the tempo fight was closer than your \"tier above\" speech suggests, Top.\n\nMid: The draft depth showed up like I said, with Orianna and Anivia answering everything LOS tried. Jungle, your Pantheon pressure never got the clean snowball it needed.\n\nADC: CBLOL going 0-3 against the LCK is now 0-4, and numbers don't lie. I held back at 70% because of that 9-11 slump, but the sample size of \"reigning champions\" beat it, Support.\n\nSupport: I'll take the win, Keria steadying the room was exactly the point, and the happiest locker room doesn't beat Worlds composure. ADC, thanks for the stats, but nerves and chemistry were what decided it.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: T1 won because the better players beat the weaker ones, so I keep trusting individual skill over narratives, and I don't need to stack region gaps or team stats to justify a pick. Next time, I'll name the specific player matchups that decide the game (like Keria and Peyz against LOS's bot lane) and push my confidence on those, not on a \"tier above\" blanket claim, since Jungle is right that the tempo fight can still be close. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+      "blobId": "yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE",
+      "jobId": "0c597cfe-e3d0-4047-b6cc-8c7e4e16c835"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Tempo still decides games, so I should judge a team's first-15 pressure by what it shows against comparable opposition (jungle priority, first herald, first tower) instead of dismissing it as \"built against CBLOL\" or leaning on region records. I should treat region as a big factor only when the scouting report flags a BIG REGION GAP, and otherwise keep a clear flip trigger like \"LOS take early jungle priority and first herald\" and let the early map decide. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+      "blobId": "CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8",
+      "jobId": "3de04729-4b19-4411-9911-2f290d0d3421"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: In a best of 1 the draft is the entire series, so I should build my confidence from named draft evidence (flex picks, pool depth, and which comfort picks Fearless will strip from each side) and from star form. I shouldn't lean on a league label like \"LCK depth\" or the champion aura, and I shouldn't claim \"draft depth showed up\" afterward unless I wrote down those draft signals beforehand. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+      "blobId": "hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI",
+      "jobId": "e3ad3652-6f70-4879-a306-f3eebb48b007"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A win doesn't validate the reasoning, and \"reigning champion\" is a story, not a number, so I should anchor on measurable inputs like records, head-to-heads, game length and series scores, and only cite the region gap when the scouting report flags it. A 0-3 or 0-4 interregional tally is a tiny sample, so I should call it a big factor only when the report says so and keep my confidence modest otherwise. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+      "blobId": "YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM",
+      "jobId": "a2d4162c-b4e5-4182-b35e-30496ec6c426"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When I read the rooms, I should judge each team's chemistry, morale and Worlds-stage steadiness on its own evidence, and not wave off a happy locker room as \"a hot streak from a weaker region\" unless the scouting report actually flags a BIG REGION GAP. This time the champions' composure won, but I should say what I saw in their room that outweighed the \"wobbly lately\" signs, because borrowing the region story isn't reading people. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+      "blobId": "UqkrEaQKo5T1VhYSfnge0KPwEZV5vrfwSf0WIZRH9As",
+      "jobId": "c41fb624-eb0a-416c-9893-46bfc74e1520"
+    }
+  ],
   "scout": "Scout: LOS vs T1 (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLOS [CBLOL]: 2026 series 24-11, games 55-36 | last 10 (newest first) WWWWLWWWWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · vs other regions 1-2\n  Last 20 games (12-8): GD@15 +0.8k, FB 45%, FT 70%, FD 40%, dragons 49%, 32.5 min avg, 1st baron 27:24\n  Leads @15 converted 7/10, comeback wins 2, throws 0, objectives taken while 1k+ behind 12\n  Picks: TOP Gnar 3, Rumble 3, Ambessa 2 | JG Pantheon 5, Wukong 4, Jarvan IV 3 | MID Ryze 4, Orianna 3, Cassiopeia 2 | BOT Sivir 3, Ashe 2, Kai'Sa 2 | SUP Alistar 3, Bard 2, Karma 2\n  Standout: LOS Ackerman (support) KDA 6.2 over 20 games, 8% dmg share\nT1 [LCK]: 2026 series 32-19, games 87-55 | last 10 (newest first) LWLWLWLLLW\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · vs other regions 6-4\n  Last 20 games (9-11): GD@15 -0.8k, FB 25%, FT 40%, FD 50%, dragons 44%, 32 min avg, 1st baron 30:00\n  Leads @15 converted 3/4, comeback wins 2, throws 1, objectives taken while 1k+ behind 11\n  Picks: TOP Jayce 3, Gwen 2, Kennen 2 | JG Naafiri 4, Skarner 3, Nocturne 2 | MID Anivia 3, Orianna 3, Akali 2 | BOT Lucian 3, Ezreal 2, Jhin 2 | SUP Milio 3, Renata 3, Alistar 2\n  Standout: T1 Keria (support) KDA 4.9 over 20 games, 10% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -5.1k at 28:00 vs FUR (CBLOL 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\n  - T1 threw a +4.8k lead (36:00) vs GEN (LCK 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is CBLOL vs LCK: CBLOL went 0-3 against LCK in 2026; CBLOL 36% vs LCK 68% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LOS (CBLOL): no Worlds titles or finals before 2026.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.",
   "chain": {
     "network": "mainnet",

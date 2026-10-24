@@ -163,5 +163,17 @@
       "network": "mainnet",
       "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
     }
+  },
+  "fans": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095017:fans\",\"entries\":[{\"player\":\"fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":100},{\"player\":\"fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":4300}]}",
+    "batchHash": "78df51d1c33c39acf21869d69344ed1f193e7f4e26370379020f14410d743d5f",
+    "pickCount": 2,
+    "commitDigest": "62mshG5ALxs9wmdWfwn7NnVauvgFrXg1ApVVCZhGDkkM",
+    "committedAt": "2026-10-23T23:56:02.2+00:00",
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
   }
 }

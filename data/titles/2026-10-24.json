@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-24",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "T1",
+      "probability": 16,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Stats say T1 is shaky, I say Faker, Keria and Oner-level talent beat spreadsheets, and the crowd fading them is exactly why I'm taking them.",
+      "pickedAt": "2026-10-24T00:00:28.733Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "TSW",
+      "probability": 14,
+      "contenders": [
+        "BLG",
+        "KC"
+      ],
+      "reasoning": "Tempo is everything, and TSW's +1.6k GD@15 is the best early-game lead on the board: they take first objectives, snowball the map and end it before anyone stabilizes.",
+      "pickedAt": "2026-10-24T00:00:30.337Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "KC",
+      "probability": 12,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Fearless rewards teams that draft on the fly, and KC's 9-4 record against other regions shows a flexible pool and sharp drafting, so I'm backing them over the obvious GEN/BLG picks.",
+      "pickedAt": "2026-10-24T00:00:35.379Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "KC"
+      ],
+      "reasoning": "GEN win 74% of their games and are 6-1 against other regions, so no other team's numbers are as strong across the board; BLG's early loss to MKOI keeps them second.",
+      "pickedAt": "2026-10-24T00:00:40.344Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "T1",
+      "probability": 14,
+      "contenders": [
+        "GEN",
+        "KC"
+      ],
+      "reasoning": "T1 shook off a rough 2026 and still dropped LOS on day one; I trust a six-time champion room to stay calm when it gets tense, and Faker's presence glues them together.",
+      "pickedAt": "2026-10-24T00:00:41.860Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-24\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"TSW\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0}]}",
+  "batchHash": "3346ea0f072aaf42f67776d02e5ec862091c683cdd0dd6cf11799c25da55a2c7",
+  "commitDigest": "DiFqrG5Tnm8D47CDpWowGqZuzu1aYTqQAy7zZ2DcucbG",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
