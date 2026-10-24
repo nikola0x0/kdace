@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -72,10 +72,53 @@
   "batch": "{\"matchId\":\"115660540726095017\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":180,\"thought\":\"d2d6f78240fe834c8dd0eec143f294d7e477206ddd281726f7867f03b453b121\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":190,\"thought\":\"05ee341c2f170b2606c977791c7441c81957539384a7939f3298322b4768bd51\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":210,\"thought\":\"2037ef68431170dd47ba4eec1bde5ea0b2e2e8358a2f01f6f4de5c1bd4141495\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":210,\"thought\":\"35ead4777b6b301a7a4ba7140fbc382e014c70e20a3c6071e50896bf132d7703\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":250,\"thought\":\"97dbe2fb2b98ad572d736cf89a8f43036fae7b1f6228498fec64ddfa08abab18\"}]}",
   "batchHash": "62c5e0d96c4fc41b159b64388fc727196fc3246e83817fb060cfa9c6540e5440",
   "commitDigest": "57tGCwEo4cHLHzhu8shSYcwqQUHuJsJ1no4tHApAnH3b",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "LYON",
+    "score": "1-0",
+    "resultDigest": "2TyVdJvt4oWF5bjLxgCadvXpSJi8hiBYvciFDPoqAzKw"
+  },
+  "axp": {
+    "analyst-adc": 864,
+    "analyst-jungle": -190,
+    "analyst-mid": 786,
+    "analyst-support": 786,
+    "analyst-top": 1939,
+    "fan:0x49a714c185a7126b5fd87c8642c879f468ce66c5c3980b1e8a5a5eab55336352": 110,
+    "fan:0xc1b7bf539d4bf6517b17908d6fd1a1736f7150ec431cc3ac2bf00bafc146351b": -4300
+  },
+  "debate": "Top: Told you, the best player wins the close ones. Berserker had the ball and LYON cashed it in, and I'll gladly take the win over the hype.\n\nJungle: Fine, my tempo read got flipped, and you can have that one. But TSW's early game was supposed to set the pace, so I'm blaming whoever took the first Drake fight.\n\nMid: Draft did the work again, Jungle. LYON got their Berserker comfort picks and stayed calm, and nobody at TSW found an answer in champ select.\n\nADC: The numbers said TSW's 16-4 was mostly home cooking, and a 1-6 away record doesn't lie. Add the 3-0 at MSI and LYON winning was the clean read.\n\nSupport: That MSI ghost never left TSW's heads, and LYON looked like the group that trusted each other. I'm not being smug about it, but I did say the locker room matters.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: The better player still wins the close ones, but I should check that the draft actually hands my star his comfort picks, as Mid pointed out with Berserker, before I lean on him. When a hyped opponent has already folded to that star's team, as TSW did against LYON at MSI, I can back the player with more confidence instead of just trusting the name. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+      "blobId": "Efub5VmUkaLPRUAxb3fEK9G-bsl9AuZ8MI11pc82FCo",
+      "jobId": "39254e7e-d132-4670-bfa2-be200fdda7ec"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Early tempo only counts if it's backed by evidence, and I took TSW's jungle pathing as proof they'd control the first 15 minutes while ignoring that a 16-4 home record and a 3-0 MSI loss to LYON show how they actually handle first objectives against this opponent. Next time I'll check who has really won first Drake and Herald fights in head-to-head or international play before I call a team the pace-setter. (from Swiss TSW vs LYON; picked TSW, actual LYON 1-0)",
+      "blobId": "k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU",
+      "jobId": "ed79e277-998a-4cc7-99f3-b077ceb84b75"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Keep tying the pick to concrete draft evidence, such as which comfort champions the star player (Berserker) can lock in and how deep each side's pool runs under Fearless. Don't lean on soft reads like \"stays calm when behind,\" and keep naming the exact first-pick fight that would flip me, because that is what turns a draft read into a testable call. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+      "blobId": "jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI",
+      "jobId": "3b5cf324-e5d3-4515-92b0-1c868a854f4f"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: When a team's headline record and its away or cross-region record diverge sharply (TSW's 16-4 versus 1-6 outside the LCP), trust the split that matches the matchup. Combined with a prior head-to-head (3-0 at MSI), that was clear enough to lean harder than my 58, since the numbers all pointed the same way and I was only hedging on style narratives like Nautilus engages. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+      "blobId": "hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8",
+      "jobId": "f417a370-bb20-4133-a5d1-36225924a7d2"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A past result only counts as a locker-room ghost if I can point to present-day signs of it, like shaky comms, roster or coaching changes, or a team that drafts scared, so I should look for those first instead of assuming the memory lingers. LYON's calm, comfort-pick draft was the kind of visible evidence of trust I should lean on, and I should never treat a team's mood as decided before I've seen it. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+      "blobId": "U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU",
+      "jobId": "e91de6c1-5f6e-4e4e-8639-c2b3e58e0279"
+    }
+  ],
   "scout": "Scout: TSW vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTSW [LCP]: 2026 series 26-8, games 67-32 | last 10 (newest first) WWWLWWWLLL\n  LCP 2026 25-2 (3 titles) · First Stand 2026 0-2 · MSI 2026 1-2 · EWC 2026 0-2 · vs other regions 1-6\n  Last 20 games (16-4): GD@15 +1.6k, FB 60%, FT 85%, FD 55%, dragons 59%, 31.5 min avg, 1st baron 27:36\n  Leads @15 converted 12/13, comeback wins 2, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Galio 3, Gnar 3, Urgot 3 | JG Lee Sin 4, Qiyana 4, Jarvan IV 3 | MID Ahri 2, Aurora 2, Locke 2 | BOT Yunara 4, Caitlyn 3, Ezreal 3 | SUP Nautilus 4, Alistar 2, Bard 2\n  Standout: TSW Bie (support) KDA 6.5 over 20 games, 7% dmg share\nLYON [LCS]: 2026 series 25-13, games 72-42 | last 10 (newest first) LWWLWWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · vs other regions 4-6\n  Last 20 games (12-8): GD@15 +0.8k, FB 60%, FT 70%, FD 47%, dragons 48%, 33.6 min avg, 1st baron 24:48\n  Leads @15 converted 7/8, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Picks: TOP Gwen 4, Gnar 2, K'Sante 2 | JG Wukong 3, Skarner 3, Xin Zhao 3 | MID Syndra 4, Ryze 3, Annie 2 | BOT Lucian 3, Yunara 3, Jhin 2 | SUP Alistar 5, Lulu 3, Milio 3\n  Standout: LYON Berserker (bottom) KDA 5.1 over 20 games, 27% dmg share\nHead-to-head 2026: TSW 0-1 LYON\n  2026-07-08 MSI 2026 Knockouts: LYON 3-0 TSW\nKey moments:\n  - TSW came back from -6.5k at 30:00 vs CFO (LCP 2026)\n  - TSW threw a +4.8k lead (20:00) vs GAM (LCP 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - LYON took Baron at 23:54 while down 3.0k vs C9 (LCS 2026), won\nFun facts:\n  * Likely quadra kill: LYON Saint (Sylas) at 17:15 (vs DSG, LCS 2026)\n  * Likely quadra kill: TSW Eddie (Yunara) at 19:46 (vs GAM, LCP 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 15-7, LPL 9-5, LEC 11-11, CBLOL 4-7, LCP 3-6, LCS 4-10.\n  This matchup is LCP vs LCS: LCP went 0-1 against LCS in 2026; LCP 33% vs LCS 29% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TSW (LCP): no Worlds titles or finals before 2026.\n  LYON (LCS): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
