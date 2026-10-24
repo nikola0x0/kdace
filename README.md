@@ -39,6 +39,8 @@ Fan picks (optional; off until Supabase is configured): fans sign in with Google
 
 Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick every 30 minutes (and when the lock route dispatches it), then `npm run verify`. Tick order: mirror fan commits, fast settle (results on Sui, AXP, board, voids), fans' AXP back to Supabase, final calls, picks, title calls, banter, slow settle (debate and Walrus lessons), then `data/pending.json` (what the dispatcher reads). Keys live in Actions secrets, network settings in Actions variables. `scripts/launchd/` is a macOS fallback for running it locally.
 
+Supabase mode (`KDACE_STORE=supabase`, off by default): the records live in Supabase (`src/core/supastore.ts`, compare-and-set writes) instead of `data/`. Supabase pg_cron calls `POST /api/tick` every minute, and each call runs one bounded stage of the tick under a shared runner lock (`src/jobs/runner.ts`). The site renders from a 20-second Supabase snapshot, `GET /api/records` serves every record publicly (`KDACE_RECORDS_URL=https://kdace.xyz/api/records npm run verify`), and a daily `snapshot` workflow exports the records back into `data/`. Switching over and back: [docs/runbook/supabase-cutover.md](docs/runbook/supabase-cutover.md).
+
 ## How it works
 
 | Piece | What it does |
