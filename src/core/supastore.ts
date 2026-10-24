@@ -215,7 +215,7 @@ export function storeKind(env: Record<string, string | undefined> = process.env)
 /** The Supabase REST client from SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (throws when either is missing). */
 export function supabaseRestFromEnv(env: Record<string, string | undefined> = process.env, fetchImpl: typeof fetch = fetch): SupabaseRest {
   const url = env.SUPABASE_URL, key = env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) throw new Error("KDACE_STORE=supabase needs SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY");
+  if (!url || !key) throw new Error("The Supabase record store needs SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY");
   return new SupabaseRest(url, key, fetchImpl);
 }
 

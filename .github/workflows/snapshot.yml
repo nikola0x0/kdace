@@ -1,0 +1,43 @@
+# Daily public snapshot once the records live in Supabase (repository variable KDACE_STORE=supabase): exports every
+# record into data/ (scripts/export-records.ts) and commits it, so the repo keeps the public record. Does nothing
+# until that variable is set. Also runs on demand (Actions → snapshot → Run workflow).
+name: snapshot
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # daily, 04:17 UTC (between match days)
+  workflow_dispatch:
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    if: vars.KDACE_STORE == 'supabase'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Export records from Supabase into data/
+        run: npx tsx scripts/export-records.ts
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      - name: Commit data/
+        run: |
+          git config user.name "kdace-snapshot"
+          git config user.email "kdace-snapshot@users.noreply.github.com"
+          if [ -z "$(git status --porcelain data)" ]; then echo "data/ unchanged"; exit 0; fi
+          git add data
+          git commit -m "data: snapshot $(date -u +%Y-%m-%dT%H:%M:%SZ)" -- data
+          git pull --rebase --autostash
+          git push
