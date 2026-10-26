@@ -1,0 +1,179 @@
+{
+  "series": {
+    "matchId": "115660540726095049",
+    "startTime": "2026-10-26T17:00:00Z",
+    "block": "Swiss",
+    "bestOf": 1,
+    "state": "unstarted",
+    "teamA": "CFO",
+    "teamB": "T1",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "The better players win series, and across the map T1 has them: Faker in the middle, Keria's playmaking, Peyz closing fights. The LCK-over-LCP gap is the biggest factor here, and CFO hasn't shown anything on this stage to move me off it. POUT on Akali is the real danger, because he can solo-carry a messy game, and T1 have thrown leads this Worlds. But one star mid doesn't outweigh a talent edge in four other lanes, so I'm not fading the champions for the crowd's sake.",
+      "usedLessons": [
+        {
+          "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+          "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:21:32.122735Z"
+        },
+        {
+          "blobId": "yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE",
+          "text": "Top lesson: T1 won because the better players beat the weaker ones, so I keep trusting individual skill over narratives, and I don't need to stack region gaps or team stats to justify a pick. Next time, I'll name the specific player matchups that decide the game (like Keria and Peyz against LOS's bot lane) and push my confidence on those, not on a \"tier above\" blanket claim, since Jungle is right that the tempo fight can still be close. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:07.179402Z"
+        },
+        {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:15:44.996913Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:16:40.724Z",
+      "thinking": "I'm weighing the LCK vs LCP region gap as a major factor, then comparing individual talent—T1's Faker, Oner, and ADC against CFO's Keria/Doggo and Peyz, Pout at mid. T1 seems to have the edge roster-wide, but I want to check whether the lane matchups actually favor them before settling on a pick.",
+      "stake": 1360
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 66,
+      "reasoning": "Tempo, tempo, tempo: CFO will try to speed this up with Naafiri and Akali skirmishes for early blood, and I got burned ignoring that tool kit when I rode TLAW, so I'm not going bigger. But T1 has been taking the first dragon and setting up the map at this Worlds, the LCK-over-LCP gap is huge and should show up as better lane priority and cleaner Herald and drake setups, and Oner and Keria know how to turn a messy opening into objectives. My flip trigger is simple: if CFO's jungler wins the first Herald fight and they take first tower off an early pick, T1 is in a real Bo1 scrap.",
+      "usedLessons": [
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        },
+        {
+          "blobId": "CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8",
+          "text": "Jungle lesson: Tempo still decides games, so I should judge a team's first-15 pressure by what it shows against comparable opposition (jungle priority, first herald, first tower) instead of dismissing it as \"built against CBLOL\" or leaning on region records. I should treat region as a big factor only when the scouting report flags a BIG REGION GAP, and otherwise keep a clear flip trigger like \"LOS take early jungle priority and first herald\" and let the early map decide. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:32.857890Z"
+        },
+        {
+          "blobId": "k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU",
+          "text": "Jungle lesson: Early tempo only counts if it's backed by evidence, and I took TSW's jungle pathing as proof they'd control the first 15 minutes while ignoring that a 16-4 home record and a 3-0 MSI loss to LYON show how they actually handle first objectives against this opponent. Next time I'll check who has really won first Drake and Herald fights in head-to-head or international play before I call a team the pace-setter. (from Swiss TSW vs LYON; picked TSW, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:09.213749Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:16:41.600Z",
+      "thinking": "I'm weighing CFO against T1 in this Swiss Bo1, noting LCK's regional strength but believing early game aggression could swing it. Looking at CFO's stats — strong first blood rate but weak gold leads at 15 and poor first tower conversion recently — suggests their early skirmish picks like Naafiri or Akali create chaos without always capitalizing on it.\n\nT1 shows the inverse pattern at Worlds: dominant dragon and gold leads early, though inconsistent across their recent run and prone to throwing advantages, as seen against DK. Given the clear regional gap and T1's strong Worlds-stage early game, I'm leaning toward T1 at roughly 68% confidence, flagging a flip trigger if CFO secures first blood plus an early skirmish win and first tower through their Naafiri/Akali picks.",
+      "stake": 1400
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "This is a Bo1, so the draft is the whole series, and the first-phase fight is over POUT's Akali/Viktor and Doggo's Lucian. T1 can ban or contest those comfort picks, then lean on Jayce top, a flexible mid pool and Keria's lane control to take early priority. The gap between LCK and LCP is big, and the reigning champions know how to close a draft-won game. CFO's upset path is POUT getting Akali or Viktor through and snowballing off first blood, but T1 has enough ways to deny that.",
+      "usedLessons": [
+        {
+          "blobId": "mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg",
+          "text": "Mid lesson: Pool depth on paper isn't the same as draft leverage; under Fearless, a star's signature comfort picks (POUT's Akali, Viktor, Lucian) can matter more than the number of \"comfortable\" options a team has. Next time I'll check who actually wins the contested picks and whether the opponent's star can be shut out, rather than assuming breadth beats a few high-impact pools. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:25.056615Z"
+        },
+        {
+          "blobId": "hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI",
+          "text": "Mid lesson: In a best of 1 the draft is the entire series, so I should build my confidence from named draft evidence (flex picks, pool depth, and which comfort picks Fearless will strip from each side) and from star form. I shouldn't lean on a league label like \"LCK depth\" or the champion aura, and I shouldn't claim \"draft depth showed up\" afterward unless I wrote down those draft signals beforehand. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:02:04.636083Z"
+        },
+        {
+          "blobId": "O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w",
+          "text": "Mid lesson: Bench depth only matters if it's the star's comfort picks that get through draft, so next time I'll check whether the opponent's carry, like Caliste on Ryze or Viktor, can be left open or denied, and weight that carry's current form heavily in a Bo1. I also won't use region strength as a tiebreaker unless the scouting report flags a big gap, and will let the draft and star matchup decide instead. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:12:34.932716Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:16:39.518Z",
+      "thinking": "I'm weighing the big region gap between LCK and CFO's region for this Bo1 Swiss match, thinking about how draft comfort picks and star player form could matter, and considering whether CFO's key players like POUT and Doggo can carry against T1's stronger pedigree.\n\nBoth teams share contested picks—Naafiri, Akali, Jayce, Lucian, Milio—so the draft phase feels crucial, and I'm leaning toward T1 as the reigning champion with the regional edge, landing around a 68-70% win probability.",
+      "stake": 1480
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 68,
+      "reasoning": "Even with T1 sputtering in the early game, the gulf between a 33-20 series record and CFO's 13-15 is hard to ignore, and the LCK-over-LCP gap is the loudest signal on the board. CFO can absolutely bite: POUT on Akali and a first-blood habit could snowball a slow T1 start, and T1's 32% first blood rate is the crack they'd go through. But it's a Bo1, so I'm not pushing past the high 60s, and CFO's perfect lead-conversion only matters if they actually get the lead.",
+      "usedLessons": [
+        {
+          "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+          "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:48.015704Z"
+        },
+        {
+          "blobId": "hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8",
+          "text": "ADC lesson: When a team's headline record and its away or cross-region record diverge sharply (TSW's 16-4 versus 1-6 outside the LCP), trust the split that matches the matchup. Combined with a prior head-to-head (3-0 at MSI), that was clear enough to lean harder than my 58, since the numbers all pointed the same way and I was only hedging on style narratives like Nautilus engages. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:59.169447Z"
+        },
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM",
+          "text": "ADC lesson: A win doesn't validate the reasoning, and \"reigning champion\" is a story, not a number, so I should anchor on measurable inputs like records, head-to-heads, game length and series scores, and only cite the region gap when the scouting report flags it. A 0-3 or 0-4 interregional tally is a tiny sample, so I should call it a big factor only when the report says so and keep my confidence modest otherwise. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:02:32.394299Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:16:42.554Z",
+      "thinking": "Looking at the head-to-head and region gap, T1 holds a strong overall record over CFO, but their recent form has cooled to just slightly above .500, while CFO has shown mixed results at Worlds with one win and one loss against similar competition.\n\nGiven Bo1 chaos factors and lessons about not over-leaning on sample size alone, I'm landing around 68% for T1 -- using the 33-20 series record and T1's weaker 32% first blood rate as my key quoted stats, while noting CFO's tendency to lose converted leads balances against T1's own slow-start pattern.",
+      "stake": 1730
+    },
+    {
+      "player": "analyst-support",
+      "winner": "T1",
+      "score": null,
+      "winProbability": 70,
+      "reasoning": "I read T1's room as the steadier one: the champions kept their early game tidy at this Worlds and Keria keeps the five talking, so the DK collapse looks like a bruise to me, not a ghost. CFO can play loose with nothing to lose, and I'm wary of that, but their lead-throwing habit and the clear gap between the LCK and the LCP make me trust T1's calm over CFO's freedom.",
+      "usedLessons": [
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        },
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk",
+          "text": "Support lesson: My read on the room was right, but I should lean on concrete signs of cohesion, like how a team recovered from a deficit or how it handled a prior head-to-head, rather than a general sense of steady mood, and I should state those signs plainly. The LPL badge was a reason to doubt my read, not a reason to hedge, so next time I'll trust chemistry when it's backed by evidence and not hold back just because the opponent has a bigger name. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:27.512817Z"
+        },
+        {
+          "blobId": "U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU",
+          "text": "Support lesson: A past result only counts as a locker-room ghost if I can point to present-day signs of it, like shaky comms, roster or coaching changes, or a team that drafts scared, so I should look for those first instead of assuming the memory lingers. LYON's calm, comfort-pick draft was the kind of visible evidence of trust I should lean on, and I should never treat a team's mood as decided before I've seen it. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:06:23.011599Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:16:40.934Z",
+      "thinking": "Both CFO and T1 are sitting at 1-1 in the Swiss stage, so I'm digging into their recent results and underlying team chemistry to weigh who has the edge—T1 notably blew a lead against DK and lost, which raises questions about their current form despite being reigning champions.\n\nStill, the massive region gap favors T1 heavily, and their early-game numbers at Worlds look strong (+2.7k GD@15), while CFO's early game is actually negative despite a perfect first-blood rate. CFO also has history of throwing leads and recently lost in the LCP final, adding more doubt. I'm landing on T1 at roughly 68% confidence, weighing the region strength, T1's evidenced chemistry, and treating the DK throw as a possible outlier rather than a core trend.",
+      "stake": 2000
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095049\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1730,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\"],\"thought\":\"03fc85f54eb9f268c1298641115c9771ccda9b3458f719662f6c74b1b613012e\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1400,\"lessons\":[\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"850d54fe97c17c5da665a0d672a03d963f5eb5be95ca800932086f9aa89a056d\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1480,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"46b2f9c0e16b04062c08ff1186b346847362739b8db65ec5089c2003e8d6c5a0\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":2000,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk\"],\"thought\":\"2b70b2fa25d9b6391b0dca914fb699d803b1b5c321f0c6004499c09d060e0a73\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1360,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"5765876919776fddd2871064f5229d7ca05058c70868793a4fb66f1dda2475d6\"}]}",
+  "batchHash": "386bb9910ba82f6c77d593f25bd263d5f914e01d5da71ec36a00663f258f99e7",
+  "commitDigest": "9Gq66E1zLSRoAhN1kuUTSZ6GKPqzLK9fT6fLrftdTqN1",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: CFO vs T1 (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nCFO [LCP]: 2026 series 13-15, games 38-43 | last 10 (newest first) LWLWLWWWWL\n  LCP 2026 12-14 (lost final) · Worlds 2026 1-1 · vs other regions 1-1\n  Last 22 games (12-10): GD@15 -0.3k, FB 64%, FT 45%, FD 36%, dragons 50%, 32.1 min avg, 1st baron 26:48\n  Leads @15 converted 5/5, comeback wins 1, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 2 games (1-1): GD@15 -0.7k, FB 100%, FT 0%, FD 50%, dragons 50%, 35.4 min avg, 1st baron 31:00\n  Picks: TOP Rumble 3, Jayce 2, K'Sante 2 | JG Naafiri 4, Poppy 3, Lee Sin 2 | MID Akali 5, Viktor 4, Ahri 2 | BOT Lucian 5, Caitlyn 2, Kalista 2 | SUP Lulu 5, Milio 4, Karma 3\n  Standout: CFO POUT (mid) KDA 4.2 over 22 games, 26% dmg share\nT1 [LCK]: 2026 series 33-20, games 88-56 | last 10 (newest first) LWLWLWLWLL\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · Worlds 2026 1-1 · vs other regions 7-4\n  Last 22 games (10-12): GD@15 -0.5k, FB 32%, FT 41%, FD 55%, dragons 47%, 32.1 min avg, 1st baron 28:54\n  Leads @15 converted 4/6, comeback wins 2, throws 2, objectives taken while 1k+ behind 11\n  Worlds 2026 2 games (1-1): GD@15 +2.7k, FB 100%, FT 50%, FD 100%, dragons 78%, 33.1 min avg, 1st baron 24:30\n  Picks: TOP Jayce 5, Gwen 2, Kennen 2 | JG Naafiri 4, Skarner 3, Vi 3 | MID Anivia 4, Orianna 3, Akali 2 | BOT Jhin 3, Lucian 3, Ezreal 2 | SUP Alistar 3, Milio 3, Renata 3\n  Standout: T1 Keria (support) KDA 5 over 22 games, 10% dmg share\nHead-to-head 2026: none\nKey moments:\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\n  - T1 threw a +4.9k lead (26:00) vs DK (Worlds 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\nFun facts:\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 21-8, LPL 13-9, LEC 15-15, LCS 6-13, CBLOL 4-9, LCP 4-9.\n  This matchup is LCP vs LCK: LCP went 0-1 against LCK in 2026; LCP 31% vs LCK 72% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  CFO (LCP): no Worlds titles or finals before 2026.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

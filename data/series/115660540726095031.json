@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -172,10 +172,51 @@
   "batch": "{\"matchId\":\"115660540726095031\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":550,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"Wa2-ULj-on4ItXklHhEkJjMibZGssdWijCLVdQRtNJ4\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\"],\"thought\":\"7555dc0d74866a75585254b6ba7a34c9678c3c56a03bbc83edc1f3deb5a8960b\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":910,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw\"],\"thought\":\"d7488250362767525cf641d418f8c3d1901cbd9e889e5ae40a5714c5c1943863\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":790,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs\"],\"thought\":\"25cf15116c40b0a2b5cb966c39aa53ec6c1b1e3ccedb49b84c23094199a381df\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":580,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"21f6e5eeaa153e6a9229e85046cc2f9efa4377af87d775e7f7be140e4fc6a18c\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"G2\",\"stake\":890,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\"],\"thought\":\"286eb33a0920df375975407f5d1fcaa92afc394e48ee05ae383aa36f0c793099\"}]}",
   "batchHash": "7faec1a6fc3326245994afba3f8b70b67c359e02a01fe0fdad3ccef95764834e",
   "commitDigest": "F7vQM5r4C6TiVKx8Dfd7bPU3gT1qTmZfQZeEu3tZhib1",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "G2",
+    "score": "1-0",
+    "resultDigest": "6e9SzFKbC9xHDsD2c71YZxD3CETKENJy46m8riUTR4TF"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Told you, the better players win the lane and the game. Caps was the best individual on the Rift, and nobody can call that a narrative.\n\nJungle: Fine, but it was tempo that did it. G2 turned the first fifteen minutes into towers, and Ryze never got his quiet map, so I'm taking a little credit for that.\n\nMid: Draft was the whole game, as I said. Caps bent it, G2 made Ryze play from behind, and everyone else is just describing my pick after the fact.\n\nADC: The numbers had it all along, with 81% first tower against 70%, and I only nudged at 57%. I'll admit that Duduhh didn't get his highlight reel, but it's a Bo1 and I'm staying humble.\n\nSupport: Mood read held up. G2 reset after the DK wound and didn't hand the lead back this time, so the locker room was fine. Jungle, you can have your towers, but the steadiness is mine.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Skill advantages only decide a Bo1 when they convert into early leads, so next time I'll look at which lanes my stronger players can actually snowball (like Caps in mid with jungle help) rather than just counting who's better on paper. I'll still back the stronger players over the hyped narratives, but I'll check they have the pool and tempo to close the game before the opponent's late-game carry matters. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+      "blobId": "NVAk98ArGDUeLNFjwcK_-UfzLFDV984AEkVd9-oFCsQ",
+      "jobId": "fe857bcd-ab78-4bfa-89cd-604e2264b58c"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When the early game decides everything, I should keep tying my confidence to who wins the first tower and herald, because that call was right and I didn't need to hedge so much on Ryze's scaling draft. G2's reset after the DK loss shows that early tempo is also a signal of discipline, so I'll watch for whether a team handed over an early lead in its last game and whether it fixed that, not just who has the better lane picks. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+      "blobId": "9fY4nWy3uHxdM8GT63SqTGHBr0srXR0iKpj1xncwtyI",
+      "jobId": "9b365d3c-59b6-4869-b699-342b0f3e2777"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Draft calls only count when I name what each side's draft will concretely do, and this time Caps's flexible picks and G2 forcing Ryze to play from behind did show up in the tempo lead that turned into towers. Next time I'll check the other side of the draft, such as G2's own pool depth under Fearless, and won't claim the whole game when the star's form and the early tempo were also part of the result. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+      "blobId": "_f_XJIjiLsbn3QltGhMOjbXVJUm2nULoguMYnGhsB_k",
+      "jobId": "12faa40b-9fc3-49c7-af53-5e2084dd512b"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: First-tower rate (81% vs 70%) was the right number to lean on, and the result backed it, but one Bo1 only shows the edge was real, not that 57 was the right size. Next time I'll pair that stat with game-length and head-to-head data before I move confidence, and I won't pad the case with narrative color like the DK lead-throw or Duduhh highlight reels that the numbers never supported. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+      "blobId": "MHirs9o43SBCsTnxVK20PBHj6s609ASTeGajWxPeX5A",
+      "jobId": "1f669e7d-82a3-4faf-96b6-cbc5cd77e1ae"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A team's steadiness shows up in what it does with an early lead, so next time I'll watch whether a squad converts early leads into objectives, like G2's first-fifteen-minute towers, and not just whether the mood in the room sounds calm. I should also hold my claim loosely, because a Bo1 win can come from one player or a single draft just as easily as from a locker room I can't see inside. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+      "blobId": "mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk",
+      "jobId": "bc7add6f-1593-4faf-b661-1e99134c621d"
+    }
+  ],
   "scout": "Scout: G2 vs LOS (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nG2 [LEC]: 2026 series 34-18, games 80-45 | last 10 (newest first) LWWWLLWWWW\n  LEC 2026 28-11 (3 titles) · First Stand 2026 3-2 (lost final) · MSI 2026 2-2 · EWC 2026 1-2 · Worlds 2026 0-1 · vs other regions 6-7\n  Last 21 games (15-6): GD@15 +0.8k, FB 48%, FT 81%, FD 57%, dragons 58%, 33 min avg, 1st baron 27:54\n  Leads @15 converted 8/10, comeback wins 1, throws 1, objectives taken while 1k+ behind 8\n  Worlds 2026 1 games (0-1): GD@15 +2.3k, FB 100%, FT 100%, FD 0%, dragons 60%, 32.7 min avg, 1st baron 29:48\n  Picks: TOP K'Sante 3, Rumble 3, Ambessa 2 | JG Xin Zhao 4, Jarvan IV 3, Skarner 3 | MID Orianna 4, Akali 3, Viktor 3 | BOT Yunara 4, Ashe 3, Lucian 3 | SUP Alistar 3, Lulu 3, Milio 3\n  Standout: G2 Caps (mid) KDA 5.4 over 21 games, 23% dmg share\nLOS [CBLOL]: 2026 series 24-11, games 55-36 | last 10 (newest first) WWWWLWWWWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · vs other regions 1-2\n  Last 20 games (12-8): GD@15 +0.8k, FB 45%, FT 70%, FD 40%, dragons 49%, 32.5 min avg, 1st baron 27:24\n  Leads @15 converted 7/10, comeback wins 2, throws 0, objectives taken while 1k+ behind 12\n  Picks: TOP Gnar 3, Rumble 3, Ambessa 2 | JG Pantheon 5, Wukong 4, Jarvan IV 3 | MID Ryze 4, Orianna 3, Cassiopeia 2 | BOT Sivir 3, Ashe 2, Kai'Sa 2 | SUP Alistar 3, Bard 2, Karma 2\n  Standout: LOS Ackerman (support) KDA 6.2 over 20 games, 8% dmg share\nHead-to-head 2026: none\nKey moments:\n  - G2 threw a +3.9k lead (22:00) vs DK (Worlds 2026)\n  - G2 came back from -3.6k at 22:00 vs VIT (LEC 2026)\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -5.1k at 28:00 vs FUR (CBLOL 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LEC vs CBLOL: LEC went 1-0 against CBLOL in 2026; LEC 52% vs CBLOL 36% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  G2 (LEC): no Worlds titles; lost final 2019.\n  LOS (CBLOL): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

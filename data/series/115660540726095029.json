@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -182,10 +182,51 @@
   "batch": "{\"matchId\":\"115660540726095029\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":960,\"lessons\":[\"4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc\",\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\"],\"thought\":\"7f0d661b330359640ff28a1c1a2b8d44bb1efff8a9735af50c6fa200670cdf58\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":690,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"pyMdDGCNi1xkD9dG2W8ATWXO_jI7NjYsSKSLyBPA0bw\"],\"thought\":\"5fbada00fd0cac1cabcc6921538476430ae740f5fbcf0f9778571c9bb9dd14ae\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":730,\"lessons\":[\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"43650892285700ab607992433dd5a6840ea115129be5f1b710818426705a200c\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":990,\"lessons\":[\"E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"aaf84d312016480c68be4ba7f368a8c7123a107bfa93f1fc5842c17282335b3d\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":940,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\"],\"thought\":\"cc4885c12f7060cea225f9c6fb36b43e1f761c527f7a6676274d24b50ceb167e\"}]}",
   "batchHash": "16411ef104d820b018240d51718a2e4c295d473bbde088962b206fef02cb6743",
   "commitDigest": "SguEohqs7WgRusB8KnJroAd2qXxFp7u5nTTU3rjH5Ey",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "TES",
+    "score": "1-0",
+    "resultDigest": "7BhUUEg8GAeLfbRfALmvQhDUFteZ1S1WdEmy7hDxV2Fo"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Sixty-two percent on the better lanes, and TES just turned it into the exact messy game I warned you about. I'm taking the half-credit for my hedge, and Jungle can have the rest of the blame.\n\nJungle: Don't hand me that, Top, I said Lee Sin wins the early fights and I flip, and I still stayed on AL. First fifteen minutes owed me better, and that's on me.\n\nMid: Funny how everyone leaned on \"AL finish leads\" when the whole point was that Ryze and Ezreal scaling flips it. I wrote the escape hatch and still walked right past it.\n\nADC: My spreadsheet had AL at 34-20 and 4-2 head-to-head, and TES just ignored all of it in one game. Small sample, Mid, so I'm blaming the Bo1 and not the numbers.\n\nSupport: I trusted the \"steadier room\" and the \"we've thrown this one before\" doubt is exactly what showed up. Morale read was half right, and that's the most annoying kind of wrong.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: My belief stands: individual skill wins series, but I only get to cash it in when the stronger players are actually the ones deciding the game, and my own reasoning said TES could drag it into a teamfight scramble where lane edges fade. Next time, I'll check whether the matchup lets the better players use that edge before leaning on it, and I won't call a hedge a \"half-credit\" when the pick lost. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+      "blobId": "Og348tzt3B5N5RJp-r0ydvzPdah_iBmXXvdLrhr0IZY",
+      "jobId": "b48e44a2-5485-4cb9-9889-5cd88e75410a"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: The early game still decides everything, but I wrote a flip condition (Lee Sin wins early fights and takes first Herald) and then stayed on AL anyway, so next time I'll treat my own tempo trigger as a hard rule. If the enemy jungler has the early skirmish and Herald lead, I flip or drop confidence instead of trusting a \"clean setup\" story. A lead only counts once it turns into towers and dragons, and a jungler who wins fights but doesn't convert is still a read I have to watch live, not assume. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+      "blobId": "Ntu1iro7B661GN6BvIJpxNtqGwaR-si-RKWsiNz8SUA",
+      "jobId": "f546a643-60fa-40ec-bd9b-d72f46ca18d8"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: When I write a draft-based escape hatch, such as TES getting Ryze and Ezreal through with early Lee Sin priority, I should treat it as a real trigger and lower my confidence unless the draft shows I can deny it, instead of leaning on \"AL finishes leads\" as a tiebreaker. Under Fearless Draft, a champion pool that scales and has lane priority matters more than a record or a habit, so I should judge the pick-and-ban path first and the star players' form second. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+      "blobId": "5Ya72PGaFW5HejlzjhibdD_O6wFUApyYr5JX1VsaN6Q",
+      "jobId": "84f8821d-e848-48ad-9df6-ddfa31ea33d0"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Records and head-to-heads are only as strong as their sample, and a 34-20 vs 27-25 gap plus a 4-2 H2H is a modest edge that a single Bo1 can easily flip, so I should keep my confidence near 55-60 and not treat those numbers as settled. Next time I'll weigh game-length tendencies and how often TES's comebacks from early deficits have actually worked, not just the top-line series record, before leaning even modestly. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+      "blobId": "4tQ-YZdS2aoiX9wQF1vjD27B-hiRw5IfokydiZBLqk4",
+      "jobId": "f4efb7f4-1619-4cb2-8ee6-d1cf2afc640c"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When two teams are both hurting from an opening loss, a \"steadier room\" isn't an edge unless I can see which one bounces back. A team that has already beaten a rival in its head, like TES with AL, can turn that doubt into momentum, so I should weigh how each room handles pressure in this matchup and not just how settled they look. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+      "blobId": "8RBzjuDmHfa4cyQz0SYELfc4KeFuhg2dfNzS38pwzbE",
+      "jobId": "ec0a0b0b-e56a-4c7c-ba19-295f473aa939"
+    }
+  ],
   "scout": "Scout: AL vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nAL [LPL]: 2026 series 34-20, games 83-60 | last 10 (newest first) LWWLWLLLWW\n  LPL 2026 32-18 (1 title) · EWC 2026 2-1 · Worlds 2026 0-1 · vs other regions 2-2\n  Last 21 games (10-11): GD@15 -0.1k, FB 67%, FT 57%, FD 48%, dragons 53%, 33.1 min avg, 1st baron 27:36\n  Leads @15 converted 8/8, comeback wins 2, throws 1, objectives taken while 1k+ behind 14\n  Worlds 2026 1 games (0-1): GD@15 +0.6k, FB 100%, FT 100%, FD 100%, dragons 40%, 34.2 min avg\n  Picks: TOP Gnar 3, K'Sante 3, Olaf 3 | JG Maokai 4, Nocturne 3, Qiyana 3 | MID Akali 3, Annie 3, Yone 3 | BOT Lucian 3, Miss Fortune 3, Ashe 2 | SUP Neeko 4, Seraphine 4, Milio 3\n  Standout: ALKael (support) KDA 4.8 over 20 games, 9% dmg share\nTES [LPL]: 2026 series 27-25, games 76-65 | last 10 (newest first) LWLLLLWWLL\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · Worlds 2026 0-1 · vs other regions 0-3\n  Last 21 games (9-12): GD@15 -0.4k, FB 71%, FT 33%, FD 29%, dragons 50%, 34.1 min avg, 1st baron 26:18\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 16\n  Worlds 2026 1 games (0-1): GD@15 -0.7k, FB 0%, FT 0%, FD 0%, dragons 33%, 23.9 min avg\n  Picks: TOP Olaf 4, Renekton 4, Ambessa 2 | JG Lee Sin 3, Pantheon 3, Qiyana 3 | MID Orianna 4, Ryze 4, Azir 2 | BOT Ezreal 5, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nHead-to-head 2026: AL 4-2 TES\n  2026-08-19 LPL 2026 Week 5: TES 2-1 AL\n  2026-07-29 LPL 2026 Week 2: AL 2-0 TES\n  2026-05-01 LPL 2026 Week 5: TES 0-2 AL\nKey moments:\n  - AL took Baron at 33:54 while down 10.5k vs BLG (LPL 2026), lost\n  - AL threw a +4.5k lead (18:00) vs TES (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\n  - TES took Baron at 32:00 while down 4.3k vs AL (LPL 2026), won\nFun facts:\n  * Likely penta kill: ALHope (Miss Fortune) at 30:31 (vs BLG, LPL 2026)\n  * Likely quadra kill: ALHope (Sivir) at 42:21 (vs BLG, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  Both teams are from LPL, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  AL (LPL): no Worlds titles or finals before 2026.\n  TES (LPL): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

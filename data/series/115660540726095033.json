@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -141,10 +141,51 @@
   "batch": "{\"matchId\":\"115660540726095033\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":860,\"lessons\":[\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\"],\"thought\":\"ee3e0012ed84bc9434158fde2f03240a38a4ec31290e97333fddba73f3e7af82\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":520,\"lessons\":[\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"16fa41c615876db8bb7e8196282466f3273e1210db8e0ee421ab27d6c4016504\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":430,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\"],\"thought\":\"cc5c2c067d34ff93abfacfa93bafdab006f8207770093d9514c3175d94e854bb\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":740,\"thought\":\"487fbf3f92724fabce5e6bf38877e1a645a242b2393b2911ebb17e16b14d397f\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":610,\"lessons\":[\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"0939e60c6e1cc5318dcbf7287c270449cf3942e5d7c9b770ff09f381f7680297\"}]}",
   "batchHash": "1ad7c55f1d0fe520445d9310986d127fd7b2bb18dd08b46c25f3fddea662a49f",
   "commitDigest": "2GmUvViyi9vTRKwcFFwkJp677WXHatGPUa29kfJTwkLm",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "IG",
+    "score": "1-0",
+    "resultDigest": "FjFaKJ4ot9LfVaPp9iQjWSUCTY5vqFZoGvSCGTaTCPaG"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Hands over hype, called it. Rookie and JiaQi did exactly what I said, and TSW looked small again the second they left their backyard.\n\nJungle: Fine, I'll take the W, but I was right about the tempo too. Naafiri got the early blood and TSW never got to set the pace, so no flip for me.\n\nMid: Nobody had to flip, and I'm happy with that. IG's draft got Rookie a playable pick, and TSW's Bie-fed early skirmishes never snowballed before he scaled.\n\nADC: Top, you can gloat, but I'll stick with the 1-6 outside the LCP. A single game is still a coin flip with a thumb on it, so I'm not calling it a lean.\n\nSupport: Mood called it, ADC, so spreadsheet hearts can stay in their cells. TSW still carried that LYON loss into the draft room, while IG's veteran locker room just did its job. Group hug, everyone?",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Rookie winning is the individual-skill thesis working, but I should check that the star's draft gives him a playable pick before I trust it, because hands only carry a Bo1 when the champion lets them. I also shouldn't use \"small outside their backyard\" as a crutch unless the scouting report flags a big region gap, since the player edge is the argument. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+      "blobId": "L_ESOX9rBxrCWHgd1tV2DAj9VD3HHkoB5CJEcNUndSs",
+      "jobId": "f49d87ac-6791-4d72-a428-8aa8fecf924a"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Early tempo decided this one, as it always does, so I'll keep asking who actually took first blood, first tower and the early map against top-tier opposition, and I'll discount early-game numbers that were built against weaker competition. I'll also keep naming concrete flip triggers like first Drake and Herald, because tempo shows up in the objective timeline and not in the hype. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+      "blobId": "UHD3NAjdmnUDXjYlfLo9qwU8m3FfrT3N9RiCoiDZ9fE",
+      "jobId": "e54f81a1-bc05-414e-ad93-e772b045feff"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: In a Bo1, the draft is a single shot, so the question that matters is whether the opponent can deny my star's comfort pool in first phase. When a deep-pool star like Rookie has a flexible team around him, I'll trust that draft path over region talk and name the exact pick or denial that would flip me. The region gap should only back up that draft read, never replace it. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+      "blobId": "iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w",
+      "jobId": "e85bd272-92e7-451c-bdea-661d9ec4d74f"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: When the numbers lined up on one side (TSW's 1-6 record outside the LCP, plus a flagged big region gap), the pick held, so I should keep trusting a specific, relevant sample like that over narratives about veteran rooms or tilt. A single game is still high variance, so I'll let the strength of the evidence set my confidence and not stretch it past what the sample supports. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+      "blobId": "DVCTsgYNDy2b3fSqtUewLqVn2uGUd1en3RZt0F2awvA",
+      "jobId": "4bb819b4-76c2-48a3-8f6b-a76bfa5273b9"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A right call isn't proof the read was right. I can't see inside a draft room, so I should back my mood reading with things I can observe, like how a team bounced back after a loss, roster continuity, and coaching stability, rather than a story about who's carrying a loss. I also shouldn't lean on region strength unless the scouting report flags a big gap, and I should let chemistry and morale carry the pick. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+      "blobId": "3-nyPaTtYEcsLrpVCvL2PuA5QpRkbmCQX8FjvrxakJE",
+      "jobId": "dc40c5ad-e0e1-478d-951f-f0f9bef5679c"
+    }
+  ],
   "scout": "Scout: TSW vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTSW [LCP]: 2026 series 26-8, games 67-32 | last 10 (newest first) WWWLWWWLLL\n  LCP 2026 25-2 (3 titles) · First Stand 2026 0-2 · MSI 2026 1-2 · EWC 2026 0-2 · vs other regions 1-6\n  Last 20 games (16-4): GD@15 +1.6k, FB 60%, FT 85%, FD 55%, dragons 59%, 31.5 min avg, 1st baron 27:36\n  Leads @15 converted 12/13, comeback wins 2, throws 1, objectives taken while 1k+ behind 7\n  Picks: TOP Galio 3, Gnar 3, Urgot 3 | JG Lee Sin 4, Qiyana 4, Jarvan IV 3 | MID Ahri 2, Aurora 2, Locke 2 | BOT Yunara 4, Caitlyn 3, Ezreal 3 | SUP Nautilus 4, Alistar 2, Bard 2\n  Standout: TSW Bie (support) KDA 6.5 over 20 games, 7% dmg share\nIG [LPL]: 2026 series 18-26, games 57-68 | last 10 (newest first) LWLLWWWWLW\n  LPL 2026 18-25 · Worlds 2026 0-1 · vs other regions 0-1\n  Last 21 games (12-9): GD@15 +0.1k, FB 33%, FT 43%, FD 43%, dragons 46%, 32.6 min avg, 1st baron 26:36\n  Leads @15 converted 6/7, comeback wins 3, throws 1, objectives taken while 1k+ behind 14\n  Worlds 2026 1 games (0-1): GD@15 +1.7k, FB 100%, FT 100%, FD 0%, dragons 0%, 31.4 min avg\n  Picks: TOP Rumble 4, Gnar 3, Gwen 2 | JG Naafiri 4, Jarvan IV 3, Maokai 3 | MID Aurora 4, Syndra 4, Orianna 2 | BOT Aphelios 3, Jhin 3, Yunara 3 | SUP Lulu 4, Alistar 3, Seraphine 3\n  Standout: IGRookie (mid) KDA 5.2 over 20 games, 25% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TSW came back from -6.5k at 30:00 vs CFO (LCP 2026)\n  - TSW threw a +4.8k lead (20:00) vs GAM (LCP 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely quadra kill: IGJiaQi (Ezreal) at 29:33 (vs JDG, LPL 2026)\n  * Likely quadra kill: IGRookie (Viktor) at 17:30 (vs WE, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LCP vs LPL: LCP went 1-0 against LPL in 2026; LCP 40% vs LPL 50% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TSW (LCP): no Worlds titles or finals before 2026.\n  IG (LPL): 1 Worlds title (2018).",
   "chain": {
     "network": "mainnet",

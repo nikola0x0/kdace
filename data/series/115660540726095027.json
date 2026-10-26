@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -141,10 +141,51 @@
   "batch": "{\"matchId\":\"115660540726095027\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":180,\"lessons\":[\"4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc\",\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\"],\"thought\":\"6570467e353e6274a8ddb729c8a10ce432442caca477b31566dceaf0dc108fed\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":310,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\"],\"thought\":\"1af7b08e41de14701af6dbb63b239dbc6b040ef6ec0e58787a8cd10fbd266d20\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":240,\"thought\":\"c8e0358fe665d51a9d4ec3a8bf43cadad0c68135e3a4f724f4f05a250c96351b\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":260,\"lessons\":[\"E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\"],\"thought\":\"93294d669005dd394ca4523da689f101c3378355baeb733dae8f198362c5fd3d\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":280,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"220658cc5524127ad84a29e0b2e4cafe1dfa4bc77e6dedfa2c4c3d23d9868faa\"}]}",
   "batchHash": "02071a5c090efd0444aa3837bc9368a96b672681e10fea374cea672c452b6997",
   "commitDigest": "2UH136ZrNKnffgdZ2piXTd5mjhYfGqEMjhsVbHuoWwQE",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "DK",
+    "score": "1-0",
+    "resultDigest": "8kfpSpQeTDaScngBJWvhi49cJcAr73ozByccYWM3qGHC"
+  },
+  "axp": {
+    "analyst-adc": 50,
+    "analyst-jungle": 87,
+    "analyst-mid": 67,
+    "analyst-support": 73,
+    "analyst-top": -280
+  },
+  "debate": "Top: Okay, I got burned, and Smash was the best player on the server. Still, I'll take the loss over buying the champs hype, even if my five lane fights turned into one very loud lane fight.\n\nJungle: Tempo wins again, and nobody even had to flip on a Naafiri or Herald trigger. DK took the opening, Top, so your roster of stronger players spent the whole game staring at a map that belonged to somebody else.\n\nMid: Bo1 draft is the whole series, and DK's tight book did exactly what I said it would. Smash on his comfort carry, early priority from the jungle, and no comeback magic for Faker to work with. Jungle, I'll share the trophy with you.\n\nADC: I said a lean, not a lock, and the 4-in-20 lead stat at 15 minutes was the number I trusted. Fine, I'll gloat a little. Top, I like you, but the numbers never cared how many lanes you thought T1 won.\n\nSupport: DK being the settled room showed up when it counted. No doubt, no ghost of that old comeback, and they just closed it out together. Top, the vibes were real, and so was the chemistry. Next time, maybe let the mood analyst in on your five-lane math.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: My core belief holds: individual skill wins series, but I should have weighted the best individual on the server, Smash, above my \"more lanes\" tally, because in a Bo1 one dominant player with draft priority can outweigh the other four matchups. Next time I'll check which side has the single most dangerous carry and whether the draft is likely to feed him, instead of assuming broad roster edges will override that. (from Swiss T1 vs DK; picked T1, actual DK 1-0)",
+      "blobId": "SXAEodPL3raBvANzr7-cW9EG3wsPtpXn9FhraMYvIJo",
+      "jobId": "0d772fcd-41b6-422b-aa9e-9f6a999a8e03"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When the early game decides everything, a team that reliably wins first blood, first dragon and the minute-15 map state is the one to back, even when the other side has the comeback legend or the stronger individual players. I should still name the specific flip trigger (like a Naafiri early pick or first Herald), but this result shows I can trust the tempo read and don't need to hedge it much. (from Swiss T1 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "rF4AbcN_gc4kWW-4teBNnFVaZvoZ7Lkw9gXO24lfiXI",
+      "jobId": "7e9348a0-7314-4685-8290-537697d3560d"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: My read was right that a tight, proven draft book decides a Bo1, but I was too loose on the conditional flip. Next time I'll name the specific draft triggers up front (Vi/Jarvan priority, Smash's comfort carry), and when the draft hands the star carry that comfort pick, I'll trust it more than the opponent's reputation or past head-to-heads. Fearless Draft rewards the team with the settled pool, not the one with the bigger name. (from Swiss T1 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "fA2ltR3XJMUPjNf99i7gdalvoyrwBbEYCcuIQfvMQ6s",
+      "jobId": "119b74b4-fc40-49c9-a497-0857b34b25a3"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: When a single number like T1's 4-in-20 lead rate at 15 minutes lines up with a Bo1's short, early-decided format, that kind of tempo evidence deserves more weight than the head-to-head record (4-3 is too small a sample to matter). I'll keep my confidence modest when the sample is only 20 games, but I'll trust early-lead rates over reputation or comeback stories. (from Swiss T1 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "kX507neNuJFhhtpV-bUInkr9aAEMk_GN-7IA5SUjyMA",
+      "jobId": "ebaed7fa-af5e-4ee3-9293-ab68ac3f5af0"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When I read a room's chemistry, I should look for specific behavior under pressure, like how a team responds after a setback or protects a lead, instead of leaning on a general \"settled\" feeling. DK closing the game cleanly without any sign of the old doubt backed the read this time, and chemistry still decides games, but I'll count it as strong evidence only when I can point to those moments. (from Swiss T1 vs DK; picked DK, actual DK 1-0)",
+      "blobId": "Q8YBaUVbKfg9tEFmM-QiTZZKo8DWNxokvFLqkWAyrLY",
+      "jobId": "90a9756a-4b79-4417-9d32-b28215195d18"
+    }
+  ],
   "scout": "Scout: T1 vs DK (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nT1 [LCK]: 2026 series 32-19, games 87-55 | last 10 (newest first) LWLWLWLLLW\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · vs other regions 6-4\n  Last 20 games (9-11): GD@15 -0.8k, FB 25%, FT 40%, FD 50%, dragons 44%, 32 min avg, 1st baron 30:00\n  Leads @15 converted 3/4, comeback wins 2, throws 1, objectives taken while 1k+ behind 11\n  Picks: TOP Jayce 3, Gwen 2, Kennen 2 | JG Naafiri 4, Skarner 3, Nocturne 2 | MID Anivia 3, Orianna 3, Akali 2 | BOT Lucian 3, Ezreal 2, Jhin 2 | SUP Milio 3, Renata 3, Alistar 2\n  Standout: T1 Keria (support) KDA 4.9 over 20 games, 10% dmg share\nDK [LCK]: 2026 series 33-17, games 78-58 | last 10 (newest first) WLWWLWLWWW\n  LCK 2026 27-16 · EWC 2026 5-1 (1 title) · Worlds 2026 1-0 · vs other regions 5-1\n  Last 21 games (10-11): GD@15 +0.6k, FB 57%, FT 38%, FD 62%, dragons 46%, 34.9 min avg, 1st baron 27:42\n  Leads @15 converted 7/9, comeback wins 2, throws 2, objectives taken while 1k+ behind 9\n  Worlds 2026 1 games (1-0): GD@15 -2.3k, FB 0%, FT 0%, FD 100%, dragons 40%, 32.7 min avg\n  Picks: TOP Jayce 5, Gnar 4, Ambessa 2 | JG Vi 5, Jarvan IV 3, Naafiri 3 | MID Annie 4, Viktor 3, Ahri 2 | BOT Lucian 3, Yunara 3, Ashe 2 | SUP Lulu 4, Milio 3, Camille 2\n  Standout: DK Smash (bottom) KDA 4.4 over 21 games, 29% dmg share\nHead-to-head 2026: T1 4-3 DK\n  2026-09-06 LCK 2026 Playoffs: DK 1-3 T1\n  2026-08-14 LCK 2026 Week 12: DK 2-1 T1\n  2026-08-06 LCK 2026 Week 11: T1 2-0 DK\nKey moments:\n  - T1 swung 12.9k in 5 min (26:00-31:00) vs DK (LCK 2026)\n  - T1 came back from -3.4k at 20:00 vs DK (LCK 2026)\n  - DK threw a +13.1k lead (34:00) vs KT (LCK 2026)\n  - DK threw a +3.4k lead (20:00) vs T1 (LCK 2026)\nFun facts:\n  * Likely quadra kill: T1 Peyz (Xayah) at 41:41 (vs DK, LCK 2026)\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  Both teams are from LCK, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.\n  DK (LCK): 1 Worlds title (2020); lost final 2021; won 2020 as DAMWON Gaming.",
   "chain": {
     "network": "mainnet",

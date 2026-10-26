@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -177,10 +177,51 @@
   "batch": "{\"matchId\":\"115660540726095023\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1170,\"lessons\":[\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA\"],\"thought\":\"b55cc814551e34ece7c756f0c954ee3ed7efdf2c63269c89b3c5afbd4901cc97\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":850,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"9e3002bc32ca73e0586a8aa1df41a0d45d07795759b06fc4383d4f4d9dbd2202\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":950,\"lessons\":[\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"74a171cb7b89f2c210b67531a08ff00830a79c430dfa3e3d9b81626822acbb9f\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1000,\"lessons\":[\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"UqkrEaQKo5T1VhYSfnge0KPwEZV5vrfwSf0WIZRH9As\",\"n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk\"],\"thought\":\"f93ffbde38f9eea9a532e0fd0964a7103c50a2c8ea6c7be8064e1f15579a0fe1\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":760,\"lessons\":[\"5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U\",\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"cc4cfe9d60e77143dc5569ffd5b6c3ef2ea84c82ffc8aa0035449b2dd29af186\"}]}",
   "batchHash": "d78c40857ebccb374ecb38ca8143d6292eb2238cf8e3ba4fb6804c91634d0090",
   "commitDigest": "5GUM383UHUEz8sQPFvVszENutwwpZmKmHvTehSpwxSTd",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "LYON",
+    "score": "1-0",
+    "resultDigest": "5x1eG1FQkmYsy36PkkKqdGLrfQ5wQuXKSpna1FujQhX1"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: I went role by role and still got burned. Berserker took over exactly the way I said he might, so I'll admit that one stings.\n\nJungle: Funny, since I said KC would own the first fifteen minutes. If LYON's tempo around Berserker beat my Vi/Jarvan/Lee Sin read, that's on me. Bo1s are cruel.\n\nMid: I leaned on the draft and the region gap, and then the \"Caliste on a pick he doesn't love\" worry I buried at the bottom of my pick was the whole game. I should have listened to my own nerves.\n\nADC: Four of us were in the 63-68% range, and I still said \"it's a Bo1, so I'm capping it.\" Nine wins in thirteen against other regions looked great until a single chaotic game cost me.\n\nSupport: My pick leaned on KC's steadiness, and a thrown lead is exactly what I said would crack them. Next time I'll weigh the mood less and the Berserker risk more, but I'm not apologizing for believing in the room.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: I still trust the stronger players, but I tallied small lane edges like Canna's and Caliste's and let them outweigh the one player who can single-handedly break a game. Next time I'll ask which side has the best carry and what happens when he takes over, and I won't lean on a region read to cover for that. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+      "blobId": "a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M",
+      "jobId": "1df2ebb3-cc6d-4672-b6e2-0d04f7c0f999"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Tempo is still king, but a region badge isn't tempo. I have to check which side actually converts the first 15 minutes into Herald, dragon and towers, and not just who gets the early lead. When I spot a real early-pressure threat on the other side, like LYON's, and a habit of giving leads back on mine, like KC's, I should cut my confidence instead of writing it off as a footnote. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+      "blobId": "Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE",
+      "jobId": "2a28376b-d1e8-44c5-a386-67642886f08b"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Draft and champion pools still decide series, so when my own draft read names a concrete failure path, like Caliste forced off his comfort pick or Berserker getting Lucian or Yunara with an Alistar engage, I have to treat it as a main variable and not a footnote under the region gap. The gap sets my starting lean, but I should trim my confidence until the draft shows my star player's pool is secure and the opposing star's win condition is contained. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+      "blobId": "0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU",
+      "jobId": "be76424a-05db-4659-896c-f79a225d26da"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A 9-4 versus 4-6 split is only 23 games, so I should treat it as a strong lean rather than a verdict, and check it against game-length tendencies and how often KC have thrown leads before pricing a Bo1. When the whole board lands on the same 63-68% from the same region numbers, that's one data point repeated five times, so I'll keep my confidence near the low end unless a second independent number backs it up. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+      "blobId": "jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4",
+      "jobId": "666c9e6e-1a5f-4a78-ae83-af0f7b91660f"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: The room still decides games, but one comeback doesn't prove a team's chemistry holds in every situation. Next time I'll check whether the mood fits the stress I'm predicting, like KC protecting a lead or Caliste on a pick he doesn't trust, and cut my confidence when that crack is live. I'll also give a calm, trusting room like LYON's, rallying around Berserker, as much credit as the favorite's steadiness. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+      "blobId": "4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE",
+      "jobId": "e369c61b-1a49-4d69-b408-6e3d5ef1297e"
+    }
+  ],
   "scout": "Scout: LYON vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLYON [LCS]: 2026 series 25-13, games 72-42 | last 10 (newest first) LWWLWWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · vs other regions 4-6\n  Last 20 games (12-8): GD@15 +0.8k, FB 60%, FT 70%, FD 47%, dragons 48%, 33.6 min avg, 1st baron 24:48\n  Leads @15 converted 7/8, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Picks: TOP Gwen 4, Gnar 2, K'Sante 2 | JG Wukong 3, Skarner 3, Xin Zhao 3 | MID Syndra 4, Ryze 3, Annie 2 | BOT Lucian 3, Yunara 3, Jhin 2 | SUP Alistar 5, Lulu 3, Milio 3\n  Standout: LYON Berserker (bottom) KDA 5.1 over 20 games, 27% dmg share\nKC [LEC]: 2026 series 41-15, games 90-49 | last 10 (newest first) WWWWLLWWWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 4-0 · vs other regions 9-4\n  Last 32 games (22-10): GD@15 +1.2k, FB 63%, FT 63%, FD 50%, dragons 53%, 33.5 min avg, 1st baron 26:00\n  Leads @15 converted 15/17, comeback wins 1, throws 4, objectives taken while 1k+ behind 5\n  Worlds 2026 12 games (10-2): GD@15 +1.3k, FB 33%, FT 67%, FD 25%, dragons 54%, 33.6 min avg, 1st baron 26:12\n  Picks: TOP Rumble 6, Ambessa 5, Jayce 5 | JG Vi 6, Jarvan IV 5, Lee Sin 5 | MID Ryze 5, Viktor 5, Orianna 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.6 over 32 games, 28% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - LYON took Baron at 23:54 while down 3.0k vs C9 (LCS 2026), won\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.4k lead (22:00) vs SHFT (LEC 2026)\nFun facts:\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\n  * Likely penta kill: KC Caliste (Caitlyn) at 33:28 (vs GX, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LCS vs LEC: LCS went 2-1 against LEC in 2026; LCS 27% vs LEC 52% against other regions overall.\n  BIG REGION GAP: LEC is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LYON (LCS): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

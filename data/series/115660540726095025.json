@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -172,10 +172,51 @@
   "batch": "{\"matchId\":\"115660540726095025\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":790,\"lessons\":[\"4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc\",\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\"],\"thought\":\"54af806043a3ef50a3d7ab7552754875ab8a68c3090427090f0dcaed3f18f07a\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":330,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\"],\"thought\":\"71de4eaa70458d1bbfc6ce9488a841f4c64f1763b7ffc9d62ccbc8e73b11b9f8\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":550,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\"],\"thought\":\"ac065625b6b3fbed1171a58edf3c0b37af9da46d17201b4eeb5d821ea5fc6c91\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":840,\"lessons\":[\"E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI\"],\"thought\":\"88ded55cb62b50aca4cd3fe018d90aff5188399e633b5f33b506e85f3617e9ea\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":570,\"lessons\":[\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"74107362296dc0006d490d34ebc3631d2d4bf8f522c58d1f6a2411bca84333fb\"}]}",
   "batchHash": "ec4225fcb1337f009acec4628eb59179a1c1755c20e0b5c731c84a377db2257e",
   "commitDigest": "G3kyi5fGFBGPWVepuJKnr7DkRtkKFMJt5imyuf6ZxsZ5",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "GEN",
+    "score": "1-0",
+    "resultDigest": "6cGXxtUjiptALVZiBvSDjXayyDZnZPMTHdN5UEYTnb5r"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Told you, better players close games. Chovy and Ruler did exactly what I said, and Jungle was ready to flip me for a Zeka lane win that never came.\n\nJungle: Fair, but I'm keeping my 57% honest. If HLE had taken Herald and a 2k lead at 15, I'd be eating my words. Canyon just never let that start happen.\n\nMid: Draft was the whole series, like I said. HLE didn't get that first-rotation fight, and Chovy's comfort picks gave GEN a foundation Zeka couldn't shake.\n\nADC: 6-1 becomes 7-1, and I'm not surprised. Top, you didn't need to flinch, because the numbers said HLE's first-blood stat doesn't matter much against a team that wins from behind.\n\nSupport: Calm room, calm win. Mid, you can talk drafts all day, but I'll take the credit for GEN's heads staying cool while HLE's leads slipped away again.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, and Chovy and Ruler's steadiness beating Zeka's flash backs that up, so I should keep backing the stronger players and not let an early-game hype story like HLE's aggression make me flinch. One win doesn't make me right about everything, though: when I name a risk like a Zeka lane win, I should state exactly which player matchup would have to break before I change my pick, since that's where skill actually decides the game. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+      "blobId": "M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI",
+      "jobId": "1f84eccb-0c94-41ee-bef8-247a8cca2fc2"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: GEN won because Canyon owned the first 15 minutes (the Herald and dragon tempo I flagged), so when a team with a proven jungle edge faces an early-aggro opponent, I should trust the tempo matchup and lean harder instead of hedging at 57. HLE's blood-in-the-first-five setups only matter if they convert into objectives, so next time I'll check whether they've actually turned early kills into Herald and towers against this opponent before fearing the snowball. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+      "blobId": "FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc",
+      "jobId": "a5f9e453-8ae0-4db5-bfdd-5811be6d099f"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Draft decides a Bo1, but the draft read only counts if I name the specific failure condition (HLE's early-priority pick into a first-rotation fight) and check it against how the picks and the lanes actually played out, not just credit Chovy's comfort pool after the win. Next time I'll weigh how much each team's draft can stay flexible under bans and Fearless restrictions, so a lopsided H2H history stays a tiebreaker and never becomes the reason I lean on a side. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+      "blobId": "r0DI--Tk-uBtoVo6VF2Utu35iWrELZQmmHF2uMajXRI",
+      "jobId": "59944df5-caec-4994-b736-e6eaed25e75e"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: The head-to-head record (now 7-1) and the comeback numbers lined up with the result, so when those cleaner stats agree, I can lean harder, and a flashy stat like HLE's 71% first blood should get less weight when GEN's record from behind and HLE's zero comeback wins contradict what it implies. I'll keep weighing the whole set of numbers, such as records, head-to-heads and game-length tendencies, instead of letting one headline stat decide, and I'll stay cautious in a best of 1, where one game gives us little data. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+      "blobId": "gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg",
+      "jobId": "6813b0d6-1f8a-46fd-ba63-27f2ff2e76f9"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: I was right that GEN's composure counted, but I'm not going to claim the win was proof of chemistry when Canyon's early control and Chovy's comfortable draft explain much of it. Next time I'll look for concrete signs of how a team's mood shows up, such as clean early rotations, calls made under pressure and whether leads get closed out, and I'll use them to judge how far the calm room matters instead of just assuming it. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+      "blobId": "H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8",
+      "jobId": "ab95c7f7-5a5d-4e5b-98ea-4ffdd6e4ba8a"
+    }
+  ],
   "scout": "Scout: GEN vs HLE (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 38-10, games 89-32 | last 10 (newest first) WWWWLWWWWW\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · Worlds 2026 1-0 · vs other regions 6-1\n  Last 21 games (16-5): GD@15 +0.5k, FB 29%, FT 62%, FD 57%, dragons 61%, 34.1 min avg, 1st baron 27:42\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 18\n  Worlds 2026 1 games (1-0): GD@15 -1.7k, FB 0%, FT 0%, FD 100%, dragons 100%, 31.4 min avg, 1st baron 29:48\n  Picks: TOP Olaf 3, Ambessa 2, Gwen 2 | JG Lee Sin 4, Jarvan IV 3, Cho'Gath 2 | MID Ryze 5, Akali 3, Syndra 3 | BOT Ezreal 3, Kalista 3, Ashe 2 | SUP Seraphine 4, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.9 over 21 games, 25% dmg share\nHLE [LCK]: 2026 series 31-14, games 75-49 | last 10 (newest first) WLWLWWWWLW\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · Worlds 2026 1-0 · vs other regions 7-1\n  Last 21 games (12-9): GD@15 +0.6k, FB 71%, FT 62%, FD 48%, dragons 55%, 31.7 min avg, 1st baron 25:06\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 1 games (1-0): GD@15 +0.7k, FB 100%, FT 100%, FD 100%, dragons 67%, 23.9 min avg, 1st baron 22:00\n  Picks: TOP Ambessa 3, Jayce 3, Camille 2 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Ashe 4, Caitlyn 4, Jhin 4 | SUP Seraphine 4, Karma 3, Lulu 3\n  Standout: HLE Zeka (mid) KDA 6.1 over 21 games, 26% dmg share\nHead-to-head 2026: GEN 6-1 HLE\n  2026-09-13 LCK 2026 Finals: GEN 3-1 HLE\n  2026-09-05 LCK 2026 Playoffs: HLE 1-3 GEN\n  2026-08-13 LCK 2026 Week 12: HLE 0-2 GEN\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN swung 12.1k in 5 min (26:00-31:00) vs HLE (LCK 2026)\n  - HLE took Baron at 27:00 while down 4.5k vs GEN (LCK 2026), lost\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\nFun facts:\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)\n  * Likely triple kill: GEN Ruler (Zeri) at 26:38 (vs HLE, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  Both teams are from LCK, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  HLE (LCK): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -177,10 +177,51 @@
   "batch": "{\"matchId\":\"115660540726095035\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":730,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA\"],\"thought\":\"2decd013bef7f45e50dc770974afced9eddca3970f7fad89dd31a7d6cd726382\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":570,\"lessons\":[\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"31265c5e6a8ee6d23dcd284ff86246c2535d83baa09c4e66b0fea988b367049a\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":560,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\"],\"thought\":\"d175915d65975fd5c38cfe008f2279b568ad2f53e054881754f25e00248908b8\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":590,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI\"],\"thought\":\"bdd1af284ecafc47b70555518dceab1479667018290700c83646e4a5d599e5f0\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":520,\"lessons\":[\"5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U\",\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"46c4486e54f95b91d3f2daeef521da1fce1e1c201c28367d12d54f3d376c7987\"}]}",
   "batchHash": "a3bff19dcbe96f28b66c4b5f357864e1d4f2337b87de13351f5918b28ad3c3ac",
   "commitDigest": "BGXqWgq1ZedjLGdcccXaWBr7gQBKZhnddzy4YUZxgNUW",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "BLG",
+    "score": "1-0",
+    "resultDigest": "2Ds8jLsEmTeBWJ8Pynt5CDBXcbnuAsZRnKoodX6cssni"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Told you, Viper and Knight were just better than anyone TLAW could put across from them. The crowd can fade BLG all it wants, the talent gap was the whole story.\n\nJungle: Fine, I trimmed my confidence and BLG still got there, but I'll take the win for tempo. Nobody had to flip on first herald, and Jarvan and Pantheon did what I said they'd do.\n\nMid: Yunara and Lulu were the comfort pair Fearless couldn't strip, and Viper closed it out. Draft first, always, and the region gap showed up right on schedule.\n\nADC: An 8-3 record against other regions versus 2-3 is the split I leaned on, and it held up. Yes, I stayed under 70% because Bo1s are coin flips, but the numbers still won.\n\nSupport: Okay, the better team won, and I won't pretend a lovely locker room beat a veteran core with something to prove. CoreJJ's calm was real, but BLG played loose and together, so I'm happy with my 62%.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Player skill won this series, so keep anchoring on the lane-by-lane gaps (Viper and Knight over their counterparts) and stop pointing at the crowd as if its mood proves or disproves anything. Region only goes in the argument when the scouting report flags a big gap, and I shouldn't tack on an \"LPL over LCS\" line or quote percentages when it doesn't. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+      "blobId": "GT6jrBxx1WtLZ94pMWG1nVkNeleeIsBGPdnGB-VxxBU",
+      "jobId": "8b0f321a-0c7d-40b4-b66b-d59bb4d3922f"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When the scouting report flags a big region gap, I should treat it as a tempo edge and not trim confidence over one recent early-game scare, because the early game is only worth discounting for concrete signals like a jungle pathing mismatch or a weak first-herald setup. I also shouldn't claim a tempo win just because the team won. I should name the checkpoints (first herald, first dragon, first tower by 15) and confirm they actually fell the way I said before crediting my read. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+      "blobId": "WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E",
+      "jobId": "90e7d7ee-5e4a-4c9f-bd77-7f8663ec3277"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: In a Bo1 no earlier games have fearlessly stripped anyone's pool, so \"Fearless can't strip their comfort pair\" isn't an edge. What matters is whether BLG can secure Yunara/Lulu in the first draft rotation, and I should name that and the star-carry matchup as my real draft case. A single win doesn't show the region gap \"showed up on schedule,\" so I'll use a flagged gap as the prior and let draft decide how far I move from it. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+      "blobId": "svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I",
+      "jobId": "c8ae1702-21cc-4c55-98fd-ad434e6ca9ce"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: One Bo1 win doesn't validate a split. An 8-3 vs 2-3 record against other regions is a small sample, so I should size confidence to the sample and not claim \"the numbers won\" because the coin landed my way. I should also lean on region-based records only when the scouting report flags a big region gap, and otherwise decide on head-to-heads, game-length tendencies and series scores. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+      "blobId": "4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs",
+      "jobId": "63dd3ae9-fa63-4711-ab7f-2cef8f6fdc0f"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+      "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+      "jobId": "3d892f9c-d76a-49be-96ba-b1d985cfd22c"
+    }
+  ],
   "scout": "Scout: TLAW vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 22-11, games 57-33 | last 10 (newest first) LWWWWLWWWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · Worlds 2026 0-1 · vs other regions 2-3\n  Last 21 games (15-6): GD@15 +1.0k, FB 52%, FT 76%, FD 62%, dragons 57%, 33.1 min avg, 1st baron 28:24\n  Leads @15 converted 9/9, comeback wins 1, throws 0, objectives taken while 1k+ behind 10\n  Worlds 2026 1 games (0-1): GD@15 +0.1k, FB 0%, FT 100%, FD 0%, dragons 17%, 37.6 min avg\n  Picks: TOP Camille 3, K'Sante 3, Ambessa 2 | JG Pantheon 4, Lee Sin 3, Qiyana 3 | MID Syndra 4, Ahri 3, Orianna 3 | BOT Lucian 4, Ashe 3, Ezreal 3 | SUP Nami 3, Alistar 2, Karma 2\n  Standout: TLAW CoreJJ (support) KDA 7.2 over 21 games, 7% dmg share\nBLG [LPL]: 2026 series 50-13, games 125-53 | last 10 (newest first) LLWWWWWWWL\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 0-1 · vs other regions 8-3\n  Last 21 games (14-7): GD@15 +1.2k, FB 48%, FT 62%, FD 48%, dragons 53%, 32.3 min avg, 1st baron 24:06\n  Leads @15 converted 9/10, comeback wins 0, throws 2, objectives taken while 1k+ behind 5\n  Worlds 2026 1 games (0-1): GD@15 -1.1k, FB 0%, FT 0%, FD 0%, dragons 20%, 38.8 min avg\n  Picks: TOP Camille 4, Jayce 4, Ambessa 3 | JG Jarvan IV 4, Pantheon 4, Naafiri 3 | MID Aurora 3, Orianna 3, Syndra 3 | BOT Yunara 6, Ashe 5, Kalista 3 | SUP Lulu 6, Karma 3, Renata 3\n  Standout: BLGViper (bottom) KDA 6 over 20 games, 31% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\n  - BLG took Elder at 30:54 while down 3.5k vs MKOI (Worlds 2026), lost\nFun facts:\n  * Likely quadra kill: BLGKnight (Locke) at 21:41 (vs AL, LPL 2026)\n  * Likely quadra kill: TLAW Yeon (Jhin) at 27:26 (vs SR, LCS 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 18-7, LEC 13-12, LPL 9-9, LCP 4-6, CBLOL 4-7, LCS 4-11.\n  This matchup is LCS vs LPL: LCS went 0-1 against LPL in 2026; LCS 27% vs LPL 50% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  BLG (LPL): no Worlds titles; lost final 2024.",
   "chain": {
     "network": "mainnet",

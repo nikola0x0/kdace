@@ -1,0 +1,23 @@
+{
+  "series": {
+    "matchId": "115660540726095037",
+    "startTime": "2026-10-25T19:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "completed",
+    "teamA": "MKOI",
+    "teamB": "DK",
+    "winsA": 0,
+    "winsB": 2,
+    "winner": "DK"
+  },
+  "status": "missed",
+  "picks": [],
+  "batch": null,
+  "batchHash": null,
+  "commitDigest": null,
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": []
+}

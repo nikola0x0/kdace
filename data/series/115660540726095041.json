@@ -1,0 +1,23 @@
+{
+  "series": {
+    "matchId": "115660540726095041",
+    "startTime": "2026-10-25T22:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "completed",
+    "teamA": "LYON",
+    "teamB": "GEN",
+    "winsA": 1,
+    "winsB": 2,
+    "winner": "GEN"
+  },
+  "status": "missed",
+  "picks": [],
+  "batch": null,
+  "batchHash": null,
+  "commitDigest": null,
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": []
+}

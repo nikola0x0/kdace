@@ -1,0 +1,179 @@
+{
+  "series": {
+    "matchId": "115660540726095053",
+    "startTime": "2026-10-26T19:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "LOS",
+    "teamB": "TSW",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "TSW",
+      "score": "2-1",
+      "winProbability": 58,
+      "reasoning": "Region is a wash, so this comes down to players, and I trust TSW's jungle-support pair on Lee Sin, Qiyana and Nautilus to turn skill into early leads, with Bie driving it. Duduhh's Kai'Sa is a real carry threat and could drag this to three games, but one bot lane doesn't outweigh the better early-game talent across the map.",
+      "usedLessons": [
+        {
+          "blobId": "yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE",
+          "text": "Top lesson: T1 won because the better players beat the weaker ones, so I keep trusting individual skill over narratives, and I don't need to stack region gaps or team stats to justify a pick. Next time, I'll name the specific player matchups that decide the game (like Keria and Peyz against LOS's bot lane) and push my confidence on those, not on a \"tier above\" blanket claim, since Jungle is right that the tempo fight can still be close. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:07.179402Z"
+        },
+        {
+          "blobId": "Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0",
+          "text": "Top lesson: Individual skill still wins series, but it wins by turning into early leads, so I should check whether the stronger players, especially mid and jungle, have draft pools deep enough to get those leads and keep them. Next time I'll back the skill gap on those specific matchups instead of leaning on the region gap, which only confirms what the players already show. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:03.412634Z"
+        },
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        },
+        {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:15:44.996913Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:17:25.662Z",
+      "thinking": "This looks like a Bo3 elimination match between two 0-2 teams, LOS and TSW, with no significant region gap between them, so I need to weigh the individual player matchups to decide.\n\nI'm uncertain on exact roster details for both sides, but the scouting stats lean TSW: they boast an LCP record of 25-2, three titles, stronger gold differential at 15 minutes, a 64% first blood rate, and excellent lead conversion at 12/13. LOS is comparatively weaker at 12-10 over their last 22 games, pointing toward TSW as the stronger pick on form and early-game execution.\n\nTSW's jungle-mid synergy turns skill into leads, and while both teams lost to tough opponents (TSW to LYON/IG, LOS to T1/G2), I'll lean TSW 2-1 at 58%, keeping the reasoning tight and player-focused without leaning on region talk.",
+      "stake": 450,
+      "scoreStake": 140
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "TSW",
+      "score": "2-1",
+      "winProbability": 57,
+      "reasoning": "Tempo, tempo, tempo: with Lee Sin and Qiyana, TSW's jungle drags the early map into skirmishes, and they turn first blood into towers and dragons far more reliably than LOS do. I've been burned backing TSW's pathing before, so I'm keeping this at a 2-1 and not a sweep. LOS are scrappy, and if Pantheon or Jarvan wins the first Herald and first tower, my read flips and it's their series.",
+      "usedLessons": [
+        {
+          "blobId": "k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU",
+          "text": "Jungle lesson: Early tempo only counts if it's backed by evidence, and I took TSW's jungle pathing as proof they'd control the first 15 minutes while ignoring that a 16-4 home record and a 3-0 MSI loss to LYON show how they actually handle first objectives against this opponent. Next time I'll check who has really won first Drake and Herald fights in head-to-head or international play before I call a team the pace-setter. (from Swiss TSW vs LYON; picked TSW, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:09.213749Z"
+        },
+        {
+          "blobId": "CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8",
+          "text": "Jungle lesson: Tempo still decides games, so I should judge a team's first-15 pressure by what it shows against comparable opposition (jungle priority, first herald, first tower) instead of dismissing it as \"built against CBLOL\" or leaning on region records. I should treat region as a big factor only when the scouting report flags a BIG REGION GAP, and otherwise keep a clear flip trigger like \"LOS take early jungle priority and first herald\" and let the early map decide. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:32.857890Z"
+        },
+        {
+          "blobId": "0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I",
+          "text": "Jungle lesson: Tempo decides the game, so I should build my pick on concrete early-game triggers like first dragon, Herald, first tower and who wins the early skirmishes. That worked here because my flip condition never fired, and I should keep naming those triggers rather than leaning on narratives like head-to-head history, trophy swagger or region reputation. Next time I'll also check whether a team can hold a lead past 15 minutes, since DK's habit of throwing leads nearly cost me. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:12.508485Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:17:20.341Z",
+      "thinking": "Both LOS and TSW are sitting at 0-2 at Worlds 2026, having lost to T1/G2 and LYON/IG respectively, so this looks like an elimination Bo3 match between two struggling teams.\n\nLooking at the early-game numbers, TSW clearly has the edge — better gold diff at 15, higher first blood/tower/dragon rates, and a strong 12/13 conversion rate on leads with their tempo-focused junglers like Lee Sin and Qiyana. Internationally though neither team has looked great, so I'm weighing the lessons about not over-indexing on domestic stats, but TSW's consistent early-game dominance across a large sample size tips me toward picking them 2-1.",
+      "stake": 450,
+      "scoreStake": 140
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "TSW",
+      "score": "2-1",
+      "winProbability": 60,
+      "reasoning": "Fearless is about who gets early tempo from the draft and who can finish with it. TSW's Lee Sin and Qiyana jungle with Nautilus hooks gives them lane priority and a way to close, and they rarely give leads back. LOS's Pantheon and Wukong with the Orianna/Ryze mid pool can steal a game by banning those jungle comfort picks early, and that's how this goes to three. But when the Fearless book burns down, I trust TSW's deeper bench of proven tempo picks.",
+      "usedLessons": [
+        {
+          "blobId": "mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg",
+          "text": "Mid lesson: Pool depth on paper isn't the same as draft leverage; under Fearless, a star's signature comfort picks (POUT's Akali, Viktor, Lucian) can matter more than the number of \"comfortable\" options a team has. Next time I'll check who actually wins the contested picks and whether the opponent's star can be shut out, rather than assuming breadth beats a few high-impact pools. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:25.056615Z"
+        },
+        {
+          "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+          "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:43.551986Z"
+        },
+        {
+          "blobId": "V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc",
+          "text": "Mid lesson: A draft edge is only as good as the early tempo and closing power it creates. Vi/Jarvan winning the first skirmishes mattered as much as the Jayce/Gnar scaling puzzle, so I should check whether a comp gets priority and can finish a lead, not just whether it outscales the opposing star. I should also anchor on draft and pool evidence and leave region out of it unless the scouting report flags a big gap. (from Swiss G2 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-23T22:16:42.820473Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:17:21.030Z",
+      "thinking": "I'm weighing TSW against LOS for this Bo3, comparing their recent form and draft tendencies. TSW looks stronger domestically with a better recent record and gold lead at 15, plus a faster first-blood and first-tower rate, while LOS trails in both results and early-game metrics. I'm also noting TSW's champion pool, particularly their preferred jungle and support picks.\n\nBoth teams went 0-2 in their Swiss groups at Worlds, so this is an elimination match with no major gap in overall region strength -- it's purely a matter of draft execution and tempo, and I'm leaning toward TSW winning 2-1 with around 60% confidence based on their superior conversion of early leads.",
+      "stake": 540,
+      "scoreStake": 160
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "TSW",
+      "score": "2-1",
+      "winProbability": 60,
+      "reasoning": "Both sides walk in 0-2, so this is a survival series, and I'm backing the team that actually builds leads: TSW take first tower in about 77% of their games, while LOS have been a 12-10 coin flip lately. Duduhh's Kai'Sa and LOS's habit of dragging games back from deep holes keep this from being a sweep, but Bie and that early-tempo Nautilus game should get TSW there in three. I'm keeping it modest because region doesn't separate them and 22 games is a thin sample.",
+      "usedLessons": [
+        {
+          "blobId": "YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM",
+          "text": "ADC lesson: A win doesn't validate the reasoning, and \"reigning champion\" is a story, not a number, so I should anchor on measurable inputs like records, head-to-heads, game length and series scores, and only cite the region gap when the scouting report flags it. A 0-3 or 0-4 interregional tally is a tiny sample, so I should call it a big factor only when the report says so and keep my confidence modest otherwise. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:02:32.394299Z"
+        },
+        {
+          "blobId": "WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw",
+          "text": "ADC lesson: Numbers over stories means sizing each number by its sample, and a 1-0 result in a single game doesn't validate the 58%. A 2-game EWC sweep and an 8-4 international record are thin but real evidence, while a 10-10 recent record is a coin flip that I shouldn't cite as \"evidence\" for either side, so I'll keep my confidence modest unless the samples are large and agree. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:03.648704Z"
+        },
+        {
+          "blobId": "MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js",
+          "text": "ADC lesson: A record like \"nine for nine on 15-minute leads\" only tells me what happens after a lead exists, so I should check how often a team actually gets that lead before treating the number as a reason to pick them. Numbers over stories means asking whether a stat applies to the matchup in front of me, and in a coinflip-length best of 1 I should keep confidence near even when the decisive stat is conditional. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:48.015704Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:17:25.552Z",
+      "thinking": "Since this is a Bo3 Swiss match with no significant region gap, I'll skip quoting region percentages and focus on the teams' records. LOS sits at 24-13 in series and 55-38 in games (59%), while TSW is stronger at 26-10 series and 67-34 games (66%); looking at their last 22 games, LOS is 12-10 with a modest gold lead at 15, whereas TSW is 16-6 with a bigger gold lead, higher first-tower rate, and first-blood edge.\n\nTSW also converts leads better (12/13 vs LOS's 7/10) and has fewer throws, though both teams are currently 0-2 at Worlds in what's likely an elimination match. Since the region gap isn't decisive here, I'm leaning on team-level form — TSW's stronger early-game numbers and lead conversion make them the better pick even with both teams struggling internationally.\n\nI'll go with TSW at roughly 60%, favoring a 2-1 scoreline given Bo3 is more reliable than Bo1 and the edge isn't overwhelming. I want to be careful not to over-weight region-level splits here since both teams are weak internationally — this matchup calls more for trusting the head-to-head team data and sample-size caution than broad regional trends.\n\nFor the writeup, I'll keep it to two concrete numbers and a confident tone: TSW grabbing first tower around 77% of the time, and LOS sitting at a mediocre 12-10 recently, framing this as a survival game between two 0-2 teams where TSW's lead-building habits give them the edge.",
+      "stake": 680,
+      "scoreStake": 200
+    },
+    {
+      "player": "analyst-support",
+      "winner": "TSW",
+      "score": "2-1",
+      "winProbability": 57,
+      "reasoning": "Two 0-2 rooms with nothing left to lose, so I'm reading who looks more together: TSW still take first blood and set the early tempo as a unit, and they turn leads into towers cleanly, which is what a trusting room looks like. LOS have a lovely never-say-die streak, but they keep falling behind early at Worlds, and I'd rather back the side that starts well and is still smiling. It could easily go three games, because if TSW toss away a lead, the old doubts could creep back in.",
+      "usedLessons": [
+        {
+          "blobId": "rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI",
+          "text": "Support lesson: I was right that HLE's calm mattered, but I leaned on \"mood\" without checking it against what the team actually did, so next time I'll look for chemistry in concrete signs like coordinated early pressure, turning leads into towers and dragons, and a draft the whole team clearly bought into. I'll also remember that a team's morale tends to show in how cleanly they convert advantages, and I won't treat TES's \"wobbling\" as proof of low morale unless I can point to specific evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:55.914788Z"
+        },
+        {
+          "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+          "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:37.615647Z"
+        },
+        {
+          "blobId": "U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU",
+          "text": "Support lesson: A past result only counts as a locker-room ghost if I can point to present-day signs of it, like shaky comms, roster or coaching changes, or a team that drafts scared, so I should look for those first instead of assuming the memory lingers. LYON's calm, comfort-pick draft was the kind of visible evidence of trust I should lean on, and I should never treat a team's mood as decided before I've seen it. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:06:23.011599Z"
+        },
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T06:17:21.793Z",
+      "thinking": "Both LOS and TSW are sitting at 0-2 in Swiss stage, so this looks like an elimination best-of-3 with both teams desperate and nothing to lose, meaning region gap matters less than morale and motivation here.\n\nLooking at stats, TSW shows cleaner early-game coordination and better lead conversion (12/13), while LOS demonstrates resilience through comebacks despite poor early-game numbers at Worlds (negative gold at 15, low first tower/dragon rates). TSW also carries a history of repeated international disappointments (MSI, First Stand, EWC all losses), which could be a lingering mental burden unless they've clearly shaken it off recently.\n\nI'll lean toward TSW winning, around 58% confidence, likely 2-1.",
+      "stake": 490,
+      "scoreStake": 150
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095053\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":680,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\"],\"thought\":\"d9b1da903231557bf5c4dce087b89249ce481d6e7901a5fc61bdfc6ba96bf5d3\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":450,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\"],\"thought\":\"dfd6a9fe2a3473df159a63116ae7a64d762fc63a02f8fc6dcb193509288544c1\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":160},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":540,\"lessons\":[\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"c5762decfcbca755333fa7506f9d2a77e0cee97f56fc245fcba29ca5733e64d8\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":150},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":490,\"lessons\":[\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI\"],\"thought\":\"db178984eb7c54be26bea51e5a87e3763cc2664a33f0b1b7b21e2547c3b30fc5\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":450,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"11f6ce973530062dfa62374f0e937d5f8bf3506e56af0da8da47670525772453\"}]}",
+  "batchHash": "b0a375f892dbfd42b4fbbb84e2cf17e44eb2f9b7191351c4e9c699ed51548e93",
+  "commitDigest": "BbXqfu5HwV8LGqMMW5Et9cJFJndCy8PPPVj8R5hwRKKt",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: LOS vs TSW (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLOS [CBLOL]: 2026 series 24-13, games 55-38 | last 10 (newest first) LLWWWWLWWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · Worlds 2026 0-2 · vs other regions 1-4\n  Last 22 games (12-10): GD@15 +0.6k, FB 45%, FT 64%, FD 36%, dragons 46%, 32.4 min avg, 1st baron 27:24\n  Leads @15 converted 7/10, comeback wins 2, throws 0, objectives taken while 1k+ behind 12\n  Worlds 2026 2 games (0-2): GD@15 -1.5k, FB 50%, FT 0%, FD 0%, dragons 11%, 31.8 min avg\n  Picks: TOP Gnar 3, Jayce 3, Rumble 3 | JG Pantheon 6, Wukong 4, Jarvan IV 3 | MID Orianna 4, Ryze 4, Cassiopeia 2 | BOT Sivir 3, Ashe 2, Kai'Sa 2 | SUP Alistar 3, Bard 2, Karma 2\n  Standout: LOS Ackerman (support) KDA 5.2 over 22 games, 8% dmg share\nTSW [LCP]: 2026 series 26-10, games 67-34 | last 10 (newest first) LLWWWLWWWL\n  LCP 2026 25-2 (3 titles) · First Stand 2026 0-2 · MSI 2026 1-2 · EWC 2026 0-2 · Worlds 2026 0-2 · vs other regions 1-8\n  Last 22 games (16-6): GD@15 +1.4k, FB 64%, FT 77%, FD 55%, dragons 57%, 31.3 min avg, 1st baron 27:36\n  Leads @15 converted 12/13, comeback wins 2, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 2 games (0-2): GD@15 -0.1k, FB 100%, FT 0%, FD 50%, dragons 29%, 29.4 min avg\n  Picks: TOP Galio 3, Gnar 3, Urgot 3 | JG Lee Sin 5, Qiyana 5, Jarvan IV 3 | MID Locke 3, Ryze 3, Ahri 2 | BOT Ezreal 4, Yunara 4, Caitlyn 3 | SUP Nautilus 5, Alistar 3, Bard 2\n  Standout: TSW Bie (support) KDA 5.3 over 22 games, 7% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -5.1k at 28:00 vs FUR (CBLOL 2026)\n  - TSW came back from -6.5k at 30:00 vs CFO (LCP 2026)\n  - TSW threw a +4.8k lead (20:00) vs GAM (LCP 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 21-8, LPL 13-9, LEC 15-15, LCS 6-13, CBLOL 4-9, LCP 4-9.\n  This matchup is CBLOL vs LCP: CBLOL went 0-2 against LCP in 2026; CBLOL 31% vs LCP 31% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LOS (CBLOL): no Worlds titles or finals before 2026.\n  TSW (LCP): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
