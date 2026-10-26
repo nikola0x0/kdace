@@ -9,7 +9,9 @@ import { analystStats, art, lessonText, records, teamLogos, titleCallsOf, walrus
 import { loadRecords } from "../../../lib/data";
 import { Axp, RoleIcon, TeamLogo } from "../../ui/bits";
 
-export const generateStaticParams = () => PERSONAS.map((p) => ({ role: p.role }));
+// Rendered per request: records are read live (Supabase), so these pages are never prebuilt.
+export const dynamic = "force-dynamic";
+
 
 export default async function AnalystPage({ params }: { params: Promise<{ role: string }> }) {
   await loadRecords();

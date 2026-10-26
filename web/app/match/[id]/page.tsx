@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { persona, shortName } from "../../../lib/personas";
 import { art, callsOf, cardFor, lessonText, records, schedule, suiscan, verifyInput, walruscan } from "../../../lib/site";
-import { loadRecords, supabaseMode } from "../../../lib/data";
+import { loadRecords } from "../../../lib/data";
 import VerifyButton from "../../ui/VerifyButton";
 import { Avatar, RoleIcon, TeamLogo } from "../../ui/bits";
 import DitherArt from "../../ui/DitherArt";
@@ -14,11 +14,9 @@ import LocalTime from "../../ui/LocalTime";
 import MatchActivity from "../../ui/MatchActivity";
 import MatchCard from "../../ui/MatchCard";
 
-export async function generateStaticParams() {
-  if (supabaseMode()) return []; // rendered per request from Supabase
-  const ids = new Set([...records().map((r) => r.series.matchId), ...(await schedule()).filter((s) => s.teamA !== "TBD").map((s) => s.matchId)]);
-  return [...ids].map((id) => ({ id }));
-}
+// Rendered per request: records are read live (Supabase), so these pages are never prebuilt.
+export const dynamic = "force-dynamic";
+
 
 const pill = "inline-flex h-9 items-center rounded-full border border-input px-3.5 text-sm text-muted-foreground transition-colors hover:border-neutral-500 hover:text-foreground";
 
