@@ -169,7 +169,9 @@ export async function runOnce(deps: RunnerDeps, holder: string): Promise<RunRepo
         const outcome = await deps.stages[stage]({ schedule: view.schedule, remainingMs, now: deps.now });
         entry.outcome = outcome;
         next = outcome.retryInMs !== undefined ? outcome.retryInMs : outcome.progressed ? null : BACKOFF_MS[stage];
-        note = outcome.progressed ? "progressed" : "no progress";
+        // What happened, kept in runner_state: function logs on the free plan don't last long enough to diagnose later.
+        note = (outcome.progressed ? "progressed" : `no progress (${reason})`) + (outcome.detail !== undefined ? `: ${JSON.stringify(outcome.detail)}` : "");
+        note = note.slice(0, 500);
         for (const key of outcome.touch ?? []) await deps.db.writeState(key, { nextAt: null, lastAt: t0.toISOString(), note: `by ${stage}` }).catch(() => {});
       } catch (e) {
         entry.error = (e as Error).message;
