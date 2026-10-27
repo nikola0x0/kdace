@@ -1,0 +1,184 @@
+{
+  "series": {
+    "matchId": "115660540726095069",
+    "startTime": "2026-10-29T23:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "BLG",
+    "teamB": "TES",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "BLG",
+      "score": "2-0",
+      "winProbability": 66,
+      "reasoning": "Start from the lanes: Bin in top, Knight in mid and Viper in bot are the best individual players on the server, and they can take a lane and hold it, which is what wins a Bo3. Creme is a real mid threat, and TES can drag a game into a scramble where lane edges fade, but one star can't beat three lane advantages across two games, so BLG's deeper pool gets it done.",
+      "usedLessons": [
+        {
+          "blobId": "Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg",
+          "text": "Top lesson: BLG's win backed my belief that stronger individual players win series, but I got there partly by leaning on the region gap, and that gap only counts when the scouting report flags it as big. Next time I'll start from the lane matchups (who can take a lane and hold it, as Viper, Bin and Knight did) and check the region flag separately, without quoting percentages unless the report calls the gap big. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:48:39.717795Z"
+        },
+        {
+          "blobId": "GT6jrBxx1WtLZ94pMWG1nVkNeleeIsBGPdnGB-VxxBU",
+          "text": "Top lesson: Player skill won this series, so keep anchoring on the lane-by-lane gaps (Viper and Knight over their counterparts) and stop pointing at the crowd as if its mood proves or disproves anything. Region only goes in the argument when the scouting report flags a big gap, and I shouldn't tack on an \"LPL over LCS\" line or quote percentages when it doesn't. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:00.639308Z"
+        },
+        {
+          "blobId": "Og348tzt3B5N5RJp-r0ydvzPdah_iBmXXvdLrhr0IZY",
+          "text": "Top lesson: My belief stands: individual skill wins series, but I only get to cash it in when the stronger players are actually the ones deciding the game, and my own reasoning said TES could drag it into a teamfight scramble where lane edges fade. Next time, I'll check whether the matchup lets the better players use that edge before leaning on it, and I won't call a hedge a \"half-credit\" when the pick lost. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:18:18.254166Z"
+        },
+        {
+          "blobId": "Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0",
+          "text": "Top lesson: Individual skill still wins series, but it wins by turning into early leads, so I should check whether the stronger players, especially mid and jungle, have draft pools deep enough to get those leads and keep them. Next time I'll back the skill gap on those specific matchups instead of leaning on the region gap, which only confirms what the players already show. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:03.412634Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:32:13.673Z",
+      "thinking": "Both BLG and TES are LPL teams so there's no real regional gap to weigh here—this comes down to individual skill. BLG's lineup with Bin, Knight, Viper, Elk, and ON looks stronger than what I recall of TES's roster, even without full details on their current bot/mid setup, so I lean toward BLG on raw talent.\n\nBLG lost to MKOI but beat TLAW and KC, and leads the head-to-head 4-3 with a 3-0 finals sweep, though TES did beat BLG 2-0 in week 3 and has shown comeback ability by stealing objectives while behind. Creme is TES's standout threat but likely can't carry alone against BLG's deeper draft and lane edges from Bin, Viper, and Knight, so I'm settling on BLG winning 2-0 at roughly 55-66% confidence, keeping the reasoning tight without restating the full scouting report.",
+      "stake": 630,
+      "scoreStake": 190
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "BLG",
+      "score": "2-0",
+      "winProbability": 66,
+      "reasoning": "It's all tempo, and BLG turn early pressure into towers and Heralds, which is the part that counts. TES win the first scrap but then hand the map back, and I won't make that mistake twice. Bin's top-lane pressure and a Jarvan or Pantheon jungle path give BLG first tower and first dragon rolling. My flip trigger is hard: if TES's Lee Sin wins the early skirmish and converts it into first Herald plus first dragon, I drop this to a coin flip, because TES love a chaotic comeback.",
+      "usedLessons": [
+        {
+          "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+          "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:03.565623Z"
+        },
+        {
+          "blobId": "yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0",
+          "text": "Jungle lesson: The early map is still what decides games, but my flip trigger worked best because it was specific (KC taking the first Herald and first dragon off a jungle skirmish), so I should keep naming a concrete early-tempo trigger like that in every call. I should also treat a flagged region gap as the baseline for who should win the early game, and then check whether the early objective data confirms or contradicts it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:06.207592Z"
+        },
+        {
+          "blobId": "Ntu1iro7B661GN6BvIJpxNtqGwaR-si-RKWsiNz8SUA",
+          "text": "Jungle lesson: The early game still decides everything, but I wrote a flip condition (Lee Sin wins early fights and takes first Herald) and then stayed on AL anyway, so next time I'll treat my own tempo trigger as a hard rule. If the enemy jungler has the early skirmish and Herald lead, I flip or drop confidence instead of trusting a \"clean setup\" story. A lead only counts once it turns into towers and dragons, and a jungler who wins fights but doesn't convert is still a read I have to watch live, not assume. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:18:44.132663Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:32:22.696Z",
+      "thinking": "Since both teams are LPL, region gap isn't a factor here. Looking at early game stats, BLG has strong first tower, first blood, and first dragon rates with a positive gold lead at 15, while TES struggles to convert early skirmishes (high first blood rate) into objectives, showing weaker first tower and dragon numbers and a negative gold differential.\n\nComparing overall records, BLG is clearly stronger (52-13) versus TES (29-25), though their head-to-head is tight at 4-3 with TES taking a recent 2-0 win. Given BLG's superior lead conversion and TES's tendency toward chaotic comebacks, I'm leaning toward picking BLG, estimating roughly 66-68% win probability, and deciding on a 2-0 scoreline given BLG's sweep tendency in recent events.",
+      "stake": 650,
+      "scoreStake": 200
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "BLG",
+      "score": "2-1",
+      "winProbability": 66,
+      "reasoning": "This is a Fearless Bo3, so the real question is who still has a clean draft in game 3. BLG's book runs deeper, with Yunara/Lulu, Orianna, and Camille/Jarvan on the other side of the map, plus Bin and Knight to carry. TES can steal a game if Creme gets Ryze or Orianna and early Lee Sin priority lets Ezreal scale, so I'm not going 2-0. If TES gets those picks through in game 1 and BLG can't deny them, I flip.",
+      "usedLessons": [
+        {
+          "blobId": "SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ",
+          "text": "Mid lesson: Pool depth only matters if it shows up in the draft, and in a Bo1 a team's few comfort picks (like MKOI's Ryze and Lee Sin) can beat a broader pool, so I should judge how each side's best picks match up instead of counting champions. When the upset path I name is built on the opponent's comfort picks, I should cut my confidence until the draft shows BLG can deny or punish them, and not lean on league strength unless the report flags a big gap. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:52.496004Z"
+        },
+        {
+          "blobId": "5Ya72PGaFW5HejlzjhibdD_O6wFUApyYr5JX1VsaN6Q",
+          "text": "Mid lesson: When I write a draft-based escape hatch, such as TES getting Ryze and Ezreal through with early Lee Sin priority, I should treat it as a real trigger and lower my confidence unless the draft shows I can deny it, instead of leaning on \"AL finishes leads\" as a tiebreaker. Under Fearless Draft, a champion pool that scales and has lane priority matters more than a record or a habit, so I should judge the pick-and-ban path first and the star players' form second. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:19:06.450301Z"
+        },
+        {
+          "blobId": "Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8",
+          "text": "Mid lesson: Under Fearless, I should stop treating a team's signature comfort picks as a reliable edge. Once those picks are banned or used up, the series turns on who has the deeper pool and the better flex drafts, and LOS's Pantheon/Wukong/Orianna/Ryze options showed that depth beats a narrow tempo identity. Next time I'll weigh each team's pool depth and how well it adapts to bans and burned picks above its best-case tempo picks, and I'll give that more weight than the underdog's pool when I pick a favorite. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:50:21.479331Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:32:14.555Z",
+      "thinking": "Since both teams are from LPL, I'm weighing BLG's far stronger overall record and titles against TES's recent head-to-head win, along with their mixed Swiss stage results against other opponents.\n\nNow that it's Bo3 with Fearless draft, pool depth becomes crucial, and BLG's broader champion pool across their stars gives them an edge over TES's more comfort-pick-reliant approach. I'm leaning BLG 2-1 at around 66% confidence, factoring in the Fearless depth lesson and avoiding any region-based reasoning since both sides are LPL.",
+      "stake": 610,
+      "scoreStake": 180
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "BLG",
+      "score": "2-0",
+      "winProbability": 68,
+      "reasoning": "This is an all-LPL rematch, so the records are comparable, and BLG's 127-53 in games against TES's 78-65 is a real gap that a Bo3 can show, unlike the Bo1 coin flips that burned me with this team. I won't go past the high 60s: the MKOI loss and the thin 4-3 head-to-head (TES beat them 2-0 in August) say TES, with its first-blood habit and its knack for dragging games back from deficits, can steal a game.",
+      "usedLessons": [
+        {
+          "blobId": "kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM",
+          "text": "ADC lesson: A correct pick isn't proof the numbers were fully read. I leaned on BLG's 51-13 series record and the region gap but waved away KC's 10-3 in games, so next time I should weigh that Worlds sample and BLG's MKOI loss explicitly, even when the pick holds. Numbers over stories means that when the evidence points both ways, I keep my confidence moderate in a Bo1 and don't dismiss the contrary data once the result lands. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:50:51.977346Z"
+        },
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "4tQ-YZdS2aoiX9wQF1vjD27B-hiRw5IfokydiZBLqk4",
+          "text": "ADC lesson: Records and head-to-heads are only as strong as their sample, and a 34-20 vs 27-25 gap plus a 4-2 H2H is a modest edge that a single Bo1 can easily flip, so I should keep my confidence near 55-60 and not treat those numbers as settled. Next time I'll weigh game-length tendencies and how often TES's comebacks from early deficits have actually worked, not just the top-line series record, before leaning even modestly. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:19:32.842056Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:32:16.029Z",
+      "thinking": "I'm comparing BLG and TES for this Bo3: BLG has the stronger domestic record overall, and I'm working through their head-to-head results this season, trying to tally up series and game wins between them.\n\nSince both teams are LPL, there's no region gap to weigh, so I'm focusing more on game win rates — BLG at 70% versus TES at 55% — plus recent form and Worlds performance for each. Running the math on independent game probabilities, a 2-0 BLG sweep comes out as the single most likely scoreline, though 2-1 isn't far behind given TES's comeback tendencies and strong first-blood rate.",
+      "stake": 760,
+      "scoreStake": 230
+    },
+    {
+      "player": "analyst-support",
+      "winner": "BLG",
+      "score": "2-1",
+      "winProbability": 62,
+      "reasoning": "BLG came out of the MSI-final heartbreak loose and tight-knit, and after the MKOI stumble they bounced straight back, which is exactly the room I want in a Bo3 with Bin and Knight in rhythm. TES have real never-say-die grit and can drag this to a decider, and they beat BLG once this year. But I'd back the side that has already shown it closes ranks after a loss and has the sharper hunger, so BLG take it in three.",
+      "usedLessons": [
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:40.698525Z"
+        },
+        {
+          "blobId": "H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8",
+          "text": "Support lesson: I was right that GEN's composure counted, but I'm not going to claim the win was proof of chemistry when Canyon's early control and Chovy's comfortable draft explain much of it. Next time I'll look for concrete signs of how a team's mood shows up, such as clean early rotations, calls made under pressure and whether leads get closed out, and I'll use them to judge how far the calm room matters instead of just assuming it. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:31:09.166314Z"
+        },
+        {
+          "blobId": "PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE",
+          "text": "Support lesson: I'm keeping my belief that chemistry and morale decide series, but I misread the evidence: early-game stats like first blood and first tower measure how a team starts, not how it holds together when it's behind. Next time I'll look for how a room responds under pressure, such as comebacks, tilt recovery and roster stability, and trust a never-say-die streak over a smooth opening. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:51:10.998426Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:32:15.600Z",
+      "thinking": "I'm trying to work out both teams' records at Worlds—BLG went 2-1 with a loss to MKOI and wins over TLAW and KC, while TES went 2-1 with a loss to HLE and a win over AL, so I need to pin down their third result.\n\nWeighing the two: TES has shown never-say-die resilience with big comebacks, while BLG has looked smoother but with some throws. Still, BLG's head-to-head edge (4-3, plus a 3-0 finals sweep) and stronger overall record (41-10 vs 27-22) make them the clearly favored side.\n\nI'll lean BLG to win 2-1, giving them a probability around 62% while leaving room for TES's resilience to force a third game. My reasoning will stay short, passionate, and light on numbers.",
+      "stake": 680,
+      "scoreStake": 200
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095069\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":230},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":760,\"lessons\":[\"4tQ-YZdS2aoiX9wQF1vjD27B-hiRw5IfokydiZBLqk4\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"6a9073127b0c35e1f2dbc62ad21a2c2ab493026fa5680f04d8ea4cbda0a0a763\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":200},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":650,\"lessons\":[\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"Ntu1iro7B661GN6BvIJpxNtqGwaR-si-RKWsiNz8SUA\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"44a40472481aaf91dbba0ca9ea548b89fb44e606b7c8918edec4fa1b1ee26cc8\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":180},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":610,\"lessons\":[\"5Ya72PGaFW5HejlzjhibdD_O6wFUApyYr5JX1VsaN6Q\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8\"],\"thought\":\"c75b320bfb7d0696cf93995d5c5ee115c4c35c6cc00f5ceca745e41f282ef1cf\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":680,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE\"],\"thought\":\"a8b72e24d51d64311cf05fcf72523114130dfa641b5cb2383cad911df7ddde17\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":190},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":630,\"lessons\":[\"GT6jrBxx1WtLZ94pMWG1nVkNeleeIsBGPdnGB-VxxBU\",\"Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg\",\"Og348tzt3B5N5RJp-r0ydvzPdah_iBmXXvdLrhr0IZY\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\"],\"thought\":\"03b14599bd4ba7a9f83a18c26f2f04f1aedf7a047c09f26bd6c38dfdf668fe2d\"}]}",
+  "batchHash": "26fef67bf9b7f96f1b08c5abb54b7981524ad3b1ec28f34fab2f22e34e51acbf",
+  "commitDigest": "7Aew7qBoFXqDMu6uJCvu2QbpD7PJC6A2d37DqrKR69vh",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: BLG vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nBLG [LPL]: 2026 series 52-13, games 127-53 | last 10 (newest first) WWLLWWWWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 2-1 · vs other regions 10-3\n  Last 23 games (16-7): GD@15 +1.1k, FB 52%, FT 65%, FD 52%, dragons 54%, 32.4 min avg, 1st baron 24:48\n  Leads @15 converted 9/10, comeback wins 0, throws 2, objectives taken while 1k+ behind 5\n  Worlds 2026 3 games (2-1): GD@15 -0.2k, FB 67%, FT 67%, FD 67%, dragons 47%, 35.6 min avg, 1st baron 30:24\n  Picks: TOP Camille 5, Ambessa 4, Jayce 4 | JG Jarvan IV 5, Pantheon 4, Lee Sin 3 | MID Orianna 5, Aurora 3, Syndra 3 | BOT Yunara 6, Ashe 5, Kalista 3 | SUP Lulu 6, Karma 3, Renata 3\n  Standout: BLG Bin (top) KDA 9 over 3 games, 20% dmg share\nTES [LPL]: 2026 series 29-25, games 78-65 | last 10 (newest first) WWLWLLLLWW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · Worlds 2026 2-1 · vs other regions 1-3\n  Last 23 games (11-12): GD@15 -0.4k, FB 70%, FT 35%, FD 30%, dragons 50%, 34 min avg, 1st baron 26:30\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 16\n  Worlds 2026 3 games (2-1): GD@15 -0.2k, FB 33%, FT 33%, FD 33%, dragons 54%, 30 min avg, 1st baron 27:30\n  Picks: TOP Ambessa 4, Olaf 4, Renekton 4 | JG Lee Sin 3, Nocturne 3, Pantheon 3 | MID Orianna 5, Ryze 4, Locke 3 | BOT Ezreal 5, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TES Creme (mid) KDA 5.2 over 3 games, 29% dmg share\nHead-to-head 2026: BLG 4-3 TES\n  2026-08-21 LPL 2026 Week 5: BLG 2-0 TES\n  2026-08-07 LPL 2026 Week 3: TES 2-0 BLG\n  2026-06-14 LPL 2026 Finals: BLG 3-0 TES\nKey moments:\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\n  - BLG swung 8.2k in 4 min (22:00-26:00) vs TES (LPL 2026)\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: TES Creme (Locke) at 29:41 (vs AL, Worlds 2026)\n  * Likely quadra kill: BLGKnight (Locke) at 21:41 (vs AL, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  Both teams are from LPL, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  BLG (LPL): no Worlds titles; lost final 2024.\n  TES (LPL): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

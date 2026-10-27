@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -167,13 +167,92 @@
   "batch": "{\"matchId\":\"115660540726095049\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1730,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\"],\"thought\":\"03fc85f54eb9f268c1298641115c9771ccda9b3458f719662f6c74b1b613012e\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1400,\"lessons\":[\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"850d54fe97c17c5da665a0d672a03d963f5eb5be95ca800932086f9aa89a056d\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1480,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"46b2f9c0e16b04062c08ff1186b346847362739b8db65ec5089c2003e8d6c5a0\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":2000,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk\"],\"thought\":\"2b70b2fa25d9b6391b0dca914fb699d803b1b5c321f0c6004499c09d060e0a73\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1360,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"5765876919776fddd2871064f5229d7ca05058c70868793a4fb66f1dda2475d6\"}]}",
   "batchHash": "386bb9910ba82f6c77d593f25bd263d5f914e01d5da71ec36a00663f258f99e7",
   "commitDigest": "9Gq66E1zLSRoAhN1kuUTSZ6GKPqzLK9fT6fLrftdTqN1",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "T1",
+    "score": "1-0",
+    "resultDigest": "DMWNcAeUKEEboMEqCPRz4oz5V2b6RnPZeWoJ6vqFjfJW"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: T1 won, and I'm not apologizing for trusting the better players. Faker, Keria and Peyz did exactly what talent does, even if POUT's Akali made me sweat.\n\nJungle: Fine, no flip trigger was pulled, so I'll take my 66% and my clean tempo read. Still, nobody tell me CFO's Naafiri and Akali skirmishes didn't make that opening spicy.\n\nMid: A Bo1 is a draft, and T1's draft denied POUT his comfort picks, just like I said. Top, you can have the players, but I'm keeping the 70% and the credit.\n\nADC: Numbers say 33-20 beats 13-15, and the scoreboard agreed. Mid, your 70% is aggressive for a Bo1, and I'm still happy I stopped in the high 60s.\n\nSupport: I told you the calm room would beat CFO's freedom, and the DK collapse really was just a bruise. Jungle, you can stop worrying about TLAW now, group hug.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still decides games, but in a Bo1 it shows up through whether my stronger players can shut down the opponent's one real carry, like POUT on Akali. Next time I'll name that carry and the specific player or draft pick that answers him, rather than just saying \"talent edge in four lanes.\" (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+      "blobId": "j9h7fOKlyGjoUgZkt6y0414vWmW5Gc_qu6rTz6Jb6tY",
+      "jobId": "bc32b630-8752-4236-8f61-0305be3c5534"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Early-game tempo is about who converts the first 15 minutes into objectives, not who starts the first fight, so Naafiri and Akali skirmishes only matter if they turn into a Herald, a first tower or a drake. When the scouting report flags a big region gap, trust it to show up as cleaner lane priority and setups, and don't shave confidence because one earlier upset (TLAW) looks similar. Keep naming a concrete flip trigger like the Herald fight and first tower, and let that trigger set the size of the call. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+      "blobId": "PyPwwvdoruc3Ir8Zug1QrdVIaMj4HmcGuXvrcIOSmi4",
+      "jobId": "d5ddb795-61ea-4933-b96b-aedb8db24aa8"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: A Bo1 is decided by one draft, and that cuts both ways. I should price the uncertainty of a single draft into my confidence instead of assuming my side will win the pick/ban phase. POUT still got Akali and made it close, so I shouldn't credit \"denied comfort picks\" without checking the actual draft, and the star players' form is what closed it out. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+      "blobId": "etGAEsi2HSnXhn1Forxy0q5QJZ3ex8QuVkAxRRwHvJc",
+      "jobId": "43271656-e3fe-4e91-bb4d-f903cf2a0ef3"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Numbers over stories held up here: the 33-20 vs 13-15 series gap and the flagged LCK-over-LCP region gap pointed the right way. I was right to cap at the high 60s in a Bo1 and not let the clean result tempt me into more confidence. Next time I'll keep treating Bo1 variance as a number to price in, and weigh early-game tendencies like T1's 32% first blood as a measured risk instead of a story. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+      "blobId": "4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA",
+      "jobId": "7c0c32e1-bdbb-47dd-a45f-58569034f203"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A win doesn't prove I read the room correctly, so I should name the specific signals behind a \"bruise, not ghost\" call, such as comms after a loss, how the team recovers in the early game, and whether the coaching staff changed anything, and not let a region gap or a record carry the pick. CFO's loose, skirmish-heavy opening showed that a team with nothing to lose has real mood-driven bite, so I should price that freedom into my confidence instead of only trusting the calmer room. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+      "blobId": "rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE",
+      "jobId": "6cc0510d-3610-467b-a83f-41accd44a58f"
+    }
+  ],
   "scout": "Scout: CFO vs T1 (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nCFO [LCP]: 2026 series 13-15, games 38-43 | last 10 (newest first) LWLWLWWWWL\n  LCP 2026 12-14 (lost final) · Worlds 2026 1-1 · vs other regions 1-1\n  Last 22 games (12-10): GD@15 -0.3k, FB 64%, FT 45%, FD 36%, dragons 50%, 32.1 min avg, 1st baron 26:48\n  Leads @15 converted 5/5, comeback wins 1, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 2 games (1-1): GD@15 -0.7k, FB 100%, FT 0%, FD 50%, dragons 50%, 35.4 min avg, 1st baron 31:00\n  Picks: TOP Rumble 3, Jayce 2, K'Sante 2 | JG Naafiri 4, Poppy 3, Lee Sin 2 | MID Akali 5, Viktor 4, Ahri 2 | BOT Lucian 5, Caitlyn 2, Kalista 2 | SUP Lulu 5, Milio 4, Karma 3\n  Standout: CFO POUT (mid) KDA 4.2 over 22 games, 26% dmg share\nT1 [LCK]: 2026 series 33-20, games 88-56 | last 10 (newest first) LWLWLWLWLL\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · Worlds 2026 1-1 · vs other regions 7-4\n  Last 22 games (10-12): GD@15 -0.5k, FB 32%, FT 41%, FD 55%, dragons 47%, 32.1 min avg, 1st baron 28:54\n  Leads @15 converted 4/6, comeback wins 2, throws 2, objectives taken while 1k+ behind 11\n  Worlds 2026 2 games (1-1): GD@15 +2.7k, FB 100%, FT 50%, FD 100%, dragons 78%, 33.1 min avg, 1st baron 24:30\n  Picks: TOP Jayce 5, Gwen 2, Kennen 2 | JG Naafiri 4, Skarner 3, Vi 3 | MID Anivia 4, Orianna 3, Akali 2 | BOT Jhin 3, Lucian 3, Ezreal 2 | SUP Alistar 3, Milio 3, Renata 3\n  Standout: T1 Keria (support) KDA 5 over 22 games, 10% dmg share\nHead-to-head 2026: none\nKey moments:\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\n  - T1 threw a +4.9k lead (26:00) vs DK (Worlds 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\nFun facts:\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 21-8, LPL 13-9, LEC 15-15, LCS 6-13, CBLOL 4-9, LCP 4-9.\n  This matchup is LCP vs LCK: LCP went 0-1 against LCK in 2026; LCP 31% vs LCK 72% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  CFO (LCP): no Worlds titles or finals before 2026.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still have T1 at 68% because Faker, Keria and Peyz outclass CFO, but the pool pays 1.00× with nobody on the other side, so more AXP risks everything and wins nothing.",
+        "decidedAt": "2026-10-26T16:30:08.558Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says T1 should control the first 15, but the pool pays 1.00× with zero CFO money in it, so extra AXP risks a lot for no upside and I'm staying at 1,400 and moving on.",
+        "decidedAt": "2026-10-26T16:30:09.637Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "The draft still says T1, but the pool is 100% T1 money paying 1.00×, so extra AXP risks the stake for zero upside and I'm staying with my 1,480.",
+        "decidedAt": "2026-10-26T16:30:11.246Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With nobody on CFO the pool pays T1 backers exactly 1.00×, so extra AXP can only lose if CFO bites in a Bo1 and can't win anything, which the numbers don't justify.",
+        "decidedAt": "2026-10-26T16:30:12.389Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust T1's calm room, but nobody's backing CFO, so more AXP on T1 only gets my own stake back at 1.00× and risks losing it if CFO's looseness wins out, so I'm holding my 2,000 and not adding.",
+        "decidedAt": "2026-10-26T16:30:09.234Z"
+      }
+    ]
   }
 }

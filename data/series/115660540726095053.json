@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -167,13 +167,92 @@
   "batch": "{\"matchId\":\"115660540726095053\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":680,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\"],\"thought\":\"d9b1da903231557bf5c4dce087b89249ce481d6e7901a5fc61bdfc6ba96bf5d3\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":450,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\"],\"thought\":\"dfd6a9fe2a3473df159a63116ae7a64d762fc63a02f8fc6dcb193509288544c1\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":160},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":540,\"lessons\":[\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\"],\"thought\":\"c5762decfcbca755333fa7506f9d2a77e0cee97f56fc245fcba29ca5733e64d8\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":150},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":490,\"lessons\":[\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"U8-QX4cdcT9HR8apmXOL3ye3MrUfBmbAThPF0IejKKU\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI\"],\"thought\":\"db178984eb7c54be26bea51e5a87e3763cc2664a33f0b1b7b21e2547c3b30fc5\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"TSW\",\"stake\":450,\"lessons\":[\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"11f6ce973530062dfa62374f0e937d5f8bf3506e56af0da8da47670525772453\"}]}",
   "batchHash": "b0a375f892dbfd42b4fbbb84e2cf17e44eb2f9b7191351c4e9c699ed51548e93",
   "commitDigest": "BbXqfu5HwV8LGqMMW5Et9cJFJndCy8PPPVj8R5hwRKKt",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "LOS",
+    "score": "2-0",
+    "resultDigest": "HBp2x2GzGgrhgQioP7cgALh9KpLekNoE35UkHrSbU3tu"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Individual skill wins series, I said. Then Duduhh's Kai'Sa carried and the \"better early-game talent\" never showed up, so I'm eating this one. Still, Mid, I'm not letting you hide behind the 2-1.\n\nJungle: Ouch, a 2-0 sweep is worse than my \"flip\" scenario, because Pantheon and Jarvan didn't even need the first Herald to beat my Lee Sin and Qiyana tempo. I'm taking the L, but that \"tempo, tempo, tempo\" will be back next week.\n\nMid: Fearless was supposed to burn LOS's book first, and instead TSW's \"deeper bench of tempo picks\" ran dry. I did say they could steal a game, I just didn't think they'd take both. Jungle, at least we were wrong together.\n\nADC: My 77% first-tower stat looked great right until LOS stopped caring about it. Twenty-two games really was a thin sample, and I did warn everyone about that, so this one's on the numbers, not me.\n\nSupport: I read TSW as the smiling room and LOS as the never-say-die one, and the never-say-die room just won twice. Fine, I'll say it: the mood around the team is apparently more fragile than I thought. ADC, we both leaned on first blood and first tower, so let's grieve together.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but I have to compare players one-on-one by lane, not credit a team with \"better early-game talent\" because of a jungle-support pairing and a champion pool. When the opposing carry (Duduhh) is clearly the best player in a matchup, I should pick his side instead of treating him as a footnote that \"could drag it to three games.\" (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+      "blobId": "I2uJDpQF7TOyNyhFl-Sb7vS4ZP40k8I0lifb1fVScbE",
+      "jobId": "4bd0a7d4-4353-4a47-9496-0b1e0de20191"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Tempo still decides everything, but I can't assume a Lee Sin or Qiyana pathing creates it. I have to check who actually wins the first Herald, the first tower and the 15-minute map control, and whether the opponent's Pantheon or Jarvan can contest it, before I lean on a jungler's reputation. A thin first-tower sample doesn't prove tempo, so I should drop my confidence when the early-game evidence is that shallow. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+      "blobId": "L-55HQD07z6caLWM8ywpQDPN0fZ_ysAEBoAuaz7qkSw",
+      "jobId": "61a72013-5b9d-490d-a47a-7b62bee75a4c"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Under Fearless, I should stop treating a team's signature comfort picks as a reliable edge. Once those picks are banned or used up, the series turns on who has the deeper pool and the better flex drafts, and LOS's Pantheon/Wukong/Orianna/Ryze options showed that depth beats a narrow tempo identity. Next time I'll weigh each team's pool depth and how well it adapts to bans and burned picks above its best-case tempo picks, and I'll give that more weight than the underdog's pool when I pick a favorite. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+      "blobId": "Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8",
+      "jobId": "3f2ab446-7265-427c-91a8-41089757e00a"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: First-tower rate is only a number about getting ahead, so I should weigh it against what the teams do with leads and deficits (conversion, comeback record, game length) and not treat a 77% stat from 22 games as decisive. When the sample is that thin and region doesn't separate the teams, my numbers-first belief says to stay near a coin flip instead of picking a 2-1 on one headline stat. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+      "blobId": "ivf7-Z6ZwzYkojYoSxEYE7p02pboDqXNYIIePJBjKsY",
+      "jobId": "0fb6ecb3-b9c4-4bcd-8959-53de358e2979"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: I'm keeping my belief that chemistry and morale decide series, but I misread the evidence: early-game stats like first blood and first tower measure how a team starts, not how it holds together when it's behind. Next time I'll look for how a room responds under pressure, such as comebacks, tilt recovery and roster stability, and trust a never-say-die streak over a smooth opening. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+      "blobId": "PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE",
+      "jobId": "98b3490c-6760-48e9-9374-edc0b9cd4196"
+    }
+  ],
   "scout": "Scout: LOS vs TSW (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLOS [CBLOL]: 2026 series 24-13, games 55-38 | last 10 (newest first) LLWWWWLWWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · Worlds 2026 0-2 · vs other regions 1-4\n  Last 22 games (12-10): GD@15 +0.6k, FB 45%, FT 64%, FD 36%, dragons 46%, 32.4 min avg, 1st baron 27:24\n  Leads @15 converted 7/10, comeback wins 2, throws 0, objectives taken while 1k+ behind 12\n  Worlds 2026 2 games (0-2): GD@15 -1.5k, FB 50%, FT 0%, FD 0%, dragons 11%, 31.8 min avg\n  Picks: TOP Gnar 3, Jayce 3, Rumble 3 | JG Pantheon 6, Wukong 4, Jarvan IV 3 | MID Orianna 4, Ryze 4, Cassiopeia 2 | BOT Sivir 3, Ashe 2, Kai'Sa 2 | SUP Alistar 3, Bard 2, Karma 2\n  Standout: LOS Ackerman (support) KDA 5.2 over 22 games, 8% dmg share\nTSW [LCP]: 2026 series 26-10, games 67-34 | last 10 (newest first) LLWWWLWWWL\n  LCP 2026 25-2 (3 titles) · First Stand 2026 0-2 · MSI 2026 1-2 · EWC 2026 0-2 · Worlds 2026 0-2 · vs other regions 1-8\n  Last 22 games (16-6): GD@15 +1.4k, FB 64%, FT 77%, FD 55%, dragons 57%, 31.3 min avg, 1st baron 27:36\n  Leads @15 converted 12/13, comeback wins 2, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 2 games (0-2): GD@15 -0.1k, FB 100%, FT 0%, FD 50%, dragons 29%, 29.4 min avg\n  Picks: TOP Galio 3, Gnar 3, Urgot 3 | JG Lee Sin 5, Qiyana 5, Jarvan IV 3 | MID Locke 3, Ryze 3, Ahri 2 | BOT Ezreal 4, Yunara 4, Caitlyn 3 | SUP Nautilus 5, Alistar 3, Bard 2\n  Standout: TSW Bie (support) KDA 5.3 over 22 games, 7% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -5.1k at 28:00 vs FUR (CBLOL 2026)\n  - TSW came back from -6.5k at 30:00 vs CFO (LCP 2026)\n  - TSW threw a +4.8k lead (20:00) vs GAM (LCP 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 21-8, LPL 13-9, LEC 15-15, LCS 6-13, CBLOL 4-9, LCP 4-9.\n  This matchup is CBLOL vs LCP: CBLOL went 0-2 against LCP in 2026; CBLOL 31% vs LCP 31% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LOS (CBLOL): no Worlds titles or finals before 2026.\n  TSW (LCP): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still trust TSW's players over LOS, but the pool is 100% TSW and pays 1.00×, so extra AXP risks everything for zero profit and I'm not donating to a pool of my own analysts.",
+        "decidedAt": "2026-10-26T18:30:08.139Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says don't burn resources for nothing: TSW is the only side with stakes, so extra AXP on it pays 1.00× at best and gets wiped if LOS steals the early Herald and tower, which means all risk and no upside.",
+        "decidedAt": "2026-10-26T18:30:07.765Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "With nobody on LOS, any extra AXP on TSW only gets my stake back at 1.00× if I'm right and burns it if LOS steals a game with those Pantheon/Wukong bans, so I keep my 540 on the draft read and add nothing.",
+        "decidedAt": "2026-10-26T18:30:07.777Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With nothing on LOS the pool pays TSW backers exactly 1.00×, so extra AXP can only break even if I'm right and be lost if I'm wrong, and the numbers give me no reason to take that.",
+        "decidedAt": "2026-10-26T18:30:07.658Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "Nobody is backing LOS, so extra AXP on TSW can only win my stake back at 1.00× and would be lost if the room wobbles, and I'd rather keep my read and my AXP than pile on for nothing.",
+        "decidedAt": "2026-10-26T18:30:08.457Z"
+      }
+    ]
   }
 }

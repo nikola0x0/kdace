@@ -1,0 +1,194 @@
+{
+  "series": {
+    "matchId": "115660540726095065",
+    "startTime": "2026-10-28T23:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "LYON",
+    "teamB": "IG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "IG",
+      "score": "2-1",
+      "winProbability": 61,
+      "reasoning": "I'm backing the better players, and IG has them in the spots that decide games: Rookie can take over a mid-game on his own, Wei drives the jungle tempo, and JiaQi is a real bot-lane threat. LYON are scrappy and Isles gives them a support who can steal a messy game, so they take one off me, but with the LPL-LCS gap flagged as big, I'm not betting on a feel-good run to beat that star power over a best of 3.",
+      "usedLessons": [
+        {
+          "blobId": "a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M",
+          "text": "Top lesson: I still trust the stronger players, but I tallied small lane edges like Canna's and Caliste's and let them outweigh the one player who can single-handedly break a game. Next time I'll ask which side has the best carry and what happens when he takes over, and I won't lean on a region read to cover for that. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:24:42.117538Z"
+        },
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        },
+        {
+          "blobId": "L_ESOX9rBxrCWHgd1tV2DAj9VD3HHkoB5CJEcNUndSs",
+          "text": "Top lesson: Rookie winning is the individual-skill thesis working, but I should check that the star's draft gives him a playable pick before I trust it, because hands only carry a Bo1 when the champion lets them. I also shouldn't use \"small outside their backyard\" as a crutch unless the scouting report flags a big region gap, since the player edge is the argument. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+          "createdAt": "2026-10-26T06:27:03.548074Z"
+        },
+        {
+          "blobId": "tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE",
+          "text": "Top lesson: Individual skill still wins series, but in a Bo1 I have to check whether the star's lane can actually turn that edge into a lead before I treat it as the whole argument. When the opposing team has a proven jungle-support duo that can steal a messy game, I should rate that duo as skill too, not dismiss it as chaos, and I should be more skeptical of a Viper-sized edge when the whole BLG team is the one the crowd is backing. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:10:47.127123Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:30:16.897Z",
+      "thinking": "I'm weighing team rosters, trying to recall which players are on IG versus LYON and whether individual skill edges like Rookie or Berserker favor one side in this matchup.\n\nThe region gap seems like the deciding factor—LPL versus LCS strength—plus IG's star power with Rookie, Wei's jungle KDA, and JiaQi bot lane. I should be wary of overhyping LYON's win streak as a Cinderella narrative rather than trusting the stronger roster.\n\nLeaning toward IG winning 2-1 with roughly 60-62% probability, citing jungle/bot strength, Rookie's draft flexibility, and the LPL-LCS region gap as key reasoning.",
+      "stake": 660,
+      "scoreStake": 200
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "IG",
+      "score": "2-1",
+      "winProbability": 64,
+      "reasoning": "Tempo, tempo, tempo: IG have been the ones setting the pace at this Worlds, with Wei's jungle pathing feeding first blood, first tower and drake while LYON keep starting on the back foot and then clawing back. The LPL-over-LCS gap is real and it shows up in the first fifteen minutes, so I'm backing IG. But LYON's comeback habit and Isles' setups mean one game can flip on a Herald fight, so I'm taking the 2-1 and not the sweep.",
+      "usedLessons": [
+        {
+          "blobId": "k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU",
+          "text": "Jungle lesson: Early tempo only counts if it's backed by evidence, and I took TSW's jungle pathing as proof they'd control the first 15 minutes while ignoring that a 16-4 home record and a 3-0 MSI loss to LYON show how they actually handle first objectives against this opponent. Next time I'll check who has really won first Drake and Herald fights in head-to-head or international play before I call a team the pace-setter. (from Swiss TSW vs LYON; picked TSW, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:09.213749Z"
+        },
+        {
+          "blobId": "Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE",
+          "text": "Jungle lesson: Tempo is still king, but a region badge isn't tempo. I have to check which side actually converts the first 15 minutes into Herald, dragon and towers, and not just who gets the early lead. When I spot a real early-pressure threat on the other side, like LYON's, and a habit of giving leads back on mine, like KC's, I should cut my confidence instead of writing it off as a footnote. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:09.552626Z"
+        },
+        {
+          "blobId": "UHD3NAjdmnUDXjYlfLo9qwU8m3FfrT3N9RiCoiDZ9fE",
+          "text": "Jungle lesson: Early tempo decided this one, as it always does, so I'll keep asking who actually took first blood, first tower and the early map against top-tier opposition, and I'll discount early-game numbers that were built against weaker competition. I'll also keep naming concrete flip triggers like first Drake and Herald, because tempo shows up in the objective timeline and not in the hype. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+          "createdAt": "2026-10-26T06:27:29.488646Z"
+        },
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:30:23.236Z",
+      "thinking": "Comparing early-game scouting data, IG looks far stronger than LYON at Worlds—better gold diffs, first blood and tower rates, plus a dominant jungler—while LPL's overall regional strength clearly outpaces LCS.\n\nStill, LYON's recent series wins and early-pressure threat give me some pause, so I'm discounting its weak Worlds numbers only slightly. I'll lean IG 2-1, landing around a 64% win probability given the tempo advantage.",
+      "stake": 970,
+      "scoreStake": 290
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "IG",
+      "score": "2-1",
+      "winProbability": 62,
+      "reasoning": "Fearless Bo3 is a draft-depth test, and Rookie is the best answer to it: Aurora, Syndra, Orianna and Annie mean you can't ban him out, while Wei's Naafiri/Nocturne/Jarvan tempo picks give IG real early priority, with the LPL gap as a tiebreaker on top. LYON flips this if they lock Yunara plus Alistar/Lulu in the first rotation and take Syndra away from Rookie, because their comfort picks are sharp and they've been comeback merchants, so I'm trusting IG to win it in three, not two.",
+      "usedLessons": [
+        {
+          "blobId": "svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I",
+          "text": "Mid lesson: In a Bo1 no earlier games have fearlessly stripped anyone's pool, so \"Fearless can't strip their comfort pair\" isn't an edge. What matters is whether BLG can secure Yunara/Lulu in the first draft rotation, and I should name that and the star-carry matchup as my real draft case. A single win doesn't show the region gap \"showed up on schedule,\" so I'll use a flagged gap as the prior and let draft decide how far I move from it. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:51.122940Z"
+        },
+        {
+          "blobId": "iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w",
+          "text": "Mid lesson: In a Bo1, the draft is a single shot, so the question that matters is whether the opponent can deny my star's comfort pool in first phase. When a deep-pool star like Rookie has a flexible team around him, I'll trust that draft path over region talk and name the exact pick or denial that would flip me. The region gap should only back up that draft read, never replace it. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+          "createdAt": "2026-10-26T06:27:59.958816Z"
+        },
+        {
+          "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+          "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:43.551986Z"
+        },
+        {
+          "blobId": "0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU",
+          "text": "Mid lesson: Draft and champion pools still decide series, so when my own draft read names a concrete failure path, like Caliste forced off his comfort pick or Berserker getting Lucian or Yunara with an Alistar engage, I have to treat it as a main variable and not a footnote under the region gap. The gap sets my starting lean, but I should trim my confidence until the draft shows my star player's pool is secure and the opposing star's win condition is contained. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:33.950794Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:30:16.152Z",
+      "thinking": "I'm weighing LYON against IG for this Bo3, treating the flagged LPL region gap as a prior but letting the draft dictate how much that should shift things. Looking at IG's champion pool with Rookie on strong mid picks plus JiaQi's Yunara and Wei in jungle against LYON's comfort picks like Syndra, Yunara, Alistar, and Lulu, I'm starting to think through how the fearless draft format across the series plays out.\n\nI'm landing on IG winning 2-1, around 62% confidence, reasoning that LYON can still find comeback games but IG's deeper draft flexibility should win out over the series, with the key swing point being whether Rookie gets pushed off his priority picks in game one.",
+      "stake": 710,
+      "scoreStake": 210
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "IG",
+      "score": "2-1",
+      "winProbability": 60,
+      "reasoning": "The region gap is the loudest number on the board, and an LCS side that went 1-2 against the LPL this year has to prove it can close that gap in a Bo3. LYON are a gutsy team with real comeback DNA and the Worlds stage has not scared them, so I'm not pretending IG's 18-25 home record is pretty, and I expect LYON to steal a game. I'm staying near 60 because IG's Worlds sample is only three games.",
+      "usedLessons": [
+        {
+          "blobId": "hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8",
+          "text": "ADC lesson: When a team's headline record and its away or cross-region record diverge sharply (TSW's 16-4 versus 1-6 outside the LCP), trust the split that matches the matchup. Combined with a prior head-to-head (3-0 at MSI), that was clear enough to lean harder than my 58, since the numbers all pointed the same way and I was only hedging on style narratives like Nautilus engages. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:59.169447Z"
+        },
+        {
+          "blobId": "jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4",
+          "text": "ADC lesson: A 9-4 versus 4-6 split is only 23 games, so I should treat it as a strong lean rather than a verdict, and check it against game-length tendencies and how often KC have thrown leads before pricing a Bo1. When the whole board lands on the same 63-68% from the same region numbers, that's one data point repeated five times, so I'll keep my confidence near the low end unless a second independent number backs it up. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:26:03.032025Z"
+        },
+        {
+          "blobId": "DVCTsgYNDy2b3fSqtUewLqVn2uGUd1en3RZt0F2awvA",
+          "text": "ADC lesson: When the numbers lined up on one side (TSW's 1-6 record outside the LCP, plus a flagged big region gap), the pick held, so I should keep trusting a specific, relevant sample like that over narratives about veteran rooms or tilt. A single game is still high variance, so I'll let the strength of the evidence set my confidence and not stretch it past what the sample supports. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+          "createdAt": "2026-10-26T06:28:19.158012Z"
+        },
+        {
+          "blobId": "4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs",
+          "text": "ADC lesson: One Bo1 win doesn't validate a split. An 8-3 vs 2-3 record against other regions is a small sample, so I should size confidence to the sample and not claim \"the numbers won\" because the coin landed my way. I should also lean on region-based records only when the scouting report flags a big region gap, and otherwise decide on head-to-heads, game-length tendencies and series scores. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:16.394079Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:30:22.907Z",
+      "thinking": "The region gap is the dominant factor here—LPL is clearly stronger than LCS, and per the house rule that only shifts with clear international results. LYON's domestic series numbers (27-14, games 75-44) aren't directly comparable to IG's (20-26, 59-68) since they're different leagues, but LYON's international record—6-7 overall, 3-2 at MSI, 2-1 at Worlds—gives some evidence of competitiveness outside their own region.\n\nIG's own international sample is thin (2-1 vs other regions, 2-1 at Worlds) but their domestic LPL record is weak at 18-25, which complicates the region-gap argument since IG itself isn't a top LPL team. I'm weighing whether the raw region strength should override IG's mediocre form, and how much to discount LYON's small Worlds sample (negative GD@15, low first blood rate) against the house rule favoring region gap as a very big factor.\n\nGiven it's a Bo3, I'm trimming variance and landing on IG around 60% to win, with a 2-1 scoreline being roughly as likely as 2-0 under close win-probability math, so I'll call it IG 2-1.\n\nI want to keep the reasoning tight and grounded in concrete numbers rather than vague region talk, since there's an actual sample-size gap here — something like citing LCS's recent head-to-head record against LPL alongside IG's home performance to justify the pick.",
+      "stake": 740,
+      "scoreStake": 220
+    },
+    {
+      "player": "analyst-support",
+      "winner": "IG",
+      "score": "2-1",
+      "winProbability": 62,
+      "reasoning": "LYON's room is the real deal: Berserker has them calm and trusting, and that comeback against KC showed real nerve. But living on comebacks is a risky way to travel against an IG squad that takes early leads and closes them, with Rookie's veteran steadiness and Wei and JiaQi in form. The LCS-LPL gulf is too big for vibes alone to bridge, so I'm backing IG, though LYON can absolutely drag this to game three.",
+      "usedLessons": [
+        {
+          "blobId": "4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE",
+          "text": "Support lesson: The room still decides games, but one comeback doesn't prove a team's chemistry holds in every situation. Next time I'll check whether the mood fits the stress I'm predicting, like KC protecting a lead or Caliste on a pick he doesn't trust, and cut my confidence when that crack is live. I'll also give a calm, trusting room like LYON's, rallying around Berserker, as much credit as the favorite's steadiness. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:26:29.099266Z"
+        },
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8",
+          "text": "Support lesson: I was right that GEN's composure counted, but I'm not going to claim the win was proof of chemistry when Canyon's early control and Chovy's comfortable draft explain much of it. Next time I'll look for concrete signs of how a team's mood shows up, such as clean early rotations, calls made under pressure and whether leads get closed out, and I'll use them to judge how far the calm room matters instead of just assuming it. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:31:09.166314Z"
+        },
+        {
+          "blobId": "mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk",
+          "text": "Support lesson: A team's steadiness shows up in what it does with an early lead, so next time I'll watch whether a squad converts early leads into objectives, like G2's first-fifteen-minute towers, and not just whether the mood in the room sounds calm. I should also hold my claim loosely, because a Bo1 win can come from one player or a single draft just as easily as from a locker room I can't see inside. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:24:07.830651Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:30:21.959Z",
+      "thinking": "I'm weighing the big region strength gap between LPL and LCS here—IG should be clearly favored unless LYON's international results at Worlds say otherwise, so I'm digging into LYON's recent series record to check that.\n\nBoth teams enter this match at 2-1, so it's effectively a bracket decider between two sides with recent wins and a loss each. I'm leaning toward reading the matchup through composure and mental state rather than pure region strength—LYON showed resilience clawing back a big gold deficit against KC, while IG's domestic LPL record was mediocre but that doesn't carry over cleanly to international form. I'm now looking at IG's recent match string to gauge their momentum heading into this series.\n\nBoth sides risk wobbling if they fall behind, but recent mood-driven upsets show calmer rooms can overcome favorites — still, the region gap here is too large to ignore. I'll go with IG, 2-1, around 62%, giving LYON credit for a calm room but favoring the bigger structural edge.\n\nDouble-checking the rosters — Berserker on LYON, Rookie on IG — yes, that tracks.",
+      "stake": 980,
+      "scoreStake": 290
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095065\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":220},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":740,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"DVCTsgYNDy2b3fSqtUewLqVn2uGUd1en3RZt0F2awvA\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4\"],\"thought\":\"3cec140b1d95b5654ce84a46b1621806005a5d28365c51a153f6585a0c447a06\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":290},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":970,\"lessons\":[\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"UHD3NAjdmnUDXjYlfLo9qwU8m3FfrT3N9RiCoiDZ9fE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"18fbb4b044adeccafc01a8c5b14bc28bbf8c0543b78470fc7a8d99c605bae2d4\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":210},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":710,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\"],\"thought\":\"4c4e2c953dc6c55995e9041f0da5d3533f2fea85cfe1867cd375139a37e3a377\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":290},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":980,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\"],\"thought\":\"dee6ba18200e8b2d50b2e955959f94bc28e1fb0107951357ea749e0052cfcedf\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":660,\"lessons\":[\"L_ESOX9rBxrCWHgd1tV2DAj9VD3HHkoB5CJEcNUndSs\",\"a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"9c075d0d56d953db3901903ed034c0c85b07b71bae988b6ec1aca7981e3fb5c4\"}]}",
+  "batchHash": "ea3c3bd2a8f223a16940c51392829f874a61ba98dd5a7e0b9597d4e424e04334",
+  "commitDigest": "HXyqSmyPvwsovSjXFhKgeSRjCbU9ximiMRupUZGWiMHo",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: LYON vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLYON [LCS]: 2026 series 27-14, games 75-44 | last 10 (newest first) LWWLWWLWWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · Worlds 2026 2-1 · vs other regions 6-7\n  Last 25 games (15-10): GD@15 +0.5k, FB 52%, FT 64%, FD 46%, dragons 47%, 33.2 min avg, 1st baron 24:54\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Worlds 2026 5 games (3-2): GD@15 -0.6k, FB 20%, FT 40%, FD 40%, dragons 43%, 31.8 min avg, 1st baron 25:12\n  Picks: TOP Gwen 4, K'Sante 4, Gnar 2 | JG Wukong 4, Xin Zhao 4, Skarner 3 | MID Syndra 5, Ryze 3, Akali 2 | BOT Yunara 5, Lucian 4, Kalista 3 | SUP Alistar 6, Lulu 5, Milio 4\n  Standout: LYON Isles (support) KDA 4.9 over 25 games, 5% dmg share\nIG [LPL]: 2026 series 20-26, games 59-68 | last 10 (newest first) WWLWLLWWWW\n  LPL 2026 18-25 · Worlds 2026 2-1 · vs other regions 2-1\n  Last 23 games (14-9): GD@15 +0.1k, FB 35%, FT 48%, FD 48%, dragons 50%, 32.4 min avg, 1st baron 26:30\n  Leads @15 converted 6/7, comeback wins 3, throws 1, objectives taken while 1k+ behind 14\n  Worlds 2026 3 games (2-1): GD@15 +1.0k, FB 67%, FT 100%, FD 67%, dragons 58%, 30.7 min avg, 1st baron 25:54\n  Picks: TOP Rumble 4, Gnar 3, Gwen 2 | JG Naafiri 4, Nocturne 4, Jarvan IV 3 | MID Aurora 4, Syndra 4, Orianna 3 | BOT Yunara 4, Aphelios 3, Ashe 3 | SUP Lulu 5, Seraphine 4, Alistar 3\n  Standout: IG Wei (jungle) KDA 9.4 over 3 games, 16% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LYON came back from -5.1k at 22:00 vs KC (Worlds 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely penta kill: IG Rookie (Annie) at 25:00 (vs HLE, Worlds 2026)\n  * Likely quadra kill: IG JiaQi (Yunara) at 27:58 (vs HLE, Worlds 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LCS vs LPL: LCS went 1-2 against LPL in 2026; LCS 35% vs LPL 58% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LYON (LCS): no Worlds titles or finals before 2026.\n  IG (LPL): 1 Worlds title (2018).",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

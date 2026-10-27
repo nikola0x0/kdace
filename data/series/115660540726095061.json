@@ -1,0 +1,179 @@
+{
+  "series": {
+    "matchId": "115660540726095061",
+    "startTime": "2026-10-28T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "MKOI",
+    "teamB": "T1",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "T1",
+      "score": "2-1",
+      "winProbability": 66,
+      "reasoning": "Skill wins series, and the skill that matters is whoever shapes the early map: Oner's tempo feeding Peyz and Keria's lane control against an MKOI bot lane that has been scrappy but not scary. I know the crowd loves the reigning champs and MKOI has already knocked off two hyped sides, so I'm giving them a game through a messy Supa and Alvaro skirmish. But when it comes down to hands, T1's stars win the games that matter, and the huge gap between the LCK and LEC settles it.",
+      "usedLessons": [
+        {
+          "blobId": "Ur6piw7dnRGpSZDfbFp4o_sr61WrwwzLbzO12ZDEshc",
+          "text": "Top lesson: Individual skill still wins series, but it's the skill of the players who shape the early map, like a jungler who sets tempo and a bot lane that converts it. That counts for more than one star mid with flashy picks, so I should judge a team's best players by how much they change the whole map, not by highlight champions or hype around one name. (from Swiss CFO vs MKOI; picked MKOI, actual MKOI 1-0)",
+          "createdAt": "2026-10-26T06:20:27.310345Z"
+        },
+        {
+          "blobId": "tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE",
+          "text": "Top lesson: Individual skill still wins series, but in a Bo1 I have to check whether the star's lane can actually turn that edge into a lead before I treat it as the whole argument. When the opposing team has a proven jungle-support duo that can steal a messy game, I should rate that duo as skill too, not dismiss it as chaos, and I should be more skeptical of a Viper-sized edge when the whole BLG team is the one the crowd is backing. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:10:47.127123Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:29:31.524Z",
+      "thinking": "I'm weighing the regional gap here—LCK being the stronger league is a big factor—and comparing T1's star-studded roster against MKOI's lineup to settle on a pick.\n\nBoth sides enter this series with similar 2-1 win records against tough opponents, but the crowd favors T1 as reigning champs, and I'm inclined to distrust that hype slightly while still leaning toward T1's individual skill edge in the bot lane and jungle matchups. I'll call it for T1, likely 2-1 given MKOI's demonstrated resilience.",
+      "stake": 1210,
+      "scoreStake": 360
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "T1",
+      "score": "2-1",
+      "winProbability": 66,
+      "reasoning": "Tempo is the whole story, and T1 have been the ones opening Worlds games with first blood, first drake and a gold lead on the clock, while MKOI keep drifting through the opening and chasing the map. That is exactly how the LCK edge should show up. But MKOI's Lee Sin jungle can force early skirmishes, and T1 have handed back leads before, so I'm giving MKOI one game where they win the first Herald fight and snowball, not a sweep.",
+      "usedLessons": [
+        {
+          "blobId": "0xCJMJCTnTM6Gn-nxgq5LSY79eBR3mhLEEVvpeMf_s4",
+          "text": "Jungle lesson: My tempo read was right, but I only named one trigger (Elyoya forcing early skirmishes) and should have tied it to concrete first-15 markers like first dragon, Herald and who gets lane priority. Next time I'll check whether the opposing early-blood picks, like Naafiri and Akali, can actually get the priority they need to use that pressure, and set my confidence on that rather than on the jungler alone. (from Swiss CFO vs MKOI; picked MKOI, actual MKOI 1-0)",
+          "createdAt": "2026-10-26T06:20:50.147344Z"
+        },
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        },
+        {
+          "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+          "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:03.565623Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:29:15.863Z",
+      "thinking": "I'm comparing records heading into this Bo3 Swiss matchup: T1 sits at 2-1 at Worlds after beating LOS and CFO but losing to DK, while MKOI is also 2-1 after wins over BLG and CFO. The key factor is the region gap, since LCK is clearly the stronger league here.\n\nLooking at tempo stats, T1 has a dominant GD@15 and near-perfect First Blood/First Dragon rates, while MKOI trends negative on early gold, which tilts things toward T1 despite some known comeback potential from MKOI's Lee Sin jungle picks. I'll lean toward T1 winning 2-1 with roughly 66% confidence, factoring in lessons from the BLG-MKOI and CFO-MKOI series along with the broader regional tempo pattern seen in TLAW-AL and GEN-IG.",
+      "stake": 1400,
+      "scoreStake": 420
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "T1",
+      "score": "2-1",
+      "winProbability": 66,
+      "reasoning": "MKOI's Ryze, Lee Sin and Jayce comfort picks can win them a game one, and I'm not forgetting they've been beating bigger names all Swiss. But Fearless Draft is where a Bo3 gets decided: once those picks are burned, T1's deeper pool, Faker's flexibility and a LCK-over-LEC gap that's a very big factor tilt games two and three. I'd flip only if MKOI take Ryze and Lee Sin in the first rotation and T1 can't punish the lane tempo, and even then I expect the champs to steal a game, not the series.",
+      "usedLessons": [
+        {
+          "blobId": "SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ",
+          "text": "Mid lesson: Pool depth only matters if it shows up in the draft, and in a Bo1 a team's few comfort picks (like MKOI's Ryze and Lee Sin) can beat a broader pool, so I should judge how each side's best picks match up instead of counting champions. When the upset path I name is built on the opponent's comfort picks, I should cut my confidence until the draft shows BLG can deny or punish them, and not lean on league strength unless the report flags a big gap. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:52.496004Z"
+        },
+        {
+          "blobId": "svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I",
+          "text": "Mid lesson: In a Bo1 no earlier games have fearlessly stripped anyone's pool, so \"Fearless can't strip their comfort pair\" isn't an edge. What matters is whether BLG can secure Yunara/Lulu in the first draft rotation, and I should name that and the star-carry matchup as my real draft case. A single win doesn't show the region gap \"showed up on schedule,\" so I'll use a flagged gap as the prior and let draft decide how far I move from it. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:51.122940Z"
+        },
+        {
+          "blobId": "th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o",
+          "text": "Mid lesson: In a Bo1, the draft decides the game, so I'll keep naming the exact picks and bans that would flip me (Ryze or Lee Sin priority, a free Caitlyn) and check whether they actually happened, rather than crediting the draft because the pick won. When the pools are close, a flagged BIG REGION GAP is a legitimate tiebreaker that sits on top of the draft read and never replaces it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:32.534459Z"
+        },
+        {
+          "blobId": "fA2ltR3XJMUPjNf99i7gdalvoyrwBbEYCcuIQfvMQ6s",
+          "text": "Mid lesson: My read was right that a tight, proven draft book decides a Bo1, but I was too loose on the conditional flip. Next time I'll name the specific draft triggers up front (Vi/Jarvan priority, Smash's comfort carry), and when the draft hands the star carry that comfort pick, I'll trust it more than the opponent's reputation or past head-to-heads. Fearless Draft rewards the team with the settled pool, not the one with the bigger name. (from Swiss T1 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-26T06:32:35.042350Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:29:15.386Z",
+      "thinking": "I'm weighing the Swiss stage matchup, noting LCK's regional strength and T1's status as reigning champs against MKOI's recent form beating BLG and CFO. Looking at champion pools and player comfort picks, MKOI has leaned on Ryze, Lee Sin, Ezreal, and Jayce, while T1 also has Jayce in their rotation.\n\nGiven this is a Bo3 under Fearless Draft, MKOI's narrower comfort picks get stripped out after game one, whereas T1's deeper pool and Faker's flexibility hold up better across a series. The region gap is a significant factor here, so I'm leaning toward T1 winning, most likely 2-1, putting my confidence around 66%.",
+      "stake": 1180,
+      "scoreStake": 350
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "T1",
+      "score": "2-0",
+      "winProbability": 68,
+      "reasoning": "The Worlds desk can love the MKOI story all it wants, but LEC going 3-7 against the LCK this year is the number I keep coming back to, and the reigning champions have the stage experience that comes with it. I'm stopping at 68 because T1's last 23 games sit at 11-12 and MKOI is a streaky team that wins from behind, but across a Bo3 the region gap should show before that variance does.",
+      "usedLessons": [
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        },
+        {
+          "blobId": "4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA",
+          "text": "ADC lesson: Numbers over stories held up here: the 33-20 vs 13-15 series gap and the flagged LCK-over-LCP region gap pointed the right way. I was right to cap at the high 60s in a Bo1 and not let the clean result tempt me into more confidence. Next time I'll keep treating Bo1 variance as a number to price in, and weigh early-game tendencies like T1's 32% first blood as a measured risk instead of a story. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-26T17:52:52.890505Z"
+        },
+        {
+          "blobId": "hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8",
+          "text": "ADC lesson: When a team's headline record and its away or cross-region record diverge sharply (TSW's 16-4 versus 1-6 outside the LCP), trust the split that matches the matchup. Combined with a prior head-to-head (3-0 at MSI), that was clear enough to lean harder than my 58, since the numbers all pointed the same way and I was only hedging on style narratives like Nautilus engages. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:59.169447Z"
+        },
+        {
+          "blobId": "zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA",
+          "text": "ADC lesson: A single 1-0 in a Bo1 is one data point and doesn't validate a 71% call, so I should judge myself on whether the numbers (the 6-1 vs 0-2 international records and the flagged big region gap) justified that confidence, not on the result. I can borrow Mid's pool-depth point only if I turn it into numbers, such as champion pool breadth, pick win rates and game-length tendencies, instead of treating \"calm\" or \"rhythm\" as evidence. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:32.376409Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:29:19.991Z",
+      "thinking": "I'm weighing the regional strength gap: T1 and LCK look clearly stronger than MKOI and LEC based on win rates and head-to-head records, with T1 at 61% game wins versus MKOI's 53%, and LCK dominating cross-region matchups 8-4 while LEC struggled at 3-7. Their Worlds performances this year are comparably close though, both going 2-1 in series.\n\nLooking at recent form, T1's results have been streaky (alternating wins and losses, sitting at 11-12 in their last 23 games) while MKOI's been stronger lately (14-10), so T1's season record overstates current form somewhat, though the region gap still weighs heavily in T1's favor. For a best-of-three I'm leaning toward moderate confidence in T1, around 70% to win the series, and working out the math on series scores (using per-game win probability to back into series probability), 2-0 comes out as the single most likely scoreline at roughly 41% versus 29% for 2-1, though I'm tempted to favor 2-1 given MKOI's resilience in close games.\n\nI'll anchor my confidence with two concrete numbers: LEC's 3-7 record against LCK, and T1's 11-12 slump over their last 23 games. That caution is why I'm settling at 68 rather than pushing toward 80, trusting the split that matches T1's stronger 8-4 record against other regions.",
+      "stake": 1730,
+      "scoreStake": 520
+    },
+    {
+      "player": "analyst-support",
+      "winner": "T1",
+      "score": "2-1",
+      "winProbability": 64,
+      "reasoning": "MKOI's room feels loose and happy right now, and I won't pretend a team with nothing to lose can't bite, because that freedom has already burned me twice. But T1 are the reigning champions with Keria steadying the room, and Faker's group has been through enough big stages to reset after a bad game, so I trust them over a young group riding a high. I'm leaning T1 in a scrappy three, with MKOI stealing one while the early-lead nerves show on both sides.",
+      "usedLessons": [
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk",
+          "text": "Support lesson: A team's steadiness shows up in what it does with an early lead, so next time I'll watch whether a squad converts early leads into objectives, like G2's first-fifteen-minute towers, and not just whether the mood in the room sounds calm. I should also hold my claim loosely, because a Bo1 win can come from one player or a single draft just as easily as from a locker room I can't see inside. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:24:07.830651Z"
+        },
+        {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:40.698525Z"
+        },
+        {
+          "blobId": "rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE",
+          "text": "Support lesson: A win doesn't prove I read the room correctly, so I should name the specific signals behind a \"bruise, not ghost\" call, such as comms after a loss, how the team recovers in the early game, and whether the coaching staff changed anything, and not let a region gap or a record carry the pick. CFO's loose, skirmish-heavy opening showed that a team with nothing to lose has real mood-driven bite, so I should price that freedom into my confidence instead of only trusting the calmer room. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-26T17:53:22.055801Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:29:14.292Z",
+      "thinking": "Looking at this MKOI vs T1 matchup, I'm weighing the regional gap since LCK is generally stronger, but MKOI's recent form against BLG and CFO suggests they've been performing well at Worlds, so I need to reconcile that against T1's overall pedigree before settling on a pick.\n\nT1 has also looked wobbly lately, alternating wins and losses and throwing leads, while MKOI's momentum is real but similarly inconsistent. Weighing the region gap against T1's shakiness, I'll lean toward T1 winning but expect a close 2-1 series given MKOI's upset potential.",
+      "stake": 1400,
+      "scoreStake": 420
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095061\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":520},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1730,\"lessons\":[\"4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA\"],\"thought\":\"194ac7de9e8d58748a1bba498e9d89c5378a2e503746948d7502071a83eb3383\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":420},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1400,\"lessons\":[\"0xCJMJCTnTM6Gn-nxgq5LSY79eBR3mhLEEVvpeMf_s4\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"bf378e50609ca881eaac0039dd7036a13b69e41dd1ef3fb9ebcf81e5caafef3b\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":350},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1180,\"lessons\":[\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"fA2ltR3XJMUPjNf99i7gdalvoyrwBbEYCcuIQfvMQ6s\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"525eb7be41e113cdc24c8b5098251092352a38b16bbf623360b7ebb4d7c4ca76\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":420},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1400,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\",\"rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE\"],\"thought\":\"eab2a0c709c2daca2bcc68f15237829e777d5d21538ac0da8001ed698fa39a65\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":360},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1210,\"lessons\":[\"Ur6piw7dnRGpSZDfbFp4o_sr61WrwwzLbzO12ZDEshc\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\"],\"thought\":\"ee434d47cbeba89c2752539ec6206e3522126dfa7c5497b428d760023d6934ff\"}]}",
+  "batchHash": "46cc6453d6c533479218c38a5ac33172d976ddb15f8982c14cefc4c576554b22",
+  "commitDigest": "AdsUUdZpNCGZuur5pHzHqJA1aFnSBsvWjeVEr6J1m9DF",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: MKOI vs T1 (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nMKOI [LEC]: 2026 series 24-21, games 54-48 | last 10 (newest first) LWWLWWWWLW\n  LEC 2026 22-18 (lost final) · EWC 2026 0-2 · Worlds 2026 2-1 · vs other regions 2-3\n  Last 24 games (14-10): GD@15 +0.3k, FB 42%, FT 63%, FD 54%, dragons 60%, 33.4 min avg, 1st baron 26:24\n  Leads @15 converted 8/10, comeback wins 4, throws 3, objectives taken while 1k+ behind 11\n  Worlds 2026 4 games (2-2): GD@15 -1.0k, FB 25%, FT 50%, FD 75%, dragons 65%, 34.2 min avg, 1st baron 30:00\n  Picks: TOP Jayce 5, Galio 3, Renekton 3 | JG Lee Sin 5, Qiyana 4, Jarvan IV 3 | MID Ryze 5, Ahri 4, Anivia 3 | BOT Ezreal 7, Kalista 5, Ashe 3 | SUP Renata 5, Karma 3, Lulu 3\n  Standout: MKOI Alvaro (support) KDA 5.3 over 24 games, 7% dmg share\nT1 [LCK]: 2026 series 34-20, games 89-56 | last 10 (newest first) WLWLWLWLWL\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · Worlds 2026 2-1 · vs other regions 8-4\n  Last 23 games (11-12): GD@15 -0.5k, FB 35%, FT 43%, FD 57%, dragons 47%, 31.9 min avg, 1st baron 28:36\n  Leads @15 converted 4/6, comeback wins 2, throws 2, objectives taken while 1k+ behind 11\n  Worlds 2026 3 games (2-1): GD@15 +1.3k, FB 100%, FT 67%, FD 100%, dragons 67%, 31.2 min avg, 1st baron 24:54\n  Picks: TOP Jayce 5, Gwen 2, Kennen 2 | JG Naafiri 4, Vi 4, Skarner 3 | MID Anivia 4, Galio 3, Orianna 3 | BOT Jhin 4, Lucian 3, Ezreal 2 | SUP Alistar 3, Milio 3, Renata 3\n  Standout: T1 Keria (support) KDA 5.3 over 23 games, 9% dmg share\nHead-to-head 2026: none\nKey moments:\n  - MKOI threw a +6.2k lead (40:00) vs NAVI (LEC 2026)\n  - MKOI threw a +6.0k lead (20:00) vs SK (LEC 2026)\n  - T1 threw a +4.9k lead (26:00) vs DK (Worlds 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\nFun facts:\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\n  * Likely penta kill: MKOI Supa (Kai'Sa) at 39:12 (vs NAVI, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LEC vs LCK: LEC went 3-7 against LCK in 2026; LEC 48% vs LCK 73% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  MKOI (LEC): no Worlds titles or finals before 2026.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

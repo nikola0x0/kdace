@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -172,10 +172,51 @@
   "batch": "{\"matchId\":\"115660540726095057\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":210},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":710,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"YygXXVHTPJQSMtUneLJBDBx_0Jb3oM5U2zWq17T5lkM\"],\"thought\":\"8174e21ac87ea4689d8ab5e28c1b5df3229d123818d445a42fa5f46835c01630\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":180},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":590,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"287fbc3f3807ef72d6dee7e4fedc7faeb100aa52f575198acc29e466eb1e0b09\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":470,\"lessons\":[\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\"],\"thought\":\"e4cc3a5afd11ad7a3e8075f76161754239c41d3367e70017e8763706d7473eb1\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":230},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":770,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"UqkrEaQKo5T1VhYSfnge0KPwEZV5vrfwSf0WIZRH9As\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"cbb105262d51b4ce25e769da90a27db64fa34f98e32ffc56fdf4678c9a70d0c8\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":170},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"AL\",\"stake\":550,\"lessons\":[\"5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U\",\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"558e89bcc547f21af7d4750191aa3cde0acaf8eb9c1105c7fec55dffed525b65\"}]}",
   "batchHash": "f9f8a53898f360dd5ffeed6012c8a47869ba23351282356785858c193bd64272",
   "commitDigest": "DrfUaMucMK99jkGDiNvdSxMVBnjmc6xssoyPH2VPWpvG",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "TLAW",
+    "score": "2-0",
+    "resultDigest": "D47ZzFa84TGiZ14HCg4nt91DSE1JGSKSKaVQS9MbV8YD"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: I said TLAW would steal a game, and they took two. CoreJJ really was a real problem, and I'm not pretending otherwise, but I still say it was AL's gifted leads that did it.\n\nJungle: Tempo was the whole story and I read it backwards. TLAW's Pantheon and Lee Sin openings finally turned into first dragons, so I'm eating my words, Top, and your gifted-leads point at least matches what I flagged.\n\nMid: I said I'd be in trouble if CoreJJ and an early-priority jungle showed up in game one, and then they showed up in game one. So much for AL's flexible Fearless draft, Support, did your scouting report forget the picks burn for both teams?\n\nADC: My 32% versus 59% region gap got steamrolled by a 2-0, so I'll take the L on the numbers. In my defense, I hedged with a 62% and \"TLAW can steal a game,\" and nobody on this panel gets to say I didn't flag it.\n\nSupport: Funny that I wrote CoreJJ's steady voice calms a desperate team and then picked against him anyway. Experience steals a game, I said, and it took both, so lesson learned: trust the veteran in the room, not the region chart, ADC.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but I have to count skill in the player who decides tempo, like CoreJJ, rather than only in the lanes that build leads. When that player's strength hits the opponent's known weakness, such as AL's gifted leads and messy drafts, I shouldn't call it a coin flip and still pick the flashier names, and I shouldn't lean on a region gap to cover for it. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+      "blobId": "De35UrKr3hWkmFisIYgNwLWHneajHNWq9H-D-B4HsKI",
+      "jobId": "3759afd7-a5ba-4855-93ac-cb749d64f551"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+      "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+      "jobId": "2a69bc85-fad5-47bb-977b-08a5608ebd42"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Fearless Draft is decided by which team gets early-priority picks that its star players can turn into tempo, not by who has more comfort picks on paper, so I should read the draft through form (CoreJJ's support and jungle priority) before crediting pool breadth. I also shouldn't make the region gap my headline unless the scouting report actually flags a BIG REGION GAP, because that was a crutch standing in for draft analysis. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+      "blobId": "t7waSsYemFyp8LDmQiBl3R089phOoqHfGDUsZhiLQ7c",
+      "jobId": "4d807634-40f4-4a47-93ce-5392e1e435fc"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A single 0-2 doesn't overturn a flagged region gap, because one result is a story and 32% vs 59% is a sample. But when the gap points one way and the team-level numbers (AL's 10-12 form, head-to-heads, game length) point the other, I should treat the pick as a close call and lower my confidence instead of leaning on the gap alone. I'll keep trusting the numbers over stories like \"the veteran steadies the room.\" (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+      "blobId": "p-ywOtYzCTG1T3pTdWAOnzy88lvBUi4fjgtA1PX5d_Y",
+      "jobId": "b0ffbc40-8851-4642-9c9a-1fdd4d8ec612"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When my read of the room clearly favors a team, as with CoreJJ's steady voice in a must-win spot, I shouldn't drop it just because early play doesn't show the mood. Calm under a 0-2 deadline is the chemistry signal I exist to price. A flagged region gap is still a very big factor, so I should weigh the two openly and side with the gap only when I see real cracks in the other room, not by default. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+      "blobId": "VAr4gTeofj-Z9qwEt0fEV5_ck8fo0uh0B18gOrs1OAs",
+      "jobId": "8ae8414b-3183-435c-816d-34a1683ab387"
+    }
+  ],
   "scout": "Scout: TLAW vs AL (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 22-12, games 57-34 | last 10 (newest first) LLWWWWLWWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · Worlds 2026 0-2 · vs other regions 2-4\n  Last 22 games (15-7): GD@15 +1.0k, FB 50%, FT 73%, FD 59%, dragons 56%, 33.1 min avg, 1st baron 28:24\n  Leads @15 converted 9/9, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Worlds 2026 2 games (0-2): GD@15 +0.3k, FB 0%, FT 50%, FD 0%, dragons 20%, 34.7 min avg\n  Picks: TOP K'Sante 4, Camille 3, Ambessa 2 | JG Pantheon 4, Jarvan IV 3, Lee Sin 3 | MID Syndra 4, Ahri 3, Orianna 3 | BOT Ezreal 4, Lucian 4, Ashe 3 | SUP Karma 3, Nami 3, Alistar 2\n  Standout: TLAW CoreJJ (support) KDA 6.9 over 22 games, 7% dmg share\nAL [LPL]: 2026 series 34-21, games 83-61 | last 10 (newest first) LLWWLWLLLW\n  LPL 2026 32-18 (1 title) · EWC 2026 2-1 · Worlds 2026 0-2 · vs other regions 2-2\n  Last 22 games (10-12): GD@15 -0.1k, FB 68%, FT 55%, FD 50%, dragons 53%, 32.9 min avg, 1st baron 27:36\n  Leads @15 converted 8/8, comeback wins 2, throws 1, objectives taken while 1k+ behind 15\n  Worlds 2026 2 games (0-2): GD@15 +0.1k, FB 100%, FT 50%, FD 100%, dragons 40%, 32.3 min avg\n  Picks: TOP Rumble 4, Gnar 3, K'Sante 3 | JG Maokai 4, Nocturne 3, Qiyana 3 | MID Akali 3, Annie 3, Orianna 3 | BOT Lucian 4, Miss Fortune 3, Ashe 2 | SUP Milio 4, Neeko 4, Seraphine 4\n  Standout: ALKael (support) KDA 4.8 over 20 games, 9% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - AL took Baron at 33:54 while down 10.5k vs BLG (LPL 2026), lost\n  - AL threw a +4.5k lead (18:00) vs TES (LPL 2026)\nFun facts:\n  * Likely penta kill: ALHope (Miss Fortune) at 30:31 (vs BLG, LPL 2026)\n  * Likely quadra kill: TLAW Yeon (Jhin) at 27:26 (vs SR, LCS 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 21-8, LPL 13-9, LEC 15-15, LCS 6-13, CBLOL 4-9, LCP 4-9.\n  This matchup is LCS vs LPL: LCS went 0-2 against LPL in 2026; LCS 32% vs LPL 59% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  AL (LPL): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

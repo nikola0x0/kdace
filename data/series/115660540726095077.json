@@ -1,0 +1,189 @@
+{
+  "series": {
+    "matchId": "115660540726095077",
+    "startTime": "2026-10-30T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "TLAW",
+    "teamB": "LOS",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "TLAW",
+      "score": "2-1",
+      "winProbability": 58,
+      "reasoning": "I'm backing the players, not the mood around this series: CoreJJ is the best tempo-setter on the board, and TLAW turns early leads into towers and closes games, which is exactly what keeps a shaky LOS draft from living on comebacks. Duduhh is the best individual on LOS and can absolutely steal a game with a Kai'Sa-style carry performance, but one star behind a slow-starting lineup doesn't win a series, so I take TLAW in three.",
+      "usedLessons": [
+        {
+          "blobId": "I2uJDpQF7TOyNyhFl-Sb7vS4ZP40k8I0lifb1fVScbE",
+          "text": "Top lesson: Individual skill still wins series, but I have to compare players one-on-one by lane, not credit a team with \"better early-game talent\" because of a jungle-support pairing and a champion pool. When the opposing carry (Duduhh) is clearly the best player in a matchup, I should pick his side instead of treating him as a footnote that \"could drag it to three games.\" (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:49:28.423037Z"
+        },
+        {
+          "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+          "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:21:32.122735Z"
+        },
+        {
+          "blobId": "De35UrKr3hWkmFisIYgNwLWHneajHNWq9H-D-B4HsKI",
+          "text": "Top lesson: Individual skill still wins series, but I have to count skill in the player who decides tempo, like CoreJJ, rather than only in the lanes that build leads. When that player's strength hits the opponent's known weakness, such as AL's gifted leads and messy drafts, I shouldn't call it a coin flip and still pick the flashier names, and I shouldn't lean on a region gap to cover for it. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:48:31.889177Z"
+        },
+        {
+          "blobId": "NVAk98ArGDUeLNFjwcK_-UfzLFDV984AEkVd9-oFCsQ",
+          "text": "Top lesson: Skill advantages only decide a Bo1 when they convert into early leads, so next time I'll look at which lanes my stronger players can actually snowball (like Caps in mid with jungle help) rather than just counting who's better on paper. I'll still back the stronger players over the hyped narratives, but I'll check they have the pool and tempo to close the game before the opponent's late-game carry matters. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:22:32.102610Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:33:21.059Z",
+      "thinking": "I'm weighing TLAW versus LOS for this Bo3 Swiss matchup, treating individual skill as the deciding factor since there's no clear region gap. Comparing lane by lane, Duduhh looks like the standout player in this matchup, and CoreJJ's tempo control helped TLAW beat AL 2-0 previously.\n\nBoth teams have mixed records at Worlds — TLAW lost to CFO and BLG but beat AL, while LOS beat TSW 2-0 but lost to T1 and G2. Still, I keep coming back to Duduhh's dominant ADC play as the key factor tipping this toward LOS.\n\nTLAW's early-game numbers look strong, with solid GD@15 and first-tower conversion, while LOS has shown weaker early stats at Worlds with low first blood rate and negative gold diffs. I'm leaning toward TLAW given CoreJJ's veteran tempo and title pedigree compared to LOS's shakier laning phase.",
+      "stake": 250,
+      "scoreStake": 80
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "TLAW",
+      "score": "2-1",
+      "winProbability": 64,
+      "reasoning": "It's all tempo, and TLAW are the cleaner early team: CoreJJ turns priority into first dragon and first tower, and they actually cash in the leads they build, while LOS are a comeback team that keeps arriving at the party late. I'm shaving confidence and giving LOS a game because Pantheon and Jarvan in their hands can contest the first Herald and dragon, and that's my flip trigger: if LOS take early jungle priority and first Herald in game one, I'm rethinking the whole series.",
+      "usedLessons": [
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+          "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:03.565623Z"
+        },
+        {
+          "blobId": "CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8",
+          "text": "Jungle lesson: Tempo still decides games, so I should judge a team's first-15 pressure by what it shows against comparable opposition (jungle priority, first herald, first tower) instead of dismissing it as \"built against CBLOL\" or leaning on region records. I should treat region as a big factor only when the scouting report flags a BIG REGION GAP, and otherwise keep a clear flip trigger like \"LOS take early jungle priority and first herald\" and let the early map decide. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:32.857890Z"
+        },
+        {
+          "blobId": "L-55HQD07z6caLWM8ywpQDPN0fZ_ysAEBoAuaz7qkSw",
+          "text": "Jungle lesson: Tempo still decides everything, but I can't assume a Lee Sin or Qiyana pathing creates it. I have to check who actually wins the first Herald, the first tower and the 15-minute map control, and whether the opponent's Pantheon or Jarvan can contest it, before I lean on a jungler's reputation. A thin first-tower sample doesn't prove tempo, so I should drop my confidence when the early-game evidence is that shallow. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:49:56.443768Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:33:20.290Z",
+      "thinking": "I'm comparing early-game stats between TLAW and LOS - TLAW shows strong gold leads and conversion rates at 15 minutes, while LOS has weaker first blood and dragon rates, especially at Worlds where their numbers drop further.\n\nBoth teams' jungle picks overlap heavily with Pantheon and Jarvan, so LOS's Pantheon could contest TLAW's early lane pressure despite the overall tempo gap favoring TLAW. I'm leaning toward TLAW winning 2-1, giving weight to LOS's comeback tendency and contesting jungle pick while still favoring TLAW's early-game edge at around 64% win probability.",
+      "stake": 450,
+      "scoreStake": 140
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "TLAW",
+      "score": "2-1",
+      "winProbability": 60,
+      "reasoning": "It's a 1-2 vs 1-2 elimination Bo3 under Fearless, and I'm drafting this one for TLAW: CoreJJ gives them early priority through Nami, Karma and Rakan, and they have three real options in every role, so burned picks hurt them less. LOS can flip it if they win the Pantheon/Wukong jungle fight in game 1 and get Orianna or Ryze for a comeback, and that comeback gene makes me take the 2-1 over the sweep. With no big region gap, this comes down to who adapts better as the draft runs out of picks, and I trust TLAW there.",
+      "usedLessons": [
+        {
+          "blobId": "Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8",
+          "text": "Mid lesson: Under Fearless, I should stop treating a team's signature comfort picks as a reliable edge. Once those picks are banned or used up, the series turns on who has the deeper pool and the better flex drafts, and LOS's Pantheon/Wukong/Orianna/Ryze options showed that depth beats a narrow tempo identity. Next time I'll weigh each team's pool depth and how well it adapts to bans and burned picks above its best-case tempo picks, and I'll give that more weight than the underdog's pool when I pick a favorite. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:50:21.479331Z"
+        },
+        {
+          "blobId": "t7waSsYemFyp8LDmQiBl3R089phOoqHfGDUsZhiLQ7c",
+          "text": "Mid lesson: Fearless Draft is decided by which team gets early-priority picks that its star players can turn into tempo, not by who has more comfort picks on paper, so I should read the draft through form (CoreJJ's support and jungle priority) before crediting pool breadth. I also shouldn't make the region gap my headline unless the scouting report actually flags a BIG REGION GAP, because that was a crutch standing in for draft analysis. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:29.185998Z"
+        },
+        {
+          "blobId": "r0DI--Tk-uBtoVo6VF2Utu35iWrELZQmmHF2uMajXRI",
+          "text": "Mid lesson: Draft decides a Bo1, but the draft read only counts if I name the specific failure condition (HLE's early-priority pick into a first-rotation fight) and check it against how the picks and the lanes actually played out, not just credit Chovy's comfort pool after the win. Next time I'll weigh how much each team's draft can stay flexible under bans and Fearless restrictions, so a lopsided H2H history stays a tiebreaker and never becomes the reason I lean on a side. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:30:24.079355Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:33:20.186Z",
+      "thinking": "I'm weighing TLAW against LOS for this Bo3, with no big regional gap to lean on. TLAW's stats stand out—23-12 record, strong gold lead at 15 minutes, high first-tower rate, and near-perfect lead conversion—with CoreJJ anchoring a Pantheon/Lee Sin-heavy draft pool, though their recent series results against CFO and BLG were losses before bouncing back against AL.\n\nThis actually shapes up as a 1-2 versus 1-2 elimination-style matchup, since LOS also sits at 1-2 after losing to T1 and G2 but beating TSW. Draft-wise both teams share Pantheon and Jarvan IV as contested picks under fearless draft rules, with LOS leaning on Wukong, Orianna, Ryze, and Galio while TLAW counters with Lee Sin, Jarvan, Syndra, Ahri, and Galio—TLAW's superior early-game numbers could be the deciding edge.\n\nWeighing TLAW's broader five-role champion pool against LOS's deeper comfort picks like Pantheon and Wukong, I lean toward TLAW winning 2-1, maybe 2-0, given their stronger early-game tempo and flexibility across all positions.",
+      "stake": 300,
+      "scoreStake": 90
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "TLAW",
+      "score": "2-1",
+      "winProbability": 60,
+      "reasoning": "No region gap here, so I'm judging this on the two teams, and TLAW have the cleaner profile: they've turned all 11 of their 15-minute leads into wins, while LOS lean on comebacks to get out of trouble. CoreJJ's Lane-to-late-game steadiness should hold up, but LOS showed against TSW that they can claw back from a big deficit, and neither side has a head-to-head or a big enough Worlds sample to push me past a modest lean, so I'm taking TLAW 2-1.",
+      "usedLessons": [
+        {
+          "blobId": "4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs",
+          "text": "ADC lesson: One Bo1 win doesn't validate a split. An 8-3 vs 2-3 record against other regions is a small sample, so I should size confidence to the sample and not claim \"the numbers won\" because the coin landed my way. I should also lean on region-based records only when the scouting report flags a big region gap, and otherwise decide on head-to-heads, game-length tendencies and series scores. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:16.394079Z"
+        },
+        {
+          "blobId": "MHirs9o43SBCsTnxVK20PBHj6s609ASTeGajWxPeX5A",
+          "text": "ADC lesson: First-tower rate (81% vs 70%) was the right number to lean on, and the result backed it, but one Bo1 only shows the edge was real, not that 57 was the right size. Next time I'll pair that stat with game-length and head-to-head data before I move confidence, and I won't pad the case with narrative color like the DK lead-throw or Duduhh highlight reels that the numbers never supported. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:23:43.846328Z"
+        },
+        {
+          "blobId": "ivf7-Z6ZwzYkojYoSxEYE7p02pboDqXNYIIePJBjKsY",
+          "text": "ADC lesson: First-tower rate is only a number about getting ahead, so I should weigh it against what the teams do with leads and deficits (conversion, comeback record, game length) and not treat a 77% stat from 22 games as decisive. When the sample is that thin and region doesn't separate the teams, my numbers-first belief says to stay near a coin flip instead of picking a 2-1 on one headline stat. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:50:48.317344Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:33:15.284Z",
+      "thinking": "Regional split doesn't show a clear edge, so I'll skip weighting by region. Looking at the head-to-head numbers: TLAW holds a 23-12 series edge with a 63.4% game win rate versus LOS's 25-13 series record at 60%, but recently LOS has been stronger with a 14-10 mark in their last 24 compared to TLAW's 17-7. Other metrics favor TLAW too—better gold differential at 15 minutes (+1.1k vs +0.5k), higher first-tower rate (75% vs 63%), and a stronger lead-conversion record (11/11 vs 8).\n\nWorlds form shows TLAW with better early-game numbers (+1.2k GD@15 vs LOS's -0.8k) though LOS has shown more resilience with three comeback wins compared to TLAW's one. There's no prior head-to-head between these two. Given it's a Bo3 which reduces variance, I'm leaning toward TLAW winning but it's close enough that I'm weighing whether to call it 2-0 or 2-1—working through the math with roughly 57% per-game win probability, the series outcomes come out nearly identical, so I'll factor in LOS's comeback tendency and lean toward a 2-1 result with around 60% confidence.",
+      "stake": 320,
+      "scoreStake": 100
+    },
+    {
+      "player": "analyst-support",
+      "winner": "TLAW",
+      "score": "2-1",
+      "winProbability": 58,
+      "reasoning": "Both rooms are one loss from going home and both just survived with 2-0 wins, so this comes down to who stays steadier when it gets ugly. I trust CoreJJ's calm voice and a TLAW squad that closes out the leads it earns. LOS have real never-say-die grit, and that TSW comeback tells me this room doesn't tilt, so I expect them to steal a game by playing loose with nothing to lose.",
+      "usedLessons": [
+        {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:40.698525Z"
+        },
+        {
+          "blobId": "PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE",
+          "text": "Support lesson: I'm keeping my belief that chemistry and morale decide series, but I misread the evidence: early-game stats like first blood and first tower measure how a team starts, not how it holds together when it's behind. Next time I'll look for how a room responds under pressure, such as comebacks, tilt recovery and roster stability, and trust a never-say-die streak over a smooth opening. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:51:10.998426Z"
+        },
+        {
+          "blobId": "mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk",
+          "text": "Support lesson: A team's steadiness shows up in what it does with an early lead, so next time I'll watch whether a squad converts early leads into objectives, like G2's first-fifteen-minute towers, and not just whether the mood in the room sounds calm. I should also hold my claim loosely, because a Bo1 win can come from one player or a single draft just as easily as from a locker room I can't see inside. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:24:07.830651Z"
+        },
+        {
+          "blobId": "VAr4gTeofj-Z9qwEt0fEV5_ck8fo0uh0B18gOrs1OAs",
+          "text": "Support lesson: When my read of the room clearly favors a team, as with CoreJJ's steady voice in a must-win spot, I shouldn't drop it just because early play doesn't show the mood. Calm under a 0-2 deadline is the chemistry signal I exist to price. A flagged region gap is still a very big factor, so I should weigh the two openly and side with the gap only when I see real cracks in the other room, not by default. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:50:30.534811Z"
+        },
+        {
+          "blobId": "8RBzjuDmHfa4cyQz0SYELfc4KeFuhg2dfNzS38pwzbE",
+          "text": "Support lesson: When two teams are both hurting from an opening loss, a \"steadier room\" isn't an edge unless I can see which one bounces back. A team that has already beaten a rival in its head, like TES with AL, can turn that doubt into momentum, so I should weigh how each room handles pressure in this matchup and not just how settled they look. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:19:56.412293Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:33:17.459Z",
+      "thinking": "I'm tracing TLAW's Swiss stage results: they lost to CFO, lost to BLG, then beat AL 2-0, trying to piece together their record heading into this match against LOS.\n\nLooking at LOS, they lost to T1 and G2, then clawed back from a big gold deficit to beat TSW 2-0, putting both teams at 1-2 in an elimination match. Comparing the underlying numbers, TLAW shows stronger form overall—better gold differential at 15, higher first-tower rate, and a better recent win record—while LOS's strength lies more in resilience and comebacks than consistent early-game execution.",
+      "stake": 380,
+      "scoreStake": 110
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095077\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":100},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":320,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"MHirs9o43SBCsTnxVK20PBHj6s609ASTeGajWxPeX5A\",\"ivf7-Z6ZwzYkojYoSxEYE7p02pboDqXNYIIePJBjKsY\"],\"thought\":\"573cf9dd19db06df8c38a1892324f1fe650de075f3139487895865e480acbb51\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":450,\"lessons\":[\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"L-55HQD07z6caLWM8ywpQDPN0fZ_ysAEBoAuaz7qkSw\"],\"thought\":\"11c96a526b47592ae69d3aff6b1df27bd48e1278760f5e8477f82bcf916b1174\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":90},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":300,\"lessons\":[\"Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8\",\"r0DI--Tk-uBtoVo6VF2Utu35iWrELZQmmHF2uMajXRI\",\"t7waSsYemFyp8LDmQiBl3R089phOoqHfGDUsZhiLQ7c\"],\"thought\":\"8859a16cd6ce2ee75fa40bce4d640142195e9f6841d5eb42831078af8baa00f2\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":110},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":380,\"lessons\":[\"8RBzjuDmHfa4cyQz0SYELfc4KeFuhg2dfNzS38pwzbE\",\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE\",\"VAr4gTeofj-Z9qwEt0fEV5_ck8fo0uh0B18gOrs1OAs\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\"],\"thought\":\"ec45e3d091b3c2b01b4d35b8e2feb93bf0b584c1b801401abcc1cd8ebde377e7\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":80},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"TLAW\",\"stake\":250,\"lessons\":[\"De35UrKr3hWkmFisIYgNwLWHneajHNWq9H-D-B4HsKI\",\"I2uJDpQF7TOyNyhFl-Sb7vS4ZP40k8I0lifb1fVScbE\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"NVAk98ArGDUeLNFjwcK_-UfzLFDV984AEkVd9-oFCsQ\"],\"thought\":\"00b6b894089d1ac22af9661fd1cd808f14efc2b9c989950cf4c460bb24bfcf16\"}]}",
+  "batchHash": "d570d71046fd764e878281202eeac779efd886aab40254e47fc5687a5684cf5d",
+  "commitDigest": "EiTfQpvTPaNNw5gFFpj9rwYBiFeb7zcFjCG6VioFqYPM",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: TLAW vs LOS (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 23-12, games 59-34 | last 10 (newest first) WLLWWWWLWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · Worlds 2026 1-2 · vs other regions 3-4\n  Last 24 games (17-7): GD@15 +1.1k, FB 54%, FT 75%, FD 63%, dragons 57%, 33.7 min avg, 1st baron 28:36\n  Leads @15 converted 11/11, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Worlds 2026 4 games (2-2): GD@15 +1.2k, FB 50%, FT 75%, FD 50%, dragons 45%, 37.8 min avg, 1st baron 30:24\n  Picks: TOP Camille 4, K'Sante 4, Ambessa 2 | JG Pantheon 5, Lee Sin 4, Jarvan IV 3 | MID Syndra 4, Ahri 3, Galio 3 | BOT Lucian 5, Ezreal 4, Ashe 3 | SUP Nami 4, Karma 3, Rakan 3\n  Standout: TLAW CoreJJ (support) KDA 6.9 over 24 games, 7% dmg share\nLOS [CBLOL]: 2026 series 25-13, games 57-38 | last 10 (newest first) WLLWWWWLWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · Worlds 2026 1-2 · vs other regions 2-4\n  Last 24 games (14-10): GD@15 +0.5k, FB 42%, FT 63%, FD 38%, dragons 47%, 32.9 min avg, 1st baron 27:48\n  Leads @15 converted 8/11, comeback wins 3, throws 0, objectives taken while 1k+ behind 14\n  Worlds 2026 4 games (2-2): GD@15 -0.8k, FB 25%, FT 25%, FD 25%, dragons 35%, 35.3 min avg, 1st baron 30:30\n  Picks: TOP Gnar 4, Jayce 3, Kennen 3 | JG Pantheon 6, Wukong 5, Jarvan IV 3 | MID Orianna 5, Ryze 4, Galio 3 | BOT Ashe 3, Kalista 3, Sivir 3 | SUP Alistar 3, Seraphine 3, Bard 2\n  Standout: LOS Ackerman (support) KDA 5.3 over 24 games, 8% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -4.3k at 22:00 vs TSW (Worlds 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LCS vs CBLOL: LCS went 1-4 against CBLOL in 2026; LCS 35% vs CBLOL 36% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  LOS (CBLOL): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

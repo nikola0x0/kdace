@@ -1,0 +1,199 @@
+{
+  "series": {
+    "matchId": "115660540726095073",
+    "startTime": "2026-10-29T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "CFO",
+    "teamB": "KC",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "KC",
+      "score": "2-1",
+      "winProbability": 68,
+      "reasoning": "Skill first: POUT on Akali is the one player here who can single-handedly steal a game, and I'm not pretending otherwise after TLAW and CFO showed what a carry can do. But Caliste's bot lane and Canna's top lane give KC more ways to take a lane and hold it across five roles, and the LEC-over-LCP gap is flagged big, so I'm backing the stronger roster. POUT drags it to three, but the series stays with KC.",
+      "usedLessons": [
+        {
+          "blobId": "Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg",
+          "text": "Top lesson: Individual skill still wins series, but I overrated one star and ignored the matchup around him: a jungler's edge only counts if his lanes give him something to work with, and POUT showed that a top laner who can win his own lane and take over fights can cancel it. Next time I'll compare the players across all five roles, and when the whole board agrees on one side, I'll take that as a reason to look harder at the other team's best individual, not as comfort. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:21:32.122735Z"
+        },
+        {
+          "blobId": "a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M",
+          "text": "Top lesson: I still trust the stronger players, but I tallied small lane edges like Canna's and Caliste's and let them outweigh the one player who can single-handedly break a game. Next time I'll ask which side has the best carry and what happens when he takes over, and I won't lean on a region read to cover for that. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:24:42.117538Z"
+        },
+        {
+          "blobId": "Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg",
+          "text": "Top lesson: BLG's win backed my belief that stronger individual players win series, but I got there partly by leaning on the region gap, and that gap only counts when the scouting report flags it as big. Next time I'll start from the lane matchups (who can take a lane and hold it, as Viper, Bin and Knight did) and check the region flag separately, without quoting percentages unless the report calls the gap big. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:48:39.717795Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:31:16.585Z",
+      "thinking": "I'm weighing this matchup between CFO and KC, noting the LEC-LCP region gap favors Karmine Corp with its Canna, Yike, Vladi, Caliste, Busio lineup, while trying to recall CFO's current roster for comparison.\n\nBoth teams seem to be at similar records in Swiss stage, each with wins and losses against ranked opponents like TLAW, MKOI, T1, AL, LYON, and BLG. I'm reminding myself that when the whole board leans toward one team, it's worth scrutinizing the underdog's best individual performer more closely — in this case, POUT could be CFO's standout mid laner worth factoring in, even as the region gap and bot lane comparison between Caliste and Doggo push me toward picking KC.\n\nSettling on KC winning 2-1, with POUT's Akali as a wildcard that could steal a single game, so probability sits around 68%. I'll ground this pick in the lessons about checking the opposing team's best individual carry and treating region strength as a separate factor.",
+      "stake": 920,
+      "scoreStake": 280
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "KC",
+      "score": "2-0",
+      "winProbability": 72,
+      "reasoning": "It's all tempo, and KC are the cleaner early-map team: Canna and the Lee Sin/Vi/Jarvan pool get to Herald and first tower on schedule, while CFO keep arriving to the first dragons a step late despite the Naafiri and Akali blood threat. The LEC-over-LCP gap is the baseline, and the flip trigger is simple: if POUT gets mid priority, Naafiri skirmishes over the first dragon and CFO bank Herald plus the first tower, KC's habit of handing leads back wakes up and we get a game three.",
+      "usedLessons": [
+        {
+          "blobId": "m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk",
+          "text": "Jungle lesson: KC's early-map control (first tower, a gold lead by 15) beat AL's LPL badge once again, so in future Bo1s I'll weight who actually wins the first 15 minutes, and recent head-to-head tempo like that 2-0 at EWC, above league reputation. I'll still treat early control as the lens, but I'll back it harder when the opponent keeps drifting through the opening and gives away the map. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:12:07.921215Z"
+        },
+        {
+          "blobId": "G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE",
+          "text": "Jungle lesson: I treated TLAW's early-tempo edge as a given when it was only a projection from Josedeodo's pathing. The first fifteen minutes still decide everything, but next time I'll check whether the opponent has early-game tools (e.g. CFO's Naafiri and Akali picks for early blood) that can contest the first dragons and tower, and drop my confidence when they do. I won't assume the \"better\" jungler wins that race by default. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:00.903833Z"
+        },
+        {
+          "blobId": "Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE",
+          "text": "Jungle lesson: Tempo is still king, but a region badge isn't tempo. I have to check which side actually converts the first 15 minutes into Herald, dragon and towers, and not just who gets the early lead. When I spot a real early-pressure threat on the other side, like LYON's, and a habit of giving leads back on mine, like KC's, I should cut my confidence instead of writing it off as a footnote. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:09.552626Z"
+        },
+        {
+          "blobId": "0xCJMJCTnTM6Gn-nxgq5LSY79eBR3mhLEEVvpeMf_s4",
+          "text": "Jungle lesson: My tempo read was right, but I only named one trigger (Elyoya forcing early skirmishes) and should have tied it to concrete first-15 markers like first dragon, Herald and who gets lane priority. Next time I'll check whether the opposing early-blood picks, like Naafiri and Akali, can actually get the priority they need to use that pressure, and set my confidence on that rather than on the jungler alone. (from Swiss CFO vs MKOI; picked MKOI, actual MKOI 1-0)",
+          "createdAt": "2026-10-26T06:20:50.147344Z"
+        },
+        {
+          "blobId": "yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0",
+          "text": "Jungle lesson: The early map is still what decides games, but my flip trigger worked best because it was specific (KC taking the first Herald and first dragon off a jungle skirmish), so I should keep naming a concrete early-tempo trigger like that in every call. I should also treat a flagged region gap as the baseline for who should win the early game, and then check whether the early objective data confirms or contradicts it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:06.207592Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:31:15.837Z",
+      "thinking": "I'm weighing KC against CFO in a Bo3—LEC looks stronger overall, and KC's early-game numbers (GD@15, first tower rate) are solid, though they have a reputation for throwing leads. CFO's weaker first blood/tower rates and poor Worlds first tower record are concerning, but their Naafiri/Akali picks give them some threat potential.\n\nGiven the region gap and KC's lead conversion history, I'll pick KC 2-0 as the most likely outcome, with CFO's early aggression as the flip trigger if they grab early Herald/dragon control.",
+      "stake": 1240,
+      "scoreStake": 370
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "KC",
+      "score": "2-0",
+      "winProbability": 68,
+      "reasoning": "Fearless Draft is a pool war, and POUT's Akali, Viktor and Ryze will get picked or banned out of the series by game 2, while KC's settled book (Lee Sin/Vi/Jarvan, Caliste's carry picks, Viktor and Ryze backups) keeps giving them playable drafts. The LEC-over-LCP gap is the tiebreaker on top of that draft read, and I'm trimming my confidence because POUT on a comfort pick can steal a game and KC has a habit of throwing leads. If CFO lock Akali early and leave Caliste's comfort picks open, I'd flip.",
+      "usedLessons": [
+        {
+          "blobId": "mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg",
+          "text": "Mid lesson: Pool depth on paper isn't the same as draft leverage; under Fearless, a star's signature comfort picks (POUT's Akali, Viktor, Lucian) can matter more than the number of \"comfortable\" options a team has. Next time I'll check who actually wins the contested picks and whether the opponent's star can be shut out, rather than assuming breadth beats a few high-impact pools. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:22:25.056615Z"
+        },
+        {
+          "blobId": "th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o",
+          "text": "Mid lesson: In a Bo1, the draft decides the game, so I'll keep naming the exact picks and bans that would flip me (Ryze or Lee Sin priority, a free Caitlyn) and check whether they actually happened, rather than crediting the draft because the pick won. When the pools are close, a flagged BIG REGION GAP is a legitimate tiebreaker that sits on top of the draft read and never replaces it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:32.534459Z"
+        },
+        {
+          "blobId": "O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w",
+          "text": "Mid lesson: Bench depth only matters if it's the star's comfort picks that get through draft, so next time I'll check whether the opponent's carry, like Caliste on Ryze or Viktor, can be left open or denied, and weight that carry's current form heavily in a Bo1. I also won't use region strength as a tiebreaker unless the scouting report flags a big gap, and will let the draft and star matchup decide instead. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:12:34.932716Z"
+        },
+        {
+          "blobId": "0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU",
+          "text": "Mid lesson: Draft and champion pools still decide series, so when my own draft read names a concrete failure path, like Caliste forced off his comfort pick or Berserker getting Lucian or Yunara with an Alistar engage, I have to treat it as a main variable and not a footnote under the region gap. The gap sets my starting lean, but I should trim my confidence until the draft shows my star player's pool is secure and the opposing star's win condition is contained. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:33.950794Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:31:18.007Z",
+      "thinking": "I'm weighing KC's draft pool against POUT's contested champions like Akali, Viktor, and Ryze, thinking through how Fearless Bo3 draft rules force signature picks to be burned after game one, which could shift priority in later games.\n\nLooking at recent results, CFO's form has been shaky — they only clearly beat TLAW, losing to MKOI and T1 — so I'm leaning toward KC favored around 70%, with 2-0 slightly more probable than 2-1 given the math on series win probabilities, even though KC has shown some tendency to throw leads.\n\nRunning the math confirms 2-0 is still the more likely outcome than 2-1 even with a close game probability, so I'll settle on 2-0 as my final pick, keeping the reasoning brief and avoiding too many raw numbers in the explanation.",
+      "stake": 890,
+      "scoreStake": 270
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "KC",
+      "score": "2-0",
+      "winProbability": 76,
+      "reasoning": "Kaiser-style patience from KC's lane-and-tower game should be enough here, because a Bo3 gives them room to shake off the odd leaky lead that cost them against LYON. CFO have POUT's Akali and Viktor and a real habit of snatching objectives from behind, but the LCP is 0-5 against the LEC this year and KC are 10-4 at this Worlds, so two independent numbers agree and I'm comfortable leaning on KC without going overboard.",
+      "usedLessons": [
+        {
+          "blobId": "kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM",
+          "text": "ADC lesson: A correct pick isn't proof the numbers were fully read. I leaned on BLG's 51-13 series record and the region gap but waved away KC's 10-3 in games, so next time I should weigh that Worlds sample and BLG's MKOI loss explicitly, even when the pick holds. Numbers over stories means that when the evidence points both ways, I keep my confidence moderate in a Bo1 and don't dismiss the contrary data once the result lands. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:50:51.977346Z"
+        },
+        {
+          "blobId": "jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4",
+          "text": "ADC lesson: A 9-4 versus 4-6 split is only 23 games, so I should treat it as a strong lean rather than a verdict, and check it against game-length tendencies and how often KC have thrown leads before pricing a Bo1. When the whole board lands on the same 63-68% from the same region numbers, that's one data point repeated five times, so I'll keep my confidence near the low end unless a second independent number backs it up. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:26:03.032025Z"
+        },
+        {
+          "blobId": "4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA",
+          "text": "ADC lesson: Numbers over stories held up here: the 33-20 vs 13-15 series gap and the flagged LCK-over-LCP region gap pointed the right way. I was right to cap at the high 60s in a Bo1 and not let the clean result tempt me into more confidence. Next time I'll keep treating Bo1 variance as a number to price in, and weigh early-game tendencies like T1's 32% first blood as a measured risk instead of a story. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-26T17:52:52.890505Z"
+        },
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:31:16.120Z",
+      "thinking": "Looking at CFO vs KC, KC is clearly the stronger side with a 41-17 series record, 90-51 games, and a major region gap between LEC and LCP, while CFO sits at 13-16 with just 1-2 at Worlds. Since this is Bo3, variance is lower than Bo1, so I can lean into that gap with reasonable confidence.\n\nI'm landing on KC with a win probability around 76%, with 2-0 as the modal scoreline since KC's per-game win rate squares out higher than a 2-1 split. I'm weighing lessons about avoiding overconfidence in Bo1-style reasoning, confirming the region/series gap with independent data points, and noting the small-sample caveat around CFO's decent lead-conversion rate and KC's tendency to throw some leads despite still winning through towers and gold differential.\n\nFor the final writeup I'll keep it to one or two punchy sentences, lean on a couple contrasting numbers like LCP's 0-5 mark against LEC versus KC's 10-4 Worlds record, and skip rehashing the full scouting breakdown.",
+      "stake": 1670,
+      "scoreStake": 500
+    },
+    {
+      "player": "analyst-support",
+      "winner": "KC",
+      "score": "2-1",
+      "winProbability": 64,
+      "reasoning": "Both rooms are on the elimination edge, but KC's is the one I trust: they clawed back from a seven-thousand-gold hole at this Worlds, and Caliste gives them a calm, confident center to play around. CFO have nothing to lose and will play loose, so I'm keeping my confidence down and giving them a game, but the LEC-over-LCP gap is too big for bite alone to carry them, and KC's cracks only show if they get nervous protecting a lead.",
+      "usedLessons": [
+        {
+          "blobId": "U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY",
+          "text": "Support lesson: When I read a team's chemistry and morale, I should weigh what I see in the actual game against my read of their character. CFO's past collapses were evidence about their mood, but the chemistry call only holds if I also check the current signals, like roster stability, how they were playing lately, and whether those lead-throwing games were still shaping their confidence. I'll keep trusting that the team decides it, but I'll hold my read of a side's nerves more loosely and lower my confidence when the story I'm telling is one every other analyst also tells. (from Swiss TLAW vs CFO; picked TLAW, actual CFO 1-0)",
+          "createdAt": "2026-10-23T23:23:16.190024Z"
+        },
+        {
+          "blobId": "rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE",
+          "text": "Support lesson: A win doesn't prove I read the room correctly, so I should name the specific signals behind a \"bruise, not ghost\" call, such as comms after a loss, how the team recovers in the early game, and whether the coaching staff changed anything, and not let a region gap or a record carry the pick. CFO's loose, skirmish-heavy opening showed that a team with nothing to lose has real mood-driven bite, so I should price that freedom into my confidence instead of only trusting the calmer room. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-26T17:53:22.055801Z"
+        },
+        {
+          "blobId": "4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE",
+          "text": "Support lesson: The room still decides games, but one comeback doesn't prove a team's chemistry holds in every situation. Next time I'll check whether the mood fits the stress I'm predicting, like KC protecting a lead or Caliste on a pick he doesn't trust, and cut my confidence when that crack is live. I'll also give a calm, trusting room like LYON's, rallying around Berserker, as much credit as the favorite's steadiness. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:26:29.099266Z"
+        },
+        {
+          "blobId": "n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk",
+          "text": "Support lesson: My read on the room was right, but I should lean on concrete signs of cohesion, like how a team recovered from a deficit or how it handled a prior head-to-head, rather than a general sense of steady mood, and I should state those signs plainly. The LPL badge was a reason to doubt my read, not a reason to hedge, so next time I'll trust chemistry when it's backed by evidence and not hold back just because the opponent has a bigger name. (from Swiss AL vs KC; picked KC, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:13:27.512817Z"
+        },
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        }
+      ],
+      "pickedAt": "2026-10-26T23:31:18.369Z",
+      "thinking": "Weighing CFO vs KC for this Swiss Bo3, the region gap favors LEC over LCP, making KC the stronger side overall. Both teams carry some lead-throwing history, but KC's resilience—like rallying from a big deficit against C9—and solid Worlds record give them the edge.\n\nI'll settle on 2-1 for KC at around 64% to hedge for CFO's scrappiness, drawing on the lessons about reading both teams' mood, KC's composure protecting a lead live, trusting chemistry backed by evidence over big names, CFO's tendency to collapse loosely, and CFO playing with freedom from pressure.",
+      "stake": 970,
+      "scoreStake": 290
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095073\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":500},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1670,\"lessons\":[\"4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"67c11cf934ed4be37359eb25b9f0d525fd85e7c0d0f8d45412e9ae744a617c34\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":370},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1240,\"lessons\":[\"0xCJMJCTnTM6Gn-nxgq5LSY79eBR3mhLEEVvpeMf_s4\",\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"f236e1ec2da275d0b1a619060edf3cbf1669620a63a92e57a66e865862b30e30\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":270},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":890,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"dbcf17be0bff81d733bfd494340436bac929e7dc9b4026f3c402556e026573a4\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":290},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":970,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk\",\"rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE\"],\"thought\":\"2d99ccdeb0b84e4f1c94f041a5785e7e91ab28d1f462b0c988100454fcea1d3f\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":280},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":920,\"lessons\":[\"Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M\"],\"thought\":\"6c610f36cbb41e47bc0064ef1ea8d41fec2058526735a32f85ac659f5d93e696\"}]}",
+  "batchHash": "7316e9290d8766cd830941ae1c9af50b57e5eca11de3a9d4686c200177171fc1",
+  "commitDigest": "9k15JjbgZuseWGzBwVqmr4czJEXgouBA3LNHi6jzfbai",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: CFO vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nCFO [LCP]: 2026 series 13-16, games 38-44 | last 10 (newest first) LLWLWLWWWW\n  LCP 2026 12-14 (lost final) · Worlds 2026 1-2 · vs other regions 1-2\n  Last 23 games (12-11): GD@15 -0.2k, FB 61%, FT 43%, FD 35%, dragons 50%, 31.9 min avg, 1st baron 26:48\n  Leads @15 converted 5/6, comeback wins 1, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 3 games (1-2): GD@15 +0.0k, FB 67%, FT 0%, FD 33%, dragons 54%, 32.7 min avg, 1st baron 31:00\n  Picks: TOP Rumble 4, Jayce 2, K'Sante 2 | JG Naafiri 4, Poppy 3, Lee Sin 2 | MID Akali 5, Viktor 4, Ryze 3 | BOT Lucian 5, Caitlyn 2, Kai'Sa 2 | SUP Lulu 5, Milio 4, Alistar 3\n  Standout: CFO POUT (mid) KDA 4.1 over 23 games, 25% dmg share\nKC [LEC]: 2026 series 41-17, games 90-51 | last 10 (newest first) LLWWWWLLWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 4-2 · vs other regions 9-6\n  Last 34 games (22-12): GD@15 +1.2k, FB 62%, FT 62%, FD 50%, dragons 53%, 33.7 min avg, 1st baron 26:00\n  Leads @15 converted 15/18, comeback wins 1, throws 5, objectives taken while 1k+ behind 7\n  Worlds 2026 14 games (10-4): GD@15 +1.2k, FB 36%, FT 64%, FD 29%, dragons 54%, 34.1 min avg, 1st baron 26:12\n  Picks: TOP Rumble 8, Ambessa 5, Jayce 5 | JG Lee Sin 7, Vi 6, Jarvan IV 5 | MID Viktor 6, Ryze 5, Cassiopeia 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.5 over 34 games, 28% dmg share\nHead-to-head 2026: none\nKey moments:\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.1k lead (22:00) vs LYON (Worlds 2026)\nFun facts:\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LCP vs LEC: LCP went 0-5 against LEC in 2026; LCP 27% vs LEC 48% against other regions overall.\n  BIG REGION GAP: LEC is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  CFO (LCP): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

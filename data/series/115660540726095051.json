@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -167,13 +167,92 @@
   "batch": "{\"matchId\":\"115660540726095051\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":1100,\"lessons\":[\"MwDyjT7Ma4wSz3ZBbUMl67iMtIh7BMz_4yIUOfpN4js\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA\"],\"thought\":\"090e10baacbd36ea5318f618acc9dd8c229def22070ce2f7837c63150d252945\"},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":880,\"lessons\":[\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"56c818701809fe4646e5fcff75175ce3c5b867d1857155d96be906cc26236423\"},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":530,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"V8CKzCAaM4YDtzXUHiT-BgHT47AMNzGMIx8BSiFIuJc\",\"hH_q-bpk5kwrHZ27doQU6R4mUVNnfucj2Ply3jpHtvI\"],\"thought\":\"9b74b977b98f22083e671d17911e4061e43cf5aa1a90c74e33312fd8c57c2d85\"},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":960,\"lessons\":[\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"UqkrEaQKo5T1VhYSfnge0KPwEZV5vrfwSf0WIZRH9As\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"6ac1f3af0f635aa6f88b07ca3e6e566ab5a2347014d6e712c21d669e74a590a0\"},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":620,\"lessons\":[\"5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U\",\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"96ab578a80af6ecb7f581d713910760ff4fb2804b5849bd207b2b27f81ffac6b\"}]}",
   "batchHash": "595781174264b1241b2178fa0010a7b343b49f377f6f5d7593f0d9d3ba7940fb",
   "commitDigest": "H8zTBbP9R5wWu7DTmv8yH2L8537FTQL9uihnjipQtT4X",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "BLG",
+    "score": "1-0",
+    "resultDigest": "DfAtHNY8nwuM1SVpfXMgCwAJq4WDq4UdpkAmVijp3BPV"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Told you, trust the individual talent. Viper, Bin and Knight held their lanes, and I didn't need the crowd's help to say BLG, so I'll take the 1-0.\n\nJungle: Fine, you were right, but my tempo read got there first. BLG turned small early leads into dragons and towers, and KC never got the Herald-plus-dragon skirmish that would have flipped me.\n\nMid: Draft was the whole game, as always. BLG got their priority picks and didn't let Ryze and Lee Sin snowball, which is exactly the fix I was watching for after the MKOI slip.\n\nADC: The numbers did their job, 51-13 and a big region gap, so I'm happy to take the 64% win and ignore KC's 10-3 record for tonight. A Bo1 will still make everyone nervous, though.\n\nSupport: The steadier room won, and I'll take the credit. BLG reset after the MKOI loss and didn't spiral, but KC's loose group deserves a hug, because it's hard to fault them for the effort.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: BLG's win backed my belief that stronger individual players win series, but I got there partly by leaning on the region gap, and that gap only counts when the scouting report flags it as big. Next time I'll start from the lane matchups (who can take a lane and hold it, as Viper, Bin and Knight did) and check the region flag separately, without quoting percentages unless the report calls the gap big. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+      "blobId": "Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg",
+      "jobId": "6c618ec0-c9d7-4d25-b9c3-db9ef6bcd2b4"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: The early map is still what decides games, but my flip trigger worked best because it was specific (KC taking the first Herald and first dragon off a jungle skirmish), so I should keep naming a concrete early-tempo trigger like that in every call. I should also treat a flagged region gap as the baseline for who should win the early game, and then check whether the early objective data confirms or contradicts it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+      "blobId": "yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0",
+      "jobId": "911d6eb7-2143-43d4-a822-452fcd12b3e2"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: In a Bo1, the draft decides the game, so I'll keep naming the exact picks and bans that would flip me (Ryze or Lee Sin priority, a free Caitlyn) and check whether they actually happened, rather than crediting the draft because the pick won. When the pools are close, a flagged BIG REGION GAP is a legitimate tiebreaker that sits on top of the draft read and never replaces it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+      "blobId": "th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o",
+      "jobId": "1a8ea741-2d62-4745-a105-e75426c5b78f"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A correct pick isn't proof the numbers were fully read. I leaned on BLG's 51-13 series record and the region gap but waved away KC's 10-3 in games, so next time I should weigh that Worlds sample and BLG's MKOI loss explicitly, even when the pick holds. Numbers over stories means that when the evidence points both ways, I keep my confidence moderate in a Bo1 and don't dismiss the contrary data once the result lands. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+      "blobId": "kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM",
+      "jobId": "c614e20e-7162-421a-b64e-af1ce61c9805"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: The room matters, but I should name the specific signs I'm reading (how a team resets after a loss, whether they stay calm after an early deficit, whether roster or coaching changes are bedding in) rather than calling a group \"steadier\" after the fact. When the scouting report flags a big region gap, I'll treat it as a major factor and check whether the room-based story agrees with it, instead of letting a warm read about the underdog's mood talk me into or out of a pick. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+      "blobId": "aTRFvh1HbuDbucs9HOKScnPgWADEKaKOCl85YHCrMms",
+      "jobId": "00ab83d6-bf60-48b5-afe6-12021ff2e69c"
+    }
+  ],
   "scout": "Scout: BLG vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nBLG [LPL]: 2026 series 51-13, games 126-53 | last 10 (newest first) WLLWWWWWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 1-1 · vs other regions 9-3\n  Last 22 games (15-7): GD@15 +1.2k, FB 50%, FT 64%, FD 50%, dragons 54%, 32.3 min avg, 1st baron 24:30\n  Leads @15 converted 9/10, comeback wins 0, throws 2, objectives taken while 1k+ behind 5\n  Worlds 2026 2 games (1-1): GD@15 -0.8k, FB 50%, FT 50%, FD 50%, dragons 44%, 35.3 min avg, 1st baron 31:00\n  Picks: TOP Camille 5, Jayce 4, Ambessa 3 | JG Jarvan IV 4, Pantheon 4, Lee Sin 3 | MID Orianna 4, Aurora 3, Syndra 3 | BOT Yunara 6, Ashe 5, Kalista 3 | SUP Lulu 6, Karma 3, Renata 3\n  Standout: BLGViper (bottom) KDA 6 over 20 games, 31% dmg share\nKC [LEC]: 2026 series 41-16, games 90-50 | last 10 (newest first) LWWWWLLWWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 4-1 · vs other regions 9-5\n  Last 33 games (22-11): GD@15 +1.2k, FB 64%, FT 64%, FD 52%, dragons 53%, 33.6 min avg, 1st baron 26:00\n  Leads @15 converted 15/18, comeback wins 1, throws 5, objectives taken while 1k+ behind 5\n  Worlds 2026 13 games (10-3): GD@15 +1.3k, FB 38%, FT 69%, FD 31%, dragons 54%, 33.9 min avg, 1st baron 26:12\n  Picks: TOP Rumble 7, Ambessa 5, Jayce 5 | JG Lee Sin 6, Vi 6, Jarvan IV 5 | MID Ryze 5, Viktor 5, Cassiopeia 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.5 over 33 games, 28% dmg share\nHead-to-head 2026: none\nKey moments:\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\n  - BLG took Elder at 30:54 while down 3.5k vs MKOI (Worlds 2026), lost\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.1k lead (22:00) vs LYON (Worlds 2026)\nFun facts:\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\n  * Likely penta kill: KC Caliste (Caitlyn) at 33:28 (vs GX, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 21-8, LPL 13-9, LEC 15-15, LCS 6-13, CBLOL 4-9, LCP 4-9.\n  This matchup is LPL vs LEC: LPL went 5-4 against LEC in 2026; LPL 59% vs LEC 50% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  BLG (LPL): no Worlds titles; lost final 2024.\n  KC (LEC): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still back BLG's stronger players, but the whole pool is already on BLG and pays 1.00×, so extra AXP risks a loss for zero upside, and I'm not paying for that.",
+        "decidedAt": "2026-10-26T17:30:09.247Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says don't burn stake for nothing: KC's side is empty, so BLG pays 1.00× no matter how fast we snowball the map, which means extra AXP has zero upside and only risk if KC steals Herald and first dragon.",
+        "decidedAt": "2026-10-26T17:30:08.808Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "Nobody is on KC, so BLG pays 1.00× no matter how much I add: extra AXP can't earn anything if BLG wins and is gone if KC's Ryze-and-Caliste draft closes it, so my 530 stays and I stay out of the pool.",
+        "decidedAt": "2026-10-26T17:30:09.087Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With 0 AXP on KC the pool pays BLG backers 1.00×, so extra stake can only lose if KC pulls the Bo1 upset and can't earn anything if BLG wins, and my 64% edge needs a payout above 1.00× to be worth more risk.",
+        "decidedAt": "2026-10-26T17:30:10.003Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust the steadier BLG room, but with nobody on KC the pool pays 1.00× no matter what, so extra AXP risks everything for zero upside and I'm happy to hold.",
+        "decidedAt": "2026-10-26T17:30:09.385Z"
+      }
+    ]
   }
 }

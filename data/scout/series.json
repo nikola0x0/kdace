@@ -8500,5 +8500,57 @@
   "winsB": 2,
   "winner": "GEN",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095049",
+  "startTime": "2026-10-26T17:00:00Z",
+  "block": "Swiss",
+  "bestOf": 1,
+  "state": "completed",
+  "teamA": "T1",
+  "teamB": "CFO",
+  "winsA": 1,
+  "winsB": 0,
+  "winner": "T1",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095051",
+  "startTime": "2026-10-26T18:00:00Z",
+  "block": "Swiss",
+  "bestOf": 1,
+  "state": "completed",
+  "teamA": "BLG",
+  "teamB": "KC",
+  "winsA": 1,
+  "winsB": 0,
+  "winner": "BLG",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095053",
+  "startTime": "2026-10-26T19:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "TSW",
+  "teamB": "LOS",
+  "winsA": 0,
+  "winsB": 2,
+  "winner": "LOS",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095057",
+  "startTime": "2026-10-26T22:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "AL",
+  "teamB": "TLAW",
+  "winsA": 0,
+  "winsB": 2,
+  "winner": "TLAW",
+  "league": "Worlds 2026"
  }
 ]
