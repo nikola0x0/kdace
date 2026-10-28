@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-28",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "DK"
+      ],
+      "reasoning": "Stats don't win series, stars do, and BLG's lineup has the best lane-winners in the field. One loss to MKOI doesn't change that. Fade the GEN hype.",
+      "pickedAt": "2026-10-28T00:01:02.453Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "KC",
+      "probability": 9,
+      "contenders": [
+        "BLG",
+        "TLAW"
+      ],
+      "reasoning": "KC own the best early game on the board, +1.2k gold at 15 over 34 games, and the team that snowballs the first drake and jungle tempo wins the map before the mid-game even starts.",
+      "pickedAt": "2026-10-28T00:01:07.839Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "DK",
+      "probability": 14,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Fearless rewards the team that still has answers on game five, and DK's flexible picks across every role have already dismantled G2 and T1 in draft this week.",
+      "pickedAt": "2026-10-28T00:01:05.703Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "GEN tops the board on game win rate (92-33, about 74%) and is 7-1 against other regions, and they've already beaten IG and HLE here, so the numbers point to them.",
+      "pickedAt": "2026-10-28T00:01:05.085Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "DK",
+      "probability": 14,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "DK took down G2 and T1 on back-to-back days without blinking. That's a calm, connected room, and I'll back that over raw talent when the pressure hits.",
+      "pickedAt": "2026-10-28T00:01:04.457Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-28\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"DK\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"DK\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0}]}",
+  "batchHash": "b652cbf253648a41b469e93b15021dbf8b55c16692c9564b2632c90b0fa3ab8b",
+  "commitDigest": "AkJPzgCh57EFMDLAYGheNmiafvuB2fMszke1XUDYLNAG",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
