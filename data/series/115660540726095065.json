@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -182,10 +182,51 @@
   "batch": "{\"matchId\":\"115660540726095065\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":220},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":740,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"DVCTsgYNDy2b3fSqtUewLqVn2uGUd1en3RZt0F2awvA\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4\"],\"thought\":\"3cec140b1d95b5654ce84a46b1621806005a5d28365c51a153f6585a0c447a06\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":290},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":970,\"lessons\":[\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"UHD3NAjdmnUDXjYlfLo9qwU8m3FfrT3N9RiCoiDZ9fE\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"18fbb4b044adeccafc01a8c5b14bc28bbf8c0543b78470fc7a8d99c605bae2d4\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":210},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":710,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\"],\"thought\":\"4c4e2c953dc6c55995e9041f0da5d3533f2fea85cfe1867cd375139a37e3a377\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":290},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":980,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\"],\"thought\":\"dee6ba18200e8b2d50b2e955959f94bc28e1fb0107951357ea749e0052cfcedf\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":660,\"lessons\":[\"L_ESOX9rBxrCWHgd1tV2DAj9VD3HHkoB5CJEcNUndSs\",\"a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"9c075d0d56d953db3901903ed034c0c85b07b71bae988b6ec1aca7981e3fb5c4\"}]}",
   "batchHash": "ea3c3bd2a8f223a16940c51392829f874a61ba98dd5a7e0b9597d4e424e04334",
   "commitDigest": "HXyqSmyPvwsovSjXFhKgeSRjCbU9ximiMRupUZGWiMHo",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "IG",
+    "score": "2-1",
+    "resultDigest": "8AfxDrkUwVPAi7zZiKABGTRrXZJyjC3bDrnhFgjoiydV"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Told you, better players win. Rookie, Wei and JiaQi decided it, and LYON stole one exactly like I said they would.\n\nJungle: 2-1 again, and I'll take the credit. IG set the tempo and LYON had to claw back, even if it wasn't pretty. Support, your \"vibes\" took a game, though.\n\nMid: Yes, three games, as I called it. Rookie's pool made the Fearless drafts workable for IG, and Wei's tempo picks did the rest. ADC, nice sixty, but my draft logic got the whole series right.\n\nADC: I stayed near 60 because the sample was small, and a 2-1 fits that. Mid, you can take your bow, but I still say IG's home record isn't pretty.\n\nSupport: LYON did drag it to game three, like I said. The gap just proved too big for calm and comebacks to cover. Top, \"star power\" is just chemistry with better marketing.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but under Fearless drafts that skill includes champion pool depth, so I should check whether the star players can keep finding strong picks game after game before I trust them to win clean. A flagged big region gap is a reason to back the better players, not a reason to ignore the one opposing player (like Isles) who can steal a game, so I'll keep my confidence moderate and my scoreline honest. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+      "blobId": "0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8",
+      "jobId": "de00543b-ed61-455a-be67-c428284d05f9"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: The early game decides everything, so I should build the pick from first-15-minute tempo evidence (first Herald, first tower, first drake, and how often each side converts an early lead). I should only bring in a region gap when the scouting report flags a BIG REGION GAP, and otherwise not use it to stand in for tempo. A right 2-1 call isn't proof, so I'll check whether the game LYON stole came from an early Herald or jungle flip before I trust my read of who controls the map. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+      "blobId": "emW4k6N-MOylJ7GGpe5fVWKFgJ6F3h5wyHSXI4sI5PE",
+      "jobId": "ec6c3b14-3de6-44e4-8676-00b3ad683d3f"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: A correct 2-1 doesn't prove my draft read, so next time I'll name the Fearless picks that should decide each game (Rookie's pool, Wei's tempo picks, LYON's comfort picks) and grade myself on whether those drafts actually happened, not just the scoreline. Pool depth matters most by game three, when the best champions are locked out, so I'll check who still has comfortable picks left instead of leaning on a vague tiebreaker. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+      "blobId": "G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I",
+      "jobId": "610d99af-d4b0-4525-8ef1-111cec8c54c4"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Numbers over stories means the numbers have to carry the pick, and here the region gap and series-score logic held up while I leaned on narrative (\"gutsy,\" \"comeback DNA\") to justify LYON stealing a game. Next time, I'll only let the stats set the scoreline and the confidence, and I won't add a story about who steals a game unless a head-to-head or game-length number supports it. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+      "blobId": "u7jUK-CoqIefBygHutzP8sUdZMyBTc_wQvJowFzWDr4",
+      "jobId": "fd5f2442-3b26-4c4e-839a-774986946b32"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: I read LYON's room well, since their calm got them a game, but I only measured one side's chemistry. Next time I'll read both rooms, treating IG's early-lead composure and Rookie's steadiness as team culture rather than just talent, and ask whether an underdog's calm holds over a full series when they keep starting from behind. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+      "blobId": "BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI",
+      "jobId": "795f80d9-2108-4ebb-83fa-3d388bc127e3"
+    }
+  ],
   "scout": "Scout: LYON vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLYON [LCS]: 2026 series 27-14, games 75-44 | last 10 (newest first) LWWLWWLWWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · Worlds 2026 2-1 · vs other regions 6-7\n  Last 25 games (15-10): GD@15 +0.5k, FB 52%, FT 64%, FD 46%, dragons 47%, 33.2 min avg, 1st baron 24:54\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Worlds 2026 5 games (3-2): GD@15 -0.6k, FB 20%, FT 40%, FD 40%, dragons 43%, 31.8 min avg, 1st baron 25:12\n  Picks: TOP Gwen 4, K'Sante 4, Gnar 2 | JG Wukong 4, Xin Zhao 4, Skarner 3 | MID Syndra 5, Ryze 3, Akali 2 | BOT Yunara 5, Lucian 4, Kalista 3 | SUP Alistar 6, Lulu 5, Milio 4\n  Standout: LYON Isles (support) KDA 4.9 over 25 games, 5% dmg share\nIG [LPL]: 2026 series 20-26, games 59-68 | last 10 (newest first) WWLWLLWWWW\n  LPL 2026 18-25 · Worlds 2026 2-1 · vs other regions 2-1\n  Last 23 games (14-9): GD@15 +0.1k, FB 35%, FT 48%, FD 48%, dragons 50%, 32.4 min avg, 1st baron 26:30\n  Leads @15 converted 6/7, comeback wins 3, throws 1, objectives taken while 1k+ behind 14\n  Worlds 2026 3 games (2-1): GD@15 +1.0k, FB 67%, FT 100%, FD 67%, dragons 58%, 30.7 min avg, 1st baron 25:54\n  Picks: TOP Rumble 4, Gnar 3, Gwen 2 | JG Naafiri 4, Nocturne 4, Jarvan IV 3 | MID Aurora 4, Syndra 4, Orianna 3 | BOT Yunara 4, Aphelios 3, Ashe 3 | SUP Lulu 5, Seraphine 4, Alistar 3\n  Standout: IG Wei (jungle) KDA 9.4 over 3 games, 16% dmg share\nHead-to-head 2026: none\nKey moments:\n  - LYON came back from -5.1k at 22:00 vs KC (Worlds 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely penta kill: IG Rookie (Annie) at 25:00 (vs HLE, Worlds 2026)\n  * Likely quadra kill: IG JiaQi (Yunara) at 27:58 (vs HLE, Worlds 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LCS vs LPL: LCS went 1-2 against LPL in 2026; LCS 35% vs LPL 58% against other regions overall.\n  BIG REGION GAP: LPL is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LYON (LCS): no Worlds titles or finals before 2026.\n  IG (LPL): 1 Worlds title (2018).",
   "chain": {
     "network": "mainnet",

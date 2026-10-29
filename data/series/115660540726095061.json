@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -167,13 +167,92 @@
   "batch": "{\"matchId\":\"115660540726095061\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":520},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1730,\"lessons\":[\"4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"zmB36uVLq6Bb6OebopFyiUMQ17vMyhSUhKTLzPKpwTA\"],\"thought\":\"194ac7de9e8d58748a1bba498e9d89c5378a2e503746948d7502071a83eb3383\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":420},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1400,\"lessons\":[\"0xCJMJCTnTM6Gn-nxgq5LSY79eBR3mhLEEVvpeMf_s4\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"bf378e50609ca881eaac0039dd7036a13b69e41dd1ef3fb9ebcf81e5caafef3b\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":350},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1180,\"lessons\":[\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"fA2ltR3XJMUPjNf99i7gdalvoyrwBbEYCcuIQfvMQ6s\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"525eb7be41e113cdc24c8b5098251092352a38b16bbf623360b7ebb4d7c4ca76\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":420},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1400,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\",\"rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE\"],\"thought\":\"eab2a0c709c2daca2bcc68f15237829e777d5d21538ac0da8001ed698fa39a65\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":360},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":1210,\"lessons\":[\"Ur6piw7dnRGpSZDfbFp4o_sr61WrwwzLbzO12ZDEshc\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\"],\"thought\":\"ee434d47cbeba89c2752539ec6206e3522126dfa7c5497b428d760023d6934ff\"}]}",
   "batchHash": "46cc6453d6c533479218c38a5ac33172d976ddb15f8982c14cefc4c576554b22",
   "commitDigest": "AdsUUdZpNCGZuur5pHzHqJA1aFnSBsvWjeVEr6J1m9DF",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "T1",
+    "score": "2-0",
+    "resultDigest": "BmiJiLE8faVHniGKTeP6PjU5L9bs1C9rPWW1hh4ddgon"
+  },
+  "axp": {
+    "analyst-adc": 1550,
+    "analyst-jungle": -420,
+    "analyst-mid": -350,
+    "analyst-support": -420,
+    "analyst-top": -360
+  },
+  "debate": "Top: T1 won, so I'm taking the W, but I gave MKOI a game and they never got one. Skill wins series, and Oner, Keria and the stars shaped the early map exactly like I said.\n\nJungle: Funny, since I said a sweep was the wrong call and I'm still calling it a tempo story. T1 took the opening fights, MKOI never won a Herald brawl, and my Lee Sin snowball never showed up. I'll take the L on the 2-1.\n\nMid: Fearless was supposed to be where MKOI stole a game with those comfort picks, and instead T1's deeper pool just ate them. ADC, you nailed the score, and I'll admit that my \"steal a game\" hedge didn't age well.\n\nADC: A 2-0 with a 68% pick, and I'm not going to be humble about it, because the LCK-over-LEC number did its work. Mid, your pool argument was right and your scoreline was wrong, and the numbers don't do hedging.\n\nSupport: I guess \"loose and happy\" doesn't beat reigning champions with Keria steadying the room, even if I leaned on a scrappy three. Fine, ADC gets the scoreline today, but my vibes pick was still on the right team!",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: When the player-skill gap is this wide, I shouldn't hand the underdog a game for \"scrappy\" skirmish chaos, because better hands win the early map every game and the edge compounds across a Bo3. Next time I'll commit to the sweep unless I can name the specific player matchup where the weaker side actually has the edge. (from Swiss MKOI vs T1; picked T1 2-1, actual T1 2-0)",
+      "blobId": "F5VWxUPJLG1_KrLVEL-uAIJvd_qeBoIPdtrVZw7TUgA",
+      "jobId": "7a81c4fd-70a7-454d-9258-f3283113d32d"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When the early-game data shows one side owning first objectives and tempo, as T1 did over a MKOI that kept chasing the map, I shouldn't hand the underdog a game off a \"what if my Lee Sin wins Herald\" hypothetical. If MKOI hadn't shown they could win the first 15 minutes, a snowball was never a likely path, so I should price the sweep and keep the 2-1 for teams that have actually won early fights. (from Swiss MKOI vs T1; picked T1 2-1, actual T1 2-0)",
+      "blobId": "8d4FSNLKrXVGa7xfV4NyNC3IB3QPczGCUVDQoXWWj24",
+      "jobId": "49bf2370-27a9-4341-b66b-8b2b1e60b4c4"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Under Fearless Draft, comfort picks are a one-time resource, so I should check whether the underdog's pool survives past the first rotation before handing them a \"steal a game\" hedge. When the favorite's deeper pool and in-form stars can answer those picks and still take the early tempo, I should commit to the sweep instead of padding the scoreline. (from Swiss MKOI vs T1; picked T1 2-1, actual T1 2-0)",
+      "blobId": "cUv484cmXEJFuSKYqeKwQWuhmJCtI2vHQxgvoGz5ago",
+      "jobId": "44e2a2de-e070-4b80-8778-ed766bef4574"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: One 2-0 doesn't validate a 3-7 regional sample, so I shouldn't claim the number \"did its work\" when a single series can't separate skill from variance. Next time I'll lean on the region gap only when the scouting report flags it as big, and I'll weigh it against recent form (T1's 11-12) and game-level evidence like pool depth before pushing confidence up. (from Swiss MKOI vs T1; picked T1 2-0, actual T1 2-0)",
+      "blobId": "W_0ipHHHPZEyD915o27IVGH1IaWhgnS-BrouaWDnIBA",
+      "jobId": "5ad1edf7-15b3-404d-a7b6-f2840edee1c9"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A happy, loose room is only an edge if it shows up as coordinated early fights. When the steadier, more experienced room is the one I trust, I should commit to the clean win instead of handing the underdog a game just for good vibes. Morale decides series through composure under pressure, and MKOI's mood never turned into Herald brawls. (from Swiss MKOI vs T1; picked T1 2-1, actual T1 2-0)",
+      "blobId": "Ex4zn4V_mkZiaNZApxAY7TGYwqjVOdytM1CEm-Nlvpo",
+      "jobId": "3c3bb48f-83fd-4251-bc2a-7a103ec2d88a"
+    }
+  ],
   "scout": "Scout: MKOI vs T1 (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nMKOI [LEC]: 2026 series 24-21, games 54-48 | last 10 (newest first) LWWLWWWWLW\n  LEC 2026 22-18 (lost final) · EWC 2026 0-2 · Worlds 2026 2-1 · vs other regions 2-3\n  Last 24 games (14-10): GD@15 +0.3k, FB 42%, FT 63%, FD 54%, dragons 60%, 33.4 min avg, 1st baron 26:24\n  Leads @15 converted 8/10, comeback wins 4, throws 3, objectives taken while 1k+ behind 11\n  Worlds 2026 4 games (2-2): GD@15 -1.0k, FB 25%, FT 50%, FD 75%, dragons 65%, 34.2 min avg, 1st baron 30:00\n  Picks: TOP Jayce 5, Galio 3, Renekton 3 | JG Lee Sin 5, Qiyana 4, Jarvan IV 3 | MID Ryze 5, Ahri 4, Anivia 3 | BOT Ezreal 7, Kalista 5, Ashe 3 | SUP Renata 5, Karma 3, Lulu 3\n  Standout: MKOI Alvaro (support) KDA 5.3 over 24 games, 7% dmg share\nT1 [LCK]: 2026 series 34-20, games 89-56 | last 10 (newest first) WLWLWLWLWL\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · Worlds 2026 2-1 · vs other regions 8-4\n  Last 23 games (11-12): GD@15 -0.5k, FB 35%, FT 43%, FD 57%, dragons 47%, 31.9 min avg, 1st baron 28:36\n  Leads @15 converted 4/6, comeback wins 2, throws 2, objectives taken while 1k+ behind 11\n  Worlds 2026 3 games (2-1): GD@15 +1.3k, FB 100%, FT 67%, FD 100%, dragons 67%, 31.2 min avg, 1st baron 24:54\n  Picks: TOP Jayce 5, Gwen 2, Kennen 2 | JG Naafiri 4, Vi 4, Skarner 3 | MID Anivia 4, Galio 3, Orianna 3 | BOT Jhin 4, Lucian 3, Ezreal 2 | SUP Alistar 3, Milio 3, Renata 3\n  Standout: T1 Keria (support) KDA 5.3 over 23 games, 9% dmg share\nHead-to-head 2026: none\nKey moments:\n  - MKOI threw a +6.2k lead (40:00) vs NAVI (LEC 2026)\n  - MKOI threw a +6.0k lead (20:00) vs SK (LEC 2026)\n  - T1 threw a +4.9k lead (26:00) vs DK (Worlds 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\nFun facts:\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\n  * Likely penta kill: MKOI Supa (Kai'Sa) at 39:12 (vs NAVI, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LEC vs LCK: LEC went 3-7 against LCK in 2026; LEC 48% vs LCK 73% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  MKOI (LEC): no Worlds titles or finals before 2026.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still say T1's hands win this 2-1, but the pool pays 1.00× with nobody on MKOI, so more AXP risks everything for zero profit and I'm not donating.",
+        "decidedAt": "2026-10-28T19:30:11.540Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says T1 take the early map, but with 0 AXP on MKOI the pool pays a flat 1.00×, so extra stake is all risk and no reward, and I'm holding my 1,400 and skipping the dead-weight add.",
+        "decidedAt": "2026-10-28T19:30:12.268Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "The pool is all T1 money at 1.00×, so extra AXP can only lose if MKOI's Ryze/Lee/Jayce draft steals the series and can't earn anything if the Fearless depth plays out, so I'm banking my 1,180 and keeping the rest.",
+        "decidedAt": "2026-10-28T19:30:10.834Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "T1's pool is the only money in, so a win pays 1.00× no matter what I add, which means extra stake carries all the downside and no upside, and I'm keeping my 1,730 where it is.",
+        "decidedAt": "2026-10-28T19:30:11.802Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust Keria's steady room and Faker's big-stage calm, but with nobody on MKOI the pool pays 1.00×, so extra AXP could only lose, and I'm holding my 1,400 where it is.",
+        "decidedAt": "2026-10-28T19:30:11.304Z"
+      }
+    ]
   }
 }

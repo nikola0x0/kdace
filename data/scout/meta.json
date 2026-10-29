@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T10:20:05.057Z",
+ "generatedAt": "2026-10-29T10:37:25.270Z",
  "source": "lolesports official feeds (esports-api getSchedule/getEventDetails, feed livestats window/details)",
  "worldsTeams": [
   "AL",
@@ -24,9 +24,9 @@
  ],
  "perLeague": {
   "Worlds 2026": {
-   "series": 30,
-   "seriesAll": 30,
-   "games": 51
+   "series": 32,
+   "seriesAll": 32,
+   "games": 56
   },
   "MSI 2026": {
    "series": 20,

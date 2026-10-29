@@ -8552,5 +8552,31 @@
   "winsB": 2,
   "winner": "TLAW",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095061",
+  "startTime": "2026-10-28T20:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "T1",
+  "teamB": "MKOI",
+  "winsA": 2,
+  "winsB": 0,
+  "winner": "T1",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095065",
+  "startTime": "2026-10-28T23:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "LYON",
+  "teamB": "IG",
+  "winsA": 1,
+  "winsB": 2,
+  "winner": "IG",
+  "league": "Worlds 2026"
  }
 ]

@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-29",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "T1",
+      "probability": 19,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Stats are for people who can't watch lanes. T1 has Faker, Keria, Gumayusi and Oner, and that's the best collection of players who take games over alone, whatever the GD says.",
+      "pickedAt": "2026-10-29T00:00:05.301Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "KC",
+      "probability": 12,
+      "contenders": [
+        "BLG",
+        "TLAW"
+      ],
+      "reasoning": "Tempo is everything, and KC lead the field at +1.2k gold at 15 across 34 games, so they snowball the map before anyone else wakes up. Give me that jungle pathing!",
+      "pickedAt": "2026-10-29T00:00:05.344Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "T1",
+      "probability": 14,
+      "contenders": [
+        "GEN",
+        "DK"
+      ],
+      "reasoning": "Fearless strips comfort picks, and T1's bottomless pools plus Faker's draft reads are built for that. Their 2-0 over MKOI showed it, and GD@15 undersells them.",
+      "pickedAt": "2026-10-29T00:00:05.441Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "GEN tops the board on games won (92-33) and has the best record against other regions at 7-1. They're also unbeaten here, so I'll lean on that without overstating it.",
+      "pickedAt": "2026-10-29T00:00:04.481Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "T1",
+      "probability": 17,
+      "contenders": [
+        "DK",
+        "BLG"
+      ],
+      "reasoning": "T1 lost to DK, then rebuilt and beat CFO and MKOI 2-0; that's a room steadying itself under pressure, and I'll back that over GEN's clean record.",
+      "pickedAt": "2026-10-29T00:00:05.495Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-29\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0}]}",
+  "batchHash": "66c82f6bf0c09babea70464c92afe31f9dd56226e5b5d5957b4f17f155e02563",
+  "commitDigest": "3piAK9HK8sVPZf3WGy8WqnhFhNwymd1pkXVGPvyg9i98",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
