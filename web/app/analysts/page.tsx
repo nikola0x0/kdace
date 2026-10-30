@@ -26,7 +26,7 @@ export default async function AnalystsPage() {
             <div className="banner-top"><RoleIcon role={p.role} size={18} /><span>{p.role.toUpperCase()}</span></div>
             <div className="banner-info">
               <div className="banner-title">{p.title}</div>
-              <div className="banner-name display">{shortName(p)}</div>
+              <div className="banner-name display" translate="no">{shortName(p)}</div>
               <div className="banner-bal">
                 <b className="num bal" title="Balance: AXP free to bet"><Axp size={22} /> {s.balance.toLocaleString("en-US")}</b>
                 {s.inPlay > 0 && <span className="num muted" title="AXP in open bets">+{s.inPlay.toLocaleString("en-US")} in play</span>}

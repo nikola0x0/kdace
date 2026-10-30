@@ -80,9 +80,9 @@ export default function BetSlip() {
           {lockAt && <Countdown lockAt={lockAt} />}
         </div>
         <div className="slip-match">
-          <span><TeamLogo code={m.teamA} logo={m.logoA} /><b className="display">{m.teamA}</b></span>
+          <span><TeamLogo code={m.teamA} logo={m.logoA} /><b className="display" translate="no">{m.teamA}</b></span>
           <span className="vs">vs</span>
-          <span><b className="display">{m.teamB}</b><TeamLogo code={m.teamB} logo={m.logoB} /></span>
+          <span><b className="display" translate="no">{m.teamB}</b><TeamLogo code={m.teamB} logo={m.logoB} /></span>
         </div>
 
         {m.bestOf > 1 && (

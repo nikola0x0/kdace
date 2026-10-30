@@ -23,9 +23,9 @@ export default function TrashTalk({ banter, picks }: { banter: Banter; picks: Re
                 <Avatar name={p.name} color={p.color} art={art(`analyst-${p.role}`)} size={28} />
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-baseline gap-x-2 text-xs">
-                    <b className="text-sm" style={{ color: p.color }}>{shortName(p)}</b>
+                    <b className="text-sm" style={{ color: p.color }} translate="no">{shortName(p)}</b>
                     <span className="text-muted-foreground">on {picks[p.player]}</span>
-                    {to && <span className="text-muted-foreground">↳ {shortName(to)}</span>}
+                    {to && <span className="text-muted-foreground" translate="no">↳ {shortName(to)}</span>}
                   </div>
                   <p className="m-0 text-sm leading-snug">{c.text}</p>
                 </div>

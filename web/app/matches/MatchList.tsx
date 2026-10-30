@@ -41,8 +41,8 @@ function Row({ c }: { c: CardData }) {
         <span>{s.block} · Bo{s.bestOf}</span>
       </div>
       <Link href={`/match/${s.matchId}`} className="lr-teams">
-        <span className="lr-team"><TeamLogo code={s.teamA} logo={c.logoA} /><b>{s.teamA}</b>{c.result && <em className="num">{c.result.winner === s.teamA ? c.result.score.split("-")[0] : c.result.score.split("-")[1]}</em>}</span>
-        <span className="lr-team"><TeamLogo code={s.teamB} logo={c.logoB} /><b>{s.teamB}</b>{c.result && <em className="num">{c.result.winner === s.teamB ? c.result.score.split("-")[0] : c.result.score.split("-")[1]}</em>}</span>
+        <span className="lr-team" translate="no"><TeamLogo code={s.teamA} logo={c.logoA} /><b>{s.teamA}</b>{c.result && <em className="num">{c.result.winner === s.teamA ? c.result.score.split("-")[0] : c.result.score.split("-")[1]}</em>}</span>
+        <span className="lr-team" translate="no"><TeamLogo code={s.teamB} logo={c.logoB} /><b>{s.teamB}</b>{c.result && <em className="num">{c.result.winner === s.teamB ? c.result.score.split("-")[0] : c.result.score.split("-")[1]}</em>}</span>
       </Link>
       <div className="lr-stat">
         <span className="lr-k">AI</span>

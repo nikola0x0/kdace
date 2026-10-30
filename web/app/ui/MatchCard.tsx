@@ -79,7 +79,7 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
       <div className="card-body">
         <div className="score-row">
           <div className="sr-team">
-            <span className="sr-code display">{s.teamA}</span>
+            <span className="sr-code display" translate="no">{s.teamA}</span>
             {s.bestOf > 1 ? <Pips bestOf={s.bestOf} wins={winsOf(s.teamA)} /> : null}
           </div>
           <div className="sr-mid">
@@ -87,7 +87,7 @@ export default function MatchCard({ c, onPage = false }: { c: CardData; onPage?:
           </div>
           <div className="sr-team b">
             {s.bestOf > 1 ? <Pips bestOf={s.bestOf} wins={winsOf(s.teamB)} /> : null}
-            <span className="sr-code display">{s.teamB}</span>
+            <span className="sr-code display" translate="no">{s.teamB}</span>
           </div>
         </div>
 

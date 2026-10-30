@@ -27,15 +27,20 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: "KDAce · Bet against 5 AI analysts on LoL Worlds 2026", description, images: ["/og-v2.jpg"] },
 };
 
+// Browser page translation (Chrome, Safari, Edge) swaps text nodes for its own, and React then throws when it updates or
+// removes a node that's no longer where it left it (facebook/react#11538). Ignore those two cases instead of crashing.
+const translateGuard = `(()=>{const N=Node.prototype,r=N.removeChild,i=N.insertBefore;N.removeChild=function(c){return c.parentNode!==this?c:r.apply(this,arguments)};N.insertBefore=function(n,ref){return ref&&ref.parentNode!==this?n:i.apply(this,arguments)}})()`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={cn("dark", inter.variable, display.variable)}>
+      <head><script dangerouslySetInnerHTML={{ __html: translateGuard }} /></head>
       <body>
         <TooltipProvider delayDuration={150}>
         <FanProvider>
           <header className="top">
             <div className="wrap">
-              <Link href="/" className="brand"><Logo size={28} /><span>KDAce</span></Link>
+              <Link href="/" className="brand" translate="no"><Logo size={28} /><span>KDAce</span></Link>
               <nav className="nav">
                 <Link href="/matches">Matches</Link>
                 <Link href="/board">Leaderboard</Link>

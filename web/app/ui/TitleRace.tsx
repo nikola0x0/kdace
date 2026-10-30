@@ -31,7 +31,7 @@ export default function TitleRace({ day, logos }: { day: TitleDay; logos: Record
             <span className="text-xs text-muted-foreground">The AI favourite</span>
             <div className="flex items-center gap-3">
               <span className="[&_.tlogo]:size-14"><TeamLogo code={fav} logo={logos[fav] ?? null} /></span>
-              <ShinyText text={fav} className="display text-6xl leading-none" color="#e5e5e5" shineColor="#fcd34d" speed={3.5} delay={1.5} />
+              <span translate="no"><ShinyText text={fav} className="display text-6xl leading-none" color="#e5e5e5" shineColor="#fcd34d" speed={3.5} delay={1.5} /></span>
             </div>
             <span className="text-sm text-muted-foreground">{favVotes.n} of {day.picks.length} analysts · {Math.round(favVotes.prob / favVotes.n)}% average chance</span>
           </div>
@@ -39,7 +39,7 @@ export default function TitleRace({ day, logos }: { day: TitleDay; logos: Record
             <div className="relative flex flex-wrap gap-2">
               {ranked.slice(1).map(([team, v]) => (
                 <span key={team} className="flex items-center gap-1.5 rounded-full border border-border bg-secondary py-1 pr-2.5 pl-1 text-xs font-semibold [&_.tlogo]:size-5">
-                  <TeamLogo code={team} logo={logos[team] ?? null} />{team}<span className="font-normal text-muted-foreground">{v.n}</span>
+                  <TeamLogo code={team} logo={logos[team] ?? null} /><span translate="no">{team}</span><span className="font-normal text-muted-foreground">{v.n}</span>
                 </span>
               ))}
             </div>
@@ -54,7 +54,7 @@ export default function TitleRace({ day, logos }: { day: TitleDay; logos: Record
               <li key={pick.player} className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 rounded-[var(--radius)] border border-border bg-card px-3 py-2.5">
                 <Link href={`/analysts/${p.role}`}><Avatar name={p.name} color={p.color} art={art(`analyst-${p.role}`)} size={36} /></Link>
                 <div className="min-w-0">
-                  <div className="flex items-center gap-1.5 text-sm font-semibold"><RoleIcon role={p.role} size={14} />{p.name}</div>
+                  <div className="flex items-center gap-1.5 text-sm font-semibold" translate="no"><RoleIcon role={p.role} size={14} />{p.name}</div>
                   <Expandable text={pick.reasoning} className="text-xs leading-snug text-muted-foreground hover:text-neutral-300" />
                 </div>
                 <div className="grid justify-items-end gap-1">

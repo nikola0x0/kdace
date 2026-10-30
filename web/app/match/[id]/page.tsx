@@ -39,14 +39,14 @@ export default async function MatchPage({ params }: { params: Promise<{ id: stri
       </section>
       <div className="wrap">
         <div className="match-head">
-          <div className="match-team"><TeamLogo code={s.teamA} logo={card.logoA} />{s.teamA}</div>
+          <div className="match-team" translate="no"><TeamLogo code={s.teamA} logo={card.logoA} />{s.teamA}</div>
           <div style={{ textAlign: "center" }}>
             <div className="eyebrow">{s.block} · Best of {s.bestOf}</div>
             <div className="score-big num">{isVoid ? "VOID" : result ? (result.winner === s.teamA ? result.score : result.score.split("-").reverse().join("-")) : "vs"}</div>
             {isVoid && <div className="muted" style={{ fontSize: 13 }}>Void · refunded: no official result, every stake returned</div>}
             <div className="muted" style={{ fontSize: 13 }}><LocalTime iso={s.startTime} format="full" /></div>
           </div>
-          <div className="match-team"><TeamLogo code={s.teamB} logo={card.logoB} />{s.teamB}</div>
+          <div className="match-team" translate="no"><TeamLogo code={s.teamB} logo={card.logoB} />{s.teamB}</div>
         </div>
 
         <div className="two section">

@@ -49,8 +49,8 @@ export default function MyPicks({ matches, board }: { matches: Record<string, My
   const vars = (m: MyMatch) => ({ "--ta": teamColor(m.teamA), "--tb": teamColor(m.teamB) }) as CSSProperties;
   const teams = (m: MyMatch) => (
     <div className="lr-teams">
-      <span className="lr-team"><TeamLogo code={m.teamA} logo={m.logoA} /><b>{m.teamA}</b></span>
-      <span className="lr-team"><TeamLogo code={m.teamB} logo={m.logoB} /><b>{m.teamB}</b></span>
+      <span className="lr-team" translate="no"><TeamLogo code={m.teamA} logo={m.logoA} /><b>{m.teamA}</b></span>
+      <span className="lr-team" translate="no"><TeamLogo code={m.teamB} logo={m.logoB} /><b>{m.teamB}</b></span>
     </div>
   );
 
