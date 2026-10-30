@@ -324,8 +324,8 @@ export async function realStages(store: RecordStore, fanDb: FanDb | null, log: (
 
     graveyard: async (ctx) => {
       const { runGraveyard } = await import("./graveyard.ts");
-      const done = await runGraveyard({ store, fetchSeries: schedule(ctx), ask: (p) => askAnalyst(p, timeLeft(ctx)), now: ctx.now, log: (m) => log("graveyard", m) }, 1);
-      return { progressed: done.length > 0, detail: done };
+      const out = await runGraveyard({ store, fetchSeries: schedule(ctx), ask: (p) => askAnalyst(p, timeLeft(ctx)), now: ctx.now, log: (m) => log("graveyard", m) }, 1);
+      return { progressed: out.done.length > 0, detail: out };
     },
 
     lessons: async (ctx) => {

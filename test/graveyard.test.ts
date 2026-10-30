@@ -65,9 +65,10 @@ describe("graveyard", () => {
     for (const r of records) store.put(r);
     const reply = JSON.stringify({ comments: ["top", "mid", "support"].map((by) => ({ by, replyTo: null, lesson: "L1", text: `${by} roast` })) });
     const deps = { store, fetchSeries: async () => schedule, ask: async () => reply, now: () => now, log: () => {} };
-    expect(await runGraveyard(deps)).toEqual(["TSW"]);
-    expect(await runGraveyard(deps)).toEqual(["DK"]);
-    expect(await runGraveyard(deps)).toEqual([]);
+    expect(await runGraveyard(deps)).toEqual({ done: ["TSW"], skipped: {} });
+    expect(await runGraveyard(deps)).toEqual({ done: ["DK"], skipped: {} });
+    expect(await runGraveyard(deps)).toEqual({ done: [], skipped: {} });
+    expect(await runGraveyard({ ...deps, store: new MemoryStore(), ask: async () => "no json" })).toMatchObject({ done: [], skipped: { TSW: expect.any(String) } });
     expect(Object.keys(store.readGraveyard())).toEqual(["TSW", "DK"]);
   });
 });

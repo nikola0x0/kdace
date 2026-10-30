@@ -6,18 +6,20 @@ import type { Series } from "../core/worlds.ts";
 
 export type GraveyardDeps = { store: RecordStore; fetchSeries(): Promise<Series[]>; ask(prompt: string): Promise<string>; now(): Date; log(msg: string): void };
 
-/** At most `limit` threads per run, oldest exit first. */
-export async function runGraveyard(deps: GraveyardDeps, limit = 1): Promise<string[]> {
+/** At most `limit` threads per run, oldest exit first. Returns the teams written and why any were skipped. */
+export async function runGraveyard(deps: GraveyardDeps, limit = 1): Promise<{ done: string[]; skipped: Record<string, string> }> {
   const [schedule, records, graveyard] = await Promise.all([deps.fetchSeries(), deps.store.all(), deps.store.readGraveyard()]);
   const done: string[] = [];
+  const skipped: Record<string, string> = {};
   for (const k of needsEulogy(schedule, records, graveyard).slice(0, limit)) {
     try {
       const eulogy = parseEulogy(await deps.ask(buildEulogyPrompt(k, records)), k, records, deps.now());
       await deps.store.writeGraveyard({ ...(await deps.store.readGraveyard()), [k.team]: eulogy });
       done.push(k.team);
     } catch (e) {
-      deps.log(`${k.team} roast skipped: ${(e as Error).message}`);
+      skipped[k.team] = (e as Error).message.slice(0, 200);
+      deps.log(`${k.team} roast skipped: ${skipped[k.team]}`);
     }
   }
-  return done;
+  return { done, skipped };
 }
