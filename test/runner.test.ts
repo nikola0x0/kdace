@@ -46,6 +46,7 @@ const quiet = (over: Partial<WorkView> = {}): WorkView => ({
   records: [committed("x")],
   board: [],
   todayTitle: { date: "2026-10-23", status: "committed", picks: [], batch: "b", batchHash: "h", commitDigest: "d" },
+  graveyard: {},
   schedule: [s("x")],
   fanCommits: [],
   hasFanDb: false,

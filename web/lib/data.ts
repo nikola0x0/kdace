@@ -17,7 +17,7 @@ export const supabaseMode = () => storeKind() === "supabase";
 /** A read-only view of a snapshot (no copies: pages only read). */
 function readerOf(s: RecordsSnapshot): RecordReader {
   const view = viewOf(s.series);
-  return { get: view.get, all: () => [...s.series], readBoard: () => s.board, readFanNames: () => s.fanNames, titleDays: () => [...s.titleDays] };
+  return { get: view.get, all: () => [...s.series], readBoard: () => s.board, readFanNames: () => s.fanNames, titleDays: () => [...s.titleDays], readGraveyard: () => s.graveyard ?? {} };
 }
 
 /**

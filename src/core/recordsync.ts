@@ -8,7 +8,7 @@ import { canonicalJson } from "./supastore.ts";
 type Counts = { inserted: number; updated: number; same: number; extra: string[] };
 export type CopyReport = { series: Counts; titleDays: Counts; docs: { written: string[]; same: string[] }; scout: { written: string[]; same: string[] } };
 
-/** Copies every series record, title day, the board, fan names and Scout from `from` into `to`. `dryRun` only counts. */
+/** Copies every series record, title day, the board, fan names, the graveyard and Scout from `from` into `to`. `dryRun` only counts. */
 export async function copyRecords(from: RecordStore, to: RecordStore, opts: { dryRun?: boolean } = {}): Promise<CopyReport> {
   const write = !opts.dryRun;
   const series: Counts = { inserted: 0, updated: 0, same: 0, extra: [] };
@@ -44,6 +44,9 @@ export async function copyRecords(from: RecordStore, to: RecordStore, opts: { dr
   const names = await from.readFanNames();
   if (canonicalJson(names) === canonicalJson(await to.readFanNames())) docs.same.push("fan_names");
   else (docs.written.push("fan_names"), write && (await to.writeFanNames(names)));
+  const graveyard = await from.readGraveyard();
+  if (canonicalJson(graveyard) === canonicalJson(await to.readGraveyard())) docs.same.push("graveyard");
+  else (docs.written.push("graveyard"), write && (await to.writeGraveyard(graveyard)));
 
   const scout = { written: [] as string[], same: [] as string[] };
   for (const key of SCOUT_KEYS) {

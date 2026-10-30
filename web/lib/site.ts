@@ -70,6 +70,8 @@ export const titleDay = (): TitleDay | null => store().titleDays().filter((d) =>
 /** One analyst's title calls over time, oldest first. */
 export const titleCallsOf = (player: string) => titleHistory(store().titleDays())[player] ?? [];
 export const fanNames = () => store().readFanNames();
+/** Knocked-out teams' farewell roasts, newest exit first. */
+export const graveyard = () => Object.values(store().readGraveyard()).sort((a, b) => b.out.at.localeCompare(a.out.at));
 
 export function nameOf(player: string, names = fanNames()) {
   const p = persona(player);

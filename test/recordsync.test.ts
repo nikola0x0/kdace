@@ -37,7 +37,7 @@ describe("copyRecords / compareRecords", () => {
     const out = await copyRecords(file, st());
     expect(out.series).toEqual({ inserted: 2, updated: 0, same: 0, extra: [] });
     expect(out.titleDays).toEqual({ inserted: 1, updated: 0, same: 0, extra: [] });
-    expect(out.docs).toEqual({ written: ["board", "fan_names"], same: [] });
+    expect(out.docs).toEqual({ written: ["board", "fan_names"], same: ["graveyard"] });
     expect(out.scout).toEqual({ written: ["series", "games", "teams", "meta"], same: [] });
     const cmp = await compareRecords(file, st());
     expect(cmp).toEqual({ identical: true, byteExact: true, differences: [] });

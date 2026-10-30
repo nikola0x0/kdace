@@ -5,6 +5,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { join } from "node:path";
 import type { AnalystPick } from "./analysts.ts";
 import type { Banter } from "./banter.ts";
+import type { Graveyard } from "./graveyard.ts";
 import type { Chain } from "./chain.ts";
 import type { BatchEntry } from "./batch.ts";
 import type { FinalCallEntry } from "./finalcall.ts";
@@ -120,7 +121,7 @@ export const SCOUT_KEYS = ["series", "games", "teams", "meta"] as const;
 export type ScoutKey = (typeof SCOUT_KEYS)[number];
 
 /** Everything the site and verify read: every series record, the board, every title day and the fans' names. */
-export type RecordsSnapshot = { series: SeriesRecord[]; board: BoardRow[]; titleDays: TitleDay[]; fanNames: Record<string, string | null> };
+export type RecordsSnapshot = { series: SeriesRecord[]; board: BoardRow[]; titleDays: TitleDay[]; fanNames: Record<string, string | null>; graveyard?: Graveyard };
 
 /**
  * Where the published records live. Jobs always `await` these calls, so a synchronous store (file, memory) and an
@@ -138,6 +139,9 @@ export interface RecordStore {
   putTitleDay(day: TitleDay): Awaitable<void>;
   titleDays(): Awaitable<TitleDay[]>;
   writePending(rows: unknown[]): Awaitable<void>;
+  /** The knocked-out teams' farewell roasts (team -> thread). */
+  readGraveyard(): Awaitable<Graveyard>;
+  writeGraveyard(g: Graveyard): Awaitable<void>;
   /** Scout's series, games and teams, or null until all three exist. */
   readScout(): Awaitable<ScoutData | null>;
   readScoutFile(key: ScoutKey): Awaitable<unknown | null>;
@@ -151,6 +155,7 @@ export type RecordReader = {
   readBoard(): BoardRow[];
   readFanNames(): Record<string, string | null>;
   titleDays(): TitleDay[];
+  readGraveyard(): Graveyard;
 };
 
 /** A synchronous read-only view of records already loaded (e.g. `await store.all()`), for the pure selectors. */
@@ -169,6 +174,7 @@ export class MemoryStore implements RecordStore, RecordReader {
   fanNames: Record<string, string | null> = {};
   pending: unknown[] = [];
   scout: Partial<Record<ScoutKey, unknown>> = {};
+  graveyard: Graveyard = {};
 
   static from(snap: RecordsSnapshot): MemoryStore {
     const st = new MemoryStore();
@@ -176,6 +182,7 @@ export class MemoryStore implements RecordStore, RecordReader {
     for (const d of snap.titleDays) st.putTitleDay(d);
     st.writeBoard(snap.board);
     st.writeFanNames(snap.fanNames ?? {});
+    st.writeGraveyard(snap.graveyard ?? {});
     return st;
   }
 
@@ -211,6 +218,12 @@ export class MemoryStore implements RecordStore, RecordReader {
   }
   writePending(rows: unknown[]): void {
     this.pending = clone(rows);
+  }
+  readGraveyard(): Graveyard {
+    return clone(this.graveyard);
+  }
+  writeGraveyard(g: Graveyard): void {
+    this.graveyard = clone(g);
   }
   readScout(): ScoutData | null {
     const { series, games, teams } = this.scout;
@@ -287,6 +300,16 @@ export class Store implements RecordStore, RecordReader {
   readBoard(): BoardRow[] {
     const path = join(this.dir, "board.json");
     return existsSync(path) ? readJson(path) : [];
+  }
+
+  /** The knocked-out teams' farewell roasts (data/graveyard.json). */
+  readGraveyard(): Graveyard {
+    const path = join(this.dir, "graveyard.json");
+    return existsSync(path) ? readJson(path) : {};
+  }
+
+  writeGraveyard(g: Graveyard): void {
+    writeJson(join(this.dir, "graveyard.json"), g);
   }
 
   /** Scout's data in data/scout/, as `npm run scout` writes it (one-space indent). */

@@ -7,6 +7,7 @@
 // retries on its next run. A network error or 5xx is retried; a write that landed but whose response was lost is
 // recognised (the row holds exactly what was written, at the next version) instead of being reported as a conflict.
 import { Store, SCOUT_KEYS, type RecordStore, type RecordsSnapshot, type ScoutKey, type SeriesRecord } from "./store.ts";
+import type { Graveyard } from "./graveyard.ts";
 import type { BoardRow } from "./points.ts";
 import type { ScoutData } from "./scoutstore.ts";
 import type { TitleDay } from "./titles.ts";
@@ -148,6 +149,12 @@ export class SupabaseStore implements RecordStore {
   async titleDays(): Promise<TitleDay[]> {
     return this.readVersioned<TitleDay>(DAYS);
   }
+  async readGraveyard(): Promise<Graveyard> {
+    return ((await this.readDocs(["graveyard"])).graveyard as Graveyard | undefined) ?? {};
+  }
+  async writeGraveyard(g: Graveyard): Promise<void> {
+    await this.writeDoc("graveyard", g);
+  }
   async writePending(rows: unknown[]): Promise<void> {
     await this.writeDoc("pending", rows);
   }
@@ -169,8 +176,8 @@ export class SupabaseStore implements RecordStore {
 
   /** Everything the site and verify read, in three requests. */
   async snapshot(): Promise<RecordsSnapshot> {
-    const [series, titleDays, docs] = await Promise.all([this.all(), this.titleDays(), this.readDocs(["board", "fan_names"])]);
-    return { series, titleDays, board: (docs.board as BoardRow[] | undefined) ?? [], fanNames: (docs.fan_names as Record<string, string | null> | undefined) ?? {} };
+    const [series, titleDays, docs] = await Promise.all([this.all(), this.titleDays(), this.readDocs(["board", "fan_names", "graveyard"])]);
+    return { series, titleDays, board: (docs.board as BoardRow[] | undefined) ?? [], fanNames: (docs.fan_names as Record<string, string | null> | undefined) ?? {}, graveyard: (docs.graveyard as Graveyard | undefined) ?? {} };
   }
 }
 

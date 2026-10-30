@@ -9,6 +9,7 @@
 //   scout    Scout refresh into the store, at most every 30 minutes (a partial run carries on a minute later)
 //   titles   the day's title calls (five analysts in parallel)
 //   banter   one series' trash talk
+//   graveyard one knocked-out team's farewell roast, from the analysts' calls and lessons on it
 //   lessons  one series' debate and Walrus lessons, stopping before the time is up (resumes where it left off)
 //
 // Every stage is the existing job with the same resume rules (records written before chain calls, same hash on retry,
@@ -21,6 +22,7 @@ import { needsBanter } from "../core/banter.ts";
 import { chainOf, sameChain, type Chain } from "../core/chain.ts";
 import type { FanCommitRow, FanDb } from "../core/fandb.ts";
 import { finalCallDue } from "../core/finalcall.ts";
+import { needsEulogy, type Graveyard } from "../core/graveyard.ts";
 import { computeBoard, type BoardRow } from "../core/points.ts";
 import { settleAction } from "../core/results.ts";
 import { awaitingResult, isLocked, seriesToPick } from "../core/select.ts";
@@ -31,7 +33,7 @@ import type { Series } from "../core/worlds.ts";
 import { fanMirrorPending, unsettledFanCommits } from "./fans.ts";
 import { needsReflection } from "./settle.ts";
 
-export const STAGES = ["settle", "final", "pick", "scout", "titles", "banter", "lessons"] as const;
+export const STAGES = ["settle", "final", "pick", "scout", "titles", "banter", "lessons", "graveyard"] as const;
 export type Stage = (typeof STAGES)[number];
 
 /** What a stage reports. `retryInMs` overrides the default back-off; `touch` stamps extra state keys (e.g. "names"). */
@@ -47,6 +49,7 @@ export type WorkView = {
   records: SeriesRecord[];
   board: BoardRow[];
   todayTitle: TitleDay | null;
+  graveyard: Graveyard;
   schedule: Series[] | null;
   /** Fan commits from Supabase; null when there is no fan database or it couldn't be read. */
   fanCommits: FanCommitRow[] | null;
@@ -57,9 +60,9 @@ export type WorkView = {
 };
 
 /** How long a stage waits after a run that made no progress (or failed). */
-export const BACKOFF_MS: Record<Stage, number> = { settle: 2 * 60_000, final: 60_000, pick: 5 * 60_000, scout: 30 * 60_000, titles: 30 * 60_000, banter: 15 * 60_000, lessons: 3 * 60_000 };
+export const BACKOFF_MS: Record<Stage, number> = { settle: 2 * 60_000, final: 60_000, pick: 5 * 60_000, scout: 30 * 60_000, titles: 30 * 60_000, banter: 15 * 60_000, lessons: 3 * 60_000, graveyard: 15 * 60_000 };
 /** A heavy stage only starts with at least this much of the call's budget left. */
-export const MIN_TIME_MS: Record<Stage, number> = { settle: 0, final: 150_000, pick: 200_000, scout: 90_000, titles: 150_000, banter: 60_000, lessons: 60_000 };
+export const MIN_TIME_MS: Record<Stage, number> = { settle: 0, final: 150_000, pick: 200_000, scout: 90_000, titles: 150_000, banter: 60_000, lessons: 60_000, graveyard: 60_000 };
 export const SCOUT_EVERY_MS = 30 * 60_000;
 export const NAMES_EVERY_MS = 30 * 60_000;
 /** Default budget per call: Vercel's 300 s limit minus a margin for the lock, state writes and the response. */
@@ -116,6 +119,9 @@ export function stagesWithWork(v: WorkView): { stage: Stage; reason: string }[] 
 
   const lessons = v.records.filter(needsReflection);
   add("lessons", lessons.length ? `debate/lessons for ${lessons[0].series.matchId}` : null);
+
+  const gone = v.schedule ? needsEulogy(v.schedule, v.records, v.graveyard) : [];
+  add("graveyard", gone.length ? `farewell roast for ${gone[0].team}` : null);
   return out;
 }
 
@@ -137,15 +143,16 @@ export type RunReport = { busy: boolean; ran: StageRun[]; idle: boolean; pending
 /** Reads what the work check needs, in parallel. The schedule and fan commits may fail (null); the store may not. */
 export async function gatherView(deps: Pick<RunnerDeps, "store" | "db" | "fanDb" | "fetchSeries" | "chain" | "now" | "log">): Promise<WorkView> {
   const now = deps.now();
-  const [records, board, todayTitle, state, schedule, fanCommits] = await Promise.all([
+  const [records, board, todayTitle, graveyard, state, schedule, fanCommits] = await Promise.all([
     deps.store.all(),
     deps.store.readBoard(),
     deps.store.getTitleDay(utcDate(now)),
+    deps.store.readGraveyard(),
     deps.db.readState(),
     deps.fetchSeries().catch((e) => (deps.log(`schedule unavailable: ${(e as Error).message}`), null)),
     deps.fanDb ? deps.fanDb.listCommits().catch((e) => (deps.log(`fan commits unavailable: ${(e as Error).message}`), null)) : Promise.resolve(null),
   ]);
-  return { records, board, todayTitle, state, schedule, fanCommits, hasFanDb: !!deps.fanDb, chain: deps.chain, now };
+  return { records, board, todayTitle, graveyard, state, schedule, fanCommits, hasFanDb: !!deps.fanDb, chain: deps.chain, now };
 }
 
 /** One call: lock, settle if due, then at most one heavy stage, unlock. Never throws for a stage failure (it is reported). */
@@ -312,6 +319,12 @@ export async function realStages(store: RecordStore, fanDb: FanDb | null, log: (
     banter: async (ctx) => {
       const { realBanterDeps, runBanter } = await import("./banter.ts");
       const done = await runBanter({ ...(await realBanterDeps(store)), ask: (p) => askAnalyst(p, timeLeft(ctx)), log: (m) => log("banter", m) }, 1);
+      return { progressed: done.length > 0, detail: done };
+    },
+
+    graveyard: async (ctx) => {
+      const { runGraveyard } = await import("./graveyard.ts");
+      const done = await runGraveyard({ store, fetchSeries: schedule(ctx), ask: (p) => askAnalyst(p, timeLeft(ctx)), now: ctx.now, log: (m) => log("graveyard", m) }, 1);
       return { progressed: done.length > 0, detail: done };
     },
 
