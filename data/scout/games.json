@@ -103305,5 +103305,1597 @@
     "text": "IG won in 24:04"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095074",
+  "matchId": "115660540726095073",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-29T20:12:02.087Z",
+  "patch": "16.20",
+  "durationMin": 27.7,
+  "complete": true,
+  "winner": "KC",
+  "blue": {
+   "code": "KC",
+   "champions": {
+    "top": "Galio",
+    "jungle": "MonkeyKing",
+    "mid": "Cassiopeia",
+    "bottom": "Tristana",
+    "support": "Nautilus"
+   },
+   "gold15": 26821,
+   "kills": 19,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "chemtech",
+    "infernal",
+    "infernal"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 25
+  },
+  "red": {
+   "code": "CFO",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "JarvanIV",
+    "mid": "Syndra",
+    "bottom": "Kaisa",
+    "support": "Alistar"
+   },
+   "gold15": 25387,
+   "kills": 3,
+   "towers": 0,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -20,
+   251,
+   234,
+   112,
+   302,
+   938,
+   1060,
+   567,
+   570,
+   1093,
+   1076,
+   2280,
+   2906,
+   2414,
+   1434,
+   1450,
+   2893,
+   4484,
+   6479,
+   7136,
+   7742,
+   8065,
+   8104,
+   8703,
+   9112,
+   9327,
+   12050
+  ],
+  "leads": {
+   "10": 1093,
+   "15": 1434,
+   "20": 7136,
+   "25": 9112
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 12050,
+    "min": 27
+   },
+   "red": {
+    "gold": 20,
+    "min": 1
+   }
+  },
+  "swing": {
+   "team": "KC",
+   "gold": 6292,
+   "fromMin": 16,
+   "toMin": 21
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 6,
+    "type": "firstBlood",
+    "team": "KC"
+   },
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "CFO",
+    "detail": "cloud"
+   },
+   {
+    "min": 12,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "chemtech"
+   },
+   {
+    "min": 17,
+    "type": "firstTower",
+    "team": "KC"
+   },
+   {
+    "min": 18,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "infernal"
+   },
+   {
+    "min": 24,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "infernal"
+   },
+   {
+    "min": 25,
+    "type": "baron",
+    "team": "KC"
+   },
+   {
+    "min": 27,
+    "type": "inhibitor",
+    "team": "KC"
+   },
+   {
+    "min": 27.1,
+    "type": "inhibitor",
+    "team": "KC"
+   },
+   {
+    "min": 27.7,
+    "type": "end",
+    "team": "KC"
+   }
+  ],
+  "players": [
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "Galio",
+    "role": "top",
+    "k": 2,
+    "d": 0,
+    "a": 10,
+    "damageShare": 0.17800000000000002
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 4,
+    "d": 0,
+    "a": 11,
+    "damageShare": 0.126
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 6,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.31
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Tristana",
+    "role": "bottom",
+    "k": 7,
+    "d": 0,
+    "a": 5,
+    "damageShare": 0.29100000000000004
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 12,
+    "damageShare": 0.095
+   },
+   {
+    "code": "CFO",
+    "name": "CFO Rest",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 0,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.226
+   },
+   {
+    "code": "CFO",
+    "name": "CFO Shad0w",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 0,
+    "d": 6,
+    "a": 3,
+    "damageShare": 0.146
+   },
+   {
+    "code": "CFO",
+    "name": "CFO POUT",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 3,
+    "d": 3,
+    "a": 0,
+    "damageShare": 0.369
+   },
+   {
+    "code": "CFO",
+    "name": "CFO Doggo",
+    "champion": "Kaisa",
+    "role": "bottom",
+    "k": 0,
+    "d": 3,
+    "a": 0,
+    "damageShare": 0.221
+   },
+   {
+    "code": "CFO",
+    "name": "CFO Kino",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.037000000000000005
+   }
+  ],
+  "standout": {
+   "code": "KC",
+   "name": "KC Caliste",
+   "champion": "Tristana",
+   "role": "bottom",
+   "k": 7,
+   "d": 0,
+   "a": 5,
+   "damageShare": 0.29100000000000004
+  },
+  "funFacts": [
+   {
+    "kind": "roughPatch",
+    "team": "CFO",
+    "text": "CFO Shad0w (Jarvan IV) died 3 times between 23:58 and 27:36"
+   },
+   {
+    "kind": "perfect",
+    "team": "KC",
+    "text": "KC Canna (Galio) went 2/0/10 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "KC",
+    "text": "KC Yike (Wukong) went 4/0/11 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "KC",
+    "text": "KC Caliste (Tristana) went 7/0/5 without dying"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095075",
+  "matchId": "115660540726095073",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-10-29T20:59:40.092Z",
+  "patch": "16.20",
+  "durationMin": 72.8,
+  "complete": true,
+  "winner": "KC",
+  "blue": {
+   "code": "CFO",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "LeeSin",
+    "mid": "Ryze",
+    "bottom": "Caitlyn",
+    "support": "Karma"
+   },
+   "gold15": 27880,
+   "kills": 12,
+   "towers": 7,
+   "inhibitors": 1,
+   "dragons": [
+    "hextech",
+    "ocean",
+    "ocean",
+    "ocean"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 32
+  },
+  "red": {
+   "code": "KC",
+   "champions": {
+    "top": "Camille",
+    "jungle": "Pantheon",
+    "mid": "Viktor",
+    "bottom": "Yunara",
+    "support": "Lulu"
+   },
+   "gold15": 24047,
+   "kills": 20,
+   "towers": 7,
+   "inhibitors": 1,
+   "dragons": [
+    "cloud",
+    "elder"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 67
+  },
+  "goldDiff": [
+   0,
+   -5,
+   -131,
+   569,
+   296,
+   419,
+   635,
+   1287,
+   1306,
+   1235,
+   1880,
+   3066,
+   3131,
+   3355,
+   3812,
+   3833,
+   3209,
+   4292,
+   null,
+   null,
+   null,
+   null,
+   4380,
+   4380,
+   4380,
+   4436,
+   3995,
+   4737,
+   2199,
+   2300,
+   2020,
+   3007,
+   3385,
+   null,
+   null,
+   null,
+   2184,
+   2184,
+   2184,
+   2184,
+   2184,
+   null,
+   null,
+   2056,
+   2056,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   2056,
+   2019,
+   1929,
+   null,
+   null,
+   null,
+   1950,
+   1780,
+   1830,
+   3727,
+   2801,
+   586,
+   478,
+   103,
+   -66,
+   -147,
+   -4098
+  ],
+  "leads": {
+   "10": 1880,
+   "15": 3833,
+   "25": 4436
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 4737,
+    "min": 27
+   },
+   "red": {
+    "gold": 4098,
+    "min": 72
+   }
+  },
+  "swing": {
+   "team": "KC",
+   "gold": 4684,
+   "fromMin": 67,
+   "toMin": 72
+  },
+  "comeback": {
+   "team": "KC",
+   "deficit": 4737,
+   "min": 27
+  },
+  "events": [
+   {
+    "min": 3,
+    "type": "firstBlood",
+    "team": "CFO"
+   },
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "CFO",
+    "detail": "hextech"
+   },
+   {
+    "min": 11,
+    "type": "firstTower",
+    "team": "CFO"
+   },
+   {
+    "min": 12,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "cloud",
+    "behind": 2998
+   },
+   {
+    "min": 25,
+    "type": "dragon",
+    "team": "CFO",
+    "detail": "ocean"
+   },
+   {
+    "min": 30,
+    "type": "dragon",
+    "team": "CFO",
+    "detail": "ocean"
+   },
+   {
+    "min": 32,
+    "type": "baron",
+    "team": "CFO"
+   },
+   {
+    "min": 64,
+    "type": "dragon",
+    "team": "CFO",
+    "detail": "ocean"
+   },
+   {
+    "min": 65,
+    "type": "inhibitor",
+    "team": "CFO"
+   },
+   {
+    "min": 67,
+    "type": "baron",
+    "team": "KC",
+    "behind": 2690
+   },
+   {
+    "min": 71.8,
+    "type": "elder",
+    "team": "KC"
+   },
+   {
+    "min": 72.7,
+    "type": "inhibitor",
+    "team": "KC"
+   },
+   {
+    "min": 72.8,
+    "type": "end",
+    "team": "KC"
+   }
+  ],
+  "players": [
+   {
+    "code": "CFO",
+    "name": "CFO Rest",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 1,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.18600000000000003
+   },
+   {
+    "code": "CFO",
+    "name": "CFO Shad0w",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 5,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.168
+   },
+   {
+    "code": "CFO",
+    "name": "CFO POUT",
+    "champion": "Ryze",
+    "role": "mid",
+    "k": 3,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.201
+   },
+   {
+    "code": "CFO",
+    "name": "CFO Doggo",
+    "champion": "Caitlyn",
+    "role": "bottom",
+    "k": 2,
+    "d": 6,
+    "a": 7,
+    "damageShare": 0.4
+   },
+   {
+    "code": "CFO",
+    "name": "CFO Kino",
+    "champion": "Karma",
+    "role": "support",
+    "k": 1,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.045
+   },
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "Camille",
+    "role": "top",
+    "k": 5,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.249
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 4,
+    "d": 2,
+    "a": 12,
+    "damageShare": 0.133
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 6,
+    "d": 0,
+    "a": 11,
+    "damageShare": 0.306
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 4,
+    "d": 4,
+    "a": 12,
+    "damageShare": 0.253
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 1,
+    "d": 3,
+    "a": 17,
+    "damageShare": 0.059000000000000004
+   }
+  ],
+  "standout": {
+   "code": "KC",
+   "name": "KC kyeahoo",
+   "champion": "Viktor",
+   "role": "mid",
+   "k": 6,
+   "d": 0,
+   "a": 11,
+   "damageShare": 0.306
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "KC",
+    "text": "Likely triple kill: KC Caliste (Yunara) at 71:53"
+   },
+   {
+    "kind": "perfect",
+    "team": "KC",
+    "text": "KC kyeahoo (Viktor) went 6/0/11 without dying"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 72:48"
+   },
+   {
+    "kind": "cs",
+    "team": "CFO",
+    "text": "CFO Rest (Ambessa) had 256 CS in 72 min"
+   },
+   {
+    "kind": "cs",
+    "team": "CFO",
+    "text": "CFO POUT (Ryze) had 287 CS in 72 min"
+   },
+   {
+    "kind": "damage",
+    "team": "CFO",
+    "text": "CFO Doggo (Caitlyn) dealt 40% of CFO's champion damage"
+   },
+   {
+    "kind": "cs",
+    "team": "KC",
+    "text": "KC Canna (Camille) had 292 CS in 72 min"
+   },
+   {
+    "kind": "cs",
+    "team": "KC",
+    "text": "KC kyeahoo (Viktor) had 302 CS in 72 min"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095070",
+  "matchId": "115660540726095069",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-29T22:38:27.299Z",
+  "patch": "16.20",
+  "durationMin": 27.9,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "BLG",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "Vi",
+    "mid": "Orianna",
+    "bottom": "Ezreal",
+    "support": "Nautilus"
+   },
+   "gold15": 26689,
+   "kills": 21,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "chemtech",
+    "chemtech"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 24.9
+  },
+  "red": {
+   "code": "TES",
+   "champions": {
+    "top": "Jayce",
+    "jungle": "Qiyana",
+    "mid": "Viktor",
+    "bottom": "Jhin",
+    "support": "Alistar"
+   },
+   "gold15": 24622,
+   "kills": 6,
+   "towers": 1,
+   "inhibitors": 0,
+   "dragons": [
+    "mountain",
+    "hextech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   20,
+   32,
+   15,
+   605,
+   61,
+   176,
+   327,
+   430,
+   217,
+   75,
+   463,
+   452,
+   466,
+   1326,
+   2067,
+   2012,
+   2658,
+   2959,
+   4290,
+   4309,
+   5476,
+   5543,
+   5901,
+   7548,
+   8501,
+   9296,
+   10538
+  ],
+  "leads": {
+   "10": 75,
+   "15": 2067,
+   "20": 4309,
+   "25": 8501
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 10538,
+    "min": 27
+   },
+   "red": {
+    "gold": 0,
+    "min": 0
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 4995,
+   "fromMin": 22,
+   "toMin": 27
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.9,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 7.9,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "mountain"
+   },
+   {
+    "min": 13,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "hextech"
+   },
+   {
+    "min": 14.9,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 18.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 24.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 24.9,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 26.9,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 27.9,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 27.9,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 2,
+    "d": 0,
+    "a": 7,
+    "damageShare": 0.159
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Vi",
+    "role": "jungle",
+    "k": 5,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.198
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 9,
+    "d": 1,
+    "a": 7,
+    "damageShare": 0.304
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 4,
+    "d": 1,
+    "a": 7,
+    "damageShare": 0.272
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 1,
+    "d": 3,
+    "a": 10,
+    "damageShare": 0.068
+   },
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "Jayce",
+    "role": "top",
+    "k": 2,
+    "d": 4,
+    "a": 2,
+    "damageShare": 0.265
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 1,
+    "d": 5,
+    "a": 3,
+    "damageShare": 0.231
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 2,
+    "d": 4,
+    "a": 1,
+    "damageShare": 0.355
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 1,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.109
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.04
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Knight",
+   "champion": "Orianna",
+   "role": "mid",
+   "k": 9,
+   "d": 1,
+   "a": 7,
+   "damageShare": 0.304
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "BLG",
+    "text": "Likely triple kill: BLG Knight (Orianna) at 25:56"
+   },
+   {
+    "kind": "roughPatch",
+    "team": "TES",
+    "text": "TES Tian (Qiyana) died 3 times between 23:53 and 27:53"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095071",
+  "matchId": "115660540726095069",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-10-29T23:26:46.127Z",
+  "patch": "16.20",
+  "durationMin": 37.7,
+  "complete": true,
+  "winner": "TES",
+  "blue": {
+   "code": "BLG",
+   "champions": {
+    "top": "KSante",
+    "jungle": "MonkeyKing",
+    "mid": "Leblanc",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 25621,
+   "kills": 10,
+   "towers": 6,
+   "inhibitors": 0,
+   "dragons": [
+    "mountain",
+    "infernal",
+    "infernal"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "TES",
+   "champions": {
+    "top": "Aatrox",
+    "jungle": "JarvanIV",
+    "mid": "Locke",
+    "bottom": "Lucian",
+    "support": "Milio"
+   },
+   "gold15": 24784,
+   "kills": 13,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "cloud",
+    "infernal"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 29.9
+  },
+  "goldDiff": [
+   0,
+   20,
+   176,
+   387,
+   501,
+   354,
+   534,
+   415,
+   1111,
+   1199,
+   1292,
+   1346,
+   1148,
+   957,
+   936,
+   837,
+   1223,
+   1187,
+   1941,
+   2566,
+   3054,
+   2881,
+   2233,
+   2068,
+   1728,
+   2018,
+   2052,
+   3069,
+   4928,
+   4508,
+   883,
+   -868,
+   -1252,
+   -1954,
+   -1353,
+   2113,
+   1994,
+   -951
+  ],
+  "leads": {
+   "10": 1292,
+   "15": 837,
+   "20": 3054,
+   "25": 2018
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 4928,
+    "min": 28
+   },
+   "red": {
+    "gold": 1954,
+    "min": 33
+   }
+  },
+  "swing": {
+   "team": "TES",
+   "gold": 6882,
+   "fromMin": 28,
+   "toMin": 33
+  },
+  "comeback": {
+   "team": "TES",
+   "deficit": 4928,
+   "min": 28
+  },
+  "events": [
+   {
+    "min": 7.9,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 9.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain"
+   },
+   {
+    "min": 16.9,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "cloud",
+    "behind": 1183
+   },
+   {
+    "min": 17.9,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 21.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "infernal"
+   },
+   {
+    "min": 27,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "infernal"
+   },
+   {
+    "min": 29.9,
+    "type": "baron",
+    "team": "TES",
+    "behind": 3923
+   },
+   {
+    "min": 32.9,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "infernal"
+   },
+   {
+    "min": 37.6,
+    "type": "inhibitor",
+    "team": "TES"
+   },
+   {
+    "min": 37.7,
+    "type": "end",
+    "team": "TES"
+   }
+  ],
+  "players": [
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "KSante",
+    "role": "top",
+    "k": 0,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.129
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 4,
+    "d": 1,
+    "a": 5,
+    "damageShare": 0.18100000000000002
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Leblanc",
+    "role": "mid",
+    "k": 5,
+    "d": 1,
+    "a": 3,
+    "damageShare": 0.32299999999999995
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 0,
+    "d": 4,
+    "a": 6,
+    "damageShare": 0.252
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 1,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.115
+   },
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "Aatrox",
+    "role": "top",
+    "k": 3,
+    "d": 0,
+    "a": 7,
+    "damageShare": 0.179
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 3,
+    "d": 3,
+    "a": 7,
+    "damageShare": 0.136
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Locke",
+    "role": "mid",
+    "k": 2,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.183
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Lucian",
+    "role": "bottom",
+    "k": 4,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.436
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Milio",
+    "role": "support",
+    "k": 1,
+    "d": 1,
+    "a": 9,
+    "damageShare": 0.066
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Knight",
+   "champion": "Leblanc",
+   "role": "mid",
+   "k": 5,
+   "d": 1,
+   "a": 3,
+   "damageShare": 0.32299999999999995
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "TES",
+    "text": "TES 369 (Aatrox) went 3/0/7 without dying"
+   },
+   {
+    "kind": "steal",
+    "team": "TES",
+    "text": "TES took Baron at 29:54 while 3.9k down"
+   },
+   {
+    "kind": "damage",
+    "team": "TES",
+    "text": "TES JackeyLove (Lucian) dealt 44% of TES's champion damage"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095072",
+  "matchId": "115660540726095069",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-10-30T00:24:53.146Z",
+  "patch": "16.20",
+  "durationMin": 27.9,
+  "complete": true,
+  "winner": "TES",
+  "blue": {
+   "code": "TES",
+   "champions": {
+    "top": "Renekton",
+    "jungle": "Pantheon",
+    "mid": "Syndra",
+    "bottom": "Tristana",
+    "support": "Lulu"
+   },
+   "gold15": 27944,
+   "kills": 17,
+   "towers": 11,
+   "inhibitors": 3,
+   "dragons": [
+    "infernal",
+    "hextech"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 25
+  },
+  "red": {
+   "code": "BLG",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Maokai",
+    "mid": "Yone",
+    "bottom": "Kalista",
+    "support": "Renata"
+   },
+   "gold15": 25168,
+   "kills": 3,
+   "towers": 2,
+   "inhibitors": 0,
+   "dragons": [
+    "chemtech",
+    "hextech"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   -163,
+   -66,
+   253,
+   45,
+   -2,
+   -3,
+   55,
+   -1182,
+   -977,
+   -1055,
+   556,
+   1746,
+   2365,
+   2776,
+   4234,
+   4046,
+   4348,
+   4819,
+   5008,
+   5489,
+   6239,
+   6225,
+   7862,
+   8096,
+   7807,
+   7898
+  ],
+  "leads": {
+   "10": -977,
+   "15": 2776,
+   "20": 5008,
+   "25": 8096
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 8096,
+    "min": 25
+   },
+   "red": {
+    "gold": 1182,
+    "min": 9
+   }
+  },
+  "swing": {
+   "team": "TES",
+   "gold": 5289,
+   "fromMin": 11,
+   "toMin": 16
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 9,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 12,
+    "type": "firstTower",
+    "team": "TES"
+   },
+   {
+    "min": 13,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "infernal"
+   },
+   {
+    "min": 18,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "hextech"
+   },
+   {
+    "min": 24,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "hextech",
+    "behind": 6224
+   },
+   {
+    "min": 25,
+    "type": "baron",
+    "team": "TES"
+   },
+   {
+    "min": 26,
+    "type": "inhibitor",
+    "team": "TES"
+   },
+   {
+    "min": 27,
+    "type": "inhibitor",
+    "team": "TES"
+   },
+   {
+    "min": 27.3,
+    "type": "inhibitor",
+    "team": "TES"
+   },
+   {
+    "min": 27.9,
+    "type": "end",
+    "team": "TES"
+   }
+  ],
+  "players": [
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "Renekton",
+    "role": "top",
+    "k": 3,
+    "d": 0,
+    "a": 5,
+    "damageShare": 0.18
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 4,
+    "d": 1,
+    "a": 11,
+    "damageShare": 0.203
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 6,
+    "d": 0,
+    "a": 8,
+    "damageShare": 0.282
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Tristana",
+    "role": "bottom",
+    "k": 4,
+    "d": 1,
+    "a": 6,
+    "damageShare": 0.267
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 15,
+    "damageShare": 0.067
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 1,
+    "d": 2,
+    "a": 0,
+    "damageShare": 0.161
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Maokai",
+    "role": "jungle",
+    "k": 1,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.35700000000000004
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Yone",
+    "role": "mid",
+    "k": 1,
+    "d": 3,
+    "a": 0,
+    "damageShare": 0.107
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Kalista",
+    "role": "bottom",
+    "k": 0,
+    "d": 4,
+    "a": 0,
+    "damageShare": 0.237
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Renata",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.138
+   }
+  ],
+  "standout": {
+   "code": "TES",
+   "name": "TES Creme",
+   "champion": "Syndra",
+   "role": "mid",
+   "k": 6,
+   "d": 0,
+   "a": 8,
+   "damageShare": 0.282
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "TES",
+    "text": "Likely triple kill: TES Creme (Syndra) at 27:49"
+   },
+   {
+    "kind": "perfect",
+    "team": "TES",
+    "text": "TES Creme (Syndra) went 6/0/8 without dying"
+   },
+   {
+    "kind": "steal",
+    "team": "BLG",
+    "text": "BLG took a hextech dragon at 24:00 while 6.2k down"
+   }
+  ]
  }
 ]

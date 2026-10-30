@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -172,10 +172,51 @@
   "batch": "{\"matchId\":\"115660540726095069\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":230},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":760,\"lessons\":[\"4tQ-YZdS2aoiX9wQF1vjD27B-hiRw5IfokydiZBLqk4\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"6a9073127b0c35e1f2dbc62ad21a2c2ab493026fa5680f04d8ea4cbda0a0a763\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":200},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":650,\"lessons\":[\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"Ntu1iro7B661GN6BvIJpxNtqGwaR-si-RKWsiNz8SUA\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"44a40472481aaf91dbba0ca9ea548b89fb44e606b7c8918edec4fa1b1ee26cc8\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":180},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":610,\"lessons\":[\"5Ya72PGaFW5HejlzjhibdD_O6wFUApyYr5JX1VsaN6Q\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8\"],\"thought\":\"c75b320bfb7d0696cf93995d5c5ee115c4c35c6cc00f5ceca745e41f282ef1cf\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":680,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE\"],\"thought\":\"a8b72e24d51d64311cf05fcf72523114130dfa641b5cb2383cad911df7ddde17\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":190},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":630,\"lessons\":[\"GT6jrBxx1WtLZ94pMWG1nVkNeleeIsBGPdnGB-VxxBU\",\"Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg\",\"Og348tzt3B5N5RJp-r0ydvzPdah_iBmXXvdLrhr0IZY\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\"],\"thought\":\"03b14599bd4ba7a9f83a18c26f2f04f1aedf7a047c09f26bd6c38dfdf668fe2d\"}]}",
   "batchHash": "26fef67bf9b7f96f1b08c5abb54b7981524ad3b1ec28f34fab2f22e34e51acbf",
   "commitDigest": "7Aew7qBoFXqDMu6uJCvu2QbpD7PJC6A2d37DqrKR69vh",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "TES",
+    "score": "2-1",
+    "resultDigest": "GZ6o7aMrCioD4zTgCipjkb3qSTVhK4vFAatWiKYderC8"
+  },
+  "axp": {
+    "analyst-adc": -230,
+    "analyst-jungle": -200,
+    "analyst-mid": 293,
+    "analyst-support": 326,
+    "analyst-top": -190
+  },
+  "debate": "Top: Okay, Bin, Knight and Viper all got their lane edges and it still ended 1-2. I'm not changing my read on the stars, but Creme dragging us into a scramble was the exact thing I warned about.\n\nJungle: I said TES would turn chaos into a comeback and then I picked BLG 2-0 anyway, which is on me. The map slipped away after the early scrap again, so I should have trusted my own flip trigger.\n\nMid: At least I saw a TES game coming, so I'm the least wrong here. But I told you Creme on Ryze or Orianna with Lee Sin priority was the problem, and BLG couldn't deny it in a Fearless series.\n\nADC: BLG's 127-53 game record looked huge to me, and then TES beat them anyway. I did say the 4-3 head-to-head was thin, so I'm blaming the small sample for this one.\n\nSupport: I had BLG in three, so I only half-missed, and I'm taking credit for the decider. The morale was real, but TES's never-say-die streak beat our hunger in the last game.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but a star's lane edge only counts if it turns into a lead that carries past the early game, so I should stop assuming three lane advantages beat one elite player like Creme who can pull games into a scramble. Next time I'll weigh whether the stronger players can actually close games when a rival star neutralizes the map. I won't let BLG's depth or the crowd's hype carry a confident 2-0. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+      "blobId": "-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE",
+      "jobId": "bfd45c48-668b-4ed6-a2da-8d946631ff88"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Early tempo only counts if it holds past the first scrap. Next time I see a team that wins the opening skirmish but hands back the map, I'll check who actually converts that lead into Herald, dragon and tower control by 15 minutes. And if my own flip trigger (TES Lee Sin priority) is a live threat, I'll lower my confidence and my sweep call before locking in a 2-0. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+      "blobId": "1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M",
+      "jobId": "757a9009-5aae-4f3a-9e66-de881ecdcdc4"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: I called the exact draft threat (Creme on Ryze/Orianna with Lee Sin priority) and still backed BLG at 66, so when a Fearless series hinges on a pick I can't confirm BLG will deny, I should shrink my confidence instead of trusting their deeper book to cover it. Pool depth only wins if it's drafted around the opponent's best comfort picks, and I should state that flip trigger as a confidence cap before the series, not as a post-match excuse. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+      "blobId": "TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0",
+      "jobId": "281f0418-966c-4e73-8ace-1ba192bb11ff"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Numbers over stories means weighing every number by its sample and context, not just the biggest one. A 127-53 game record looked huge, but I leaned on it while my own thin 4-3 head-to-head and TES's recent 2-0 win over BLG pointed to a closer matchup. Next time I'll trim confidence when the direct matchup data is close, and I won't blame small samples after the fact for a pick I made while ignoring them. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+      "blobId": "BKwGIj0-Yvloz2KXwI8OLzTTrdsG8gvatiwzhye4ogo",
+      "jobId": "ae32f605-6912-48fe-8133-c9ffc088f521"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: I predicted the right shape (a three-game series) but the wrong winner, so I shouldn't take credit. I read BLG's bounce-back as proof they'd close ranks, when TES's grit and the recent win over BLG were the same kind of chemistry evidence, and the stronger signal was which side's resilience had already beaten the other. Next time I'll weigh both rooms' morale against each other, and when the underdog's belief is just as tested, I won't pick a favorite on mood alone. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+      "blobId": "CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ",
+      "jobId": "164c1f1b-b039-4e4e-aaf3-37c7f5924b39"
+    }
+  ],
   "scout": "Scout: BLG vs TES (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nBLG [LPL]: 2026 series 52-13, games 127-53 | last 10 (newest first) WWLLWWWWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 2-1 · vs other regions 10-3\n  Last 23 games (16-7): GD@15 +1.1k, FB 52%, FT 65%, FD 52%, dragons 54%, 32.4 min avg, 1st baron 24:48\n  Leads @15 converted 9/10, comeback wins 0, throws 2, objectives taken while 1k+ behind 5\n  Worlds 2026 3 games (2-1): GD@15 -0.2k, FB 67%, FT 67%, FD 67%, dragons 47%, 35.6 min avg, 1st baron 30:24\n  Picks: TOP Camille 5, Ambessa 4, Jayce 4 | JG Jarvan IV 5, Pantheon 4, Lee Sin 3 | MID Orianna 5, Aurora 3, Syndra 3 | BOT Yunara 6, Ashe 5, Kalista 3 | SUP Lulu 6, Karma 3, Renata 3\n  Standout: BLG Bin (top) KDA 9 over 3 games, 20% dmg share\nTES [LPL]: 2026 series 29-25, games 78-65 | last 10 (newest first) WWLWLLLLWW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · Worlds 2026 2-1 · vs other regions 1-3\n  Last 23 games (11-12): GD@15 -0.4k, FB 70%, FT 35%, FD 30%, dragons 50%, 34 min avg, 1st baron 26:30\n  Leads @15 converted 4/5, comeback wins 2, throws 0, objectives taken while 1k+ behind 16\n  Worlds 2026 3 games (2-1): GD@15 -0.2k, FB 33%, FT 33%, FD 33%, dragons 54%, 30 min avg, 1st baron 27:30\n  Picks: TOP Ambessa 4, Olaf 4, Renekton 4 | JG Lee Sin 3, Nocturne 3, Pantheon 3 | MID Orianna 5, Ryze 4, Locke 3 | BOT Ezreal 5, Jhin 3, Lucian 3 | SUP Milio 3, Bard 2, Leona 2\n  Standout: TES Creme (mid) KDA 5.2 over 3 games, 29% dmg share\nHead-to-head 2026: BLG 4-3 TES\n  2026-08-21 LPL 2026 Week 5: BLG 2-0 TES\n  2026-08-07 LPL 2026 Week 3: TES 2-0 BLG\n  2026-06-14 LPL 2026 Finals: BLG 3-0 TES\nKey moments:\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\n  - BLG swung 8.2k in 4 min (22:00-26:00) vs TES (LPL 2026)\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.5k at 18:00 vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: TES Creme (Locke) at 29:41 (vs AL, Worlds 2026)\n  * Likely quadra kill: BLGKnight (Locke) at 21:41 (vs AL, LPL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  Both teams are from LPL, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  BLG (LPL): no Worlds titles; lost final 2024.\n  TES (LPL): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

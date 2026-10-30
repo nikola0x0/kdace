@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -187,13 +187,92 @@
   "batch": "{\"matchId\":\"115660540726095073\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":500},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1670,\"lessons\":[\"4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"67c11cf934ed4be37359eb25b9f0d525fd85e7c0d0f8d45412e9ae744a617c34\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":370},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1240,\"lessons\":[\"0xCJMJCTnTM6Gn-nxgq5LSY79eBR3mhLEEVvpeMf_s4\",\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"G692E09lv0y1xwSGkTo34CVnqRnamYM_-8wSQHGCVVE\",\"m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"f236e1ec2da275d0b1a619060edf3cbf1669620a63a92e57a66e865862b30e30\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":270},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":890,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"mgLPiCowsZwyaPyzGST29NGCfhUzAUxrdOCaB3uA9Dg\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"dbcf17be0bff81d733bfd494340436bac929e7dc9b4026f3c402556e026573a4\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":290},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":970,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"U5vjXGBXAGW18rFzWx4rbNJ3uMbWas2x1jDEvxl9ojY\",\"n6P90vuEmYYhQHSER5p_dUoDrDl0EBbFim4jafTOuXk\",\"rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE\"],\"thought\":\"2d99ccdeb0b84e4f1c94f041a5785e7e91ab28d1f462b0c988100454fcea1d3f\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":280},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":920,\"lessons\":[\"Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg\",\"Kz4GXrngvXySGWOCV2zZhzL-MXNTRVxALqb1esvZ-Cg\",\"a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M\"],\"thought\":\"6c610f36cbb41e47bc0064ef1ea8d41fec2058526735a32f85ac659f5d93e696\"}]}",
   "batchHash": "7316e9290d8766cd830941ae1c9af50b57e5eca11de3a9d4686c200177171fc1",
   "commitDigest": "9k15JjbgZuseWGzBwVqmr4czJEXgouBA3LNHi6jzfbai",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "KC",
+    "score": "2-0",
+    "resultDigest": "7PYZphvbHNG5SYPWFdGwSexUpCzhy1YFXFBUzBW8XVV9"
+  },
+  "axp": {
+    "analyst-adc": 250,
+    "analyst-jungle": 185,
+    "analyst-mid": 135,
+    "analyst-support": -290,
+    "analyst-top": -280
+  },
+  "debate": "Top: KC won 2-0, so POUT never got his Akali game, and I'll admit the roster edge I backed held up. Still, Jungle, 72% on a sweep isn't a brave call when the LEC-over-LCP gap was the whole story.\n\nJungle: Brave enough, Top. The flip trigger never fired, since CFO didn't get mid priority or Herald, and KC's early map was exactly as clean as I said. You gave POUT a game that he never took.\n\nMid: Fearless pool pressure did its job too, and I'm glad I trimmed my confidence only a little. Support, you and Top both hedged on a third game, so who exactly was KC supposed to be nervous for?\n\nADC: Two independent numbers agreed, 0-5 for the LCP against the LEC and KC at 10-4, and a sweep followed. Mid, I'm taking the 76% and not blushing, because stories are nice but the record book is cheaper.\n\nSupport: Fine, I gave CFO a game and they didn't use it, but Caliste's calm center was exactly what I trusted. ADC, enjoy the victory lap, and remember the morale talk was right that KC wouldn't crack this time.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill wins series, and that means summing the skill edge across all five roles, not falling for one star's highlight reel. When KC had the stronger players in more lanes and the LEC-over-LCP gap was flagged big, I shouldn't have handed CFO a game on POUT's Akali, because one carry only steals a game if his team can get him priority. (from Swiss CFO vs KC; picked KC 2-1, actual KC 2-0)",
+      "blobId": "yXnNe2d5d_TlMulr4shjFB4KuyozRElzUQVBx0RTXRM",
+      "jobId": "0bcc7270-62a9-4564-82b0-3c5c1858c12f"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: The sweep came from early tempo, with KC taking Herald, first tower and first dragon on schedule and CFO never getting the mid priority my flip trigger required, so I should keep building calls on those first-15-minute markers and name the specific trigger that would flip them. I should lean on the region gap only when the scouting report flags a BIG REGION GAP, since otherwise it's a story layered on top of the tempo read and can't stand in for it. (from Swiss CFO vs KC; picked KC 2-0, actual KC 2-0)",
+      "blobId": "5p0zZRsw_h9oCPjmfccvARexUAlnPOlGhICzmfRkiDM",
+      "jobId": "b4bb0577-dfd4-44ee-8c77-c4db101c34f4"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: The sweep came from the pool war, since KC's deep book kept them drafting comfortably while POUT's Akali, Viktor and Ryze were squeezed, and my flip trigger (CFO locking Akali early and leaving Caliste's picks open) never fired. Next time I'll lean harder on the pool-depth gap and treat a star's comfort pick as a game-stealing threat only if the opponent's draft can't deny it, rather than trimming confidence by default. (from Swiss CFO vs KC; picked KC 2-0, actual KC 2-0)",
+      "blobId": "DbH8QeFoQjWnmTvbKO4JUdMrAgSElog_bX38eN6uNsI",
+      "jobId": "06098895-6410-4578-84be-34ba9a5af990"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A correct sweep doesn't prove my 76% was well calibrated, because the numbers I trust (the 0-5 region record and KC's 10-4) mostly justify a series win, not specifically 2-0, and I shouldn't call them \"independent\" when both partly measure KC's strength. Next time I'll turn the record into a per-game win rate, work out the sweep probability from it, and keep the story-based lines like \"Kaiser-style patience\" out of the confidence. (from Swiss CFO vs KC; picked KC 2-0, actual KC 2-0)",
+      "blobId": "5bLsHAtTpfa_FAV4hXxWgYw5IW6IRygztYrGGOoRfFY",
+      "jobId": "249b281c-5ebd-4e1e-b3a8-87d578b946c7"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When I read a team's morale as steady, as with KC's calm center after their comeback, I should trust it enough to follow it to its conclusion and not hand the underdog a game just because \"nothing to lose\" teams sound dangerous. A loose room only wins a game if there's visible evidence of KC wobbling, like tilt after a bad fight, shaky comms, or a lineup change, and without that I should let the chemistry read carry the full sweep. (from Swiss CFO vs KC; picked KC 2-1, actual KC 2-0)",
+      "blobId": "f8hQqZKK-MNzVQL8cmYnNAw7G6eSqGO5cK1wRyIFO9I",
+      "jobId": "a37a7ca9-8427-46d9-a38a-88c405472d7a"
+    }
+  ],
   "scout": "Scout: CFO vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nCFO [LCP]: 2026 series 13-16, games 38-44 | last 10 (newest first) LLWLWLWWWW\n  LCP 2026 12-14 (lost final) · Worlds 2026 1-2 · vs other regions 1-2\n  Last 23 games (12-11): GD@15 -0.2k, FB 61%, FT 43%, FD 35%, dragons 50%, 31.9 min avg, 1st baron 26:48\n  Leads @15 converted 5/6, comeback wins 1, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 3 games (1-2): GD@15 +0.0k, FB 67%, FT 0%, FD 33%, dragons 54%, 32.7 min avg, 1st baron 31:00\n  Picks: TOP Rumble 4, Jayce 2, K'Sante 2 | JG Naafiri 4, Poppy 3, Lee Sin 2 | MID Akali 5, Viktor 4, Ryze 3 | BOT Lucian 5, Caitlyn 2, Kai'Sa 2 | SUP Lulu 5, Milio 4, Alistar 3\n  Standout: CFO POUT (mid) KDA 4.1 over 23 games, 25% dmg share\nKC [LEC]: 2026 series 41-17, games 90-51 | last 10 (newest first) LLWWWWLLWW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 4-2 · vs other regions 9-6\n  Last 34 games (22-12): GD@15 +1.2k, FB 62%, FT 62%, FD 50%, dragons 53%, 33.7 min avg, 1st baron 26:00\n  Leads @15 converted 15/18, comeback wins 1, throws 5, objectives taken while 1k+ behind 7\n  Worlds 2026 14 games (10-4): GD@15 +1.2k, FB 36%, FT 64%, FD 29%, dragons 54%, 34.1 min avg, 1st baron 26:12\n  Picks: TOP Rumble 8, Ambessa 5, Jayce 5 | JG Lee Sin 7, Vi 6, Jarvan IV 5 | MID Viktor 6, Ryze 5, Cassiopeia 4 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Leona 3, Nautilus 3\n  Standout: KC Caliste (bottom) KDA 5.5 over 34 games, 28% dmg share\nHead-to-head 2026: none\nKey moments:\n  - CFO threw a +6.9k lead (20:00) vs MVK (LCP 2026)\n  - CFO threw a +6.5k lead (30:00) vs TSW (LCP 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.1k lead (22:00) vs LYON (Worlds 2026)\nFun facts:\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\n  * Likely penta kill: CFO Doggo (Yunara) at 30:40 (vs MVK, LCP 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LCP vs LEC: LCP went 0-5 against LEC in 2026; LCP 27% vs LEC 48% against other regions overall.\n  BIG REGION GAP: LEC is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  CFO (LCP): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still back KC, but the pool is 100% KC at 1.00×, so extra AXP wins me nothing and risks everything if POUT steals it. I'm not paying for zero upside.",
+        "decidedAt": "2026-10-29T19:30:09.130Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Pool's all KC at 1.00×, so extra AXP buys zero upside and full tempo-throw risk if POUT's Naafiri wins the first dragon fight and CFO snowball Herald into first tower, so I'm holding my 1,240 and moving on.",
+        "decidedAt": "2026-10-29T19:30:09.814Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "With KC the only money in the pool, every extra AXP pays back exactly 1.00× if I'm right and is gone if POUT steals a game on a comfort pick and CFO take the series, so my draft read stays at 890 and I add nothing.",
+        "decidedAt": "2026-10-29T19:30:09.091Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With nobody on CFO the pool pays KC just 1.00×, so extra AXP has zero upside and only risk, and the 10-4 record I cited doesn't match the results listed here (KC are 1-2), so I'm not adding.",
+        "decidedAt": "2026-10-29T19:30:10.106Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust KC's room, but the pool is all KC money, so every extra AXP pays back exactly 1.00× if I'm right and vanishes if CFO's loose, nothing-to-lose energy gets there first.",
+        "decidedAt": "2026-10-29T19:30:09.912Z"
+      }
+    ]
   }
 }

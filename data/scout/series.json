@@ -8578,5 +8578,31 @@
   "winsB": 2,
   "winner": "IG",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095073",
+  "startTime": "2026-10-29T20:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "KC",
+  "teamB": "CFO",
+  "winsA": 2,
+  "winsB": 0,
+  "winner": "KC",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095069",
+  "startTime": "2026-10-29T23:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "BLG",
+  "teamB": "TES",
+  "winsA": 1,
+  "winsB": 2,
+  "winner": "TES",
+  "league": "Worlds 2026"
  }
 ]
