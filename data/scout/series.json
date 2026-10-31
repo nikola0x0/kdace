@@ -8604,5 +8604,31 @@
   "winsB": 2,
   "winner": "TES",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095077",
+  "startTime": "2026-10-30T20:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "LOS",
+  "teamB": "TLAW",
+  "winsA": 2,
+  "winsB": 1,
+  "winner": "LOS",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095081",
+  "startTime": "2026-10-30T23:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "G2",
+  "teamB": "HLE",
+  "winsA": 0,
+  "winsB": 2,
+  "winner": "HLE",
+  "league": "Worlds 2026"
  }
 ]

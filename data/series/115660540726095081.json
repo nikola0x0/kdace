@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -172,13 +172,61 @@
   "batch": "{\"matchId\":\"115660540726095081\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":150},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":510,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"MHirs9o43SBCsTnxVK20PBHj6s609ASTeGajWxPeX5A\",\"gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\"],\"thought\":\"74de6fb2e5a5f9e0679d21dacd8dbcdbb27557c017c1b2d984d517b1622dd022\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":130},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":420,\"lessons\":[\"WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"d9cae51e12466418fd75bf4e058a72e33866fd1b987553bcb11743fb5f3417b3\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":110},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":370,\"lessons\":[\"_f_XJIjiLsbn3QltGhMOjbXVJUm2nULoguMYnGhsB_k\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"164ae0ff5f7667d898e9844ea1576686731d4ab8215b13686d97a46af1b3a856\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":680,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\",\"rz5GGhkDQs0Y5kDe0jwV_L6cPwYTZ0tHO3XhVzVNoRI\"],\"thought\":\"02cf6fde609914fe243366a4acf48b14c3aa754b71e317b9bf3f2527665b2da3\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":130},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":440,\"lessons\":[\"M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"ffd30e350d44f028990293c3aefb65f0b4d4810d7742a99f9a33e9707beb723e\"}]}",
   "batchHash": "09f0af0d3d6faeaf9d5e6e469342cbf8289aabb67c640801c1d262693e25072a",
   "commitDigest": "5pgzk5MJBjCcn8uwqG53Ry7K6SWsX1tbwHpkHPPq5S1z",
-  "result": null,
-  "axp": null,
+  "result": {
+    "winner": "HLE",
+    "score": "2-0",
+    "resultDigest": "CwumyGs35dwZzRMWchifwBfKU8yk6iAfkL6ogET3dYqd"
+  },
+  "axp": {
+    "analyst-adc": 570,
+    "analyst-jungle": -130,
+    "analyst-mid": -110,
+    "analyst-support": -200,
+    "analyst-top": -130
+  },
   "debate": null,
   "lessons": [],
   "scout": "Scout: G2 vs HLE (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nG2 [LEC]: 2026 series 35-19, games 81-46 | last 10 (newest first) LWLWWWLLWW\n  LEC 2026 28-11 (3 titles) · First Stand 2026 3-2 (lost final) · MSI 2026 2-2 · EWC 2026 1-2 · Worlds 2026 1-2 · vs other regions 7-8\n  Last 23 games (16-7): GD@15 +0.7k, FB 43%, FT 83%, FD 57%, dragons 59%, 33.3 min avg, 1st baron 28:06\n  Leads @15 converted 8/10, comeback wins 1, throws 1, objectives taken while 1k+ behind 8\n  Worlds 2026 3 games (1-2): GD@15 +1.1k, FB 33%, FT 100%, FD 33%, dragons 63%, 35.8 min avg, 1st baron 31:24\n  Picks: TOP K'Sante 4, Rumble 3, Ambessa 2 | JG Xin Zhao 4, Jarvan IV 3, Skarner 3 | MID Akali 4, Orianna 4, Viktor 3 | BOT Yunara 4, Ashe 3, Ezreal 3 | SUP Alistar 3, Karma 3, Lulu 3\n  Standout: G2 SkewMond (jungle) KDA 5.2 over 23 games, 18% dmg share\nHLE [LCK]: 2026 series 31-16, games 75-51 | last 10 (newest first) LLWLWLWWWW\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · Worlds 2026 1-2 · vs other regions 7-2\n  Last 23 games (12-11): GD@15 +0.5k, FB 65%, FT 57%, FD 43%, dragons 51%, 31.5 min avg, 1st baron 24:48\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 3 games (1-2): GD@15 -0.5k, FB 33%, FT 33%, FD 33%, dragons 18%, 27.2 min avg, 1st baron 21:30\n  Picks: TOP Ambessa 4, Jayce 3, Olaf 3 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Jhin 5, Ashe 4, Caitlyn 4 | SUP Seraphine 4, Alistar 3, Karma 3\n  Standout: HLE Zeka (mid) KDA 5.3 over 23 games, 26% dmg share\nHead-to-head 2026: G2 0-1 HLE\n  2026-07-05 MSI 2026 Knockouts: HLE 3-0 G2\nKey moments:\n  - G2 threw a +3.9k lead (22:00) vs DK (Worlds 2026)\n  - G2 came back from -3.6k at 22:00 vs VIT (LEC 2026)\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\nFun facts:\n  * Likely quadra kill: G2 Caps (Viktor) at 24:15 (vs KC, LEC 2026)\n  * Likely quadra kill: G2 BrokenBlade (Ambessa) at 25:42 (vs GX, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LEC vs LCK: LEC went 3-7 against LCK in 2026; LEC 48% vs LCK 73% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  G2 (LEC): no Worlds titles; lost final 2019.\n  HLE (LCK): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still trust Zeka, Kanavi and Gumayusi over Caps' hype, but the pool pays HLE 1.00× with nobody on G2, so more AXP risks everything for zero profit and that's just dumb.",
+        "decidedAt": "2026-10-30T22:30:08.097Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "HLE's pool pays a flat 1.00× with nobody on G2, so extra AXP is all tempo risk and zero payoff, and I'm holding my 420 and watching who takes first Herald.",
+        "decidedAt": "2026-10-30T22:30:08.503Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "Nobody is on G2, so a Zeka-Orianna read that lands only pays me back my own stake at 1.00× while a G2 steal costs me everything, which is a draft with no upside.",
+        "decidedAt": "2026-10-30T22:30:09.215Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With 0 AXP on G2 the pool pays HLE backers exactly 1.00×, so extra stake can only lose if G2 pulls the upset and never profits if HLE wins, which is no bet at all, even at 68%.",
+        "decidedAt": "2026-10-30T22:30:08.750Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust HLE's calm room, but with nobody on G2 my extra AXP would only come back as itself, so I'll let the 680 I already staked do the talking.",
+        "decidedAt": "2026-10-30T22:30:09.483Z"
+      }
+    ]
   }
 }

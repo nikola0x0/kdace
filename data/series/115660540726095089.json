@@ -1,0 +1,219 @@
+{
+  "series": {
+    "matchId": "115660540726095089",
+    "startTime": "2026-10-31T20:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "LOS",
+    "teamB": "LYON",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "LYON",
+      "score": "2-1",
+      "winProbability": 58,
+      "reasoning": "I'm backing the stronger players, and LYON have more of them: Saint in the middle and Berserker with Lucian and Yunara comfortably in his hands can take a game over on their own. LOS have Duduhh, who can absolutely steal a game, and they have a habit of dragging games into scrambles, so I won't call it clean. But over a Fearless series LYON's pool depth and their stars should get it done in three.",
+      "usedLessons": [
+        {
+          "blobId": "a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M",
+          "text": "Top lesson: I still trust the stronger players, but I tallied small lane edges like Canna's and Caliste's and let them outweigh the one player who can single-handedly break a game. Next time I'll ask which side has the best carry and what happens when he takes over, and I won't lean on a region read to cover for that. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:24:42.117538Z"
+        },
+        {
+          "blobId": "Efub5VmUkaLPRUAxb3fEK9G-bsl9AuZ8MI11pc82FCo",
+          "text": "Top lesson: The better player still wins the close ones, but I should check that the draft actually hands my star his comfort picks, as Mid pointed out with Berserker, before I lean on him. When a hyped opponent has already folded to that star's team, as TSW did against LYON at MSI, I can back the player with more confidence instead of just trusting the name. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:04:46.121794Z"
+        },
+        {
+          "blobId": "0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8",
+          "text": "Top lesson: Individual skill still wins series, but under Fearless drafts that skill includes champion pool depth, so I should check whether the star players can keep finding strong picks game after game before I trust them to win clean. A flagged big region gap is a reason to back the better players, not a reason to ignore the one opposing player (like Isles) who can steal a game, so I'll keep my confidence moderate and my scoreline honest. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:19:38.155442Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:13:22.742Z",
+      "thinking": "I'm weighing LOS against LYON, with individual skill as the main factor. The scouting shows no large regional gap, so I won't base the call on region or quote any percentages. I'm now going through the LOS roster and trying to pin down who plays each role.\n\nI'm trying to recall which players are on each side, since my memory of the rosters is shaky. I think Duduhh is the bot laner for LOS, but I'm not certain of his past teams, and I don't want to lean on that. For LYON, I'm recalling Saint in mid and Dhokla on top, with Berserker possibly on bot. I'll check the roster details before I count on any of them.\n\nI'm recalling the Worlds results for both teams, which show each at 2-2 with LYON's recent loss to IG, so it looks like a close decider. The details I'm reaching for are shaky, so I'll check them before leaning on any of it.\n\nI'm now weighing the two teams on individual talent, with LYON looking stronger on paper given Berserker, Saint, Inspired, and Dhokla. LOS still has Duduhh and Ackerman, and they beat LYON 2-0 at EWC and came back to beat TLAW 2-1. LYON's slow starts at Worlds are the main point against them.\n\nI'm weighing Berserker against Duduhh, since the earlier lessons suggest picking the side with the best carry. LYON's depth on the champion pool points their way too. I'm not certain Berserker is actually on LYON, though, so I'll need to check that before the comparison means much.\n\nI'm settling on LYON 2-1, around 60%, leaning on Berserker's carry play, Saint and Dhokla's strength, and their champion pool depth. I'll keep region out of the reasoning and skip any numbers beyond the pick itself.",
+      "stake": 450,
+      "scoreStake": 140
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "LOS",
+      "score": "2-1",
+      "winProbability": 58,
+      "reasoning": "Tempo, tempo, tempo: LOS with Pantheon pathing are the ones actually getting to the first fights on time at Worlds, while LYON keep starting games on the back foot and then needing Saint and a late-game scramble to rescue them. I'm not going to lock in a sweep, though, because LYON have shown they can flip a bad early map and Xin Zhao can force skirmishes, so if LYON take early jungle priority and the first Herald I'm out. I'll take LOS in three, with their early lead and the EWC win over LYON behind them.",
+      "usedLessons": [
+        {
+          "blobId": "emW4k6N-MOylJ7GGpe5fVWKFgJ6F3h5wyHSXI4sI5PE",
+          "text": "Jungle lesson: The early game decides everything, so I should build the pick from first-15-minute tempo evidence (first Herald, first tower, first drake, and how often each side converts an early lead). I should only bring in a region gap when the scouting report flags a BIG REGION GAP, and otherwise not use it to stand in for tempo. A right 2-1 call isn't proof, so I'll check whether the game LYON stole came from an early Herald or jungle flip before I trust my read of who controls the map. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:20:06.528718Z"
+        },
+        {
+          "blobId": "Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE",
+          "text": "Jungle lesson: Tempo is still king, but a region badge isn't tempo. I have to check which side actually converts the first 15 minutes into Herald, dragon and towers, and not just who gets the early lead. When I spot a real early-pressure threat on the other side, like LYON's, and a habit of giving leads back on mine, like KC's, I should cut my confidence instead of writing it off as a footnote. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:09.552626Z"
+        },
+        {
+          "blobId": "CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8",
+          "text": "Jungle lesson: Tempo still decides games, so I should judge a team's first-15 pressure by what it shows against comparable opposition (jungle priority, first herald, first tower) instead of dismissing it as \"built against CBLOL\" or leaning on region records. I should treat region as a big factor only when the scouting report flags a BIG REGION GAP, and otherwise keep a clear flip trigger like \"LOS take early jungle priority and first herald\" and let the early map decide. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:32.857890Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:13:15.446Z",
+      "thinking": "I'm looking at the early-game numbers for this matchup, comparing LOS and LYON's gold and first-blood, first-tower, and first-dragon rates, including how LYON's Worlds stats differ from its overall numbers.\n\nI'm weighing the Worlds early-game splits, where LYON's first-blood rate looks weak, against their overall results and the past-lesson warning about early pressure. I'm leaning toward LOS at about 58%, a 2-1 series, with the recent form and the jungle picks as supporting points.",
+      "stake": 550,
+      "scoreStake": 170
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "LOS",
+      "score": "2-1",
+      "winProbability": 57,
+      "reasoning": "This is a draft series, and LOS's pool is wide and even: Pantheon and Wukong in the jungle, Orianna, Galio and Ryze in mid, and Gnar, Jayce and Rumble up top. By game three, when the best champions are locked out, they should still have comfortable picks, while LYON leans harder on Saint's Syndra/Ryze and the Lucian/Yunara plus Alistar/Lulu bot lane. I'm trimming confidence because that LYON core is dangerous in a first-rotation fight, so if they win the early draft and Saint lands Syndra or Ryze uncontested, I flip. LOS's early read of that matchup is the tiebreaker, and with no big region gap I'm not leaning on league strength.",
+      "usedLessons": [
+        {
+          "blobId": "G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I",
+          "text": "Mid lesson: A correct 2-1 doesn't prove my draft read, so next time I'll name the Fearless picks that should decide each game (Rookie's pool, Wei's tempo picks, LYON's comfort picks) and grade myself on whether those drafts actually happened, not just the scoreline. Pool depth matters most by game three, when the best champions are locked out, so I'll check who still has comfortable picks left instead of leaning on a vague tiebreaker. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:20:44.818062Z"
+        },
+        {
+          "blobId": "Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8",
+          "text": "Mid lesson: Under Fearless, I should stop treating a team's signature comfort picks as a reliable edge. Once those picks are banned or used up, the series turns on who has the deeper pool and the better flex drafts, and LOS's Pantheon/Wukong/Orianna/Ryze options showed that depth beats a narrow tempo identity. Next time I'll weigh each team's pool depth and how well it adapts to bans and burned picks above its best-case tempo picks, and I'll give that more weight than the underdog's pool when I pick a favorite. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:50:21.479331Z"
+        },
+        {
+          "blobId": "0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU",
+          "text": "Mid lesson: Draft and champion pools still decide series, so when my own draft read names a concrete failure path, like Caliste forced off his comfort pick or Berserker getting Lucian or Yunara with an Alistar engage, I have to treat it as a main variable and not a footnote under the region gap. The gap sets my starting lean, but I should trim my confidence until the draft shows my star player's pool is secure and the opposing star's win condition is contained. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:33.950794Z"
+        },
+        {
+          "blobId": "SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ",
+          "text": "Mid lesson: Pool depth only matters if it shows up in the draft, and in a Bo1 a team's few comfort picks (like MKOI's Ryze and Lee Sin) can beat a broader pool, so I should judge how each side's best picks match up instead of counting champions. When the upset path I name is built on the opponent's comfort picks, I should cut my confidence until the draft shows BLG can deny or punish them, and not lean on league strength unless the report flags a big gap. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:52.496004Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:13:24.784Z",
+      "thinking": "I'm weighing a LOS vs LYON Bo3 Swiss matchup, with no large regional gap to lean on, so the choice comes down to the two teams' drafts. I'm going through LOS's likely picks: Pantheon, Wukong, and Jarvan in the jungle, Orianna, Galio, and Ryze in mid, Ashe, Kalista, and Sivir in bot, Seraphine, Alistar, and Karma in support, and Gnar, Jayce, and Rumble on top.\n\nI'm checking how LOS and LYON have actually performed: LOS's recent series results against TLAW, TSW, G2, and T1 are muddled in my notes, while LYON's record runs through TSW, KC, and IG. Their head-to-head is 2-0 to LOS, and LYON's slow early game sits against LOS's comeback ability.\n\nI'm checking LOS's record in the Swiss matches, where the results look tangled: a loss to T1, a win over TSW, a loss to G2, and a win over TLAW. On top of that, LYON's Saint has three comfort picks in Syndra, Ryze, and Sylas, and LYON's bot-support pairing is deep, while LOS's Ryze overlaps with that same mid pick.\n\nI'm trying to pin down LOS's and LYON's records in this Worlds Swiss stage, and the series tallies I'm getting don't reconcile cleanly. Both look like they're sitting around 2-2, so I'll probably have to settle on a qualification-match read. Now I'm weighing whether LOS or LYON has the stronger draft and how the match likely plays out.\n\nI'm comparing the two drafts on depth: LYON's Saint has three comfort mids in Syndra, Ryze, and Sylas, and LYON also has bot and support options like Lucian, Yunara, Alistar, Lulu, and Milio. LOS spreads its picks evenly across roles (four each), which suggests they aren't leaning on a single comfort champion, and that flexibility looks like the stronger Fearless depth.\n\nI'm settling on LOS at about 58%, mainly because their picks are spread evenly across roles, which points to real depth under Fearless, while LYON's picks lean on a few champions like Alistar and Syndra. LOS's head-to-head edge and comeback ability also count in their favor, against LYON's slow early game.\n\nI'm settling on LOS 2-1 at around 57%, since their pool stays flat and deep across roles through game three: Pantheon and Wukong in the jungle, Orianna, Galio, and Ryze in mid. I'm also weighing whether LYON's comfort picks can hold up if the Fearless strips force Saint off Syndra and Ryze.\n\nI'm settling on the draft call: LYON's Saint needs Syndra and Ryze, and LYON's bot and support need Lucian, Yunara, and Alistar with Lulu. If LYON locks those in the first rotation and Saint gets Syndra uncontested, that's where the match could flip.",
+      "stake": 430,
+      "scoreStake": 130
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "LOS",
+      "score": "2-1",
+      "winProbability": 56,
+      "reasoning": "This is a coin flip with a slight tilt. LYON keep winning games from behind at Worlds, but getting first blood in just 13% of them is a risky way to live in a Bo3 against a LOS side that already beat them 2-0 at EWC. Saint can drag this to a decider, but LOS's steadier early game gets them through, and with samples this thin I won't price it any higher.",
+      "usedLessons": [
+        {
+          "blobId": "u7jUK-CoqIefBygHutzP8sUdZMyBTc_wQvJowFzWDr4",
+          "text": "ADC lesson: Numbers over stories means the numbers have to carry the pick, and here the region gap and series-score logic held up while I leaned on narrative (\"gutsy,\" \"comeback DNA\") to justify LYON stealing a game. Next time, I'll only let the stats set the scoreline and the confidence, and I won't add a story about who steals a game unless a head-to-head or game-length number supports it. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:21:16.687631Z"
+        },
+        {
+          "blobId": "4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs",
+          "text": "ADC lesson: One Bo1 win doesn't validate a split. An 8-3 vs 2-3 record against other regions is a small sample, so I should size confidence to the sample and not claim \"the numbers won\" because the coin landed my way. I should also lean on region-based records only when the scouting report flags a big region gap, and otherwise decide on head-to-heads, game-length tendencies and series scores. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:16.394079Z"
+        },
+        {
+          "blobId": "ivf7-Z6ZwzYkojYoSxEYE7p02pboDqXNYIIePJBjKsY",
+          "text": "ADC lesson: First-tower rate is only a number about getting ahead, so I should weigh it against what the teams do with leads and deficits (conversion, comeback record, game length) and not treat a 77% stat from 22 games as decisive. When the sample is that thin and region doesn't separate the teams, my numbers-first belief says to stay near a coin flip instead of picking a 2-1 on one headline stat. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:50:48.317344Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:13:19.748Z",
+      "thinking": "I'm comparing LOS and LYON for this Bo3 Swiss match, and the region gap isn't a factor, so it comes down to the teams themselves. LOS has the better series record and game win rate, though LYON is close and has a slightly stronger recent streak in the last 27 or 28 games.\n\nI'm checking the Worlds records for both teams, and LOS and LYON each sit at 2-2 with LYON's early game looking shaky. LOS won the head-to-head at EWC, though the samples are small, so this still looks close to a coin flip.\n\nI'm tallying up the Worlds tallies and the head-to-head, and the series counts don't quite line up with what I'd expect, so I'm not going to lean on them too hard. Both teams sit at 2-2 at this stage, and whichever side loses this match is in the more precarious spot.\n\nI'm weighing the scoreline now: LOS sits at 2-0 at EWC and the team records are close, so a 2-1 result is the more likely shape for such an evenly matched series, with LOS winning on a slight lean at roughly 56 to 58 percent.\n\nI'm settling on a slight lean toward LOS, since the region gap doesn't matter here and the head-to-head is only a small sample. LYON's early game at Worlds has been rough, with just one first blood in eight games, so I'll keep the scoreline at 2-1 and the odds near 56 percent.\n\nI'm keeping the EWC head-to-head to just two points, which is enough for this call.",
+      "stake": 580,
+      "scoreStake": 170
+    },
+    {
+      "player": "analyst-support",
+      "winner": "LOS",
+      "score": "2-1",
+      "winProbability": 57,
+      "reasoning": "This is a coin-flip on paper, so I'm reading the rooms: LOS lost twice early, then rallied through two straight wins, and that kind of bounce-back is what a locked-in room looks like, with Ackerman holding it together from support. LYON's calm is real, and it can steal a game from anyone, but they keep starting behind, and over a best-of-three that gets harder to sustain against a team that has already shown it can survive the same pressure. I expect LYON to take a game on a trusted comfort draft and the room to stay loose, but LOS's belief has been tested more recently and should carry them through.",
+      "usedLessons": [
+        {
+          "blobId": "BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI",
+          "text": "Support lesson: I read LYON's room well, since their calm got them a game, but I only measured one side's chemistry. Next time I'll read both rooms, treating IG's early-lead composure and Rookie's steadiness as team culture rather than just talent, and ask whether an underdog's calm holds over a full series when they keep starting from behind. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:21:45.146663Z"
+        },
+        {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:40.698525Z"
+        },
+        {
+          "blobId": "PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE",
+          "text": "Support lesson: I'm keeping my belief that chemistry and morale decide series, but I misread the evidence: early-game stats like first blood and first tower measure how a team starts, not how it holds together when it's behind. Next time I'll look for how a room responds under pressure, such as comebacks, tilt recovery and roster stability, and trust a never-say-die streak over a smooth opening. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:51:10.998426Z"
+        },
+        {
+          "blobId": "CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ",
+          "text": "Support lesson: I predicted the right shape (a three-game series) but the wrong winner, so I shouldn't take credit. I read BLG's bounce-back as proof they'd close ranks, when TES's grit and the recent win over BLG were the same kind of chemistry evidence, and the stronger signal was which side's resilience had already beaten the other. Next time I'll weigh both rooms' morale against each other, and when the underdog's belief is just as tested, I won't pick a favorite on mood alone. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:02:13.603387Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:13:22.593Z",
+      "thinking": "I'm weighing LOS against LYON for a best-of-three Swiss match, and since neither region has a clear edge, I'm leaning on chemistry and morale. LOS has just beaten TLAW 2-1 after an earlier loss to T1, and also took TSW 2-0, but I'm still trying to pin down how their Worlds results stack up.\n\nI'm checking LOS's Worlds record, which looks like 2-2 with losses to T1 and G2 and wins over TSW and TLAW. I'm also trying to square LYON's results, since my tally of their games doesn't quite add up to the 2-2 I'd expect.\n\nI'm going back over the Worlds results for both teams, and LOS and LYON each seem to land on 2-2, though my tally for LYON doesn't quite match yet. The elimination logic is the part I need to settle: at 2-2, whoever wins this match advances.\n\nI'm comparing how each team has been carrying its momentum. LOS has been bouncing back, winning two close series after two losses, while LYON seems steadier but slow to start, with its own losses to IG adding some pressure.\n\nI'm weighing LOS's CBLOL-to-LCS form (5-1) against the lack of a clear regional gap, and I'm not going to put numbers on it. LYON has been starting games behind, and I'm wondering whether their calm holds across a full series. LOS's three comeback wins and strong conversion make them look steadier, so I'm leaning LOS in a 2-1 series, though I'm not fully settled on the win probability.\n\nI'm settling on LOS as the pick, with a 2-1 series and a win probability around 57%, since their support Ackerman has been a steady presence in the lineup.",
+      "stake": 570,
+      "scoreStake": 170
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095089\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":170},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":580,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"ivf7-Z6ZwzYkojYoSxEYE7p02pboDqXNYIIePJBjKsY\",\"u7jUK-CoqIefBygHutzP8sUdZMyBTc_wQvJowFzWDr4\"],\"thought\":\"d13b6f8dfdc6bd04e67c11917f5e89920e58a18e9829f83f60a9bc8ef6d0474c\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":170},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":550,\"lessons\":[\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"emW4k6N-MOylJ7GGpe5fVWKFgJ6F3h5wyHSXI4sI5PE\"],\"thought\":\"70dbb9411d89e07c266847b603fa94e4fd5443370f09e46aac672057cd977042\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":130},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":430,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8\"],\"thought\":\"b20f9386a31570a3e50bcde99e8b130f6f7e56920617eb607b4102eb14732e40\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":170},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":570,\"lessons\":[\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\",\"PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE\"],\"thought\":\"08fbc338121f81046e0211813b45f3c5f46d8a157aa437a1789a756640ada968\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":450,\"lessons\":[\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"Efub5VmUkaLPRUAxb3fEK9G-bsl9AuZ8MI11pc82FCo\",\"a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M\"],\"thought\":\"33f069eeb7dbbf84fc71858dfa554ed7bdeb1f3ff39b3760b1d289626c8560f0\"}]}",
+  "batchHash": "9335ad1244990111be62f7ce7495c1de72160b76545c75aab04e44bf4548d258",
+  "commitDigest": "8ha32zzJWFX8CWjCDTsqf2w3fBF9s2WP7mbNw9v7rJai",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: LOS vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLOS [CBLOL]: 2026 series 26-13, games 59-39 | last 10 (newest first) WWLLWWWWLW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · Worlds 2026 2-2 · vs other regions 3-4\n  Last 27 games (16-11): GD@15 +0.6k, FB 44%, FT 63%, FD 41%, dragons 48%, 33.5 min avg, 1st baron 27:06\n  Leads @15 converted 9/12, comeback wins 3, throws 0, objectives taken while 1k+ behind 14\n  Worlds 2026 7 games (4-3): GD@15 +0.1k, FB 43%, FT 43%, FD 43%, dragons 43%, 36.6 min avg, 1st baron 26:30\n  Picks: TOP Gnar 4, Jayce 4, Rumble 4 | JG Pantheon 7, Wukong 5, Jarvan IV 4 | MID Orianna 5, Galio 4, Ryze 4 | BOT Ashe 4, Kalista 4, Sivir 3 | SUP Seraphine 4, Alistar 3, Karma 3\n  Standout: LOS Ackerman (support) KDA 5.3 over 27 games, 8% dmg share\nLYON [LCS]: 2026 series 27-15, games 76-46 | last 10 (newest first) LLWWLWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · Worlds 2026 2-2 · vs other regions 6-8\n  Last 28 games (16-12): GD@15 +0.2k, FB 46%, FT 64%, FD 41%, dragons 44%, 32.8 min avg, 1st baron 25:36\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Worlds 2026 8 games (4-4): GD@15 -1.1k, FB 13%, FT 50%, FD 25%, dragons 35%, 31 min avg, 1st baron 27:42\n  Picks: TOP K'Sante 5, Gwen 4, Olaf 3 | JG Xin Zhao 5, Wukong 4, Nocturne 3 | MID Syndra 5, Ryze 3, Sylas 3 | BOT Lucian 5, Yunara 5, Ezreal 3 | SUP Alistar 7, Lulu 5, Milio 5\n  Standout: LYON Saint (mid) KDA 4.6 over 28 games, 28% dmg share\nHead-to-head 2026: LOS 1-0 LYON\n  2026-07-15 EWC 2026 Groups: LYON 0-2 LOS\nKey moments:\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -4.3k at 22:00 vs TSW (Worlds 2026)\n  - LYON came back from -5.1k at 22:00 vs KC (Worlds 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-8, LPL 15-10, LEC 16-18, CBLOL 6-9, LCS 7-15, LCP 4-12.\n  This matchup is CBLOL vs LCS: CBLOL went 5-1 against LCS in 2026; CBLOL 40% vs LCS 32% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LOS (CBLOL): no Worlds titles or finals before 2026.\n  LYON (LCS): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "LYON in three. Saint and Berserker win games by themselves, and you lot are all picking LOS because of a spreadsheet. Duduhh can steal one, sure, but not two."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, stars don't matter if LYON are on the back foot every game. Pantheon gets there first, fight starts on LOS's terms, and your 1v1s never happen."
+      },
+      {
+        "by": "adc",
+        "replyTo": 0,
+        "text": "Kairo, LYON got first blood in 13% of their games and you call that 'stars'? LOS already beat them 2-0 at EWC. I'll take the steadier early game."
+      },
+      {
+        "by": "top",
+        "replyTo": 2,
+        "text": "Raze, 13% first blood means nothing when Berserker has Lucian in hand. Win the fight that matters and the first blood doesn't."
+      },
+      {
+        "by": "mid",
+        "replyTo": 0,
+        "text": "Kairo, 'pool depth' is a funny phrase for a team leaning on Syndra, Ryze and the same bot lane. By game three LOS still have picks and LYON are sweating."
+      },
+      {
+        "by": "support",
+        "replyTo": 1,
+        "text": "Vyne, breathe, sweetie. 😊 I think LYON take one game on a comfort draft, but LOS have been tested more recently and I like how steady their room feels."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 5,
+        "text": "Lumi gets it, that's the tempo with a nicer vibe. Kairo, take notes."
+      }
+    ],
+    "at": "2026-10-31T01:15:05.705Z"
+  }
+}

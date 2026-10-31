@@ -1,0 +1,189 @@
+{
+  "series": {
+    "matchId": "115660540726095093",
+    "startTime": "2026-10-31T23:00:00Z",
+    "block": "Swiss",
+    "bestOf": 3,
+    "state": "unstarted",
+    "teamA": "HLE",
+    "teamB": "BLG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "HLE",
+      "score": "2-1",
+      "winProbability": 63,
+      "reasoning": "I start in the lanes: Zeka and Kanavi are the best mid-jungle pair on this stage, they've already beaten this BLG core in a final, and the region flag backs the same read. Knight is a real problem, so if he beats Zeka in mid and turns it into early leads with Bin, I'm wrong and BLG steals a game or two. But I trust HLE's players to close it out across a Fearless draft, so I'm staying at 2-1 and not getting greedy.",
+      "usedLessons": [
+        {
+          "blobId": "Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg",
+          "text": "Top lesson: BLG's win backed my belief that stronger individual players win series, but I got there partly by leaning on the region gap, and that gap only counts when the scouting report flags it as big. Next time I'll start from the lane matchups (who can take a lane and hold it, as Viper, Bin and Knight did) and check the region flag separately, without quoting percentages unless the report calls the gap big. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:48:39.717795Z"
+        },
+        {
+          "blobId": "Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0",
+          "text": "Top lesson: Individual skill still wins series, but it wins by turning into early leads, so I should check whether the stronger players, especially mid and jungle, have draft pools deep enough to get those leads and keep them. Next time I'll back the skill gap on those specific matchups instead of leaning on the region gap, which only confirms what the players already show. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:26:03.412634Z"
+        },
+        {
+          "blobId": "M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI",
+          "text": "Top lesson: Individual skill still wins series, and Chovy and Ruler's steadiness beating Zeka's flash backs that up, so I should keep backing the stronger players and not let an early-game hype story like HLE's aggression make me flinch. One win doesn't make me right about everything, though: when I name a risk like a Zeka lane win, I should state exactly which player matchup would have to break before I change my pick, since that's where skill actually decides the game. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:29:19.507591Z"
+        },
+        {
+          "blobId": "0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8",
+          "text": "Top lesson: Individual skill still wins series, but under Fearless drafts that skill includes champion pool depth, so I should check whether the star players can keep finding strong picks game after game before I trust them to win clean. A flagged big region gap is a reason to back the better players, not a reason to ignore the one opposing player (like Isles) who can steal a game, so I'll keep my confidence moderate and my scoreline honest. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:19:38.155442Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:14:15.867Z",
+      "thinking": "I'm weighing the report's flag of a large LCK-over-LPL region gap, which favors HLE over BLG since HLE is LCK and BLG is LPL. I'm also checking the lessons' guidance to start from lane matchups and assess region separately, and whether quoting region percentages is allowed when the gap is large.\n\nI'm weighing HLE against BLG on individual play: Zeka against Knight in mid, and the rosters and recent results on both sides. I'm settling on HLE 2-1 at around 63%, since BLG's Knight and Bin could still steal a game.\n\nI'm pulling the lesson IDs I'd cite here: the draft-pool and lane-matchup notes, the Fearless guidance on backing better players, and the advice to check the region flag separately. My reasoning will stay to a sentence or two and name Zeka against Knight in mid as the matchup that could break the pick.",
+      "stake": 650,
+      "scoreStake": 200
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "HLE",
+      "score": "2-1",
+      "winProbability": 60,
+      "reasoning": "Look, BLG's early game is crisp. They've been getting first blood and first tower at Worlds, and a Jarvan-led scrap around Herald is exactly how they flip a Bo3 on you. But HLE already beat them on the MSI final stage, Kanavi's jungle pathing keeps the early map even, and LCK is the stronger region here, so I'm taking Zeka and co. to win the tempo war in the key games. I'm trimming it to 2-1 because if BLG takes first Herald and first dragon off an early jungle skirmish, they snowball and steal a game.",
+      "usedLessons": [
+        {
+          "blobId": "1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M",
+          "text": "Jungle lesson: Early tempo only counts if it holds past the first scrap. Next time I see a team that wins the opening skirmish but hands back the map, I'll check who actually converts that lead into Herald, dragon and tower control by 15 minutes. And if my own flip trigger (TES Lee Sin priority) is a live threat, I'll lower my confidence and my sweep call before locking in a 2-0. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:01:01.578559Z"
+        },
+        {
+          "blobId": "yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0",
+          "text": "Jungle lesson: The early map is still what decides games, but my flip trigger worked best because it was specific (KC taking the first Herald and first dragon off a jungle skirmish), so I should keep naming a concrete early-tempo trigger like that in every call. I should also treat a flagged region gap as the baseline for who should win the early game, and then check whether the early objective data confirms or contradicts it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:06.207592Z"
+        },
+        {
+          "blobId": "WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E",
+          "text": "Jungle lesson: When the scouting report flags a big region gap, I should treat it as a tempo edge and not trim confidence over one recent early-game scare, because the early game is only worth discounting for concrete signals like a jungle pathing mismatch or a weak first-herald setup. I also shouldn't claim a tempo win just because the team won. I should name the checkpoints (first herald, first dragon, first tower by 15) and confirm they actually fell the way I said before crediting my read. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:24.350075Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:14:17.675Z",
+      "thinking": "I'm weighing the scouting report's flag of a big LCK-versus-region gap, which I'm treating as the baseline for early game, and then I need to check whether the early objective numbers back that up or cut against it. HLE's Worlds early stats are weaker on first blood and first tower, with a slight deficit at 15 minutes, while BLG leads strongly on first blood.\n\nI'm comparing HLE and BLG's Worlds early-game numbers, where BLG's first blood, first tower and first dragon rates look cleaner, and I'm weighing that against HLE's MSI final win. I'm also trying to pin down HLE's recent Worlds results against G2 and GEN, since the record I'm recalling doesn't add up cleanly yet.\n\nI'm settling on HLE with a 2-1 call, mostly because the region gap points their way and they took the MSI final. The early-game numbers are the sticking point, since BLG looks much cleaner on first blood and objectives, so I'm keeping the pick tentative around 60%.",
+      "stake": 620,
+      "scoreStake": 190
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "HLE",
+      "score": "2-1",
+      "winProbability": 62,
+      "reasoning": "The LCK-over-LPL gap is my starting prior, and the draft only decides how far I move off it. Zeka's flexibility across Syndra, Orianna and Ahri, plus Kanavi's Jarvan/Lee Sin tempo, gives HLE more ways to answer Knight than BLG have to answer Zeka. The trap is BLG locking Orianna and the Yunara/Lulu pair in the first rotation, and I can't promise HLE deny those, so I'm capping this at a hard-fought 2-1 and not a sweep. If BLG get those picks clean in game one and HLE's early priority doesn't turn into a lead, I flip.",
+      "usedLessons": [
+        {
+          "blobId": "svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I",
+          "text": "Mid lesson: In a Bo1 no earlier games have fearlessly stripped anyone's pool, so \"Fearless can't strip their comfort pair\" isn't an edge. What matters is whether BLG can secure Yunara/Lulu in the first draft rotation, and I should name that and the star-carry matchup as my real draft case. A single win doesn't show the region gap \"showed up on schedule,\" so I'll use a flagged gap as the prior and let draft decide how far I move from it. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:51.122940Z"
+        },
+        {
+          "blobId": "TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0",
+          "text": "Mid lesson: I called the exact draft threat (Creme on Ryze/Orianna with Lee Sin priority) and still backed BLG at 66, so when a Fearless series hinges on a pick I can't confirm BLG will deny, I should shrink my confidence instead of trusting their deeper book to cover it. Pool depth only wins if it's drafted around the opponent's best comfort picks, and I should state that flip trigger as a confidence cap before the series, not as a post-match excuse. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:01:26.583599Z"
+        },
+        {
+          "blobId": "SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ",
+          "text": "Mid lesson: Pool depth only matters if it shows up in the draft, and in a Bo1 a team's few comfort picks (like MKOI's Ryze and Lee Sin) can beat a broader pool, so I should judge how each side's best picks match up instead of counting champions. When the upset path I name is built on the opponent's comfort picks, I should cut my confidence until the draft shows BLG can deny or punish them, and not lean on league strength unless the report flags a big gap. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:11:52.496004Z"
+        },
+        {
+          "blobId": "th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o",
+          "text": "Mid lesson: In a Bo1, the draft decides the game, so I'll keep naming the exact picks and bans that would flip me (Ryze or Lee Sin priority, a free Caitlyn) and check whether they actually happened, rather than crediting the draft because the pick won. When the pools are close, a flagged BIG REGION GAP is a legitimate tiebreaker that sits on top of the draft read and never replaces it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:32.534459Z"
+        },
+        {
+          "blobId": "uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs",
+          "text": "Mid lesson: Fearless pool depth only bites once comfort picks start burning, which a best of 1 never gets to, so in a single game I should weigh the star's form and the concrete draft matchups (Zeka's flexibility against Ryze's need to scale) over a generic \"deeper book\" story. I also shouldn't lean on region reputation like \"shaky against outside teams\" unless the report flags a big gap, and should let the draft carry the argument. (from Swiss HLE vs TES; picked HLE, actual HLE 1-0)",
+          "createdAt": "2026-10-23T19:27:02.062130Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:14:16.177Z",
+      "thinking": "I'm settling on a pick for HLE against BLG in this Bo3 Swiss match, noting that the LCK side is flagged as the stronger region. Zeka and Knight are the matchup to watch, and I'm weighing BLG's comfort picks against HLE's pool.\n\nI'm checking HLE's record against BLG, noting the MSI final win for HLE and the fact that the region gap should only move the pick so far, with the draft deciding the rest. I'm settling on a 2-1 HLE pick at around 62% confidence, and I'll name the flip trigger as the cap on that confidence.\n\nI'm picking the source IDs that matter here: the region-gap prior, the flip-trigger lesson for the confidence cap, and Zeka's flexibility notes. I'll keep the reasoning to a sentence or two, aiming for a passionate read rather than a list of numbers.",
+      "stake": 670,
+      "scoreStake": 200
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "HLE",
+      "score": "2-1",
+      "winProbability": 58,
+      "reasoning": "This is a coin-flip with a thumb on HLE's side: BLG's glossy 52-14 is mostly built on LPL games, while the one international result that actually pairs these two is HLE edging them 3-2 in the MSI final, and the flagged LCK edge backs that up. I'm keeping it modest because BLG have shown they can beat HLE (3-1 in the MSI knockouts) and HLE's Worlds first-blood numbers are shaky, so I expect Zeka and company to scrape it in three.",
+      "usedLessons": [
+        {
+          "blobId": "4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs",
+          "text": "ADC lesson: One Bo1 win doesn't validate a split. An 8-3 vs 2-3 record against other regions is a small sample, so I should size confidence to the sample and not claim \"the numbers won\" because the coin landed my way. I should also lean on region-based records only when the scouting report flags a big region gap, and otherwise decide on head-to-heads, game-length tendencies and series scores. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:16.394079Z"
+        },
+        {
+          "blobId": "gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg",
+          "text": "ADC lesson: The head-to-head record (now 7-1) and the comeback numbers lined up with the result, so when those cleaner stats agree, I can lean harder, and a flashy stat like HLE's 71% first blood should get less weight when GEN's record from behind and HLE's zero comeback wins contradict what it implies. I'll keep weighing the whole set of numbers, such as records, head-to-heads and game-length tendencies, instead of letting one headline stat decide, and I'll stay cautious in a best of 1, where one game gives us little data. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:30:47.095467Z"
+        },
+        {
+          "blobId": "hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8",
+          "text": "ADC lesson: When a team's headline record and its away or cross-region record diverge sharply (TSW's 16-4 versus 1-6 outside the LCP), trust the split that matches the matchup. Combined with a prior head-to-head (3-0 at MSI), that was clear enough to lean harder than my 58, since the numbers all pointed the same way and I was only hedging on style narratives like Nautilus engages. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:59.169447Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:14:21.271Z",
+      "thinking": "I'm weighing the records of the two teams, HLE at 32-16 in series and BLG at 52-14, against the flagged region gap that favors the LCK. I'm also noting that LCK went 4-5 against LPL this year, which cuts against that gap, and that the head-to-head is tied 1-1 from MSI.\n\nI'm checking the Worlds results for both teams: each finished 2-2 in series, with BLG at 3-3 in games and HLE at 3-2. The game tallies don't quite add up for HLE from the listed results, so I'm leaving that discrepancy aside for now.\n\nI'm comparing BLG's stronger season record against HLE's MSI final win and the flagged LCK region edge, and I'm trying to keep the region factor from outweighing the numbers. I'll only lean on the region gap where the evidence actually supports it.\n\nI'm comparing the international records now: head-to-head is 1-1, LCK went 4-5 against LPL, and BLG's international win rate of about 77% is roughly even with HLE's 80%. Since nothing clearly outweighs the flagged region gap, I'm leaning toward HLE with moderate confidence.\n\nI'm settling on a moderate-confidence lean toward HLE, roughly 58 to 60 percent, since the evidence is mixed. A best-of-three likely ends 2-1 for HLE, and I'm planning to frame the reasoning around the 3-2 MSI final win and the flagged LCK region edge, without letting BLG's headline record decide it.\n\nI'm settling on the LCK international record as the deciding point, keeping the reasoning to one or two sentences.",
+      "stake": 710,
+      "scoreStake": 210
+    },
+    {
+      "player": "analyst-support",
+      "winner": "HLE",
+      "score": "2-1",
+      "winProbability": 65,
+      "reasoning": "HLE are the calmer room right now: MSI champions who just handled G2 without fuss, and they already know they can beat this BLG when it counts. BLG will be fired up by the MSI final rematch, but a team that let a big lead slip against TES is carrying some doubt, and I can't give the mood edge to the side that keeps stumbling at the finish. With the LCK-LPL gap flagged as a big factor, I back HLE, but BLG's chemistry is real and Knight can drag this to a decider.",
+      "usedLessons": [
+        {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:41.129787Z"
+        },
+        {
+          "blobId": "CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ",
+          "text": "Support lesson: I predicted the right shape (a three-game series) but the wrong winner, so I shouldn't take credit. I read BLG's bounce-back as proof they'd close ranks, when TES's grit and the recent win over BLG were the same kind of chemistry evidence, and the stronger signal was which side's resilience had already beaten the other. Next time I'll weigh both rooms' morale against each other, and when the underdog's belief is just as tested, I won't pick a favorite on mood alone. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:02:13.603387Z"
+        },
+        {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:40.698525Z"
+        },
+        {
+          "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+          "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:37.615647Z"
+        }
+      ],
+      "pickedAt": "2026-10-31T01:14:15.537Z",
+      "thinking": "I'm comparing HLE and BLG, both in a best-of-three Swiss match, and I'm weighting the LCK's clear edge in the region gap. Their MSI meeting was even at one win each, with HLE taking the final 3-2 after BLG had won 3-1 in the knockouts. Recent form favors HLE after a 2-0 over G2, while BLG just dropped a 2-1 to TES after squandering a lead. Before that, BLG had beaten TLAW and KC but lost to MKOI.\n\nI'm weighing HLE against BLG on the region gap, and the score doesn't settle it: HLE took the MSI final 3-2 after BLG had won their knockout meeting. BLG just lost a lead to TES, and HLE comes in off a clean 2-0 over G2. The leaning is toward HLE, most likely in two games.\n\nI'm settling on a 2-1 HLE win at about 65%, since BLG's recent tendency to drop close series points that way. The lessons I'm leaning on are the ones about how both rooms are holding up, the region gap, and the concrete signs in the recent results. I'll pick out a few of the saved examples to back that up, and keep the reasoning short and direct without rehashing the scouting.",
+      "stake": 1120,
+      "scoreStake": 340
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095093\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":210},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":710,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\"],\"thought\":\"574004838df24edd9885ab96762365135c7204de5551c8e50585d4799c6e64b3\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":190},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":620,\"lessons\":[\"1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M\",\"WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"59fd7b0e9bb990a2b051ce6d38ee49506ad767c35317c2cb07de888f6f79b17f\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":670,\"lessons\":[\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\",\"uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs\"],\"thought\":\"155acd365d562700d02721a43cbc94e14f0ddce9dc871d3fe4b13475d0b842b8\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":340},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1120,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"0e46467423caa05a99f774816d64b7a2388e68844529eeaf965cd7df8d185fc6\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":650,\"lessons\":[\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg\",\"M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\"],\"thought\":\"dc600434938429cc16c0765a88f223198fa85f1abbfe3944bc0cb7ab3fc566bd\"}]}",
+  "batchHash": "1f925134ad277f19b2bb8565088d34a4f1544b5ee4a592267a993220018819d4",
+  "commitDigest": "519WPLr1gqvwJUWFSs3jmgfHEAQGde5Lx3DipRSQ7Yo2",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: HLE vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nHLE [LCK]: 2026 series 32-16, games 77-51 | last 10 (newest first) WLLWLWLWWW\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · Worlds 2026 2-2 · vs other regions 8-2\n  Last 25 games (14-11): GD@15 +0.4k, FB 60%, FT 56%, FD 48%, dragons 54%, 31.1 min avg, 1st baron 24:36\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 5 games (3-2): GD@15 -0.2k, FB 20%, FT 40%, FD 60%, dragons 50%, 27.2 min avg, 1st baron 22:12\n  Picks: TOP Ambessa 5, Jayce 3, Olaf 3 | JG Jarvan IV 4, Lee Sin 4, Cho'Gath 3 | MID Syndra 4, Orianna 3, Ahri 2 | BOT Jhin 5, Ashe 4, Caitlyn 4 | SUP Alistar 4, Seraphine 4, Karma 3\n  Standout: HLE Zeka (mid) KDA 5.6 over 25 games, 26% dmg share\nBLG [LPL]: 2026 series 52-14, games 128-55 | last 10 (newest first) LWWLLWWWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 2-2 · vs other regions 10-3\n  Last 26 games (17-9): GD@15 +1.0k, FB 58%, FT 65%, FD 54%, dragons 54%, 32.3 min avg, 1st baron 24:48\n  Leads @15 converted 10/11, comeback wins 0, throws 3, objectives taken while 1k+ behind 6\n  Worlds 2026 6 games (3-3): GD@15 -0.1k, FB 83%, FT 67%, FD 67%, dragons 50%, 33.4 min avg, 1st baron 28:36\n  Picks: TOP Ambessa 5, Camille 5, Jayce 4 | JG Jarvan IV 5, Pantheon 4, Vi 4 | MID Orianna 6, Aurora 3, Syndra 3 | BOT Ashe 6, Yunara 6, Kalista 4 | SUP Lulu 6, Renata 4, Seraphine 4\n  Standout: BLG Knight (mid) KDA 6.5 over 6 games, 30% dmg share\nHead-to-head 2026: HLE 1-1 BLG\n  2026-07-12 MSI 2026 Finals: BLG 2-3 HLE\n  2026-07-09 MSI 2026 Knockouts: BLG 3-1 HLE\nKey moments:\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\n  - BLG threw a +4.9k lead (28:00) vs TES (Worlds 2026)\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: BLGKnight (Locke) at 21:41 (vs AL, LPL 2026)\n  * Likely quadra kill: HLE Kanavi (Pantheon) at 22:32 (vs T1, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-8, LPL 15-10, LEC 16-18, CBLOL 6-9, LCS 7-15, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 4-5 against LPL in 2026; LCK 75% vs LPL 60% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  HLE (LCK): no Worlds titles or finals before 2026.\n  BLG (LPL): no Worlds titles; lost final 2024.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

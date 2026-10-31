@@ -104897,5 +104897,1508 @@
     "text": "BLG took a hextech dragon at 24:00 while 6.2k down"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095078",
+  "matchId": "115660540726095077",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-30T20:11:46.288Z",
+  "patch": "16.20",
+  "durationMin": 29.9,
+  "complete": true,
+  "winner": "LOS",
+  "blue": {
+   "code": "LOS",
+   "champions": {
+    "top": "Jayce",
+    "jungle": "Trundle",
+    "mid": "Syndra",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 25932,
+   "kills": 15,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "chemtech",
+    "ocean",
+    "ocean"
+   ],
+   "barons": 2,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 20.9
+  },
+  "red": {
+   "code": "TLAW",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Nocturne",
+    "mid": "Sylas",
+    "bottom": "Ziggs",
+    "support": "Nautilus"
+   },
+   "gold15": 24996,
+   "kills": 7,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   256,
+   504,
+   752,
+   415,
+   442,
+   496,
+   1277,
+   1409,
+   1243,
+   1058,
+   1461,
+   1179,
+   1453,
+   936,
+   1380,
+   2116,
+   2106,
+   1701,
+   834,
+   1898,
+   1912,
+   2374,
+   2847,
+   3141,
+   3372,
+   4690,
+   5585,
+   6227
+  ],
+  "leads": {
+   "10": 1243,
+   "15": 936,
+   "20": 834,
+   "25": 3141
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 6227,
+    "min": 29
+   },
+   "red": {
+    "gold": 5,
+    "min": 1
+   }
+  },
+  "swing": {
+   "team": "LOS",
+   "gold": 3380,
+   "fromMin": 24,
+   "toMin": 29
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 7.9,
+    "type": "firstBlood",
+    "team": "LOS"
+   },
+   {
+    "min": 8.9,
+    "type": "dragon",
+    "team": "TLAW",
+    "detail": "cloud",
+    "behind": 1298
+   },
+   {
+    "min": 17,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "chemtech"
+   },
+   {
+    "min": 17.9,
+    "type": "firstTower",
+    "team": "LOS"
+   },
+   {
+    "min": 20.9,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 22.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "ocean"
+   },
+   {
+    "min": 27,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 28.9,
+    "type": "inhibitor",
+    "team": "LOS"
+   },
+   {
+    "min": 29.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "ocean"
+   },
+   {
+    "min": 29.9,
+    "type": "end",
+    "team": "LOS"
+   }
+  ],
+  "players": [
+   {
+    "code": "LOS",
+    "name": "LOS Zest",
+    "champion": "Jayce",
+    "role": "top",
+    "k": 2,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.258
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Curse",
+    "champion": "Trundle",
+    "role": "jungle",
+    "k": 7,
+    "d": 0,
+    "a": 6,
+    "damageShare": 0.221
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Feisty",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 2,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.264
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Duduhh",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 4,
+    "d": 2,
+    "a": 3,
+    "damageShare": 0.163
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Ackerman",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 11,
+    "damageShare": 0.09300000000000001
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Morgan",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 1,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.23600000000000002
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Josedeodo",
+    "champion": "Nocturne",
+    "role": "jungle",
+    "k": 3,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.168
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Quid",
+    "champion": "Sylas",
+    "role": "mid",
+    "k": 2,
+    "d": 4,
+    "a": 3,
+    "damageShare": 0.184
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Yeon",
+    "champion": "Ziggs",
+    "role": "bottom",
+    "k": 1,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.36
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW CoreJJ",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.051
+   }
+  ],
+  "standout": {
+   "code": "LOS",
+   "name": "LOS Curse",
+   "champion": "Trundle",
+   "role": "jungle",
+   "k": 7,
+   "d": 0,
+   "a": 6,
+   "damageShare": 0.221
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "LOS",
+    "text": "LOS Curse (Trundle) went 7/0/6 without dying"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095079",
+  "matchId": "115660540726095077",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-10-30T21:02:49.078Z",
+  "patch": "16.20",
+  "durationMin": 38.1,
+  "complete": true,
+  "winner": "TLAW",
+  "blue": {
+   "code": "LOS",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "JarvanIV",
+    "mid": "Galio",
+    "bottom": "Ezreal",
+    "support": "Karma"
+   },
+   "gold15": 25153,
+   "kills": 8,
+   "towers": 5,
+   "inhibitors": 0,
+   "dragons": [
+    "infernal"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "TLAW",
+   "champions": {
+    "top": "Ornn",
+    "jungle": "XinZhao",
+    "mid": "Orianna",
+    "bottom": "Lucian",
+    "support": "Nami"
+   },
+   "gold15": 26962,
+   "kills": 15,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "hextech",
+    "chemtech",
+    "chemtech",
+    "chemtech",
+    "elder"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 29.9
+  },
+  "goldDiff": [
+   0,
+   20,
+   8,
+   59,
+   113,
+   -122,
+   -117,
+   0,
+   -536,
+   -777,
+   -459,
+   -1739,
+   -1607,
+   -1905,
+   -1574,
+   -1809,
+   -2064,
+   -2961,
+   -3777,
+   -3225,
+   -520,
+   -468,
+   268,
+   1232,
+   1595,
+   1443,
+   1981,
+   1750,
+   1883,
+   2181,
+   751,
+   853,
+   -31,
+   -428,
+   -802,
+   -496,
+   -1508,
+   -2492,
+   -6954
+  ],
+  "leads": {
+   "10": -459,
+   "15": -1809,
+   "20": -520,
+   "25": 1443
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 2181,
+    "min": 29
+   },
+   "red": {
+    "gold": 6954,
+    "min": 38
+   }
+  },
+  "swing": {
+   "team": "TLAW",
+   "gold": 6526,
+   "fromMin": 33,
+   "toMin": 38
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "infernal"
+   },
+   {
+    "min": 7.3,
+    "type": "firstBlood",
+    "team": "TLAW"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "TLAW",
+    "detail": "hextech"
+   },
+   {
+    "min": 17.9,
+    "type": "firstTower",
+    "team": "TLAW"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "TLAW",
+    "detail": "chemtech"
+   },
+   {
+    "min": 23.9,
+    "type": "dragon",
+    "team": "TLAW",
+    "detail": "chemtech",
+    "behind": 1231
+   },
+   {
+    "min": 29.8,
+    "type": "dragon",
+    "team": "TLAW",
+    "detail": "chemtech",
+    "behind": 2181
+   },
+   {
+    "min": 29.9,
+    "type": "baron",
+    "team": "TLAW",
+    "behind": 1489
+   },
+   {
+    "min": 36.9,
+    "type": "elder",
+    "team": "TLAW"
+   },
+   {
+    "min": 37.8,
+    "type": "inhibitor",
+    "team": "TLAW"
+   },
+   {
+    "min": 38.1,
+    "type": "end",
+    "team": "TLAW"
+   }
+  ],
+  "players": [
+   {
+    "code": "LOS",
+    "name": "LOS Zest",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 0,
+    "d": 1,
+    "a": 5,
+    "damageShare": 0.23199999999999998
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Curse",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 0,
+    "d": 5,
+    "a": 5,
+    "damageShare": 0.083
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Feisty",
+    "champion": "Galio",
+    "role": "mid",
+    "k": 1,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.125
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Duduhh",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 5,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.44
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Ackerman",
+    "champion": "Karma",
+    "role": "support",
+    "k": 2,
+    "d": 3,
+    "a": 6,
+    "damageShare": 0.12
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Morgan",
+    "champion": "Ornn",
+    "role": "top",
+    "k": 1,
+    "d": 2,
+    "a": 8,
+    "damageShare": 0.13
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Josedeodo",
+    "champion": "XinZhao",
+    "role": "jungle",
+    "k": 5,
+    "d": 1,
+    "a": 10,
+    "damageShare": 0.23199999999999998
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Quid",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 4,
+    "d": 0,
+    "a": 6,
+    "damageShare": 0.228
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Yeon",
+    "champion": "Lucian",
+    "role": "bottom",
+    "k": 4,
+    "d": 4,
+    "a": 8,
+    "damageShare": 0.315
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW CoreJJ",
+    "champion": "Nami",
+    "role": "support",
+    "k": 1,
+    "d": 1,
+    "a": 14,
+    "damageShare": 0.095
+   }
+  ],
+  "standout": {
+   "code": "TLAW",
+   "name": "TLAW Josedeodo",
+   "champion": "XinZhao",
+   "role": "jungle",
+   "k": 5,
+   "d": 1,
+   "a": 10,
+   "damageShare": 0.23199999999999998
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "LOS",
+    "text": "Likely triple kill: LOS Duduhh (Ezreal) at 19:24"
+   },
+   {
+    "kind": "perfect",
+    "team": "TLAW",
+    "text": "TLAW Quid (Orianna) went 4/0/6 without dying"
+   },
+   {
+    "kind": "damage",
+    "team": "LOS",
+    "text": "LOS Duduhh (Ezreal) dealt 44% of LOS's champion damage"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095080",
+  "matchId": "115660540726095077",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-10-30T22:00:51.250Z",
+  "patch": "16.20",
+  "durationMin": 47.3,
+  "complete": true,
+  "winner": "LOS",
+  "blue": {
+   "code": "TLAW",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "Sejuani",
+    "mid": "Viktor",
+    "bottom": "Yunara",
+    "support": "Lulu"
+   },
+   "gold15": 23387,
+   "kills": 5,
+   "towers": 6,
+   "inhibitors": 0,
+   "dragons": [
+    "infernal",
+    "infernal"
+   ],
+   "barons": 2,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 33
+  },
+  "red": {
+   "code": "LOS",
+   "champions": {
+    "top": "Tristana",
+    "jungle": "Pantheon",
+    "mid": "Taliyah",
+    "bottom": "Kalista",
+    "support": "Renata"
+   },
+   "gold15": 27903,
+   "kills": 17,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "ocean",
+    "chemtech",
+    "infernal",
+    "infernal",
+    "elder"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 24
+  },
+  "goldDiff": [
+   0,
+   30,
+   -23,
+   -194,
+   -908,
+   -610,
+   -1320,
+   -1315,
+   -1655,
+   -1652,
+   -1731,
+   -2095,
+   -2183,
+   -3119,
+   -3862,
+   -4516,
+   -3988,
+   -4032,
+   -5468,
+   -5169,
+   -5276,
+   -4736,
+   -4312,
+   -4629,
+   -5140,
+   -6159,
+   -6632,
+   -7153,
+   -6808,
+   -7089,
+   -5332,
+   -5491,
+   -5055,
+   -4174,
+   -3615,
+   -5840,
+   -6873,
+   -6696,
+   -7278,
+   -6128,
+   -4881,
+   -5257,
+   -4858,
+   -4260,
+   -3802,
+   -3711,
+   -3673,
+   -7457
+  ],
+  "leads": {
+   "10": -1731,
+   "15": -4516,
+   "20": -5276,
+   "25": -6159
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 30,
+    "min": 1
+   },
+   "red": {
+    "gold": 7457,
+    "min": 47
+   }
+  },
+  "swing": {
+   "team": "LOS",
+   "gold": 3784,
+   "fromMin": 46,
+   "toMin": 47
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 4,
+    "type": "firstBlood",
+    "team": "LOS"
+   },
+   {
+    "min": 14,
+    "type": "firstTower",
+    "team": "LOS"
+   },
+   {
+    "min": 14,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "ocean"
+   },
+   {
+    "min": 19,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "chemtech"
+   },
+   {
+    "min": 24,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 25,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "infernal"
+   },
+   {
+    "min": 30,
+    "type": "dragon",
+    "team": "TLAW",
+    "detail": "infernal",
+    "behind": 7068
+   },
+   {
+    "min": 33,
+    "type": "baron",
+    "team": "TLAW",
+    "behind": 5301
+   },
+   {
+    "min": 34.8,
+    "type": "dragon",
+    "team": "TLAW",
+    "detail": "infernal",
+    "behind": 3355
+   },
+   {
+    "min": 36,
+    "type": "inhibitor",
+    "team": "LOS"
+   },
+   {
+    "min": 40,
+    "type": "baron",
+    "team": "TLAW",
+    "behind": 5974
+   },
+   {
+    "min": 40,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "infernal"
+   },
+   {
+    "min": 46.7,
+    "type": "elder",
+    "team": "LOS"
+   },
+   {
+    "min": 47,
+    "type": "inhibitor",
+    "team": "LOS"
+   },
+   {
+    "min": 47.3,
+    "type": "end",
+    "team": "LOS"
+   }
+  ],
+  "players": [
+   {
+    "code": "TLAW",
+    "name": "TLAW Morgan",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 0,
+    "d": 4,
+    "a": 1,
+    "damageShare": 0.114
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Josedeodo",
+    "champion": "Sejuani",
+    "role": "jungle",
+    "k": 1,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.141
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Quid",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 0,
+    "d": 5,
+    "a": 5,
+    "damageShare": 0.348
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW Yeon",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 4,
+    "d": 3,
+    "a": 0,
+    "damageShare": 0.349
+   },
+   {
+    "code": "TLAW",
+    "name": "TLAW CoreJJ",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 4,
+    "damageShare": 0.048
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Zest",
+    "champion": "Tristana",
+    "role": "top",
+    "k": 10,
+    "d": 1,
+    "a": 3,
+    "damageShare": 0.384
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Curse",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 4,
+    "d": 0,
+    "a": 7,
+    "damageShare": 0.12300000000000001
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Feisty",
+    "champion": "Taliyah",
+    "role": "mid",
+    "k": 0,
+    "d": 1,
+    "a": 12,
+    "damageShare": 0.23600000000000002
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Duduhh",
+    "champion": "Kalista",
+    "role": "bottom",
+    "k": 2,
+    "d": 1,
+    "a": 7,
+    "damageShare": 0.201
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Ackerman",
+    "champion": "Renata",
+    "role": "support",
+    "k": 1,
+    "d": 2,
+    "a": 11,
+    "damageShare": 0.055
+   }
+  ],
+  "standout": {
+   "code": "LOS",
+   "name": "LOS Zest",
+   "champion": "Tristana",
+   "role": "top",
+   "k": 10,
+   "d": 1,
+   "a": 3,
+   "damageShare": 0.384
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "LOS",
+    "text": "Likely triple kill: LOS Zest (Tristana) at 34:55"
+   },
+   {
+    "kind": "perfect",
+    "team": "LOS",
+    "text": "LOS Curse (Pantheon) went 4/0/7 without dying"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 47:20"
+   },
+   {
+    "kind": "steal",
+    "team": "TLAW",
+    "text": "TLAW took an infernal dragon at 30:00 while 7.1k down"
+   },
+   {
+    "kind": "steal",
+    "team": "TLAW",
+    "text": "TLAW took Baron at 33:00 while 5.3k down"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095082",
+  "matchId": "115660540726095081",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-30T23:14:18.238Z",
+  "patch": "16.20",
+  "durationMin": 28.2,
+  "complete": true,
+  "winner": "HLE",
+  "blue": {
+   "code": "G2",
+   "champions": {
+    "top": "Olaf",
+    "jungle": "Pantheon",
+    "mid": "Cassiopeia",
+    "bottom": "Jhin",
+    "support": "Nautilus"
+   },
+   "gold15": 26243,
+   "kills": 11,
+   "towers": 1,
+   "inhibitors": 0,
+   "dragons": [],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "HLE",
+   "champions": {
+    "top": "KSante",
+    "jungle": "LeeSin",
+    "mid": "Syndra",
+    "bottom": "Corki",
+    "support": "Alistar"
+   },
+   "gold15": 26775,
+   "kills": 22,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "hextech",
+    "chemtech",
+    "infernal"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 20.9
+  },
+  "goldDiff": [
+   0,
+   -5,
+   226,
+   79,
+   42,
+   707,
+   625,
+   908,
+   1084,
+   1065,
+   848,
+   272,
+   -164,
+   545,
+   -83,
+   -532,
+   -1040,
+   -2971,
+   -2793,
+   -2334,
+   -4269,
+   -5025,
+   -6010,
+   -6894,
+   -8002,
+   -7725,
+   -7280,
+   -6877,
+   -8946
+  ],
+  "leads": {
+   "10": 848,
+   "15": -532,
+   "20": -4269,
+   "25": -7725
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 1084,
+    "min": 8
+   },
+   "red": {
+    "gold": 8946,
+    "min": 28
+   }
+  },
+  "swing": {
+   "team": "HLE",
+   "gold": 5668,
+   "fromMin": 19,
+   "toMin": 24
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 4.1,
+    "type": "firstBlood",
+    "team": "G2"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "hextech"
+   },
+   {
+    "min": 15.9,
+    "type": "firstTower",
+    "team": "HLE"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "chemtech"
+   },
+   {
+    "min": 20.9,
+    "type": "baron",
+    "team": "HLE"
+   },
+   {
+    "min": 24.9,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "infernal"
+   },
+   {
+    "min": 27.9,
+    "type": "inhibitor",
+    "team": "HLE"
+   },
+   {
+    "min": 28.2,
+    "type": "end",
+    "team": "HLE"
+   }
+  ],
+  "players": [
+   {
+    "code": "G2",
+    "name": "G2 BrokenBlade",
+    "champion": "Olaf",
+    "role": "top",
+    "k": 3,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.184
+   },
+   {
+    "code": "G2",
+    "name": "G2 SkewMond",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 5,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.22899999999999998
+   },
+   {
+    "code": "G2",
+    "name": "G2 Caps",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 2,
+    "d": 7,
+    "a": 7,
+    "damageShare": 0.295
+   },
+   {
+    "code": "G2",
+    "name": "G2 Hans Sama",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 1,
+    "d": 3,
+    "a": 7,
+    "damageShare": 0.21600000000000003
+   },
+   {
+    "code": "G2",
+    "name": "G2 Labrov",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 6,
+    "a": 10,
+    "damageShare": 0.076
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeus",
+    "champion": "KSante",
+    "role": "top",
+    "k": 6,
+    "d": 1,
+    "a": 9,
+    "damageShare": 0.252
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Kanavi",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 8,
+    "d": 2,
+    "a": 10,
+    "damageShare": 0.243
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeka",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 7,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.213
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Gumayusi",
+    "champion": "Corki",
+    "role": "bottom",
+    "k": 1,
+    "d": 2,
+    "a": 13,
+    "damageShare": 0.247
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Delight",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 15,
+    "damageShare": 0.046
+   }
+  ],
+  "standout": {
+   "code": "HLE",
+   "name": "HLE Kanavi",
+   "champion": "LeeSin",
+   "role": "jungle",
+   "k": 8,
+   "d": 2,
+   "a": 10,
+   "damageShare": 0.243
+  },
+  "funFacts": []
+ },
+ {
+  "gameId": "115660540726095083",
+  "matchId": "115660540726095081",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T00:02:39.092Z",
+  "patch": "16.20",
+  "durationMin": 26.3,
+  "complete": true,
+  "winner": "HLE",
+  "blue": {
+   "code": "HLE",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "JarvanIV",
+    "mid": "Swain",
+    "bottom": "Lucian",
+    "support": "Milio"
+   },
+   "gold15": 26126,
+   "kills": 19,
+   "towers": 6,
+   "inhibitors": 1,
+   "dragons": [
+    "ocean",
+    "infernal",
+    "hextech",
+    "hextech"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 24.8
+  },
+  "red": {
+   "code": "G2",
+   "champions": {
+    "top": "Camille",
+    "jungle": "Qiyana",
+    "mid": "Galio",
+    "bottom": "Xayah",
+    "support": "Rakan"
+   },
+   "gold15": 26219,
+   "kills": 8,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   173,
+   193,
+   46,
+   263,
+   83,
+   381,
+   257,
+   -9,
+   160,
+   -333,
+   -206,
+   209,
+   305,
+   -93,
+   -212,
+   -309,
+   -54,
+   -331,
+   -1063,
+   -1344,
+   -94,
+   2092,
+   2003,
+   2700,
+   5571
+  ],
+  "leads": {
+   "10": 160,
+   "15": -93,
+   "20": -1063,
+   "25": 2700
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 5571,
+    "min": 26
+   },
+   "red": {
+    "gold": 1344,
+    "min": 21
+   }
+  },
+  "swing": {
+   "team": "HLE",
+   "gold": 6915,
+   "fromMin": 21,
+   "toMin": 26
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.5,
+    "type": "firstBlood",
+    "team": "G2"
+   },
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "ocean"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "infernal"
+   },
+   {
+    "min": 12.9,
+    "type": "firstTower",
+    "team": "G2"
+   },
+   {
+    "min": 16.8,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "hextech"
+   },
+   {
+    "min": 22.8,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "hextech"
+   },
+   {
+    "min": 24.8,
+    "type": "baron",
+    "team": "HLE"
+   },
+   {
+    "min": 25.9,
+    "type": "inhibitor",
+    "team": "HLE"
+   },
+   {
+    "min": 26.3,
+    "type": "end",
+    "team": "HLE"
+   }
+  ],
+  "players": [
+   {
+    "code": "HLE",
+    "name": "HLE Zeus",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 3,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.171
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Kanavi",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 4,
+    "d": 2,
+    "a": 12,
+    "damageShare": 0.207
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeka",
+    "champion": "Swain",
+    "role": "mid",
+    "k": 2,
+    "d": 0,
+    "a": 7,
+    "damageShare": 0.306
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Gumayusi",
+    "champion": "Lucian",
+    "role": "bottom",
+    "k": 10,
+    "d": 1,
+    "a": 3,
+    "damageShare": 0.257
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Delight",
+    "champion": "Milio",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 14,
+    "damageShare": 0.057999999999999996
+   },
+   {
+    "code": "G2",
+    "name": "G2 BrokenBlade",
+    "champion": "Camille",
+    "role": "top",
+    "k": 4,
+    "d": 2,
+    "a": 2,
+    "damageShare": 0.27899999999999997
+   },
+   {
+    "code": "G2",
+    "name": "G2 SkewMond",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 1,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.201
+   },
+   {
+    "code": "G2",
+    "name": "G2 Caps",
+    "champion": "Galio",
+    "role": "mid",
+    "k": 1,
+    "d": 3,
+    "a": 1,
+    "damageShare": 0.226
+   },
+   {
+    "code": "G2",
+    "name": "G2 Hans Sama",
+    "champion": "Xayah",
+    "role": "bottom",
+    "k": 0,
+    "d": 7,
+    "a": 3,
+    "damageShare": 0.21899999999999997
+   },
+   {
+    "code": "G2",
+    "name": "G2 Labrov",
+    "champion": "Rakan",
+    "role": "support",
+    "k": 1,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.076
+   }
+  ],
+  "standout": {
+   "code": "HLE",
+   "name": "HLE Gumayusi",
+   "champion": "Lucian",
+   "role": "bottom",
+   "k": 10,
+   "d": 1,
+   "a": 3,
+   "damageShare": 0.257
+  },
+  "funFacts": []
  }
 ]

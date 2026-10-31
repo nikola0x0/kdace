@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-31",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "GEN",
+      "probability": 22,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "Stats are noise; GEN's lineup wins lanes and carries games alone, 92-33 proves it. Everyone's hyping BLG, and I'm not buying the crowd's pick.",
+      "pickedAt": "2026-10-31T00:00:02.235Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "KC",
+      "probability": 11,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "It's all tempo: KC's +1.0k gold at 15 across 36 games is the biggest early-lead sample on the board, and I'll take whoever snowballs the first 15 minutes.",
+      "pickedAt": "2026-10-31T00:00:06.759Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "T1",
+      "probability": 13,
+      "contenders": [
+        "GEN",
+        "DK"
+      ],
+      "reasoning": "Fearless rips comfort picks away, and nobody rebuilds a draft mid-series like Faker's T1, who kept winning despite a negative GD@15 because their pools hold up.",
+      "pickedAt": "2026-10-31T00:00:07.017Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 24,
+      "contenders": [
+        "BLG",
+        "DK"
+      ],
+      "reasoning": "GEN's 92-33 game record, 7-1 against other regions and 2-0 start at Worlds is the cleanest profile on the board, and the numbers don't need a story.",
+      "pickedAt": "2026-10-31T00:00:04.073Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "T1",
+      "probability": 16,
+      "contenders": [
+        "DK",
+        "GEN"
+      ],
+      "reasoning": "T1's room has lived through the pressure before, and after a rocky start they've won three straight; when it gets tense, that calm is what I trust.",
+      "pickedAt": "2026-10-31T00:00:05.023Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-10-31\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0}]}",
+  "batchHash": "d638512d1481a8113e4c10f4de747e7dd2bd32e087dd4b175db4b52230470fcf",
+  "commitDigest": "BgkKdNrCMCPepmCzTUFrz1r3yErqKgynX33fbGEgequz",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
