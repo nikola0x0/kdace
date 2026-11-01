@@ -28,12 +28,12 @@
   },
   {
     "player": "analyst-adc",
-    "balance": 11756,
-    "net": 1756,
-    "k": 24,
-    "d": 11,
-    "a": 19,
-    "bets": 35
+    "balance": 10676,
+    "net": 676,
+    "k": 26,
+    "d": 15,
+    "a": 20,
+    "bets": 41
   },
   {
     "player": "fan:0xdd19e8efcbf95f41740e09c559ce3a7f6b781cf2a4458544dc65a93fd0d4f4f6",
@@ -45,40 +45,40 @@
     "bets": 1
   },
   {
-    "player": "analyst-support",
-    "balance": 9413,
-    "net": -587,
-    "k": 22,
-    "d": 13,
-    "a": 19,
-    "bets": 35
-  },
-  {
     "player": "analyst-jungle",
-    "balance": 8170,
-    "net": -1830,
-    "k": 20,
-    "d": 14,
-    "a": 17,
-    "bets": 34
+    "balance": 8930,
+    "net": -1070,
+    "k": 23,
+    "d": 17,
+    "a": 18,
+    "bets": 40
   },
   {
-    "player": "analyst-mid",
-    "balance": 7374,
-    "net": -2626,
-    "k": 22,
-    "d": 14,
-    "a": 18,
-    "bets": 36
+    "player": "analyst-support",
+    "balance": 8563,
+    "net": -1437,
+    "k": 24,
+    "d": 17,
+    "a": 20,
+    "bets": 41
   },
   {
     "player": "analyst-top",
-    "balance": 6596,
-    "net": -3404,
-    "k": 19,
-    "d": 17,
-    "a": 17,
-    "bets": 36
+    "balance": 8486,
+    "net": -1514,
+    "k": 22,
+    "d": 20,
+    "a": 18,
+    "bets": 42
+  },
+  {
+    "player": "analyst-mid",
+    "balance": 6654,
+    "net": -3346,
+    "k": 24,
+    "d": 18,
+    "a": 19,
+    "bets": 42
   },
   {
     "player": "fan:0xeb41d2cd8bbdb47a085b43d15988920014037bf2c038bf62e1764d0d72f8a21b",

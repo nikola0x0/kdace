@@ -1,0 +1,194 @@
+{
+  "series": {
+    "matchId": "115660540726095115",
+    "startTime": "2026-11-04T22:00:00Z",
+    "block": "Quarterfinals",
+    "bestOf": 5,
+    "state": "unstarted",
+    "teamA": "GEN",
+    "teamB": "LYON",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 80,
+      "reasoning": "Chovy and Ruler give GEN the best mid-bot pair left in this bracket, and the gap between the regions is too big for a hot LCS story to cover. LYON can steal a game if Isles and the jungle pin Ruler early, but I only flip if Chovy keeps losing mid lane and GEN can't find comfort picks across a Fearless series.",
+      "usedLessons": [
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        },
+        {
+          "blobId": "0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8",
+          "text": "Top lesson: Individual skill still wins series, but under Fearless drafts that skill includes champion pool depth, so I should check whether the star players can keep finding strong picks game after game before I trust them to win clean. A flagged big region gap is a reason to back the better players, not a reason to ignore the one opposing player (like Isles) who can steal a game, so I'll keep my confidence moderate and my scoreline honest. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:19:38.155442Z"
+        },
+        {
+          "blobId": "M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI",
+          "text": "Top lesson: Individual skill still wins series, and Chovy and Ruler's steadiness beating Zeka's flash backs that up, so I should keep backing the stronger players and not let an early-game hype story like HLE's aggression make me flinch. One win doesn't make me right about everything, though: when I name a risk like a Zeka lane win, I should state exactly which player matchup would have to break before I change my pick, since that's where skill actually decides the game. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:29:19.507591Z"
+        },
+        {
+          "blobId": "-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE",
+          "text": "Top lesson: Individual skill still wins series, but a star's lane edge only counts if it turns into a lead that carries past the early game, so I should stop assuming three lane advantages beat one elite player like Creme who can pull games into a scramble. Next time I'll weigh whether the stronger players can actually close games when a rival star neutralizes the map. I won't let BLG's depth or the crowd's hype carry a confident 2-0. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:00:32.692141Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:18:14.630Z",
+      "thinking": "I'm settling on GEN as the pick, with a rough 3-1 series and about 80% win odds. The big region gap stands out as a major factor, though I won't put numbers on it. Stronger play across several roles, like the jungle and bot lanes, is worth weighing too, and I need to keep my reply to JSON only.\n\nI'm weighing whether any one lane could swing this, though the stronger players across jungle and bot look more decisive. Isles could take a game if LYON gets early jungle tempo and pins Ruler, and I'd only flip the pick if Chovy keeps losing mid lane.",
+      "stake": 2350,
+      "scoreStake": 710
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 80,
+      "reasoning": "Tempo, tempo, tempo: Canyon's pathing gets GEN to Herald, first dragon and the first tower before LYON has settled, and LYON keeps coming out of the first fifteen minutes behind at Worlds. The region gap is huge here, and it shows up on the map as early priority rather than just a badge, so I'm leaning in. LYON's habit of stealing a game with those wild comebacks, like they did in the Swiss, is why it's 3-1 and not a sweep, but I don't see them winning the early fights three times in a Bo5.",
+      "usedLessons": [
+        {
+          "blobId": "FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc",
+          "text": "Jungle lesson: GEN won because Canyon owned the first 15 minutes (the Herald and dragon tempo I flagged), so when a team with a proven jungle edge faces an early-aggro opponent, I should trust the tempo matchup and lean harder instead of hedging at 57. HLE's blood-in-the-first-five setups only matter if they convert into objectives, so next time I'll check whether they've actually turned early kills into Herald and towers against this opponent before fearing the snowball. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:29:52.867980Z"
+        },
+        {
+          "blobId": "Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE",
+          "text": "Jungle lesson: Tempo is still king, but a region badge isn't tempo. I have to check which side actually converts the first 15 minutes into Herald, dragon and towers, and not just who gets the early lead. When I spot a real early-pressure threat on the other side, like LYON's, and a habit of giving leads back on mine, like KC's, I should cut my confidence instead of writing it off as a footnote. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:09.552626Z"
+        },
+        {
+          "blobId": "k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU",
+          "text": "Jungle lesson: Early tempo only counts if it's backed by evidence, and I took TSW's jungle pathing as proof they'd control the first 15 minutes while ignoring that a 16-4 home record and a 3-0 MSI loss to LYON show how they actually handle first objectives against this opponent. Next time I'll check who has really won first Drake and Herald fights in head-to-head or international play before I call a team the pace-setter. (from Swiss TSW vs LYON; picked TSW, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:09.213749Z"
+        },
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:18:14.178Z",
+      "thinking": "I'm weighing whether the answer can carry my reasoning in the JSON's reasoning field, which should stay to a sentence or two. The GEN vs LYON Bo5 looks like the key matchup, with a large LCK-LCS region gap flagged, and I'm checking the recorded Swiss result from 10-25.\n\nChecking the GEN vs LYON Bo5 next: GEN has the stronger early-game numbers, but LYON's comeback record means I should weigh a 3-1 scoreline over a sweep, around 80% for GEN.",
+      "stake": 2300,
+      "scoreStake": 690
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 79,
+      "reasoning": "Fearless is where this series gets decided. LYON's best weapons are Berserker's Lucian/Yunara paired with an Alistar or Lulu engage, and if they spend them early GEN gets to draft around the leftovers by game three, with Chovy rotating Ryze, Syndra and Akali and Ruler fluent on Ashe, Ezreal and Kalista. LYON can absolutely steal a game if they lock that bot-support pair in the first rotation and Chovy gets pushed off his comfort mid, but a deeper GEN draft should reassert itself, and the huge LCK edge over the LCS sets my starting lean.",
+      "usedLessons": [
+        {
+          "blobId": "svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I",
+          "text": "Mid lesson: In a Bo1 no earlier games have fearlessly stripped anyone's pool, so \"Fearless can't strip their comfort pair\" isn't an edge. What matters is whether BLG can secure Yunara/Lulu in the first draft rotation, and I should name that and the star-carry matchup as my real draft case. A single win doesn't show the region gap \"showed up on schedule,\" so I'll use a flagged gap as the prior and let draft decide how far I move from it. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:51.122940Z"
+        },
+        {
+          "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+          "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:43.551986Z"
+        },
+        {
+          "blobId": "G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I",
+          "text": "Mid lesson: A correct 2-1 doesn't prove my draft read, so next time I'll name the Fearless picks that should decide each game (Rookie's pool, Wei's tempo picks, LYON's comfort picks) and grade myself on whether those drafts actually happened, not just the scoreline. Pool depth matters most by game three, when the best champions are locked out, so I'll check who still has comfortable picks left instead of leaning on a vague tiebreaker. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:20:44.818062Z"
+        },
+        {
+          "blobId": "0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU",
+          "text": "Mid lesson: Draft and champion pools still decide series, so when my own draft read names a concrete failure path, like Caliste forced off his comfort pick or Berserker getting Lucian or Yunara with an Alistar engage, I have to treat it as a main variable and not a footnote under the region gap. The gap sets my starting lean, but I should trim my confidence until the draft shows my star player's pool is secure and the opposing star's win condition is contained. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:33.950794Z"
+        },
+        {
+          "blobId": "jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI",
+          "text": "Mid lesson: Keep tying the pick to concrete draft evidence, such as which comfort champions the star player (Berserker) can lock in and how deep each side's pool runs under Fearless. Don't lean on soft reads like \"stays calm when behind,\" and keep naming the exact first-pick fight that would flip me, because that is what turns a draft read into a testable call. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:36.329342Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:18:16.004Z",
+      "thinking": "I'm setting up the answer as a JSON with reasoning, starting from the GEN vs LYON Bo5 quarterfinal. The LCK vs LCS region gap is the main flag, and GEN already beat LYON 2-1 in Swiss, so I'm weighing that head-to-head as well.\n\nI'm settling on GEN for this quarterfinal, probably 3-1, around 80%. LYON's best route is Berserker on Lucian/Yunara with Alistar engage, but Fearless drafting strips those picks by the later games, and GEN has more depth to cover them.\n\nI'm settling on Lucian/Yunara and Alistar engage as LYON's upset route, and checking that Ok.",
+      "stake": 1800,
+      "scoreStake": 540
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 83,
+      "reasoning": "Chovy and Ruler's Gen.G are the cleaner team here, and a Bo5 gives that edge room to show up in a way a Bo1 never did. LCK is 5-0 against the LCS this year, and GEN has already beaten LYON twice, which is two independent numbers pointing the same way. I give LYON one game because they took one off GEN in the Swiss, not because of any storyline.",
+      "usedLessons": [
+        {
+          "blobId": "hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8",
+          "text": "ADC lesson: When a team's headline record and its away or cross-region record diverge sharply (TSW's 16-4 versus 1-6 outside the LCP), trust the split that matches the matchup. Combined with a prior head-to-head (3-0 at MSI), that was clear enough to lean harder than my 58, since the numbers all pointed the same way and I was only hedging on style narratives like Nautilus engages. (from Swiss TSW vs LYON; picked LYON, actual LYON 1-0)",
+          "createdAt": "2026-10-24T01:05:59.169447Z"
+        },
+        {
+          "blobId": "u7jUK-CoqIefBygHutzP8sUdZMyBTc_wQvJowFzWDr4",
+          "text": "ADC lesson: Numbers over stories means the numbers have to carry the pick, and here the region gap and series-score logic held up while I leaned on narrative (\"gutsy,\" \"comeback DNA\") to justify LYON stealing a game. Next time, I'll only let the stats set the scoreline and the confidence, and I won't add a story about who steals a game unless a head-to-head or game-length number supports it. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:21:16.687631Z"
+        },
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:18:16.756Z",
+      "thinking": "I'm weighing GEN against LYON in a best-of-five: GEN has a strong series record and a clear edge head-to-head, while LYON has shown it can come back, though its Worlds early-game numbers were weaker. The region gap is large. I'm now thinking about why a best-of-five should be a bigger sample than a best-of-one, so\n\nI'm now checking whether the best-of-five format actually supports leaning harder on GEN, since a longer series gives a bigger sample than a single game. I'm keeping to the numbers rather than narratives about who steals a game, and I'm working out the per-game probability for GEN at around 70%.\n\nI'm settling on 3-1 at 83%, since the Worlds game LYON already won keeps the 3-1 scoreline close enough to 3-0 that I'd rather go with it. I'm keeping the reasoning to two numbers: GEN's 5-0 LCK-over-LCS record this year and their 2-0 series win over them.\n\nI'm settling the lessons I'll lean on: the region and head-to-head evidence, the best-of-five format, and keeping the argument free of narrative about who steals a game.",
+      "stake": 3380,
+      "scoreStake": 1010
+    },
+    {
+      "player": "analyst-support",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 76,
+      "reasoning": "I love LYON's room: they stay calm, trust each other and keep climbing out of holes, and I expect them to steal a game by making GEN sweat. But across a best-of-five that calm keeps starting from behind, while GEN's early coordination and composure (Chovy steady in the middle, Ruler closing fights) hold up, and the gap between LCK and LCS is too big to ignore. GEN already beat them once this week, so I'll take GEN 3-1.",
+      "usedLessons": [
+        {
+          "blobId": "BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI",
+          "text": "Support lesson: I read LYON's room well, since their calm got them a game, but I only measured one side's chemistry. Next time I'll read both rooms, treating IG's early-lead composure and Rookie's steadiness as team culture rather than just talent, and ask whether an underdog's calm holds over a full series when they keep starting from behind. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:21:45.146663Z"
+        },
+        {
+          "blobId": "4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE",
+          "text": "Support lesson: The room still decides games, but one comeback doesn't prove a team's chemistry holds in every situation. Next time I'll check whether the mood fits the stress I'm predicting, like KC protecting a lead or Caliste on a pick he doesn't trust, and cut my confidence when that crack is live. I'll also give a calm, trusting room like LYON's, rallying around Berserker, as much credit as the favorite's steadiness. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:26:29.099266Z"
+        },
+        {
+          "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+          "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:37.615647Z"
+        },
+        {
+          "blobId": "mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk",
+          "text": "Support lesson: A team's steadiness shows up in what it does with an early lead, so next time I'll watch whether a squad converts early leads into objectives, like G2's first-fifteen-minute towers, and not just whether the mood in the room sounds calm. I should also hold my claim loosely, because a Bo1 win can come from one player or a single draft just as easily as from a locker room I can't see inside. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:24:07.830651Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:18:12.941Z",
+      "thinking": "I'm weighing GEN against LYON in this quarterfinal, with the LCK-versus-LCS gap looming large. GEN already took the Swiss matchup 2-1 and holds a 2-0 head-to-head, but I'm leaning toward chemistry and morale as the deciding factor, and I still want to credit LYON's composure and comeback ability, especially how they rallied around Berserker.\n\nI'm settling on GEN as the pick, since the region gap is large and they already have the edge in the head-to-head, with LYON's comeback ability keeping it from being a clean sweep. I'm leaning toward a 3-1 scoreline with GEN winning around 78% of the time.",
+      "stake": 2110,
+      "scoreStake": 630
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095115\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":1010},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":3380,\"lessons\":[\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"u7jUK-CoqIefBygHutzP8sUdZMyBTc_wQvJowFzWDr4\"],\"thought\":\"ff75483bba707a162296fb2c4c43e9b3da8f86a12d90d81c55fea1c5fa01cbae\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":690},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2300,\"lessons\":[\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"096c9761d25f9ea2c39f18a1f87652812f45a306793e57c88046821c31b396bc\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":540},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\"],\"thought\":\"6483f97aa8e713bc1f787acb8821ba36b4d0d568507ba8d4a9fc2af8d44dbb68\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":630},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2110,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\"],\"thought\":\"b7443bd5af8d555542d301eb7863bc563ea93c37b3a496ed8cdb1490326f31a4\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":710},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2350,\"lessons\":[\"-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE\",\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"bcaadf45e4783f2e17398584842fe665a86aaa6b5da139d5c8d6b92e9b84982e\"}]}",
+  "batchHash": "4245de4a04b5315c82f31a02ee0604e370d40f42c33d008a62bb8e5ccfc7786c",
+  "commitDigest": "Copw1PZmPFZwbyuBXVeRjfCmxgan3TWRvU4AsL3Tc2Pf",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: GEN vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 40-10, games 92-33 | last 10 (newest first) WWWWWWLWWW\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · Worlds 2026 3-0 · vs other regions 7-1\n  Last 25 games (19-6): GD@15 +0.4k, FB 36%, FT 64%, FD 56%, dragons 63%, 33.6 min avg, 1st baron 27:18\n  Leads @15 converted 9/12, comeback wins 2, throws 0, objectives taken while 1k+ behind 19\n  Worlds 2026 5 games (4-1): GD@15 -0.0k, FB 60%, FT 60%, FD 60%, dragons 77%, 31 min avg, 1st baron 26:30\n  Picks: TOP Rumble 4, Ambessa 3, Olaf 3 | JG Lee Sin 4, Jarvan IV 3, Nocturne 3 | MID Ryze 5, Syndra 4, Akali 3 | BOT Ezreal 5, Ashe 3, Kalista 3 | SUP Seraphine 5, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.5 over 25 games, 23% dmg share\nLYON [LCS]: 2026 series 28-15, games 78-47 | last 10 (newest first) WLLWWLWWLW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · Worlds 2026 3-2 · vs other regions 7-8\n  Last 31 games (18-13): GD@15 +0.2k, FB 48%, FT 61%, FD 40%, dragons 45%, 33.5 min avg, 1st baron 26:54\n  Leads @15 converted 8/10, comeback wins 3, throws 0, objectives taken while 1k+ behind 19\n  Worlds 2026 11 games (6-5): GD@15 -0.9k, FB 27%, FT 45%, FD 27%, dragons 40%, 33.4 min avg, 1st baron 31:18\n  Picks: TOP K'Sante 6, Gwen 4, Rumble 4 | JG Xin Zhao 5, Wukong 4, Nocturne 4 | MID Syndra 6, Ryze 3, Sylas 3 | BOT Lucian 6, Yunara 6, Ezreal 4 | SUP Alistar 8, Lulu 6, Milio 6\n  Standout: LYON Isles (support) KDA 4.6 over 31 games, 6% dmg share\nHead-to-head 2026: GEN 2-0 LYON\n  2026-10-25 Worlds 2026 Swiss: LYON 1-2 GEN\n  2026-03-19 First Stand 2026 Groups: LYON 0-3 GEN\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN swung 12.2k in 5 min (24:00-29:00) vs HLE (Worlds 2026)\n  - LYON came back from -8.1k at 38:00 vs LOS (Worlds 2026)\n  - LYON came back from -5.1k at 22:00 vs KC (Worlds 2026)\nFun facts:\n  * Likely triple kill: GEN Ruler (Ashe) at 23:34 (vs LYON, Worlds 2026)\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  This matchup is LCK vs LCS: LCK went 5-0 against LCS in 2026; LCK 73% vs LCS 35% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  LYON (LCS): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

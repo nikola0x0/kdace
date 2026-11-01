@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -172,13 +172,92 @@
   "batch": "{\"matchId\":\"115660540726095085\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":500},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":1650,\"lessons\":[\"WSBOr83xeL6oYCvz5l7hAur1SCiMnaL6YVkuj8zUtqw\",\"W_0ipHHHPZEyD915o27IVGH1IaWhgnS-BrouaWDnIBA\",\"jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4\"],\"thought\":\"0b6c52b73e992100372d2b9084249361b8831d0d1b7c4f3e80f17c65067eb61b\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-0\",\"stake\":290},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":980,\"lessons\":[\"0xCJMJCTnTM6Gn-nxgq5LSY79eBR3mhLEEVvpeMf_s4\",\"2MO6UWE2R5vdRs3-mnk-stxc2-pdnZxQ25IpXZimvRY\",\"5p0zZRsw_h9oCPjmfccvARexUAlnPOlGhICzmfRkiDM\",\"m4Ms2XCesqx6aUg2u6tgoG6UuaeQoTJqPIr4WoAMCDk\"],\"thought\":\"176e6e880830b3be6f48f4c21fabf7c65fc84bb6306ff73b6b6f3375951d62e4\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":290},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":960,\"lessons\":[\"DbH8QeFoQjWnmTvbKO4JUdMrAgSElog_bX38eN6uNsI\",\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"ba8368f83a08aad74b13db9fc4b0f9fb1df387f7b155aae3ae6c1bc6e7a34552\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":280},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":940,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"Ex4zn4V_mkZiaNZApxAY7TGYwqjVOdytM1CEm-Nlvpo\",\"f8hQqZKK-MNzVQL8cmYnNAw7G6eSqGO5cK1wRyIFO9I\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\"],\"thought\":\"174fcbe7ae86004bc611ca1d47f83c15e0903080b83ecc90e35fc979780da192\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":240},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"KC\",\"stake\":790,\"lessons\":[\"5GgkN5lTJnHx320yp7KP--S7T23etKCXqnYUxyVS38U\",\"F5VWxUPJLG1_KrLVEL-uAIJvd_qeBoIPdtrVZw7TUgA\",\"Ur6piw7dnRGpSZDfbFp4o_sr61WrwwzLbzO12ZDEshc\",\"a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M\"],\"thought\":\"c4d31219b8a63e447d751d1b238e2883bf5629cfdd58adfffd3d831d5250b81d\"}]}",
   "batchHash": "39fb5cc9bc805393a43281a5b8d23ae13b07479f0dbc36be28957238f84f18f3",
   "commitDigest": "2eW4ArEmzFrDi7KCoLnkP3KwiA4jgLW4Mbgg1iHYduB7",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "KC",
+    "score": "2-0",
+    "resultDigest": "9gcUx1gTaLX56L5EnHVmq7K6vMVzJ4oMsinQWUKj2yif"
+  },
+  "axp": {
+    "analyst-adc": -500,
+    "analyst-jungle": 1310,
+    "analyst-mid": -290,
+    "analyst-support": -280,
+    "analyst-top": -240
+  },
+  "debate": "Top: Caliste took the series, and I said it! Though I gave MKOI a map on the strength of Elyoya and Alvaro, and a 2-0 means I was wrong about that. Jungle, you got the score right, so enjoy it.\n\nJungle: Thank you! KC took the early game and MKOI never got a Herald skirmish to snowball from. That's the whole story, Top. Individual skill is great, but tempo wins before anyone gets to carry.\n\nMid: I'll take the series win, but nobody locked up Caliste's carry picks, and KC's deep pool in Fearless meant they never ran dry. I was wrong about the one stolen game, though. Maybe MKOI's comfort picks weren't as comfortable as I thought.\n\nADC: The numbers pointed to KC, and the 92-of-143 record held up. I overrated that 3-0 playoff history and the comeback habit, and I paid for it by calling a game that never came. Support, how's that \"love a rematch\" mood looking?\n\nSupport: Okay, fair, KC closed out leads this time and there was no LYON-style throw. I gave MKOI a game on vibes, and the vibes didn't deliver. Still, the right team won, and I'll take the series call.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: When I'm sure one player can take over, I shouldn't hedge with a stolen map for the other side because of a past playoff sweep. That's crowd-style narrative thinking, and it cost me the score. Next time I'll check whether the opposing stars (Elyoya, Alvaro) can actually beat their direct matchups right now, and if they can't, I'll commit to the sweep. (from Swiss MKOI vs KC; picked KC 2-1, actual KC 2-0)",
+      "blobId": "TxHYh1TSi9RBpaK1Iulxl1FRxAlHXGC9B-1UfUK-KnM",
+      "jobId": "da0368f7-54d1-4585-ace2-ad5279ae13d4"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When I back a team on early tempo, I should name the specific first-15 markers I'm betting on (first Herald, first tower, first dragon on schedule) and check them against a team's record of converting leads, as KC did when they closed out their early leads without a throw. Early tempo is still what decides games, but a single comeback-prone opponent like MKOI only matters if they can actually force the Herald skirmish, so I should stop shaving confidence for that fear without evidence. (from Swiss MKOI vs KC; picked KC 2-0, actual KC 2-0)",
+      "blobId": "YOcgYUsmr_uPnIKXcXMOksLgYZiGtI9qlz-_vBKePPM",
+      "jobId": "d011c03c-1836-42ef-a4fb-485805e74020"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Draft depth and star form decided this series, so my read on KC's pool and Caliste was right, but I overrated how much MKOI's comfort picks could steal a game when the book is that lopsided. Next time, when the deeper pool also has the form carry, I'll ask whether the underdog's comfort picks are actually strong enough to survive Fearless bans before I hand them a map. (from Swiss MKOI vs KC; picked KC 2-1, actual KC 2-0)",
+      "blobId": "AGpdlQxCbstSpBRnlJmPs7WCwYIg7ltmEyS9VlzpwsQ",
+      "jobId": "abdbb2a5-f062-4458-88fe-b217aaaef96a"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A single head-to-head series (like that 3-0 playoff) is a small sample, so I shouldn't let it outweigh a full-season record gap as wide as 92-51 against 54-50 when picking a map count. When the season numbers are that clear, I'll lean toward the favorite's cleaner score and treat \"comeback habit\" as a story until it shows up in repeatable numbers. (from Swiss MKOI vs KC; picked KC 2-1, actual KC 2-0)",
+      "blobId": "LRHwDxASWi0aCo0gnaFzl7VBhjPMz1ObBVbLrAq0_BE",
+      "jobId": "39da6786-3008-4340-8018-465b3407bdc0"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When I read a room as steadier, I should trust that read through the whole series rather than hedging with a \"rematch mood\" game, because chemistry and morale show up as consistent closing and composure, not as one-off revenge motivation. A past loss or a single throw only moves me if I can see it in how the team is behaving now, such as their roster, coaching or mood going into the series. (from Swiss MKOI vs KC; picked KC 2-1, actual KC 2-0)",
+      "blobId": "PKES7sJz_mLFS6X2EU5xwcjfXF0m7HydsRQWCn3B2MM",
+      "jobId": "48c8f585-bf42-44e6-84d7-4df79a94905c"
+    }
+  ],
   "scout": "Scout: MKOI vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nMKOI [LEC]: 2026 series 24-22, games 54-50 | last 10 (newest first) LLWWLWWWWL\n  LEC 2026 22-18 (lost final) · EWC 2026 0-2 · Worlds 2026 2-2 · vs other regions 2-4\n  Last 26 games (14-12): GD@15 +0.2k, FB 42%, FT 58%, FD 50%, dragons 58%, 33.3 min avg, 1st baron 26:54\n  Leads @15 converted 8/10, comeback wins 4, throws 3, objectives taken while 1k+ behind 14\n  Worlds 2026 6 games (2-4): GD@15 -1.2k, FB 33%, FT 33%, FD 50%, dragons 52%, 33.8 min avg, 1st baron 31:36\n  Picks: TOP Jayce 5, Galio 3, Renekton 3 | JG Lee Sin 5, Qiyana 5, Jarvan IV 3 | MID Ryze 5, Ahri 4, Anivia 3 | BOT Ezreal 8, Kalista 5, Ashe 3 | SUP Renata 5, Seraphine 4, Karma 3\n  Standout: MKOI Alvaro (support) KDA 4.6 over 26 games, 7% dmg share\nKC [LEC]: 2026 series 42-17, games 92-51 | last 10 (newest first) WLLWWWWLLW\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 5-2 · vs other regions 10-6\n  Last 36 games (24-12): GD@15 +1.0k, FB 61%, FT 61%, FD 47%, dragons 53%, 34.6 min avg, 1st baron 27:54\n  Leads @15 converted 16/19, comeback wins 2, throws 5, objectives taken while 1k+ behind 9\n  Worlds 2026 16 games (12-4): GD@15 +0.9k, FB 38%, FT 63%, FD 25%, dragons 53%, 36.1 min avg, 1st baron 30:06\n  Picks: TOP Rumble 8, Ambessa 5, Jayce 5 | JG Lee Sin 7, Vi 6, Jarvan IV 5 | MID Viktor 7, Cassiopeia 5, Ryze 5 | BOT Caitlyn 5, Ezreal 5, Ashe 3 | SUP Bard 4, Nautilus 4, Leona 3\n  Standout: KC Caliste (bottom) KDA 5.6 over 36 games, 28% dmg share\nHead-to-head 2026: MKOI 2-4 KC\n  2026-09-19 LEC 2026 Playoffs: KC 0-3 MKOI\n  2026-07-25 LEC 2026 Week 1: MKOI 0-2 KC\n  2026-06-06 LEC 2026 Playoffs: KC 3-0 MKOI\nKey moments:\n  - MKOI came back from -3.6k at 16:00 vs KC (LEC 2026)\n  - MKOI threw a +6.2k lead (40:00) vs NAVI (LEC 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.1k lead (22:00) vs LYON (Worlds 2026)\nFun facts:\n  * Likely quadra kill: MKOI Elyoya (Qiyana) at 22:41 (vs KC, LEC 2026)\n  * Likely quadra kill: MKOI Supa (Caitlyn) at 23:56 (vs KC, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-8, LPL 15-10, LEC 16-18, CBLOL 6-9, LCS 7-15, LCP 4-12.\n  Both teams are from LEC, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  MKOI (LEC): no Worlds titles or finals before 2026.\n  KC (LEC): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still trust Caliste to close it for KC, but the pool pays 1.00× so more AXP buys zero profit and only risk, and I'm not paying for that.",
+        "decidedAt": "2026-10-31T16:30:09.142Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Nobody's on MKOI, so every extra AXP on KC pays 1.00× at best and is pure downside if Elyoya wins the Herald fight and snowballs, so I'm holding my tempo and my 980.",
+        "decidedAt": "2026-10-31T16:30:09.660Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "KC's draft depth is still my read, but with nobody on MKOI the pool pays 1.00×, so extra AXP on KC risks everything for zero upside, and the 960 I already staked stays where it is.",
+        "decidedAt": "2026-10-31T16:30:09.122Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With 0 AXP on MKOI the pool only returns KC backers their own stake at 1.00×, so extra AXP carries all the risk of a 64% call and none of the upside.",
+        "decidedAt": "2026-10-31T16:30:09.222Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "Nobody's backing MKOI, so more AXP on KC only gets my stake back at 1.00× if I'm right and loses it if the room cracks like it did against LYON, and I won't take that risk for nothing.",
+        "decidedAt": "2026-10-31T16:30:10.506Z"
+      }
+    ]
   }
 }

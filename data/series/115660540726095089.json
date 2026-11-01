@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -167,10 +167,51 @@
   "batch": "{\"matchId\":\"115660540726095089\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":170},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":580,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"ivf7-Z6ZwzYkojYoSxEYE7p02pboDqXNYIIePJBjKsY\",\"u7jUK-CoqIefBygHutzP8sUdZMyBTc_wQvJowFzWDr4\"],\"thought\":\"d13b6f8dfdc6bd04e67c11917f5e89920e58a18e9829f83f60a9bc8ef6d0474c\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":170},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":550,\"lessons\":[\"CV_8lkgLx1OWMaMdMhP-HZ1aH7dSLICfpjAp-WBr2f8\",\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"emW4k6N-MOylJ7GGpe5fVWKFgJ6F3h5wyHSXI4sI5PE\"],\"thought\":\"70dbb9411d89e07c266847b603fa94e4fd5443370f09e46aac672057cd977042\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":130},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":430,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8\"],\"thought\":\"b20f9386a31570a3e50bcde99e8b130f6f7e56920617eb607b4102eb14732e40\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":170},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"LOS\",\"stake\":570,\"lessons\":[\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\",\"PAclTuQWo6gS0_0MO_hfD6qhc8w-N371-kdOUKxHCQE\"],\"thought\":\"08fbc338121f81046e0211813b45f3c5f46d8a157aa437a1789a756640ada968\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":140},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"LYON\",\"stake\":450,\"lessons\":[\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"Efub5VmUkaLPRUAxb3fEK9G-bsl9AuZ8MI11pc82FCo\",\"a9FzQDMDx77yT6GzPM_7P4byxf4kNhZDG8yZF3wmT4M\"],\"thought\":\"33f069eeb7dbbf84fc71858dfa554ed7bdeb1f3ff39b3760b1d289626c8560f0\"}]}",
   "batchHash": "9335ad1244990111be62f7ce7495c1de72160b76545c75aab04e44bf4548d258",
   "commitDigest": "8ha32zzJWFX8CWjCDTsqf2w3fBF9s2WP7mbNw9v7rJai",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "LYON",
+    "score": "2-1",
+    "resultDigest": "8s6LMfkBiAbxocwYBTGJtW7WGnPTmjV66KPy3BaPhrXb"
+  },
+  "axp": {
+    "analyst-adc": -580,
+    "analyst-jungle": -550,
+    "analyst-mid": -430,
+    "analyst-support": -570,
+    "analyst-top": 2130
+  },
+  "debate": "Top: LYON 2-1, exactly as I called it. Saint and Berserker took over when it counted, and the stronger players won the series.\n\nJungle: My tempo read on LOS was right for two games, but LYON flipped their bad early maps again and Saint rescued them. I'm annoyed and a little impressed.\n\nMid: The draft call was shaky. Saint landing his comfort picks in the decider was exactly the flip condition I warned about, so I'll take the L and the lesson.\n\nADC: The numbers said coin flip, and it went to a decider, so I'm calling that half a win. But 13% first blood turned out to be less of a death sentence than I priced.\n\nSupport: I read LOS's bounce-back as belief, but LYON's calm was the stronger room in game three. Top, enjoy this one, friend.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still decides series, but this one went to a decider because LYON's stars had to rescue bad early maps, so next time I'll size my confidence by how often the stronger players have to bail out their team, not just by who has them. When Saint landed his comfort picks in game three, that was the skill gap showing up, and I should check whether the draft lets my stars play their best champions before I lean on them. (from Swiss LOS vs LYON; picked LYON 2-1, actual LYON 2-1)",
+      "blobId": "FRs7gX_IhBK2JJ_WexUJG2NZ5lKlTrgjAocF_EqOMus",
+      "jobId": "3c324ab3-9033-4f70-b8e5-451b68400dbe"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Early tempo only decides a series when it converts into a lasting lead, and LYON showed that a team with a late-game rescue like Saint can flip a bad first 15 minutes. Next time I'll weigh \"can the early leader actually close the game?\" as heavily as \"who gets there first?\", and I'll trim my confidence when the tempo-losing side has a proven comeback carry. (from Swiss LOS vs LYON; picked LOS 2-1, actual LYON 2-1)",
+      "blobId": "Chk7yj0m8f79HDM5RfSjET9xFf6OEbg6TDbYYQqYCiY",
+      "jobId": "7faf881f-bb71-49e4-bc3e-eba96482e9e2"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Pool width on paper doesn't win a Fearless series. What matters is whether the star player's signature picks, like Saint's Syndra and Ryze, can be denied or are still available in the decider, so I should count how many comfort picks each star keeps by game three rather than how many playable champions a team has. When the opponent's best player can still land his core champions late, I should treat that as the flip condition and not back the team with the deeper pool. (from Swiss LOS vs LYON; picked LOS 2-1, actual LYON 2-1)",
+      "blobId": "M4aB8DUrUakR4CoRk3YlMVzTwv_ydWJ-CWSonLpGiIU",
+      "jobId": "2e12a2db-4fc6-41c6-a4ba-9d32c121a210"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Numbers over stories means I should weigh a team's comeback record as much as its first-blood rate. LYON repeatedly winning from behind showed that 13% first blood measured how they start, not how they finish, so a thin sample should push me to hold confidence near 50 instead of leaning on one early-game stat and a single 2-0 head-to-head. (from Swiss LOS vs LYON; picked LOS 2-1, actual LYON 2-1)",
+      "blobId": "5iu9lN_Hgkh6BrkJoDutVzyRCKWdq7j7DvhzSzrGNHc",
+      "jobId": "f42a39a9-2461-4c4f-a0fd-a70772f2d3d4"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A bounce-back only shows belief when it has already held up against a team like this one, and LOS had rallied from their own early losses without facing a room that stays calm when it falls behind. Next time I'll weigh which room stays steadier under pressure in a decider, and not assume the team with the more recent comeback story will carry the final game. (from Swiss LOS vs LYON; picked LOS 2-1, actual LYON 2-1)",
+      "blobId": "_giS7sIgRfz4C2NFI2TMev1po7XCCDEIKMMRiO-qMsQ",
+      "jobId": "0e254145-7ce5-4e26-a5d6-59b81e8461f7"
+    }
+  ],
   "scout": "Scout: LOS vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nLOS [CBLOL]: 2026 series 26-13, games 59-39 | last 10 (newest first) WWLLWWWWLW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · Worlds 2026 2-2 · vs other regions 3-4\n  Last 27 games (16-11): GD@15 +0.6k, FB 44%, FT 63%, FD 41%, dragons 48%, 33.5 min avg, 1st baron 27:06\n  Leads @15 converted 9/12, comeback wins 3, throws 0, objectives taken while 1k+ behind 14\n  Worlds 2026 7 games (4-3): GD@15 +0.1k, FB 43%, FT 43%, FD 43%, dragons 43%, 36.6 min avg, 1st baron 26:30\n  Picks: TOP Gnar 4, Jayce 4, Rumble 4 | JG Pantheon 7, Wukong 5, Jarvan IV 4 | MID Orianna 5, Galio 4, Ryze 4 | BOT Ashe 4, Kalista 4, Sivir 3 | SUP Seraphine 4, Alistar 3, Karma 3\n  Standout: LOS Ackerman (support) KDA 5.3 over 27 games, 8% dmg share\nLYON [LCS]: 2026 series 27-15, games 76-46 | last 10 (newest first) LLWWLWWLWW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · Worlds 2026 2-2 · vs other regions 6-8\n  Last 28 games (16-12): GD@15 +0.2k, FB 46%, FT 64%, FD 41%, dragons 44%, 32.8 min avg, 1st baron 25:36\n  Leads @15 converted 7/9, comeback wins 2, throws 0, objectives taken while 1k+ behind 15\n  Worlds 2026 8 games (4-4): GD@15 -1.1k, FB 13%, FT 50%, FD 25%, dragons 35%, 31 min avg, 1st baron 27:42\n  Picks: TOP K'Sante 5, Gwen 4, Olaf 3 | JG Xin Zhao 5, Wukong 4, Nocturne 3 | MID Syndra 5, Ryze 3, Sylas 3 | BOT Lucian 5, Yunara 5, Ezreal 3 | SUP Alistar 7, Lulu 5, Milio 5\n  Standout: LYON Saint (mid) KDA 4.6 over 28 games, 28% dmg share\nHead-to-head 2026: LOS 1-0 LYON\n  2026-07-15 EWC 2026 Groups: LYON 0-2 LOS\nKey moments:\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -4.3k at 22:00 vs TSW (Worlds 2026)\n  - LYON came back from -5.1k at 22:00 vs KC (Worlds 2026)\n  - LYON came back from -3.8k at 30:00 vs C9 (LCS 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-8, LPL 15-10, LEC 16-18, CBLOL 6-9, LCS 7-15, LCP 4-12.\n  This matchup is CBLOL vs LCS: CBLOL went 5-1 against LCS in 2026; CBLOL 40% vs LCS 32% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  LOS (CBLOL): no Worlds titles or finals before 2026.\n  LYON (LCS): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

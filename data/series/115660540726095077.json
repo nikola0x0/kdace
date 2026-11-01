@@ -194,8 +194,32 @@
     {
       "player": "analyst-top",
       "text": "Top lesson: When I name the opposing team's best player as a series-winning threat, as I did with Duduhh, I have to price in that a star who can carry one game can carry two in a best-of-3, instead of dismissing him as \"one star behind a weak lineup.\" My belief in individual skill holds, so I should have weighed Duduhh's skill against CoreJJ's tempo on the player level and not let TLAW's stats, like their early-lead conversion, outvote the stronger carry. (from Swiss TLAW vs LOS; picked TLAW 2-1, actual LOS 2-1)",
-      "blobId": "",
-      "jobId": "9d2eecac-be1f-4387-9f5f-2820e879acf6"
+      "blobId": "8DosGY7sxTKNxout3d34JXI_KG_zoOq2Il6jnkA7tKM",
+      "jobId": "1b13c529-db24-401f-8767-5327f84b3175"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When I name a flip trigger, like LOS taking first Herald and early jungle priority, I have to price it into the pick instead of treating it as a footnote, because early tempo decides the series and a trigger that's plausible before game one is a real threat. Next time, I'll check whether the opponent's jungle champions can actually win those first 15 minutes, and if they can, I'll cut my confidence or switch the pick rather than lean on a \"cleaner early team\" label that comeback records had already undercut. (from Swiss TLAW vs LOS; picked TLAW 2-1, actual LOS 2-1)",
+      "blobId": "_gPWMHIHUHifa5JkT5pEMAvi0BeUYHMsazWVuGqr110",
+      "jobId": "781b415a-9aa3-4e87-9a29-ff152f32ce8e"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: When I can name the opponent's exact draft route to victory (here Pantheon/Wukong jungle priority into an Orianna/Ryze comeback), I have to treat that route as the main case and test whether my side can actually close it off with their picks and bans, not just my pool-depth count. Under Fearless, depth only matters if it answers the opponent's best remaining champions, so I should favor the team whose drafts adapt to that route as the pool shrinks. (from Swiss TLAW vs LOS; picked TLAW 2-1, actual LOS 2-1)",
+      "blobId": "xvGR-CZ50HppDERX0f_X86gBzthoHF9Afc7x2emENdQ",
+      "jobId": "4e5c6083-9854-4ed9-b47a-73202ddaff7d"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A perfect record like 11-for-11 on 15-minute leads is a small sample that can hide how a team plays when it falls behind, so I should weigh it against evidence of the opponent's comeback ability (like LOS's TSW recovery) and shade my confidence down further when the sample is that thin. Numbers over stories still holds, but I need to count the numbers that cut against my pick, and a 60 should only go out when the underlying counts are large enough to carry it. (from Swiss TLAW vs LOS; picked TLAW 2-1, actual LOS 2-1)",
+      "blobId": "RA1pHJu44a4QjVmSIXNd7EiJQo7wJwDnHbrh-6r-OAQ",
+      "jobId": "6c0f498d-f578-48ab-be17-625541408049"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When I read a room as resilient and loose in an elimination game, I should trust that read as the deciding factor and not treat it as a side note to the team I find calmer. Chemistry and morale decide these games, so when I name a squad's grit and its comeback proof, I should pick that squad rather than the one with the steadier voice. (from Swiss TLAW vs LOS; picked TLAW 2-1, actual LOS 2-1)",
+      "blobId": "G4dUsdhpopOhbUIP7nJAahDMwlMf-jrOghvMmSBSKb0",
+      "jobId": "f46cf416-7de8-4b11-b7fe-602fb1c5f44e"
     }
   ],
   "scout": "Scout: TLAW vs LOS (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTLAW [LCS]: 2026 series 23-12, games 59-34 | last 10 (newest first) WLLWWWWLWW\n  LCS 2026 20-8 (1 title) · MSI 2026 2-2 · Worlds 2026 1-2 · vs other regions 3-4\n  Last 24 games (17-7): GD@15 +1.1k, FB 54%, FT 75%, FD 63%, dragons 57%, 33.7 min avg, 1st baron 28:36\n  Leads @15 converted 11/11, comeback wins 1, throws 0, objectives taken while 1k+ behind 11\n  Worlds 2026 4 games (2-2): GD@15 +1.2k, FB 50%, FT 75%, FD 50%, dragons 45%, 37.8 min avg, 1st baron 30:24\n  Picks: TOP Camille 4, K'Sante 4, Ambessa 2 | JG Pantheon 5, Lee Sin 4, Jarvan IV 3 | MID Syndra 4, Ahri 3, Galio 3 | BOT Lucian 5, Ezreal 4, Ashe 3 | SUP Nami 4, Karma 3, Rakan 3\n  Standout: TLAW CoreJJ (support) KDA 6.9 over 24 games, 7% dmg share\nLOS [CBLOL]: 2026 series 25-13, games 57-38 | last 10 (newest first) WLLWWWWLWW\n  CBLOL 2026 23-9 (1 title) · EWC 2026 1-2 · Worlds 2026 1-2 · vs other regions 2-4\n  Last 24 games (14-10): GD@15 +0.5k, FB 42%, FT 63%, FD 38%, dragons 47%, 32.9 min avg, 1st baron 27:48\n  Leads @15 converted 8/11, comeback wins 3, throws 0, objectives taken while 1k+ behind 14\n  Worlds 2026 4 games (2-2): GD@15 -0.8k, FB 25%, FT 25%, FD 25%, dragons 35%, 35.3 min avg, 1st baron 30:30\n  Picks: TOP Gnar 4, Jayce 3, Kennen 3 | JG Pantheon 6, Wukong 5, Jarvan IV 3 | MID Orianna 5, Ryze 4, Galio 3 | BOT Ashe 3, Kalista 3, Sivir 3 | SUP Alistar 3, Seraphine 3, Bard 2\n  Standout: LOS Ackerman (support) KDA 5.3 over 24 games, 8% dmg share\nHead-to-head 2026: none\nKey moments:\n  - TLAW came back from -6.8k at 38:00 vs C9 (LCS 2026)\n  - TLAW took Baron at 37:54 while down 5.3k vs LYON (LCS 2026), lost\n  - LOS came back from -7.3k at 34:00 vs FUR (CBLOL 2026)\n  - LOS came back from -4.3k at 22:00 vs TSW (Worlds 2026)\nFun facts:\n  * Likely penta kill: LOS Duduhh (Kai'Sa) at 24:38 (vs FX, CBLOL 2026)\n  * Likely quadra kill: LOS Duduhh (Kai'Sa) at 31:36 (vs FUR, CBLOL 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LCS vs CBLOL: LCS went 1-4 against CBLOL in 2026; LCS 35% vs CBLOL 36% against other regions overall.\n  No big region gap: these regions' international records are close or the samples are small, so treat them as even and decide on the two teams.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TLAW (LCS): no Worlds titles or finals before 2026.\n  LOS (CBLOL): no Worlds titles or finals before 2026.",

@@ -106400,5 +106400,2213 @@
    "damageShare": 0.257
   },
   "funFacts": []
+ },
+ {
+  "gameId": "115660540726095086",
+  "matchId": "115660540726095085",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T17:10:01.098Z",
+  "patch": "16.20",
+  "durationMin": 40.1,
+  "complete": true,
+  "winner": "KC",
+  "blue": {
+   "code": "KC",
+   "champions": {
+    "top": "Renekton",
+    "jungle": "MonkeyKing",
+    "mid": "Syndra",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 25349,
+   "kills": 13,
+   "towers": 8,
+   "inhibitors": 1,
+   "dragons": [
+    "mountain",
+    "hextech",
+    "infernal",
+    "infernal",
+    "elder"
+   ],
+   "barons": 2,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 29
+  },
+  "red": {
+   "code": "MKOI",
+   "champions": {
+    "top": "Camille",
+    "jungle": "Sejuani",
+    "mid": "Cassiopeia",
+    "bottom": "Zeri",
+    "support": "Yuumi"
+   },
+   "gold15": 24087,
+   "kills": 14,
+   "towers": 5,
+   "inhibitors": 0,
+   "dragons": [
+    "elder"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   0,
+   -45,
+   -255,
+   -193,
+   -282,
+   23,
+   166,
+   228,
+   166,
+   -48,
+   768,
+   815,
+   285,
+   332,
+   1262,
+   -120,
+   -588,
+   -1359,
+   -1675,
+   -1933,
+   -1306,
+   -1338,
+   -595,
+   -767,
+   -732,
+   -583,
+   -620,
+   414,
+   932,
+   -1480,
+   -3247,
+   -3189,
+   -3304,
+   -3571,
+   -2855,
+   -2707,
+   -2959,
+   -1879,
+   -233,
+   2467
+  ],
+  "leads": {
+   "10": -48,
+   "15": 1262,
+   "20": -1933,
+   "25": -732
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 2467,
+    "min": 40
+   },
+   "red": {
+    "gold": 3571,
+    "min": 34
+   }
+  },
+  "swing": {
+   "team": "KC",
+   "gold": 5426,
+   "fromMin": 37,
+   "toMin": 40
+  },
+  "comeback": {
+   "team": "KC",
+   "deficit": 3571,
+   "min": 34
+  },
+  "events": [
+   {
+    "min": 7,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "mountain"
+   },
+   {
+    "min": 11,
+    "type": "firstTower",
+    "team": "KC"
+   },
+   {
+    "min": 13,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "hextech"
+   },
+   {
+    "min": 15,
+    "type": "firstBlood",
+    "team": "KC"
+   },
+   {
+    "min": 18,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "infernal"
+   },
+   {
+    "min": 23.1,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "infernal"
+   },
+   {
+    "min": 29,
+    "type": "baron",
+    "team": "KC"
+   },
+   {
+    "min": 30.1,
+    "type": "elder",
+    "team": "MKOI"
+   },
+   {
+    "min": 38,
+    "type": "elder",
+    "team": "KC",
+    "behind": 2957
+   },
+   {
+    "min": 38,
+    "type": "baron",
+    "team": "KC",
+    "behind": 1879
+   },
+   {
+    "min": 40,
+    "type": "inhibitor",
+    "team": "KC"
+   },
+   {
+    "min": 40.1,
+    "type": "end",
+    "team": "KC"
+   }
+  ],
+  "players": [
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "Renekton",
+    "role": "top",
+    "k": 3,
+    "d": 5,
+    "a": 6,
+    "damageShare": 0.191
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 2,
+    "d": 2,
+    "a": 9,
+    "damageShare": 0.14800000000000002
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 3,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.239
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 5,
+    "d": 3,
+    "a": 7,
+    "damageShare": 0.33799999999999997
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 12,
+    "damageShare": 0.084
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Myrwn",
+    "champion": "Camille",
+    "role": "top",
+    "k": 4,
+    "d": 4,
+    "a": 6,
+    "damageShare": 0.21100000000000002
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Elyoya",
+    "champion": "Sejuani",
+    "role": "jungle",
+    "k": 3,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.11
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Jojopyun",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 5,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.203
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Supa",
+    "champion": "Zeri",
+    "role": "bottom",
+    "k": 2,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.34600000000000003
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Alvaro",
+    "champion": "Yuumi",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 12,
+    "damageShare": 0.129
+   }
+  ],
+  "standout": {
+   "code": "MKOI",
+   "name": "MKOI Jojopyun",
+   "champion": "Cassiopeia",
+   "role": "mid",
+   "k": 5,
+   "d": 2,
+   "a": 5,
+   "damageShare": 0.203
+  },
+  "funFacts": [
+   {
+    "kind": "peaceful",
+    "team": null,
+    "text": "No kills before 10:00"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 40:07"
+   },
+   {
+    "kind": "elderFlip",
+    "team": "KC",
+    "text": "KC took Elder at 38:00 while 3.0k down and won"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095087",
+  "matchId": "115660540726095085",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T18:08:56.139Z",
+  "patch": "16.20",
+  "durationMin": 26.3,
+  "complete": true,
+  "winner": "KC",
+  "blue": {
+   "code": "KC",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "Pantheon",
+    "mid": "Viktor",
+    "bottom": "Sivir",
+    "support": "Lulu"
+   },
+   "gold15": 28079,
+   "kills": 18,
+   "towers": 8,
+   "inhibitors": 1,
+   "dragons": [
+    "mountain",
+    "infernal",
+    "cloud"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 23.9
+  },
+  "red": {
+   "code": "MKOI",
+   "champions": {
+    "top": "Ornn",
+    "jungle": "LeeSin",
+    "mid": "Anivia",
+    "bottom": "Ezreal",
+    "support": "Karma"
+   },
+   "gold15": 23895,
+   "kills": 4,
+   "towers": 1,
+   "inhibitors": 0,
+   "dragons": [],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   50,
+   298,
+   126,
+   1364,
+   1356,
+   1737,
+   1655,
+   1543,
+   2428,
+   2551,
+   2982,
+   3902,
+   3922,
+   4184,
+   4181,
+   5477,
+   6014,
+   6120,
+   5917,
+   6672,
+   6962,
+   7371,
+   9640,
+   9947,
+   14114
+  ],
+  "leads": {
+   "10": 2428,
+   "15": 4184,
+   "20": 5917,
+   "25": 9947
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 14114,
+    "min": 26
+   },
+   "red": {
+    "gold": 5,
+    "min": 1
+   }
+  },
+  "swing": {
+   "team": "KC",
+   "gold": 7442,
+   "fromMin": 21,
+   "toMin": 26
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 4.9,
+    "type": "firstBlood",
+    "team": "KC"
+   },
+   {
+    "min": 9.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "mountain"
+   },
+   {
+    "min": 15.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "infernal"
+   },
+   {
+    "min": 16.9,
+    "type": "firstTower",
+    "team": "KC"
+   },
+   {
+    "min": 21.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "cloud"
+   },
+   {
+    "min": 23.9,
+    "type": "baron",
+    "team": "KC"
+   },
+   {
+    "min": 25.9,
+    "type": "inhibitor",
+    "team": "KC"
+   },
+   {
+    "min": 26.3,
+    "type": "end",
+    "team": "KC"
+   }
+  ],
+  "players": [
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 3,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.19399999999999998
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 9,
+    "d": 0,
+    "a": 5,
+    "damageShare": 0.23800000000000002
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 1,
+    "d": 0,
+    "a": 8,
+    "damageShare": 0.205
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Sivir",
+    "role": "bottom",
+    "k": 5,
+    "d": 1,
+    "a": 7,
+    "damageShare": 0.309
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 15,
+    "damageShare": 0.053
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Myrwn",
+    "champion": "Ornn",
+    "role": "top",
+    "k": 1,
+    "d": 4,
+    "a": 2,
+    "damageShare": 0.163
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Elyoya",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 1,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.098
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Jojopyun",
+    "champion": "Anivia",
+    "role": "mid",
+    "k": 1,
+    "d": 4,
+    "a": 2,
+    "damageShare": 0.254
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Supa",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 1,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.332
+   },
+   {
+    "code": "MKOI",
+    "name": "MKOI Alvaro",
+    "champion": "Karma",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 4,
+    "damageShare": 0.154
+   }
+  ],
+  "standout": {
+   "code": "KC",
+   "name": "KC Yike",
+   "champion": "Pantheon",
+   "role": "jungle",
+   "k": 9,
+   "d": 0,
+   "a": 5,
+   "damageShare": 0.23800000000000002
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "KC",
+    "text": "KC Yike (Pantheon) went 9/0/5 without dying"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095090",
+  "matchId": "115660540726095089",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T18:59:47.246Z",
+  "patch": "16.20",
+  "durationMin": 35.2,
+  "complete": true,
+  "winner": "LOS",
+  "blue": {
+   "code": "LYON",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "Pantheon",
+    "mid": "Syndra",
+    "bottom": "Ezreal",
+    "support": "Alistar"
+   },
+   "gold15": 25223,
+   "kills": 8,
+   "towers": 1,
+   "inhibitors": 0,
+   "dragons": [
+    "infernal",
+    "hextech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "LOS",
+   "champions": {
+    "top": "Aurora",
+    "jungle": "Vi",
+    "mid": "Cassiopeia",
+    "bottom": "Kaisa",
+    "support": "Nautilus"
+   },
+   "gold15": 26447,
+   "kills": 11,
+   "towers": 8,
+   "inhibitors": 1,
+   "dragons": [
+    "mountain",
+    "hextech",
+    "hextech"
+   ],
+   "barons": 2,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 25.9
+  },
+  "goldDiff": [
+   0,
+   5,
+   -175,
+   -177,
+   -714,
+   -609,
+   -556,
+   -1001,
+   -1752,
+   -1099,
+   -1163,
+   -594,
+   -672,
+   -602,
+   -760,
+   -1224,
+   -1095,
+   -1181,
+   -1012,
+   -2311,
+   -2129,
+   -1677,
+   -2180,
+   -1900,
+   -2073,
+   -2633,
+   -3582,
+   -4058,
+   -3610,
+   -4004,
+   -4034,
+   -4042,
+   -3976,
+   -4059,
+   -4644,
+   -7560
+  ],
+  "leads": {
+   "10": -1163,
+   "15": -1224,
+   "20": -2129,
+   "25": -2633
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 5,
+    "min": 1
+   },
+   "red": {
+    "gold": 7560,
+    "min": 35
+   }
+  },
+  "swing": {
+   "team": "LOS",
+   "gold": 3584,
+   "fromMin": 32,
+   "toMin": 35
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.9,
+    "type": "firstBlood",
+    "team": "LOS"
+   },
+   {
+    "min": 9.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "mountain"
+   },
+   {
+    "min": 14.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "infernal"
+   },
+   {
+    "min": 18.9,
+    "type": "firstTower",
+    "team": "LOS"
+   },
+   {
+    "min": 20.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "hextech",
+    "behind": 2224
+   },
+   {
+    "min": 25.9,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 26,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "hextech"
+   },
+   {
+    "min": 31.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "hextech"
+   },
+   {
+    "min": 34,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 34.9,
+    "type": "inhibitor",
+    "team": "LOS"
+   },
+   {
+    "min": 35.2,
+    "type": "end",
+    "team": "LOS"
+   }
+  ],
+  "players": [
+   {
+    "code": "LYON",
+    "name": "LYON Dhokla",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 3,
+    "d": 1,
+    "a": 2,
+    "damageShare": 0.28
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Inspired",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 2,
+    "d": 1,
+    "a": 4,
+    "damageShare": 0.10400000000000001
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Saint",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 1,
+    "d": 3,
+    "a": 1,
+    "damageShare": 0.255
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Berserker",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 2,
+    "d": 3,
+    "a": 1,
+    "damageShare": 0.33399999999999996
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Isles",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.027999999999999997
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Zest",
+    "champion": "Aurora",
+    "role": "top",
+    "k": 1,
+    "d": 1,
+    "a": 2,
+    "damageShare": 0.325
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Curse",
+    "champion": "Vi",
+    "role": "jungle",
+    "k": 3,
+    "d": 2,
+    "a": 4,
+    "damageShare": 0.141
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Feisty",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 2,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.209
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Duduhh",
+    "champion": "Kaisa",
+    "role": "bottom",
+    "k": 4,
+    "d": 1,
+    "a": 2,
+    "damageShare": 0.272
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Ackerman",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 1,
+    "d": 1,
+    "a": 4,
+    "damageShare": 0.053
+   }
+  ],
+  "standout": {
+   "code": "LOS",
+   "name": "LOS Duduhh",
+   "champion": "Kaisa",
+   "role": "bottom",
+   "k": 4,
+   "d": 1,
+   "a": 2,
+   "damageShare": 0.272
+  },
+  "funFacts": []
+ },
+ {
+  "gameId": "115660540726095091",
+  "matchId": "115660540726095089",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T19:54:14.234Z",
+  "patch": "16.20",
+  "durationMin": 47.2,
+  "complete": true,
+  "winner": "LYON",
+  "blue": {
+   "code": "LOS",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Qiyana",
+    "mid": "Leblanc",
+    "bottom": "Caitlyn",
+    "support": "Karma"
+   },
+   "gold15": 26015,
+   "kills": 9,
+   "towers": 7,
+   "inhibitors": 0,
+   "dragons": [
+    "mountain",
+    "mountain",
+    "mountain",
+    "elder"
+   ],
+   "barons": 2,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 27
+  },
+  "red": {
+   "code": "LYON",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "LeeSin",
+    "mid": "Orianna",
+    "bottom": "Yunara",
+    "support": "Lulu"
+   },
+   "gold15": 25013,
+   "kills": 9,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "hextech",
+    "chemtech",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 46
+  },
+  "goldDiff": [
+   0,
+   25,
+   182,
+   396,
+   431,
+   400,
+   522,
+   -48,
+   288,
+   28,
+   139,
+   228,
+   721,
+   540,
+   1464,
+   1002,
+   1008,
+   1525,
+   2669,
+   4209,
+   4152,
+   5100,
+   5640,
+   5859,
+   5632,
+   5760,
+   5895,
+   4813,
+   5577,
+   6151,
+   7873,
+   7540,
+   7835,
+   7822,
+   6958,
+   7106,
+   7045,
+   7541,
+   8115,
+   8042,
+   7825,
+   4174,
+   2818,
+   1835,
+   4141,
+   4508,
+   3363,
+   3080
+  ],
+  "leads": {
+   "10": 139,
+   "15": 1002,
+   "20": 4152,
+   "25": 5760
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 8115,
+    "min": 38
+   },
+   "red": {
+    "gold": 48,
+    "min": 7
+   }
+  },
+  "swing": {
+   "team": "LYON",
+   "gold": 6280,
+   "fromMin": 38,
+   "toMin": 43
+  },
+  "comeback": {
+   "team": "LYON",
+   "deficit": 8115,
+   "min": 38
+  },
+  "events": [
+   {
+    "min": 5.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "hextech"
+   },
+   {
+    "min": 6.9,
+    "type": "firstBlood",
+    "team": "LYON"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "chemtech"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "mountain",
+    "behind": 1453
+   },
+   {
+    "min": 18,
+    "type": "firstTower",
+    "team": "LOS"
+   },
+   {
+    "min": 22.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "mountain"
+   },
+   {
+    "min": 27,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 28.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "mountain"
+   },
+   {
+    "min": 34.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "mountain"
+   },
+   {
+    "min": 36.9,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 40.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "mountain",
+    "behind": 7826
+   },
+   {
+    "min": 41.9,
+    "type": "inhibitor",
+    "team": "LYON"
+   },
+   {
+    "min": 46,
+    "type": "baron",
+    "team": "LYON",
+    "behind": 4235
+   },
+   {
+    "min": 46.9,
+    "type": "elder",
+    "team": "LOS"
+   },
+   {
+    "min": 46.9,
+    "type": "inhibitor",
+    "team": "LYON"
+   },
+   {
+    "min": 47.2,
+    "type": "end",
+    "team": "LYON"
+   }
+  ],
+  "players": [
+   {
+    "code": "LOS",
+    "name": "LOS Zest",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 2,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.13
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Curse",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 1,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.157
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Feisty",
+    "champion": "Leblanc",
+    "role": "mid",
+    "k": 2,
+    "d": 1,
+    "a": 2,
+    "damageShare": 0.3
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Duduhh",
+    "champion": "Caitlyn",
+    "role": "bottom",
+    "k": 4,
+    "d": 2,
+    "a": 2,
+    "damageShare": 0.295
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Ackerman",
+    "champion": "Karma",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 7,
+    "damageShare": 0.11699999999999999
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Dhokla",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 1,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.275
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Inspired",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 2,
+    "d": 0,
+    "a": 3,
+    "damageShare": 0.095
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Saint",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 0,
+    "d": 3,
+    "a": 6,
+    "damageShare": 0.195
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Berserker",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 6,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.384
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Isles",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 6,
+    "damageShare": 0.051
+   }
+  ],
+  "standout": {
+   "code": "LYON",
+   "name": "LYON Berserker",
+   "champion": "Yunara",
+   "role": "bottom",
+   "k": 6,
+   "d": 2,
+   "a": 1,
+   "damageShare": 0.384
+  },
+  "funFacts": [
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 47:10"
+   },
+   {
+    "kind": "steal",
+    "team": "LYON",
+    "text": "LYON took a mountain dragon at 40:54 while 7.8k down"
+   },
+   {
+    "kind": "steal",
+    "team": "LYON",
+    "text": "LYON took Baron at 46:00 while 4.2k down"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095092",
+  "matchId": "115660540726095089",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T21:01:19.159Z",
+  "patch": "16.20",
+  "durationMin": 36.8,
+  "complete": true,
+  "winner": "LYON",
+  "blue": {
+   "code": "LYON",
+   "champions": {
+    "top": "KSante",
+    "jungle": "Nocturne",
+    "mid": "Taliyah",
+    "bottom": "Lucian",
+    "support": "Milio"
+   },
+   "gold15": 26891,
+   "kills": 17,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "ocean",
+    "infernal",
+    "infernal"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "LOS",
+   "champions": {
+    "top": "Renekton",
+    "jungle": "Chogath",
+    "mid": "Ryze",
+    "bottom": "Kalista",
+    "support": "Renata"
+   },
+   "gold15": 25579,
+   "kills": 7,
+   "towers": 6,
+   "inhibitors": 1,
+   "dragons": [
+    "chemtech",
+    "infernal"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 27.8
+  },
+  "goldDiff": [
+   0,
+   -5,
+   -121,
+   638,
+   477,
+   883,
+   1181,
+   1371,
+   2017,
+   1641,
+   1738,
+   1867,
+   1845,
+   2607,
+   1818,
+   1312,
+   2197,
+   2677,
+   2316,
+   2441,
+   1750,
+   1649,
+   1614,
+   1527,
+   338,
+   589,
+   762,
+   160,
+   -507,
+   -984,
+   -323,
+   -459,
+   -771,
+   -735,
+   187,
+   1575,
+   3101
+  ],
+  "leads": {
+   "10": 1738,
+   "15": 1312,
+   "20": 1750,
+   "25": 589
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 3101,
+    "min": 36
+   },
+   "red": {
+    "gold": 984,
+    "min": 29
+   }
+  },
+  "swing": {
+   "team": "LYON",
+   "gold": 3872,
+   "fromMin": 32,
+   "toMin": 36
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 2.9,
+    "type": "firstBlood",
+    "team": "LYON"
+   },
+   {
+    "min": 8.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "chemtech",
+    "behind": 1736
+   },
+   {
+    "min": 14.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "ocean"
+   },
+   {
+    "min": 16.9,
+    "type": "firstTower",
+    "team": "LYON"
+   },
+   {
+    "min": 20.8,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "infernal"
+   },
+   {
+    "min": 25.9,
+    "type": "dragon",
+    "team": "LOS",
+    "detail": "infernal"
+   },
+   {
+    "min": 27.8,
+    "type": "baron",
+    "team": "LOS"
+   },
+   {
+    "min": 30.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "infernal"
+   },
+   {
+    "min": 34.9,
+    "type": "inhibitor",
+    "team": "LYON"
+   },
+   {
+    "min": 36.7,
+    "type": "inhibitor",
+    "team": "LOS"
+   },
+   {
+    "min": 36.8,
+    "type": "end",
+    "team": "LYON"
+   }
+  ],
+  "players": [
+   {
+    "code": "LYON",
+    "name": "LYON Dhokla",
+    "champion": "KSante",
+    "role": "top",
+    "k": 3,
+    "d": 0,
+    "a": 7,
+    "damageShare": 0.17
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Inspired",
+    "champion": "Nocturne",
+    "role": "jungle",
+    "k": 2,
+    "d": 0,
+    "a": 10,
+    "damageShare": 0.133
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Saint",
+    "champion": "Taliyah",
+    "role": "mid",
+    "k": 4,
+    "d": 4,
+    "a": 7,
+    "damageShare": 0.259
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Berserker",
+    "champion": "Lucian",
+    "role": "bottom",
+    "k": 8,
+    "d": 3,
+    "a": 6,
+    "damageShare": 0.392
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Isles",
+    "champion": "Milio",
+    "role": "support",
+    "k": 0,
+    "d": 0,
+    "a": 15,
+    "damageShare": 0.047
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Zest",
+    "champion": "Renekton",
+    "role": "top",
+    "k": 0,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.20600000000000002
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Curse",
+    "champion": "Chogath",
+    "role": "jungle",
+    "k": 4,
+    "d": 3,
+    "a": 1,
+    "damageShare": 0.218
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Feisty",
+    "champion": "Ryze",
+    "role": "mid",
+    "k": 1,
+    "d": 2,
+    "a": 3,
+    "damageShare": 0.253
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Duduhh",
+    "champion": "Kalista",
+    "role": "bottom",
+    "k": 2,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.198
+   },
+   {
+    "code": "LOS",
+    "name": "LOS Ackerman",
+    "champion": "Renata",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 3,
+    "damageShare": 0.125
+   }
+  ],
+  "standout": {
+   "code": "LYON",
+   "name": "LYON Berserker",
+   "champion": "Lucian",
+   "role": "bottom",
+   "k": 8,
+   "d": 3,
+   "a": 6,
+   "damageShare": 0.392
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "LYON",
+    "text": "LYON Dhokla (K'Sante) went 3/0/7 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "LYON",
+    "text": "LYON Inspired (Nocturne) went 2/0/10 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "LYON",
+    "text": "LYON Isles (Milio) went 0/0/15 without dying"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095094",
+  "matchId": "115660540726095093",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T22:02:50.240Z",
+  "patch": "16.20",
+  "durationMin": 41.9,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "BLG",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "LeeSin",
+    "mid": "Orianna",
+    "bottom": "Ezreal",
+    "support": "Nautilus"
+   },
+   "gold15": 26052,
+   "kills": 19,
+   "towers": 7,
+   "inhibitors": 1,
+   "dragons": [
+    "mountain",
+    "mountain",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "HLE",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "JarvanIV",
+    "mid": "Cassiopeia",
+    "bottom": "Corki",
+    "support": "Alistar"
+   },
+   "gold15": 25876,
+   "kills": 18,
+   "towers": 8,
+   "inhibitors": 1,
+   "dragons": [
+    "infernal",
+    "cloud",
+    "mountain"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 37
+  },
+  "goldDiff": [
+   0,
+   0,
+   232,
+   226,
+   -115,
+   25,
+   474,
+   816,
+   374,
+   -365,
+   -557,
+   -664,
+   320,
+   828,
+   550,
+   176,
+   1087,
+   -675,
+   -1186,
+   -1397,
+   -1563,
+   -1731,
+   -2341,
+   -1831,
+   -1506,
+   -2172,
+   -2319,
+   -2329,
+   -2687,
+   -2160,
+   -2095,
+   -1769,
+   -495,
+   -461,
+   -475,
+   -726,
+   -1714,
+   -2684,
+   -2838,
+   -4718,
+   -4505,
+   -4081
+  ],
+  "leads": {
+   "10": -557,
+   "15": 176,
+   "20": -1563,
+   "25": -2172
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 1087,
+    "min": 16
+   },
+   "red": {
+    "gold": 4718,
+    "min": 39
+   }
+  },
+  "swing": {
+   "team": "HLE",
+   "gold": 4243,
+   "fromMin": 34,
+   "toMin": 39
+  },
+  "comeback": {
+   "team": "BLG",
+   "deficit": 4718,
+   "min": 39
+  },
+  "events": [
+   {
+    "min": 6,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 7,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "infernal"
+   },
+   {
+    "min": 12,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "cloud"
+   },
+   {
+    "min": 17,
+    "type": "firstTower",
+    "team": "HLE"
+   },
+   {
+    "min": 19,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain",
+    "behind": 1091
+   },
+   {
+    "min": 25,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain",
+    "behind": 1295
+   },
+   {
+    "min": 31,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain",
+    "behind": 1830
+   },
+   {
+    "min": 36,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "mountain"
+   },
+   {
+    "min": 37,
+    "type": "baron",
+    "team": "HLE"
+   },
+   {
+    "min": 40,
+    "type": "inhibitor",
+    "team": "HLE"
+   },
+   {
+    "min": 41,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain",
+    "behind": 4233
+   },
+   {
+    "min": 41.7,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 41.9,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 2,
+    "d": 5,
+    "a": 7,
+    "damageShare": 0.1
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 3,
+    "d": 6,
+    "a": 12,
+    "damageShare": 0.142
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 8,
+    "d": 1,
+    "a": 10,
+    "damageShare": 0.29100000000000004
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 6,
+    "d": 0,
+    "a": 10,
+    "damageShare": 0.41700000000000004
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 6,
+    "a": 15,
+    "damageShare": 0.049
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeus",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 3,
+    "d": 4,
+    "a": 10,
+    "damageShare": 0.261
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Kanavi",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 2,
+    "d": 3,
+    "a": 14,
+    "damageShare": 0.2
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeka",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 6,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.149
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Gumayusi",
+    "champion": "Corki",
+    "role": "bottom",
+    "k": 7,
+    "d": 2,
+    "a": 8,
+    "damageShare": 0.348
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Delight",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 7,
+    "a": 16,
+    "damageShare": 0.042
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Knight",
+   "champion": "Orianna",
+   "role": "mid",
+   "k": 8,
+   "d": 1,
+   "a": 10,
+   "damageShare": 0.29100000000000004
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "BLG",
+    "text": "Likely quadra kill: BLG Knight (Orianna) at 41:14"
+   },
+   {
+    "kind": "perfect",
+    "team": "BLG",
+    "text": "BLG Viper (Ezreal) went 6/0/10 without dying"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 41:56"
+   },
+   {
+    "kind": "steal",
+    "team": "BLG",
+    "text": "BLG took a mountain dragon at 41:00 while 4.2k down"
+   },
+   {
+    "kind": "damage",
+    "team": "BLG",
+    "text": "BLG Viper (Ezreal) dealt 42% of BLG's champion damage"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095095",
+  "matchId": "115660540726095093",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-10-31T23:05:07.091Z",
+  "patch": "16.20",
+  "durationMin": 32.8,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "BLG",
+   "champions": {
+    "top": "Olaf",
+    "jungle": "Pantheon",
+    "mid": "Locke",
+    "bottom": "Yunara",
+    "support": "Lulu"
+   },
+   "gold15": 25798,
+   "kills": 14,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "ocean",
+    "mountain",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 30
+  },
+  "red": {
+   "code": "HLE",
+   "champions": {
+    "top": "KSante",
+    "jungle": "Skarner",
+    "mid": "Syndra",
+    "bottom": "Caitlyn",
+    "support": "Karma"
+   },
+   "gold15": 24475,
+   "kills": 3,
+   "towers": 0,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -30,
+   -28,
+   -117,
+   -108,
+   529,
+   289,
+   12,
+   -81,
+   186,
+   -34,
+   197,
+   493,
+   730,
+   938,
+   1323,
+   1186,
+   3761,
+   3413,
+   3885,
+   4291,
+   4602,
+   5040,
+   4300,
+   4455,
+   4091,
+   4594,
+   4779,
+   5415,
+   5323,
+   9457,
+   10562,
+   10965
+  ],
+  "leads": {
+   "10": -34,
+   "15": 1323,
+   "20": 4291,
+   "25": 4091
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 10965,
+    "min": 32
+   },
+   "red": {
+    "gold": 117,
+    "min": 3
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 6186,
+   "fromMin": 27,
+   "toMin": 32
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 4.5,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 6.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "ocean"
+   },
+   {
+    "min": 12.9,
+    "type": "dragon",
+    "team": "HLE",
+    "detail": "cloud"
+   },
+   {
+    "min": 16.9,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain"
+   },
+   {
+    "min": 23,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain"
+   },
+   {
+    "min": 29.1,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain"
+   },
+   {
+    "min": 30,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 32.8,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 32.8,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Olaf",
+    "role": "top",
+    "k": 4,
+    "d": 0,
+    "a": 5,
+    "damageShare": 0.311
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 3,
+    "d": 0,
+    "a": 3,
+    "damageShare": 0.135
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Locke",
+    "role": "mid",
+    "k": 7,
+    "d": 0,
+    "a": 2,
+    "damageShare": 0.243
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 0,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.239
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 0,
+    "a": 12,
+    "damageShare": 0.07200000000000001
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeus",
+    "champion": "KSante",
+    "role": "top",
+    "k": 0,
+    "d": 4,
+    "a": 1,
+    "damageShare": 0.22399999999999998
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Kanavi",
+    "champion": "Skarner",
+    "role": "jungle",
+    "k": 1,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.152
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Zeka",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 0,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.265
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Gumayusi",
+    "champion": "Caitlyn",
+    "role": "bottom",
+    "k": 2,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.27899999999999997
+   },
+   {
+    "code": "HLE",
+    "name": "HLE Delight",
+    "champion": "Karma",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.08
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Knight",
+   "champion": "Locke",
+   "role": "mid",
+   "k": 7,
+   "d": 0,
+   "a": 2,
+   "damageShare": 0.243
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "BLG",
+    "text": "Likely triple kill: BLG Knight (Locke) at 29:16"
+   },
+   {
+    "kind": "perfect",
+    "team": "BLG",
+    "text": "BLG ON (Lulu) went 0/0/12 without dying"
+   }
+  ]
  }
 ]

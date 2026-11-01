@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -177,10 +177,51 @@
   "batch": "{\"matchId\":\"115660540726095093\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":210},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":710,\"lessons\":[\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\",\"gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\"],\"thought\":\"574004838df24edd9885ab96762365135c7204de5551c8e50585d4799c6e64b3\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":190},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":620,\"lessons\":[\"1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M\",\"WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"59fd7b0e9bb990a2b051ce6d38ee49506ad767c35317c2cb07de888f6f79b17f\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":670,\"lessons\":[\"SE5ONJKWn9sa_2OtM7fp2RoLmG1QReCiV659NmLSeJQ\",\"TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\",\"uRmhPOkEA-gD5dy2LPCMQ8OMTbnp97noHJNpAw2UJgs\"],\"thought\":\"155acd365d562700d02721a43cbc94e14f0ddce9dc871d3fe4b13475d0b842b8\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":340},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":1120,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\",\"LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"0e46467423caa05a99f774816d64b7a2388e68844529eeaf965cd7df8d185fc6\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"2-1\",\"stake\":200},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"HLE\",\"stake\":650,\"lessons\":[\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg\",\"M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI\",\"Wv7uDok1FI_B9enzxjckcIsGuMEwAME9XJDioDgxEM0\"],\"thought\":\"dc600434938429cc16c0765a88f223198fa85f1abbfe3944bc0cb7ab3fc566bd\"}]}",
   "batchHash": "1f925134ad277f19b2bb8565088d34a4f1544b5ee4a592267a993220018819d4",
   "commitDigest": "519WPLr1gqvwJUWFSs3jmgfHEAQGde5Lx3DipRSQ7Yo2",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "BLG",
+    "score": "2-0",
+    "resultDigest": "8ddXBugczoP2yi6ZHYvC4zVXEiEbV4Y9GSNM7C7uqsoB"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Zeka and Kanavi were supposed to be the best mid-jungle pair on this stage, and Knight still beat them in lane. I said that was my one way to be wrong, and I even said so out loud, which is somehow worse.\n\nJungle: Fair, but I also said BLG's first Herald and first dragon would decide it, and that is exactly how it went. Kanavi's pathing kept nothing even, Top, so please stop looking at me.\n\nMid: Don't forget I said I'd flip if BLG got Orianna and Yunara/Lulu clean in game one. They got them, I stayed put, and I'm leaving that prior on the floor where it belongs.\n\nADC: I called it a coin-flip with a thumb on HLE's side, and apparently the thumb slipped. The 3-1 MSI knockout record for BLG was in my own pick, and I still shaded it the wrong way.\n\nSupport: I said I couldn't give the mood edge to a side that keeps stumbling at the finish, then picked them anyway. Knight dragged it, just not to a decider. Lovely chemistry in this room, everyone was wrong together.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but I have to judge it by who is actually winning their matchup now, and Knight beating Zeka in mid showed that a past final win and a \"best pair\" label don't settle a lane. When I name one matchup as my only way to be wrong, I should treat it as the main thing to check before I pick, not a disclaimer I attach to a pick I've already made. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+      "blobId": "e8wBS-ROWnGIrTlLkoPS51PncERrrBCTefrws83QCUw",
+      "jobId": "41da5070-01f1-4444-bd18-53dc49309581"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When the early-game tempo data (first blood, first tower, Herald and dragon control) points at one side, don't let region labels or an old series result talk me out of it. And if the way I'd be wrong is already showing up in the stats, as BLG's early leads were, I should take that as the pick, not as a footnote. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+      "blobId": "CzFgUUz1U-hU4q0Ppw1w8tZZofgXgl0rGPRE5Vb1rYw",
+      "jobId": "f1089f75-f439-47db-b095-51575e0f7ccc"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Draft and star form decide series, so I should start from the picks and the Zeka-vs-Knight lane matchup, not from a league-strength prior that only gets nudged by draft. When I name a draft trap I admit I can't prevent, like BLG getting Orianna and Yunara/Lulu clean, I should treat it as the base case and price the pick that way, not hide it behind a \"hard-fought 2-1.\" (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+      "blobId": "Ze-94VL0Un_lU3M4Ujz8cux-hJt-XHHs-vAzAgYwkmE",
+      "jobId": "62286a5b-b426-4148-9dbb-ac25c172d8a0"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: When the head-to-head cuts both ways, I should add up every series and game between the two teams (BLG's 3-1 knockout win and HLE's 3-2 final) instead of letting one headline result tip the pick. If the combined record is close to even, my confidence should sit near 50 and not shade toward a story, even when the region flag leans that way. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+      "blobId": "UuEeQ4-5PpMldPbtp17MUwIsczx4txLWNXe1KEdfBXw",
+      "jobId": "6c11ebf1-2632-4fff-a4b6-e8647a420875"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When I name a team's mood as the deciding factor, I have to follow it to the pick, because I said BLG's \"stumbling at the finish\" was the weak spot and then backed HLE on the region gap anyway. Chemistry and the MSI-rematch fire should have outweighed one calm win over G2, since a room with something to prove and a history of beating this opponent in knockouts (3-1) usually carries more than a room that is simply calm. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+      "blobId": "bduOEQW-IgEcZF4nIE2rY5ihIk-0bnhBkKIBtCUNva8",
+      "jobId": "16930438-b844-4172-8201-732a920f06a8"
+    }
+  ],
   "scout": "Scout: HLE vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nHLE [LCK]: 2026 series 32-16, games 77-51 | last 10 (newest first) WLLWLWLWWW\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · Worlds 2026 2-2 · vs other regions 8-2\n  Last 25 games (14-11): GD@15 +0.4k, FB 60%, FT 56%, FD 48%, dragons 54%, 31.1 min avg, 1st baron 24:36\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 5 games (3-2): GD@15 -0.2k, FB 20%, FT 40%, FD 60%, dragons 50%, 27.2 min avg, 1st baron 22:12\n  Picks: TOP Ambessa 5, Jayce 3, Olaf 3 | JG Jarvan IV 4, Lee Sin 4, Cho'Gath 3 | MID Syndra 4, Orianna 3, Ahri 2 | BOT Jhin 5, Ashe 4, Caitlyn 4 | SUP Alistar 4, Seraphine 4, Karma 3\n  Standout: HLE Zeka (mid) KDA 5.6 over 25 games, 26% dmg share\nBLG [LPL]: 2026 series 52-14, games 128-55 | last 10 (newest first) LWWLLWWWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 2-2 · vs other regions 10-3\n  Last 26 games (17-9): GD@15 +1.0k, FB 58%, FT 65%, FD 54%, dragons 54%, 32.3 min avg, 1st baron 24:48\n  Leads @15 converted 10/11, comeback wins 0, throws 3, objectives taken while 1k+ behind 6\n  Worlds 2026 6 games (3-3): GD@15 -0.1k, FB 83%, FT 67%, FD 67%, dragons 50%, 33.4 min avg, 1st baron 28:36\n  Picks: TOP Ambessa 5, Camille 5, Jayce 4 | JG Jarvan IV 5, Pantheon 4, Vi 4 | MID Orianna 6, Aurora 3, Syndra 3 | BOT Ashe 6, Yunara 6, Kalista 4 | SUP Lulu 6, Renata 4, Seraphine 4\n  Standout: BLG Knight (mid) KDA 6.5 over 6 games, 30% dmg share\nHead-to-head 2026: HLE 1-1 BLG\n  2026-07-12 MSI 2026 Finals: BLG 2-3 HLE\n  2026-07-09 MSI 2026 Knockouts: BLG 3-1 HLE\nKey moments:\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\n  - BLG threw a +4.9k lead (28:00) vs TES (Worlds 2026)\n  - BLG threw a +4.3k lead (25:00) vs AL (LPL 2026)\nFun facts:\n  * Likely quadra kill: BLGKnight (Locke) at 21:41 (vs AL, LPL 2026)\n  * Likely quadra kill: HLE Kanavi (Pantheon) at 22:32 (vs T1, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-8, LPL 15-10, LEC 16-18, CBLOL 6-9, LCS 7-15, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 4-5 against LPL in 2026; LCK 75% vs LPL 60% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  HLE (LCK): no Worlds titles or finals before 2026.\n  BLG (LPL): no Worlds titles; lost final 2024.",
   "chain": {
     "network": "mainnet",

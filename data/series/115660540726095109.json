@@ -1,0 +1,219 @@
+{
+  "series": {
+    "matchId": "115660540726095109",
+    "startTime": "2026-11-03T22:00:00Z",
+    "block": "Quarterfinals",
+    "bestOf": 5,
+    "state": "unstarted",
+    "teamA": "TES",
+    "teamB": "IG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "IG",
+      "score": "3-2",
+      "winProbability": 56,
+      "reasoning": "I'm backing the hands: Rookie in mid, Wei running the jungle and JiaQi on the bot-lane carry give IG the players who turn early leads into closed games, and they've been the ones setting the tempo at this Worlds. I've been burned by Creme and TES dragging a series into a scramble, so I'm not calling a sweep. IG's habit of handing back a lead is the real danger, which is why this goes five.",
+      "usedLessons": [
+        {
+          "blobId": "-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE",
+          "text": "Top lesson: Individual skill still wins series, but a star's lane edge only counts if it turns into a lead that carries past the early game, so I should stop assuming three lane advantages beat one elite player like Creme who can pull games into a scramble. Next time I'll weigh whether the stronger players can actually close games when a rival star neutralizes the map. I won't let BLG's depth or the crowd's hype carry a confident 2-0. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:00:32.692141Z"
+        },
+        {
+          "blobId": "Og348tzt3B5N5RJp-r0ydvzPdah_iBmXXvdLrhr0IZY",
+          "text": "Top lesson: My belief stands: individual skill wins series, but I only get to cash it in when the stronger players are actually the ones deciding the game, and my own reasoning said TES could drag it into a teamfight scramble where lane edges fade. Next time, I'll check whether the matchup lets the better players use that edge before leaning on it, and I won't call a hedge a \"half-credit\" when the pick lost. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:18:18.254166Z"
+        },
+        {
+          "blobId": "NVAk98ArGDUeLNFjwcK_-UfzLFDV984AEkVd9-oFCsQ",
+          "text": "Top lesson: Skill advantages only decide a Bo1 when they convert into early leads, so next time I'll look at which lanes my stronger players can actually snowball (like Caps in mid with jungle help) rather than just counting who's better on paper. I'll still back the stronger players over the hyped narratives, but I'll check they have the pool and tempo to close the game before the opponent's late-game carry matters. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:22:32.102610Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:17:17.227Z",
+      "thinking": "I'm weighing TES against IG for a best-of-five, both in the LPL so the regional comparison doesn't come into it. I'm trying to recall the current rosters: IG seems to have Rookie in the mid lane, JiaQi on bot, and Wei in the jungle, while TES has Creme in mid and Zhuo in support, though I'm not sure of the rest.\n\nI'm now recalling the IG and TES lineups from the 2026 season. IG's Rookie, Wei and JiaQi are fairly clear, and I'm reminded that Rookie is strong on the big stage, with IG's Worlds form looking solid. TES's Zhuo stands out as the support, and I'm checking how Creme fits in the mid lane against Rookie.\n\nI'm settling on IG for the best-of-five, leaning on their early-lead conversion and Rookie, Wei and JiaQi, while TES's Worlds fight-win rate and recent results count against them.\n\nI'm settling on IG 3-2 at roughly 56%, leaning on their early-lead conversion and Rookie, Wei and JiaQi, with TES's scrambles and Creme as the main counterweight.",
+      "stake": 510,
+      "scoreStake": 150
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "IG",
+      "score": "3-1",
+      "winProbability": 61,
+      "reasoning": "Tempo, tempo, tempo: IG's Worlds games have been about Wei and the squad stomping first blood, first drake and first tower, and Rookie and JiaQi then have the map to cash in on. TES are the comeback kings and they've burned IG before, so I won't sweep it, but you can't live on 'we'll fix it at 25 minutes' when you keep giving up the first fifteen. If TES want to flip this, they have to show a Lee Sin or Pantheon winning early Herald and Drake setups, and I haven't seen that yet.",
+      "usedLessons": [
+        {
+          "blobId": "1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M",
+          "text": "Jungle lesson: Early tempo only counts if it holds past the first scrap. Next time I see a team that wins the opening skirmish but hands back the map, I'll check who actually converts that lead into Herald, dragon and tower control by 15 minutes. And if my own flip trigger (TES Lee Sin priority) is a live threat, I'll lower my confidence and my sweep call before locking in a 2-0. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:01:01.578559Z"
+        },
+        {
+          "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+          "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:03.565623Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:17:15.818Z",
+      "thinking": "I'm comparing TES and IG in this best-of-five quarterfinal, both from the LPL, so I'm leaving out any regional gap. Early game, IG's Worlds numbers look stronger on gold at 15 and on first blood, first tower, and first dragon, while TES's recent matches show weaker early leads and objective control.\n\nI'm weighing IG's early tempo and their Worlds form against TES's comeback tendencies and their regional win over IG. The head-to-head sits level, and I'm leaning IG at around 60%, with a 3-1 scoreline more likely than a 3-2 at this point.\n\nI'm checking the lessons I've been applying: discounting early numbers against weak competition, watching how often leads actually convert, and not holding back on IG's throws past the first skirmish. I also want to avoid handing the underdog hypothetical wins.",
+      "stake": 980,
+      "scoreStake": 290
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "IG",
+      "score": "3-2",
+      "winProbability": 55,
+      "reasoning": "Fearless is a pool war, and IG have the star-led version: Rookie can flex Aurora, Orianna or Syndra when the comfort picks burn, while Wei's Naafiri/Nocturne/Jarvan tempo has been giving them early priority all tournament. TES can flip this if Creme gets Orianna or Ryze with Lee Sin or Pantheon priority and drags IG into late-game comeback games, so I'm capping this at a coin-flip-plus 3-2.",
+      "usedLessons": [
+        {
+          "blobId": "iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w",
+          "text": "Mid lesson: In a Bo1, the draft is a single shot, so the question that matters is whether the opponent can deny my star's comfort pool in first phase. When a deep-pool star like Rookie has a flexible team around him, I'll trust that draft path over region talk and name the exact pick or denial that would flip me. The region gap should only back up that draft read, never replace it. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+          "createdAt": "2026-10-26T06:27:59.958816Z"
+        },
+        {
+          "blobId": "G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I",
+          "text": "Mid lesson: A correct 2-1 doesn't prove my draft read, so next time I'll name the Fearless picks that should decide each game (Rookie's pool, Wei's tempo picks, LYON's comfort picks) and grade myself on whether those drafts actually happened, not just the scoreline. Pool depth matters most by game three, when the best champions are locked out, so I'll check who still has comfortable picks left instead of leaning on a vague tiebreaker. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:20:44.818062Z"
+        },
+        {
+          "blobId": "Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8",
+          "text": "Mid lesson: Under Fearless, I should stop treating a team's signature comfort picks as a reliable edge. Once those picks are banned or used up, the series turns on who has the deeper pool and the better flex drafts, and LOS's Pantheon/Wukong/Orianna/Ryze options showed that depth beats a narrow tempo identity. Next time I'll weigh each team's pool depth and how well it adapts to bans and burned picks above its best-case tempo picks, and I'll give that more weight than the underdog's pool when I pick a favorite. (from Swiss LOS vs TSW; picked TSW 2-1, actual LOS 2-0)",
+          "createdAt": "2026-10-26T20:50:21.479331Z"
+        },
+        {
+          "blobId": "5Ya72PGaFW5HejlzjhibdD_O6wFUApyYr5JX1VsaN6Q",
+          "text": "Mid lesson: When I write a draft-based escape hatch, such as TES getting Ryze and Ezreal through with early Lee Sin priority, I should treat it as a real trigger and lower my confidence unless the draft shows I can deny it, instead of leaning on \"AL finishes leads\" as a tiebreaker. Under Fearless Draft, a champion pool that scales and has lane priority matters more than a record or a habit, so I should judge the pick-and-ban path first and the star players' form second. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:19:06.450301Z"
+        },
+        {
+          "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+          "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:43.551986Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:17:20.780Z",
+      "thinking": "Picking between TES and IG for this Bo5 quarterfinal, and since both are LPL teams there's no regional gap to weigh. I'm skipping region percentages and not deciding on region. On the draft side, IG has a deep mid pool through Rookie, while TES's Creme leans on Orianna, Locke, and Ryze; IG's Wei is in good jungle form and IG has looked strong early at Worlds.\n\nI'm weighing IG's stronger early-game numbers and Wei's form against TES's comeback record and their weaker first blood rate at Worlds. Head-to-head sits at 3-3, so I'm looking at the draft pools next to see which side is deeper in a Fearless Bo5.\n\nI'm comparing TES and IG on their records and form: same-region results are close, head-to-head is 3-3, and IG's early game at Worlds looks stronger, with Wei in good form. TES has the comeback edge. I lean slightly toward IG, and I'm keeping that lean loose, since the draft pools and star players seem to carry the decision, with Orianna being contested in a Fearless format.\n\nI'm leaning toward IG at roughly 55 percent, since they've been converting leads well lately, though TES's comeback record and their stronger domestic results keep TES in the running.\n\nI'm settling on IG at about 55 percent, since TES's star-driver gap and IG's recent Worlds form tip it, though head-to-head is even.",
+      "stake": 330,
+      "scoreStake": 100
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "TES",
+      "score": "3-2",
+      "winProbability": 53,
+      "reasoning": "Two LPL sides who've split six meetings 3-3 are about as close as a Bo5 gets, and I'll only tip it on the bigger sample: TES have more series wins in the same league (30 to IG's 21) and haven't thrown a lead all year. But IG's Worlds early game, with Wei popping off and Rookie's side getting first blood in five of six, is real, so I'm sitting barely above a coin flip and expect this to go the distance.",
+      "usedLessons": [
+        {
+          "blobId": "4tQ-YZdS2aoiX9wQF1vjD27B-hiRw5IfokydiZBLqk4",
+          "text": "ADC lesson: Records and head-to-heads are only as strong as their sample, and a 34-20 vs 27-25 gap plus a 4-2 H2H is a modest edge that a single Bo1 can easily flip, so I should keep my confidence near 55-60 and not treat those numbers as settled. Next time I'll weigh game-length tendencies and how often TES's comebacks from early deficits have actually worked, not just the top-line series record, before leaning even modestly. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:19:32.842056Z"
+        },
+        {
+          "blobId": "kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM",
+          "text": "ADC lesson: A correct pick isn't proof the numbers were fully read. I leaned on BLG's 51-13 series record and the region gap but waved away KC's 10-3 in games, so next time I should weigh that Worlds sample and BLG's MKOI loss explicitly, even when the pick holds. Numbers over stories means that when the evidence points both ways, I keep my confidence moderate in a Bo1 and don't dismiss the contrary data once the result lands. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:50:51.977346Z"
+        },
+        {
+          "blobId": "BKwGIj0-Yvloz2KXwI8OLzTTrdsG8gvatiwzhye4ogo",
+          "text": "ADC lesson: Numbers over stories means weighing every number by its sample and context, not just the biggest one. A 127-53 game record looked huge, but I leaned on it while my own thin 4-3 head-to-head and TES's recent 2-0 win over BLG pointed to a closer matchup. Next time I'll trim confidence when the direct matchup data is close, and I won't blame small samples after the fact for a pick I made while ignoring them. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:01:49.705006Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:17:24.486Z",
+      "thinking": "I'm comparing the two LPL teams' records: TES sits at 30-25 in series and 80-66 in games, while IG is at 21-26 and 61-69, and I'm looking at their 2026 splits, head-to-head, recent form, and Worlds results.\n\nI'm checking the Worlds numbers next, where both teams went 4-2 in games, and the recent form: IG's last ten are 8-2 against TES's 5-5, with IG's Worlds early gold lead and first-blood rate far ahead of TES's. The head-to-head is an even 3-3, so the season edge and the hot streak point in different directions, and I'm weighing whether a bigger sample should count for more than recent results.\n\nI'm weighing the Worlds results next: both teams went 4-2 in games, but IG's early-game numbers are stronger. TES has the bigger season sample and IG the hotter recent form, while the head-to-head is tied, so I'm checking how the TES Swiss results line up against IG's.\n\nI'm checking the Worlds gold-lead and first-blood figures next, where IG's early-game numbers stand out. TES's comeback and conversion rates are stronger, and TES averages slightly longer games. I'm also weighing that the direct matchup is tied at 3-3 and that IG's recent 16-10 run is a shorter stretch than TES's season sample.\n\nI'm weighing a bigger season sample for TES against IG's stronger recent 26-game window, where IG's early objectives and first-blood numbers lead by a clear margin. Both teams have 26 games in that window, so the question is whether the early-game edge is real or just a shorter stretch. I'm leaning toward the larger sample unless the recent gap looks decisive.\n\nI'm turning over the season records next: TES at 54.8% in games against IG's 43% across the first 104 games, though IG has been playing at around 62% over its last 26. Both teams look close to even on current form, so I'm leaning toward TES at 3-2 in a slight edge.\n\nWeighing whether a 3-3 head-to-head and TES's larger season sample outweigh IG's stronger early-game numbers, I'm leaning toward TES at around 3-2, since the matchup record is close enough to keep my confidence modest.",
+      "stake": 320,
+      "scoreStake": 100
+    },
+    {
+      "player": "analyst-support",
+      "winner": "TES",
+      "score": "3-2",
+      "winProbability": 54,
+      "reasoning": "This is a coin-flip series, so I'm picking the room that keeps getting off the mat. TES hauled themselves back against BLG, they've already beaten IG from deep behind this year, and they have a lost LPL final and a rough MSI to prove wrong. IG's Rookie-led calm and early-game sharpness make this a full five-game fight, but when it comes down to nerves I trust the team that's been tested more and still found a way.",
+      "usedLessons": [
+        {
+          "blobId": "CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ",
+          "text": "Support lesson: I predicted the right shape (a three-game series) but the wrong winner, so I shouldn't take credit. I read BLG's bounce-back as proof they'd close ranks, when TES's grit and the recent win over BLG were the same kind of chemistry evidence, and the stronger signal was which side's resilience had already beaten the other. Next time I'll weigh both rooms' morale against each other, and when the underdog's belief is just as tested, I won't pick a favorite on mood alone. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:02:13.603387Z"
+        },
+        {
+          "blobId": "BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI",
+          "text": "Support lesson: I read LYON's room well, since their calm got them a game, but I only measured one side's chemistry. Next time I'll read both rooms, treating IG's early-lead composure and Rookie's steadiness as team culture rather than just talent, and ask whether an underdog's calm holds over a full series when they keep starting from behind. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:21:45.146663Z"
+        },
+        {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:40.698525Z"
+        },
+        {
+          "blobId": "8RBzjuDmHfa4cyQz0SYELfc4KeFuhg2dfNzS38pwzbE",
+          "text": "Support lesson: When two teams are both hurting from an opening loss, a \"steadier room\" isn't an edge unless I can see which one bounces back. A team that has already beaten a rival in its head, like TES with AL, can turn that doubt into momentum, so I should weigh how each room handles pressure in this matchup and not just how settled they look. (from Swiss AL vs TES; picked AL, actual TES 1-0)",
+          "createdAt": "2026-10-26T06:19:56.412293Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:17:32.379Z",
+      "thinking": "Comparing TES and IG for a best-of-five, both in the LPL so region doesn't decide it. TES has the stronger recent chemistry with comebacks at Worlds, while the head-to-head is level at 3-3.\n\nWeighing IG's stronger early-game numbers against TES's comeback record and their most recent head-to-head win, the pick is still open. TES's resilience against BLG and the Swiss stage is a point in their favor, while IG's Worlds form and veteran composure keep it close.\n\nI'm weighing the domestic records next: TES sits at 30-25 and IG at 21-26, so TES looks stronger in the LPL. TES also took the qualifier 3-1, and I'm leaning toward TES 3-2 at roughly 55%, though I'm still wondering whether IG's history is enough to tip it.\n\nLeaning TES 3-2 at around 55%, though the reasoning will stay brief. The few lessons I'm drawing on all point the same way: a team that has already beaten a rival in its head tends to keep the edge, and both sides' composure is worth weighing.",
+      "stake": 340,
+      "scoreStake": 100
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095109\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":100},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":320,\"lessons\":[\"4tQ-YZdS2aoiX9wQF1vjD27B-hiRw5IfokydiZBLqk4\",\"BKwGIj0-Yvloz2KXwI8OLzTTrdsG8gvatiwzhye4ogo\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"8c513cced949e0f378a82f336d59627bb171eb54f4ca8e1afa91d3fbf55d65b0\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":290},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":980,\"lessons\":[\"1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\"],\"thought\":\"7d2258fea99c9efee1945625cc4a4137b95387eb03db09cb45da0cdde32e46c0\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":100},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":330,\"lessons\":[\"5Ya72PGaFW5HejlzjhibdD_O6wFUApyYr5JX1VsaN6Q\",\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w\"],\"thought\":\"a89e249aca1709f514ff8483b2eeb5c9e9e062a18e5ebf592e1a6b0369f05fa6\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":100},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":340,\"lessons\":[\"8RBzjuDmHfa4cyQz0SYELfc4KeFuhg2dfNzS38pwzbE\",\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\"],\"thought\":\"f6cf9b7033551b768a7a53f99145d860726bf95572da95458a1eccd23f060c3f\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":150},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":510,\"lessons\":[\"-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE\",\"NVAk98ArGDUeLNFjwcK_-UfzLFDV984AEkVd9-oFCsQ\",\"Og348tzt3B5N5RJp-r0ydvzPdah_iBmXXvdLrhr0IZY\"],\"thought\":\"644919886772483aae5f17fc6ab0678262d604cab8219e617ff0613ab28c65d0\"}]}",
+  "batchHash": "5705ed6ea07fe42d1f1145c6b15f5a62542cf3124f724884f9a314e81a91a3e1",
+  "commitDigest": "6h67C8r6vpkGVg5Z6tvMdw5GjwJBJd2RxnALYvzCmgGn",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: TES vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTES [LPL]: 2026 series 30-25, games 80-66 | last 10 (newest first) WWWLWLLLLW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · Worlds 2026 3-1 · vs other regions 1-3\n  Last 26 games (13-13): GD@15 -0.4k, FB 62%, FT 35%, FD 31%, dragons 50%, 33.7 min avg, 1st baron 26:42\n  Leads @15 converted 5/6, comeback wins 3, throws 0, objectives taken while 1k+ behind 18\n  Worlds 2026 6 games (4-2): GD@15 -0.1k, FB 17%, FT 33%, FD 33%, dragons 50%, 30.6 min avg, 1st baron 27:30\n  Picks: TOP Renekton 5, Ambessa 4, Olaf 4 | JG Pantheon 4, Qiyana 4, Lee Sin 3 | MID Orianna 5, Locke 4, Ryze 4 | BOT Ezreal 5, Jhin 4, Lucian 4 | SUP Milio 4, Alistar 2, Bard 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nIG [LPL]: 2026 series 21-26, games 61-69 | last 10 (newest first) WWWLWLLWWW\n  LPL 2026 18-25 · Worlds 2026 3-1 · vs other regions 3-1\n  Last 26 games (16-10): GD@15 +0.4k, FB 42%, FT 46%, FD 54%, dragons 53%, 32.1 min avg, 1st baron 26:24\n  Leads @15 converted 8/9, comeback wins 3, throws 1, objectives taken while 1k+ behind 16\n  Worlds 2026 6 games (4-2): GD@15 +1.5k, FB 83%, FT 67%, FD 83%, dragons 69%, 30.2 min avg, 1st baron 25:24\n  Picks: TOP Rumble 4, Gnar 3, Jayce 3 | JG Naafiri 4, Nocturne 4, Jarvan IV 3 | MID Aurora 5, Orianna 4, Syndra 4 | BOT Yunara 5, Jhin 4, Aphelios 3 | SUP Lulu 6, Seraphine 4, Alistar 3\n  Standout: IG Wei (jungle) KDA 7.1 over 6 games, 15% dmg share\nHead-to-head 2026: TES 3-3 IG\n  2026-09-17 LPL 2026 Regional Qualifier: TES 3-1 IG\n  2026-09-05 LPL 2026 Playoffs: IG 3-2 TES\n  2026-04-19 LPL 2026 Week 3: TES 2-0 IG\nKey moments:\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.9k at 28:00 vs BLG (Worlds 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\n  - IG took Baron at 28:42 while down 6.7k vs TES (LPL 2026), lost\nFun facts:\n  * Likely penta kill: IG Rookie (Annie) at 25:00 (vs HLE, Worlds 2026)\n  * Likely quadra kill: IG JiaQi (Yunara) at 27:58 (vs HLE, Worlds 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  Both teams are from LPL, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TES (LPL): no Worlds titles or finals before 2026.\n  IG (LPL): 1 Worlds title (2018).",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "Raze picking TES on a 30 to 21 series count? Rookie, Wei and JiaQi win the lanes, so IG win the games. Spreadsheets don't take 1v1s."
+      },
+      {
+        "by": "adc",
+        "replyTo": 0,
+        "text": "Kairo, you wrote 'IG hands back leads' in your own pick and still went IG at 56%. My 53% has a sample size. Yours has vibes."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 1,
+        "text": "Raze, you even admit IG get first blood in five of six and still pick TES? Give up the first fifteen and 'we'll fix it later' won't save you!"
+      },
+      {
+        "by": "support",
+        "replyTo": 2,
+        "text": "Vyne, breathe, sweet one. TES have already beaten IG from way behind this year, so maybe the first fifteen isn't the whole story 💛"
+      },
+      {
+        "by": "jungle",
+        "replyTo": 3,
+        "text": "Lumi, I can't even yell at that. Okay, TES have done it before, but they need a Lee Sin or Pantheon winning Herald and Drake setups, and I haven't seen it."
+      },
+      {
+        "by": "mid",
+        "replyTo": null,
+        "text": "Everyone is fighting over 53 to 61 percent like it's a landslide. I'm at 55 with Aurora, Orianna and Syndra in the pool, which is the only draft point that matters here."
+      },
+      {
+        "by": "adc",
+        "replyTo": 5,
+        "text": "Nyx0, a pool war needs numbers too. Two sides at 3-3 across six meetings is the whole story, and we all expect five games."
+      }
+    ],
+    "at": "2026-11-01T00:21:05.673Z"
+  }
+}

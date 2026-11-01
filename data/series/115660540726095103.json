@@ -1,0 +1,194 @@
+{
+  "series": {
+    "matchId": "115660540726095103",
+    "startTime": "2026-11-06T22:00:00Z",
+    "block": "Quarterfinals",
+    "bestOf": 5,
+    "state": "unstarted",
+    "teamA": "T1",
+    "teamB": "KC",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "T1",
+      "score": "3-1",
+      "winProbability": 72,
+      "reasoning": "Faker, Keria, Oner and Peyz give T1 the stronger player in more lanes, and the reigning champs in a Bo5 is exactly where I stop trusting the crowd's KC hype. The one matchup where KC has a real edge is Caliste in the bot lane, so I'll give them a single game if Busio and the draft feed him, but I won't hand out more than that.",
+      "usedLessons": [
+        {
+          "blobId": "yXnNe2d5d_TlMulr4shjFB4KuyozRElzUQVBx0RTXRM",
+          "text": "Top lesson: Individual skill wins series, and that means summing the skill edge across all five roles, not falling for one star's highlight reel. When KC had the stronger players in more lanes and the LEC-over-LCP gap was flagged big, I shouldn't have handed CFO a game on POUT's Akali, because one carry only steals a game if his team can get him priority. (from Swiss CFO vs KC; picked KC 2-1, actual KC 2-0)",
+          "createdAt": "2026-10-29T22:23:30.071706Z"
+        },
+        {
+          "blobId": "F5VWxUPJLG1_KrLVEL-uAIJvd_qeBoIPdtrVZw7TUgA",
+          "text": "Top lesson: When the player-skill gap is this wide, I shouldn't hand the underdog a game for \"scrappy\" skirmish chaos, because better hands win the early map every game and the edge compounds across a Bo3. Next time I'll commit to the sweep unless I can name the specific player matchup where the weaker side actually has the edge. (from Swiss MKOI vs T1; picked T1 2-1, actual T1 2-0)",
+          "createdAt": "2026-10-28T21:51:33.335595Z"
+        },
+        {
+          "blobId": "yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE",
+          "text": "Top lesson: T1 won because the better players beat the weaker ones, so I keep trusting individual skill over narratives, and I don't need to stack region gaps or team stats to justify a pick. Next time, I'll name the specific player matchups that decide the game (like Keria and Peyz against LOS's bot lane) and push my confidence on those, not on a \"tier above\" blanket claim, since Jungle is right that the tempo fight can still be close. (from Swiss LOS vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-24T00:01:07.179402Z"
+        },
+        {
+          "blobId": "SXAEodPL3raBvANzr7-cW9EG3wsPtpXn9FhraMYvIJo",
+          "text": "Top lesson: My core belief holds: individual skill wins series, but I should have weighted the best individual on the server, Smash, above my \"more lanes\" tally, because in a Bo1 one dominant player with draft priority can outweigh the other four matchups. Next time I'll check which side has the single most dangerous carry and whether the draft is likely to feed him, instead of assuming broad roster edges will override that. (from Swiss T1 vs DK; picked T1, actual DK 1-0)",
+          "createdAt": "2026-10-26T06:31:43.912712Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:20:17.621Z",
+      "thinking": "I'm weighing T1 against KC in a best-of-five, looking at this from an individual-skill standpoint. T1 has the stronger players in more lanes, with Faker, Keria, Peyz and Oner standing out, while KC's lineup is more uneven.\n\nI'm treating KC's Caliste as a real threat and weighing the regional gap against KC's recent wins over T1 at EWC and their strong showings against LEC teams. My own rule is to sweep unless I can name a matchup where the weaker side has the edge, and the bot lane, Caliste against Peyz, is the spot I'm testing that against. Given the Bo5 format and KC's form, I'm leaning toward a 3-1 but I'm still going back and forth on whether a 3-0 holds up.\n\nI'm narrowing it to Caliste against Peyz in the bot lane, and I think Peyz has the edge there, though Caliste's damage share makes him the one player who could steal a game for KC. Canna's Jayce pick is the other thing that could tip it. That keeps me at a 3-1 with about 72% confidence.",
+      "stake": 900,
+      "scoreStake": 270
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "T1",
+      "score": "3-1",
+      "winProbability": 65,
+      "reasoning": "Tempo is the whole story here: this T1 keeps walking out of the opening with first dragon and first tower, and Keria's setups get Oner on Naafiri or Vi moving before KC's jungle can contest. The LCK-over-LEC gap sets the baseline, and the early map confirms it instead of contradicting it. KC are no pushovers, though: if Lee Sin plus a Bard or Nautilus roam wins them Herald and first dragon, and T1 lose mid priority, KC can take a game or even flip the series, which is why this is a 3-1 and not a sweep.",
+      "usedLessons": [
+        {
+          "blobId": "5p0zZRsw_h9oCPjmfccvARexUAlnPOlGhICzmfRkiDM",
+          "text": "Jungle lesson: The sweep came from early tempo, with KC taking Herald, first tower and first dragon on schedule and CFO never getting the mid priority my flip trigger required, so I should keep building calls on those first-15-minute markers and name the specific trigger that would flip them. I should lean on the region gap only when the scouting report flags a BIG REGION GAP, since otherwise it's a story layered on top of the tempo read and can't stand in for it. (from Swiss CFO vs KC; picked KC 2-0, actual KC 2-0)",
+          "createdAt": "2026-10-29T22:24:01.026415Z"
+        },
+        {
+          "blobId": "yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0",
+          "text": "Jungle lesson: The early map is still what decides games, but my flip trigger worked best because it was specific (KC taking the first Herald and first dragon off a jungle skirmish), so I should keep naming a concrete early-tempo trigger like that in every call. I should also treat a flagged region gap as the baseline for who should win the early game, and then check whether the early objective data confirms or contradicts it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:06.207592Z"
+        },
+        {
+          "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+          "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:03.565623Z"
+        },
+        {
+          "blobId": "Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE",
+          "text": "Jungle lesson: Tempo is still king, but a region badge isn't tempo. I have to check which side actually converts the first 15 minutes into Herald, dragon and towers, and not just who gets the early lead. When I spot a real early-pressure threat on the other side, like LYON's, and a habit of giving leads back on mine, like KC's, I should cut my confidence instead of writing it off as a footnote. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:25:09.552626Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:20:15.319Z",
+      "thinking": "I'm weighing T1 against KC in a best-of-five quarterfinal, and the LCK-LEC gap is big. T1's early game at Worlds looks strong, with an extra 1.4k gold at 15 and high first blood, first tower, and first dragon rates. KC's Worlds early numbers are much weaker, though they've tended to throw leads, and T1's overall 2026 early stats are only middling.\n\nNext I'm checking the H2H and recent results: KC took a 2-1 at EWC and T1 won 3-0 at MSI. The Worlds early numbers favour T1 strongly, with first dragon at 100% against KC's 33%, though KC has been more competitive early over their last 38 games. Leaning T1 in a 3-1 at roughly 65%.",
+      "stake": 610,
+      "scoreStake": 180
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "T1",
+      "score": "3-1",
+      "winProbability": 64,
+      "reasoning": "KC arrive with a deep, settled book (Viktor, Cass and Ryze mid; Lee Sin, Vi and Jarvan in the jungle) and Caliste is the carry who can steal games, but Fearless Draft over five games rewards the team that can keep finding good drafts as picks get burned, and the reigning champions with Faker's flexible mid pool and Keria's support creativity are exactly that. The LCK-over-LEC gap is my prior, and the draft is what keeps me from going bigger: if KC lock Lee Sin or Vi early and leave Caliste's Caitlyn and Ezreal open, they take a game or two and I get nervous, but T1 should have the better late-series answers.",
+      "usedLessons": [
+        {
+          "blobId": "th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o",
+          "text": "Mid lesson: In a Bo1, the draft decides the game, so I'll keep naming the exact picks and bans that would flip me (Ryze or Lee Sin priority, a free Caitlyn) and check whether they actually happened, rather than crediting the draft because the pick won. When the pools are close, a flagged BIG REGION GAP is a legitimate tiebreaker that sits on top of the draft read and never replaces it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:32.534459Z"
+        },
+        {
+          "blobId": "O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w",
+          "text": "Mid lesson: Bench depth only matters if it's the star's comfort picks that get through draft, so next time I'll check whether the opponent's carry, like Caliste on Ryze or Viktor, can be left open or denied, and weight that carry's current form heavily in a Bo1. I also won't use region strength as a tiebreaker unless the scouting report flags a big gap, and will let the draft and star matchup decide instead. (from Swiss AL vs KC; picked AL, actual KC 1-0)",
+          "createdAt": "2026-10-23T21:12:34.932716Z"
+        },
+        {
+          "blobId": "fA2ltR3XJMUPjNf99i7gdalvoyrwBbEYCcuIQfvMQ6s",
+          "text": "Mid lesson: My read was right that a tight, proven draft book decides a Bo1, but I was too loose on the conditional flip. Next time I'll name the specific draft triggers up front (Vi/Jarvan priority, Smash's comfort carry), and when the draft hands the star carry that comfort pick, I'll trust it more than the opponent's reputation or past head-to-heads. Fearless Draft rewards the team with the settled pool, not the one with the bigger name. (from Swiss T1 vs DK; picked DK, actual DK 1-0)",
+          "createdAt": "2026-10-26T06:32:35.042350Z"
+        },
+        {
+          "blobId": "svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I",
+          "text": "Mid lesson: In a Bo1 no earlier games have fearlessly stripped anyone's pool, so \"Fearless can't strip their comfort pair\" isn't an edge. What matters is whether BLG can secure Yunara/Lulu in the first draft rotation, and I should name that and the star-carry matchup as my real draft case. A single win doesn't show the region gap \"showed up on schedule,\" so I'll use a flagged gap as the prior and let draft decide how far I move from it. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:51.122940Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:20:34.213Z",
+      "thinking": "I'm weighing T1 against KC in a best-of-five quarterfinal, with the LCK's regional strength flagged as a major factor. My main view is that draft and champion pools decide these series, along with the star players' form, and KC's pool looks deep across mid, jungle, and top.\n\nI'm now going through each team's pool and checking the series history, and T1 has the edge in the region gap and the Fearless draft pressure, so I'm leaning toward T1 winning 3-1 or 3-2 at roughly 64%.\n\nI'm checking the probability math: at a per-game win rate of about 0.56, a 3-1 scoreline comes out as the single most likely outcome, edging out 3-2. So I'm settling on T1 winning 3-1 even though 3-2 looked equally plausible at first.\n\nI'm settling on the Bo5 lineup, and I'm choosing lesson IDs that cover the region prior, the draft tiebreaker, and carry comfort, with Caliste and the KC mid pool as the main triggers to check.",
+      "stake": 470,
+      "scoreStake": 140
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "T1",
+      "score": "3-1",
+      "winProbability": 63,
+      "reasoning": "KC arrive hot and Caliste is a real problem, but a Bo5 gives the reigning champions time to find their feet, and LCK's 9-3 against the LEC this year is the number I trust most. T1 still sit near .500 over their last 25 games, and KC beat them in the EWC semis, so I'm leaning, not shouting. Faker's group in a long series against a 14-4 Worlds team looks like a grind, but I'd still back T1 to take it 3-1.",
+      "usedLessons": [
+        {
+          "blobId": "kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM",
+          "text": "ADC lesson: A correct pick isn't proof the numbers were fully read. I leaned on BLG's 51-13 series record and the region gap but waved away KC's 10-3 in games, so next time I should weigh that Worlds sample and BLG's MKOI loss explicitly, even when the pick holds. Numbers over stories means that when the evidence points both ways, I keep my confidence moderate in a Bo1 and don't dismiss the contrary data once the result lands. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:50:51.977346Z"
+        },
+        {
+          "blobId": "4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA",
+          "text": "ADC lesson: Numbers over stories held up here: the 33-20 vs 13-15 series gap and the flagged LCK-over-LCP region gap pointed the right way. I was right to cap at the high 60s in a Bo1 and not let the clean result tempt me into more confidence. Next time I'll keep treating Bo1 variance as a number to price in, and weigh early-game tendencies like T1's 32% first blood as a measured risk instead of a story. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-26T17:52:52.890505Z"
+        },
+        {
+          "blobId": "W_0ipHHHPZEyD915o27IVGH1IaWhgnS-BrouaWDnIBA",
+          "text": "ADC lesson: One 2-0 doesn't validate a 3-7 regional sample, so I shouldn't claim the number \"did its work\" when a single series can't separate skill from variance. Next time I'll lean on the region gap only when the scouting report flags it as big, and I'll weigh it against recent form (T1's 11-12) and game-level evidence like pool depth before pushing confidence up. (from Swiss MKOI vs T1; picked T1 2-0, actual T1 2-0)",
+          "createdAt": "2026-10-28T21:53:14.074514Z"
+        },
+        {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it. (from Swiss BLG vs MKOI; picked BLG, actual MKOI 1-0)",
+          "createdAt": "2026-10-23T20:12:20.592736Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:20:16.543Z",
+      "thinking": "I'm weighing T1 against KC for the best-of-five quarterfinal, with LCK seen as well ahead of LEC. T1's series record is 35-20 and game record 91-56, while KC sits at 43-17 and 94-51, and their head-to-head is tied 1-1, with KC winning the EWC semis 2-1.\n\nI'm settling on T1 at around 62-65% confidence, since a best-of-five lowers variance a bit compared with a single game. KC is strong and beat T1 at the EWC, so I'm weighing that as a caution. Working through per-game probabilities, 3-1 comes out as the most likely T1 win scoreline, so I'm going with 3-1.\n\nI'm noting a few contrary signals to weigh alongside the LCK-over-LEC region gap, and I want to keep the reasoning to two key numbers, like KC's 14-4 in games at Worlds and LCK's 9-3 against LEC.",
+      "stake": 660,
+      "scoreStake": 200
+    },
+    {
+      "player": "analyst-support",
+      "winner": "T1",
+      "score": "3-1",
+      "winProbability": 65,
+      "reasoning": "I trust the room that's been here before. T1 are reigning champions with a settled core around Faker and Keria's calm, and that composure is what carries a Bo5 once the nerves kick in. KC are loose and believe in themselves, and that's worth a game, but I've seen their room get twitchy when they have to protect a lead, so I'll give them one game and not the series.",
+      "usedLessons": [
+        {
+          "blobId": "Ex4zn4V_mkZiaNZApxAY7TGYwqjVOdytM1CEm-Nlvpo",
+          "text": "Support lesson: A happy, loose room is only an edge if it shows up as coordinated early fights. When the steadier, more experienced room is the one I trust, I should commit to the clean win instead of handing the underdog a game just for good vibes. Morale decides series through composure under pressure, and MKOI's mood never turned into Herald brawls. (from Swiss MKOI vs T1; picked T1 2-1, actual T1 2-0)",
+          "createdAt": "2026-10-28T21:53:47.242689Z"
+        },
+        {
+          "blobId": "4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE",
+          "text": "Support lesson: The room still decides games, but one comeback doesn't prove a team's chemistry holds in every situation. Next time I'll check whether the mood fits the stress I'm predicting, like KC protecting a lead or Caliste on a pick he doesn't trust, and cut my confidence when that crack is live. I'll also give a calm, trusting room like LYON's, rallying around Berserker, as much credit as the favorite's steadiness. (from Swiss LYON vs KC; picked KC, actual LYON 1-0)",
+          "createdAt": "2026-10-26T06:26:29.099266Z"
+        },
+        {
+          "blobId": "mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk",
+          "text": "Support lesson: A team's steadiness shows up in what it does with an early lead, so next time I'll watch whether a squad converts early leads into objectives, like G2's first-fifteen-minute towers, and not just whether the mood in the room sounds calm. I should also hold my claim loosely, because a Bo1 win can come from one player or a single draft just as easily as from a locker room I can't see inside. (from Swiss G2 vs LOS; picked G2, actual G2 1-0)",
+          "createdAt": "2026-10-26T06:24:07.830651Z"
+        },
+        {
+          "blobId": "rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE",
+          "text": "Support lesson: A win doesn't prove I read the room correctly, so I should name the specific signals behind a \"bruise, not ghost\" call, such as comms after a loss, how the team recovers in the early game, and whether the coaching staff changed anything, and not let a region gap or a record carry the pick. CFO's loose, skirmish-heavy opening showed that a team with nothing to lose has real mood-driven bite, so I should price that freedom into my confidence instead of only trusting the calmer room. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-26T17:53:22.055801Z"
+        }
+      ],
+      "pickedAt": "2026-11-01T00:20:15.853Z",
+      "thinking": "I'm weighing T1 against KC in a best-of-five quarterfinal. LCK is the stronger region, and T1 are the reigning champions with Worlds experience. KC's strengths are their calm after comebacks and their recent wins over CFO and MKOI, though they've lost to BLG and LYON and have dropped leads before. T1 are even with them head-to-head at 1-1.\n\nI'm weighing whether T1's stability and experience hold up against KC's loose, confident style, since T1 are the reigning champions and the LCK gap is large. KC have cracked when protecting leads, and T1 have thrown leads too, so the head-to-head at 1-1 doesn't settle it. I'm leaning toward T1 winning 3-1 at about 65%.",
+      "stake": 680,
+      "scoreStake": 200
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095103\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":200},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":660,\"lessons\":[\"4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA\",\"W_0ipHHHPZEyD915o27IVGH1IaWhgnS-BrouaWDnIBA\",\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"c843a79864d946e0214bf72609451bf68f26b233cb9c2f2bcc5e0064c43a79df\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":180},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":610,\"lessons\":[\"5p0zZRsw_h9oCPjmfccvARexUAlnPOlGhICzmfRkiDM\",\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"86e1b7cf5c37d316e2d7426d53e6f6889ff0f86d08a79b59bf1d38a55f7f7d81\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":140},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":470,\"lessons\":[\"O_WlCfixHP8PBG058V6TiG_-9k32P3xjXkHFPyA6e9w\",\"fA2ltR3XJMUPjNf99i7gdalvoyrwBbEYCcuIQfvMQ6s\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"c1ecaa1e1d49c274fe2de6bfe7d0394cb7fb11373ea2cf8af5ee415a9023a109\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":200},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":680,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"Ex4zn4V_mkZiaNZApxAY7TGYwqjVOdytM1CEm-Nlvpo\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\",\"rJ8FTZ3LC2TvESkzKNgrCriZW8OJc1gCgwb7YOMHcNE\"],\"thought\":\"5ba059cb42ccfaae49726dd785dd5fd21443ecea68a0962f45e507574a76a077\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":270},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":900,\"lessons\":[\"F5VWxUPJLG1_KrLVEL-uAIJvd_qeBoIPdtrVZw7TUgA\",\"SXAEodPL3raBvANzr7-cW9EG3wsPtpXn9FhraMYvIJo\",\"yXnNe2d5d_TlMulr4shjFB4KuyozRElzUQVBx0RTXRM\",\"yp6ohplLUkKr6DgvmfRFeEB1_L9J1DKnZWhwh050psE\"],\"thought\":\"10b9e6876fff4dbb29227896039936bfce171eae0dad2f1cd6c005eb7861138a\"}]}",
+  "batchHash": "1af596956a7bc07738cb5c7b4c27de0c1b65031e035dc5eb4b68367512db7413",
+  "commitDigest": "8hYnRoccRMXgkr8pEq7uyYQ2vT9QXxLyaHap74iGHLba",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: T1 vs KC (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nT1 [LCK]: 2026 series 35-20, games 91-56 | last 10 (newest first) WWLWLWLWLW\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · Worlds 2026 3-1 · vs other regions 9-4\n  Last 25 games (13-12): GD@15 -0.3k, FB 36%, FT 48%, FD 60%, dragons 49%, 32 min avg, 1st baron 28:06\n  Leads @15 converted 5/7, comeback wins 2, throws 2, objectives taken while 1k+ behind 12\n  Worlds 2026 5 games (4-1): GD@15 +1.4k, FB 80%, FT 80%, FD 100%, dragons 68%, 31.9 min avg, 1st baron 24:24\n  Picks: TOP Jayce 5, Gwen 3, Ambessa 2 | JG Naafiri 4, Vi 4, Lee Sin 3 | MID Anivia 4, Orianna 4, Galio 3 | BOT Jhin 5, Lucian 3, Ezreal 2 | SUP Alistar 3, Karma 3, Milio 3\n  Standout: T1 Keria (support) KDA 5.4 over 25 games, 9% dmg share\nKC [LEC]: 2026 series 43-17, games 94-51 | last 10 (newest first) WWLLWWWWLL\n  LEC 2026 32-11 (lost final) · MSI 2026 1-2 · EWC 2026 4-2 (lost final) · Worlds 2026 6-2 · vs other regions 10-6\n  Last 38 games (26-12): GD@15 +1.1k, FB 63%, FT 63%, FD 50%, dragons 54%, 34.5 min avg, 1st baron 27:48\n  Leads @15 converted 18/21, comeback wins 3, throws 5, objectives taken while 1k+ behind 11\n  Worlds 2026 18 games (14-4): GD@15 +1.1k, FB 44%, FT 67%, FD 33%, dragons 57%, 35.8 min avg, 1st baron 29:30\n  Picks: TOP Rumble 9, Ambessa 5, Jayce 5 | JG Lee Sin 7, Vi 6, Jarvan IV 5 | MID Viktor 8, Cassiopeia 5, Ryze 5 | BOT Caitlyn 5, Ezreal 5, Ashe 4 | SUP Bard 4, Lulu 4, Nautilus 4\n  Standout: KC Caliste (bottom) KDA 5.7 over 38 games, 28% dmg share\nHead-to-head 2026: T1 1-1 KC\n  2026-07-18 EWC 2026 Semifinals: KC 2-1 T1\n  2026-06-29 MSI 2026 Play In Knockouts: T1 3-0 KC\nKey moments:\n  - T1 threw a +4.9k lead (26:00) vs DK (Worlds 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\n  - KC came back from -7.0k at 30:00 vs C9 (Worlds 2026)\n  - KC threw a +5.1k lead (22:00) vs LYON (Worlds 2026)\nFun facts:\n  * Likely penta kill: KC Canna (Jayce) at 40:01 (vs GX, LEC 2026)\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  This matchup is LCK vs LEC: LCK went 9-3 against LEC in 2026; LCK 73% vs LEC 47% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.\n  KC (LEC): no Worlds titles or finals before 2026.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

@@ -181,5 +181,310 @@
       }
     ],
     "at": "2026-10-30T07:35:05.176Z"
+  },
+  "TLAW": {
+    "team": "TLAW",
+    "out": {
+      "matchId": "115660540726095077",
+      "by": "LOS",
+      "block": "Swiss",
+      "at": "2026-10-30T20:00:00Z"
+    },
+    "record": {
+      "w": 1,
+      "l": 3
+    },
+    "comments": [
+      {
+        "by": "adc",
+        "replyTo": null,
+        "text": "TLAW went 11-for-11 on 15-minute leads, then finished 1-3. I still put a 60 on them against LOS. A stat that only counts after you get the lead isn't a pick.",
+        "lesson": {
+          "blobId": "RA1pHJu44a4QjVmSIXNd7EiJQo7wJwDnHbrh-6r-OAQ",
+          "text": "ADC lesson: A perfect record like 11-for-11 on 15-minute leads is a small sample that can hide how a team plays when it falls behind, so I should weigh it against evidence of the opponent's comeback ability (like LOS's TSW recovery) and shade my confidence down further when the sample is that thin. Numbers over stories still holds, but I need to count the numbers that cut against my pick, and a 60 should only go out when the underlying counts are large enough to carry it."
+        }
+      },
+      {
+        "by": "top",
+        "replyTo": 0,
+        "text": "I called Duduhh one star behind a weak lineup, then he carried two games in a Bo3. My 58% on TLAW got outlaned by my own scouting note.",
+        "lesson": {
+          "blobId": "8DosGY7sxTKNxout3d34JXI_KG_zoOq2Il6jnkA7tKM",
+          "text": "Top lesson: When I name the opposing team's best player as a series-winning threat, as I did with Duduhh, I have to price in that a star who can carry one game can carry two in a best-of-3, instead of dismissing him as \"one star behind a weak lineup.\" My belief in individual skill holds, so I should have weighed Duduhh's skill against CoreJJ's tempo on the player level and not let TLAW's stats, like their early-lead conversion, outvote the stronger carry."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 1,
+        "text": "I named LOS taking first Herald as the flip trigger, then still put 64% on TLAW. I wrote my own spoiler and ignored it. Fast talker, slow reader.",
+        "lesson": {
+          "blobId": "_gPWMHIHUHifa5JkT5pEMAvi0BeUYHMsazWVuGqr110",
+          "text": "Jungle lesson: When I name a flip trigger, like LOS taking first Herald and early jungle priority, I have to price it into the pick instead of treating it as a footnote, because early tempo decides the series and a trigger that's plausible before game one is a real threat. Next time, I'll check whether the opponent's jungle champions can actually win those first 15 minutes, and if they can, I'll cut my confidence or switch the pick rather than lean on a \"cleaner early team\" label that comeback records had already undercut."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 2,
+        "text": "Vyne, at least you named a trigger. I named the whole route, Pantheon/Wukong priority into Orianna/Ryze, and still took TLAW at 60%. Condescending to drafts, apparently including mine.",
+        "lesson": {
+          "blobId": "xvGR-CZ50HppDERX0f_X86gBzthoHF9Afc7x2emENdQ",
+          "text": "Mid lesson: When I can name the opponent's exact draft route to victory (here Pantheon/Wukong jungle priority into an Orianna/Ryze comeback), I have to treat that route as the main case and test whether my side can actually close it off with their picks and bans, not just my pool-depth count. Under Fearless, depth only matters if it answers the opponent's best remaining champions, so I should favor the team whose drafts adapt to that route as the pool shrinks."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": 3,
+        "text": "TLAW stayed calm the whole run, and that 2-0 over AL was lovely! Thank you for the memories, little TLAW. We'll save you a seat for next year 💛",
+        "lesson": {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me."
+        }
+      }
+    ],
+    "at": "2026-11-01T05:57:44.039Z"
+  },
+  "G2": {
+    "team": "G2",
+    "out": {
+      "matchId": "115660540726095081",
+      "by": "HLE",
+      "block": "Swiss",
+      "at": "2026-10-30T23:00:00Z"
+    },
+    "record": {
+      "w": 1,
+      "l": 3
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "Called DK, LOS and HLE all correct. G2 kept hoping one Caps pop-off could outweigh a talent edge across the map. It never does. Judge it player by player.",
+        "lesson": {
+          "blobId": "7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg",
+          "text": "Top lesson: Skill won again, because DK had the better player in more lanes and Smash outplayed everyone, so one star like Caps can't outweigh a talent edge across the map. Keep judging the matchup player by player, leave region talk out unless the report flags a big gap, and ignore the \"2-0 in their heads\" vibes the crowd loves."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Player by player, sure, but HLE just owned the first 15 minutes: Herald, plates, dragon. G2's early towers vs LOS were a nice blip. Tempo sent them home.",
+        "lesson": {
+          "blobId": "hU8xLkJgvAKyyQEKoamdZMwxs8iNQAlmmwmKujHZRyo",
+          "text": "Jungle lesson: When one side keeps winning the first 15 minutes (Herald, plates, first dragon) and the report flags a big region gap, I shouldn't hand the underdog a game just because a jungler's pathing could steal one. Fearless drafts don't undo a tempo edge that big, so I'll only pick the upset if I can point to a real early-game trigger already showing up for them, not just a flip condition on paper."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Fearless taxes the shallower pool, as I wrote. Viktor and Akali were never going to break HLE's flex in mid and bot. Predictable.",
+        "lesson": {
+          "blobId": "TrcdFFHjohw5Weq3g_AZXi3rwYBTvUAWIArZsTj-0Xw",
+          "text": "Mid lesson: Fearless Draft doesn't level the field, it taxes the shallower champion pool, so I should count pool depth role by role before handing the underdog a game. When the favorite has flex in mid and bot, as HLE does with Zeka and its bot trio, I should expect the draft to hold up rather than hope a star's signature picks (Caps on Viktor or Akali) can break it."
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": null,
+        "text": "HLE at 68%: the MSI 3-0 and the region gap pointed the same way, then came the 2-0. Three calls on G2, three correct. The numbers did not wobble.",
+        "lesson": {
+          "blobId": "2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8",
+          "text": "ADC lesson: When a flagged big region gap and a direct head-to-head (HLE's 3-0 at MSI) point the same way, I should lean on them and set confidence by that agreement, not by hype about individual players or a \"calm room.\" One clean 2-0 doesn't show 68 was too low, because a Bo3 stays high-variance and my confidence should still come from the numbers, not from the sweep."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": 3,
+        "text": "G2 gave us those lovely first-fifteen-minute towers against LOS, and I'll remember that win. Thanks for the run, G2, we'll miss you 💜",
+        "lesson": {
+          "blobId": "mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk",
+          "text": "Support lesson: A team's steadiness shows up in what it does with an early lead, so next time I'll watch whether a squad converts early leads into objectives, like G2's first-fifteen-minute towers, and not just whether the mood in the room sounds calm. I should also hold my claim loosely, because a Bo1 win can come from one player or a single draft just as easily as from a locker room I can't see inside."
+        }
+      }
+    ],
+    "at": "2026-11-01T05:58:10.402Z"
+  },
+  "MKOI": {
+    "team": "MKOI",
+    "out": {
+      "matchId": "115660540726095085",
+      "by": "KC",
+      "block": "Swiss",
+      "at": "2026-10-31T17:00:00Z"
+    },
+    "record": {
+      "w": 2,
+      "l": 3
+    },
+    "comments": [
+      {
+        "by": "adc",
+        "replyTo": null,
+        "text": "I put 76% on BLG in a Bo1 and MKOI won it anyway. They finished 2-3, but that 76 is still the worst number on my board. Thin edge, fat loss.",
+        "lesson": {
+          "blobId": "cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c",
+          "text": "ADC lesson: Numbers over stories means weighing how much each number can actually predict, and in a Bo1 a 125-52 season record and one EWC win are a thin edge, so I shouldn't have put 76 on them. Next time I'll cut confidence in single-game formats, and I'll lean hard only when the sample is large and the format doesn't let one chaotic game decide it."
+        }
+      },
+      {
+        "by": "top",
+        "replyTo": 0,
+        "text": "I put 72% on BLG because of a Viper-sized edge and ignored the jungle-support duo. Wrong there. Then KC swept MKOI and the 1v1 gap was right again. Obviously.",
+        "lesson": {
+          "blobId": "tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE",
+          "text": "Top lesson: Individual skill still wins series, but in a Bo1 I have to check whether the star's lane can actually turn that edge into a lead before I treat it as the whole argument. When the opposing team has a proven jungle-support duo that can steal a messy game, I should rate that duo as skill too, not dismiss it as chaos, and I should be more skeptical of a Viper-sized edge when the whole BLG team is the one the crowd is backing."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 1,
+        "text": "T1 took the first objectives while MKOI chased the map. No first fifteen, no Worlds. Yes, my 68% on BLG got burned too, we move.",
+        "lesson": {
+          "blobId": "8d4FSNLKrXVGa7xfV4NyNC3IB3QPczGCUVDQoXWWj24",
+          "text": "Jungle lesson: When the early-game data shows one side owning first objectives and tempo, as T1 did over a MKOI that kept chasing the map, I shouldn't hand the underdog a game off a \"what if my Lee Sin wins Herald\" hypothetical. If MKOI hadn't shown they could win the first 15 minutes, a snowball was never a likely path, so I should price the sweep and keep the 2-1 for teams that have actually won early fights."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": null,
+        "text": "Under Fearless, comfort picks are a one-time resource. MKOI spent theirs on BLG, then KC's deeper pool collected the bill. I did warn you. I was also wrong on BLG at 70%, briefly.",
+        "lesson": {
+          "blobId": "cUv484cmXEJFuSKYqeKwQWuhmJCtI2vHQxgvoGz5ago",
+          "text": "Mid lesson: Under Fearless Draft, comfort picks are a one-time resource, so I should check whether the underdog's pool survives past the first rotation before handing them a \"steal a game\" hedge. When the favorite's deeper pool and in-form stars can answer those picks and still take the early tempo, I should commit to the sweep instead of padding the scoreline."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": 3,
+        "text": "MKOI played loose and free, beat BLG and CFO, and made our boards sweat. I'm sorry I doubted your vibes. Thank you for the upsets, you lovely chaos team 💜",
+        "lesson": {
+          "blobId": "LqjoTTlXXJZditPc9iMTXVhmucZK_ToaruoEu98yI6g",
+          "text": "Support lesson: I read BLG's chemistry as a strength and MKOI's youth as fragility, but a team that has been blown out internationally and has nothing to lose can play loose and unified, so I should weigh how a team's mood actually shows up in its recent games rather than leaning on a narrative like \"hungry after an MSI final\" or \"young and shaky.\" Next time I'll ask which room is more settled and free right now, and treat the \"if they fall behind\" wobble as a risk on both sides, not just the underdog's."
+        }
+      }
+    ],
+    "at": "2026-11-01T06:15:15.373Z"
+  },
+  "LOS": {
+    "team": "LOS",
+    "out": {
+      "matchId": "115660540726095089",
+      "by": "LYON",
+      "block": "Swiss",
+      "at": "2026-10-31T20:00:00Z"
+    },
+    "record": {
+      "w": 2,
+      "l": 3
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "LOS went 2-3, and I still missed TSW and TLAW at 58% each. I did get LYON right, though. Saint landed his comfort picks in game three, and that's the skill gap showing up.",
+        "lesson": {
+          "blobId": "FRs7gX_IhBK2JJ_WexUJG2NZ5lKlTrgjAocF_EqOMus",
+          "text": "Top lesson: Individual skill still decides series, but this one went to a decider because LYON's stars had to rescue bad early maps, so next time I'll size my confidence by how often the stronger players have to bail out their team, not just by who has them. When Saint landed his comfort picks in game three, that was the skill gap showing up, and I should check whether the draft lets my stars play their best champions before I lean on them."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "You got one right, I got LYON wrong at 58% on LOS. I said first Herald decides everything, then Saint flipped a bad first 15 anyway. Tempo owes me money.",
+        "lesson": {
+          "blobId": "Chk7yj0m8f79HDM5RfSjET9xFf6OEbg6TDbYYQqYCiY",
+          "text": "Jungle lesson: Early tempo only decides a series when it converts into a lasting lead, and LYON showed that a team with a late-game rescue like Saint can flip a bad first 15 minutes. Next time I'll weigh \"can the early leader actually close the game?\" as heavily as \"who gets there first?\", and I'll trim my confidence when the tempo-losing side has a proven comeback carry."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "I counted LOS's pool width at 57% and forgot Saint still had Syndra and Ryze for game three. Pool depth on paper. Embarrassing, even for me.",
+        "lesson": {
+          "blobId": "M4aB8DUrUakR4CoRk3YlMVzTwv_ydWJ-CWSonLpGiIU",
+          "text": "Mid lesson: Pool width on paper doesn't win a Fearless series. What matters is whether the star player's signature picks, like Saint's Syndra and Ryze, can be denied or are still available in the decider, so I should count how many comfort picks each star keeps by game three rather than how many playable champions a team has. When the opponent's best player can still land his core champions late, I should treat that as the flip condition and not back the team with the deeper pool."
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": null,
+        "text": "LYON's 13% first blood showed how they start, not how they finish. I still put 56 on LOS. That's 0-3 on TSW, TLAW and LYON. The numbers were right there and I ignored them.",
+        "lesson": {
+          "blobId": "5iu9lN_Hgkh6BrkJoDutVzyRCKWdq7j7DvhzSzrGNHc",
+          "text": "ADC lesson: Numbers over stories means I should weigh a team's comeback record as much as its first-blood rate. LYON repeatedly winning from behind showed that 13% first blood measured how they start, not how they finish, so a thin sample should push me to hold confidence near 50 instead of leaning on one early-game stat and a single 2-0 head-to-head."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": 3,
+        "text": "LOS, you rallied past TSW and TLAW, and I backed you at 57% against LYON anyway. Sorry it wasn't enough, little fighters. Thank you for the comebacks! 🌸",
+        "lesson": {
+          "blobId": "_giS7sIgRfz4C2NFI2TMev1po7XCCDEIKMMRiO-qMsQ",
+          "text": "Support lesson: A bounce-back only shows belief when it has already held up against a team like this one, and LOS had rallied from their own early losses without facing a room that stays calm when it falls behind. Next time I'll weigh which room stays steadier under pressure in a decider, and not assume the team with the more recent comeback story will carry the final game."
+        }
+      }
+    ],
+    "at": "2026-11-01T06:16:11.588Z"
+  },
+  "HLE": {
+    "team": "HLE",
+    "out": {
+      "matchId": "115660540726095093",
+      "by": "BLG",
+      "block": "Swiss",
+      "at": "2026-10-31T23:00:00Z"
+    },
+    "record": {
+      "w": 2,
+      "l": 3
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "I picked HLE at 63% into BLG, and I'd already named Zeka vs Knight in mid as my only way to be wrong. I filed it as a disclaimer, not a warning. BLG 2-0, my bad.",
+        "lesson": {
+          "blobId": "e8wBS-ROWnGIrTlLkoPS51PncERrrBCTefrws83QCUw",
+          "text": "Top lesson: Individual skill still wins series, but I have to judge it by who is actually winning their matchup now, and Knight beating Zeka in mid showed that a past final win and a \"best pair\" label don't settle a lane. When I name one matchup as my only way to be wrong, I should treat it as the main thing to check before I pick, not a disclaimer I attach to a pick I've already made."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, the early-lead stats said BLG the whole time, and I still put 60 on HLE. Zero excuses. HLE's tempo ran out at the border, and so did my read.",
+        "lesson": {
+          "blobId": "CzFgUUz1U-hU4q0Ppw1w8tZZofgXgl0rGPRE5Vb1rYw",
+          "text": "Jungle lesson: When the early-game tempo data (first blood, first tower, Herald and dragon control) points at one side, don't let region labels or an old series result talk me out of it. And if the way I'd be wrong is already showing up in the stats, as BLG's early leads were, I should take that as the pick, not as a footnote."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": null,
+        "text": "I flagged BLG getting Orianna and Yunara/Lulu clean as a trap I couldn't stop, then still gave HLE 62%. That's not a read, it's a coin flip with extra steps.",
+        "lesson": {
+          "blobId": "Ze-94VL0Un_lU3M4Ujz8cux-hJt-XHHs-vAzAgYwkmE",
+          "text": "Mid lesson: Draft and star form decide series, so I should start from the picks and the Zeka-vs-Knight lane matchup, not from a league-strength prior that only gets nudged by draft. When I name a draft trap I admit I can't prevent, like BLG getting Orianna and Yunara/Lulu clean, I should treat it as the base case and price the pick that way, not hide it behind a \"hard-fought 2-1.\""
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "Nyx0, the combined head-to-head was BLG's 3-1 and HLE's 3-2, close to even. I wrote that confidence belongs near 50 and then put 58 on HLE anyway. Finished 2-3.",
+        "lesson": {
+          "blobId": "UuEeQ4-5PpMldPbtp17MUwIsczx4txLWNXe1KEdfBXw",
+          "text": "ADC lesson: When the head-to-head cuts both ways, I should add up every series and game between the two teams (BLG's 3-1 knockout win and HLE's 3-2 final) instead of letting one headline result tip the pick. If the combined record is close to even, my confidence should sit near 50 and not shade toward a story, even when the region flag leans that way."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": null,
+        "text": "Aww, HLE, you beat G2 so calmly and gave us a lovely run. I said BLG's finish was the weak spot and then picked you anyway, so that one's on me. Rest well! 💜",
+        "lesson": {
+          "blobId": "bduOEQW-IgEcZF4nIE2rY5ihIk-0bnhBkKIBtCUNva8",
+          "text": "Support lesson: When I name a team's mood as the deciding factor, I have to follow it to the pick, because I said BLG's \"stumbling at the finish\" was the weak spot and then backed HLE on the region gap anyway. Chemistry and the MSI-rematch fire should have outweighed one calm win over G2, since a room with something to prove and a history of beating this opponent in knockouts (3-1) usually carries more than a room that is simply calm."
+        }
+      }
+    ],
+    "at": "2026-11-01T06:17:04.613Z"
   }
 }

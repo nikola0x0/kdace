@@ -184,8 +184,39 @@
     "analyst-support": -200,
     "analyst-top": -130
   },
-  "debate": null,
-  "lessons": [],
+  "debate": "Top: Told you, better hands win. Zeka, Kanavi and Gumayusi outclassed everything G2 put up, and I never needed Caps to pop off.\n\nJungle: HLE took the early map exactly like I said, but I still gave G2 a game on SkewMond's pathing. Clean 2-0, so I'm eating that 2-1.\n\nMid: I'll own it, I thought Fearless would burn HLE's comfort picks and G2 would get one game. Zeka and the bot lane had enough flex to never get squeezed.\n\nADC: The only one who called the sweep, and the 3-7 LEC record said this was coming. Nobody say \"story\" to me for at least a week.\n\nSupport: Fine, the numbers guy gets his 2-0, but that calm HLE room is what closed it out. G2 never found a way to make them sweat.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: When my player edge covers mid, jungle, and bot, I should price in the sweep instead of handing the underdog a game for one star's pop-off. Better hands with deeper champion pools, like Zeka's flex in Fearless, don't get squeezed by draft tricks, so I should raise my confidence in the clean win and stop hedging on the 2-1. (from Swiss G2 vs HLE; picked HLE 2-1, actual HLE 2-0)",
+      "blobId": "Vf60OAYWFC275K47tRt-eJ1Lp3yk7K9dLZVXQM7FQgU",
+      "jobId": "b75ee767-6cae-4af0-b089-20192ad57c46"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When one side keeps winning the first 15 minutes (Herald, plates, first dragon) and the report flags a big region gap, I shouldn't hand the underdog a game just because a jungler's pathing could steal one. Fearless drafts don't undo a tempo edge that big, so I'll only pick the upset if I can point to a real early-game trigger already showing up for them, not just a flip condition on paper. (from Swiss G2 vs HLE; picked HLE 2-1, actual HLE 2-0)",
+      "blobId": "hU8xLkJgvAKyyQEKoamdZMwxs8iNQAlmmwmKujHZRyo",
+      "jobId": "abbd352e-9691-42c2-b0a8-0d1e2f2d2b44"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Fearless Draft doesn't level the field, it taxes the shallower champion pool, so I should count pool depth role by role before handing the underdog a game. When the favorite has flex in mid and bot, as HLE does with Zeka and its bot trio, I should expect the draft to hold up rather than hope a star's signature picks (Caps on Viktor or Akali) can break it. (from Swiss G2 vs HLE; picked HLE 2-1, actual HLE 2-0)",
+      "blobId": "TrcdFFHjohw5Weq3g_AZXi3rwYBTvUAWIArZsTj-0Xw",
+      "jobId": "ccd69cb7-9a52-470c-b9bf-79b64b36a376"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: When a flagged big region gap and a direct head-to-head (HLE's 3-0 at MSI) point the same way, I should lean on them and set confidence by that agreement, not by hype about individual players or a \"calm room.\" One clean 2-0 doesn't show 68 was too low, because a Bo3 stays high-variance and my confidence should still come from the numbers, not from the sweep. (from Swiss G2 vs HLE; picked HLE 2-0, actual HLE 2-0)",
+      "blobId": "2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8",
+      "jobId": "3357386f-45c5-4367-bd62-fce381508fee"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When the calmer, more cohesive room is also the side with the big region edge, its chemistry and morale compound the talent gap, so I shouldn't hand the underdog a game on one star's tempo hope. Under Fearless pressure, a settled roster with flexible drafting rarely wobbles, so I should read that steadiness as a reason to back the sweep and raise my confidence. (from Swiss G2 vs HLE; picked HLE 2-1, actual HLE 2-0)",
+      "blobId": "Fj0SUw8dHFo3Gvd5RsqQmS6B14oVxqe9PoPxqqvQIik",
+      "jobId": "ad7aaf9d-d13f-4854-99eb-96c0f3d1ca4c"
+    }
+  ],
   "scout": "Scout: G2 vs HLE (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nG2 [LEC]: 2026 series 35-19, games 81-46 | last 10 (newest first) LWLWWWLLWW\n  LEC 2026 28-11 (3 titles) · First Stand 2026 3-2 (lost final) · MSI 2026 2-2 · EWC 2026 1-2 · Worlds 2026 1-2 · vs other regions 7-8\n  Last 23 games (16-7): GD@15 +0.7k, FB 43%, FT 83%, FD 57%, dragons 59%, 33.3 min avg, 1st baron 28:06\n  Leads @15 converted 8/10, comeback wins 1, throws 1, objectives taken while 1k+ behind 8\n  Worlds 2026 3 games (1-2): GD@15 +1.1k, FB 33%, FT 100%, FD 33%, dragons 63%, 35.8 min avg, 1st baron 31:24\n  Picks: TOP K'Sante 4, Rumble 3, Ambessa 2 | JG Xin Zhao 4, Jarvan IV 3, Skarner 3 | MID Akali 4, Orianna 4, Viktor 3 | BOT Yunara 4, Ashe 3, Ezreal 3 | SUP Alistar 3, Karma 3, Lulu 3\n  Standout: G2 SkewMond (jungle) KDA 5.2 over 23 games, 18% dmg share\nHLE [LCK]: 2026 series 31-16, games 75-51 | last 10 (newest first) LLWLWLWWWW\n  LCK 2026 24-12 (lost final) · MSI 2026 4-1 (1 title) · EWC 2026 2-1 · Worlds 2026 1-2 · vs other regions 7-2\n  Last 23 games (12-11): GD@15 +0.5k, FB 65%, FT 57%, FD 43%, dragons 51%, 31.5 min avg, 1st baron 24:48\n  Leads @15 converted 7/10, comeback wins 0, throws 1, objectives taken while 1k+ behind 9\n  Worlds 2026 3 games (1-2): GD@15 -0.5k, FB 33%, FT 33%, FD 33%, dragons 18%, 27.2 min avg, 1st baron 21:30\n  Picks: TOP Ambessa 4, Jayce 3, Olaf 3 | JG Cho'Gath 3, Jarvan IV 3, Lee Sin 3 | MID Orianna 3, Syndra 3, Ahri 2 | BOT Jhin 5, Ashe 4, Caitlyn 4 | SUP Seraphine 4, Alistar 3, Karma 3\n  Standout: HLE Zeka (mid) KDA 5.3 over 23 games, 26% dmg share\nHead-to-head 2026: G2 0-1 HLE\n  2026-07-05 MSI 2026 Knockouts: HLE 3-0 G2\nKey moments:\n  - G2 threw a +3.9k lead (22:00) vs DK (Worlds 2026)\n  - G2 came back from -3.6k at 22:00 vs VIT (LEC 2026)\n  - HLE threw a +5.4k lead (28:00) vs T1 (LCK 2026)\n  - HLE came back from -4.5k at 26:00 vs DK (LCK 2026)\nFun facts:\n  * Likely quadra kill: G2 Caps (Viktor) at 24:15 (vs KC, LEC 2026)\n  * Likely quadra kill: G2 BrokenBlade (Ambessa) at 25:42 (vs GX, LEC 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 22-8, LPL 14-10, LEC 15-16, CBLOL 5-9, LCS 7-13, LCP 4-11.\n  This matchup is LEC vs LCK: LEC went 3-7 against LCK in 2026; LEC 48% vs LCK 73% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  G2 (LEC): no Worlds titles; lost final 2019.\n  HLE (LCK): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",

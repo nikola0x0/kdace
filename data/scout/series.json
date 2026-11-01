@@ -8630,5 +8630,44 @@
   "winsB": 2,
   "winner": "HLE",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095085",
+  "startTime": "2026-10-31T17:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "KC",
+  "teamB": "MKOI",
+  "winsA": 2,
+  "winsB": 0,
+  "winner": "KC",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095089",
+  "startTime": "2026-10-31T20:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "LYON",
+  "teamB": "LOS",
+  "winsA": 2,
+  "winsB": 1,
+  "winner": "LYON",
+  "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095093",
+  "startTime": "2026-10-31T23:00:00Z",
+  "block": "Swiss",
+  "bestOf": 3,
+  "state": "completed",
+  "teamA": "BLG",
+  "teamB": "HLE",
+  "winsA": 2,
+  "winsB": 0,
+  "winner": "BLG",
+  "league": "Worlds 2026"
  }
 ]
