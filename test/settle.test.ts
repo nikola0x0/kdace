@@ -66,6 +66,17 @@ describe("runSettle", () => {
     expect(r.status).toBe("settled");
     expect(first.posted).toHaveLength(1);
   });
+  it("resubmits a lesson whose Walrus job failed, then waits on the new job", async () => {
+    const first = fakes({ awaitRemember: async (_r, jobId) => { if (jobId === "job-1") throw new Error("remember job failed: upload 503"); return jobId.replace("job", "blob"); } });
+    await runSettle(first.deps);
+    // job-1 failed: the same text went out again as job-2, and the run stopped there.
+    expect(first.remembered).toHaveLength(2);
+    expect(first.remembered[1]).toBe(first.remembered[0]);
+    expect(first.store.get("x")!.lessons.map((l) => [l.jobId, l.blobId])).toEqual([["job-2", ""]]);
+    await runSettle(first.deps);
+    const r = first.store.get("x")!;
+    expect(r.lessons.map((l) => l.blobId)).toEqual(["blob-2", "blob-3", "blob-4", "blob-5", "blob-6"]);
+  });
   it.each([
     ["no winner yet", { winner: null, winsA: 0, winsB: 0 }],
     ["an unfinished score", { winner: "GEN", winsA: 1, winsB: 1, bestOf: 3 as const }],

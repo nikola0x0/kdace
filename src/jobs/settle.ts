@@ -106,12 +106,13 @@ export type SettleSlowOptions = {
 class OutOfTime extends Error {}
 
 /** Slow part: for settled series, the debate, then one lesson per analyst (saved with its job id before waiting). */
-export async function runSettleSlow(deps: SettleDeps, opts: SettleSlowOptions = {}): Promise<{ reflected: string[] }> {
+export async function runSettleSlow(deps: SettleDeps, opts: SettleSlowOptions = {}): Promise<{ reflected: string[]; failed?: Record<string, string> }> {
   const { maxRecords = Infinity, outOfTime = () => false } = opts;
   const step = () => {
     if (outOfTime()) throw new OutOfTime("out of time");
   };
   const reflected: string[] = [];
+  const failed: Record<string, string> = {};
   const todo = (await deps.store.all()).filter(needsReflection);
   if (Number.isFinite(maxRecords)) todo.sort((a, b) => a.series.startTime.localeCompare(b.series.startTime)).splice(maxRecords);
   for (const start of todo) {
@@ -133,7 +134,16 @@ export async function runSettleSlow(deps: SettleDeps, opts: SettleSlowOptions = 
           await save({ ...r, lessons: [...r.lessons, lesson] });
         }
         step();
-        const blobId = await deps.awaitRemember(a.role, lesson.jobId!);
+        let blobId: string;
+        try {
+          blobId = await deps.awaitRemember(a.role, lesson.jobId!);
+        } catch (e) {
+          // A job Walrus Memory gave up on (or lost) never finishes: submit the same lesson again, wait for it next run.
+          if (!/remember job (failed|not found)/.test((e as Error).message)) throw e;
+          const jobId = await deps.startRemember(a.role, lesson.text);
+          await save({ ...r, lessons: r.lessons.map((l) => (l.player === pick.player ? { ...l, jobId } : l)) });
+          throw new Error(`lesson for ${pick.player} resubmitted as ${jobId} (${(e as Error).message.slice(0, 160)})`);
+        }
         await save({ ...r, lessons: r.lessons.map((l) => (l.player === pick.player ? { ...l, blobId } : l)) });
       }
       deps.log(`${r.series.matchId} ${r.series.teamA} vs ${r.series.teamB}: debate and ${r.lessons.length} lessons saved`);
@@ -143,10 +153,11 @@ export async function runSettleSlow(deps: SettleDeps, opts: SettleSlowOptions = 
         deps.log(`${r.series.matchId} debate/lessons paused (out of time), resuming next run`);
         break;
       }
+      failed[r.series.matchId] = (e as Error).message.slice(0, 300);
       deps.log(`${r.series.matchId} debate/lessons failed, will resume next run: ${(e as Error).message}`);
     }
   }
-  return { reflected };
+  return Object.keys(failed).length ? { reflected, failed } : { reflected };
 }
 
 /** Both parts in order (the CLI; the tick runs them separately, with the picks in between). */
