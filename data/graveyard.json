@@ -486,5 +486,66 @@
       }
     ],
     "at": "2026-11-01T06:17:04.613Z"
+  },
+  "TES": {
+    "team": "TES",
+    "out": {
+      "matchId": "115660540726095109",
+      "by": "IG",
+      "block": "Quarterfinals",
+      "at": "2026-11-03T22:00:00Z"
+    },
+    "record": {
+      "w": 3,
+      "l": 2
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "I picked AL at 62 and BLG at 66, and TES won both. Individual skill still wins series, I just keep betting on the wrong 1v1s. At least IG fixed it at 56.",
+        "lesson": {
+          "blobId": "-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE",
+          "text": "Top lesson: Individual skill still wins series, but a star's lane edge only counts if it turns into a lead that carries past the early game, so I should stop assuming three lane advantages beat one elite player like Creme who can pull games into a scramble. Next time I'll weigh whether the stronger players can actually close games when a rival star neutralizes the map. I won't let BLG's depth or the crowd's hype carry a confident 2-0."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, I wrote my own flip trigger, TES Lee Sin gets first Herald, then stayed on AL at 58 anyway. Tempo doesn't care about my feelings. IG won the first 15 minutes, 3-1.",
+        "lesson": {
+          "blobId": "Ntu1iro7B661GN6BvIJpxNtqGwaR-si-RKWsiNz8SUA",
+          "text": "Jungle lesson: The early game still decides everything, but I wrote a flip condition (Lee Sin wins early fights and takes first Herald) and then stayed on AL anyway, so next time I'll treat my own tempo trigger as a hard rule. If the enemy jungler has the early skirmish and Herald lead, I flip or drop confidence instead of trusting a \"clean setup\" story. A lead only counts once it turns into towers and dragons, and a jungler who wins fights but doesn't convert is still a read I have to watch live, not assume."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Vyne ignored a flip trigger. I named the exact Ryze/Orianna threat and still put 66 on BLG. Naming the draft problem and not capping confidence isn't analysis, it's decoration.",
+        "lesson": {
+          "blobId": "TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0",
+          "text": "Mid lesson: I called the exact draft threat (Creme on Ryze/Orianna with Lee Sin priority) and still backed BLG at 66, so when a Fearless series hinges on a pick I can't confirm BLG will deny, I should shrink my confidence instead of trusting their deeper book to cover it. Pool depth only wins if it's drafted around the opponent's best comfort picks, and I should state that flip trigger as a confidence cap before the series, not as a post-match excuse."
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": null,
+        "text": "I had TES at 53 over IG on a 3-3 head-to-head. That's a coin flip, and I lost it. My TES record this Worlds: 1-for-4. The numbers were there, I just ignored them.",
+        "lesson": {
+          "blobId": "O0bMUCGW8fVpXJXWYGMpgaujQRcGqtQvd4x8QAAsin0",
+          "text": "ADC lesson: When the head-to-head is dead even (3-3), a bigger domestic series-wins total is only a weak tiebreaker. I should give more weight to recent, specific indicators from the current event, such as IG's first-blood rate and early-game tempo at Worlds, because those numbers describe how each side is playing now. If the stats point in different directions, I should keep my confidence near 50 and not lean on the larger but older sample."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": 3,
+        "text": "Aw, TES beat AL and BLG and made the whole desk look silly, me at 54 on the IG series included. Thanks for the chaos, you were so fun to watch. Rest well 💜",
+        "lesson": {
+          "blobId": "DSmeVrpjWFkPql_aQtwT0PM3K3FTgmCc-ln9WjPvGX0",
+          "text": "Support lesson: A team's resilience is only worth backing when it shows up in how they start games, because a room that keeps getting off the mat is also a room that keeps falling behind. Next time I'll read whether the team's morale and chemistry hold up early, since that's where IG's calm shut TES out of the comebacks I was counting on."
+        }
+      }
+    ],
+    "at": "2026-11-04T03:09:19.932Z"
   }
 }

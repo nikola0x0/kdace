@@ -108608,5 +108608,1223 @@
     "text": "BLG ON (Lulu) went 0/0/12 without dying"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095110",
+  "matchId": "115660540726095109",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-11-03T22:14:56.128Z",
+  "patch": "16.20",
+  "durationMin": 32.9,
+  "complete": true,
+  "winner": "IG",
+  "blue": {
+   "code": "IG",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "Qiyana",
+    "mid": "Syndra",
+    "bottom": "Kaisa",
+    "support": "Nautilus"
+   },
+   "gold15": 23033,
+   "kills": 27,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "mountain",
+    "infernal",
+    "infernal",
+    "infernal"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 27.9
+  },
+  "red": {
+   "code": "TES",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Vi",
+    "mid": "Cassiopeia",
+    "bottom": "Ezreal",
+    "support": "Rell"
+   },
+   "gold15": 22635,
+   "kills": 12,
+   "towers": 2,
+   "inhibitors": 0,
+   "dragons": [
+    "chemtech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -15,
+   -27,
+   298,
+   724,
+   647,
+   10,
+   231,
+   null,
+   167,
+   54,
+   290,
+   524,
+   305,
+   -335,
+   398,
+   292,
+   951,
+   3758,
+   5589,
+   5607,
+   5362,
+   5297,
+   5799,
+   5810,
+   6538,
+   6748,
+   7753,
+   8476,
+   9467,
+   9917,
+   11959,
+   11848
+  ],
+  "leads": {
+   "10": 54,
+   "15": 398,
+   "20": 5607,
+   "25": 6538
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 11959,
+    "min": 31
+   },
+   "red": {
+    "gold": 335,
+    "min": 14
+   }
+  },
+  "swing": {
+   "team": "IG",
+   "gold": 5924,
+   "fromMin": 14,
+   "toMin": 19
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 2.9,
+    "type": "firstBlood",
+    "team": "IG"
+   },
+   {
+    "min": 5.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "mountain"
+   },
+   {
+    "min": 12.9,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "chemtech"
+   },
+   {
+    "min": 16.2,
+    "type": "firstTower",
+    "team": "IG"
+   },
+   {
+    "min": 19.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "infernal"
+   },
+   {
+    "min": 24.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "infernal"
+   },
+   {
+    "min": 27.9,
+    "type": "baron",
+    "team": "IG"
+   },
+   {
+    "min": 30.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "infernal"
+   },
+   {
+    "min": 30.9,
+    "type": "inhibitor",
+    "team": "IG"
+   },
+   {
+    "min": 32.9,
+    "type": "end",
+    "team": "IG"
+   }
+  ],
+  "players": [
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 3,
+    "d": 1,
+    "a": 12,
+    "damageShare": 0.201
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 4,
+    "d": 3,
+    "a": 15,
+    "damageShare": 0.264
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 8,
+    "d": 2,
+    "a": 11,
+    "damageShare": 0.185
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Kaisa",
+    "role": "bottom",
+    "k": 10,
+    "d": 1,
+    "a": 10,
+    "damageShare": 0.292
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 2,
+    "d": 5,
+    "a": 19,
+    "damageShare": 0.057
+   },
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 2,
+    "d": 8,
+    "a": 2,
+    "damageShare": 0.192
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "Vi",
+    "role": "jungle",
+    "k": 2,
+    "d": 6,
+    "a": 7,
+    "damageShare": 0.11699999999999999
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 7,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.257
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 1,
+    "d": 6,
+    "a": 6,
+    "damageShare": 0.375
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Rell",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 8,
+    "damageShare": 0.06
+   }
+  ],
+  "standout": {
+   "code": "IG",
+   "name": "IG JiaQi",
+   "champion": "Kaisa",
+   "role": "bottom",
+   "k": 10,
+   "d": 1,
+   "a": 10,
+   "damageShare": 0.292
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "IG",
+    "text": "Likely triple kill: IG Rookie (Syndra) at 26:48"
+   },
+   {
+    "kind": "multikill",
+    "team": "IG",
+    "text": "Likely triple kill: IG JiaQi (Kai'Sa) at 17:45"
+   },
+   {
+    "kind": "multikill",
+    "team": "IG",
+    "text": "Likely triple kill: IG JiaQi (Kai'Sa) at 22:21"
+   },
+   {
+    "kind": "roughPatch",
+    "team": "TES",
+    "text": "TES JackeyLove (Ezreal) died 3 times between 14:54 and 18:54"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095111",
+  "matchId": "115660540726095109",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-11-03T23:07:44.283Z",
+  "patch": "16.20",
+  "durationMin": 47.2,
+  "complete": true,
+  "winner": "TES",
+  "blue": {
+   "code": "IG",
+   "champions": {
+    "top": "Vayne",
+    "jungle": "MonkeyKing",
+    "mid": "Viktor",
+    "bottom": "Yunara",
+    "support": "Lulu"
+   },
+   "gold15": 26704,
+   "kills": 17,
+   "towers": 4,
+   "inhibitors": 0,
+   "dragons": [
+    "chemtech",
+    "mountain",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "TES",
+   "champions": {
+    "top": "Renekton",
+    "jungle": "XinZhao",
+    "mid": "Orianna",
+    "bottom": "Kalista",
+    "support": "Renata"
+   },
+   "gold15": 25568,
+   "kills": 20,
+   "towers": 11,
+   "inhibitors": 2,
+   "dragons": [
+    "hextech",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 3,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 23.9
+  },
+  "goldDiff": [
+   0,
+   -10,
+   209,
+   830,
+   884,
+   1087,
+   1123,
+   962,
+   156,
+   345,
+   512,
+   645,
+   284,
+   1325,
+   1828,
+   1136,
+   -396,
+   -1134,
+   148,
+   -865,
+   -586,
+   -733,
+   -681,
+   -191,
+   -330,
+   -1136,
+   -1818,
+   -1377,
+   -1440,
+   -1591,
+   -1410,
+   -1450,
+   -3216,
+   -2739,
+   -3477,
+   -3783,
+   -3504,
+   -2532,
+   -3046,
+   -3541,
+   -797,
+   -1065,
+   -1968,
+   -2062,
+   -2279,
+   -2351,
+   -2261,
+   -5903
+  ],
+  "leads": {
+   "10": 512,
+   "15": 1136,
+   "20": -586,
+   "25": -1136
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 1828,
+    "min": 14
+   },
+   "red": {
+    "gold": 5903,
+    "min": 47
+   }
+  },
+  "swing": {
+   "team": "TES",
+   "gold": 3935,
+   "fromMin": 42,
+   "toMin": 47
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 2.9,
+    "type": "firstBlood",
+    "team": "IG"
+   },
+   {
+    "min": 7,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 13.9,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "hextech",
+    "behind": 1253
+   },
+   {
+    "min": 15.9,
+    "type": "firstTower",
+    "team": "TES"
+   },
+   {
+    "min": 18.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "mountain"
+   },
+   {
+    "min": 23.9,
+    "type": "baron",
+    "team": "TES"
+   },
+   {
+    "min": 24.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "mountain"
+   },
+   {
+    "min": 29.9,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "mountain"
+   },
+   {
+    "min": 32.9,
+    "type": "baron",
+    "team": "TES"
+   },
+   {
+    "min": 34.9,
+    "type": "inhibitor",
+    "team": "TES"
+   },
+   {
+    "min": 35,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "mountain"
+   },
+   {
+    "min": 41.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "mountain",
+    "behind": 1065
+   },
+   {
+    "min": 41.9,
+    "type": "baron",
+    "team": "TES"
+   },
+   {
+    "min": 47,
+    "type": "inhibitor",
+    "team": "TES"
+   },
+   {
+    "min": 47.2,
+    "type": "end",
+    "team": "TES"
+   }
+  ],
+  "players": [
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "Vayne",
+    "role": "top",
+    "k": 1,
+    "d": 6,
+    "a": 5,
+    "damageShare": 0.193
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 3,
+    "d": 4,
+    "a": 7,
+    "damageShare": 0.078
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 6,
+    "d": 3,
+    "a": 6,
+    "damageShare": 0.28600000000000003
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 7,
+    "d": 4,
+    "a": 7,
+    "damageShare": 0.386
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 10,
+    "damageShare": 0.057999999999999996
+   },
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "Renekton",
+    "role": "top",
+    "k": 6,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.166
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "XinZhao",
+    "role": "jungle",
+    "k": 1,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.162
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 3,
+    "d": 1,
+    "a": 14,
+    "damageShare": 0.305
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Kalista",
+    "role": "bottom",
+    "k": 10,
+    "d": 6,
+    "a": 5,
+    "damageShare": 0.305
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Renata",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 16,
+    "damageShare": 0.062
+   }
+  ],
+  "standout": {
+   "code": "TES",
+   "name": "TES JackeyLove",
+   "champion": "Kalista",
+   "role": "bottom",
+   "k": 10,
+   "d": 6,
+   "a": 5,
+   "damageShare": 0.305
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "TES",
+    "text": "Likely triple kill: TES JackeyLove (Kalista) at 46:44"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 47:13"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095112",
+  "matchId": "115660540726095109",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-11-04T00:16:02.183Z",
+  "patch": "16.20",
+  "durationMin": 29.6,
+  "complete": true,
+  "winner": "IG",
+  "blue": {
+   "code": "TES",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "Skarner",
+    "mid": "Yone",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 24959,
+   "kills": 9,
+   "towers": 4,
+   "inhibitors": 0,
+   "dragons": [
+    "ocean"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "IG",
+   "champions": {
+    "top": "Ornn",
+    "jungle": "Jayce",
+    "mid": "Annie",
+    "bottom": "Zeri",
+    "support": "Yuumi"
+   },
+   "gold15": 27161,
+   "kills": 16,
+   "towers": 9,
+   "inhibitors": 2,
+   "dragons": [
+    "hextech",
+    "cloud",
+    "cloud"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 25
+  },
+  "goldDiff": [
+   0,
+   -5,
+   27,
+   89,
+   -409,
+   -420,
+   -454,
+   -497,
+   123,
+   -215,
+   -1455,
+   -1039,
+   -2467,
+   -2153,
+   -1942,
+   -2202,
+   -1710,
+   -1880,
+   -2560,
+   -1374,
+   -1904,
+   -1706,
+   -2519,
+   -2074,
+   -3202,
+   -3169,
+   -3351,
+   -5281,
+   -5656,
+   -9058
+  ],
+  "leads": {
+   "10": -1455,
+   "15": -2202,
+   "20": -1904,
+   "25": -3169
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 123,
+    "min": 8
+   },
+   "red": {
+    "gold": 9058,
+    "min": 29
+   }
+  },
+  "swing": {
+   "team": "IG",
+   "gold": 5889,
+   "fromMin": 25,
+   "toMin": 29
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 4,
+    "type": "firstBlood",
+    "team": "IG"
+   },
+   {
+    "min": 11,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "ocean",
+    "behind": 1401
+   },
+   {
+    "min": 15.3,
+    "type": "firstTower",
+    "team": "TES"
+   },
+   {
+    "min": 16,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "hextech"
+   },
+   {
+    "min": 22,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "cloud"
+   },
+   {
+    "min": 25,
+    "type": "baron",
+    "team": "IG"
+   },
+   {
+    "min": 27,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "cloud"
+   },
+   {
+    "min": 28,
+    "type": "inhibitor",
+    "team": "IG"
+   },
+   {
+    "min": 29,
+    "type": "inhibitor",
+    "team": "IG"
+   },
+   {
+    "min": 29.6,
+    "type": "end",
+    "team": "IG"
+   }
+  ],
+  "players": [
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 2,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.287
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "Skarner",
+    "role": "jungle",
+    "k": 2,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.17
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Yone",
+    "role": "mid",
+    "k": 3,
+    "d": 4,
+    "a": 0,
+    "damageShare": 0.20800000000000002
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 1,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.218
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 1,
+    "d": 3,
+    "a": 7,
+    "damageShare": 0.11699999999999999
+   },
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "Ornn",
+    "role": "top",
+    "k": 1,
+    "d": 1,
+    "a": 5,
+    "damageShare": 0.1
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "Jayce",
+    "role": "jungle",
+    "k": 5,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.33899999999999997
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Annie",
+    "role": "mid",
+    "k": 3,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.242
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Zeri",
+    "role": "bottom",
+    "k": 7,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.223
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Yuumi",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 13,
+    "damageShare": 0.096
+   }
+  ],
+  "standout": {
+   "code": "IG",
+   "name": "IG JiaQi",
+   "champion": "Zeri",
+   "role": "bottom",
+   "k": 7,
+   "d": 4,
+   "a": 5,
+   "damageShare": 0.223
+  },
+  "funFacts": []
+ },
+ {
+  "gameId": "115660540726095113",
+  "matchId": "115660540726095109",
+  "number": 4,
+  "league": "Worlds 2026",
+  "date": "2026-11-04T02:20:23.637Z",
+  "patch": "16.20",
+  "durationMin": 31,
+  "complete": true,
+  "winner": "IG",
+  "blue": {
+   "code": "IG",
+   "champions": {
+    "top": "KSante",
+    "jungle": "Naafiri",
+    "mid": "Taliyah",
+    "bottom": "Jhin",
+    "support": "Alistar"
+   },
+   "gold15": 27223,
+   "kills": 16,
+   "towers": 8,
+   "inhibitors": 1,
+   "dragons": [
+    "cloud",
+    "infernal",
+    "infernal",
+    "infernal"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 25.9
+  },
+  "red": {
+   "code": "TES",
+   "champions": {
+    "top": "Aatrox",
+    "jungle": "Maokai",
+    "mid": "Aurora",
+    "bottom": "Lucian",
+    "support": "Milio"
+   },
+   "gold15": 26189,
+   "kills": 10,
+   "towers": 0,
+   "inhibitors": 0,
+   "dragons": [
+    "hextech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   20,
+   -90,
+   50,
+   620,
+   825,
+   872,
+   748,
+   896,
+   944,
+   1056,
+   994,
+   1178,
+   289,
+   1288,
+   1034,
+   1773,
+   2917,
+   2716,
+   2603,
+   3156,
+   3588,
+   3824,
+   4181,
+   3536,
+   4053,
+   3973,
+   3534,
+   4066,
+   4063,
+   3981,
+   6296
+  ],
+  "leads": {
+   "10": 1056,
+   "15": 1034,
+   "20": 3156,
+   "25": 4053
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 6296,
+    "min": 31
+   },
+   "red": {
+    "gold": 90,
+    "min": 2
+   }
+  },
+  "swing": {
+   "team": "IG",
+   "gold": 2762,
+   "fromMin": 27,
+   "toMin": 31
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.9,
+    "type": "firstBlood",
+    "team": "IG"
+   },
+   {
+    "min": 5.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "cloud"
+   },
+   {
+    "min": 12.1,
+    "type": "dragon",
+    "team": "TES",
+    "detail": "hextech",
+    "behind": 1147
+   },
+   {
+    "min": 15.9,
+    "type": "firstTower",
+    "team": "IG"
+   },
+   {
+    "min": 18.1,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "infernal"
+   },
+   {
+    "min": 23.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "infernal"
+   },
+   {
+    "min": 25.9,
+    "type": "baron",
+    "team": "IG"
+   },
+   {
+    "min": 29.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "infernal"
+   },
+   {
+    "min": 29.9,
+    "type": "inhibitor",
+    "team": "IG"
+   },
+   {
+    "min": 31,
+    "type": "end",
+    "team": "IG"
+   }
+  ],
+  "players": [
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "KSante",
+    "role": "top",
+    "k": 3,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.19399999999999998
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "Naafiri",
+    "role": "jungle",
+    "k": 5,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.23
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Taliyah",
+    "role": "mid",
+    "k": 3,
+    "d": 2,
+    "a": 8,
+    "damageShare": 0.256
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 3,
+    "d": 0,
+    "a": 5,
+    "damageShare": 0.257
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 2,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.064
+   },
+   {
+    "code": "TES",
+    "name": "TES 369",
+    "champion": "Aatrox",
+    "role": "top",
+    "k": 2,
+    "d": 4,
+    "a": 3,
+    "damageShare": 0.154
+   },
+   {
+    "code": "TES",
+    "name": "TES Tian",
+    "champion": "Maokai",
+    "role": "jungle",
+    "k": 2,
+    "d": 5,
+    "a": 4,
+    "damageShare": 0.21600000000000003
+   },
+   {
+    "code": "TES",
+    "name": "TES Creme",
+    "champion": "Aurora",
+    "role": "mid",
+    "k": 3,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.28600000000000003
+   },
+   {
+    "code": "TES",
+    "name": "TES JackeyLove",
+    "champion": "Lucian",
+    "role": "bottom",
+    "k": 3,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.284
+   },
+   {
+    "code": "TES",
+    "name": "TES Zhuo",
+    "champion": "Milio",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 8,
+    "damageShare": 0.06
+   }
+  ],
+  "standout": {
+   "code": "IG",
+   "name": "IG Wei",
+   "champion": "Naafiri",
+   "role": "jungle",
+   "k": 5,
+   "d": 2,
+   "a": 6,
+   "damageShare": 0.23
+  },
+  "funFacts": []
  }
 ]

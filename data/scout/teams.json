@@ -2399,12 +2399,12 @@
   "homeLeague": "LPL 2026",
   "season": {
    "series": {
-    "w": 21,
+    "w": 22,
     "l": 26
    },
    "games": {
-    "w": 61,
-    "l": 69
+    "w": 64,
+    "l": 70
    }
   },
   "sources": [
@@ -2424,49 +2424,49 @@
    {
     "label": "Worlds 2026",
     "series": {
-     "w": 3,
+     "w": 4,
      "l": 1
     },
     "games": {
-     "w": 4,
-     "l": 2
+     "w": 7,
+     "l": 3
     },
     "titles": 0,
     "finalsLost": 0
    }
   ],
-  "form": "WWWLWLLWWW",
+  "form": "WWWWLWLLWW",
   "vsInternational": {
    "w": 3,
    "l": 1
   },
   "stats": {
-   "games": 26,
-   "wins": 16,
-   "avgGoldDiff15": 355,
-   "firstBloodRate": 0.4230769230769231,
-   "firstTowerRate": 0.46153846153846156,
-   "firstDragonRate": 0.5384615384615384,
-   "dragonShare": 0.5289256198347108,
+   "games": 30,
+   "wins": 19,
+   "avgGoldDiff15": 467,
+   "firstBloodRate": 0.5,
+   "firstTowerRate": 0.4666666666666667,
+   "firstDragonRate": 0.5666666666666667,
+   "dragonShare": 0.5563380281690141,
    "avgBarons": 0.8,
    "avgFirstBaronMin": 26.4,
-   "avgDurationMin": 32.1,
+   "avgDurationMin": 32.5,
    "comebackWins": 3,
    "throws": 1,
    "leadAt15": {
-    "led": 9,
-    "won": 8
+    "led": 12,
+    "won": 10
    },
-   "objectivesWhileBehind": 16,
+   "objectivesWhileBehind": 17,
    "topChampions": {
     "top": [
      {
-      "champion": "Rumble",
+      "champion": "Gnar",
       "count": 4
      },
      {
-      "champion": "Gnar",
-      "count": 3
+      "champion": "Rumble",
+      "count": 4
      },
      {
       "champion": "Jayce",
@@ -2476,7 +2476,7 @@
     "jungle": [
      {
       "champion": "Naafiri",
-      "count": 4
+      "count": 5
      },
      {
       "champion": "Nocturne",
@@ -2493,22 +2493,22 @@
       "count": 5
      },
      {
-      "champion": "Orianna",
-      "count": 4
+      "champion": "Syndra",
+      "count": 5
      },
      {
-      "champion": "Syndra",
+      "champion": "Annie",
       "count": 4
      }
     ],
     "bottom": [
      {
       "champion": "Yunara",
-      "count": 5
+      "count": 6
      },
      {
       "champion": "Jhin",
-      "count": 4
+      "count": 5
      },
      {
       "champion": "Aphelios",
@@ -2518,56 +2518,56 @@
     "support": [
      {
       "champion": "Lulu",
-      "count": 6
+      "count": 7
+     },
+     {
+      "champion": "Alistar",
+      "count": 4
      },
      {
       "champion": "Seraphine",
       "count": 4
-     },
-     {
-      "champion": "Alistar",
-      "count": 3
      }
     ]
    },
    "standout": {
     "name": "IG Wei",
     "role": "jungle",
-    "kda": 7.1,
-    "games": 6,
-    "damageShare": 0.15
+    "kda": 6.2,
+    "games": 10,
+    "damageShare": 0.18
    }
   },
   "worldsStats": {
-   "games": 6,
-   "wins": 4,
-   "avgGoldDiff15": 1486,
-   "firstBloodRate": 0.8333333333333334,
-   "firstTowerRate": 0.6666666666666666,
-   "firstDragonRate": 0.8333333333333334,
-   "dragonShare": 0.6923076923076923,
-   "avgBarons": 0.3,
-   "avgFirstBaronMin": 25.4,
-   "avgDurationMin": 30.2,
+   "games": 10,
+   "wins": 7,
+   "avgGoldDiff15": 1369,
+   "firstBloodRate": 0.9,
+   "firstTowerRate": 0.6,
+   "firstDragonRate": 0.8,
+   "dragonShare": 0.7021276595744681,
+   "avgBarons": 0.5,
+   "avgFirstBaronMin": 25.9,
+   "avgDurationMin": 32.2,
    "comebackWins": 0,
    "throws": 0,
    "leadAt15": {
-    "led": 3,
-    "won": 2
+    "led": 6,
+    "won": 4
    },
-   "objectivesWhileBehind": 2,
+   "objectivesWhileBehind": 3,
    "topChampions": {
     "top": [
      {
-      "champion": "Jayce",
-      "count": 1
-     },
-     {
-      "champion": "Kled",
-      "count": 1
-     },
-     {
       "champion": "KSante",
+      "count": 2
+     },
+     {
+      "champion": "Ornn",
+      "count": 2
+     },
+     {
+      "champion": "Gnar",
       "count": 1
      }
     ],
@@ -2581,14 +2581,14 @@
       "count": 1
      },
      {
-      "champion": "LeeSin",
+      "champion": "Jayce",
       "count": 1
      }
     ],
     "mid": [
      {
       "champion": "Annie",
-      "count": 2
+      "count": 3
      },
      {
       "champion": "Aurora",
@@ -2602,11 +2602,11 @@
     "bottom": [
      {
       "champion": "Jhin",
-      "count": 2
+      "count": 3
      },
      {
       "champion": "Yunara",
-      "count": 2
+      "count": 3
      },
      {
       "champion": "Ashe",
@@ -2616,24 +2616,24 @@
     "support": [
      {
       "champion": "Lulu",
-      "count": 2
+      "count": 3
      },
      {
       "champion": "Alistar",
-      "count": 1
+      "count": 2
      },
      {
-      "champion": "Lux",
-      "count": 1
+      "champion": "Nautilus",
+      "count": 2
      }
     ]
    },
    "standout": {
     "name": "IG Wei",
     "role": "jungle",
-    "kda": 7.1,
-    "games": 6,
-    "damageShare": 0.15
+    "kda": 6.2,
+    "games": 10,
+    "damageShare": 0.18
    }
   }
  },
@@ -4218,11 +4218,11 @@
   "season": {
    "series": {
     "w": 30,
-    "l": 25
+    "l": 26
    },
    "games": {
-    "w": 80,
-    "l": 66
+    "w": 81,
+    "l": 69
    }
   },
   "sources": [
@@ -4256,48 +4256,48 @@
     "label": "Worlds 2026",
     "series": {
      "w": 3,
-     "l": 1
+     "l": 2
     },
     "games": {
-     "w": 4,
-     "l": 2
+     "w": 5,
+     "l": 5
     },
     "titles": 0,
     "finalsLost": 0
    }
   ],
-  "form": "WWWLWLLLLW",
+  "form": "LWWWLWLLLL",
   "vsInternational": {
    "w": 1,
    "l": 3
   },
   "stats": {
-   "games": 26,
-   "wins": 13,
-   "avgGoldDiff15": -360,
-   "firstBloodRate": 0.6153846153846154,
-   "firstTowerRate": 0.34615384615384615,
-   "firstDragonRate": 0.3076923076923077,
-   "dragonShare": 0.5,
+   "games": 30,
+   "wins": 14,
+   "avgGoldDiff15": -471,
+   "firstBloodRate": 0.5333333333333333,
+   "firstTowerRate": 0.36666666666666664,
+   "firstDragonRate": 0.3,
+   "dragonShare": 0.46938775510204084,
    "avgBarons": 0.8,
-   "avgFirstBaronMin": 26.7,
-   "avgDurationMin": 33.7,
+   "avgFirstBaronMin": 26.4,
+   "avgDurationMin": 33.9,
    "comebackWins": 3,
    "throws": 0,
    "leadAt15": {
     "led": 6,
     "won": 5
    },
-   "objectivesWhileBehind": 18,
+   "objectivesWhileBehind": 21,
    "topChampions": {
     "top": [
      {
       "champion": "Renekton",
-      "count": 5
+      "count": 6
      },
      {
       "champion": "Ambessa",
-      "count": 4
+      "count": 5
      },
      {
       "champion": "Olaf",
@@ -4321,7 +4321,7 @@
     "mid": [
      {
       "champion": "Orianna",
-      "count": 5
+      "count": 6
      },
      {
       "champion": "Locke",
@@ -4335,29 +4335,29 @@
     "bottom": [
      {
       "champion": "Ezreal",
+      "count": 6
+     },
+     {
+      "champion": "Lucian",
       "count": 5
      },
      {
       "champion": "Jhin",
-      "count": 4
-     },
-     {
-      "champion": "Lucian",
       "count": 4
      }
     ],
     "support": [
      {
       "champion": "Milio",
-      "count": 4
+      "count": 5
      },
      {
-      "champion": "Alistar",
-      "count": 2
+      "champion": "Rell",
+      "count": 3
      },
      {
-      "champion": "Bard",
-      "count": 2
+      "champion": "Renata",
+      "count": 3
      }
     ]
    },
@@ -4370,36 +4370,36 @@
    }
   },
   "worldsStats": {
-   "games": 6,
-   "wins": 4,
-   "avgGoldDiff15": -146,
-   "firstBloodRate": 0.16666666666666666,
-   "firstTowerRate": 0.3333333333333333,
-   "firstDragonRate": 0.3333333333333333,
-   "dragonShare": 0.5,
+   "games": 10,
+   "wins": 5,
+   "avgGoldDiff15": -564,
+   "firstBloodRate": 0.1,
+   "firstTowerRate": 0.4,
+   "firstDragonRate": 0.3,
+   "dragonShare": 0.40425531914893614,
    "avgBarons": 0.8,
-   "avgFirstBaronMin": 27.5,
-   "avgDurationMin": 30.6,
+   "avgFirstBaronMin": 26.8,
+   "avgDurationMin": 32.4,
    "comebackWins": 1,
    "throws": 0,
    "leadAt15": {
     "led": 1,
     "won": 1
    },
-   "objectivesWhileBehind": 3,
+   "objectivesWhileBehind": 6,
    "topChampions": {
     "top": [
      {
       "champion": "Ambessa",
-      "count": 2
+      "count": 3
      },
      {
       "champion": "Aatrox",
-      "count": 1
+      "count": 2
      },
      {
-      "champion": "Jayce",
-      "count": 1
+      "champion": "Renekton",
+      "count": 2
      }
     ],
     "jungle": [
@@ -4418,30 +4418,30 @@
     ],
     "mid": [
      {
+      "champion": "Orianna",
+      "count": 3
+     },
+     {
       "champion": "Locke",
       "count": 2
      },
      {
-      "champion": "Orianna",
-      "count": 2
-     },
-     {
-      "champion": "Syndra",
+      "champion": "Aurora",
       "count": 1
      }
     ],
     "bottom": [
      {
       "champion": "Ezreal",
-      "count": 1
-     },
-     {
-      "champion": "Jhin",
-      "count": 1
+      "count": 2
      },
      {
       "champion": "Kalista",
-      "count": 1
+      "count": 2
+     },
+     {
+      "champion": "Lucian",
+      "count": 2
      }
     ],
     "support": [
@@ -4450,21 +4450,21 @@
       "count": 2
      },
      {
-      "champion": "Lulu",
-      "count": 1
+      "champion": "Milio",
+      "count": 2
      },
      {
-      "champion": "Milio",
-      "count": 1
+      "champion": "Renata",
+      "count": 2
      }
     ]
    },
    "standout": {
     "name": "TES Creme",
     "role": "mid",
-    "kda": 3.9,
-    "games": 6,
-    "damageShare": 0.28
+    "kda": 3.7,
+    "games": 10,
+    "damageShare": 0.27
    }
   }
  },

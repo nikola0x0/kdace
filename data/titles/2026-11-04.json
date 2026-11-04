@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-04",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "T1",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Stats are for spreadsheet kids. T1 has the one player who takes games over by himself, and Faker's lane dominance wins knockout series. Fade the hype on BLG.",
+      "pickedAt": "2026-11-04T00:00:03.076Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "KC",
+      "probability": 22,
+      "contenders": [
+        "BLG",
+        "GEN"
+      ],
+      "reasoning": "Early game is everything, and KC's +1.1k GD@15 over 38 games is the best tempo in the field. They rush first drake, own the map and snowball before anyone wakes up.",
+      "pickedAt": "2026-11-04T00:00:02.914Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "T1",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Fearless strips comfort picks, and T1's bench of flexible champions plus Faker's late-game drafting make them the team that adapts best. They're 9-4 against other regions.",
+      "pickedAt": "2026-11-04T00:00:02.998Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 25,
+      "contenders": [
+        "BLG",
+        "KC"
+      ],
+      "reasoning": "GEN tops the board on series, game win rate and results against other regions. I only lean this hard because they win 74% of their games and no one else matches that.",
+      "pickedAt": "2026-11-04T00:00:04.558Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "T1",
+      "probability": 14,
+      "contenders": [
+        "GEN",
+        "DK"
+      ],
+      "reasoning": "The numbers are wobbly, but T1 keeps winning the tense series, and that's a room that knows how to hold together when Worlds gets loud; I'm backing the feeling.",
+      "pickedAt": "2026-11-04T00:00:06.381Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-04\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0}]}",
+  "batchHash": "f7bec2f0c23a84dc2a3c2420415d7226763344974b2c88f0219bc3499ddda757",
+  "commitDigest": "3AK4hvYt5sgqmsyCKBeJ8LkQPDa5129t64XaK17uziy7",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

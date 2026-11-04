@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -167,10 +167,51 @@
   "batch": "{\"matchId\":\"115660540726095109\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":100},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":320,\"lessons\":[\"4tQ-YZdS2aoiX9wQF1vjD27B-hiRw5IfokydiZBLqk4\",\"BKwGIj0-Yvloz2KXwI8OLzTTrdsG8gvatiwzhye4ogo\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"8c513cced949e0f378a82f336d59627bb171eb54f4ca8e1afa91d3fbf55d65b0\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":290},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":980,\"lessons\":[\"1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\"],\"thought\":\"7d2258fea99c9efee1945625cc4a4137b95387eb03db09cb45da0cdde32e46c0\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":100},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":330,\"lessons\":[\"5Ya72PGaFW5HejlzjhibdD_O6wFUApyYr5JX1VsaN6Q\",\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"Z8gxZ9zuy6jVvIM7HIpb3jGGRDX_2M-WApWji1J_3b8\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w\"],\"thought\":\"a89e249aca1709f514ff8483b2eeb5c9e9e062a18e5ebf592e1a6b0369f05fa6\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":100},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":340,\"lessons\":[\"8RBzjuDmHfa4cyQz0SYELfc4KeFuhg2dfNzS38pwzbE\",\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\"],\"thought\":\"f6cf9b7033551b768a7a53f99145d860726bf95572da95458a1eccd23f060c3f\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":150},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"IG\",\"stake\":510,\"lessons\":[\"-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE\",\"NVAk98ArGDUeLNFjwcK_-UfzLFDV984AEkVd9-oFCsQ\",\"Og348tzt3B5N5RJp-r0ydvzPdah_iBmXXvdLrhr0IZY\"],\"thought\":\"644919886772483aae5f17fc6ab0678262d604cab8219e617ff0613ab28c65d0\"}]}",
   "batchHash": "5705ed6ea07fe42d1f1145c6b15f5a62542cf3124f724884f9a314e81a91a3e1",
   "commitDigest": "6h67C8r6vpkGVg5Z6tvMdw5GjwJBJd2RxnALYvzCmgGn",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "IG",
+    "score": "3-1",
+    "resultDigest": "BqeV9pwKiE8tDKXGxZR3Ja6ETNmBkpf3n57QPjt2qBBC"
+  },
+  "axp": {
+    "analyst-adc": -670,
+    "analyst-jungle": 1020,
+    "analyst-mid": 92,
+    "analyst-support": -590,
+    "analyst-top": 147
+  },
+  "debate": "Top: IG won, and the hands did the work, so I'll take my flowers. I said 3-2 because of Creme, but a 3-1 only proves the stronger players close faster than I feared.\n\nJungle: 3-1 at 61%, and I was the only one who got the exact score. Wei and the squad took the first fifteen minutes, and that decided it, just as I said it would. Support, how did the room that keeps getting off the mat do?\n\nMid: I got the winner, but I was a game off with my 3-2. Rookie flexing across his pool was exactly why IG didn't need a fifth game. Creme never got the Orianna and Lee Sin setup I warned about, ADC.\n\nADC: My 30-to-21 series-wins sample got a rude lesson in what a 3-3 head-to-head means. I'll take the L, and I'll admit Jungle's first-blood stat from IG's Worlds games was telling me something I chose to discount.\n\nSupport: I trusted the comeback room and the room stayed on the mat this time. Nerves lost to tempo, so well played, Jungle, but the vibes were fair for a coin-flip series and you know it.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: When I back the stronger players, I should trust them to close games rather than hedge toward a fifth game out of fear of one opponent's comfort picks, because individual skill shows up as tempo, and early leads are where it turns into wins. I still won't let crowd hype or team-stat samples pull me off the better hands, but I'll check whether those hands have actually been winning the first fifteen minutes before I price in a scramble. (from Quarterfinals TES vs IG; picked IG 3-2, actual IG 3-1)",
+      "blobId": "VVma7_apA1Vp-S5zrtN-wckr4V6W8rJqo6oR6jp_7yM",
+      "jobId": "d7921913-74d0-46c1-b867-756737820513"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When a team's early-game data (first blood, first drake, first tower) clearly beats its opponent's, trust that tempo edge to decide the series, and don't hedge toward \"comeback\" narratives. My 3-1 was right because IG kept winning the first fifteen minutes, so next time I'll back the side that controls early objectives and check whether the underdog has shown any proof it can flip those setups. (from Quarterfinals TES vs IG; picked IG 3-1, actual IG 3-1)",
+      "blobId": "ZFsxj3Pjf0S4CX7Y23f7JtyFNb8x0ZbFzmVUu0U4Aio",
+      "jobId": "34976d8f-d3c7-4644-b58d-e4f122d815c8"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Fearless pool depth only matters if it shows up in the early draft, so next time I should check which side actually gets lane and jungle priority from the first picks (like IG's Wei tempo) before treating a flexible star like Rookie as a reason for a close series. When the star's flex pool and the jungle tempo point the same way, I should lean toward the faster series, 3-1 rather than 3-2, instead of hedging on a comeback draft that the opponent may never get to play. (from Quarterfinals TES vs IG; picked IG 3-2, actual IG 3-1)",
+      "blobId": "wO9B2arTHQ7BNRTiPAmIKU5IIpjzCRQGCfnm2PP_Ong",
+      "jobId": "64fc4730-e0dc-452d-b318-7f66e2bf502d"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: When the head-to-head is dead even (3-3), a bigger domestic series-wins total is only a weak tiebreaker. I should give more weight to recent, specific indicators from the current event, such as IG's first-blood rate and early-game tempo at Worlds, because those numbers describe how each side is playing now. If the stats point in different directions, I should keep my confidence near 50 and not lean on the larger but older sample. (from Quarterfinals TES vs IG; picked TES 3-2, actual IG 3-1)",
+      "blobId": "O0bMUCGW8fVpXJXWYGMpgaujQRcGqtQvd4x8QAAsin0",
+      "jobId": "161518d8-7220-420a-95b9-fddbe8b81935"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A team's resilience is only worth backing when it shows up in how they start games, because a room that keeps getting off the mat is also a room that keeps falling behind. Next time I'll read whether the team's morale and chemistry hold up early, since that's where IG's calm shut TES out of the comebacks I was counting on. (from Quarterfinals TES vs IG; picked TES 3-2, actual IG 3-1)",
+      "blobId": "DSmeVrpjWFkPql_aQtwT0PM3K3FTgmCc-ln9WjPvGX0",
+      "jobId": "7aac2a75-afc5-49f7-af27-a4cbe5b00e11"
+    }
+  ],
   "scout": "Scout: TES vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nTES [LPL]: 2026 series 30-25, games 80-66 | last 10 (newest first) WWWLWLLLLW\n  LPL 2026 27-22 (lost final) · MSI 2026 0-2 · Worlds 2026 3-1 · vs other regions 1-3\n  Last 26 games (13-13): GD@15 -0.4k, FB 62%, FT 35%, FD 31%, dragons 50%, 33.7 min avg, 1st baron 26:42\n  Leads @15 converted 5/6, comeback wins 3, throws 0, objectives taken while 1k+ behind 18\n  Worlds 2026 6 games (4-2): GD@15 -0.1k, FB 17%, FT 33%, FD 33%, dragons 50%, 30.6 min avg, 1st baron 27:30\n  Picks: TOP Renekton 5, Ambessa 4, Olaf 4 | JG Pantheon 4, Qiyana 4, Lee Sin 3 | MID Orianna 5, Locke 4, Ryze 4 | BOT Ezreal 5, Jhin 4, Lucian 4 | SUP Milio 4, Alistar 2, Bard 2\n  Standout: TESZhuo (support) KDA 4.2 over 20 games, 6% dmg share\nIG [LPL]: 2026 series 21-26, games 61-69 | last 10 (newest first) WWWLWLLWWW\n  LPL 2026 18-25 · Worlds 2026 3-1 · vs other regions 3-1\n  Last 26 games (16-10): GD@15 +0.4k, FB 42%, FT 46%, FD 54%, dragons 53%, 32.1 min avg, 1st baron 26:24\n  Leads @15 converted 8/9, comeback wins 3, throws 1, objectives taken while 1k+ behind 16\n  Worlds 2026 6 games (4-2): GD@15 +1.5k, FB 83%, FT 67%, FD 83%, dragons 69%, 30.2 min avg, 1st baron 25:24\n  Picks: TOP Rumble 4, Gnar 3, Jayce 3 | JG Naafiri 4, Nocturne 4, Jarvan IV 3 | MID Aurora 5, Orianna 4, Syndra 4 | BOT Yunara 5, Jhin 4, Aphelios 3 | SUP Lulu 6, Seraphine 4, Alistar 3\n  Standout: IG Wei (jungle) KDA 7.1 over 6 games, 15% dmg share\nHead-to-head 2026: TES 3-3 IG\n  2026-09-17 LPL 2026 Regional Qualifier: TES 3-1 IG\n  2026-09-05 LPL 2026 Playoffs: IG 3-2 TES\n  2026-04-19 LPL 2026 Week 3: TES 2-0 IG\nKey moments:\n  - TES came back from -5.3k at 16:00 vs IG (LPL 2026)\n  - TES came back from -4.9k at 28:00 vs BLG (Worlds 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\n  - IG took Baron at 28:42 while down 6.7k vs TES (LPL 2026), lost\nFun facts:\n  * Likely penta kill: IG Rookie (Annie) at 25:00 (vs HLE, Worlds 2026)\n  * Likely quadra kill: IG JiaQi (Yunara) at 27:58 (vs HLE, Worlds 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  Both teams are from LPL, so their domestic records are directly comparable.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  TES (LPL): no Worlds titles or finals before 2026.\n  IG (LPL): 1 Worlds title (2018).",
   "chain": {
     "network": "mainnet",
@@ -215,5 +256,47 @@
       }
     ],
     "at": "2026-11-01T00:21:05.673Z"
+  },
+  "finalCall": {
+    "status": "committed",
+    "batch": "{\"matchId\":\"115660540726095109:final\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":250},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"TES\",\"stake\":150}]}",
+    "batchHash": "3ad3909e9e7cfc33d63045f4046cd34ddf445226645d4fcbcd039360261e5fee",
+    "commitDigest": "HztK964xEC6WLU1ZdMPkqjaem3qDgFTvgAZb2frYWarW",
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still trust IG's hands, but at 1.36× a 56% call is a losing price, and piling more onto the side the whole pool already crowded just waters down my own payout, so my 510 stays and I add nothing.",
+        "decidedAt": "2026-11-03T21:30:10.407Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says the early read is already priced in: at 1.36× and my 61%, every extra AXP on IG returns about 0.83 back, so I'm not buying a negative-EV lane, and TES being comeback kings is exactly why I keep my 980 where it is and stop.",
+        "decidedAt": "2026-11-03T21:30:09.255Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "My read is still IG 3-2 at 55%, but at 1.36× the pool needs IG above roughly 73% to pay for more stake, so the 330 AXP I already have in is the right size for a coin-flip-plus pick.",
+        "decidedAt": "2026-11-03T21:30:08.920Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 250,
+        "reasoning": "The series is a true coin flip on the numbers (3-3 head-to-head, near-identical Worlds results), but the pool prices TES at about 27% against my 53%, so I'll take a measured top-up rather than a big one.",
+        "decidedAt": "2026-11-03T21:30:13.911Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 150,
+        "reasoning": "At 54% the pool is paying me too well to sit still, and I trust the team that keeps climbing off the mat, but I'm only adding a little because my edge is a read on the room and not a lock.",
+        "decidedAt": "2026-11-03T21:30:13.570Z"
+      }
+    ],
+    "chain": {
+      "network": "mainnet",
+      "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+    }
   }
 }
