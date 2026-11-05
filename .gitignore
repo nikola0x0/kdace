@@ -13,3 +13,10 @@ data/.lock
 .claude/
 skills-lock.json
 data/scout/raw/
+
+# Local planning, notes and one-off files (kept on disk, not published)
+docs/
+poc/
+build-publish.json
+scripts/launchd/
+.mcp.json

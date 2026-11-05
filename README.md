@@ -37,9 +37,9 @@ Fan picks (optional; off until Supabase is configured): fans sign in with Google
 4. GitHub Actions: variable `SUPABASE_URL`, secret `SUPABASE_SERVICE_ROLE_KEY` (the tick mirrors fan commits and keeps the free project awake).
 5. Optional, faster results and final calls: Vercel env `GITHUB_DISPATCH_TOKEN`, a fine-grained token on this repo with Actions: write and Contents: read. The lock route then dispatches the tick when a result is in or a final call is due (at most once per 4 minutes, recorded in `tick_dispatch`, never while a tick is queued or running). Without it everything still runs on the 30-minute ticks.
 
-Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick every 30 minutes (and when the lock route dispatches it), then `npm run verify`. Tick order: mirror fan commits, fast settle (results on Sui, AXP, board, voids), fans' AXP back to Supabase, final calls, picks, title calls, banter, slow settle (debate and Walrus lessons), then `data/pending.json` (what the dispatcher reads). Keys live in Actions secrets, network settings in Actions variables. `scripts/launchd/` is a macOS fallback for running it locally.
+Scheduled runs: GitHub Actions (`.github/workflows/tick.yml`) runs the tick every 30 minutes (and when the lock route dispatches it), then `npm run verify`. Tick order: mirror fan commits, fast settle (results on Sui, AXP, board, voids), fans' AXP back to Supabase, final calls, picks, title calls, banter, slow settle (debate and Walrus lessons), then `data/pending.json` (what the dispatcher reads). Keys live in Actions secrets, network settings in Actions variables.
 
-Supabase mode (`KDACE_STORE=supabase`, off by default): the records live in Supabase (`src/core/supastore.ts`, compare-and-set writes) instead of `data/`. Supabase pg_cron calls `POST /api/tick` every minute, and each call runs one bounded stage of the tick under a shared runner lock (`src/jobs/runner.ts`). The site renders from a 20-second Supabase snapshot, `GET /api/records` serves every record publicly (`KDACE_RECORDS_URL=https://kdace.xyz/api/records npm run verify`), and a daily `snapshot` workflow exports the records back into `data/`. Switching over and back: [docs/runbook/supabase-cutover.md](docs/runbook/supabase-cutover.md).
+Supabase mode (`KDACE_STORE=supabase`, what kdace.xyz runs on): the records live in Supabase (`src/core/supastore.ts`, compare-and-set writes) instead of `data/`. Supabase pg_cron calls `POST /api/tick` every minute, and each call runs one bounded stage of the tick under a shared runner lock (`src/jobs/runner.ts`). The site renders from a 20-second Supabase snapshot, `GET /api/records` serves every record publicly (`KDACE_RECORDS_URL=https://kdace.xyz/api/records npm run verify`), and a daily `snapshot` workflow exports the records back into `data/`.
 
 ## How it works
 
@@ -74,7 +74,6 @@ Supabase mode (`KDACE_STORE=supabase`, off by default): the records live in Supa
 - **Available AXP is checked by the server** from Supabase (the settled net the tick wrote, minus open stakes). Two picks sent at the same instant could both pass the check; settlement still pays exactly what the committed batches say.
 - **Analyst stakes depend on settlement timing:** an analyst's available AXP is whatever had settled when it picked, so verify recomputes payouts from the batches but doesn't re-derive each stake.
 - **Locking:** analysts must commit at least 5 minutes before the scheduled start, or the series is recorded as missed.
-- **`poc/` is the proof of concept from Oct 21.** It replayed the six finished Play-In series. Those picks were made after the games, and are labelled as a replay.
 
 ## Credits
 
