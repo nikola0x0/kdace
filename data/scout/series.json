@@ -8682,5 +8682,18 @@
   "winsB": 1,
   "winner": "IG",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095115",
+  "startTime": "2026-11-04T22:00:00Z",
+  "block": "Quarterfinals",
+  "bestOf": 5,
+  "state": "completed",
+  "teamA": "GEN",
+  "teamB": "LYON",
+  "winsA": 3,
+  "winsB": 0,
+  "winner": "GEN",
+  "league": "Worlds 2026"
  }
 ]

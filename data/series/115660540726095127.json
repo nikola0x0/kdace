@@ -1,0 +1,194 @@
+{
+  "series": {
+    "matchId": "115660540726095127",
+    "startTime": "2026-11-07T22:00:00Z",
+    "block": "Semifinals",
+    "bestOf": 5,
+    "state": "unstarted",
+    "teamA": "GEN",
+    "teamB": "IG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 78,
+      "reasoning": "Stubborn and blunt: GEN have better hands in more roles than IG. Chovy and Ruler give them a steady mid-bot axis, and the jungle and bot play is what builds early tempo, so I'm not leaning on Chovy over Rookie alone. The LCK-over-LPL gap is real and I'm leaning on it hard. Rookie can still steal a game with a comfort pick and Wei's jungle pressure, so I'm giving IG one, but I'm not hedging to a fifth game. I only flip if Rookie wins mid and Wei takes jungle control in the first fifteen minutes across multiple games.",
+      "usedLessons": [
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        },
+        {
+          "blobId": "0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8",
+          "text": "Top lesson: Individual skill still wins series, but under Fearless drafts that skill includes champion pool depth, so I should check whether the star players can keep finding strong picks game after game before I trust them to win clean. A flagged big region gap is a reason to back the better players, not a reason to ignore the one opposing player (like Isles) who can steal a game, so I'll keep my confidence moderate and my scoreline honest. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:19:38.155442Z"
+        },
+        {
+          "blobId": "M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI",
+          "text": "Top lesson: Individual skill still wins series, and Chovy and Ruler's steadiness beating Zeka's flash backs that up, so I should keep backing the stronger players and not let an early-game hype story like HLE's aggression make me flinch. One win doesn't make me right about everything, though: when I name a risk like a Zeka lane win, I should state exactly which player matchup would have to break before I change my pick, since that's where skill actually decides the game. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:29:19.507591Z"
+        },
+        {
+          "blobId": "VVma7_apA1Vp-S5zrtN-wckr4V6W8rJqo6oR6jp_7yM",
+          "text": "Top lesson: When I back the stronger players, I should trust them to close games rather than hedge toward a fifth game out of fear of one opponent's comfort picks, because individual skill shows up as tempo, and early leads are where it turns into wins. I still won't let crowd hype or team-stat samples pull me off the better hands, but I'll check whether those hands have actually been winning the first fifteen minutes before I price in a scramble. (from Quarterfinals TES vs IG; picked IG 3-2, actual IG 3-1)",
+          "createdAt": "2026-11-04T03:05:32.780541Z"
+        }
+      ],
+      "pickedAt": "2026-11-05T00:33:13.915Z",
+      "thinking": "I'm settling on a pick based on the idea that individual skill decides a series. I'm recalling GEN's 2026 lineup as Kiin, Canyon, Chovy, Ruler and Duro, and checking IG's roster against what the scouting notes say: Wei in the jungle, Rookie mid, and JiaQi bot.\n\nI'm weighing the region gap, since LCK strength favors GEN across roles, and I'm leaning toward GEN 3-1 at roughly 78%. I want to watch the matchup in the mid lane and the jungle, because a Rookie win there could change my read.",
+      "stake": 1040,
+      "scoreStake": 310
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 72,
+      "reasoning": "It's all tempo, and Canyon's map control against Wei's Naafiri early skirmishes is the series. IG's first-blood aggression is real, but GEN already showed in Swiss that they can absorb it, take Herald and dragon, then flip the map in one five-minute burst. I'm giving IG one game on a Wei snowball, but GEN's early-objective setup and the LCK edge close it in four.",
+      "usedLessons": [
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        },
+        {
+          "blobId": "FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc",
+          "text": "Jungle lesson: GEN won because Canyon owned the first 15 minutes (the Herald and dragon tempo I flagged), so when a team with a proven jungle edge faces an early-aggro opponent, I should trust the tempo matchup and lean harder instead of hedging at 57. HLE's blood-in-the-first-five setups only matter if they convert into objectives, so next time I'll check whether they've actually turned early kills into Herald and towers against this opponent before fearing the snowball. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:29:52.867980Z"
+        },
+        {
+          "blobId": "hU8xLkJgvAKyyQEKoamdZMwxs8iNQAlmmwmKujHZRyo",
+          "text": "Jungle lesson: When one side keeps winning the first 15 minutes (Herald, plates, first dragon) and the report flags a big region gap, I shouldn't hand the underdog a game just because a jungler's pathing could steal one. Fearless drafts don't undo a tempo edge that big, so I'll only pick the upset if I can point to a real early-game trigger already showing up for them, not just a flip condition on paper. (from Swiss G2 vs HLE; picked HLE 2-1, actual HLE 2-0)",
+          "createdAt": "2026-11-01T05:49:00.112080Z"
+        },
+        {
+          "blobId": "UHD3NAjdmnUDXjYlfLo9qwU8m3FfrT3N9RiCoiDZ9fE",
+          "text": "Jungle lesson: Early tempo decided this one, as it always does, so I'll keep asking who actually took first blood, first tower and the early map against top-tier opposition, and I'll discount early-game numbers that were built against weaker competition. I'll also keep naming concrete flip triggers like first Drake and Herald, because tempo shows up in the objective timeline and not in the hype. (from Swiss TSW vs IG; picked IG, actual IG 1-0)",
+          "createdAt": "2026-10-26T06:27:29.488646Z"
+        }
+      ],
+      "pickedAt": "2026-11-05T00:33:14.918Z",
+      "thinking": "I'm weighing GEN against IG for the semifinal pick, and the LCK-versus-LPL strength gap is flagged as a big factor. GEN's early-game numbers from Worlds look flat, while IG's early leads look strong, but those leads may have come against weaker opposition, so I'm discounting them somewhat. Now I'm checking how IG's early game holds up.\n\nI'm settling on GEN for the semifinal, with a likely 3-1 scoreline and a probability around 72%. The region gap and Canyon's jungle edge are the main factors, and I'm keeping IG's early-game strength in view while discounting it for weaker opposition.",
+      "stake": 1220,
+      "scoreStake": 370
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 72,
+      "reasoning": "This is a draft series first: Chovy's Ryze/Syndra/Akali triangle gives GEN a mid pool that holds up through the lockouts, while Lee Sin and Jarvan give them early jungle tempo to answer Wei's Naafiri. The LCK-over-LPL gap is just the prior underneath that read. IG flips it if Rookie's Aurora/Annie and the Yunara/Lulu lane get through first rotation with Wei winning early priority, and a one-game steal from that is the 3-1 I see before GEN's depth takes over in the later Fearless games.",
+      "usedLessons": [
+        {
+          "blobId": "hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM",
+          "text": "Mid lesson: Fearless depth still decides series, but I should show it through specific draft outcomes, like which jungle and lane picks give GEN early tempo and priority, rather than a general \"more answers\" claim. I also shouldn't lean on a league-gap argument or domestic records unless the scouting report flags a BIG REGION GAP, because the draft and the star's pool are the real case. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:43.551986Z"
+        },
+        {
+          "blobId": "wO9B2arTHQ7BNRTiPAmIKU5IIpjzCRQGCfnm2PP_Ong",
+          "text": "Mid lesson: Fearless pool depth only matters if it shows up in the early draft, so next time I should check which side actually gets lane and jungle priority from the first picks (like IG's Wei tempo) before treating a flexible star like Rookie as a reason for a close series. When the star's flex pool and the jungle tempo point the same way, I should lean toward the faster series, 3-1 rather than 3-2, instead of hedging on a comeback draft that the opponent may never get to play. (from Quarterfinals TES vs IG; picked IG 3-2, actual IG 3-1)",
+          "createdAt": "2026-11-04T03:07:23.201573Z"
+        },
+        {
+          "blobId": "G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I",
+          "text": "Mid lesson: A correct 2-1 doesn't prove my draft read, so next time I'll name the Fearless picks that should decide each game (Rookie's pool, Wei's tempo picks, LYON's comfort picks) and grade myself on whether those drafts actually happened, not just the scoreline. Pool depth matters most by game three, when the best champions are locked out, so I'll check who still has comfortable picks left instead of leaning on a vague tiebreaker. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:20:44.818062Z"
+        },
+        {
+          "blobId": "r0DI--Tk-uBtoVo6VF2Utu35iWrELZQmmHF2uMajXRI",
+          "text": "Mid lesson: Draft decides a Bo1, but the draft read only counts if I name the specific failure condition (HLE's early-priority pick into a first-rotation fight) and check it against how the picks and the lanes actually played out, not just credit Chovy's comfort pool after the win. Next time I'll weigh how much each team's draft can stay flexible under bans and Fearless restrictions, so a lopsided H2H history stays a tiebreaker and never becomes the reason I lean on a side. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:30:24.079355Z"
+        }
+      ],
+      "pickedAt": "2026-11-05T00:33:13.386Z",
+      "thinking": "I'm supposed to give a JSON answer, and the reasoning field should hold this thinking, a sentence or two. The call is GEN vs IG in a Bo5 semifinal, where scouting shows LCK is clearly ahead of LPL, so that gap is my starting prior, with the draft deciding how far to shift from it. Recent results matter too: GEN already took a 1-0 win over IG in Swiss, and IG beat TES 3-1 in the quarterfinals.\n\nI'm weighing GEN against IG at 3-1 or 3-2, leaning GEN at roughly 72%, since the draft tempo and star flex point the same way. Chovy's Ryze and Syndra make GEN the safer side, and the flip would come if IG gets Yunara and Lulu with Wei's early Naafiri tempo alongside Rookie's Annie.",
+      "stake": 720,
+      "scoreStake": 220
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 74,
+      "reasoning": "IG's Worlds run is real, and their 90% first-blood rate means GEN can't dream of a lazy early game, but GEN already showed in the Swiss meeting that they can take a lead away, swinging 8.4k in five minutes. Over a best of five, with the LCK's clear edge as a region and GEN's far deeper body of work, I expect IG to steal a game with early tempo before GEN's late-game control closes it out.",
+      "usedLessons": [
+        {
+          "blobId": "O0bMUCGW8fVpXJXWYGMpgaujQRcGqtQvd4x8QAAsin0",
+          "text": "ADC lesson: When the head-to-head is dead even (3-3), a bigger domestic series-wins total is only a weak tiebreaker. I should give more weight to recent, specific indicators from the current event, such as IG's first-blood rate and early-game tempo at Worlds, because those numbers describe how each side is playing now. If the stats point in different directions, I should keep my confidence near 50 and not lean on the larger but older sample. (from Quarterfinals TES vs IG; picked TES 3-2, actual IG 3-1)",
+          "createdAt": "2026-11-04T03:07:56.927818Z"
+        },
+        {
+          "blobId": "Wa2-ULj-on4ItXklHhEkJjMibZGssdWijCLVdQRtNJ4",
+          "text": "ADC lesson: The 37-10 vs 18-25 series gap set a sound 79%, but my reasoning also leaned on a Chovy-vs-Rookie story I never backed with lane numbers. Next time I'll price the confidence only from measurable inputs (series records, head-to-heads, game length tendencies) and check Jungle's point that early tempo decided it by looking at first-objective and gold-at-15 stats before crediting any one matchup. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:12.997489Z"
+        },
+        {
+          "blobId": "2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8",
+          "text": "ADC lesson: When a flagged big region gap and a direct head-to-head (HLE's 3-0 at MSI) point the same way, I should lean on them and set confidence by that agreement, not by hype about individual players or a \"calm room.\" One clean 2-0 doesn't show 68 was too low, because a Bo3 stays high-variance and my confidence should still come from the numbers, not from the sweep. (from Swiss G2 vs HLE; picked HLE 2-0, actual HLE 2-0)",
+          "createdAt": "2026-11-01T05:49:48.734845Z"
+        },
+        {
+          "blobId": "gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg",
+          "text": "ADC lesson: The head-to-head record (now 7-1) and the comeback numbers lined up with the result, so when those cleaner stats agree, I can lean harder, and a flashy stat like HLE's 71% first blood should get less weight when GEN's record from behind and HLE's zero comeback wins contradict what it implies. I'll keep weighing the whole set of numbers, such as records, head-to-heads and game-length tendencies, instead of letting one headline stat decide, and I'll stay cautious in a best of 1, where one game gives us little data. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:30:47.095467Z"
+        }
+      ],
+      "pickedAt": "2026-11-05T00:33:16.122Z",
+      "thinking": "I'm holding to the principle of trusting the numbers over the narratives. GEN has a 40-10 series record and 92-33 across games, against IG's 22-26 and 64-70. Domestic records don't compare directly, but the region gap is large and clearly favors LCK, so the house rule about skipping region percentages doesn't apply here. I'm also starting to tally head-to-head results, where GEN leads 1-0.\n\nI'm weighing the Worlds Swiss matchup, where IG has been strong with a 7-3 record, a 90% first-blood rate, and a +1.4k gold lead at 15, while GEN is 3-0 there. The one caveat I'm weighing is LCK's 4-6 record against LPL this year, though that sample is small and the region gap is large enough that only clear international results should move me off it.\n\nI'm settling on the reasoning now: trusting the head-to-head and the region gap together points toward GEN, and I'll keep the reasoning short and punchy. IG's 90% first-blood rate at this Worlds is real, but GEN has already swung 8.4k gold in a few minutes against them, so I'll weigh the comeback ability more than the flashy stat.",
+      "stake": 960,
+      "scoreStake": 290
+    },
+    {
+      "player": "analyst-support",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 68,
+      "reasoning": "I rate IG's room highly: Rookie keeps them steady, they start games fast, and that calm is what shut TES out of the comebacks I was counting on. But GEN's calm shows up in concrete things, like clean early rotations and leads that actually get closed out. Chovy and Canyon are a settled core that already beat IG once this Worlds, and with LCK clearly the stronger region I'll back GEN to take it, with IG's momentum stealing a game.",
+      "usedLessons": [
+        {
+          "blobId": "H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8",
+          "text": "Support lesson: I was right that GEN's composure counted, but I'm not going to claim the win was proof of chemistry when Canyon's early control and Chovy's comfortable draft explain much of it. Next time I'll look for concrete signs of how a team's mood shows up, such as clean early rotations, calls made under pressure and whether leads get closed out, and I'll use them to judge how far the calm room matters instead of just assuming it. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:31:09.166314Z"
+        },
+        {
+          "blobId": "Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8",
+          "text": "Support lesson: Team chemistry decides games, but I should anchor that read in things I can see, like comebacks, composure after setbacks, and clean early-game coordination (GEN's tempo is where \"locked-in\" actually showed up), rather than claiming the vibes were obvious afterward. I should also bring in region only when the scouting report flags a big gap, and otherwise let the team's mood and cohesion carry the pick. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:25:37.615647Z"
+        },
+        {
+          "blobId": "BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI",
+          "text": "Support lesson: I read LYON's room well, since their calm got them a game, but I only measured one side's chemistry. Next time I'll read both rooms, treating IG's early-lead composure and Rookie's steadiness as team culture rather than just talent, and ask whether an underdog's calm holds over a full series when they keep starting from behind. (from Swiss LYON vs IG; picked IG 2-1, actual IG 2-1)",
+          "createdAt": "2026-10-29T00:21:45.146663Z"
+        },
+        {
+          "blobId": "DSmeVrpjWFkPql_aQtwT0PM3K3FTgmCc-ln9WjPvGX0",
+          "text": "Support lesson: A team's resilience is only worth backing when it shows up in how they start games, because a room that keeps getting off the mat is also a room that keeps falling behind. Next time I'll read whether the team's morale and chemistry hold up early, since that's where IG's calm shut TES out of the comebacks I was counting on. (from Quarterfinals TES vs IG; picked TES 3-2, actual IG 3-1)",
+          "createdAt": "2026-11-04T03:09:02.048812Z"
+        }
+      ],
+      "pickedAt": "2026-11-05T00:33:14.594Z",
+      "thinking": "I need to pick a side and justify it, and I'm weighing team factors like chemistry, morale, roster changes, and coaching against the region gap. The scouting report flags LCK as clearly stronger than LPL, which I'll treat as a major factor, and I'm noting GEN's strong record with its 3-0 Worlds start and the earlier 1-0 win over IG.\n\nI'm weighing IG's momentum and Rookie's steadiness against GEN's comeback ability and stable closes, and IG's fast starts at Worlds stand out. I'm leaning toward GEN 3-1 at around 68%, though the big region gap still factors in.",
+      "stake": 630,
+      "scoreStake": 190
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095127\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":290},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":960,\"lessons\":[\"2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8\",\"O0bMUCGW8fVpXJXWYGMpgaujQRcGqtQvd4x8QAAsin0\",\"Wa2-ULj-on4ItXklHhEkJjMibZGssdWijCLVdQRtNJ4\",\"gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg\"],\"thought\":\"bb11655f6937e2f9025ef3a46f728f100b30bb6ca526ed45ed484aa6d1daa8c7\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":370},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1220,\"lessons\":[\"FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc\",\"UHD3NAjdmnUDXjYlfLo9qwU8m3FfrT3N9RiCoiDZ9fE\",\"hU8xLkJgvAKyyQEKoamdZMwxs8iNQAlmmwmKujHZRyo\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"b44a5a3a8da5596db4c0da77c898e629ea0cfad7736fc00eeb5ad1b913a839ea\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":220},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":720,\"lessons\":[\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"r0DI--Tk-uBtoVo6VF2Utu35iWrELZQmmHF2uMajXRI\",\"wO9B2arTHQ7BNRTiPAmIKU5IIpjzCRQGCfnm2PP_Ong\"],\"thought\":\"8bec198149a5eafecda40e94d2010587ce24d38a16c36add80f97545a6cc8552\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":190},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":630,\"lessons\":[\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"DSmeVrpjWFkPql_aQtwT0PM3K3FTgmCc-ln9WjPvGX0\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"30cd7bd80d8279db31a873fcad262d8850c4b0ac5546da330990f88aa2f010f6\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":310},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1040,\"lessons\":[\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI\",\"VVma7_apA1Vp-S5zrtN-wckr4V6W8rJqo6oR6jp_7yM\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"5b66110316c6802638f233a4966c5afcf8fecdd0abb05452413b926ba9f84bc8\"}]}",
+  "batchHash": "b0f48fd49e4129d6a474b8ee45c38fa977c717e2d2f98c286b8db88ab3a50387",
+  "commitDigest": "8mpa3dKpkuRF8n5nMogG1N3K1Dkub137vpbEvQtFdXzJ",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: GEN vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 40-10, games 92-33 | last 10 (newest first) WWWWWWLWWW\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · Worlds 2026 3-0 · vs other regions 7-1\n  Last 25 games (19-6): GD@15 +0.4k, FB 36%, FT 64%, FD 56%, dragons 63%, 33.6 min avg, 1st baron 27:18\n  Leads @15 converted 9/12, comeback wins 2, throws 0, objectives taken while 1k+ behind 19\n  Worlds 2026 5 games (4-1): GD@15 -0.0k, FB 60%, FT 60%, FD 60%, dragons 77%, 31 min avg, 1st baron 26:30\n  Picks: TOP Rumble 4, Ambessa 3, Olaf 3 | JG Lee Sin 4, Jarvan IV 3, Nocturne 3 | MID Ryze 5, Syndra 4, Akali 3 | BOT Ezreal 5, Ashe 3, Kalista 3 | SUP Seraphine 5, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.5 over 25 games, 23% dmg share\nIG [LPL]: 2026 series 22-26, games 64-70 | last 10 (newest first) WWWWLWLLWW\n  LPL 2026 18-25 · Worlds 2026 4-1 · vs other regions 3-1\n  Last 30 games (19-11): GD@15 +0.5k, FB 50%, FT 47%, FD 57%, dragons 56%, 32.5 min avg, 1st baron 26:24\n  Leads @15 converted 10/12, comeback wins 3, throws 1, objectives taken while 1k+ behind 17\n  Worlds 2026 10 games (7-3): GD@15 +1.4k, FB 90%, FT 60%, FD 80%, dragons 70%, 32.2 min avg, 1st baron 25:54\n  Picks: TOP Gnar 4, Rumble 4, Jayce 3 | JG Naafiri 5, Nocturne 4, Jarvan IV 3 | MID Aurora 5, Syndra 5, Annie 4 | BOT Yunara 6, Jhin 5, Aphelios 3 | SUP Lulu 7, Alistar 4, Seraphine 4\n  Standout: IG Wei (jungle) KDA 6.2 over 10 games, 18% dmg share\nHead-to-head 2026: GEN 1-0 IG\n  2026-10-23 Worlds 2026 Swiss: IG 0-1 GEN\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN swung 8.4k in 5 min (26:00-31:00) vs IG (Worlds 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely penta kill: IG Rookie (Annie) at 25:00 (vs HLE, Worlds 2026)\n  * Likely quadra kill: IG JiaQi (Yunara) at 27:58 (vs HLE, Worlds 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 4-6 against LPL in 2026; LCK 73% vs LPL 62% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  IG (LPL): 1 Worlds title (2018).",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

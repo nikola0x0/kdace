@@ -109826,5 +109826,908 @@
    "damageShare": 0.23
   },
   "funFacts": []
+ },
+ {
+  "gameId": "115660540726095116",
+  "matchId": "115660540726095115",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-11-04T22:13:57.982Z",
+  "patch": "16.20",
+  "durationMin": 32.3,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Olaf",
+    "jungle": "Qiyana",
+    "mid": "Galio",
+    "bottom": "Jhin",
+    "support": "Leona"
+   },
+   "gold15": 27198,
+   "kills": 19,
+   "towers": 12,
+   "inhibitors": 5,
+   "dragons": [
+    "ocean",
+    "hextech",
+    "hextech",
+    "hextech"
+   ],
+   "barons": 2,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 23.9
+  },
+  "red": {
+   "code": "LYON",
+   "champions": {
+    "top": "Jax",
+    "jungle": "LeeSin",
+    "mid": "Orianna",
+    "bottom": "Ezreal",
+    "support": "Nautilus"
+   },
+   "gold15": 26507,
+   "kills": 8,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [
+    "infernal"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   0,
+   -745,
+   -422,
+   -97,
+   -215,
+   -49,
+   -980,
+   -853,
+   -167,
+   -59,
+   273,
+   306,
+   187,
+   373,
+   691,
+   979,
+   1294,
+   1190,
+   1398,
+   1768,
+   2582,
+   2361,
+   5181,
+   6730,
+   7039,
+   7971,
+   6798,
+   6364,
+   6875,
+   7050,
+   7962,
+   10768
+  ],
+  "leads": {
+   "10": -59,
+   "15": 691,
+   "20": 1768,
+   "25": 7039
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 10768,
+    "min": 32
+   },
+   "red": {
+    "gold": 980,
+    "min": 7
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 5610,
+   "fromMin": 22,
+   "toMin": 26
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 1.9,
+    "type": "firstBlood",
+    "team": "LYON"
+   },
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "ocean"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "infernal"
+   },
+   {
+    "min": 13.5,
+    "type": "firstTower",
+    "team": "GEN"
+   },
+   {
+    "min": 16.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 22.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 23.9,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 24.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 26.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 27.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 29.9,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 31.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 32.2,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 32.3,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Olaf",
+    "role": "top",
+    "k": 6,
+    "d": 1,
+    "a": 7,
+    "damageShare": 0.26
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 6,
+    "d": 1,
+    "a": 6,
+    "damageShare": 0.257
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Galio",
+    "role": "mid",
+    "k": 4,
+    "d": 2,
+    "a": 10,
+    "damageShare": 0.278
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 3,
+    "d": 0,
+    "a": 7,
+    "damageShare": 0.158
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Leona",
+    "role": "support",
+    "k": 0,
+    "d": 4,
+    "a": 8,
+    "damageShare": 0.047
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Dhokla",
+    "champion": "Jax",
+    "role": "top",
+    "k": 2,
+    "d": 6,
+    "a": 0,
+    "damageShare": 0.193
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Inspired",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 0,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.092
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Saint",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 0,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.23399999999999999
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Berserker",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 5,
+    "d": 3,
+    "a": 1,
+    "damageShare": 0.433
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Isles",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 1,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.048
+   }
+  ],
+  "standout": {
+   "code": "GEN",
+   "name": "GEN Kiin",
+   "champion": "Olaf",
+   "role": "top",
+   "k": 6,
+   "d": 1,
+   "a": 7,
+   "damageShare": 0.26
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "GEN",
+    "text": "GEN Ruler (Jhin) went 3/0/7 without dying"
+   },
+   {
+    "kind": "earlyBlood",
+    "team": "LYON",
+    "text": "First blood before 1:53 (LYON)"
+   },
+   {
+    "kind": "damage",
+    "team": "LYON",
+    "text": "LYON Berserker (Ezreal) dealt 43% of LYON's champion damage"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095117",
+  "matchId": "115660540726095115",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-11-04T23:06:06.852Z",
+  "patch": "16.20",
+  "durationMin": 26.6,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Sion",
+    "jungle": "JarvanIV",
+    "mid": "Viktor",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 28423,
+   "kills": 22,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "mountain",
+    "chemtech"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 23.9
+  },
+  "red": {
+   "code": "LYON",
+   "champions": {
+    "top": "Jayce",
+    "jungle": "MonkeyKing",
+    "mid": "Cassiopeia",
+    "bottom": "Mel",
+    "support": "Pyke"
+   },
+   "gold15": 25316,
+   "kills": 6,
+   "towers": 2,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud",
+    "chemtech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   51,
+   524,
+   -305,
+   -337,
+   -262,
+   145,
+   300,
+   289,
+   183,
+   703,
+   1450,
+   2338,
+   2943,
+   3107,
+   3152,
+   3565,
+   2592,
+   2592,
+   3014,
+   4608,
+   4066,
+   4531,
+   5912,
+   8412,
+   9208
+  ],
+  "leads": {
+   "10": 183,
+   "15": 3107,
+   "20": 3014,
+   "25": 8412
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 9208,
+    "min": 26
+   },
+   "red": {
+    "gold": 337,
+    "min": 5
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 5398,
+   "fromMin": 20,
+   "toMin": 25
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 2.9,
+    "type": "firstBlood",
+    "team": "GEN"
+   },
+   {
+    "min": 6.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "mountain"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "cloud"
+   },
+   {
+    "min": 14.3,
+    "type": "firstTower",
+    "team": "LYON"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "chemtech"
+   },
+   {
+    "min": 22.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "chemtech",
+    "behind": 4109
+   },
+   {
+    "min": 23.9,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 24.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 26.6,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Sion",
+    "role": "top",
+    "k": 4,
+    "d": 0,
+    "a": 8,
+    "damageShare": 0.22899999999999998
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 3,
+    "d": 3,
+    "a": 14,
+    "damageShare": 0.172
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 4,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.31
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 8,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.185
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 3,
+    "d": 1,
+    "a": 13,
+    "damageShare": 0.105
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Dhokla",
+    "champion": "Jayce",
+    "role": "top",
+    "k": 1,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.36200000000000004
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Inspired",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 4,
+    "d": 6,
+    "a": 1,
+    "damageShare": 0.217
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Saint",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 0,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.17
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Berserker",
+    "champion": "Mel",
+    "role": "bottom",
+    "k": 1,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.184
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Isles",
+    "champion": "Pyke",
+    "role": "support",
+    "k": 0,
+    "d": 6,
+    "a": 4,
+    "damageShare": 0.067
+   }
+  ],
+  "standout": {
+   "code": "GEN",
+   "name": "GEN Ruler",
+   "champion": "Ashe",
+   "role": "bottom",
+   "k": 8,
+   "d": 1,
+   "a": 8,
+   "damageShare": 0.185
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "GEN",
+    "text": "GEN Kiin (Sion) went 4/0/8 without dying"
+   },
+   {
+    "kind": "steal",
+    "team": "LYON",
+    "text": "LYON took a chemtech dragon at 22:54 while 4.1k down"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095118",
+  "matchId": "115660540726095115",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-11-04T23:54:14.873Z",
+  "patch": "16.20",
+  "durationMin": 33.6,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Aurora",
+    "jungle": "Pantheon",
+    "mid": "Taliyah",
+    "bottom": "Xayah",
+    "support": "Rakan"
+   },
+   "gold15": 27581,
+   "kills": 16,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "infernal",
+    "infernal"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 26.9
+  },
+  "red": {
+   "code": "LYON",
+   "champions": {
+    "top": "Gangplank",
+    "jungle": "Trundle",
+    "mid": "Anivia",
+    "bottom": "Corki",
+    "support": "Alistar"
+   },
+   "gold15": 27198,
+   "kills": 10,
+   "towers": 1,
+   "inhibitors": 0,
+   "dragons": [
+    "hextech",
+    "ocean",
+    "infernal"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   202,
+   499,
+   642,
+   699,
+   1313,
+   1542,
+   1895,
+   2000,
+   2554,
+   3068,
+   3071,
+   4026,
+   4163,
+   383,
+   1482,
+   1611,
+   1821,
+   2598,
+   2601,
+   1615,
+   1099,
+   761,
+   769,
+   1004,
+   1855,
+   3859,
+   5176,
+   5874,
+   6327,
+   6776,
+   6308,
+   8522
+  ],
+  "leads": {
+   "10": 2554,
+   "15": 383,
+   "20": 2601,
+   "25": 1004
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 8522,
+    "min": 33
+   },
+   "red": {
+    "gold": 5,
+    "min": 1
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 5323,
+   "fromMin": 25,
+   "toMin": 30
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 5.9,
+    "type": "firstBlood",
+    "team": "GEN"
+   },
+   {
+    "min": 8.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "hextech",
+    "behind": 1925
+   },
+   {
+    "min": 14.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "ocean",
+    "behind": 3352
+   },
+   {
+    "min": 15.9,
+    "type": "firstTower",
+    "team": "GEN"
+   },
+   {
+    "min": 20.9,
+    "type": "dragon",
+    "team": "LYON",
+    "detail": "infernal",
+    "behind": 2595
+   },
+   {
+    "min": 25.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "infernal"
+   },
+   {
+    "min": 26.9,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 31.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "infernal"
+   },
+   {
+    "min": 33.5,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 33.6,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Aurora",
+    "role": "top",
+    "k": 1,
+    "d": 1,
+    "a": 9,
+    "damageShare": 0.299
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 4,
+    "d": 2,
+    "a": 7,
+    "damageShare": 0.139
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Taliyah",
+    "role": "mid",
+    "k": 7,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.265
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Xayah",
+    "role": "bottom",
+    "k": 4,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.243
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Rakan",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 11,
+    "damageShare": 0.054000000000000006
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Dhokla",
+    "champion": "Gangplank",
+    "role": "top",
+    "k": 3,
+    "d": 6,
+    "a": 4,
+    "damageShare": 0.33799999999999997
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Inspired",
+    "champion": "Trundle",
+    "role": "jungle",
+    "k": 4,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.136
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Saint",
+    "champion": "Anivia",
+    "role": "mid",
+    "k": 2,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.259
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Berserker",
+    "champion": "Corki",
+    "role": "bottom",
+    "k": 1,
+    "d": 2,
+    "a": 2,
+    "damageShare": 0.22699999999999998
+   },
+   {
+    "code": "LYON",
+    "name": "LYON Isles",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.04
+   }
+  ],
+  "standout": {
+   "code": "GEN",
+   "name": "GEN Chovy",
+   "champion": "Taliyah",
+   "role": "mid",
+   "k": 7,
+   "d": 2,
+   "a": 5,
+   "damageShare": 0.265
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "GEN",
+    "text": "Likely triple kill: GEN Chovy (Taliyah) at 33:03"
+   }
+  ]
  }
 ]

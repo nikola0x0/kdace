@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-05",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "T1",
+      "probability": 24,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Stats are for cowards. T1 has the best individual players in the field, and Faker's guys take over games alone while the crowd chases GEN and BLG. I'm not flinching.",
+      "pickedAt": "2026-11-05T00:00:02.618Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "KC",
+      "probability": 17,
+      "contenders": [
+        "BLG",
+        "GEN"
+      ],
+      "reasoning": "Tempo is everything, and KC's +1.1k gold lead at 15 is the best on the board. They snowball the early map, grab first objectives, and make everyone else play catch-up.",
+      "pickedAt": "2026-11-05T00:00:04.167Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "DK",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Fearless strips comfort picks, and DK's flexible, adaptive drafting plus a world-title core already beat T1 and G2 here; GEN's 92-33 is great but I'm backing DK's pool depth.",
+      "pickedAt": "2026-11-05T00:00:02.694Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 27,
+      "contenders": [
+        "BLG",
+        "KC"
+      ],
+      "reasoning": "GEN's 92-33 game record is a 74% win rate, and they're 7-1 against other regions. BLG is close, but GEN leads on the numbers across the board.",
+      "pickedAt": "2026-11-05T00:00:04.235Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "IG",
+      "probability": 14,
+      "contenders": [
+        "GEN",
+        "DK"
+      ],
+      "reasoning": "IG's 22-26 record doesn't matter to me: they went through TSW, LYON and TES in tense series, and that calm in the room is what wins Worlds.",
+      "pickedAt": "2026-11-05T00:00:05.975Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-05\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"DK\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"IG\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0}]}",
+  "batchHash": "9a5048b67383278796a3785864f3d6c2942e738ee2c21f4d090807f5da801559",
+  "commitDigest": "7LoTko66jY6Rehmdy1E1zFyfT5QVbganK8JxYrZMWPbr",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

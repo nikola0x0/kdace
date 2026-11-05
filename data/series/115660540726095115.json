@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -182,13 +182,92 @@
   "batch": "{\"matchId\":\"115660540726095115\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":1010},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":3380,\"lessons\":[\"cehfrUVFx_KdQBwvYiWuPz9xoJo3sNFPAS6DlKxt8_c\",\"hDkHkfLlnOwMQDQI005nJfgfrZ9MgVLDvc9gYf-u4s8\",\"u7jUK-CoqIefBygHutzP8sUdZMyBTc_wQvJowFzWDr4\"],\"thought\":\"ff75483bba707a162296fb2c4c43e9b3da8f86a12d90d81c55fea1c5fa01cbae\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":690},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2300,\"lessons\":[\"Fp5DjkWBRZrznNi2wCr3C0oIsLnPn7rusxZyL9ZAWqE\",\"FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc\",\"k9IpENYAEwfVQGYmKkyC-eRZVxq1URFxRhQEzPqLTWU\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"096c9761d25f9ea2c39f18a1f87652812f45a306793e57c88046821c31b396bc\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":540},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800,\"lessons\":[\"0fgLVglDb_iE5U-oD5-d92YXWfrsjuRZSFYMY_84YJU\",\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"jSW4A56vgSdBkGLNgup8P3hYf6BBS0OIAzmD0UTWkjI\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\"],\"thought\":\"6483f97aa8e713bc1f787acb8821ba36b4d0d568507ba8d4a9fc2af8d44dbb68\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":630},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2110,\"lessons\":[\"4oJae47Md7ijUGAlF_u7eX2viGz98h5laMyODn3f0mE\",\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\",\"mDO37S2XT1Qgi7jy3gFxwyxai8gWxeMgAEFXa1xUEbk\"],\"thought\":\"b7443bd5af8d555542d301eb7863bc563ea93c37b3a496ed8cdb1490326f31a4\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":710},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":2350,\"lessons\":[\"-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE\",\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"bcaadf45e4783f2e17398584842fe665a86aaa6b5da139d5c8d6b92e9b84982e\"}]}",
   "batchHash": "4245de4a04b5315c82f31a02ee0604e370d40f42c33d008a62bb8e5ccfc7786c",
   "commitDigest": "Copw1PZmPFZwbyuBXVeRjfCmxgan3TWRvU4AsL3Tc2Pf",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "GEN",
+    "score": "3-0",
+    "resultDigest": "CGmkC2URzW6AmLzTBEtMUfSeEc4EVmpCFs5ioGCAS1sf"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Told you, trust the stronger players. Chovy and Ruler did exactly that, and the hyped LCS story never showed up. I'll take the 3-1 miss on the chin, since the sweep only proves my point.\n\nJungle: A sweep is just my early-game thesis with the dial turned up. Canyon had Herald, first dragon and the first tower before LYON had settled, three games running. Nobody got a wild comeback, and Mid, I'm looking at your 79%.\n\nMid: Fearless was supposed to give LYON their one game, but they burned the Lucian/Yunara and Alistar/Lulu picks early and GEN just drafted around the leftovers. Chovy never got pushed off comfort, so my lean held and only the stolen game didn't happen.\n\nADC: LCK is now 6-0 against the LCS, and GEN has beaten LYON three more times. I gave LYON one game because of the Swiss, and that was too generous. Support, I'm sorry, but the numbers don't have a calm-vibes column.\n\nSupport: Fair, LYON's calm kept them starting from behind, and GEN's composure never cracked, so that part of my pick was right. I still liked the room they had, and ADC, I'll take the feelings column over a 76% I got wrong.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: When the player gap is this lopsided, stop penciling in a \"stolen game\" for the underdog. Fearless only drains comfort picks from players who lack the skill to win on the leftovers, and Chovy and Ruler aren't those players. Next time, back the sweep and let the stronger players finish the job. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "sGEByxJuMHMEbBi3XOlb7K-pW11hIYExOwO4KgWQvBk",
+      "jobId": "58efbc2f-1bc1-4fa9-847f-1095c6ae139b"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: If my read says one side owns the first 15 minutes (Herald, first dragon, first tower), I shouldn't hedge with a \"stolen game\" built on one Swiss comeback anecdote, because that contradicts my own thesis. Before giving the underdog a game, I need to name how they'd win the early map, such as a fearless draft that leaves them tempo picks. If they can't, I call the sweep. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "Kt-DzXlpekN74Gp75bE7bTKsJJ8ZA2YO_xpqi6zAR60",
+      "jobId": "879167ee-134b-44fc-a085-da173cccc675"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Under Fearless Draft, a narrow pool is a liability. When the underdog's best weapons sit in one or two signature pairs, like Berserker's Lucian/Yunara with an Alistar/Lulu engage, and the favorite has deep pools with its stars on comfort picks, I should expect those weapons to be spent early and price the sweep, not a \"stolen game.\" I'll only keep the 3-1 if the underdog shows real depth beyond its first-rotation picks. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "RaHhH-4C_vY2XlQV2JrJMu9GWA4-WVg5OqX6oCKGZx4",
+      "jobId": "a6c5370d-f8dd-4b31-a3b8-2acdec2628b3"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A single Swiss game is too small a sample to justify penciling in a dropped game, so when the head-to-head and series scores lean one way, I should price the sweep as the default and make the underdog earn a game with repeatable evidence like game-length or draft tendencies. I also shouldn't count a region record and a head-to-head as two independent confirmations when they may reflect the same underlying gap. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "q8p2peQ8LEmsuS9PDOuiBnGOV0Dqmj3kMhYcqx2LdMc",
+      "jobId": "7255fd87-fd37-4bc5-9b44-ecf5ac4a8cbd"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: A team's chemistry only matters if it changes the scoreboard, and LYON's calm kept them starting from behind while GEN's composure and coaching-led drafting never cracked, so I should read both rooms before giving the underdog's good vibes a stolen game. When the favorite's room is just as steady and its prep is sharper (GEN drafting around LYON's burned picks), I should trust that the better-prepared team keeps control and not assume a warm underdog will find a comeback. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "0nEI5v7glWZPiPX3AynvK_ZSp8tiy2YiIRFdIGhBTgk",
+      "jobId": "5ddae08a-5cee-4a14-b17a-b0add9a50b09"
+    }
+  ],
   "scout": "Scout: GEN vs LYON (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 40-10, games 92-33 | last 10 (newest first) WWWWWWLWWW\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · Worlds 2026 3-0 · vs other regions 7-1\n  Last 25 games (19-6): GD@15 +0.4k, FB 36%, FT 64%, FD 56%, dragons 63%, 33.6 min avg, 1st baron 27:18\n  Leads @15 converted 9/12, comeback wins 2, throws 0, objectives taken while 1k+ behind 19\n  Worlds 2026 5 games (4-1): GD@15 -0.0k, FB 60%, FT 60%, FD 60%, dragons 77%, 31 min avg, 1st baron 26:30\n  Picks: TOP Rumble 4, Ambessa 3, Olaf 3 | JG Lee Sin 4, Jarvan IV 3, Nocturne 3 | MID Ryze 5, Syndra 4, Akali 3 | BOT Ezreal 5, Ashe 3, Kalista 3 | SUP Seraphine 5, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.5 over 25 games, 23% dmg share\nLYON [LCS]: 2026 series 28-15, games 78-47 | last 10 (newest first) WLLWWLWWLW\n  LCS 2026 21-7 (2 titles) · First Stand 2026 1-2 · MSI 2026 3-2 · EWC 2026 0-2 · Worlds 2026 3-2 · vs other regions 7-8\n  Last 31 games (18-13): GD@15 +0.2k, FB 48%, FT 61%, FD 40%, dragons 45%, 33.5 min avg, 1st baron 26:54\n  Leads @15 converted 8/10, comeback wins 3, throws 0, objectives taken while 1k+ behind 19\n  Worlds 2026 11 games (6-5): GD@15 -0.9k, FB 27%, FT 45%, FD 27%, dragons 40%, 33.4 min avg, 1st baron 31:18\n  Picks: TOP K'Sante 6, Gwen 4, Rumble 4 | JG Xin Zhao 5, Wukong 4, Nocturne 4 | MID Syndra 6, Ryze 3, Sylas 3 | BOT Lucian 6, Yunara 6, Ezreal 4 | SUP Alistar 8, Lulu 6, Milio 6\n  Standout: LYON Isles (support) KDA 4.6 over 31 games, 6% dmg share\nHead-to-head 2026: GEN 2-0 LYON\n  2026-10-25 Worlds 2026 Swiss: LYON 1-2 GEN\n  2026-03-19 First Stand 2026 Groups: LYON 0-3 GEN\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN swung 12.2k in 5 min (24:00-29:00) vs HLE (Worlds 2026)\n  - LYON came back from -8.1k at 38:00 vs LOS (Worlds 2026)\n  - LYON came back from -5.1k at 22:00 vs KC (Worlds 2026)\nFun facts:\n  * Likely triple kill: GEN Ruler (Ashe) at 23:34 (vs LYON, Worlds 2026)\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  This matchup is LCK vs LCS: LCK went 5-0 against LCS in 2026; LCK 73% vs LCS 35% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  LYON (LCS): no Worlds titles or finals before 2026.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still think GEN wins because Chovy and Ruler outclass a hot LCS story, but nobody is on LYON, so every extra AXP I add pays 1.00× and only adds risk, and I'm not paying for that.",
+        "decidedAt": "2026-11-04T21:30:12.159Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says don't burn a clock on a dead play: the whole pool is already on GEN at 1.00×, so extra AXP can't earn a cent if Canyon's early pathing lands and it only adds risk if LYON pulls off one of those wild comebacks, so I'm holding my 2,300 and moving on.",
+        "decidedAt": "2026-11-04T21:30:11.675Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "The draft read still says GEN, but with nobody on LYON the pool pays 1.00×, so extra AXP can only lose and never profit, and the 1,800 already staked stays put.",
+        "decidedAt": "2026-11-04T21:30:10.609Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With 0 AXP on LYON the pool pays 1.00×, so extra GEN stake can only lose money if LYON upsets and gains nothing if GEN wins, and my 83% was never strong enough to justify that trade.",
+        "decidedAt": "2026-11-04T21:30:13.879Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "Nobody has backed LYON, so every extra AXP on GEN just comes back to me at 1.00× if I'm right and is gone if LYON's calm room steals the series, which means all risk and no reward.",
+        "decidedAt": "2026-11-04T21:30:10.877Z"
+      }
+    ]
   }
 }

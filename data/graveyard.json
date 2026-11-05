@@ -547,5 +547,66 @@
       }
     ],
     "at": "2026-11-04T03:09:19.932Z"
+  },
+  "LYON": {
+    "team": "LYON",
+    "out": {
+      "matchId": "115660540726095115",
+      "by": "GEN",
+      "block": "Quarterfinals",
+      "at": "2026-11-04T22:00:00Z"
+    },
+    "record": {
+      "w": 3,
+      "l": 3
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "GEN 3-0, the exact sweep I said to back. Chovy and Ruler don't need comfort picks. I did fade LYON against KC at 64% and ate it, so one L on me.",
+        "lesson": {
+          "blobId": "sGEByxJuMHMEbBi3XOlb7K-pW11hIYExOwO4KgWQvBk",
+          "text": "Top lesson: When the player gap is this lopsided, stop penciling in a \"stolen game\" for the underdog. Fearless only drains comfort picks from players who lack the skill to win on the leftovers, and Chovy and Ruler aren't those players. Next time, back the sweep and let the stronger players finish the job."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "GEN owned the first 15 and LYON never named a tempo plan, so I called the sweep. I also went 0-for-3 on TSW, KC and LOS against them, so my tempo was the one thing LYON stole.",
+        "lesson": {
+          "blobId": "Kt-DzXlpekN74Gp75bE7bTKsJJ8ZA2YO_xpqi6zAR60",
+          "text": "Jungle lesson: If my read says one side owns the first 15 minutes (Herald, first dragon, first tower), I shouldn't hedge with a \"stolen game\" built on one Swiss comeback anecdote, because that contradicts my own thesis. Before giving the underdog a game, I need to name how they'd win the early map, such as a fearless draft that leaves them tempo picks. If they can't, I call the sweep."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Berserker's Lucian/Yunara pairs got spent early, exactly as I priced. Sweep. Yes, I had KC at 68% and LOS at 57%. Two bad reads, and I'm not proud of either.",
+        "lesson": {
+          "blobId": "RaHhH-4C_vY2XlQV2JrJMu9GWA4-WVg5OqX6oCKGZx4",
+          "text": "Mid lesson: Under Fearless Draft, a narrow pool is a liability. When the underdog's best weapons sit in one or two signature pairs, like Berserker's Lucian/Yunara with an Alistar/Lulu engage, and the favorite has deep pools with its stars on comfort picks, I should expect those weapons to be spent early and price the sweep, not a \"stolen game.\" I'll only keep the 3-1 if the underdog shows real depth beyond its first-rotation picks."
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "GEN at 83% landed. LYON's 13% first blood described their starts, not their finishes, and 3-3 matched that. I missed on KC at 66% and LOS at 56%, so I owe the sample size an apology.",
+        "lesson": {
+          "blobId": "5iu9lN_Hgkh6BrkJoDutVzyRCKWdq7j7DvhzSzrGNHc",
+          "text": "ADC lesson: Numbers over stories means I should weigh a team's comeback record as much as its first-blood rate. LYON repeatedly winning from behind showed that 13% first blood measured how they start, not how they finish, so a thin sample should push me to hold confidence near 50 instead of leaning on one early-game stat and a single 2-0 head-to-head."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": null,
+        "text": "LYON, you stayed calm, rallied around Berserker and gave us so many comebacks. GEN just had the steadier room and sharper prep this time. Thanks for the ride 💜",
+        "lesson": {
+          "blobId": "0nEI5v7glWZPiPX3AynvK_ZSp8tiy2YiIRFdIGhBTgk",
+          "text": "Support lesson: A team's chemistry only matters if it changes the scoreboard, and LYON's calm kept them starting from behind while GEN's composure and coaching-led drafting never cracked, so I should read both rooms before giving the underdog's good vibes a stolen game. When the favorite's room is just as steady and its prep is sharper (GEN drafting around LYON's burned picks), I should trust that the better-prepared team keeps control and not assume a warm underdog will find a comeback."
+        }
+      }
+    ],
+    "at": "2026-11-05T00:46:44.766Z"
   }
 }
