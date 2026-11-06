@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-06",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "BLG",
+      "probability": 24,
+      "contenders": [
+        "GEN",
+        "T1"
+      ],
+      "reasoning": "Bin and Knight win their lanes and carry games alone, and I don't care about the early MKOI slip; the crowd can keep its GEN and T1 hype.",
+      "pickedAt": "2026-11-06T00:00:06.727Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "KC",
+      "probability": 17,
+      "contenders": [
+        "BLG",
+        "GEN"
+      ],
+      "reasoning": "Tempo is everything, and KC's +1.1k gold lead at 15 is the best in the field. They snowball off first objectives while everyone else is still walking to their lanes.",
+      "pickedAt": "2026-11-06T00:00:04.833Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "BLG",
+      "probability": 22,
+      "contenders": [
+        "GEN",
+        "KC"
+      ],
+      "reasoning": "Fearless punishes teams with one comfort script, and BLG's LPL grind has built the deepest bench of playable picks, so I'm backing them over the obvious GEN.",
+      "pickedAt": "2026-11-06T00:00:05.596Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 34,
+      "contenders": [
+        "BLG",
+        "KC"
+      ],
+      "reasoning": "GEN win 74% of their games, are 8-1 against other regions, and just swept LYON 3-0. BLG's volume is close, but GEN lead on every line I trust.",
+      "pickedAt": "2026-11-06T00:00:04.715Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "IG",
+      "probability": 12,
+      "contenders": [
+        "GEN",
+        "DK"
+      ],
+      "reasoning": "IG limped through the year at 22-26, but they're peaking now: they came through a 2-1 with LYON and a 3-1 over TES, and that's a room that stays calm.",
+      "pickedAt": "2026-11-06T00:00:06.659Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-06\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"KC\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"IG\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0}]}",
+  "batchHash": "bf58db952af35eb9c160bd1c7b476badfa39747162528c810d85c36fecf0503c",
+  "commitDigest": "GTNvMcoXgokUZ3bEbfRd2i3FHWf87CozytU2RCr7YcUC",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

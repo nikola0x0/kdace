@@ -110729,5 +110729,915 @@
     "text": "Likely triple kill: GEN Chovy (Taliyah) at 33:03"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095098",
+  "matchId": "115660540726095097",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-11-05T22:13:02.985Z",
+  "patch": "16.20",
+  "durationMin": 33.4,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "BLG",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Naafiri",
+    "mid": "Galio",
+    "bottom": "Cassiopeia",
+    "support": "Nautilus"
+   },
+   "gold15": 25761,
+   "kills": 24,
+   "towers": 11,
+   "inhibitors": 3,
+   "dragons": [
+    "infernal",
+    "mountain",
+    "chemtech",
+    "chemtech",
+    "elder"
+   ],
+   "barons": 2,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 24
+  },
+  "red": {
+   "code": "DK",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "Qiyana",
+    "mid": "Akali",
+    "bottom": "Corki",
+    "support": "Rell"
+   },
+   "gold15": 26193,
+   "kills": 10,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   10,
+   -63,
+   15,
+   79,
+   -380,
+   -755,
+   -955,
+   -1260,
+   -1267,
+   -1197,
+   -1197,
+   -1198,
+   -1502,
+   -1080,
+   -432,
+   -426,
+   618,
+   128,
+   1677,
+   3048,
+   2770,
+   3227,
+   4094,
+   2793,
+   2354,
+   3528,
+   3436,
+   3596,
+   3430,
+   3757,
+   5240,
+   6355,
+   7012
+  ],
+  "leads": {
+   "10": -1197,
+   "15": -432,
+   "20": 3048,
+   "25": 2354
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 7012,
+    "min": 33
+   },
+   "red": {
+    "gold": 1502,
+    "min": 13
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 3966,
+   "fromMin": 18,
+   "toMin": 23
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.2,
+    "type": "firstBlood",
+    "team": "DK"
+   },
+   {
+    "min": 7,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "infernal"
+   },
+   {
+    "min": 12,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain",
+    "behind": 1128
+   },
+   {
+    "min": 18,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 19,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 23,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 24,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 31,
+    "type": "elder",
+    "team": "BLG"
+   },
+   {
+    "min": 31,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 32,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 33,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 33.4,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 3,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.177
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Naafiri",
+    "role": "jungle",
+    "k": 12,
+    "d": 1,
+    "a": 8,
+    "damageShare": 0.264
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Galio",
+    "role": "mid",
+    "k": 4,
+    "d": 0,
+    "a": 15,
+    "damageShare": 0.24
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Cassiopeia",
+    "role": "bottom",
+    "k": 5,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.22699999999999998
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 16,
+    "damageShare": 0.091
+   },
+   {
+    "code": "DK",
+    "name": "DK Siwoo",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 2,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.271
+   },
+   {
+    "code": "DK",
+    "name": "DK Lucid",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 4,
+    "d": 6,
+    "a": 1,
+    "damageShare": 0.268
+   },
+   {
+    "code": "DK",
+    "name": "DK ShowMaker",
+    "champion": "Akali",
+    "role": "mid",
+    "k": 2,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.193
+   },
+   {
+    "code": "DK",
+    "name": "DK Smash",
+    "champion": "Corki",
+    "role": "bottom",
+    "k": 1,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.213
+   },
+   {
+    "code": "DK",
+    "name": "DK Career",
+    "champion": "Rell",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 7,
+    "damageShare": 0.055
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Xun",
+   "champion": "Naafiri",
+   "role": "jungle",
+   "k": 12,
+   "d": 1,
+   "a": 8,
+   "damageShare": 0.264
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "BLG",
+    "text": "Likely triple kill: BLG Xun (Naafiri) at 16:32"
+   },
+   {
+    "kind": "multikill",
+    "team": "BLG",
+    "text": "Likely triple kill: BLG Xun (Naafiri) at 25:36"
+   },
+   {
+    "kind": "multikill",
+    "team": "BLG",
+    "text": "Likely triple kill: BLG Xun (Naafiri) at 29:26"
+   },
+   {
+    "kind": "perfect",
+    "team": "BLG",
+    "text": "BLG Knight (Galio) went 4/0/15 without dying"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095099",
+  "matchId": "115660540726095097",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-11-05T23:07:24.974Z",
+  "patch": "16.20",
+  "durationMin": 32.3,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "DK",
+   "champions": {
+    "top": "Kennen",
+    "jungle": "JarvanIV",
+    "mid": "Ryze",
+    "bottom": "Yunara",
+    "support": "Lulu"
+   },
+   "gold15": 27262,
+   "kills": 10,
+   "towers": 2,
+   "inhibitors": 0,
+   "dragons": [],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "BLG",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "LeeSin",
+    "mid": "Orianna",
+    "bottom": "Ezreal",
+    "support": "Leona"
+   },
+   "gold15": 26463,
+   "kills": 13,
+   "towers": 8,
+   "inhibitors": 1,
+   "dragons": [
+    "chemtech",
+    "ocean",
+    "cloud",
+    "cloud",
+    "elder"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   20,
+   104,
+   149,
+   552,
+   591,
+   899,
+   859,
+   906,
+   639,
+   489,
+   -420,
+   -57,
+   835,
+   552,
+   799,
+   910,
+   850,
+   -35,
+   -471,
+   -686,
+   -326,
+   -1057,
+   -1596,
+   -1892,
+   -1985,
+   -1734,
+   -2136,
+   -2856,
+   -3067,
+   -3014,
+   -3541,
+   -5769
+  ],
+  "leads": {
+   "10": 489,
+   "15": 799,
+   "20": -686,
+   "25": -1985
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 910,
+    "min": 16
+   },
+   "red": {
+    "gold": 5769,
+    "min": 32
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 3633,
+   "fromMin": 27,
+   "toMin": 32
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.3,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 6.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 12,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "ocean"
+   },
+   {
+    "min": 12.9,
+    "type": "firstTower",
+    "team": "DK"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "cloud"
+   },
+   {
+    "min": 23.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "cloud"
+   },
+   {
+    "min": 31.9,
+    "type": "elder",
+    "team": "BLG"
+   },
+   {
+    "min": 31.9,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 32.3,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "DK",
+    "name": "DK Siwoo",
+    "champion": "Kennen",
+    "role": "top",
+    "k": 2,
+    "d": 0,
+    "a": 3,
+    "damageShare": 0.22
+   },
+   {
+    "code": "DK",
+    "name": "DK Lucid",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 2,
+    "d": 4,
+    "a": 8,
+    "damageShare": 0.17800000000000002
+   },
+   {
+    "code": "DK",
+    "name": "DK ShowMaker",
+    "champion": "Ryze",
+    "role": "mid",
+    "k": 3,
+    "d": 2,
+    "a": 4,
+    "damageShare": 0.239
+   },
+   {
+    "code": "DK",
+    "name": "DK Smash",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 2,
+    "d": 5,
+    "a": 7,
+    "damageShare": 0.27399999999999997
+   },
+   {
+    "code": "DK",
+    "name": "DK Career",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 1,
+    "d": 2,
+    "a": 9,
+    "damageShare": 0.08900000000000001
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 2,
+    "d": 1,
+    "a": 1,
+    "damageShare": 0.14800000000000002
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 4,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.18600000000000003
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 2,
+    "d": 0,
+    "a": 8,
+    "damageShare": 0.24
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 5,
+    "d": 2,
+    "a": 7,
+    "damageShare": 0.35600000000000004
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Leona",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 9,
+    "damageShare": 0.069
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Viper",
+   "champion": "Ezreal",
+   "role": "bottom",
+   "k": 5,
+   "d": 2,
+   "a": 7,
+   "damageShare": 0.35600000000000004
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "BLG",
+    "text": "BLG Knight (Orianna) went 2/0/8 without dying"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095100",
+  "matchId": "115660540726095097",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-11-06T00:00:32.969Z",
+  "patch": "16.20",
+  "durationMin": 32.7,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "DK",
+   "champions": {
+    "top": "Olaf",
+    "jungle": "Pantheon",
+    "mid": "Viktor",
+    "bottom": "Aphelios",
+    "support": "Thresh"
+   },
+   "gold15": 24957,
+   "kills": 9,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [
+    "mountain"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "BLG",
+   "champions": {
+    "top": "Jax",
+    "jungle": "Trundle",
+    "mid": "Ahri",
+    "bottom": "Lucian",
+    "support": "Milio"
+   },
+   "gold15": 27560,
+   "kills": 25,
+   "towers": 9,
+   "inhibitors": 2,
+   "dragons": [
+    "hextech",
+    "cloud",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 2,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 25
+  },
+  "goldDiff": [
+   0,
+   -5,
+   -593,
+   -709,
+   -509,
+   -1318,
+   -1123,
+   -1017,
+   -1651,
+   -1697,
+   -1708,
+   -1902,
+   -2035,
+   -2002,
+   -2167,
+   -2603,
+   -2649,
+   504,
+   414,
+   -1906,
+   -2067,
+   -2283,
+   -2841,
+   -2830,
+   -3466,
+   -5556,
+   -5768,
+   -5782,
+   -5525,
+   -5523,
+   -3819,
+   -3272,
+   -5674
+  ],
+  "leads": {
+   "10": -1708,
+   "15": -2603,
+   "20": -2067,
+   "25": -5556
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 504,
+    "min": 17
+   },
+   "red": {
+    "gold": 5782,
+    "min": 27
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 3489,
+   "fromMin": 20,
+   "toMin": 25
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 1,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 8,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "hextech"
+   },
+   {
+    "min": 12.8,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "cloud"
+   },
+   {
+    "min": 12.9,
+    "type": "firstTower",
+    "team": "DK"
+   },
+   {
+    "min": 19,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain"
+   },
+   {
+    "min": 24,
+    "type": "dragon",
+    "team": "DK",
+    "detail": "mountain",
+    "behind": 2706
+   },
+   {
+    "min": 25,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 30,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain"
+   },
+   {
+    "min": 32,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 32.6,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 32.7,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "DK",
+    "name": "DK Siwoo",
+    "champion": "Olaf",
+    "role": "top",
+    "k": 1,
+    "d": 7,
+    "a": 3,
+    "damageShare": 0.151
+   },
+   {
+    "code": "DK",
+    "name": "DK Lucid",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 4,
+    "d": 5,
+    "a": 3,
+    "damageShare": 0.145
+   },
+   {
+    "code": "DK",
+    "name": "DK ShowMaker",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 3,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.44299999999999995
+   },
+   {
+    "code": "DK",
+    "name": "DK Smash",
+    "champion": "Aphelios",
+    "role": "bottom",
+    "k": 1,
+    "d": 7,
+    "a": 4,
+    "damageShare": 0.215
+   },
+   {
+    "code": "DK",
+    "name": "DK Career",
+    "champion": "Thresh",
+    "role": "support",
+    "k": 0,
+    "d": 3,
+    "a": 6,
+    "damageShare": 0.046
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Jax",
+    "role": "top",
+    "k": 12,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.271
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Trundle",
+    "role": "jungle",
+    "k": 4,
+    "d": 1,
+    "a": 9,
+    "damageShare": 0.109
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Ahri",
+    "role": "mid",
+    "k": 5,
+    "d": 2,
+    "a": 10,
+    "damageShare": 0.253
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Lucian",
+    "role": "bottom",
+    "k": 4,
+    "d": 1,
+    "a": 10,
+    "damageShare": 0.318
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Milio",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 18,
+    "damageShare": 0.049
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Bin",
+   "champion": "Jax",
+   "role": "top",
+   "k": 12,
+   "d": 4,
+   "a": 5,
+   "damageShare": 0.271
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "DK",
+    "text": "Likely triple kill: DK ShowMaker (Viktor) at 16:37"
+   },
+   {
+    "kind": "earlyBlood",
+    "team": "BLG",
+    "text": "First blood before 1:00 (BLG)"
+   },
+   {
+    "kind": "damage",
+    "team": "DK",
+    "text": "DK ShowMaker (Viktor) dealt 44% of DK's champion damage"
+   }
+  ]
  }
 ]

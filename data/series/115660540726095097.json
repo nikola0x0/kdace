@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -182,13 +182,92 @@
   "batch": "{\"matchId\":\"115660540726095097\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":180},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":590,\"lessons\":[\"4VFAy2ktJjB_7Pe9p6ysTOkJOcjUK4WR1zvnJjuicSc\",\"4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA\",\"4WcbRZ6pn0iNdNQ1IOiZMnEErgO6ct2Tr1wFCqHf1rs\"],\"thought\":\"e33382ae93bc9d930b8758f33239b0dae1c689ab78b6184ce6ad0876f5c43521\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":140},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":470,\"lessons\":[\"0iD0GvpTTM4ObRW6MRS3kqiUu_iUxU-_Al45-pjqf0I\",\"1fiI2FerNooyOuUZrVsZvX29Haq5rVUxZIBkXuWlm0M\",\"WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"2534e5fad5a11949ee5f2ee86257de1c8d33f5bb7d6d9e71bea7a3a915c788ca\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":120},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":390,\"lessons\":[\"TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0\",\"fA2ltR3XJMUPjNf99i7gdalvoyrwBbEYCcuIQfvMQ6s\",\"iQVwI6YGIZJwS0ht1Dbv7EzhhD2dRrGR5K-JAPSMq8w\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"973c7001c588c1382d0548bd925e906e62cf02fbe2e4fc4db1dfe271a2471df8\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":200},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":650,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\",\"E6ADQKvhcYS2EZmyJ9JTtLaL67xcbFB6HMnbfDxPFBU\",\"Q8YBaUVbKfg9tEFmM-QiTZZKo8DWNxokvFLqkWAyrLY\"],\"thought\":\"c4abc0b889b8afad840222a3a1a54bd28b89c57cdb50152fb0ef888140a400ec\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":160},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"DK\",\"stake\":520,\"lessons\":[\"-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE\",\"7vDItMBjEf-kXC-B48GhPXK-KN7fKh9KMFjqDbicdpg\",\"SXAEodPL3raBvANzr7-cW9EG3wsPtpXn9FhraMYvIJo\",\"tyYl70tKUhLeoj3sYGT_CyZhjyEY6YzkYMhsqtaPfPE\"],\"thought\":\"75331a6a5ed579df3253f348dc213d3f91b90155f6229fa3eb4bcbdc804dddb4\"}]}",
   "batchHash": "0128cbd2ad22a17f76f2b83a98a0facf350b80cbb892d64007d7741617c8c36e",
   "commitDigest": "Du4dy2f91f9MYQtgy8BPapuqgEkVvsVc2qEcYtpiRJ4f",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "BLG",
+    "score": "3-0",
+    "resultDigest": "GDa53ydyNoKQq5MCtGJmHzfwJ1oiXrm3eVovL7nUjAym"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Okay, I said I wouldn't hand BLG a 3-0 just because the room loved them, and the room turned out to be right. Smash didn't have one comeback in him.\n\nJungle: I did say if BLG got Herald and first dragon in games 1 and 2 I was in trouble. They got both, held them past 15, and I was in trouble. At least the flip condition was honest.\n\nMid: Knight got Orianna and Aurora on his terms, Yunara/Lulu stayed live, and DK never got their jungle priority. I listed every flip condition and then watched all of them happen, which is almost impressive.\n\nADC: My numbers said the LPL doesn't travel, and BLG traveled straight through DK. One EWC quarterfinal was a small sample, and I'm taking that on the chin.\n\nSupport: I pointed to DK's calm against T1, and that calm didn't survive three straight games. Fair warning, I'm not conceding chemistry, but BLG looking loose and together did turn out to matter more.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but I have to compare players lane by lane. One star's comeback against T1 doesn't outweigh Knight and Viper both being the better players in their matchups, and I shouldn't have used one highlight to back DK's carry. Distrusting the crowd only works when the crowd is wrong about who has the stronger players, and this time the hype and the better roster pointed to the same team. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+      "blobId": "cO-3BrRZNJhyz3vV8M9c7_k6hwIYOasSjH5Frm3nZKU",
+      "jobId": "4349e549-4cfa-48ec-a8e6-4e4727402d8e"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: When my own read says one side wins the first 15 minutes (Knight's Orianna priority, Herald and first dragon), I should pick that side instead of overriding it with a region-gap or head-to-head baseline and hedging toward a longer series. Early tempo decides the map, so if I list the flip conditions and they're the likelier script, they become my pick. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+      "blobId": "yA5lm7U3wU0sPdlTC6DJwzKCQbQl3IMxF_I1vT8LFbk",
+      "jobId": "6ebe02df-8316-416f-ae0f-afeb64e8daf3"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Draft and pools still decide Fearless series, but a settled jungle book is only a floor, and it matters less than which side's star has more comfortable picks to keep drafting on his own terms. When my flip conditions are just the opponent's default draft plan (Knight on Orianna and Aurora, a live Yunara/Lulu), they're the base case, so I should pick that side rather than hedge toward a region tiebreaker. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+      "blobId": "fSslkP5GI-gLkYS8ft04UsoKPUkRg8yeI-GxpfTI954",
+      "jobId": "b3520e23-7c47-4f8f-a9a8-fd24e1e377c6"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A single head-to-head series and a short unbeaten run are thin samples, so I shouldn't let them outweigh a 53-14 series record just because the record came from another league. Unless the scouting report flags a big region gap, I should lean on the numbers I can compare, such as in-tournament results, game length tendencies and series scores, and keep my confidence modest when my evidence is one small sample. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+      "blobId": "hFoCYNXP6kdVLJin9ScdGKwXwnek0p8C0SooeD5kRpw",
+      "jobId": "def73fe5-e599-47dc-9549-03986d5184d8"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: Chemistry still decides series, but I should read both rooms in the current moment, not lean on one past episode like DK's calm against T1, and ask which team's morale is rising and which is just holding steady. When one side looks loose and together after a big win (as BLG did after beating HLE), I should treat that momentum as stronger evidence than the other side's steadiness, and not call a five-game war on the strength of one comeback story. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+      "blobId": "sWl1n6T6ZtljNkmUgjm0_Z1Qe494SAE-KdRO_rcXGFY",
+      "jobId": "245f2da4-2a63-448d-8959-7b2ed1f0add3"
+    }
+  ],
   "scout": "Scout: DK vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nDK [LCK]: 2026 series 35-17, games 81-58 | last 10 (newest first) WWWLWWLWLW\n  LCK 2026 27-16 · EWC 2026 5-1 (1 title) · Worlds 2026 3-0 · vs other regions 6-1\n  Last 24 games (13-11): GD@15 +0.6k, FB 58%, FT 46%, FD 58%, dragons 47%, 35 min avg, 1st baron 27:42\n  Leads @15 converted 8/10, comeback wins 3, throws 2, objectives taken while 1k+ behind 12\n  Worlds 2026 4 games (4-0): GD@15 +0.2k, FB 50%, FT 75%, FD 50%, dragons 47%, 34.8 min avg, 1st baron 27:36\n  Picks: TOP Jayce 5, Gnar 4, Ambessa 2 | JG Jarvan IV 5, Vi 5, Lee Sin 3 | MID Annie 4, Viktor 4, Syndra 3 | BOT Lucian 3, Yunara 3, Ashe 2 | SUP Lulu 4, Milio 3, Bard 2\n  Standout: DK Smash (bottom) KDA 4.8 over 24 games, 29% dmg share\nBLG [LPL]: 2026 series 53-14, games 130-55 | last 10 (newest first) WLWWLLWWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 3-2 · vs other regions 11-3\n  Last 28 games (19-9): GD@15 +1.0k, FB 61%, FT 64%, FD 54%, dragons 55%, 32.7 min avg, 1st baron 25:00\n  Leads @15 converted 11/12, comeback wins 1, throws 3, objectives taken while 1k+ behind 10\n  Worlds 2026 8 games (5-3): GD@15 +0.1k, FB 88%, FT 63%, FD 63%, dragons 55%, 34.4 min avg, 1st baron 28:54\n  Picks: TOP Ambessa 5, Camille 5, Jayce 4 | JG Jarvan IV 5, Pantheon 5, Lee Sin 4 | MID Orianna 7, Aurora 3, Locke 3 | BOT Yunara 7, Ashe 6, Ezreal 4 | SUP Lulu 7, Nautilus 4, Renata 4\n  Standout: BLG Knight (mid) KDA 8.4 over 8 games, 29% dmg share\nHead-to-head 2026: DK 1-0 BLG\n  2026-07-17 EWC 2026 Quarterfinals: DK 2-1 BLG\nKey moments:\n  - DK threw a +13.1k lead (34:00) vs KT (LCK 2026)\n  - DK came back from -4.9k at 26:00 vs T1 (Worlds 2026)\n  - BLG threw a +4.9k lead (28:00) vs TES (Worlds 2026)\n  - BLG came back from -4.7k at 39:00 vs HLE (Worlds 2026)\nFun facts:\n  * Likely penta kill: DK Smash (Kai'Sa) at 38:44 (vs MKOI, Worlds 2026)\n  * Likely quadra kill: BLG Knight (Orianna) at 41:14 (vs HLE, Worlds 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 4-6 against LPL in 2026; LCK 73% vs LPL 62% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  DK (LCK): 1 Worlds title (2020); lost final 2021; won 2020 as DAMWON Gaming.\n  BLG (LPL): no Worlds titles; lost final 2024.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "I still back Smash to drag DK through five games, but nobody is on BLG, so extra AXP on DK pays 1.00× if I'm right and vanishes if I'm wrong, and I won't take that deal.",
+        "decidedAt": "2026-11-05T21:30:11.678Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says don't burn gold on a dead lane: the pool is all DK at 1.00×, so extra AXP adds zero upside if DK wins and risks everything if BLG wins the early scrap and steals it.",
+        "decidedAt": "2026-11-05T21:30:11.700Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "Nobody is on BLG, so every extra AXP on DK pays 1.00× if I'm right and vanishes if Knight gets Orianna and Aurora on his terms, and I'm not taking that draft risk for zero upside.",
+        "decidedAt": "2026-11-05T21:30:11.712Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With nobody on BLG, every extra AXP on DK pays back exactly 1.00× if I'm right and is lost if I'm wrong, so the numbers say my 590 stays put and I add nothing.",
+        "decidedAt": "2026-11-05T21:30:11.030Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust DK's steady room, but with nobody on BLG every extra AXP just comes back to me at 1.00× if I'm right and vanishes if the series wobbles, so my 650 already says it all.",
+        "decidedAt": "2026-11-05T21:30:10.563Z"
+      }
+    ]
   }
 }

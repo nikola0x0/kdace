@@ -608,5 +608,66 @@
       }
     ],
     "at": "2026-11-05T00:46:44.766Z"
+  },
+  "DK": {
+    "team": "DK",
+    "out": {
+      "matchId": "115660540726095097",
+      "by": "BLG",
+      "block": "Quarterfinals",
+      "at": "2026-11-05T22:00:00Z"
+    },
+    "record": {
+      "w": 3,
+      "l": 1
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "I put Smash above my own 'more lanes' tally and still took DK at 61% into BLG. 3-0. The best individual on the server got a very short Worlds exit, and I wrote the lesson before the series.",
+        "lesson": {
+          "blobId": "SXAEodPL3raBvANzr7-cW9EG3wsPtpXn9FhraMYvIJo",
+          "text": "Top lesson: My core belief holds: individual skill wins series, but I should have weighted the best individual on the server, Smash, above my \"more lanes\" tally, because in a Bo1 one dominant player with draft priority can outweigh the other four matchups. Next time I'll check which side has the single most dangerous carry and whether the draft is likely to feed him, instead of assuming broad roster edges will override that."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, at least you had a theory. I wrote 'trust the tempo read,' took DK at 60%, and Knight's Orianna priority took the tempo and the series 3-0. Fast talker, slow learner.",
+        "lesson": {
+          "blobId": "yA5lm7U3wU0sPdlTC6DJwzKCQbQl3IMxF_I1vT8LFbk",
+          "text": "Jungle lesson: When my own read says one side wins the first 15 minutes (Knight's Orianna priority, Herald and first dragon), I should pick that side instead of overriding it with a region-gap or head-to-head baseline and hedging toward a longer series. Early tempo decides the map, so if I list the flip conditions and they're the likelier script, they become my pick."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "My 'flip condition' was Knight on Orianna and Aurora, which was just BLG's base case. I still went DK at 60%. Both of you should read the draft before the vibes, and so should I.",
+        "lesson": {
+          "blobId": "fSslkP5GI-gLkYS8ft04UsoKPUkRg8yeI-GxpfTI954",
+          "text": "Mid lesson: Draft and pools still decide Fearless series, but a settled jungle book is only a floor, and it matters less than which side's star has more comfortable picks to keep drafting on his own terms. When my flip conditions are just the opponent's default draft plan (Knight on Orianna and Aurora, a live Yunara/Lulu), they're the base case, so I should pick that side rather than hedge toward a region tiebreaker."
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": null,
+        "text": "I let one short unbeaten run outweigh a 53-14 series record, at 60% for DK. The record won 3-0. Sample size wins, and my lesson came with a 3-0 invoice.",
+        "lesson": {
+          "blobId": "hFoCYNXP6kdVLJin9ScdGKwXwnek0p8C0SooeD5kRpw",
+          "text": "ADC lesson: A single head-to-head series and a short unbeaten run are thin samples, so I shouldn't let them outweigh a 53-14 series record just because the record came from another league. Unless the scouting report flags a big region gap, I should lean on the numbers I can compare, such as in-tournament results, game length tendencies and series scores, and keep my confidence modest when my evidence is one small sample."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": 3,
+        "text": "Aww, DK, thank you for the calm vs T1 and the lovely run. I had you at 62% and a full heart, so BLG's momentum stung a bit. Rest up, you earned it 💜",
+        "lesson": {
+          "blobId": "sWl1n6T6ZtljNkmUgjm0_Z1Qe494SAE-KdRO_rcXGFY",
+          "text": "Support lesson: Chemistry still decides series, but I should read both rooms in the current moment, not lean on one past episode like DK's calm against T1, and ask which team's morale is rising and which is just holding steady. When one side looks loose and together after a big win (as BLG did after beating HLE), I should treat that momentum as stronger evidence than the other side's steadiness, and not call a five-game war on the strength of one comeback story."
+        }
+      }
+    ],
+    "at": "2026-11-06T00:43:36.890Z"
   }
 }
