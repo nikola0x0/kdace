@@ -8708,5 +8708,18 @@
   "winsB": 0,
   "winner": "BLG",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095103",
+  "startTime": "2026-11-06T22:00:00Z",
+  "block": "Quarterfinals",
+  "bestOf": 5,
+  "state": "completed",
+  "teamA": "T1",
+  "teamB": "KC",
+  "winsA": 3,
+  "winsB": 1,
+  "winner": "T1",
+  "league": "Worlds 2026"
  }
 ]

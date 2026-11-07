@@ -111639,5 +111639,1273 @@
     "text": "DK ShowMaker (Viktor) dealt 44% of DK's champion damage"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095104",
+  "matchId": "115660540726095103",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-11-06T22:13:16.989Z",
+  "patch": "16.20",
+  "durationMin": 35.7,
+  "complete": true,
+  "winner": "T1",
+  "blue": {
+   "code": "T1",
+   "champions": {
+    "top": "Ornn",
+    "jungle": "JarvanIV",
+    "mid": "Viktor",
+    "bottom": "Yunara",
+    "support": "Lulu"
+   },
+   "gold15": 25576,
+   "kills": 23,
+   "towers": 11,
+   "inhibitors": 4,
+   "dragons": [
+    "hextech",
+    "hextech",
+    "hextech"
+   ],
+   "barons": 2,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 26.9
+  },
+  "red": {
+   "code": "KC",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "LeeSin",
+    "mid": "Syndra",
+    "bottom": "Ezreal",
+    "support": "Leona"
+   },
+   "gold15": 25924,
+   "kills": 7,
+   "towers": 2,
+   "inhibitors": 0,
+   "dragons": [
+    "chemtech",
+    "infernal"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   5,
+   76,
+   -29,
+   -392,
+   -182,
+   -273,
+   -374,
+   -669,
+   -732,
+   -927,
+   -670,
+   -837,
+   -436,
+   -431,
+   -348,
+   -75,
+   252,
+   170,
+   281,
+   791,
+   606,
+   959,
+   1366,
+   1846,
+   1620,
+   3431,
+   5015,
+   8196,
+   9140,
+   9937,
+   10103,
+   10163,
+   9732,
+   11382,
+   10449
+  ],
+  "leads": {
+   "10": -927,
+   "15": -348,
+   "20": 791,
+   "25": 1620
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 11382,
+    "min": 34
+   },
+   "red": {
+    "gold": 927,
+    "min": 10
+   }
+  },
+  "swing": {
+   "team": "T1",
+   "gold": 8317,
+   "fromMin": 25,
+   "toMin": 30
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 10.1,
+    "type": "firstBlood",
+    "team": "KC"
+   },
+   {
+    "min": 10.1,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "chemtech"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "infernal"
+   },
+   {
+    "min": 19.1,
+    "type": "firstTower",
+    "team": "T1"
+   },
+   {
+    "min": 22.9,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "hextech"
+   },
+   {
+    "min": 26.9,
+    "type": "baron",
+    "team": "T1"
+   },
+   {
+    "min": 27.9,
+    "type": "inhibitor",
+    "team": "T1"
+   },
+   {
+    "min": 28.9,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "hextech"
+   },
+   {
+    "min": 32.9,
+    "type": "baron",
+    "team": "T1"
+   },
+   {
+    "min": 33.9,
+    "type": "inhibitor",
+    "team": "T1"
+   },
+   {
+    "min": 34.9,
+    "type": "inhibitor",
+    "team": "T1"
+   },
+   {
+    "min": 35,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "hextech"
+   },
+   {
+    "min": 35.7,
+    "type": "end",
+    "team": "T1"
+   }
+  ],
+  "players": [
+   {
+    "code": "T1",
+    "name": "T1 Doran",
+    "champion": "Ornn",
+    "role": "top",
+    "k": 1,
+    "d": 3,
+    "a": 13,
+    "damageShare": 0.142
+   },
+   {
+    "code": "T1",
+    "name": "T1 Oner",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 4,
+    "d": 1,
+    "a": 18,
+    "damageShare": 0.122
+   },
+   {
+    "code": "T1",
+    "name": "T1 Faker",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 7,
+    "d": 0,
+    "a": 5,
+    "damageShare": 0.306
+   },
+   {
+    "code": "T1",
+    "name": "T1 Peyz",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 11,
+    "d": 1,
+    "a": 6,
+    "damageShare": 0.386
+   },
+   {
+    "code": "T1",
+    "name": "T1 Keria",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 15,
+    "damageShare": 0.044000000000000004
+   },
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 2,
+    "d": 4,
+    "a": 3,
+    "damageShare": 0.27399999999999997
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 2,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.10800000000000001
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 2,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.21100000000000002
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 1,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.363
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Leona",
+    "role": "support",
+    "k": 0,
+    "d": 6,
+    "a": 4,
+    "damageShare": 0.044000000000000004
+   }
+  ],
+  "standout": {
+   "code": "T1",
+   "name": "T1 Peyz",
+   "champion": "Yunara",
+   "role": "bottom",
+   "k": 11,
+   "d": 1,
+   "a": 6,
+   "damageShare": 0.386
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "T1",
+    "text": "Likely triple kill: T1 Faker (Viktor) at 35:39"
+   },
+   {
+    "kind": "multikill",
+    "team": "T1",
+    "text": "Likely triple kill: T1 Peyz (Yunara) at 27:02"
+   },
+   {
+    "kind": "roughPatch",
+    "team": "KC",
+    "text": "KC Busio (Leona) died 3 times between 24:53 and 28:53"
+   },
+   {
+    "kind": "perfect",
+    "team": "T1",
+    "text": "T1 Faker (Viktor) went 7/0/5 without dying"
+   },
+   {
+    "kind": "peaceful",
+    "team": null,
+    "text": "No kills before 10:00"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095105",
+  "matchId": "115660540726095103",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-11-06T23:15:41.823Z",
+  "patch": "16.20",
+  "durationMin": 29.8,
+  "complete": true,
+  "winner": "T1",
+  "blue": {
+   "code": "KC",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "Pantheon",
+    "mid": "Orianna",
+    "bottom": "Tristana",
+    "support": "Rell"
+   },
+   "gold15": 25551,
+   "kills": 9,
+   "towers": 2,
+   "inhibitors": 0,
+   "dragons": [
+    "hextech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "T1",
+   "champions": {
+    "top": "Olaf",
+    "jungle": "Trundle",
+    "mid": "Cassiopeia",
+    "bottom": "Kaisa",
+    "support": "Nautilus"
+   },
+   "gold15": 29583,
+   "kills": 20,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "ocean",
+    "infernal",
+    "hextech",
+    "hextech"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 23
+  },
+  "goldDiff": [
+   0,
+   0,
+   -13,
+   -104,
+   -1654,
+   -1661,
+   -1797,
+   -2220,
+   -2476,
+   -3125,
+   -3499,
+   -3649,
+   -3678,
+   -3611,
+   -3207,
+   -4032,
+   -3943,
+   -3883,
+   -5632,
+   -5847,
+   -5336,
+   -6080,
+   -4846,
+   -5075,
+   -6457,
+   -5561,
+   -5190,
+   -6124,
+   -6276,
+   -5420
+  ],
+  "leads": {
+   "10": -3499,
+   "15": -4032,
+   "20": -5336,
+   "25": -5561
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 0,
+    "min": 0
+   },
+   "red": {
+    "gold": 6457,
+    "min": 24
+   }
+  },
+  "swing": {
+   "team": "T1",
+   "gold": 2640,
+   "fromMin": 14,
+   "toMin": 19
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.1,
+    "type": "firstBlood",
+    "team": "T1"
+   },
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "ocean"
+   },
+   {
+    "min": 11.1,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "infernal"
+   },
+   {
+    "min": 15,
+    "type": "firstTower",
+    "team": "T1"
+   },
+   {
+    "min": 17,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "hextech"
+   },
+   {
+    "min": 22,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "hextech",
+    "behind": 4846
+   },
+   {
+    "min": 23,
+    "type": "baron",
+    "team": "T1"
+   },
+   {
+    "min": 28,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "hextech"
+   },
+   {
+    "min": 29.7,
+    "type": "inhibitor",
+    "team": "T1"
+   },
+   {
+    "min": 29.8,
+    "type": "end",
+    "team": "T1"
+   }
+  ],
+  "players": [
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 4,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.35100000000000003
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 3,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.271
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 0,
+    "d": 2,
+    "a": 2,
+    "damageShare": 0.133
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Tristana",
+    "role": "bottom",
+    "k": 2,
+    "d": 5,
+    "a": 3,
+    "damageShare": 0.17300000000000001
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Rell",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 7,
+    "damageShare": 0.07200000000000001
+   },
+   {
+    "code": "T1",
+    "name": "T1 Doran",
+    "champion": "Olaf",
+    "role": "top",
+    "k": 3,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.222
+   },
+   {
+    "code": "T1",
+    "name": "T1 Oner",
+    "champion": "Trundle",
+    "role": "jungle",
+    "k": 1,
+    "d": 1,
+    "a": 16,
+    "damageShare": 0.128
+   },
+   {
+    "code": "T1",
+    "name": "T1 Faker",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 8,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.298
+   },
+   {
+    "code": "T1",
+    "name": "T1 Peyz",
+    "champion": "Kaisa",
+    "role": "bottom",
+    "k": 8,
+    "d": 1,
+    "a": 7,
+    "damageShare": 0.295
+   },
+   {
+    "code": "T1",
+    "name": "T1 Keria",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 2,
+    "a": 15,
+    "damageShare": 0.055999999999999994
+   }
+  ],
+  "standout": {
+   "code": "T1",
+   "name": "T1 Peyz",
+   "champion": "Kaisa",
+   "role": "bottom",
+   "k": 8,
+   "d": 1,
+   "a": 7,
+   "damageShare": 0.295
+  },
+  "funFacts": [
+   {
+    "kind": "steal",
+    "team": "KC",
+    "text": "KC took a hextech dragon at 22:00 while 4.8k down"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095106",
+  "matchId": "115660540726095103",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-11-07T00:03:17.002Z",
+  "patch": "16.20",
+  "durationMin": 43.6,
+  "complete": true,
+  "winner": "KC",
+  "blue": {
+   "code": "KC",
+   "champions": {
+    "top": "KSante",
+    "jungle": "XinZhao",
+    "mid": "Anivia",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 25103,
+   "kills": 8,
+   "towers": 8,
+   "inhibitors": 1,
+   "dragons": [
+    "chemtech",
+    "ocean",
+    "ocean",
+    "ocean",
+    "elder"
+   ],
+   "barons": 2,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 35
+  },
+  "red": {
+   "code": "T1",
+   "champions": {
+    "top": "Jayce",
+    "jungle": "Sejuani",
+    "mid": "Taliyah",
+    "bottom": "Zeri",
+    "support": "Yuumi"
+   },
+   "gold15": 26032,
+   "kills": 6,
+   "towers": 6,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   0,
+   -82,
+   -185,
+   -319,
+   -161,
+   -231,
+   -220,
+   -104,
+   -335,
+   4,
+   -19,
+   177,
+   -1153,
+   -668,
+   -929,
+   -980,
+   -625,
+   -589,
+   -990,
+   -969,
+   -755,
+   -38,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   -302,
+   -1357,
+   -1825,
+   -1685,
+   -1567,
+   -2099,
+   -2204,
+   -1156,
+   -576,
+   -559,
+   -1723,
+   -1840,
+   -1096,
+   -303,
+   1534
+  ],
+  "leads": {
+   "10": 4,
+   "15": -929,
+   "20": -969
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 1534,
+    "min": 43
+   },
+   "red": {
+    "gold": 2204,
+    "min": 35
+   }
+  },
+  "swing": {
+   "team": "KC",
+   "gold": 3374,
+   "fromMin": 40,
+   "toMin": 43
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 6.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "chemtech"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "cloud"
+   },
+   {
+    "min": 12.9,
+    "type": "firstTower",
+    "team": "T1"
+   },
+   {
+    "min": 17.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "ocean"
+   },
+   {
+    "min": 19.6,
+    "type": "firstBlood",
+    "team": "KC"
+   },
+   {
+    "min": 29.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "ocean"
+   },
+   {
+    "min": 35,
+    "type": "baron",
+    "team": "KC",
+    "behind": 2204
+   },
+   {
+    "min": 35.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "ocean",
+    "behind": 1979
+   },
+   {
+    "min": 41.9,
+    "type": "baron",
+    "team": "KC",
+    "behind": 1096
+   },
+   {
+    "min": 42.9,
+    "type": "elder",
+    "team": "KC"
+   },
+   {
+    "min": 43.5,
+    "type": "inhibitor",
+    "team": "KC"
+   },
+   {
+    "min": 43.6,
+    "type": "end",
+    "team": "KC"
+   }
+  ],
+  "players": [
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "KSante",
+    "role": "top",
+    "k": 1,
+    "d": 4,
+    "a": 1,
+    "damageShare": 0.14800000000000002
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "XinZhao",
+    "role": "jungle",
+    "k": 2,
+    "d": 0,
+    "a": 4,
+    "damageShare": 0.23600000000000002
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Anivia",
+    "role": "mid",
+    "k": 4,
+    "d": 0,
+    "a": 3,
+    "damageShare": 0.24
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 1,
+    "d": 1,
+    "a": 4,
+    "damageShare": 0.319
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 5,
+    "damageShare": 0.057
+   },
+   {
+    "code": "T1",
+    "name": "T1 Doran",
+    "champion": "Jayce",
+    "role": "top",
+    "k": 1,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.245
+   },
+   {
+    "code": "T1",
+    "name": "T1 Oner",
+    "champion": "Sejuani",
+    "role": "jungle",
+    "k": 0,
+    "d": 1,
+    "a": 3,
+    "damageShare": 0.109
+   },
+   {
+    "code": "T1",
+    "name": "T1 Faker",
+    "champion": "Taliyah",
+    "role": "mid",
+    "k": 0,
+    "d": 2,
+    "a": 3,
+    "damageShare": 0.228
+   },
+   {
+    "code": "T1",
+    "name": "T1 Peyz",
+    "champion": "Zeri",
+    "role": "bottom",
+    "k": 5,
+    "d": 1,
+    "a": 1,
+    "damageShare": 0.318
+   },
+   {
+    "code": "T1",
+    "name": "T1 Keria",
+    "champion": "Yuumi",
+    "role": "support",
+    "k": 0,
+    "d": 1,
+    "a": 6,
+    "damageShare": 0.1
+   }
+  ],
+  "standout": {
+   "code": "T1",
+   "name": "T1 Peyz",
+   "champion": "Zeri",
+   "role": "bottom",
+   "k": 5,
+   "d": 1,
+   "a": 1,
+   "damageShare": 0.318
+  },
+  "funFacts": [
+   {
+    "kind": "peaceful",
+    "team": null,
+    "text": "No kills before 10:00"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 43:35"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095107",
+  "matchId": "115660540726095103",
+  "number": 4,
+  "league": "Worlds 2026",
+  "date": "2026-11-07T01:06:38.959Z",
+  "patch": "16.20",
+  "durationMin": 35.3,
+  "complete": true,
+  "winner": "T1",
+  "blue": {
+   "code": "KC",
+   "champions": {
+    "top": "Renekton",
+    "jungle": "MonkeyKing",
+    "mid": "Ahri",
+    "bottom": "Xayah",
+    "support": "Rakan"
+   },
+   "gold15": 24999,
+   "kills": 8,
+   "towers": 5,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud",
+    "chemtech"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "T1",
+   "champions": {
+    "top": "Camille",
+    "jungle": "Nocturne",
+    "mid": "Annie",
+    "bottom": "MissFortune",
+    "support": "Neeko"
+   },
+   "gold15": 25363,
+   "kills": 17,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "ocean",
+    "chemtech",
+    "chemtech",
+    "chemtech"
+   ],
+   "barons": 2,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 22.9
+  },
+  "goldDiff": [
+   0,
+   5,
+   -71,
+   -400,
+   -382,
+   -396,
+   -328,
+   153,
+   296,
+   152,
+   153,
+   -12,
+   -69,
+   -1119,
+   -725,
+   -364,
+   49,
+   -310,
+   -1154,
+   -849,
+   -832,
+   -1069,
+   -733,
+   -4394,
+   -2136,
+   -2724,
+   -1711,
+   -1815,
+   -3111,
+   -3210,
+   -3110,
+   -3197,
+   -3221,
+   -3649,
+   -5328,
+   -7554
+  ],
+  "leads": {
+   "10": 153,
+   "15": -364,
+   "20": -832,
+   "25": -2724
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 296,
+    "min": 8
+   },
+   "red": {
+    "gold": 7554,
+    "min": 35
+   }
+  },
+  "swing": {
+   "team": "T1",
+   "gold": 4444,
+   "fromMin": 30,
+   "toMin": 35
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 5.9,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "ocean"
+   },
+   {
+    "min": 6.9,
+    "type": "firstBlood",
+    "team": "KC"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "cloud"
+   },
+   {
+    "min": 16.9,
+    "type": "dragon",
+    "team": "KC",
+    "detail": "chemtech"
+   },
+   {
+    "min": 17.9,
+    "type": "firstTower",
+    "team": "T1"
+   },
+   {
+    "min": 21.9,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "chemtech"
+   },
+   {
+    "min": 22.9,
+    "type": "baron",
+    "team": "T1"
+   },
+   {
+    "min": 27.1,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "chemtech"
+   },
+   {
+    "min": 32.9,
+    "type": "dragon",
+    "team": "T1",
+    "detail": "chemtech"
+   },
+   {
+    "min": 33.9,
+    "type": "baron",
+    "team": "T1"
+   },
+   {
+    "min": 34.9,
+    "type": "inhibitor",
+    "team": "T1"
+   },
+   {
+    "min": 34.9,
+    "type": "inhibitor",
+    "team": "T1"
+   },
+   {
+    "min": 35.3,
+    "type": "end",
+    "team": "T1"
+   }
+  ],
+  "players": [
+   {
+    "code": "KC",
+    "name": "KC Canna",
+    "champion": "Renekton",
+    "role": "top",
+    "k": 1,
+    "d": 6,
+    "a": 2,
+    "damageShare": 0.184
+   },
+   {
+    "code": "KC",
+    "name": "KC Yike",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 2,
+    "d": 2,
+    "a": 4,
+    "damageShare": 0.16699999999999998
+   },
+   {
+    "code": "KC",
+    "name": "KC kyeahoo",
+    "champion": "Ahri",
+    "role": "mid",
+    "k": 0,
+    "d": 2,
+    "a": 4,
+    "damageShare": 0.275
+   },
+   {
+    "code": "KC",
+    "name": "KC Caliste",
+    "champion": "Xayah",
+    "role": "bottom",
+    "k": 4,
+    "d": 3,
+    "a": 1,
+    "damageShare": 0.314
+   },
+   {
+    "code": "KC",
+    "name": "KC Busio",
+    "champion": "Rakan",
+    "role": "support",
+    "k": 1,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.06
+   },
+   {
+    "code": "T1",
+    "name": "T1 Doran",
+    "champion": "Camille",
+    "role": "top",
+    "k": 2,
+    "d": 3,
+    "a": 8,
+    "damageShare": 0.171
+   },
+   {
+    "code": "T1",
+    "name": "T1 Oner",
+    "champion": "Nocturne",
+    "role": "jungle",
+    "k": 1,
+    "d": 3,
+    "a": 9,
+    "damageShare": 0.086
+   },
+   {
+    "code": "T1",
+    "name": "T1 Faker",
+    "champion": "Annie",
+    "role": "mid",
+    "k": 3,
+    "d": 2,
+    "a": 10,
+    "damageShare": 0.258
+   },
+   {
+    "code": "T1",
+    "name": "T1 Peyz",
+    "champion": "MissFortune",
+    "role": "bottom",
+    "k": 11,
+    "d": 0,
+    "a": 5,
+    "damageShare": 0.33799999999999997
+   },
+   {
+    "code": "T1",
+    "name": "T1 Keria",
+    "champion": "Neeko",
+    "role": "support",
+    "k": 0,
+    "d": 0,
+    "a": 14,
+    "damageShare": 0.146
+   }
+  ],
+  "standout": {
+   "code": "T1",
+   "name": "T1 Peyz",
+   "champion": "MissFortune",
+   "role": "bottom",
+   "k": 11,
+   "d": 0,
+   "a": 5,
+   "damageShare": 0.33799999999999997
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "T1",
+    "text": "Likely triple kill: T1 Peyz (Miss Fortune) at 27:30"
+   },
+   {
+    "kind": "perfect",
+    "team": "T1",
+    "text": "T1 Peyz (Miss Fortune) went 11/0/5 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "T1",
+    "text": "T1 Keria (Neeko) went 0/0/14 without dying"
+   },
+   {
+    "kind": "wards",
+    "team": "KC",
+    "text": "KC Busio (Rakan) placed 109 wards"
+   }
+  ]
  }
 ]

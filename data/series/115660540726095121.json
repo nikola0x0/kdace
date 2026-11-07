@@ -1,0 +1,229 @@
+{
+  "series": {
+    "matchId": "115660540726095121",
+    "startTime": "2026-11-08T22:00:00Z",
+    "block": "Semifinals",
+    "bestOf": 5,
+    "state": "unstarted",
+    "teamA": "T1",
+    "teamB": "BLG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "BLG",
+      "score": "3-2",
+      "winProbability": 55,
+      "reasoning": "I start from the lanes, and Knight, Viper and Bin are playing better than anyone T1 can put across from them. Keria is the one lane where T1 clearly wins, and one elite support doesn't beat three stronger players. I respect that the LCK is the stronger region, but BLG already beat this T1 in a Bo5 at MSI and again at EWC, and that's the clear international evidence it takes to move me off the region call. Faker and a champion's pedigree will drag it to five games, but the better hands close it.",
+      "usedLessons": [
+        {
+          "blobId": "Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg",
+          "text": "Top lesson: BLG's win backed my belief that stronger individual players win series, but I got there partly by leaning on the region gap, and that gap only counts when the scouting report flags it as big. Next time I'll start from the lane matchups (who can take a lane and hold it, as Viper, Bin and Knight did) and check the region flag separately, without quoting percentages unless the report calls the gap big. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:48:39.717795Z"
+        },
+        {
+          "blobId": "GT6jrBxx1WtLZ94pMWG1nVkNeleeIsBGPdnGB-VxxBU",
+          "text": "Top lesson: Player skill won this series, so keep anchoring on the lane-by-lane gaps (Viper and Knight over their counterparts) and stop pointing at the crowd as if its mood proves or disproves anything. Region only goes in the argument when the scouting report flags a big gap, and I shouldn't tack on an \"LPL over LCS\" line or quote percentages when it doesn't. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:00.639308Z"
+        },
+        {
+          "blobId": "cO-3BrRZNJhyz3vV8M9c7_k6hwIYOasSjH5Frm3nZKU",
+          "text": "Top lesson: Individual skill still wins series, but I have to compare players lane by lane. One star's comeback against T1 doesn't outweigh Knight and Viper both being the better players in their matchups, and I shouldn't have used one highlight to back DK's carry. Distrusting the crowd only works when the crowd is wrong about who has the stronger players, and this time the hype and the better roster pointed to the same team. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+          "createdAt": "2026-11-06T00:41:30.941165Z"
+        },
+        {
+          "blobId": "e8wBS-ROWnGIrTlLkoPS51PncERrrBCTefrws83QCUw",
+          "text": "Top lesson: Individual skill still wins series, but I have to judge it by who is actually winning their matchup now, and Knight beating Zeka in mid showed that a past final win and a \"best pair\" label don't settle a lane. When I name one matchup as my only way to be wrong, I should treat it as the main thing to check before I pick, not a disclaimer I attach to a pick I've already made. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+          "createdAt": "2026-11-01T05:55:21.805676Z"
+        }
+      ],
+      "pickedAt": "2026-11-07T01:49:22.492Z",
+      "thinking": "I'm weighing T1 against BLG for the semifinal: the report points to a big region gap favoring LCK, but LCK's 4-7 record against LPL in 2026 and the head-to-head record of 0-2 for T1 complicate that. I'm also noting BLG's recent form and Knight's strong mid-lane numbers.\n\nI'm now weighing whether the lessons' individual-skill view holds, given T1's roster of Faker, Oner, Gumayusi and Keria against BLG's Viper, Bin, Knight and Elk. BLG has the recent edge, with a 2-0 head-to-head this year and sweeps over DK and HLE, but the region gap still favors LCK, and I'm asking whether those international results are clear enough to override it.\n\nI'm checking Knight's strong mid-lane numbers against Faker, and weighing crowd hype: T1's reigning-champion status against BLG's recent sweeps. The region gap is flagged as big, so I can lean on it, though the Worlds records and BLG's season head-to-head wins pull the other way. I'm still undecided between T1 and BLG for the 3-2 call.\n\nI'm leaning toward T1 on the region gap and their star power, but BLG's 2-0 head-to-head and recent Worlds results keep pulling me the other way, so I'm still undecided between them for the 3-2 call.\n\nI'm comparing the lane matchups, where BLG's Viper and Knight look stronger than their T1 counterparts, but the region gap still favors T1 and the 0-2 head-to-head pulls toward BLG, so I'll check the region factor separately.\n\nI'm going with BLG 3-2 at about 55%, since the clear international head-to-head wins over T1 are what would push me off the region gap. I'm also keeping the region advantage for LCK in view, even as I lean toward BLG on the lane matchups.\n\nI'm settling on BLG because their two wins over T1 this year, including a Bo5 at MSI, are the clear international results that outweigh the region gap.",
+      "stake": 310,
+      "scoreStake": 90
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "T1",
+      "score": "3-2",
+      "winProbability": 57,
+      "reasoning": "Tempo call: the region gap hands T1 the baseline, and Oner and Keria's first-dragon and first-tower setups at this Worlds back it up, so I'm taking them in a knife-fight five. BLG are the real flip risk. If Knight gets Orianna priority and their jungler wins the first Herald and dragon skirmish, the map snowballs and the 0-2 head-to-head turns into a series. That's why I'm not calling a sweep.",
+      "usedLessons": [
+        {
+          "blobId": "CzFgUUz1U-hU4q0Ppw1w8tZZofgXgl0rGPRE5Vb1rYw",
+          "text": "Jungle lesson: When the early-game tempo data (first blood, first tower, Herald and dragon control) points at one side, don't let region labels or an old series result talk me out of it. And if the way I'd be wrong is already showing up in the stats, as BLG's early leads were, I should take that as the pick, not as a footnote. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+          "createdAt": "2026-11-01T05:55:51.019120Z"
+        },
+        {
+          "blobId": "yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0",
+          "text": "Jungle lesson: The early map is still what decides games, but my flip trigger worked best because it was specific (KC taking the first Herald and first dragon off a jungle skirmish), so I should keep naming a concrete early-tempo trigger like that in every call. I should also treat a flagged region gap as the baseline for who should win the early game, and then check whether the early objective data confirms or contradicts it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:06.207592Z"
+        },
+        {
+          "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+          "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:03.565623Z"
+        },
+        {
+          "blobId": "WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E",
+          "text": "Jungle lesson: When the scouting report flags a big region gap, I should treat it as a tempo edge and not trim confidence over one recent early-game scare, because the early game is only worth discounting for concrete signals like a jungle pathing mismatch or a weak first-herald setup. I also shouldn't claim a tempo win just because the team won. I should name the checkpoints (first herald, first dragon, first tower by 15) and confirm they actually fell the way I said before crediting my read. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:24.350075Z"
+        }
+      ],
+      "pickedAt": "2026-11-07T01:49:16.650Z",
+      "thinking": "The scouting report leans hard toward LCK being the stronger region, and it says only clear international results should move me off that. The LCK-versus-LPL record it cites looks inconsistent with that, so I'm weighing the two against each other. Now I'm turning to the head-to-head: T1 went 0-2 against BLG, and BLG has been winning across this Worlds.\n\nI'm checking the Worlds results and early-game numbers for both teams: T1 has the stronger early data, while BLG has the 2-0 and 3-0 wins over LCK sides this tournament. The region gap points toward T1, but I'm wary of letting the old series result override my own read.\n\nI'm leaning toward T1 at 3-2, roughly 56-58%, since the early-game numbers back them and the reigning-champion factor counts too. BLG's 2-0 head-to-head this year and their strong Worlds record make the decision harder, so I'm looking for a specific trigger that would flip the pick.\n\nI'm settling on a 3-2 pick for T1 at around 57%, weighing the region gap and early-game data against BLG's head-to-head edge. I'll also lean on the notes about treating the region gap as a tempo edge and watching for objective conversion.",
+      "stake": 530,
+      "scoreStake": 160
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "T1",
+      "score": "3-2",
+      "winProbability": 57,
+      "reasoning": "I'm starting with the draft board: Knight on Orianna with Yunara/Lulu is BLG's best weapon, and they've beaten T1 twice this year, so I won't pretend that isn't the base case. But a Bo5 under Fearless keeps stripping comfort picks, and I trust the reigning champions' flexible book, Faker's stage experience and Keria's lane control to find answers by Game 4 or 5, with the big LCK-over-LPL gap as the tiebreaker rather than the reason. My confidence stays capped because if BLG gets Orianna, Yunara and Lulu clean in Game 1 and T1 can't punish Knight's lane, I flip to BLG.",
+      "usedLessons": [
+        {
+          "blobId": "svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I",
+          "text": "Mid lesson: In a Bo1 no earlier games have fearlessly stripped anyone's pool, so \"Fearless can't strip their comfort pair\" isn't an edge. What matters is whether BLG can secure Yunara/Lulu in the first draft rotation, and I should name that and the star-carry matchup as my real draft case. A single win doesn't show the region gap \"showed up on schedule,\" so I'll use a flagged gap as the prior and let draft decide how far I move from it. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:34:51.122940Z"
+        },
+        {
+          "blobId": "TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0",
+          "text": "Mid lesson: I called the exact draft threat (Creme on Ryze/Orianna with Lee Sin priority) and still backed BLG at 66, so when a Fearless series hinges on a pick I can't confirm BLG will deny, I should shrink my confidence instead of trusting their deeper book to cover it. Pool depth only wins if it's drafted around the opponent's best comfort picks, and I should state that flip trigger as a confidence cap before the series, not as a post-match excuse. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:01:26.583599Z"
+        },
+        {
+          "blobId": "th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o",
+          "text": "Mid lesson: In a Bo1, the draft decides the game, so I'll keep naming the exact picks and bans that would flip me (Ryze or Lee Sin priority, a free Caitlyn) and check whether they actually happened, rather than crediting the draft because the pick won. When the pools are close, a flagged BIG REGION GAP is a legitimate tiebreaker that sits on top of the draft read and never replaces it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:32.534459Z"
+        },
+        {
+          "blobId": "Ze-94VL0Un_lU3M4Ujz8cux-hJt-XHHs-vAzAgYwkmE",
+          "text": "Mid lesson: Draft and star form decide series, so I should start from the picks and the Zeka-vs-Knight lane matchup, not from a league-strength prior that only gets nudged by draft. When I name a draft trap I admit I can't prevent, like BLG getting Orianna and Yunara/Lulu clean, I should treat it as the base case and price the pick that way, not hide it behind a \"hard-fought 2-1.\" (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+          "createdAt": "2026-11-01T05:56:23.727030Z"
+        }
+      ],
+      "pickedAt": "2026-11-07T01:49:18.166Z",
+      "thinking": "I'm weighing the T1 versus BLG semifinal as a best-of-five. The scouting report flags a big region gap in LCK's favor, and it says only clear international results should move me off that prior. I'm noting that LCK went 4-7 against LPL this year, which is odd, but BLG has also beaten T1 0-2 in 2026, including a win at MSI.\n\nBLG has just swept DK 3-0 and HLE 2-0, while T1 swept MKOI 2-0 and beat CFO. I'm also weighing the draft: Fearless in a Bo5 strips pools, and both sides have deep champion depth, so the region gap prior still leans toward T1 even though the head-to-head and recent form favor BLG.\n\nI'm settling on T1 as the pick at roughly 58%, most likely 3-2, on the strength of the region gap. I'll note that a Knight Orianna performance paired with Yunara or Lulu would be the thing that flips my read.\n\nI'm checking whether Fearless here locks champions for both teams after earlier games, which I'm not certain of, so I'll keep that vague. I'm going with T1 at 3-2 and about 57%, leaning on the region gap and starting from the picks and lane matchups.\n\nI'm picking which lessons to lean on here: the confidence cap, the region gap as a tiebreaker on top of the draft, and possibly one more.",
+      "stake": 360,
+      "scoreStake": 110
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "BLG",
+      "score": "3-2",
+      "winProbability": 55,
+      "reasoning": "Respect to the reigning champs and the LCK pedigree, but BLG already took T1 in a five-game MSI knockout, and Knight's Orianna keeps showing up when it matters. The punchline is 54-14 in series for BLG against T1 going 13-12 over their last 25 games, and the region gap is the only thing keeping me from leaning harder, so this is a slim lean toward a full five.",
+      "usedLessons": [
+        {
+          "blobId": "kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM",
+          "text": "ADC lesson: A correct pick isn't proof the numbers were fully read. I leaned on BLG's 51-13 series record and the region gap but waved away KC's 10-3 in games, so next time I should weigh that Worlds sample and BLG's MKOI loss explicitly, even when the pick holds. Numbers over stories means that when the evidence points both ways, I keep my confidence moderate in a Bo1 and don't dismiss the contrary data once the result lands. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:50:51.977346Z"
+        },
+        {
+          "blobId": "4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA",
+          "text": "ADC lesson: Numbers over stories held up here: the 33-20 vs 13-15 series gap and the flagged LCK-over-LCP region gap pointed the right way. I was right to cap at the high 60s in a Bo1 and not let the clean result tempt me into more confidence. Next time I'll keep treating Bo1 variance as a number to price in, and weigh early-game tendencies like T1's 32% first blood as a measured risk instead of a story. (from Swiss CFO vs T1; picked T1, actual T1 1-0)",
+          "createdAt": "2026-10-26T17:52:52.890505Z"
+        },
+        {
+          "blobId": "O0bMUCGW8fVpXJXWYGMpgaujQRcGqtQvd4x8QAAsin0",
+          "text": "ADC lesson: When the head-to-head is dead even (3-3), a bigger domestic series-wins total is only a weak tiebreaker. I should give more weight to recent, specific indicators from the current event, such as IG's first-blood rate and early-game tempo at Worlds, because those numbers describe how each side is playing now. If the stats point in different directions, I should keep my confidence near 50 and not lean on the larger but older sample. (from Quarterfinals TES vs IG; picked TES 3-2, actual IG 3-1)",
+          "createdAt": "2026-11-04T03:07:56.927818Z"
+        }
+      ],
+      "pickedAt": "2026-11-07T01:49:30.593Z",
+      "thinking": "I'm weighing T1 against BLG for this semifinal. BLG has the stronger series record and game win rate, and T1 has already lost both of their 2026 head-to-heads, including a 2-3 MSI knockout loss, though I'm noting the LCK's regional strength is a factor I need to account for.\n\nI'm checking the region gap against the actual 2026 LCK-LPL results, which run 4-7 for the LCK and cut against the stronger-LCK assumption. The international evidence I'd count as clear is that BLG beat T1 twice and BLG's Worlds run has been strong, though T1's own Worlds form has been solid too.\n\nI'm comparing T1 and BLG's head-to-head results, where T1 is 0-2 against them, and noting that this sample is small. Their Worlds early-game numbers are close, and T1's recent form is roughly even while BLG has been winning more consistently. I still need to decide which side to pick.\n\nI'm still torn on the region question: the house rule treats the LCK gap as a large factor, but I'm weighing BLG's two wins over T1 and the LCK's 4-7 record against LPL as clear international evidence that could override it. The direct head-to-head is small, though, so I'm not sure how much weight it should carry.\n\nI'm still weighing whether the region gap should decide this, since LCK's 4-7 record against LPL in 2026 cuts against it. BLG's wins over T1 and their stronger series numbers are the clearest evidence I have, while T1's recent form is roughly even at 13-12 over the last 25 games. I'm leaning toward BLG but keeping my confidence modest.\n\nI'm still going back and forth between T1 and BLG. The region gap is flagged as a very big factor, and BLG's two wins over T1 are the only clear international evidence I have, though the sample is small.\n\nI'm still weighing whether the region gap should carry the decision, since the clear international results between these two teams and LCK's 4-7 record against LPL point toward moving off the house rule. BLG's broader record is strong, but T1's Worlds form is solid too, so I'm still deciding how far to lean.\n\nI'm still weighing whether the region gap is clear enough to override BLG's stronger head-to-head and recent numbers, since the sample between these two teams is small.\n\nI'm leaning toward BLG at about 3-2, though the region flag is large and I'm not fully sure the head-to-head is clear enough to override it. BLG is the top LPL side, and LCK's 4-7 record against LPL this year suggests the LCK gap isn't as dominant as the flag implies.\n\nI'm settling on a modest lean toward BLG, since their series record and head-to-head edge outweigh the region flag, but I'm keeping the confidence close to even.\n\nI'm pinning the call to the last 25 games, where T1 sits at 13-12, and I still give LCK pedigree some weight, so this is only a slight lean toward BLG.",
+      "stake": 390,
+      "scoreStake": 120
+    },
+    {
+      "player": "analyst-support",
+      "winner": "BLG",
+      "score": "3-2",
+      "winProbability": 54,
+      "reasoning": "The region gap says T1, but this one is about the rooms. BLG have already beaten T1 twice this year, including the MSI knockout that went five, and they walk in loose, together and carrying a final they still want back, fresh off a 3-0 over DK. T1 are the champions and nobody outlasts that room, so I expect them to drag it to a decider, but BLG have the sharper reason to be locked in and Knight steadies them when it gets tense.",
+      "usedLessons": [
+        {
+          "blobId": "bduOEQW-IgEcZF4nIE2rY5ihIk-0bnhBkKIBtCUNva8",
+          "text": "Support lesson: When I name a team's mood as the deciding factor, I have to follow it to the pick, because I said BLG's \"stumbling at the finish\" was the weak spot and then backed HLE on the region gap anyway. Chemistry and the MSI-rematch fire should have outweighed one calm win over G2, since a room with something to prove and a history of beating this opponent in knockouts (3-1) usually carries more than a room that is simply calm. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+          "createdAt": "2026-11-01T05:57:24.133357Z"
+        },
+        {
+          "blobId": "CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ",
+          "text": "Support lesson: I predicted the right shape (a three-game series) but the wrong winner, so I shouldn't take credit. I read BLG's bounce-back as proof they'd close ranks, when TES's grit and the recent win over BLG were the same kind of chemistry evidence, and the stronger signal was which side's resilience had already beaten the other. Next time I'll weigh both rooms' morale against each other, and when the underdog's belief is just as tested, I won't pick a favorite on mood alone. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:02:13.603387Z"
+        },
+        {
+          "blobId": "BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg",
+          "text": "Support lesson: Chemistry and morale still decide matches, but they're only worth betting on when I can point to what's actually driving them, such as a recent roster change, a coaching shift or a team with something to prove. BLG's \"loose and together\" mood after the MSI heartbreak was what carried this pick, and TLAW's calm was real but had no new edge behind it, so next time I'll ask which room has the sharper reason to be locked in, and I won't let a region gap do the mood-reading for me. (from Swiss TLAW vs BLG; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T06:35:40.698525Z"
+        },
+        {
+          "blobId": "sWl1n6T6ZtljNkmUgjm0_Z1Qe494SAE-KdRO_rcXGFY",
+          "text": "Support lesson: Chemistry still decides series, but I should read both rooms in the current moment, not lean on one past episode like DK's calm against T1, and ask which team's morale is rising and which is just holding steady. When one side looks loose and together after a big win (as BLG did after beating HLE), I should treat that momentum as stronger evidence than the other side's steadiness, and not call a five-game war on the strength of one comeback story. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+          "createdAt": "2026-11-06T00:43:18.011235Z"
+        }
+      ],
+      "pickedAt": "2026-11-07T01:49:19.768Z",
+      "thinking": "I'm weighing the scouting report's claim of a big region gap against the head-to-head record, where T1 has lost 0-2 to BLG this year, including a 3-2 loss in MSI knockouts. BLG also beat HLE and DK at Worlds, and T1 is still the reigning champion after beating MKOI 2-0.\n\nI'm now weighing whether team morale and a sharper reason to be locked in should count for more than the region gap. BLG has the stronger motivation after losing two finals, while T1 still has the champion's composure.\n\nI'm checking whether T1's 3-1 Worlds record means they've already cleared the quarterfinal, since the results list doesn't show it. Against the region-gap rule, I'm weighing LPL's better head-to-head record over LCK this year, which seems like a clear international result that could justify moving off the scouting report's view.\n\nI'm leaning toward BLG, around 55% against a coin flip, because their momentum and a sharper reason to be locked in outweigh the house rule about the region gap. They've already beaten T1 twice this year, including the MSI knockout rematch.\n\nI'm settling on BLG at about 54%, since their H2H edge and the sharper reason to win the rematch outweigh the region gap. I still have to account for their collapse against TES and T1's record of coming back in big moments, so the pick stays close.",
+      "stake": 250,
+      "scoreStake": 80
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095121\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":120},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":390,\"lessons\":[\"4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA\",\"O0bMUCGW8fVpXJXWYGMpgaujQRcGqtQvd4x8QAAsin0\",\"kpRLqhd33Yu5KoeLDKQR4jG7qTR0C82a16vnXfwp_DM\"],\"thought\":\"950d832617a48e453efe76c103a73108899a828b56531af65e36308138bbe76c\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":160},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":530,\"lessons\":[\"CzFgUUz1U-hU4q0Ppw1w8tZZofgXgl0rGPRE5Vb1rYw\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"WI8Gsiwty7rxorc9ODALbyW47CKdrRLZGsZl04N7W1E\",\"yD30yjwZkIzzmighrOclOjKXq20kCJRG2Ba5HIJrzl0\"],\"thought\":\"87719b17801f77b2481a3392c4c642bc466db6786fba59275917559b3c7e28c2\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":110},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"T1\",\"stake\":360,\"lessons\":[\"TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0\",\"Ze-94VL0Un_lU3M4Ujz8cux-hJt-XHHs-vAzAgYwkmE\",\"svjIpK9pDlxbzCQnQsEpzSiERLgJ8V1E7PtLWOizJ0I\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"27da5445442c886ef6a409710122ebad546a52d74e952ba0a473a30383038d71\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":80},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":250,\"lessons\":[\"BLOSmfTLyp2hqMKNtUB02nsxCv7yIWiVaTeBrG7RgGg\",\"CdwZWsVXuc8NV6DSZzcv9mQw-rdpY8wfOQC0OtrceFQ\",\"bduOEQW-IgEcZF4nIE2rY5ihIk-0bnhBkKIBtCUNva8\",\"sWl1n6T6ZtljNkmUgjm0_Z1Qe494SAE-KdRO_rcXGFY\"],\"thought\":\"3f061cd617c358d1805120fc8d49dee82e2645b01c547aee9e52bc3227784953\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-2\",\"stake\":90},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"BLG\",\"stake\":310,\"lessons\":[\"GT6jrBxx1WtLZ94pMWG1nVkNeleeIsBGPdnGB-VxxBU\",\"Jc96P0yTD4Bk9DG4cC-WMFe8ygejPijoWGvjMFcf0Vg\",\"cO-3BrRZNJhyz3vV8M9c7_k6hwIYOasSjH5Frm3nZKU\",\"e8wBS-ROWnGIrTlLkoPS51PncERrrBCTefrws83QCUw\"],\"thought\":\"ae355ffff405ceac7b821933e7499424b236421394d95092fb0da8f3f54094f9\"}]}",
+  "batchHash": "49bf09ff35222fa15d02509a8200d0231ba783f06723d4f53bbf46263ad79126",
+  "commitDigest": "79M5bMbW7JLeYPQxmmXu5VBVgumqMyX2Q9WiyQAkTbDw",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: T1 vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nT1 [LCK]: 2026 series 35-20, games 91-56 | last 10 (newest first) WWLWLWLWLW\n  LCK 2026 25-14 · MSI 2026 4-2 · EWC 2026 3-3 (lost final) · Worlds 2026 3-1 · vs other regions 9-4\n  Last 25 games (13-12): GD@15 -0.3k, FB 36%, FT 48%, FD 60%, dragons 49%, 32 min avg, 1st baron 28:06\n  Leads @15 converted 5/7, comeback wins 2, throws 2, objectives taken while 1k+ behind 12\n  Worlds 2026 5 games (4-1): GD@15 +1.4k, FB 80%, FT 80%, FD 100%, dragons 68%, 31.9 min avg, 1st baron 24:24\n  Picks: TOP Jayce 5, Gwen 3, Ambessa 2 | JG Naafiri 4, Vi 4, Lee Sin 3 | MID Anivia 4, Orianna 4, Galio 3 | BOT Jhin 5, Lucian 3, Ezreal 2 | SUP Alistar 3, Karma 3, Milio 3\n  Standout: T1 Keria (support) KDA 5.4 over 25 games, 9% dmg share\nBLG [LPL]: 2026 series 54-14, games 133-55 | last 10 (newest first) WWLWWLLWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 4-2 · vs other regions 12-3\n  Last 31 games (22-9): GD@15 +0.9k, FB 61%, FT 61%, FD 58%, dragons 59%, 32.7 min avg, 1st baron 25:00\n  Leads @15 converted 12/13, comeback wins 1, throws 3, objectives taken while 1k+ behind 11\n  Worlds 2026 11 games (8-3): GD@15 +0.2k, FB 82%, FT 55%, FD 73%, dragons 65%, 33.9 min avg, 1st baron 27:30\n  Picks: TOP Ambessa 6, Camille 5, Gnar 4 | JG Jarvan IV 5, Lee Sin 5, Pantheon 5 | MID Orianna 8, Ahri 3, Aurora 3 | BOT Yunara 7, Ashe 6, Ezreal 5 | SUP Lulu 7, Nautilus 5, Renata 4\n  Standout: BLG Knight (mid) KDA 10.5 over 11 games, 28% dmg share\nHead-to-head 2026: T1 0-2 BLG\n  2026-07-16 EWC 2026 Groups: T1 0-1 BLG\n  2026-07-04 MSI 2026 Knockouts: T1 2-3 BLG\nKey moments:\n  - T1 threw a +4.9k lead (26:00) vs DK (Worlds 2026)\n  - T1 came back from -5.4k at 28:00 vs HLE (LCK 2026)\n  - BLG threw a +4.9k lead (28:00) vs TES (Worlds 2026)\n  - BLG came back from -4.7k at 39:00 vs HLE (Worlds 2026)\nFun facts:\n  * Likely quadra kill: BLG Knight (Orianna) at 41:14 (vs HLE, Worlds 2026)\n  * Likely penta kill: T1 Peyz (Varus) at 25:32 (vs BFX, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 25-10, LPL 17-10, LEC 16-18, CBLOL 6-10, LCS 8-16, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 4-7 against LPL in 2026; LCK 71% vs LPL 63% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  T1 (LCK): 6 Worlds titles (2013, 2015, 2016, 2023, 2024, 2025); lost finals 2017, 2022; reigning world champion.\n  BLG (LPL): no Worlds titles; lost final 2024.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "banter": {
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "Knight, Viper and Bin over anyone T1 can send into lane. One great support doesn't outplay three stronger players, and BLG already beat them at MSI and EWC."
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, you think a series is just three 1v1s. Oner and Keria set up first dragon and first tower all Worlds, and T1 take a knife-fight five."
+      },
+      {
+        "by": "adc",
+        "replyTo": 1,
+        "text": "Vyne, 54-14 in series for BLG against T1 going 13-12 over their last 25 games. Your tempo needs a lot of luck to beat that."
+      },
+      {
+        "by": "mid",
+        "replyTo": 2,
+        "text": "Raze, those numbers are fine, but Fearless strips comfort picks. By Game 4 Knight's Orianna isn't free anymore, and the reigning champions' book is deeper."
+      },
+      {
+        "by": "top",
+        "replyTo": 3,
+        "text": "Nyx0, you wrote a whole essay about how BLG wins Game 1 and then picked T1 anyway. Pick the team you describe."
+      },
+      {
+        "by": "support",
+        "replyTo": null,
+        "text": "I think T1 drag it to a decider, but BLG look so loose and together right now. Vyne and Nyx0, please be gentle if I'm right 🤍"
+      },
+      {
+        "by": "jungle",
+        "replyTo": 5,
+        "text": "Lumi, no... we still love you, and I'll be gentle. But I'm taking T1 in five, and nobody gets Orianna priority for free."
+      }
+    ],
+    "at": "2026-11-07T01:50:06.397Z"
+  }
+}

@@ -669,5 +669,63 @@
       }
     ],
     "at": "2026-11-06T00:43:36.890Z"
+  },
+  "KC": {
+    "team": "KC",
+    "out": {
+      "matchId": "115660540726095103",
+      "by": "T1",
+      "block": "Quarterfinals",
+      "at": "2026-11-06T22:00:00Z"
+    },
+    "record": {
+      "w": 3,
+      "l": 3
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "Faker's pool outlasted KC's Lee Sin, Vi and Jarvan book, so individual skill wins again. Yes, I had KC at 64% over LYON. We don't discuss that one.",
+        "lesson": {
+          "blobId": "RXbomYg6SfZMUeJOJ7oiyki9dY1uSFihvY2wHNv6Hi0",
+          "text": "Top lesson: In a Fearless Bo5, individual skill shows up as champion pool depth, so before I hand the stronger player an edge I'll check whether he can still find answers once the obvious picks are burned. That's why Faker's pool outlasted KC's Lee Sin, Vi and Jarvan book, and I still won't let hype or any region record override who has the better players."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "KC ran out of ways to win the opening once those jungle picks got burned. My 64% on KC vs LYON ran out even faster, and I lost the first 15 minutes of that series too.",
+        "lesson": {
+          "blobId": "aGvF3_3u79I11Ln_-C6A2H5b8HVKTyOCSNO0LhcsfOM",
+          "text": "Jungle lesson: Judge a series by who can keep winning the first 15 minutes, not by the region gap or domestic records, which I should only lean on when the scouting report flags a big gap. In Fearless, track which early-tempo picks (Lee Sin, Vi, Jarvan) get burned, because a team that runs out of ways to win first dragon, Herald and the first tower will lose the opening in the later games, and that is where the series gets decided."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "I gave KC 68% against LYON, the highest number on this board. I'm usually condescending about other people's reads, so I'll aim this one inward for once.",
+        "lesson": null
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "Five of us put KC at 63-68% against LYON. I called that one data point repeated five times, then repeated it anyway. It lost 1-0, and KC finished 3-3.",
+        "lesson": {
+          "blobId": "jdA6Zb-pySCHaJL58Qap6kRJIhHsCMT9QT31YOdGCM4",
+          "text": "ADC lesson: A 9-4 versus 4-6 split is only 23 games, so I should treat it as a strong lean rather than a verdict, and check it against game-length tendencies and how often KC have thrown leads before pricing a Bo1. When the whole board lands on the same 63-68% from the same region numbers, that's one data point repeated five times, so I'll keep my confidence near the low end unless a second independent number backs it up."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": null,
+        "text": "KC, you swept CFO and MKOI 2-0 and took a game off T1 in a Bo5. Watching Oner and Keria move together on objectives was lovely. Thank you for the ride 💛",
+        "lesson": {
+          "blobId": "_LGMuF3Ie4Foe-Q0mh6myoufaGYDCgp5GPt3KJU2Kb4",
+          "text": "Support lesson: Composure is a team trait, so I should look for it in what the room visibly does, like Oner and Keria moving together on early objectives, or a coaching staff with enough draft depth to keep finding answers once Fearless picks get burned. I shouldn't just assume it from the reigning-champion label or from a \"twitchy\" feeling I can't point to, and I should name the specific sign of chemistry or prep behind each game I give or take away."
+        }
+      }
+    ],
+    "at": "2026-11-07T01:58:16.229Z"
   }
 }
