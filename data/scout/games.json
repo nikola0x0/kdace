@@ -112907,5 +112907,931 @@
     "text": "KC Busio (Rakan) placed 109 wards"
    }
   ]
+ },
+ {
+  "gameId": "115660540726095128",
+  "matchId": "115660540726095127",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-11-07T22:14:28.938Z",
+  "patch": "16.20",
+  "durationMin": 33.7,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Olaf",
+    "jungle": "Qiyana",
+    "mid": "Cassiopeia",
+    "bottom": "Jhin",
+    "support": "Leona"
+   },
+   "gold15": 27871,
+   "kills": 29,
+   "towers": 9,
+   "inhibitors": 2,
+   "dragons": [
+    "mountain",
+    "hextech",
+    "hextech",
+    "hextech"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 30.9
+  },
+  "red": {
+   "code": "IG",
+   "champions": {
+    "top": "Kled",
+    "jungle": "Vi",
+    "mid": "Syndra",
+    "bottom": "Xayah",
+    "support": "Rakan"
+   },
+   "gold15": 25070,
+   "kills": 9,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [
+    "chemtech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -10,
+   248,
+   113,
+   629,
+   632,
+   576,
+   1314,
+   1550,
+   1887,
+   2679,
+   3226,
+   3212,
+   2930,
+   3047,
+   2801,
+   2292,
+   2263,
+   3589,
+   3680,
+   5036,
+   5768,
+   6172,
+   6327,
+   6315,
+   6411,
+   7268,
+   7255,
+   8802,
+   9516,
+   10525,
+   11063,
+   11716,
+   14685
+  ],
+  "leads": {
+   "10": 2679,
+   "15": 2801,
+   "20": 5036,
+   "25": 6411
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 14685,
+    "min": 33
+   },
+   "red": {
+    "gold": 10,
+    "min": 1
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 5883,
+   "fromMin": 28,
+   "toMin": 33
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.9,
+    "type": "firstBlood",
+    "team": "GEN"
+   },
+   {
+    "min": 5.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "mountain"
+   },
+   {
+    "min": 14.9,
+    "type": "firstTower",
+    "team": "IG"
+   },
+   {
+    "min": 16.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 22.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 28.9,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 30.9,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 32.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 33,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 33.7,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Olaf",
+    "role": "top",
+    "k": 4,
+    "d": 2,
+    "a": 13,
+    "damageShare": 0.225
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "Qiyana",
+    "role": "jungle",
+    "k": 7,
+    "d": 1,
+    "a": 12,
+    "damageShare": 0.28800000000000003
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 4,
+    "d": 2,
+    "a": 12,
+    "damageShare": 0.13699999999999998
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 9,
+    "d": 2,
+    "a": 11,
+    "damageShare": 0.294
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Leona",
+    "role": "support",
+    "k": 5,
+    "d": 2,
+    "a": 17,
+    "damageShare": 0.055
+   },
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "Kled",
+    "role": "top",
+    "k": 0,
+    "d": 6,
+    "a": 5,
+    "damageShare": 0.22899999999999998
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "Vi",
+    "role": "jungle",
+    "k": 5,
+    "d": 8,
+    "a": 0,
+    "damageShare": 0.113
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 2,
+    "d": 6,
+    "a": 3,
+    "damageShare": 0.27
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Xayah",
+    "role": "bottom",
+    "k": 2,
+    "d": 5,
+    "a": 2,
+    "damageShare": 0.33399999999999996
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Rakan",
+    "role": "support",
+    "k": 0,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.054000000000000006
+   }
+  ],
+  "standout": {
+   "code": "GEN",
+   "name": "GEN Ruler",
+   "champion": "Jhin",
+   "role": "bottom",
+   "k": 9,
+   "d": 2,
+   "a": 11,
+   "damageShare": 0.294
+  },
+  "funFacts": [
+   {
+    "kind": "roughPatch",
+    "team": "IG",
+    "text": "IG Rookie (Syndra) died 3 times between 29:52 and 33:39"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095129",
+  "matchId": "115660540726095127",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-11-07T23:09:40.855Z",
+  "patch": "16.20",
+  "durationMin": 29.4,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Gwen",
+    "jungle": "LeeSin",
+    "mid": "Ahri",
+    "bottom": "Ashe",
+    "support": "Seraphine"
+   },
+   "gold15": 28084,
+   "kills": 27,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "ocean",
+    "hextech",
+    "hextech",
+    "hextech"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 22
+  },
+  "red": {
+   "code": "IG",
+   "champions": {
+    "top": "Rumble",
+    "jungle": "Nocturne",
+    "mid": "Sylas",
+    "bottom": "Lucian",
+    "support": "Milio"
+   },
+   "gold15": 24118,
+   "kills": 9,
+   "towers": 1,
+   "inhibitors": 0,
+   "dragons": [
+    "chemtech"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -5,
+   190,
+   528,
+   378,
+   351,
+   297,
+   569,
+   1349,
+   1503,
+   1826,
+   2076,
+   3269,
+   3293,
+   3297,
+   3966,
+   3559,
+   2225,
+   1665,
+   2215,
+   3122,
+   4911,
+   6821,
+   6036,
+   8424,
+   10238,
+   9398,
+   9216,
+   11222,
+   13221
+  ],
+  "leads": {
+   "10": 1826,
+   "15": 3966,
+   "20": 3122,
+   "25": 10238
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 13221,
+    "min": 29
+   },
+   "red": {
+    "gold": 5,
+    "min": 1
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 7116,
+   "fromMin": 20,
+   "toMin": 25
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 6.5,
+    "type": "firstBlood",
+    "team": "IG"
+   },
+   {
+    "min": 6.5,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 12,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "ocean"
+   },
+   {
+    "min": 15,
+    "type": "firstTower",
+    "team": "GEN"
+   },
+   {
+    "min": 18,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 22,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 23,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 29,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 29,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 29.4,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Gwen",
+    "role": "top",
+    "k": 6,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.24600000000000002
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 5,
+    "d": 0,
+    "a": 15,
+    "damageShare": 0.174
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Ahri",
+    "role": "mid",
+    "k": 6,
+    "d": 1,
+    "a": 10,
+    "damageShare": 0.247
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Ashe",
+    "role": "bottom",
+    "k": 7,
+    "d": 3,
+    "a": 15,
+    "damageShare": 0.26
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Seraphine",
+    "role": "support",
+    "k": 2,
+    "d": 3,
+    "a": 17,
+    "damageShare": 0.073
+   },
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "Rumble",
+    "role": "top",
+    "k": 3,
+    "d": 4,
+    "a": 2,
+    "damageShare": 0.32899999999999996
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "Nocturne",
+    "role": "jungle",
+    "k": 2,
+    "d": 5,
+    "a": 4,
+    "damageShare": 0.138
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Sylas",
+    "role": "mid",
+    "k": 2,
+    "d": 5,
+    "a": 5,
+    "damageShare": 0.195
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Lucian",
+    "role": "bottom",
+    "k": 2,
+    "d": 5,
+    "a": 5,
+    "damageShare": 0.295
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Milio",
+    "role": "support",
+    "k": 0,
+    "d": 8,
+    "a": 7,
+    "damageShare": 0.043
+   }
+  ],
+  "standout": {
+   "code": "GEN",
+   "name": "GEN Ruler",
+   "champion": "Ashe",
+   "role": "bottom",
+   "k": 7,
+   "d": 3,
+   "a": 15,
+   "damageShare": 0.26
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "GEN",
+    "text": "GEN Canyon (Lee Sin) went 5/0/15 without dying"
+   },
+   {
+    "kind": "roughDay",
+    "team": "IG",
+    "text": "IG Meiko (Milio) finished 0/8/7"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095130",
+  "matchId": "115660540726095127",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-11-08T00:00:53.034Z",
+  "patch": "16.20",
+  "durationMin": 40.2,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "IG",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "Naafiri",
+    "mid": "Locke",
+    "bottom": "Ezreal",
+    "support": "Alistar"
+   },
+   "gold15": 27163,
+   "kills": 18,
+   "towers": 5,
+   "inhibitors": 0,
+   "dragons": [
+    "ocean",
+    "hextech",
+    "mountain",
+    "mountain"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "GEN",
+   "champions": {
+    "top": "Camille",
+    "jungle": "MonkeyKing",
+    "mid": "Taliyah",
+    "bottom": "Yunara",
+    "support": "Nautilus"
+   },
+   "gold15": 24470,
+   "kills": 16,
+   "towers": 9,
+   "inhibitors": 1,
+   "dragons": [
+    "mountain",
+    "mountain"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 31.9
+  },
+  "goldDiff": [
+   0,
+   -40,
+   26,
+   -147,
+   220,
+   210,
+   347,
+   612,
+   295,
+   301,
+   507,
+   537,
+   1219,
+   2037,
+   2175,
+   2693,
+   2878,
+   4142,
+   4303,
+   3578,
+   3477,
+   3732,
+   4074,
+   2627,
+   2950,
+   2355,
+   2114,
+   2805,
+   2505,
+   2844,
+   2797,
+   118,
+   -2220,
+   -2785,
+   -1891,
+   -1565,
+   -1600,
+   -1849,
+   -1374,
+   -1870,
+   -4999
+  ],
+  "leads": {
+   "10": 507,
+   "15": 2693,
+   "20": 3477,
+   "25": 2355
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 4303,
+    "min": 18
+   },
+   "red": {
+    "gold": 4999,
+    "min": 40
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 5629,
+   "fromMin": 29,
+   "toMin": 33
+  },
+  "comeback": {
+   "team": "GEN",
+   "deficit": 4303,
+   "min": 18
+  },
+  "events": [
+   {
+    "min": 7.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "ocean"
+   },
+   {
+    "min": 11.9,
+    "type": "firstBlood",
+    "team": "IG"
+   },
+   {
+    "min": 12.9,
+    "type": "firstTower",
+    "team": "IG"
+   },
+   {
+    "min": 13.1,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "hextech"
+   },
+   {
+    "min": 19,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "mountain",
+    "behind": 3573
+   },
+   {
+    "min": 24.9,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "mountain"
+   },
+   {
+    "min": 30.4,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "mountain",
+    "behind": 2938
+   },
+   {
+    "min": 31.9,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 36,
+    "type": "dragon",
+    "team": "IG",
+    "detail": "mountain",
+    "behind": 1694
+   },
+   {
+    "min": 39.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 40.2,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "IG",
+    "name": "IG TheShy",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 3,
+    "d": 4,
+    "a": 8,
+    "damageShare": 0.23800000000000002
+   },
+   {
+    "code": "IG",
+    "name": "IG Wei",
+    "champion": "Naafiri",
+    "role": "jungle",
+    "k": 1,
+    "d": 2,
+    "a": 13,
+    "damageShare": 0.20199999999999999
+   },
+   {
+    "code": "IG",
+    "name": "IG Rookie",
+    "champion": "Locke",
+    "role": "mid",
+    "k": 11,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.226
+   },
+   {
+    "code": "IG",
+    "name": "IG JiaQi",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 3,
+    "d": 3,
+    "a": 5,
+    "damageShare": 0.282
+   },
+   {
+    "code": "IG",
+    "name": "IG Meiko",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 0,
+    "d": 5,
+    "a": 12,
+    "damageShare": 0.053
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Camille",
+    "role": "top",
+    "k": 4,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.163
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 2,
+    "d": 3,
+    "a": 10,
+    "damageShare": 0.085
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Taliyah",
+    "role": "mid",
+    "k": 3,
+    "d": 3,
+    "a": 11,
+    "damageShare": 0.294
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 7,
+    "d": 3,
+    "a": 7,
+    "damageShare": 0.40399999999999997
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Nautilus",
+    "role": "support",
+    "k": 0,
+    "d": 6,
+    "a": 11,
+    "damageShare": 0.053
+   }
+  ],
+  "standout": {
+   "code": "IG",
+   "name": "IG Rookie",
+   "champion": "Locke",
+   "role": "mid",
+   "k": 11,
+   "d": 2,
+   "a": 5,
+   "damageShare": 0.226
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "GEN",
+    "text": "Likely triple kill: GEN Ruler (Yunara) at 30:39"
+   },
+   {
+    "kind": "roughPatch",
+    "team": "GEN",
+    "text": "GEN Duro (Nautilus) died 3 times between 15:57 and 19:57"
+   },
+   {
+    "kind": "peaceful",
+    "team": null,
+    "text": "No kills before 10:00"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 40:14"
+   },
+   {
+    "kind": "damage",
+    "team": "GEN",
+    "text": "GEN Ruler (Yunara) dealt 40% of GEN's champion damage"
+   }
+  ]
  }
 ]

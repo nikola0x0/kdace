@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -182,13 +182,92 @@
   "batch": "{\"matchId\":\"115660540726095127\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":290},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":960,\"lessons\":[\"2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8\",\"O0bMUCGW8fVpXJXWYGMpgaujQRcGqtQvd4x8QAAsin0\",\"Wa2-ULj-on4ItXklHhEkJjMibZGssdWijCLVdQRtNJ4\",\"gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg\"],\"thought\":\"bb11655f6937e2f9025ef3a46f728f100b30bb6ca526ed45ed484aa6d1daa8c7\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":370},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1220,\"lessons\":[\"FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc\",\"UHD3NAjdmnUDXjYlfLo9qwU8m3FfrT3N9RiCoiDZ9fE\",\"hU8xLkJgvAKyyQEKoamdZMwxs8iNQAlmmwmKujHZRyo\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"b44a5a3a8da5596db4c0da77c898e629ea0cfad7736fc00eeb5ad1b913a839ea\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":220},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":720,\"lessons\":[\"G-3ZDftkngaCff65lH-hTPx48s9i6WzjRambhE5Hw8I\",\"hsWtS6AvodtVMkmENQle0zhr1aw6p6n4rfIv6g0i7kM\",\"r0DI--Tk-uBtoVo6VF2Utu35iWrELZQmmHF2uMajXRI\",\"wO9B2arTHQ7BNRTiPAmIKU5IIpjzCRQGCfnm2PP_Ong\"],\"thought\":\"8bec198149a5eafecda40e94d2010587ce24d38a16c36add80f97545a6cc8552\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":190},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":630,\"lessons\":[\"BHSNsh7WBhxObwv773naIeU3x_ZnXkINT7g2B-Ww9yI\",\"DSmeVrpjWFkPql_aQtwT0PM3K3FTgmCc-ln9WjPvGX0\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"Zbf2yQ_-jRoBY50DW1W3fj7TfxeWMxSYVzNbdnR65n8\"],\"thought\":\"30cd7bd80d8279db31a873fcad262d8850c4b0ac5546da330990f88aa2f010f6\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":310},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1040,\"lessons\":[\"0C-HzfXnOERtkHck2rUMVzEAE-TYlRCYffDzOwxjRP8\",\"M1M6m7ux_ZQJJZbaxveXB8bU9UDREI7ImEcwN-GSBHI\",\"VVma7_apA1Vp-S5zrtN-wckr4V6W8rJqo6oR6jp_7yM\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"5b66110316c6802638f233a4966c5afcf8fecdd0abb05452413b926ba9f84bc8\"}]}",
   "batchHash": "b0f48fd49e4129d6a474b8ee45c38fa977c717e2d2f98c286b8db88ab3a50387",
   "commitDigest": "8mpa3dKpkuRF8n5nMogG1N3K1Dkub137vpbEvQtFdXzJ",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "GEN",
+    "score": "3-0",
+    "resultDigest": "9t4f7hj2PFHq6q3ncVYkDua8wMCA8TJjYhL1d4ra5fq7"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: A 3-0 sweep, and I gave IG a game. Fine, that was too generous, but the call stands: better hands in more roles, and the LCK gap showed up exactly like I said.\n\nJungle: I'll take the half-credit, because GEN did absorb IG's early aggression, and Canyon's map control closed it with no Wei snowball. Even so, I said four games, so I'm not claiming a perfect read.\n\nMid: Draft was the story. Chovy's pool held through the Fearless lockouts and Lee Sin/Jarvan answered Naafiri, so IG never got that first-rotation steal I was hedging on. I'm happy with the read even if the scoreline was kinder than mine.\n\nADC: Every one of us handed IG a game off that 90% first-blood stat, and the numbers just said GEN were better. Lesson noted: respect early tempo, but don't pay for it with a whole game.\n\nSupport: Okay, I overrated IG's momentum, and I'm saying so with a smile. GEN's calm was the real thing: clean rotations and leads closed out, three times running. Top, you can gloat for exactly one line.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: When the better players hold the edge in most roles, I should trust that edge to close the series and stop giving the underdog a \"steal\" game for a comfort pick or early-aggression stat, because stronger hands convert leads and weaker ones just make noise. I should also rest the pick on the player gaps themselves, and only cite a region gap when the scouting report actually flags one. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "OLDSPCBwivvpP4vzZyw4S_C_i6swlLrh3ZDnkI2QQPY",
+      "jobId": "c99e824a-1fb5-4bb3-bd68-1365ad79f72a"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Early tempo still decides everything, but IG's first-blood aggression only matters if it converts into Herald, dragon and map control, and against GEN it didn't, so I shouldn't hand the weaker early-game side a whole game for a stat that doesn't turn into objective leads. Next time I'll weigh who actually converts the first 15 minutes into objectives and map control, and when that edge sits clearly with one team, I'll commit to the sweep. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "T8UU1273oQstd1HD5h4ZP-OBPndrgmBi_GAjgoBcHpg",
+      "jobId": "cfc7728a-137e-4397-9dcf-872b12f9aaa8"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: When my draft read shows the favorite's pool covering the underdog's one winning script (here, Lee Sin/Jarvan answering Naafiri and Chovy's triangle surviving the lockouts), I shouldn't hand the underdog a \"steal game\" just because that script is possible. Under Fearless, a deeper pool means the underdog's first-rotation window shrinks as the series goes on, so I should price that edge as a sweep and keep the hedge for when the favorite's answers are actually thin. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "X13MKXh2uxf1CJszfnrQM2UXMdOCBsM14rdMn0SPXHw",
+      "jobId": "bcfdab49-54c2-44b8-9827-6b18f8dd5228"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: A single flashy number like IG's 90% first-blood rate is only tempo, not a won game, until I check whether it converted into wins against strong opponents and survived the head-to-head, and GEN's 8.4k swing in the Swiss meeting already said it didn't. When record, head-to-head and game-length tendencies all point the same way, I should price the sweep instead of reflexively shaving a game off for one stat. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "P2IKhTQ_-tzvUZCr95GW8OAlfLTFcu7AgLF0OvjFmZY",
+      "jobId": "22b41113-8e1b-47dd-931d-2dcec358dd81"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: When both rooms look calm, I should trust the one whose calm shows up in concrete habits, like clean rotations and leads closed out, and not hedge a game to the other side's fast starts. A settled core that has already beaten that opponent is the stronger chemistry signal, so I'll back it without needing region talk to justify the pick. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+      "blobId": "yCndy1O4Gwqn-w-I5cRTVluVRccY-ybIdFX8avzmAQE",
+      "jobId": "de1cd720-4576-408e-8de7-f6e26bb010f6"
+    }
+  ],
   "scout": "Scout: GEN vs IG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 40-10, games 92-33 | last 10 (newest first) WWWWWWLWWW\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · Worlds 2026 3-0 · vs other regions 7-1\n  Last 25 games (19-6): GD@15 +0.4k, FB 36%, FT 64%, FD 56%, dragons 63%, 33.6 min avg, 1st baron 27:18\n  Leads @15 converted 9/12, comeback wins 2, throws 0, objectives taken while 1k+ behind 19\n  Worlds 2026 5 games (4-1): GD@15 -0.0k, FB 60%, FT 60%, FD 60%, dragons 77%, 31 min avg, 1st baron 26:30\n  Picks: TOP Rumble 4, Ambessa 3, Olaf 3 | JG Lee Sin 4, Jarvan IV 3, Nocturne 3 | MID Ryze 5, Syndra 4, Akali 3 | BOT Ezreal 5, Ashe 3, Kalista 3 | SUP Seraphine 5, Renata 3, Shen 3\n  Standout: GEN Chovy (mid) KDA 5.5 over 25 games, 23% dmg share\nIG [LPL]: 2026 series 22-26, games 64-70 | last 10 (newest first) WWWWLWLLWW\n  LPL 2026 18-25 · Worlds 2026 4-1 · vs other regions 3-1\n  Last 30 games (19-11): GD@15 +0.5k, FB 50%, FT 47%, FD 57%, dragons 56%, 32.5 min avg, 1st baron 26:24\n  Leads @15 converted 10/12, comeback wins 3, throws 1, objectives taken while 1k+ behind 17\n  Worlds 2026 10 games (7-3): GD@15 +1.4k, FB 90%, FT 60%, FD 80%, dragons 70%, 32.2 min avg, 1st baron 25:54\n  Picks: TOP Gnar 4, Rumble 4, Jayce 3 | JG Naafiri 5, Nocturne 4, Jarvan IV 3 | MID Aurora 5, Syndra 5, Annie 4 | BOT Yunara 6, Jhin 5, Aphelios 3 | SUP Lulu 7, Alistar 4, Seraphine 4\n  Standout: IG Wei (jungle) KDA 6.2 over 10 games, 18% dmg share\nHead-to-head 2026: GEN 1-0 IG\n  2026-10-23 Worlds 2026 Swiss: IG 0-1 GEN\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN swung 8.4k in 5 min (26:00-31:00) vs IG (Worlds 2026)\n  - IG came back from -5.8k at 32:00 vs WE (LPL 2026)\n  - IG threw a +5.3k lead (16:00) vs TES (LPL 2026)\nFun facts:\n  * Likely penta kill: IG Rookie (Annie) at 25:00 (vs HLE, Worlds 2026)\n  * Likely quadra kill: IG JiaQi (Yunara) at 27:58 (vs HLE, Worlds 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 24-9, LPL 16-10, LEC 16-18, CBLOL 6-10, LCS 8-15, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 4-6 against LPL in 2026; LCK 73% vs LPL 62% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  IG (LPL): 1 Worlds title (2018).",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "GEN are the right side, but the pool pays 1.00× with nobody on IG, so more AXP risks everything for zero profit, and I'm not paying for that.",
+        "decidedAt": "2026-11-07T21:30:09.566Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo says don't burn a clean setup: IG's side of the pool is empty, so more GEN stake just dilutes my own 1.00× return and adds risk with zero upside, and I'm keeping Canyon's early map control as my edge and holding the 1,220.",
+        "decidedAt": "2026-11-07T21:30:10.222Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "Nobody is on IG, so GEN pays 1.00× no matter how clean the draft read is; extra AXP can only lose if Wei's Naafiri and Rookie's Aurora steal this, so the 720 stays and the rest sits out.",
+        "decidedAt": "2026-11-07T21:30:10.272Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "With 4,570 AXP all on GEN and nothing on IG, GEN pays exactly 1.00×, so extra stake can only lose and never earn, and the numbers say to stand pat.",
+        "decidedAt": "2026-11-07T21:30:08.379Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust GEN's settled room, but nobody's backing IG, so extra AXP on GEN just comes back to me at 1.00× if I'm right and is gone if IG's calm steals the series, which isn't worth it.",
+        "decidedAt": "2026-11-07T21:30:09.048Z"
+      }
+    ]
   }
 }

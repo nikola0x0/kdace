@@ -8721,5 +8721,18 @@
   "winsB": 1,
   "winner": "T1",
   "league": "Worlds 2026"
+ },
+ {
+  "matchId": "115660540726095127",
+  "startTime": "2026-11-07T22:00:00Z",
+  "block": "Semifinals",
+  "bestOf": 5,
+  "state": "completed",
+  "teamA": "GEN",
+  "teamB": "IG",
+  "winsA": 3,
+  "winsB": 0,
+  "winner": "GEN",
+  "league": "Worlds 2026"
  }
 ]

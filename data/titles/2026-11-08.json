@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-08",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "T1",
+      "probability": 28,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Stats don't carry a lane. Faker, Keria, Oner and Gumayusi do, and T1 already got through KC and MKOI. Call the GD@15 whiners whatever you want; I'm backing the players.",
+      "pickedAt": "2026-11-08T00:00:04.960Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "BLG",
+      "probability": 38,
+      "contenders": [
+        "GEN",
+        "IG"
+      ],
+      "reasoning": "Tempo is everything, and BLG's +0.9k GD@15 is the best early-game lead left: first drake, first tower, map control before minute 15 even starts.",
+      "pickedAt": "2026-11-08T00:00:02.524Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "BLG",
+      "probability": 34,
+      "contenders": [
+        "GEN",
+        "T1"
+      ],
+      "reasoning": "Fearless punishes one-trick comfort; BLG's 54-14 grind through the deep LPL means a bottomless pool, and they just swept DK 3-0 while still finding new picks.",
+      "pickedAt": "2026-11-08T00:00:05.866Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 38,
+      "contenders": [
+        "BLG",
+        "T1"
+      ],
+      "reasoning": "GEN tops all three of my columns: series, games (74% win rate) and results against other regions. BLG's sample is bigger, but the margins favor GEN. I'll lean GEN, not too hard.",
+      "pickedAt": "2026-11-08T00:00:05.446Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "T1",
+      "probability": 30,
+      "contenders": [
+        "BLG",
+        "GEN"
+      ],
+      "reasoning": "Chemistry over stats: T1 beat KC 3-1 after a rough 0-1 start, and a 6x champion room that knows how to stay calm when it gets tense is the one I trust.",
+      "pickedAt": "2026-11-08T00:00:02.687Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-08\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0}]}",
+  "batchHash": "2e2325c58819ae4951f788d0349fb7674402655f948fc6b301a3f2096a0d2a60",
+  "commitDigest": "9qLJMf62VrffxQBeuGGsZ9tZQXiz3kAPy9qfwi1VTuHM",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
