@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-09",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "BLG",
+      "probability": 31,
+      "contenders": [
+        "GEN",
+        "T1"
+      ],
+      "reasoning": "Everyone's drooling over GEN's clean sweeps, but BLG's lanes win harder and their stars carry games alone, and I trust Bin and Knight over any hype train.",
+      "pickedAt": "2026-11-09T00:00:06.490Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "BLG",
+      "probability": 42,
+      "contenders": [
+        "GEN",
+        "T1"
+      ],
+      "reasoning": "Early game is the whole game, and BLG's +0.9k GD@15 is the best tempo engine left: first drakes, first Herald, map owned before minute 15. Rest is cleanup.",
+      "pickedAt": "2026-11-09T00:00:02.790Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "BLG",
+      "probability": 31,
+      "contenders": [
+        "GEN",
+        "T1"
+      ],
+      "reasoning": "Fearless rips comfort picks away, and BLG's LPL grind gives them the deepest bench of flex answers; a +0.9k GD@15 says they win the draft before the game starts.",
+      "pickedAt": "2026-11-09T00:00:06.294Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 40,
+      "contenders": [
+        "BLG",
+        "T1"
+      ],
+      "reasoning": "GEN tops the board on game win rate (about 75%) and series rate, and they're 9-1 against other regions. BLG is close behind, but GEN has the cleaner numbers.",
+      "pickedAt": "2026-11-09T00:00:03.918Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "T1",
+      "probability": 27,
+      "contenders": [
+        "GEN",
+        "BLG"
+      ],
+      "reasoning": "Zero titles and a wobbly WLWL form line, but T1 is the room that stays calm when the lights go hot, and I'll back that six-time-champion nerve over the cleaner stats.",
+      "pickedAt": "2026-11-09T00:00:04.703Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-09\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"T1\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0}]}",
+  "batchHash": "f25fdeab7ef01e4c7d50c10578531a985ad7125092631c64ff768b50ae0a0b59",
+  "commitDigest": "BVPG9oVA2vHv7s2RyXuA5FeEyS6RNpTi2miCGCcnfZp7",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}

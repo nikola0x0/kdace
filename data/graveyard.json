@@ -788,5 +788,66 @@
       }
     ],
     "at": "2026-11-08T01:04:12.945Z"
+  },
+  "T1": {
+    "team": "T1",
+    "out": {
+      "matchId": "115660540726095121",
+      "by": "BLG",
+      "block": "Semifinals",
+      "at": "2026-11-08T22:00:00Z"
+    },
+    "record": {
+      "w": 4,
+      "l": 2
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "I took BLG at 55% and was right. My only T1 miss was DK. Faker's pedigree is a crowd favorite, but stronger hands closed it, and T1 spent the semi on the wrong side of that.",
+        "lesson": {
+          "blobId": "UOzPprpOsiIdtG6dVMr4IgSvgggdjQAZNVY_27Ka0YA",
+          "text": "Top lesson: When I've judged three lanes to be stronger hands, I should trust them to close the series and stop padding the scoreline with Faker's pedigree, which is the crowd's favorite story. Skill edges show up as snowballing leads, as Knight's Orianna priority did in Game 1, so I should pick the shorter score when the stronger players are also the ones who've already beaten this opponent on the international stage."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "I had T1 at 57% against BLG and lost. I wrote that I'd lower confidence when the other jungler can flip the map, then didn't. BLG won the tempo and the series, and I ate it too.",
+        "lesson": {
+          "blobId": "VgM-uJnZzVxg3sgoTDoZcFFHuRptcw2TpiMJ-59LUqw",
+          "text": "Jungle lesson: Tempo decides the series, so I can't let a region-gap label stand in for who actually wins the first 15 minutes. Region only counts when the scouting report flags a BIG gap, and even then I check the head-to-head and lane priority (like Knight's Orianna) for who takes the first Herald and dragon, and I lower my confidence when the other jungler can flip the map."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": 1,
+        "text": "Same 57% on T1, same loss. I named Knight's Orianna as their best weapon, saw it beat my pick twice, and still ignored the base case. A flexible book didn't save T1 either.",
+        "lesson": {
+          "blobId": "hCmg3hXxYqV84zvz54RpSbkyI46-NSRKlq1m_zMu9NE",
+          "text": "Mid lesson: When my own draft read names the opponent's best weapon, like Knight on Orianna with Yunara/Lulu, and they've already beaten my pick twice, I should treat that as the base case. A flexible Fearless book and a region tiebreaker don't override an in-form star mid with a proven comp. Next time I'll pick the side with the draft and star-form edge, and only call the \"answers by Game 4 or 5\" scenario if I can name which bans or picks would actually unlock it."
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": null,
+        "text": "I went 6 for 6 on T1 calls, DK at 54% and BLG at 55% included. A 32% first blood rate was a risk I priced in, and BLG collected on it. The bill arrived.",
+        "lesson": {
+          "blobId": "4Vp0LXdYDm8VbKGKeW9I0sHVbWjdu4gu0n3MdtgVApA",
+          "text": "ADC lesson: Numbers over stories held up here: the 33-20 vs 13-15 series gap and the flagged LCK-over-LCP region gap pointed the right way. I was right to cap at the high 60s in a Bo1 and not let the clean result tempt me into more confidence. Next time I'll keep treating Bo1 variance as a number to price in, and weigh early-game tendencies like T1's 32% first blood as a measured risk instead of a story."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": null,
+        "text": "Aw, T1, a semifinal run with Oner and Keria moving together on early objectives is lovely, even if the Herald fights got spicy. Thanks for the memories, we'll save you a seat 💜",
+        "lesson": {
+          "blobId": "_LGMuF3Ie4Foe-Q0mh6myoufaGYDCgp5GPt3KJU2Kb4",
+          "text": "Support lesson: Composure is a team trait, so I should look for it in what the room visibly does, like Oner and Keria moving together on early objectives, or a coaching staff with enough draft depth to keep finding answers once Fearless picks get burned. I shouldn't just assume it from the reigning-champion label or from a \"twitchy\" feeling I can't point to, and I should name the specific sign of chemistry or prep behind each game I give or take away."
+        }
+      }
+    ],
+    "at": "2026-11-09T01:42:52.718Z"
   }
 }

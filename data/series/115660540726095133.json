@@ -1,0 +1,194 @@
+{
+  "series": {
+    "matchId": "115660540726095133",
+    "startTime": "2026-11-14T19:00:00Z",
+    "block": "Finals",
+    "bestOf": 5,
+    "state": "unstarted",
+    "teamA": "GEN",
+    "teamB": "BLG",
+    "winsA": 0,
+    "winsB": 0,
+    "winner": null
+  },
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 66,
+      "reasoning": "Chovy against Knight is the whole series and I won't pretend it's a gimme: Knight has been eating mids alive, and Viper can drag any game into a scramble. But GEN has the stronger player in more roles, with Ruler and Canyon driving early tempo, and Chovy and Ruler don't wilt on leftover picks in Fearless. The LCK-over-LPL gap is real here too, so BLG steals a game with Knight's chaos, and GEN closes the other three.",
+      "usedLessons": [
+        {
+          "blobId": "-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE",
+          "text": "Top lesson: Individual skill still wins series, but a star's lane edge only counts if it turns into a lead that carries past the early game, so I should stop assuming three lane advantages beat one elite player like Creme who can pull games into a scramble. Next time I'll weigh whether the stronger players can actually close games when a rival star neutralizes the map. I won't let BLG's depth or the crowd's hype carry a confident 2-0. (from Swiss BLG vs TES; picked BLG 2-0, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:00:32.692141Z"
+        },
+        {
+          "blobId": "uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc",
+          "text": "Top lesson: One win doesn't prove my Chovy-over-Rookie call, because the debate showed GEN took early tempo and the map, not that Chovy won lane. Next time I'll back the side whose players are stronger across several roles, especially jungle and bot, since that's what builds early tempo, and not lean on a single marquee lane. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:23:46.462446Z"
+        },
+        {
+          "blobId": "e8wBS-ROWnGIrTlLkoPS51PncERrrBCTefrws83QCUw",
+          "text": "Top lesson: Individual skill still wins series, but I have to judge it by who is actually winning their matchup now, and Knight beating Zeka in mid showed that a past final win and a \"best pair\" label don't settle a lane. When I name one matchup as my only way to be wrong, I should treat it as the main thing to check before I pick, not a disclaimer I attach to a pick I've already made. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+          "createdAt": "2026-11-01T05:55:21.805676Z"
+        },
+        {
+          "blobId": "sGEByxJuMHMEbBi3XOlb7K-pW11hIYExOwO4KgWQvBk",
+          "text": "Top lesson: When the player gap is this lopsided, stop penciling in a \"stolen game\" for the underdog. Fearless only drains comfort picks from players who lack the skill to win on the leftovers, and Chovy and Ruler aren't those players. Next time, back the sweep and let the stronger players finish the job. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+          "createdAt": "2026-11-05T00:43:34.832634Z"
+        }
+      ],
+      "pickedAt": "2026-11-09T01:39:16.255Z",
+      "thinking": "I'm weighing whether the LCK region gap should count, since the report flags it as big even though my own approach is to start from lane matchups. I'm deciding to let the flag count and to use percentages only as light support, then turning to the lane matchups, starting with Chovy against Knight.\n\nI'm sizing up the matchups now: Knight against Zeka has gone his way and his KDA is strong, so Chovy against Knight looks like a real fight. Among the lanes, I'm noting the roster details I can't confirm for 2026, and checking which lanes the lessons single out, Viper, Bin and Knight.\n\nI'm settling on GEN 3-1 with a win probability around 66%, and I'm leaning on the lessons about lane matchups, the side that is stronger across several roles, and close games. I'm skipping the scouting report's numbers and not quoting percentages.",
+      "stake": 1320,
+      "scoreStake": 400
+    },
+    {
+      "player": "analyst-jungle",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 67,
+      "reasoning": "It's all tempo, and GEN turn the first fifteen minutes into dragons, towers and a controlled Baron setup, with Canyon and Chovy steering the map. BLG's early blood is real, with Knight's Orianna priority and Jarvan or Lee Sin skirmishes giving them a path to one fast game, but it hasn't reliably become gold or map control, and the LCK-over-LPL gap is showing up in who converts. I take GEN to close it out, but BLG's early-fight game steals one.",
+      "usedLessons": [
+        {
+          "blobId": "Kt-DzXlpekN74Gp75bE7bTKsJJ8ZA2YO_xpqi6zAR60",
+          "text": "Jungle lesson: If my read says one side owns the first 15 minutes (Herald, first dragon, first tower), I shouldn't hedge with a \"stolen game\" built on one Swiss comeback anecdote, because that contradicts my own thesis. Before giving the underdog a game, I need to name how they'd win the early map, such as a fearless draft that leaves them tempo picks. If they can't, I call the sweep. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+          "createdAt": "2026-11-05T00:44:12.065707Z"
+        },
+        {
+          "blobId": "FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc",
+          "text": "Jungle lesson: GEN won because Canyon owned the first 15 minutes (the Herald and dragon tempo I flagged), so when a team with a proven jungle edge faces an early-aggro opponent, I should trust the tempo matchup and lean harder instead of hedging at 57. HLE's blood-in-the-first-five setups only matter if they convert into objectives, so next time I'll check whether they've actually turned early kills into Herald and towers against this opponent before fearing the snowball. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:29:52.867980Z"
+        },
+        {
+          "blobId": "prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ",
+          "text": "Jungle lesson: The early game still decides everything, so when a big region gap is flagged, I should confirm it shows up as first-15-minute tempo (jungle pathing, lane priority, first objectives) and not lean on star names or records. I can also borrow Mid's draft point: a deep draft is what hands you that early priority, so I'll check whether a team's picks set up the first tower and dragon before I raise my confidence. (from Swiss GEN vs IG; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-23T19:24:16.787466Z"
+        },
+        {
+          "blobId": "GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ",
+          "text": "Jungle lesson: Tempo is decided by who turns early pressure into first dragon and Herald, not by which champions sound aggressive in draft, so I'll weigh each team's recent objective conversion and what their support enables, such as CoreJJ's setups for an early-priority jungler, above jungle pick names. A big region gap still sets my baseline, but if the underdog's early game is clearly cleaner, I'll stop assuming the favorite's lead will hold and lean toward the sweep. (from Swiss TLAW vs AL; picked AL 2-1, actual TLAW 2-0)",
+          "createdAt": "2026-10-26T22:49:03.565623Z"
+        }
+      ],
+      "pickedAt": "2026-11-09T01:39:17.834Z",
+      "thinking": "I need to settle on a pick for the GEN vs BLG Finals. The region gap points toward LCK, and BLG's early-game numbers look strong, but GEN has a habit of converting leads and coming back from behind, while BLG has been throwing games, so I should weigh how I could be wrong here.\n\nI'm weighing GEN's habit of converting leads against BLG's early-game numbers, and checking whether BLG's strong first blood and first dragon rates actually turn into gold leads, which they don't seem to at Worlds. GEN's record looks better overall, so I'm leaning toward GEN, probably in a 3-1 series.\n\nI'm going to name how BLG could take the early map, then commit to GEN 3-1 at about 68%.",
+      "stake": 1570,
+      "scoreStake": 470
+    },
+    {
+      "player": "analyst-mid",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 72,
+      "reasoning": "It's a draft final, and GEN's book is simply deeper: Chovy can flip between Ryze, Galio and Syndra, the jungle can switch between Lee Sin, Qiyana and Jarvan, and Ruler is on comfort picks. BLG's real weapons are Knight's Orianna and the Yunara/Lulu pair. Under Fearless those get spent early, and the LCK-over-LPL gap is the tiebreaker on top of the draft read. I'm giving BLG one game because Knight is in form and an Orianna/Yunara/Lulu draft with Jarvan or Lee priority can snowball. If BLG locks that core in game 1 and GEN can't answer the jungle tempo, I'm dropping this to a coin flip. But GEN's answers don't look thin, so I expect them to close it out in four.",
+      "usedLessons": [
+        {
+          "blobId": "TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0",
+          "text": "Mid lesson: I called the exact draft threat (Creme on Ryze/Orianna with Lee Sin priority) and still backed BLG at 66, so when a Fearless series hinges on a pick I can't confirm BLG will deny, I should shrink my confidence instead of trusting their deeper book to cover it. Pool depth only wins if it's drafted around the opponent's best comfort picks, and I should state that flip trigger as a confidence cap before the series, not as a post-match excuse. (from Swiss BLG vs TES; picked BLG 2-1, actual TES 2-1)",
+          "createdAt": "2026-10-30T01:01:26.583599Z"
+        },
+        {
+          "blobId": "th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o",
+          "text": "Mid lesson: In a Bo1, the draft decides the game, so I'll keep naming the exact picks and bans that would flip me (Ryze or Lee Sin priority, a free Caitlyn) and check whether they actually happened, rather than crediting the draft because the pick won. When the pools are close, a flagged BIG REGION GAP is a legitimate tiebreaker that sits on top of the draft read and never replaces it. (from Swiss BLG vs KC; picked BLG, actual BLG 1-0)",
+          "createdAt": "2026-10-26T18:49:32.534459Z"
+        },
+        {
+          "blobId": "RaHhH-4C_vY2XlQV2JrJMu9GWA4-WVg5OqX6oCKGZx4",
+          "text": "Mid lesson: Under Fearless Draft, a narrow pool is a liability. When the underdog's best weapons sit in one or two signature pairs, like Berserker's Lucian/Yunara with an Alistar/Lulu engage, and the favorite has deep pools with its stars on comfort picks, I should expect those weapons to be spent early and price the sweep, not a \"stolen game.\" I'll only keep the 3-1 if the underdog shows real depth beyond its first-rotation picks. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+          "createdAt": "2026-11-05T00:44:39.184683Z"
+        },
+        {
+          "blobId": "X13MKXh2uxf1CJszfnrQM2UXMdOCBsM14rdMn0SPXHw",
+          "text": "Mid lesson: When my draft read shows the favorite's pool covering the underdog's one winning script (here, Lee Sin/Jarvan answering Naafiri and Chovy's triangle surviving the lockouts), I shouldn't hand the underdog a \"steal game\" just because that script is possible. Under Fearless, a deeper pool means the underdog's first-rotation window shrinks as the series goes on, so I should price that edge as a sweep and keep the hedge for when the favorite's answers are actually thin. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+          "createdAt": "2026-11-08T01:02:25.328033Z"
+        }
+      ],
+      "pickedAt": "2026-11-09T01:39:18.622Z",
+      "thinking": "I'm weighing the GEN vs BLG finals, a best-of-five, and the LCK's regional strength looks like a big factor here. GEN has a strong recent run, sweeping IG and LYON 3-0, while BLG has beaten DK and HLE but has been throwing leads. I'm starting to sketch GEN's pool picks, Olaf, Rumble, and Ambessa.\n\nI'm comparing the team pools now: GEN's picks run through Olaf, Rumble, and Ambessa up top, with Jarvan and Lee Sin in the jungle, while BLG leans on Orianna and the Yunara/Lulu pairing.\n\nI'm settling on 3-1 with GEN at about 72% to take the series, since BLG has been winning games against TES and the other top teams. Running the per-game odds through a best-of-five, 3-0 comes out near 24% and 3-1 near 36%.\n\nI'm working through the binomial math for the series: a 3-0 sweep comes out around 24%, and 3-1 is the most likely outcome, which lands the series near 72% for GEN.",
+      "stake": 1380,
+      "scoreStake": 410
+    },
+    {
+      "player": "analyst-adc",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 69,
+      "reasoning": "Numbers over stories, and this Final rests on a flagged big region gap, a 10-1 Worlds game record for GEN and no head-to-head to muddy it. Chovy's side has finished leads and clawed back from deep holes without ever throwing one, while BLG, Knight and all, have thrown three leads and their 82% first-blood rate only shows they start fast, not that they close. BLG are no pushovers: First Stand champions, MSI finalists, and LCK is just 5-7 against the LPL this year, so I'm giving them a game or two rather than a sweep, and I stay short of 75 because a Bo5 still has variance.",
+      "usedLessons": [
+        {
+          "blobId": "P2IKhTQ_-tzvUZCr95GW8OAlfLTFcu7AgLF0OvjFmZY",
+          "text": "ADC lesson: A single flashy number like IG's 90% first-blood rate is only tempo, not a won game, until I check whether it converted into wins against strong opponents and survived the head-to-head, and GEN's 8.4k swing in the Swiss meeting already said it didn't. When record, head-to-head and game-length tendencies all point the same way, I should price the sweep instead of reflexively shaving a game off for one stat. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+          "createdAt": "2026-11-08T01:02:44.911342Z"
+        },
+        {
+          "blobId": "UuEeQ4-5PpMldPbtp17MUwIsczx4txLWNXe1KEdfBXw",
+          "text": "ADC lesson: When the head-to-head cuts both ways, I should add up every series and game between the two teams (BLG's 3-1 knockout win and HLE's 3-2 final) instead of letting one headline result tip the pick. If the combined record is close to even, my confidence should sit near 50 and not shade toward a story, even when the region flag leans that way. (from Swiss HLE vs BLG; picked HLE 2-1, actual BLG 2-0)",
+          "createdAt": "2026-11-01T05:56:56.682344Z"
+        },
+        {
+          "blobId": "gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg",
+          "text": "ADC lesson: The head-to-head record (now 7-1) and the comeback numbers lined up with the result, so when those cleaner stats agree, I can lean harder, and a flashy stat like HLE's 71% first blood should get less weight when GEN's record from behind and HLE's zero comeback wins contradict what it implies. I'll keep weighing the whole set of numbers, such as records, head-to-heads and game-length tendencies, instead of letting one headline stat decide, and I'll stay cautious in a best of 1, where one game gives us little data. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:30:47.095467Z"
+        },
+        {
+          "blobId": "2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8",
+          "text": "ADC lesson: When a flagged big region gap and a direct head-to-head (HLE's 3-0 at MSI) point the same way, I should lean on them and set confidence by that agreement, not by hype about individual players or a \"calm room.\" One clean 2-0 doesn't show 68 was too low, because a Bo3 stays high-variance and my confidence should still come from the numbers, not from the sweep. (from Swiss G2 vs HLE; picked HLE 2-0, actual HLE 2-0)",
+          "createdAt": "2026-11-01T05:49:48.734845Z"
+        }
+      ],
+      "pickedAt": "2026-11-09T01:39:18.391Z",
+      "thinking": "I'm comparing the two teams' records: GEN sits at 42-10 in series and 98-33 in games (about 74.8%), with a 5-0 series mark at Worlds, while BLG is at 54-14 in series and 133-55 in games (about 70.7%), going 4-2 in series at Worlds. I'm also noting the flagged regional gap, that LCK is considered stronger, and that they haven't met head-to-head in 2026, and I'm checking GEN's knockout wins over IG and LYON, both 3-0.\n\nI'm tallying the head-to-head and Worlds records: BLG beat HLE and KC, lost to TES 2-1 in the Swiss stage, and finished 4-2 at Worlds. Looking at game length, comeback wins, and throws, with BLG's first-blood rate rating less weight in my view. I'm weighing the big regional gap as a major factor against the sample size, and settling on GEN at roughly 70% with a likely 3-0 or 3-1 finish.\n\nI'm working through the odds for a best-of-five at about 0.6 per game, and the 3-1 outcome comes out as the most likely single scoreline. That puts the series win near 69%, so I'm settling on 3-1.\n\nI'm settling on the comeback and throw numbers as the core evidence: GEN's 10-1 record at Worlds against BLG's three throws. I'll keep the reasoning to a couple of sentences and leave the scouting figures out.",
+      "stake": 1800,
+      "scoreStake": 540
+    },
+    {
+      "player": "analyst-support",
+      "winner": "GEN",
+      "score": "3-1",
+      "winProbability": 68,
+      "reasoning": "BLG walk in loose and together after the DK sweep, and Knight can steal a game by himself. But GEN's calm is the kind you can see on the Rift: clean early rotations, Chovy comfortable in the draft, and leads closed out without a wobble, while BLG have stumbled at the finish before, including the MSI final. I'll give BLG one game off that fire, but the steadier room, which already has finals-stage titles behind it, lifts the trophy.",
+      "usedLessons": [
+        {
+          "blobId": "H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8",
+          "text": "Support lesson: I was right that GEN's composure counted, but I'm not going to claim the win was proof of chemistry when Canyon's early control and Chovy's comfortable draft explain much of it. Next time I'll look for concrete signs of how a team's mood shows up, such as clean early rotations, calls made under pressure and whether leads get closed out, and I'll use them to judge how far the calm room matters instead of just assuming it. (from Swiss GEN vs HLE; picked GEN, actual GEN 1-0)",
+          "createdAt": "2026-10-26T06:31:09.166314Z"
+        },
+        {
+          "blobId": "0nEI5v7glWZPiPX3AynvK_ZSp8tiy2YiIRFdIGhBTgk",
+          "text": "Support lesson: A team's chemistry only matters if it changes the scoreboard, and LYON's calm kept them starting from behind while GEN's composure and coaching-led drafting never cracked, so I should read both rooms before giving the underdog's good vibes a stolen game. When the favorite's room is just as steady and its prep is sharper (GEN drafting around LYON's burned picks), I should trust that the better-prepared team keeps control and not assume a warm underdog will find a comeback. (from Quarterfinals GEN vs LYON; picked GEN 3-1, actual GEN 3-0)",
+          "createdAt": "2026-11-05T00:45:39.462140Z"
+        },
+        {
+          "blobId": "yCndy1O4Gwqn-w-I5cRTVluVRccY-ybIdFX8avzmAQE",
+          "text": "Support lesson: When both rooms look calm, I should trust the one whose calm shows up in concrete habits, like clean rotations and leads closed out, and not hedge a game to the other side's fast starts. A settled core that has already beaten that opponent is the stronger chemistry signal, so I'll back it without needing region talk to justify the pick. (from Semifinals GEN vs IG; picked GEN 3-1, actual GEN 3-0)",
+          "createdAt": "2026-11-08T01:03:11.024256Z"
+        },
+        {
+          "blobId": "sWl1n6T6ZtljNkmUgjm0_Z1Qe494SAE-KdRO_rcXGFY",
+          "text": "Support lesson: Chemistry still decides series, but I should read both rooms in the current moment, not lean on one past episode like DK's calm against T1, and ask which team's morale is rising and which is just holding steady. When one side looks loose and together after a big win (as BLG did after beating HLE), I should treat that momentum as stronger evidence than the other side's steadiness, and not call a five-game war on the strength of one comeback story. (from Quarterfinals DK vs BLG; picked DK 3-2, actual BLG 3-0)",
+          "createdAt": "2026-11-06T00:43:18.011235Z"
+        }
+      ],
+      "pickedAt": "2026-11-09T01:39:17.986Z",
+      "thinking": "I'm weighing GEN against BLG in the finals, where the region gap looks large since LCK is stronger. My instinct is that the team's chemistry and morale will decide it, so I want to read both rooms in the moment and ask which side has the sharper reason to be locked in, rather than letting the region gap do that reading for me. GEN comes in riding a 5-0 run at Worlds and sweeps of LYON and IG, which makes their current mood hard to ignore.\n\nI'm checking whether BLG's loose, together mood after a big win counts for more than GEN's 5-0 run and their concrete habits of comeback wins and clean closing. BLG's finals record and their stumbling at the finish pull against that, and the region gap still stays in the picture. Leaning GEN, something like 3-1 at around 68%.\n\nI'm settling on the reasoning now: GEN's calm shows in clean rotations and Chovy's comfort, with no throws. BLG is loose and Knight is hot, but the MSI final loss could make finals nerves bite, so GEN's room only has to hold steady against that.",
+      "stake": 1380,
+      "scoreStake": 410
+    }
+  ],
+  "batch": "{\"matchId\":\"115660540726095133\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":540},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800,\"lessons\":[\"2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8\",\"P2IKhTQ_-tzvUZCr95GW8OAlfLTFcu7AgLF0OvjFmZY\",\"UuEeQ4-5PpMldPbtp17MUwIsczx4txLWNXe1KEdfBXw\",\"gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg\"],\"thought\":\"122018bb21de12ee91e31208e76e143003a38964695943ac84cda45bf809c725\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":470},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1570,\"lessons\":[\"FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"Kt-DzXlpekN74Gp75bE7bTKsJJ8ZA2YO_xpqi6zAR60\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"bbfcd801bb9026b0d80a032e7a0fae9eaca3680811993e5ff3edfbaffbeeffd3\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":410},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1380,\"lessons\":[\"RaHhH-4C_vY2XlQV2JrJMu9GWA4-WVg5OqX6oCKGZx4\",\"TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0\",\"X13MKXh2uxf1CJszfnrQM2UXMdOCBsM14rdMn0SPXHw\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"640bd4767bd1563d81580d60f8df83fc3c0e5c8db7aba6bf7f4b20b09ed4e93f\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":410},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1380,\"lessons\":[\"0nEI5v7glWZPiPX3AynvK_ZSp8tiy2YiIRFdIGhBTgk\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"sWl1n6T6ZtljNkmUgjm0_Z1Qe494SAE-KdRO_rcXGFY\",\"yCndy1O4Gwqn-w-I5cRTVluVRccY-ybIdFX8avzmAQE\"],\"thought\":\"ff03113efe5e6d1dfeca16ed5104ba5042799b53b6e05687487ce7fef6a335e0\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":400},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1320,\"lessons\":[\"-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE\",\"e8wBS-ROWnGIrTlLkoPS51PncERrrBCTefrws83QCUw\",\"sGEByxJuMHMEbBi3XOlb7K-pW11hIYExOwO4KgWQvBk\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"508a14caaa72f36239dea672f5151d759b02a9d38a411a402fe61ccc81b2c279\"}]}",
+  "batchHash": "c191c2c3f834e6e665ca7d352efd1fda108a879db98164beb46938b12cc9f8d0",
+  "commitDigest": "BZcHkXABsZ4zFurjFKHSWvqaBkBFg9nPvPtSN1ALVMbf",
+  "result": null,
+  "axp": null,
+  "debate": null,
+  "lessons": [],
+  "scout": "Scout: GEN vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 42-10, games 98-33 | last 10 (newest first) WWWWWWWWLW\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · Worlds 2026 5-0 · vs other regions 9-1\n  Last 31 games (25-6): GD@15 +0.6k, FB 39%, FT 61%, FD 52%, dragons 62%, 33.4 min avg, 1st baron 27:06\n  Leads @15 converted 12/15, comeback wins 3, throws 0, objectives taken while 1k+ behind 21\n  Worlds 2026 11 games (10-1): GD@15 +0.7k, FB 55%, FT 55%, FD 45%, dragons 67%, 31.9 min avg, 1st baron 26:36\n  Picks: TOP Olaf 5, Rumble 4, Ambessa 3 | JG Lee Sin 5, Qiyana 5, Jarvan IV 4 | MID Ryze 5, Galio 4, Syndra 4 | BOT Ashe 5, Ezreal 5, Jhin 4 | SUP Seraphine 7, Leona 3, Nautilus 3\n  Standout: GEN Chovy (mid) KDA 5.9 over 31 games, 24% dmg share\nBLG [LPL]: 2026 series 54-14, games 133-55 | last 10 (newest first) WWLWWLLWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 4-2 · vs other regions 12-3\n  Last 31 games (22-9): GD@15 +0.9k, FB 61%, FT 61%, FD 58%, dragons 59%, 32.7 min avg, 1st baron 25:00\n  Leads @15 converted 12/13, comeback wins 1, throws 3, objectives taken while 1k+ behind 11\n  Worlds 2026 11 games (8-3): GD@15 +0.2k, FB 82%, FT 55%, FD 73%, dragons 65%, 33.9 min avg, 1st baron 27:30\n  Picks: TOP Ambessa 6, Camille 5, Gnar 4 | JG Jarvan IV 5, Lee Sin 5, Pantheon 5 | MID Orianna 8, Ahri 3, Aurora 3 | BOT Yunara 7, Ashe 6, Ezreal 5 | SUP Lulu 7, Nautilus 5, Renata 4\n  Standout: BLG Knight (mid) KDA 10.5 over 11 games, 28% dmg share\nHead-to-head 2026: none\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN came back from -4.3k at 18:00 vs IG (Worlds 2026)\n  - BLG threw a +4.9k lead (28:00) vs TES (Worlds 2026)\n  - BLG came back from -4.7k at 39:00 vs HLE (Worlds 2026)\nFun facts:\n  * Likely quadra kill: BLG Knight (Orianna) at 41:14 (vs HLE, Worlds 2026)\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 27-10, LPL 17-11, LEC 16-19, CBLOL 6-10, LCS 8-16, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 5-7 against LPL in 2026; LCK 73% vs LPL 61% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  BLG (LPL): no Worlds titles; lost final 2024.",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
