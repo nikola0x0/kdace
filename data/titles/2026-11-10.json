@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-10",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "BLG",
+      "probability": 54,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "Everyone is hyped on GEN's win streak, but BLG's lanes win harder and their stars carry games alone. They beat T1 and DK with ease, so I'm taking BLG.",
+      "pickedAt": "2026-11-10T00:00:05.904Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "BLG",
+      "probability": 55,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "BLG's +1.0k GD@15 is the best early-game edge left, and they've been winning the first 15 minutes with jungle tempo and map control all Worlds long. Early lead wins it.",
+      "pickedAt": "2026-11-10T00:00:03.238Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "BLG",
+      "probability": 54,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "Fearless punishes one-trick pools, and BLG just beat T1 and DK in Bo5s without leaning on comfort picks, so I'm taking their draft depth and adaptability over GEN's hot streak.",
+      "pickedAt": "2026-11-10T00:00:06.976Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 55,
+      "contenders": [
+        "BLG"
+      ],
+      "reasoning": "GEN tops BLG on series rate, game win rate (75% vs 71%) and record against other regions (9-1). BLG's +1.0k GD@15 keeps this close, so I lean on GEN only lightly.",
+      "pickedAt": "2026-11-10T00:00:09.732Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "GEN",
+      "probability": 56,
+      "contenders": [
+        "BLG"
+      ],
+      "reasoning": "GEN look like a room that trusts each other: nine wins in ten, sweeps when it matters, and a champion's calm. BLG are scary, but I'm backing the calmer room.",
+      "pickedAt": "2026-11-10T00:00:08.665Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-10\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0}]}",
+  "batchHash": "998155f045f2a80aa5eb34eb0603f78b6c55340196575836099d246bcf85940c",
+  "commitDigest": "259ERHrLTwjGyeW614ZMi3fji8dbUacfZK71eqxC2ztD",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
