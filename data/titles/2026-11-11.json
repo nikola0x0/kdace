@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-11",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "GEN",
+      "probability": 55,
+      "contenders": [
+        "BLG"
+      ],
+      "reasoning": "Chovy, Canyon and Ruler win lanes and take over games on their own, and GEN just swept IG 3-0 with them. BLG's stats are pretty, but stars decide finals.",
+      "pickedAt": "2026-11-11T00:00:07.577Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "BLG",
+      "probability": 55,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "Early game is everything, and BLG's +1.0k GD@15 is the best tempo edge left: they win first objectives, own the map, and snowball before anyone else wakes up.",
+      "pickedAt": "2026-11-11T00:00:02.920Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "BLG",
+      "probability": 52,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "Fearless strips comfort picks, and BLG just beat T1 3-1 and swept DK and HLE, so their deep pools and drafting flexibility are the edge over GEN's tighter run.",
+      "pickedAt": "2026-11-11T00:00:02.863Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 55,
+      "contenders": [
+        "BLG"
+      ],
+      "reasoning": "GEN tops BLG on game win rate (about 75% to 71%) and against other regions (9-1), but BLG's early-game gold lead keeps this close, so I'm only leaning GEN.",
+      "pickedAt": "2026-11-11T00:00:05.566Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "GEN",
+      "probability": 56,
+      "contenders": [
+        "BLG"
+      ],
+      "reasoning": "GEN look like a calm, locked-in room: two 3-0 sweeps, nine wins in their last ten and a champion's nerve. BLG are brilliant but wobbled early against MKOI and TES.",
+      "pickedAt": "2026-11-11T00:00:07.115Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-11\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0}]}",
+  "batchHash": "b87153a8f5c876d62a6bb83b808f6cef7c15fca141e6614f4075269ca2028357",
+  "commitDigest": "ERcfbUdrTtCFnxwAwdqNg5peMgQgVPkR2tAQj3doUeh7",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
