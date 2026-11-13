@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-13",
+  "status": "committed",
+  "picks": [
+    {
+      "player": "analyst-top",
+      "champion": "BLG",
+      "probability": 52,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "Everyone's drooling over GEN's win streak, but BLG's stars just beat T1 and DK, and they win lanes by +1.0k at 15 minutes. Talent wins finals, so I'm taking BLG.",
+      "pickedAt": "2026-11-13T00:00:07.132Z"
+    },
+    {
+      "player": "analyst-jungle",
+      "champion": "BLG",
+      "probability": 55,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "BLG's +1.0k GD@15 is the biggest early lead on the board: first drake, first Herald, lanes snowballing before minute 15. They also just beat T1 and DK, so I'm backing the tempo kings.",
+      "pickedAt": "2026-11-13T00:00:03.581Z"
+    },
+    {
+      "player": "analyst-mid",
+      "champion": "BLG",
+      "probability": 54,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "Fearless Draft punishes one-trick comfort picks, and BLG just took T1 apart 3-1 by out-drafting them across four games, so I trust their depth over GEN's clean sweeps.",
+      "pickedAt": "2026-11-13T00:00:07.725Z"
+    },
+    {
+      "player": "analyst-adc",
+      "champion": "GEN",
+      "probability": 53,
+      "contenders": [
+        "BLG"
+      ],
+      "reasoning": "GEN edges BLG in series win rate, game win rate (75% vs 71%) and record against other regions (9-1 vs 13-3), but BLG's bigger sample and +1.0k GD@15 keep this close.",
+      "pickedAt": "2026-11-13T00:00:07.324Z"
+    },
+    {
+      "player": "analyst-support",
+      "champion": "BLG",
+      "probability": 52,
+      "contenders": [
+        "GEN"
+      ],
+      "reasoning": "BLG dropped their opener to MKOI, then rebuilt and beat DK and T1 in the knockouts; I trust a room that has already bounced back once when the pressure is on.",
+      "pickedAt": "2026-11-13T00:00:09.235Z"
+    }
+  ],
+  "batch": "{\"matchId\":\"title:2026-11-13\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"title\",\"choice\":\"GEN\",\"stake\":0},{\"player\":\"analyst-jungle\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-mid\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-support\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0},{\"player\":\"analyst-top\",\"market\":\"title\",\"choice\":\"BLG\",\"stake\":0}]}",
+  "batchHash": "8440e9f839de33277b498087ae2aeeda6f6e25eb2e60576923bdf8fa4c5fff5c",
+  "commitDigest": "9QL8VpJbBn3rQgs2GgqwAeJcWYQkDnZhRfUpBWv2SjPb",
+  "chain": {
+    "network": "mainnet",
+    "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  }
+}
