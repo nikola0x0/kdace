@@ -115041,5 +115041,1371 @@
    "damageShare": 0.161
   },
   "funFacts": []
+ },
+ {
+  "gameId": "115660540726095134",
+  "matchId": "115660540726095133",
+  "number": 1,
+  "league": "Worlds 2026",
+  "date": "2026-11-14T19:53:15.072Z",
+  "patch": "16.20",
+  "durationMin": 39.1,
+  "complete": true,
+  "winner": "GEN",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Olaf",
+    "jungle": "LeeSin",
+    "mid": "Syndra",
+    "bottom": "Corki",
+    "support": "Nami"
+   },
+   "gold15": 25901,
+   "kills": 19,
+   "towers": 9,
+   "inhibitors": 2,
+   "dragons": [
+    "elder"
+   ],
+   "barons": 3,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 23.9
+  },
+  "red": {
+   "code": "BLG",
+   "champions": {
+    "top": "KSante",
+    "jungle": "JarvanIV",
+    "mid": "Locke",
+    "bottom": "Kalista",
+    "support": "Renata"
+   },
+   "gold15": 26636,
+   "kills": 4,
+   "towers": 3,
+   "inhibitors": 0,
+   "dragons": [
+    "ocean",
+    "chemtech",
+    "hextech",
+    "hextech",
+    "elder"
+   ],
+   "barons": 0,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "goldDiff": [
+   0,
+   -25,
+   -74,
+   -32,
+   87,
+   42,
+   -38,
+   -296,
+   -209,
+   -551,
+   -701,
+   -801,
+   -728,
+   -1049,
+   -328,
+   -735,
+   -1028,
+   -1113,
+   -1368,
+   -1829,
+   -2379,
+   -1944,
+   -1947,
+   60,
+   534,
+   622,
+   1368,
+   1280,
+   1058,
+   173,
+   3369,
+   4565,
+   4485,
+   5680,
+   5724,
+   5550,
+   7831,
+   7968,
+   9948,
+   14004
+  ],
+  "leads": {
+   "10": -701,
+   "15": -735,
+   "20": -2379,
+   "25": 622
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 14004,
+    "min": 39
+   },
+   "red": {
+    "gold": 2379,
+    "min": 20
+   }
+  },
+  "swing": {
+   "team": "GEN",
+   "gold": 8454,
+   "fromMin": 35,
+   "toMin": 39
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 6.1,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "ocean"
+   },
+   {
+    "min": 8.7,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 11.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 17,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "hextech"
+   },
+   {
+    "min": 18.8,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 22.9,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "hextech"
+   },
+   {
+    "min": 23.9,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 29,
+    "type": "elder",
+    "team": "BLG",
+    "behind": 1043
+   },
+   {
+    "min": 30,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 36,
+    "type": "elder",
+    "team": "GEN"
+   },
+   {
+    "min": 37.1,
+    "type": "baron",
+    "team": "GEN"
+   },
+   {
+    "min": 37.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 38.9,
+    "type": "inhibitor",
+    "team": "GEN"
+   },
+   {
+    "min": 39.1,
+    "type": "end",
+    "team": "GEN"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Olaf",
+    "role": "top",
+    "k": 2,
+    "d": 1,
+    "a": 13,
+    "damageShare": 0.2
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "LeeSin",
+    "role": "jungle",
+    "k": 3,
+    "d": 2,
+    "a": 13,
+    "damageShare": 0.091
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Syndra",
+    "role": "mid",
+    "k": 6,
+    "d": 1,
+    "a": 11,
+    "damageShare": 0.256
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Corki",
+    "role": "bottom",
+    "k": 7,
+    "d": 0,
+    "a": 8,
+    "damageShare": 0.38799999999999996
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Nami",
+    "role": "support",
+    "k": 1,
+    "d": 0,
+    "a": 16,
+    "damageShare": 0.066
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "KSante",
+    "role": "top",
+    "k": 0,
+    "d": 4,
+    "a": 1,
+    "damageShare": 0.214
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "JarvanIV",
+    "role": "jungle",
+    "k": 1,
+    "d": 4,
+    "a": 3,
+    "damageShare": 0.188
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Locke",
+    "role": "mid",
+    "k": 2,
+    "d": 2,
+    "a": 1,
+    "damageShare": 0.28300000000000003
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Kalista",
+    "role": "bottom",
+    "k": 1,
+    "d": 5,
+    "a": 3,
+    "damageShare": 0.239
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Renata",
+    "role": "support",
+    "k": 0,
+    "d": 4,
+    "a": 4,
+    "damageShare": 0.076
+   }
+  ],
+  "standout": {
+   "code": "GEN",
+   "name": "GEN Ruler",
+   "champion": "Corki",
+   "role": "bottom",
+   "k": 7,
+   "d": 0,
+   "a": 8,
+   "damageShare": 0.38799999999999996
+  },
+  "funFacts": [
+   {
+    "kind": "perfect",
+    "team": "GEN",
+    "text": "GEN Ruler (Corki) went 7/0/8 without dying"
+   },
+   {
+    "kind": "perfect",
+    "team": "GEN",
+    "text": "GEN Duro (Nami) went 1/0/16 without dying"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095135",
+  "matchId": "115660540726095133",
+  "number": 2,
+  "league": "Worlds 2026",
+  "date": "2026-11-14T20:59:32.010Z",
+  "patch": "16.20",
+  "durationMin": 53.4,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Vayne",
+    "jungle": "Chogath",
+    "mid": "Orianna",
+    "bottom": "Ezreal",
+    "support": "Karma"
+   },
+   "gold15": 25472,
+   "kills": 14,
+   "towers": 4,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud",
+    "cloud",
+    "cloud",
+    "elder"
+   ],
+   "barons": 1,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": false,
+   "firstBaronMin": 43
+  },
+  "red": {
+   "code": "BLG",
+   "champions": {
+    "top": "Gnar",
+    "jungle": "Naafiri",
+    "mid": "Cassiopeia",
+    "bottom": "Ziggs",
+    "support": "Camille"
+   },
+   "gold15": 27360,
+   "kills": 19,
+   "towers": 11,
+   "inhibitors": 4,
+   "dragons": [
+    "chemtech",
+    "mountain",
+    "cloud",
+    "cloud"
+   ],
+   "barons": 3,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": true,
+   "firstBaronMin": 30
+  },
+  "goldDiff": [
+   0,
+   5,
+   278,
+   181,
+   -565,
+   -529,
+   -70,
+   -1379,
+   -552,
+   -671,
+   -279,
+   -443,
+   -829,
+   -1383,
+   -1476,
+   -1888,
+   -2084,
+   -2653,
+   -3012,
+   -3246,
+   -4560,
+   -3930,
+   -4604,
+   -4469,
+   -4486,
+   -4574,
+   -2136,
+   -1905,
+   -2117,
+   -2062,
+   -3118,
+   -4199,
+   -3862,
+   -5112,
+   -4597,
+   -4298,
+   -3865,
+   -3626,
+   -3140,
+   -2823,
+   -2959,
+   -2814,
+   -2486,
+   -1383,
+   -906,
+   -560,
+   -67,
+   -483,
+   -1169,
+   -2806,
+   -3770,
+   -3784,
+   -3064,
+   -2593
+  ],
+  "leads": {
+   "10": -279,
+   "15": -1888,
+   "20": -4560,
+   "25": -4574
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 278,
+    "min": 2
+   },
+   "red": {
+    "gold": 5112,
+    "min": 33
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 3717,
+   "fromMin": 46,
+   "toMin": 51
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3.1,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 10,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 12,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 15,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "mountain"
+   },
+   {
+    "min": 20,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "cloud",
+    "behind": 3229
+   },
+   {
+    "min": 26,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "cloud",
+    "behind": 4581
+   },
+   {
+    "min": 30,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 31,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "cloud",
+    "behind": 3199
+   },
+   {
+    "min": 33,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 36,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "cloud"
+   },
+   {
+    "min": 37,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 42,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "cloud"
+   },
+   {
+    "min": 43,
+    "type": "baron",
+    "team": "GEN",
+    "behind": 2331
+   },
+   {
+    "min": 49,
+    "type": "elder",
+    "team": "GEN",
+    "behind": 1886
+   },
+   {
+    "min": 49,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 50,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 51,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 53.4,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Vayne",
+    "role": "top",
+    "k": 3,
+    "d": 4,
+    "a": 3,
+    "damageShare": 0.262
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "Chogath",
+    "role": "jungle",
+    "k": 2,
+    "d": 5,
+    "a": 3,
+    "damageShare": 0.13
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Orianna",
+    "role": "mid",
+    "k": 2,
+    "d": 6,
+    "a": 5,
+    "damageShare": 0.205
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Ezreal",
+    "role": "bottom",
+    "k": 6,
+    "d": 2,
+    "a": 5,
+    "damageShare": 0.321
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Karma",
+    "role": "support",
+    "k": 1,
+    "d": 2,
+    "a": 11,
+    "damageShare": 0.083
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Gnar",
+    "role": "top",
+    "k": 3,
+    "d": 2,
+    "a": 6,
+    "damageShare": 0.115
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Naafiri",
+    "role": "jungle",
+    "k": 8,
+    "d": 1,
+    "a": 9,
+    "damageShare": 0.20600000000000002
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Cassiopeia",
+    "role": "mid",
+    "k": 4,
+    "d": 1,
+    "a": 12,
+    "damageShare": 0.138
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Ziggs",
+    "role": "bottom",
+    "k": 3,
+    "d": 2,
+    "a": 13,
+    "damageShare": 0.47100000000000003
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Camille",
+    "role": "support",
+    "k": 1,
+    "d": 8,
+    "a": 10,
+    "damageShare": 0.07
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Xun",
+   "champion": "Naafiri",
+   "role": "jungle",
+   "k": 8,
+   "d": 1,
+   "a": 9,
+   "damageShare": 0.20600000000000002
+  },
+  "funFacts": [
+   {
+    "kind": "roughPatch",
+    "team": "BLG",
+    "text": "BLG ON (Camille) died 3 times between 24:58 and 28:58"
+   },
+   {
+    "kind": "roughDay",
+    "team": "BLG",
+    "text": "BLG ON (Camille) finished 1/8/10"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 53:21"
+   },
+   {
+    "kind": "steal",
+    "team": "GEN",
+    "text": "GEN took a cloud dragon at 26:00 while 4.6k down"
+   },
+   {
+    "kind": "damage",
+    "team": "BLG",
+    "text": "BLG Viper (Ziggs) dealt 47% of BLG's champion damage"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095136",
+  "matchId": "115660540726095133",
+  "number": 3,
+  "league": "Worlds 2026",
+  "date": "2026-11-14T22:18:30.113Z",
+  "patch": "16.20",
+  "durationMin": 37.7,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "GEN",
+   "champions": {
+    "top": "Ambessa",
+    "jungle": "MonkeyKing",
+    "mid": "Annie",
+    "bottom": "Jhin",
+    "support": "Rakan"
+   },
+   "gold15": 24981,
+   "kills": 8,
+   "towers": 4,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud",
+    "hextech"
+   ],
+   "barons": 0,
+   "firstBlood": false,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": null
+  },
+  "red": {
+   "code": "BLG",
+   "champions": {
+    "top": "Jax",
+    "jungle": "Vi",
+    "mid": "Viktor",
+    "bottom": "Taliyah",
+    "support": "Alistar"
+   },
+   "gold15": 24541,
+   "kills": 20,
+   "towers": 10,
+   "inhibitors": 1,
+   "dragons": [
+    "chemtech",
+    "chemtech",
+    "chemtech",
+    "chemtech"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 26
+  },
+  "goldDiff": [
+   0,
+   -5,
+   250,
+   83,
+   320,
+   176,
+   212,
+   335,
+   230,
+   190,
+   398,
+   380,
+   927,
+   1103,
+   573,
+   440,
+   618,
+   1125,
+   157,
+   368,
+   -736,
+   -86,
+   1487,
+   1289,
+   338,
+   187,
+   -1431,
+   -2400,
+   -3270,
+   -4678,
+   -4488,
+   -6004,
+   -5573,
+   -5486,
+   -5337,
+   -6156,
+   -5809,
+   -4962
+  ],
+  "leads": {
+   "10": 398,
+   "15": 440,
+   "20": -736,
+   "25": 187
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 1487,
+    "min": 22
+   },
+   "red": {
+    "gold": 6156,
+    "min": 35
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 5016,
+   "fromMin": 24,
+   "toMin": 29
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 7,
+    "type": "firstBlood",
+    "team": "BLG"
+   },
+   {
+    "min": 8,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "cloud"
+   },
+   {
+    "min": 13,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "hextech"
+   },
+   {
+    "min": 14,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 19,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 25,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 26,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 31,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 36,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 37.7,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 37.7,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Ambessa",
+    "role": "top",
+    "k": 0,
+    "d": 3,
+    "a": 2,
+    "damageShare": 0.18100000000000002
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "MonkeyKing",
+    "role": "jungle",
+    "k": 0,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.11
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Annie",
+    "role": "mid",
+    "k": 4,
+    "d": 6,
+    "a": 1,
+    "damageShare": 0.337
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Jhin",
+    "role": "bottom",
+    "k": 4,
+    "d": 3,
+    "a": 3,
+    "damageShare": 0.319
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Rakan",
+    "role": "support",
+    "k": 0,
+    "d": 4,
+    "a": 5,
+    "damageShare": 0.052000000000000005
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Jax",
+    "role": "top",
+    "k": 3,
+    "d": 1,
+    "a": 10,
+    "damageShare": 0.168
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Vi",
+    "role": "jungle",
+    "k": 4,
+    "d": 3,
+    "a": 12,
+    "damageShare": 0.151
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "Viktor",
+    "role": "mid",
+    "k": 5,
+    "d": 2,
+    "a": 11,
+    "damageShare": 0.366
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Taliyah",
+    "role": "bottom",
+    "k": 6,
+    "d": 1,
+    "a": 11,
+    "damageShare": 0.243
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Alistar",
+    "role": "support",
+    "k": 2,
+    "d": 1,
+    "a": 16,
+    "damageShare": 0.07200000000000001
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Viper",
+   "champion": "Taliyah",
+   "role": "bottom",
+   "k": 6,
+   "d": 1,
+   "a": 11,
+   "damageShare": 0.243
+  },
+  "funFacts": [
+   {
+    "kind": "roughPatch",
+    "team": "GEN",
+    "text": "GEN Canyon (Wukong) died 3 times between 21:02 and 25:06"
+   },
+   {
+    "kind": "roughPatch",
+    "team": "BLG",
+    "text": "BLG Xun (Vi) died 3 times between 21:02 and 25:07"
+   }
+  ]
+ },
+ {
+  "gameId": "115660540726095137",
+  "matchId": "115660540726095133",
+  "number": 4,
+  "league": "Worlds 2026",
+  "date": "2026-11-14T23:18:11.988Z",
+  "patch": "16.20",
+  "durationMin": 43.1,
+  "complete": true,
+  "winner": "BLG",
+  "blue": {
+   "code": "BLG",
+   "champions": {
+    "top": "Gwen",
+    "jungle": "Nocturne",
+    "mid": "TwistedFate",
+    "bottom": "Yunara",
+    "support": "Neeko"
+   },
+   "gold15": 26758,
+   "kills": 21,
+   "towers": 10,
+   "inhibitors": 2,
+   "dragons": [
+    "chemtech",
+    "chemtech",
+    "chemtech"
+   ],
+   "barons": 2,
+   "firstBlood": false,
+   "firstTower": true,
+   "firstDragon": false,
+   "firstBaronMin": 27
+  },
+  "red": {
+   "code": "GEN",
+   "champions": {
+    "top": "Aurora",
+    "jungle": "Pantheon",
+    "mid": "Akali",
+    "bottom": "Xayah",
+    "support": "Lulu"
+   },
+   "gold15": 27044,
+   "kills": 11,
+   "towers": 5,
+   "inhibitors": 0,
+   "dragons": [
+    "cloud",
+    "ocean",
+    "chemtech",
+    "chemtech"
+   ],
+   "barons": 1,
+   "firstBlood": true,
+   "firstTower": false,
+   "firstDragon": true,
+   "firstBaronMin": 33.4
+  },
+  "goldDiff": [
+   0,
+   -5,
+   -79,
+   -686,
+   -211,
+   -580,
+   -28,
+   -238,
+   -131,
+   -31,
+   -204,
+   -188,
+   -1233,
+   -1405,
+   -885,
+   -286,
+   -303,
+   62,
+   1407,
+   1813,
+   2273,
+   2160,
+   2257,
+   2509,
+   2514,
+   2284,
+   2298,
+   4515,
+   6415,
+   6304,
+   7294,
+   7095,
+   6484,
+   7319,
+   6081,
+   6542,
+   5835,
+   6791,
+   6701,
+   6267,
+   5210,
+   4623,
+   5603,
+   9873
+  ],
+  "leads": {
+   "10": -204,
+   "15": -286,
+   "20": 2273,
+   "25": 2284
+  },
+  "maxLead": {
+   "blue": {
+    "gold": 9873,
+    "min": 43
+   },
+   "red": {
+    "gold": 1405,
+    "min": 13
+   }
+  },
+  "swing": {
+   "team": "BLG",
+   "gold": 5250,
+   "fromMin": 41,
+   "toMin": 43
+  },
+  "comeback": null,
+  "events": [
+   {
+    "min": 3,
+    "type": "firstBlood",
+    "team": "GEN"
+   },
+   {
+    "min": 6,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "cloud"
+   },
+   {
+    "min": 12,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "ocean"
+   },
+   {
+    "min": 18,
+    "type": "firstTower",
+    "team": "BLG"
+   },
+   {
+    "min": 18,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "chemtech"
+   },
+   {
+    "min": 23,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 27,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 29,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 33.4,
+    "type": "baron",
+    "team": "GEN",
+    "behind": 6588
+   },
+   {
+    "min": 35,
+    "type": "dragon",
+    "team": "BLG",
+    "detail": "chemtech"
+   },
+   {
+    "min": 36,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 40,
+    "type": "dragon",
+    "team": "GEN",
+    "detail": "chemtech",
+    "behind": 6267
+   },
+   {
+    "min": 42,
+    "type": "baron",
+    "team": "BLG"
+   },
+   {
+    "min": 43,
+    "type": "inhibitor",
+    "team": "BLG"
+   },
+   {
+    "min": 43.1,
+    "type": "end",
+    "team": "BLG"
+   }
+  ],
+  "players": [
+   {
+    "code": "BLG",
+    "name": "BLG Bin",
+    "champion": "Gwen",
+    "role": "top",
+    "k": 8,
+    "d": 2,
+    "a": 9,
+    "damageShare": 0.20600000000000002
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Xun",
+    "champion": "Nocturne",
+    "role": "jungle",
+    "k": 3,
+    "d": 3,
+    "a": 11,
+    "damageShare": 0.127
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Knight",
+    "champion": "TwistedFate",
+    "role": "mid",
+    "k": 2,
+    "d": 1,
+    "a": 17,
+    "damageShare": 0.27899999999999997
+   },
+   {
+    "code": "BLG",
+    "name": "BLG Viper",
+    "champion": "Yunara",
+    "role": "bottom",
+    "k": 6,
+    "d": 4,
+    "a": 9,
+    "damageShare": 0.27
+   },
+   {
+    "code": "BLG",
+    "name": "BLG ON",
+    "champion": "Neeko",
+    "role": "support",
+    "k": 2,
+    "d": 1,
+    "a": 13,
+    "damageShare": 0.11900000000000001
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Kiin",
+    "champion": "Aurora",
+    "role": "top",
+    "k": 0,
+    "d": 5,
+    "a": 6,
+    "damageShare": 0.23600000000000002
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Canyon",
+    "champion": "Pantheon",
+    "role": "jungle",
+    "k": 0,
+    "d": 5,
+    "a": 5,
+    "damageShare": 0.086
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Chovy",
+    "champion": "Akali",
+    "role": "mid",
+    "k": 5,
+    "d": 4,
+    "a": 1,
+    "damageShare": 0.259
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Ruler",
+    "champion": "Xayah",
+    "role": "bottom",
+    "k": 6,
+    "d": 3,
+    "a": 4,
+    "damageShare": 0.377
+   },
+   {
+    "code": "GEN",
+    "name": "GEN Duro",
+    "champion": "Lulu",
+    "role": "support",
+    "k": 0,
+    "d": 4,
+    "a": 9,
+    "damageShare": 0.042
+   }
+  ],
+  "standout": {
+   "code": "BLG",
+   "name": "BLG Bin",
+   "champion": "Gwen",
+   "role": "top",
+   "k": 8,
+   "d": 2,
+   "a": 9,
+   "damageShare": 0.20600000000000002
+  },
+  "funFacts": [
+   {
+    "kind": "multikill",
+    "team": "BLG",
+    "text": "Likely triple kill: BLG Bin (Gwen) at 33:25"
+   },
+   {
+    "kind": "marathon",
+    "team": null,
+    "text": "Marathon: 43:03"
+   },
+   {
+    "kind": "steal",
+    "team": "GEN",
+    "text": "GEN took Baron at 33:24 while 6.6k down"
+   },
+   {
+    "kind": "steal",
+    "team": "GEN",
+    "text": "GEN took a chemtech dragon at 40:00 while 6.3k down"
+   }
+  ]
  }
 ]

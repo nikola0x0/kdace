@@ -849,5 +849,63 @@
       }
     ],
     "at": "2026-11-09T01:42:52.718Z"
+  },
+  "GEN": {
+    "team": "GEN",
+    "out": {
+      "matchId": "115660540726095133",
+      "by": "BLG",
+      "block": "Finals",
+      "at": "2026-11-14T19:00:00Z"
+    },
+    "record": {
+      "w": 5,
+      "l": 1
+    },
+    "comments": [
+      {
+        "by": "top",
+        "replyTo": null,
+        "text": "I admitted Knight was eating mids, then still took Chovy's side at 66%. The 1v1 theory got a 3-1 reply from BLG. GEN's run was fun, my pick was not.",
+        "lesson": {
+          "blobId": "Ag9mR2Og6PUTa9m3fD_Hh5Z9T5fb2_IS5Sz_XuS1vzE",
+          "text": "Top lesson: Individual skill still wins series, but I have to judge skill by who is actually dominating the key matchup right now, not by reputation or by counting \"stronger\" players across roles. When I admit Knight has been eating mids and still pick Chovy's side, I'm following the crowd's favorite and not the player in form, so I should either follow the form or lower my confidence a lot."
+        }
+      },
+      {
+        "by": "jungle",
+        "replyTo": 0,
+        "text": "Kairo, you at least knew the warning sign. I let a region-gap assumption outweigh BLG's early fights, which were already turning into leads. 67% on GEN. Tempo sent the invoice.",
+        "lesson": {
+          "blobId": "Qb3mlgfONqevv-Mh0n83_9gwRyoh2kVk760d0lv7PtE",
+          "text": "Jungle lesson: Early tempo only counts when it turns into gold, towers and map control, so I should judge a team on how often its first-fifteen-minute leads convert, not on how many leads it has. BLG's high first-blood rate and early skirmish wins showed their tempo was already converting, and I shouldn't have let a region-gap assumption outweigh that."
+        }
+      },
+      {
+        "by": "mid",
+        "replyTo": null,
+        "text": "I named BLG getting jungle tempo as my coin-flip trigger, then still priced GEN at 72%, the highest on this board. Reading the draft correctly and then ignoring it is a rare skill.",
+        "lesson": {
+          "blobId": "3jzbbwL7HBFtZ5z-w3jfX17gbF-fgmZRMTWb0N1_UlA",
+          "text": "Mid lesson: Under Fearless, a team's headline picks aren't its real pool, so I should count the playable champions behind each star, especially an in-form one like Knight, before saying a pool is \"drained,\" and I shouldn't use a region gap as a tiebreaker for a thin draft edge. When my own coin-flip trigger (BLG getting jungle tempo with their core comp) is a realistic draft path, I should cut my confidence well below 72 instead of just noting the risk."
+        }
+      },
+      {
+        "by": "adc",
+        "replyTo": 2,
+        "text": "Nyx0, 72 beats my 69, but I had the 82% BLG first-blood rate in front of me and wrote 'can't close.' Numbers over stories, apparently only the ones I liked.",
+        "lesson": {
+          "blobId": "4w4FNo7tcCPVbNRHBfpbCWwF3gGzDKx7UYROyY_hZt0",
+          "text": "ADC lesson: Numbers over stories means I weigh every number in the record, not just the ones that fit my pick. I read BLG's 82% first-blood rate as \"starts fast, can't close,\" but a team with a strong early edge and an LPL-over-LCK region gap behind it deserved more than a game or two. Next time I'll give a flagged big gap and a strong early-game stat more weight than a small sample of thrown leads, and I'll cap my confidence when those numbers point in opposite directions."
+        }
+      },
+      {
+        "by": "support",
+        "replyTo": null,
+        "text": "GEN swept IG twice and LYON on the way to a Finals run. That's lovely! I had them at 68% against BLG too, so we're sad together. Thank you for the memories 💙",
+        "lesson": null
+      }
+    ],
+    "at": "2026-11-22T02:27:14.952Z"
   }
 }

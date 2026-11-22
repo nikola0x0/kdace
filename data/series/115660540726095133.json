@@ -11,7 +11,7 @@
     "winsB": 0,
     "winner": null
   },
-  "status": "committed",
+  "status": "settled",
   "picks": [
     {
       "player": "analyst-top",
@@ -182,13 +182,92 @@
   "batch": "{\"matchId\":\"115660540726095133\",\"entries\":[{\"player\":\"analyst-adc\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":540},{\"player\":\"analyst-adc\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1800,\"lessons\":[\"2IhQy9iekV326MOv7JxbqUJvMP6lTAqFNN413OBjQX8\",\"P2IKhTQ_-tzvUZCr95GW8OAlfLTFcu7AgLF0OvjFmZY\",\"UuEeQ4-5PpMldPbtp17MUwIsczx4txLWNXe1KEdfBXw\",\"gK7XrAlhNh9f415KqitfCsn5mq4QT7Zws-T88YG3pSg\"],\"thought\":\"122018bb21de12ee91e31208e76e143003a38964695943ac84cda45bf809c725\"},{\"player\":\"analyst-jungle\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":470},{\"player\":\"analyst-jungle\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1570,\"lessons\":[\"FzTBLeklaGDRrM--17VUV78bJw0faeO8F32ZR-quDDc\",\"GECiP54mCSeZX4S-dwMbOVnqzluyPkx8PxWLkRV7smQ\",\"Kt-DzXlpekN74Gp75bE7bTKsJJ8ZA2YO_xpqi6zAR60\",\"prLZdIuLybtD9YITqhqSuIfKzXOUH_jm05U5ujtNBjQ\"],\"thought\":\"bbfcd801bb9026b0d80a032e7a0fae9eaca3680811993e5ff3edfbaffbeeffd3\"},{\"player\":\"analyst-mid\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":410},{\"player\":\"analyst-mid\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1380,\"lessons\":[\"RaHhH-4C_vY2XlQV2JrJMu9GWA4-WVg5OqX6oCKGZx4\",\"TzFwYmxEuPlQi3E0_qI3QWc23K4bnT72kMr1NGtWPD0\",\"X13MKXh2uxf1CJszfnrQM2UXMdOCBsM14rdMn0SPXHw\",\"th87UcTooGDPpo9RIpvySyCfCI6NFUpL-UT71gTlz9o\"],\"thought\":\"640bd4767bd1563d81580d60f8df83fc3c0e5c8db7aba6bf7f4b20b09ed4e93f\"},{\"player\":\"analyst-support\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":410},{\"player\":\"analyst-support\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1380,\"lessons\":[\"0nEI5v7glWZPiPX3AynvK_ZSp8tiy2YiIRFdIGhBTgk\",\"H14sRuXg-hEI7Mf9wYOU2B9-CVYeuIdr2SpbPEMDwf8\",\"sWl1n6T6ZtljNkmUgjm0_Z1Qe494SAE-KdRO_rcXGFY\",\"yCndy1O4Gwqn-w-I5cRTVluVRccY-ybIdFX8avzmAQE\"],\"thought\":\"ff03113efe5e6d1dfeca16ed5104ba5042799b53b6e05687487ce7fef6a335e0\"},{\"player\":\"analyst-top\",\"market\":\"score\",\"choice\":\"3-1\",\"stake\":400},{\"player\":\"analyst-top\",\"market\":\"winner\",\"choice\":\"GEN\",\"stake\":1320,\"lessons\":[\"-dS16RCo5qFlp7m2UdwUFS1ufBfGp0FvdnYvPfagqSE\",\"e8wBS-ROWnGIrTlLkoPS51PncERrrBCTefrws83QCUw\",\"sGEByxJuMHMEbBi3XOlb7K-pW11hIYExOwO4KgWQvBk\",\"uieKj0HLCRqE8o2FT-PpSUnSpI7XTLr52qTHT2v4-rc\"],\"thought\":\"508a14caaa72f36239dea672f5151d759b02a9d38a411a402fe61ccc81b2c279\"}]}",
   "batchHash": "c191c2c3f834e6e665ca7d352efd1fda108a879db98164beb46938b12cc9f8d0",
   "commitDigest": "BZcHkXABsZ4zFurjFKHSWvqaBkBFg9nPvPtSN1ALVMbf",
-  "result": null,
-  "axp": null,
-  "debate": null,
-  "lessons": [],
+  "result": {
+    "winner": "BLG",
+    "score": "3-1",
+    "resultDigest": "9mcrtgjYtDteTiv43jpPMfbhfUCv5yH4ntSvuNifFV5M"
+  },
+  "axp": {
+    "analyst-adc": 0,
+    "analyst-jungle": 0,
+    "analyst-mid": 0,
+    "analyst-support": 0,
+    "analyst-top": 0
+  },
+  "debate": "Top: Chovy against Knight was supposed to be the whole series, and Knight made it his. I said individual skill wins, and he was the best individual on the Rift. Fine, I'll own that one.\n\nJungle: I had GEN controlling the first fifteen minutes, and BLG's early fights turned into actual leads. 3-1 was right on the score, just for the wrong team, which is a terrible thing to be proud of.\n\nMid: I said Fearless would drain BLG's Orianna and Yunara/Lulu core, and they still had answers. I did write that GEN's jungle answering the tempo was my coin-flip trigger, so I'm admitting it was visible.\n\nADC: Ten wins at Worlds and I still got burned by a team that \"can't close.\" My numbers said BLG throw leads, and they apparently took that personally. The 82% first-blood rate was the stat I should have respected.\n\nSupport: I called GEN's calm and BLG's stumbles at the finish, and it was the reverse. The mood around the team is clearly not a Rift stat. Still, I did say Knight could steal games on his own, so I'll claim partial credit.",
+  "lessons": [
+    {
+      "player": "analyst-top",
+      "text": "Top lesson: Individual skill still wins series, but I have to judge skill by who is actually dominating the key matchup right now, not by reputation or by counting \"stronger\" players across roles. When I admit Knight has been eating mids and still pick Chovy's side, I'm following the crowd's favorite and not the player in form, so I should either follow the form or lower my confidence a lot. (from Finals GEN vs BLG; picked GEN 3-1, actual BLG 3-1)",
+      "blobId": "Ag9mR2Og6PUTa9m3fD_Hh5Z9T5fb2_IS5Sz_XuS1vzE",
+      "jobId": "07f8733f-9901-4c48-ac7f-b209bbc2410b"
+    },
+    {
+      "player": "analyst-jungle",
+      "text": "Jungle lesson: Early tempo only counts when it turns into gold, towers and map control, so I should judge a team on how often its first-fifteen-minute leads convert, not on how many leads it has. BLG's high first-blood rate and early skirmish wins showed their tempo was already converting, and I shouldn't have let a region-gap assumption outweigh that. (from Finals GEN vs BLG; picked GEN 3-1, actual BLG 3-1)",
+      "blobId": "Qb3mlgfONqevv-Mh0n83_9gwRyoh2kVk760d0lv7PtE",
+      "jobId": "4bc6971e-da7b-4ecf-b4ba-f37580ae7827"
+    },
+    {
+      "player": "analyst-mid",
+      "text": "Mid lesson: Under Fearless, a team's headline picks aren't its real pool, so I should count the playable champions behind each star, especially an in-form one like Knight, before saying a pool is \"drained,\" and I shouldn't use a region gap as a tiebreaker for a thin draft edge. When my own coin-flip trigger (BLG getting jungle tempo with their core comp) is a realistic draft path, I should cut my confidence well below 72 instead of just noting the risk. (from Finals GEN vs BLG; picked GEN 3-1, actual BLG 3-1)",
+      "blobId": "3jzbbwL7HBFtZ5z-w3jfX17gbF-fgmZRMTWb0N1_UlA",
+      "jobId": "6e04f0a6-fb95-4da9-b8aa-d265d62c2c9b"
+    },
+    {
+      "player": "analyst-adc",
+      "text": "ADC lesson: Numbers over stories means I weigh every number in the record, not just the ones that fit my pick. I read BLG's 82% first-blood rate as \"starts fast, can't close,\" but a team with a strong early edge and an LPL-over-LCK region gap behind it deserved more than a game or two. Next time I'll give a flagged big gap and a strong early-game stat more weight than a small sample of thrown leads, and I'll cap my confidence when those numbers point in opposite directions. (from Finals GEN vs BLG; picked GEN 3-1, actual BLG 3-1)",
+      "blobId": "4w4FNo7tcCPVbNRHBfpbCWwF3gGzDKx7UYROyY_hZt0",
+      "jobId": "f3c8c93b-d3f4-41cc-bd76-49c5c1a3393e"
+    },
+    {
+      "player": "analyst-support",
+      "text": "Support lesson: The team decides it, but I should read that from what a team shows when the pressure is on, such as how they close out leads and recover in the games that matter, not from the mood I assume around them or from past finals. Next time I'll weigh the live evidence of chemistry (BLG's early fights turning into real leads) above a reputation for calm or for stumbling, since cohesion shows up in current play and not in old narratives. (from Finals GEN vs BLG; picked GEN 3-1, actual BLG 3-1)",
+      "blobId": "_rOMXQBBZQ7vtH_O9xb3GrV35QvQU3PHvtdbD7mByBU",
+      "jobId": "0b581871-e2b9-46ca-8458-c47e35760441"
+    }
+  ],
   "scout": "Scout: GEN vs BLG (official lolesports feeds, 2026 season; GD@15 = gold diff at 15 min, FB/FT/FD = first blood/tower/dragon)\nGEN [LCK]: 2026 series 42-10, games 98-33 | last 10 (newest first) WWWWWWWWLW\n  LCK 2026 31-8 (2 titles) · First Stand 2026 2-1 · EWC 2026 4-1 (1 title) · Worlds 2026 5-0 · vs other regions 9-1\n  Last 31 games (25-6): GD@15 +0.6k, FB 39%, FT 61%, FD 52%, dragons 62%, 33.4 min avg, 1st baron 27:06\n  Leads @15 converted 12/15, comeback wins 3, throws 0, objectives taken while 1k+ behind 21\n  Worlds 2026 11 games (10-1): GD@15 +0.7k, FB 55%, FT 55%, FD 45%, dragons 67%, 31.9 min avg, 1st baron 26:36\n  Picks: TOP Olaf 5, Rumble 4, Ambessa 3 | JG Lee Sin 5, Qiyana 5, Jarvan IV 4 | MID Ryze 5, Galio 4, Syndra 4 | BOT Ashe 5, Ezreal 5, Jhin 4 | SUP Seraphine 7, Leona 3, Nautilus 3\n  Standout: GEN Chovy (mid) KDA 5.9 over 31 games, 24% dmg share\nBLG [LPL]: 2026 series 54-14, games 133-55 | last 10 (newest first) WWLWWLLWWW\n  LPL 2026 41-10 (2 titles) · First Stand 2026 4-0 (1 title) · MSI 2026 3-1 (lost final) · EWC 2026 2-1 · Worlds 2026 4-2 · vs other regions 12-3\n  Last 31 games (22-9): GD@15 +0.9k, FB 61%, FT 61%, FD 58%, dragons 59%, 32.7 min avg, 1st baron 25:00\n  Leads @15 converted 12/13, comeback wins 1, throws 3, objectives taken while 1k+ behind 11\n  Worlds 2026 11 games (8-3): GD@15 +0.2k, FB 82%, FT 55%, FD 73%, dragons 65%, 33.9 min avg, 1st baron 27:30\n  Picks: TOP Ambessa 6, Camille 5, Gnar 4 | JG Jarvan IV 5, Lee Sin 5, Pantheon 5 | MID Orianna 8, Ahri 3, Aurora 3 | BOT Yunara 7, Ashe 6, Ezreal 5 | SUP Lulu 7, Nautilus 5, Renata 4\n  Standout: BLG Knight (mid) KDA 10.5 over 11 games, 28% dmg share\nHead-to-head 2026: none\nKey moments:\n  - GEN came back from -6.7k at 30:00 vs KT (LCK 2026)\n  - GEN came back from -4.3k at 18:00 vs IG (Worlds 2026)\n  - BLG threw a +4.9k lead (28:00) vs TES (Worlds 2026)\n  - BLG came back from -4.7k at 39:00 vs HLE (Worlds 2026)\nFun facts:\n  * Likely quadra kill: BLG Knight (Orianna) at 41:14 (vs HLE, Worlds 2026)\n  * Likely quadra kill: GEN Ruler (Zeri) at 20:45 (vs HLE, LCK 2026)\nRegion strength (domestic records from different leagues are not comparable; international results count):\n  2026 series vs other regions (First Stand, MSI, EWC, Americas Cup, Worlds so far): LCK 27-10, LPL 17-11, LEC 16-19, CBLOL 6-10, LCS 8-16, LCP 4-12.\n  This matchup is LCK vs LPL: LCK went 5-7 against LPL in 2026; LCK 73% vs LPL 61% against other regions overall.\n  BIG REGION GAP: LCK is clearly the stronger region here. This is a VERY BIG factor; only clear international results should move you off it.\n  Worlds champions by region since 2013: LCK 10, LPL 3, every other region 0.\n  GEN (LCK): 1 Worlds title (2017); won 2017 as Samsung Galaxy, the roster Gen.G grew from.\n  BLG (LPL): no Worlds titles; lost final 2024.",
   "chain": {
     "network": "mainnet",
     "packageId": "0xcda8001a0e6c3a499f55de906ab48186a614b5bba1e25bf338207da7c2731924"
+  },
+  "finalCall": {
+    "status": "none",
+    "batch": null,
+    "batchHash": null,
+    "commitDigest": null,
+    "calls": [
+      {
+        "player": "analyst-top",
+        "add": 0,
+        "reasoning": "Nobody's on BLG, so GEN pays 1.00× and extra AXP can only lose me money if Knight and Viper pull off the upset, and I'm not paying to take that risk for zero upside.",
+        "decidedAt": "2026-11-14T18:30:10.349Z"
+      },
+      {
+        "player": "analyst-jungle",
+        "add": 0,
+        "reasoning": "Tempo check: GEN is the only money in the pool, so every extra AXP I add pays exactly 1.00× on a win and gets wiped on a loss, which is all risk and no payoff, and BLG's run over HLE, DK and T1 says that early-fight game can flip a series, so I'm holding position and not burning more tempo.",
+        "decidedAt": "2026-11-14T18:30:10.220Z"
+      },
+      {
+        "player": "analyst-mid",
+        "add": 0,
+        "reasoning": "My draft read still says GEN in four, but with nobody on BLG the pool pays 1.00×, so extra AXP risks a loss for zero upside and I'm staying with my 1,380.",
+        "decidedAt": "2026-11-14T18:30:11.795Z"
+      },
+      {
+        "player": "analyst-adc",
+        "add": 0,
+        "reasoning": "The BLG side of the pool is empty, so extra GEN stake pays 1.00× at best and loses everything if BLG win, and BLG's 3-1 over T1, 3-0 over DK and 2-0 over HLE show a real threat, so I'm staying at 69% and adding nothing.",
+        "decidedAt": "2026-11-14T18:30:13.940Z"
+      },
+      {
+        "player": "analyst-support",
+        "add": 0,
+        "reasoning": "I still trust the calm in that GEN room, but with nobody on BLG every extra AXP just comes back to me at 1.00×, so there's no reason to risk more on a feeling.",
+        "decidedAt": "2026-11-14T18:30:10.145Z"
+      }
+    ]
   }
 }

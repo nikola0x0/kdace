@@ -260,12 +260,12 @@
   "homeLeague": "LPL 2026",
   "season": {
    "series": {
-    "w": 55,
+    "w": 56,
     "l": 14
    },
    "games": {
-    "w": 136,
-    "l": 56
+    "w": 139,
+    "l": 57
    }
   },
   "sources": [
@@ -324,40 +324,40 @@
    {
     "label": "Worlds 2026",
     "series": {
-     "w": 5,
+     "w": 6,
      "l": 2
     },
     "games": {
-     "w": 11,
-     "l": 4
+     "w": 14,
+     "l": 5
     },
-    "titles": 0,
+    "titles": 1,
     "finalsLost": 0
    }
   ],
-  "form": "WWWLWWLLWW",
+  "form": "WWWWLWWLLW",
   "vsInternational": {
-   "w": 13,
+   "w": 14,
    "l": 3
   },
   "stats": {
-   "games": 35,
-   "wins": 25,
-   "avgGoldDiff15": 1010,
-   "firstBloodRate": 0.5714285714285714,
-   "firstTowerRate": 0.6571428571428571,
-   "firstDragonRate": 0.5428571428571428,
-   "dragonShare": 0.5798816568047337,
-   "avgBarons": 1,
-   "avgFirstBaronMin": 25.4,
-   "avgDurationMin": 32.9,
+   "games": 39,
+   "wins": 28,
+   "avgGoldDiff15": 955,
+   "firstBloodRate": 0.5897435897435898,
+   "firstTowerRate": 0.6923076923076923,
+   "firstDragonRate": 0.5384615384615384,
+   "dragonShare": 0.5816326530612245,
+   "avgBarons": 1.1,
+   "avgFirstBaronMin": 25.6,
+   "avgDurationMin": 33.9,
    "comebackWins": 1,
    "throws": 3,
    "leadAt15": {
-    "led": 15,
-    "won": 13
+    "led": 16,
+    "won": 14
    },
-   "objectivesWhileBehind": 11,
+   "objectivesWhileBehind": 12,
    "topChampions": {
     "top": [
      {
@@ -370,21 +370,21 @@
      },
      {
       "champion": "Gnar",
-      "count": 5
+      "count": 6
      }
     ],
     "jungle": [
      {
-      "champion": "Pantheon",
+      "champion": "JarvanIV",
       "count": 6
      },
      {
-      "champion": "JarvanIV",
-      "count": 5
+      "champion": "Naafiri",
+      "count": 6
      },
      {
-      "champion": "LeeSin",
-      "count": 5
+      "champion": "Pantheon",
+      "count": 6
      }
     ],
     "mid": [
@@ -393,21 +393,21 @@
       "count": 9
      },
      {
-      "champion": "Ahri",
-      "count": 3
+      "champion": "Locke",
+      "count": 4
      },
      {
-      "champion": "Aurora",
+      "champion": "Ahri",
       "count": 3
      }
     ],
     "bottom": [
      {
-      "champion": "Ashe",
-      "count": 7
+      "champion": "Yunara",
+      "count": 8
      },
      {
-      "champion": "Yunara",
+      "champion": "Ashe",
       "count": 7
      },
      {
@@ -425,7 +425,7 @@
       "count": 6
      },
      {
-      "champion": "Seraphine",
+      "champion": "Renata",
       "count": 5
      }
     ]
@@ -434,41 +434,41 @@
     "name": "BLG Knight",
     "role": "mid",
     "kda": 9.2,
-    "games": 15,
+    "games": 19,
     "damageShare": 0.28
    }
   },
   "worldsStats": {
-   "games": 15,
-   "wins": 11,
-   "avgGoldDiff15": 550,
-   "firstBloodRate": 0.6666666666666666,
-   "firstTowerRate": 0.6666666666666666,
-   "firstDragonRate": 0.6,
-   "dragonShare": 0.618421052631579,
-   "avgBarons": 0.8,
-   "avgFirstBaronMin": 27.9,
-   "avgDurationMin": 34.1,
+   "games": 19,
+   "wins": 14,
+   "avgGoldDiff15": 534,
+   "firstBloodRate": 0.6842105263157895,
+   "firstTowerRate": 0.7368421052631579,
+   "firstDragonRate": 0.5789473684210527,
+   "dragonShare": 0.6116504854368932,
+   "avgBarons": 0.9,
+   "avgFirstBaronMin": 27.8,
+   "avgDurationMin": 36,
    "comebackWins": 1,
    "throws": 1,
    "leadAt15": {
-    "led": 5,
-    "won": 4
+    "led": 6,
+    "won": 5
    },
-   "objectivesWhileBehind": 7,
+   "objectivesWhileBehind": 8,
    "topChampions": {
     "top": [
+     {
+      "champion": "Gnar",
+      "count": 5
+     },
      {
       "champion": "Ambessa",
       "count": 4
      },
      {
-      "champion": "Gnar",
-      "count": 4
-     },
-     {
-      "champion": "Camille",
-      "count": 2
+      "champion": "KSante",
+      "count": 3
      }
     ],
     "jungle": [
@@ -477,12 +477,12 @@
       "count": 3
      },
      {
-      "champion": "Pantheon",
+      "champion": "Naafiri",
       "count": 3
      },
      {
-      "champion": "Naafiri",
-      "count": 2
+      "champion": "Pantheon",
+      "count": 3
      }
     ],
     "mid": [
@@ -495,8 +495,8 @@
       "count": 2
      },
      {
-      "champion": "Ahri",
-      "count": 1
+      "champion": "Locke",
+      "count": 2
      }
     ],
     "bottom": [
@@ -524,7 +524,7 @@
      },
      {
       "champion": "Alistar",
-      "count": 1
+      "count": 2
      }
     ]
    },
@@ -532,7 +532,7 @@
     "name": "BLG Knight",
     "role": "mid",
     "kda": 9.2,
-    "games": 15,
+    "games": 19,
     "damageShare": 0.28
    }
   }
@@ -1862,11 +1862,11 @@
   "season": {
    "series": {
     "w": 42,
-    "l": 10
+    "l": 11
    },
    "games": {
-    "w": 98,
-    "l": 33
+    "w": 99,
+    "l": 36
    }
   },
   "sources": [
@@ -1913,58 +1913,58 @@
     "label": "Worlds 2026",
     "series": {
      "w": 5,
-     "l": 0
-    },
-    "games": {
-     "w": 10,
      "l": 1
     },
+    "games": {
+     "w": 11,
+     "l": 4
+    },
     "titles": 0,
-    "finalsLost": 0
+    "finalsLost": 1
    }
   ],
-  "form": "WWWWWWWWLW",
+  "form": "LWWWWWWWWL",
   "vsInternational": {
    "w": 9,
-   "l": 1
+   "l": 2
   },
   "stats": {
-   "games": 31,
-   "wins": 25,
-   "avgGoldDiff15": 628,
-   "firstBloodRate": 0.3870967741935484,
-   "firstTowerRate": 0.6129032258064516,
-   "firstDragonRate": 0.5161290322580645,
-   "dragonShare": 0.6225165562913907,
+   "games": 35,
+   "wins": 26,
+   "avgGoldDiff15": 502,
+   "firstBloodRate": 0.37142857142857144,
+   "firstTowerRate": 0.5428571428571428,
+   "firstDragonRate": 0.5142857142857142,
+   "dragonShare": 0.5898876404494382,
    "avgBarons": 1,
-   "avgFirstBaronMin": 27.1,
-   "avgDurationMin": 33.4,
+   "avgFirstBaronMin": 27.9,
+   "avgDurationMin": 34.5,
    "comebackWins": 3,
    "throws": 0,
    "leadAt15": {
     "led": 15,
     "won": 12
    },
-   "objectivesWhileBehind": 21,
+   "objectivesWhileBehind": 28,
    "topChampions": {
     "top": [
      {
       "champion": "Olaf",
-      "count": 5
+      "count": 6
+     },
+     {
+      "champion": "Ambessa",
+      "count": 4
      },
      {
       "champion": "Rumble",
       "count": 4
-     },
-     {
-      "champion": "Ambessa",
-      "count": 3
      }
     ],
     "jungle": [
      {
       "champion": "LeeSin",
-      "count": 5
+      "count": 6
      },
      {
       "champion": "Qiyana",
@@ -1981,26 +1981,26 @@
       "count": 5
      },
      {
-      "champion": "Galio",
-      "count": 4
+      "champion": "Syndra",
+      "count": 5
      },
      {
-      "champion": "Syndra",
+      "champion": "Akali",
       "count": 4
      }
     ],
     "bottom": [
      {
+      "champion": "Ezreal",
+      "count": 6
+     },
+     {
       "champion": "Ashe",
       "count": 5
      },
      {
-      "champion": "Ezreal",
-      "count": 5
-     },
-     {
       "champion": "Jhin",
-      "count": 4
+      "count": 5
      }
     ],
     "support": [
@@ -2009,53 +2009,53 @@
       "count": 7
      },
      {
-      "champion": "Leona",
+      "champion": "Karma",
       "count": 3
      },
      {
-      "champion": "Nautilus",
+      "champion": "Leona",
       "count": 3
      }
     ]
    },
    "standout": {
-    "name": "GEN Chovy",
-    "role": "mid",
-    "kda": 5.9,
-    "games": 31,
-    "damageShare": 0.24
+    "name": "GEN Ruler",
+    "role": "bottom",
+    "kda": 5.7,
+    "games": 35,
+    "damageShare": 0.3
    }
   },
   "worldsStats": {
-   "games": 11,
-   "wins": 10,
-   "avgGoldDiff15": 748,
-   "firstBloodRate": 0.5454545454545454,
-   "firstTowerRate": 0.5454545454545454,
-   "firstDragonRate": 0.45454545454545453,
-   "dragonShare": 0.6730769230769231,
-   "avgBarons": 0.9,
-   "avgFirstBaronMin": 26.6,
-   "avgDurationMin": 31.9,
+   "games": 15,
+   "wins": 11,
+   "avgGoldDiff15": 422,
+   "firstBloodRate": 0.4666666666666667,
+   "firstTowerRate": 0.4,
+   "firstDragonRate": 0.4666666666666667,
+   "dragonShare": 0.5822784810126582,
+   "avgBarons": 1,
+   "avgFirstBaronMin": 28.3,
+   "avgDurationMin": 34.9,
    "comebackWins": 1,
    "throws": 0,
    "leadAt15": {
     "led": 6,
     "won": 5
    },
-   "objectivesWhileBehind": 4,
+   "objectivesWhileBehind": 11,
    "topChampions": {
     "top": [
      {
-      "champion": "Camille",
-      "count": 2
-     },
-     {
       "champion": "Olaf",
+      "count": 3
+     },
+     {
+      "champion": "Ambessa",
       "count": 2
      },
      {
-      "champion": "Rumble",
+      "champion": "Aurora",
       "count": 2
      }
     ],
@@ -2065,40 +2065,40 @@
       "count": 5
      },
      {
-      "champion": "JarvanIV",
-      "count": 1
+      "champion": "LeeSin",
+      "count": 2
      },
      {
-      "champion": "Jayce",
-      "count": 1
+      "champion": "MonkeyKing",
+      "count": 2
      }
     ],
     "mid": [
+     {
+      "champion": "Akali",
+      "count": 2
+     },
      {
       "champion": "Galio",
       "count": 2
      },
      {
-      "champion": "Taliyah",
+      "champion": "Syndra",
       "count": 2
-     },
-     {
-      "champion": "Ahri",
-      "count": 1
      }
     ],
     "bottom": [
+     {
+      "champion": "Jhin",
+      "count": 4
+     },
      {
       "champion": "Ashe",
       "count": 3
      },
      {
-      "champion": "Jhin",
-      "count": 3
-     },
-     {
       "champion": "Ezreal",
-      "count": 2
+      "count": 3
      }
     ],
     "support": [
@@ -2117,11 +2117,11 @@
     ]
    },
    "standout": {
-    "name": "GEN Canyon",
-    "role": "jungle",
-    "kda": 9.6,
-    "games": 11,
-    "damageShare": 0.21
+    "name": "GEN Ruler",
+    "role": "bottom",
+    "kda": 7,
+    "games": 15,
+    "damageShare": 0.29
    }
   }
  },
